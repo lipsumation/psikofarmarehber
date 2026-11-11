@@ -68,13 +68,195 @@
     return '<span class="etiket onaysiz">' + esc(i.onayNot || 'Pediatrik onay yok · endikasyon dışı') + '</span>';
   }
 
+  /* ───────────── metabolizma / CYP ───────────── */
+  var CYP = window.CYP_SIRA, cypAd = window.CYP_AD;
+  var CYP_INH = CYP.filter(function (e) { return e !== 'UGT'; }); // UGT inhibisyonu izoforma özgü: otomatik eşleştirilmez
+  var GUC = ['', 'Zayıf', 'Orta', 'Güçlü'];
+  var ROL = {
+    sub: { ad: 'Substrat', kisa: 'S', renk: 'var(--rol-sub)' },
+    inh: { ad: 'İnhibitör', kisa: 'İnh', renk: 'var(--rol-inh)' },
+    ind: { ad: 'İndükleyici', kisa: 'İnd', renk: 'var(--rol-ind)' }
+  };
+  function rolYazi(rol, v) { return rol === 'sub' ? (v === 2 ? 'Ana yol' : 'Küçük yol') : GUC[v]; }
+  function rolAciklama(rol, v) { return rol === 'sub' ? (v === 2 ? 'Substrat · ana yıkım yolu' : 'Substrat · küçük yol') : GUC[v] + ' ' + ROL[rol].ad.toLocaleLowerCase('tr'); }
+  function rz(rol, v, yazi, ek, etiket) {
+    var g = rol === 'sub' ? (v === 2 ? 3 : 1) : v;
+    return '<' + (etiket || 'span') + ' class="rz g' + g + '" style="--rol:' + ROL[rol].renk + '"' + (ek || '') + '>' + yazi + '</' + (etiket || 'span') + '>';
+  }
+  var ROL_LEJANT = '<div class="matris-lejant">' +
+    '<span>' + rz('sub', 2, 'S') + ' Substrat, ana yol</span><span>' + rz('sub', 1, 'S') + ' Substrat, küçük yol</span>' +
+    '<span>' + rz('inh', 3, 'İnh') + rz('inh', 2, 'İnh') + rz('inh', 1, 'İnh') + ' İnhibitör: güçlü, orta, zayıf</span>' +
+    '<span>' + rz('ind', 3, 'İnd') + rz('ind', 2, 'İnd') + rz('ind', 1, 'İnd') + ' İndükleyici: güçlü, orta, zayıf</span></div>';
+
+  function atilimGorsel(m) {
+    var h = '';
+    if (m.atilim) {
+      var id = m.atilim[0], di = m.atilim[1], bos = Math.max(0, 100 - id - di);
+      h += '<div class="atilim-cubuk">' +
+        '<i class="idrar" style="flex:' + id + '" data-ipucu="' + esc('<b>İdrar</b>Yaklaşık %' + id) + '"></i>' +
+        (di ? '<i class="diski" style="flex:' + di + '" data-ipucu="' + esc('<b>Dışkı</b>Yaklaşık %' + di) + '"></i>' : '') +
+        (bos ? '<i class="bos" style="flex:' + bos + '"></i>' : '') + '</div>' +
+        '<div class="atilim-lejant"><span><i class="idrar"></i>İdrar ~%' + id + '</span>' + (di ? '<span><i class="diski"></i>Dışkı ~%' + di + '</span>' : '') + '</div>' +
+        '<div class="kucuk" style="margin-top:3px">Toplam geri kazanım; çoğu metabolit olarak.</div>';
+    } else h += '<p class="metin">' + esc(m.atilimYazi) + '</p>';
+    h += '<div class="fe">Değişmeden idrarla atılan: <b>' + esc(m.feYazi || 'yaklaşık %' + G.fmt(m.fe)) + '</b><div class="fe-ray"><i style="width:' + Math.min(100, m.fe) + '%"></i></div></div>';
+    return h;
+  }
+
+  /* Rehberdeki diğer ilaçlarla, ana yıkım enzimi üzerinden otomatik eşleştirme */
+  function cypKomsular(i) {
+    var m = i.metab, s = { artiran: [], dusuren: [], artirdigi: [], dusurdugu: [] };
+    window.ILACLAR.forEach(function (o) {
+      if (o.id === i.id || !o.metab) return;
+      var n = o.metab, a = [], d = [], x = [], y = [];
+      CYP_INH.forEach(function (e) {
+        if (m.sub[e] === 2 && (n.inh[e] || 0) >= 2) a.push(e);
+        if ((m.inh[e] || 0) >= 2 && n.sub[e] === 2) x.push(e);
+      });
+      CYP.forEach(function (e) {
+        if (m.sub[e] === 2 && (n.ind[e] || 0) >= 2) d.push(e);
+        if ((m.ind[e] || 0) >= 2 && n.sub[e] === 2) y.push(e);
+      });
+      if (a.length) s.artiran.push([o, a]);
+      if (d.length) s.dusuren.push([o, d]);
+      if (x.length) s.artirdigi.push([o, x]);
+      if (y.length) s.dusurdugu.push([o, y]);
+    });
+    return s;
+  }
+  function komsuSatir(baslik, dizi) {
+    if (!dizi.length) return '';
+    return '<div class="komsu"><span class="komsu-ad">' + baslik + '</span><div class="komsu-liste">' + dizi.map(function (x) {
+      return '<a class="etiket" href="#/ilac/' + x[0].id + '" style="--sinif:' + renk(x[0]) + '"><i class="nokta"></i>' + esc(x[0].ad) + ' <span class="soluk">' + x[1].join(', ') + '</span></a>';
+    }).join('') + '</div></div>';
+  }
+
+  function metabBolumu(i) {
+    var m = i.metab; if (!m) return '';
+    var h = '<p class="metab-ozet">' + esc(m.ozet) + '</p>';
+
+    // akış: metabolizma → aktif metabolit → atılım
+    var enz = CYP.filter(function (e) { return m.sub[e]; }).sort(function (a, b) { return m.sub[b] - m.sub[a]; });
+    h += '<div class="metab-akis"><div class="metab-kutu"><div class="ad">1 · Metabolizma</div><div class="enzler">' +
+      enz.map(function (e) { return '<a class="enz ' + (m.sub[e] === 2 ? 'ana' : 'kucuk') + '" href="#/cyp/' + e + '"><b>' + cypAd(e) + '</b><span>' + (m.sub[e] === 2 ? 'ana yol' : 'küçük yol') + '</span></a>'; }).join('') +
+      (m.diger ? '<span class="enz diger"><b>' + esc(m.diger) + '</b><span>CYP dışı</span></span>' : '') +
+      '</div></div><div class="metab-ok"></div>' +
+      '<div class="metab-kutu"><div class="ad">2 · Aktif metabolit</div><p class="metin">' + (m.aktif ? esc(m.aktif) : 'Klinik olarak anlamlı aktif metaboliti yok.') + '</p></div><div class="metab-ok"></div>' +
+      '<div class="metab-kutu"><div class="ad">3 · Atılım</div>' + atilimGorsel(m) + '</div></div>';
+
+    // CYP rol çizelgesi
+    var rolVar = ['sub', 'inh', 'ind'].some(function (r) { return Object.keys(m[r]).length; });
+    h += '<div class="alt-b">Enzimlerle ilişkisi</div>';
+    if (rolVar) {
+      h += '<div class="matris-sar"><table class="matris cyp-tablo"><thead><tr><th>Rol</th>' + CYP.map(function (e) { return '<th><a href="#/cyp/' + e + '">' + cypAd(e) + '</a></th>'; }).join('') + '</tr></thead><tbody>' +
+        [['sub', 'Substrat', 'bu enzimle yıkılır'], ['inh', 'İnhibitör', 'enzimi baskılar'], ['ind', 'İndükleyici', 'enzimi artırır']].map(function (r) {
+          return '<tr><td>' + r[1] + '<span class="rol-alt">' + r[2] + '</span></td>' + CYP.map(function (e) {
+            var v = m[r[0]][e];
+            return '<td>' + (v ? rz(r[0], v, rolYazi(r[0], v), ' data-ipucu="' + esc('<b>' + cypAd(e) + '</b>' + rolAciklama(r[0], v)) + '"') : '<span class="isaret yok"></span>') + '</td>';
+          }).join('') + '</tr>';
+        }).join('') + '</tbody></table></div>';
+    } else {
+      h += '<div class="cagri bilgi">' + SIMGE.bilgi + '<div><b>CYP enzimleriyle klinik olarak anlamlı ilişkisi yok.</b> ' + esc(m.diger || '') + '</div></div>';
+    }
+
+    // organ yetmezliği, farmakogenetik, çocuk
+    h += '<div class="kutular metin-kutular">' +
+      '<div class="kutu"><div class="ad">Böbrek yetmezliği</div><div class="deger">' + esc(m.bobrek) + '</div></div>' +
+      '<div class="kutu"><div class="ad">Karaciğer yetmezliği</div><div class="deger">' + esc(m.karaciger) + '</div></div>' +
+      (m.gen ? '<div class="kutu"><div class="ad">Farmakogenetik</div><div class="deger">' + esc(m.gen) + '</div></div>' : '') +
+      (m.cocuk ? '<div class="kutu vurgulu"><div class="ad">Çocuk ve ergende</div><div class="deger">' + esc(m.cocuk) + '</div></div>' : '') +
+      '</div>';
+
+    if ((m.artiran && m.artiran.length) || (m.dusuren && m.dusuren.length)) {
+      h += '<div class="iki-sutun"><div><h3>Düzeyini artıranlar</h3>' + (m.artiran && m.artiran.length ? liste(m.artiran) : '<p class="kucuk">Klinik olarak önemli bir etken bildirilmemiştir.</p>') + '</div>' +
+        '<div><h3>Düzeyini düşürenler</h3>' + (m.dusuren && m.dusuren.length ? liste(m.dusuren) : '<p class="kucuk">Klinik olarak önemli bir etken bildirilmemiştir.</p>') + '</div></div>';
+    }
+    if (m.etkiler && m.etkiler.length) h += '<h3 class="alt-b">Diğer ilaçların düzeyine etkisi</h3>' + liste(m.etkiler);
+    if (m.not && m.not.length) h += '<h3 class="alt-b">Notlar</h3>' + liste(m.not);
+
+    var k = cypKomsular(i);
+    var kh = komsuSatir(esc(i.ad) + ' düzeyini artırabilir', k.artiran) + komsuSatir(esc(i.ad) + ' düzeyini düşürebilir', k.dusuren) +
+      komsuSatir(esc(i.ad) + ' şunların düzeyini artırabilir', k.artirdigi) + komsuSatir(esc(i.ad) + ' şunların düzeyini düşürebilir', k.dusurdugu);
+    if (kh) h += '<div class="alt-b">Rehberdeki ilaçlarla enzim üzerinden etkileşim</div>' +
+      '<div class="kucuk" style="margin-bottom:8px">Ana yıkım enzimi orta veya güçlü düzeyde baskılanan ya da artırılan çiftler otomatik eşleştirilir; ilaç adının yanında ilgili enzim yazar.</div>' + kh;
+    return h;
+  }
+
+  /* ───────────── SAYFA: metabolizma (CYP) ───────────── */
+  function sayfaCyp(enzim) {
+    var sec = CYP.indexOf(enzim) >= 0 ? enzim : null;
+    var h = '<section class="kart bolum"><h2>Metabolizma ve CYP etkileşimleri</h2><div class="alt-baslik">Bir ilacın düzeyi, onu yıkan enzimi etkileyen başka bir ilaç, besin ya da genetik özellikle değişir.</div><div class="ilke-izgara">' +
+      [
+        [rz('sub', 2, 'Substrat') + '<span class="arti">+</span>' + rz('inh', 3, 'İnhibitör'), 'Düzey yükselir', 'İnhibisyon günler içinde başlar; inhibitör kesilince onun yarı ömrüne bağlı olarak günler ya da haftalar içinde kalkar. Yan etki ve toksisite riski doğar; dar terapötik aralıklı ilaçlarda (trisiklikler, klozapin, karbamazepin) en önemlidir.'],
+        [rz('sub', 2, 'Substrat') + '<span class="arti">+</span>' + rz('ind', 3, 'İndükleyici'), 'Düzey düşer', 'İndüksiyon yeni enzim sentezi gerektirir: 1–2 haftada oturur, indükleyici kesildikten 2–4 hafta sonra kalkar. Önce etkisizlik ve nüks, indükleyici kesilince bu kez toksisite riski vardır.'],
+        ['<span class="rz g2" style="--rol:var(--soluk)">Ön ilaç</span><span class="arti">+</span>' + rz('inh', 3, 'İnhibitör'), 'Etki azalır', 'Enzim ilacı etkinleştiriyorsa sonuç tersine döner: kodein, tramadol ve tamoksifen CYP2D6 inhibitörleriyle etkisizleşir. Aktif metaboliti olan ilaçlarda (risperidon, venlafaksin) toplam aktif madde daha az değişir.'],
+        ['<span class="rz g2" style="--rol:var(--soluk)">Genotip</span>', 'Kalıcı fark', 'CYP2D6 ve CYP2C19 genetik çeşitlilik gösterir. Yavaş metabolizör sürekli inhibitör alıyormuş gibi davranır (düzey yüksek, yan etki fazla); ultra hızlı metabolizörde olağan doz yetersiz kalır.']
+      ].map(function (x) { return '<div class="ilke"><div class="formul">' + x[0] + '</div><b>' + x[1] + '</b><p>' + x[2] + '</p></div>'; }).join('') + '</div>' +
+      '<div class="cagri bilgi">' + SIMGE.cocuk + '<div><b>Çocuk ve ergende:</b> kg başına karaciğer klirensi çoğu ilaçta erişkinden yüksektir (özellikle CYP1A2 ve CYP3A4 ile yıkılanlarda) ve ergenlikte erişkin değerlerine iner. Buna karşın vücut ağırlığı düşük olduğu için mutlak doz düşüktür. İlaca özgü farklar ilaç sayfalarındaki “Metabolizma” bölümünde yer alır.</div></div></section>';
+
+    // harita
+    h += '<section class="kart bolum" id="harita"><h2>CYP haritası</h2><div class="alt-baslik">Rehberdeki ' + window.ILACLAR.length + ' ilacın enzimlerle ilişkisi. Bir enzim seçerek o enzimin substratlarını, inhibitörlerini ve indükleyicilerini görün.</div>' +
+      '<div class="cipler" style="margin-bottom:14px"><a class="cip ' + (!sec ? 'aktif' : '') + '" href="#/cyp">Tümü</a>' +
+      CYP.map(function (e) { return '<a class="cip ' + (sec === e ? 'aktif' : '') + '" href="#/cyp/' + e + '">' + cypAd(e) + '</a>'; }).join('') + '</div>';
+
+    if (sec) {
+      var B = window.CYP_BILGI[sec];
+      var kol = function (rol, baslik, dis) {
+        var ilaclar = window.ILACLAR.filter(function (i) { return i.metab[rol][sec]; }).sort(function (a, b) { return b.metab[rol][sec] - a.metab[rol][sec]; });
+        return '<div class="enzim-kol"><h3>' + baslik + '</h3><div class="komsu-liste">' +
+          (ilaclar.length ? ilaclar.map(function (i) { var v = i.metab[rol][sec]; return rz(rol, v, esc(i.ad), ' href="#/ilac/' + i.id + '" data-ipucu="' + esc('<b>' + i.ad + '</b>' + rolAciklama(rol, v)) + '"', 'a'); }).join('') : '<span class="kucuk">Rehberde yok</span>') +
+          '</div>' + (dis ? '<div class="dis"><b>Rehber dışı etkenler:</b> ' + esc(dis.join(' · ')) + '</div>' : '') + '</div>';
+      };
+      h += '<div class="enzim-kart"><div class="enzim-bas"><b>' + cypAd(sec) + '</b><span>' + esc(B.not) + '</span></div><div class="enzim-izgara">' +
+        kol('sub', 'Substratlar', null) + kol('inh', 'İnhibitörler · düzeyi artırır', B.disInh) + kol('ind', 'İndükleyiciler · düzeyi düşürür', B.disInd) + '</div></div>';
+    }
+
+    h += '<div class="matris-sar"><table class="matris cyp-harita"><thead><tr><th>İlaç</th>' +
+      CYP.map(function (e) { return '<th class="' + (sec === e ? 'secili' : '') + '"><a href="#/cyp/' + e + '">' + cypAd(e) + '</a></th>'; }).join('') + '<th style="text-align:left">CYP dışı yol</th></tr></thead><tbody>';
+    SINIF_SIRA.forEach(function (k) {
+      var grup = window.ILACLAR.filter(function (i) { return i.sinif === k && (!sec || i.metab.sub[sec] || i.metab.inh[sec] || i.metab.ind[sec]); });
+      if (!grup.length) return;
+      h += '<tr class="grup-satir" style="--sinif:' + window.SINIFLAR[k].renk + '"><td colspan="' + (CYP.length + 2) + '"><i class="nokta"></i>' + window.SINIFLAR[k].ad + '</td></tr>';
+      grup.forEach(function (i) {
+        h += '<tr><td><a href="#/ilac/' + i.id + '">' + esc(i.ad) + '</a></td>' + CYP.map(function (e) {
+          var ic = ['sub', 'inh', 'ind'].map(function (r) {
+            var v = i.metab[r][e];
+            return v ? rz(r, v, ROL[r].kisa, ' data-ipucu="' + esc('<b>' + i.ad + ' · ' + cypAd(e) + '</b>' + rolAciklama(r, v)) + '"') : '';
+          }).join('');
+          return '<td class="' + (sec === e ? 'secili' : '') + '">' + (ic || '<span class="isaret yok"></span>') + '</td>';
+        }).join('') + '<td class="aciklama">' + esc(i.metab.diger || '') + '</td></tr>';
+      });
+    });
+    h += '</tbody></table></div>' + ROL_LEJANT + '</section>';
+
+    // böbrekle atılım
+    var bobrek = window.ILACLAR.filter(function (i) { return i.metab.fe >= 5; }).sort(function (a, b) { return b.metab.fe - a.metab.fe; });
+    h += '<section class="kart bolum"><h2>Böbrekle değişmeden atılan ilaçlar</h2><div class="alt-baslik">Dozun idrarla değişmeden atılan yaklaşık oranı. Oran yükseldikçe düzeyi karaciğer enzimleri değil böbrek işlevi belirler.</div>' +
+      '<div class="yo-liste depo-ozet">' + bobrek.map(function (i) {
+        return '<div><a href="#/ilac/' + i.id + '">' + esc(i.ad) + '</a></div><div class="cubuk-ray"><div class="cubuk" style="width:' + i.metab.fe + '%;--sinif:' + renk(i) + '" data-ipucu="' + esc('<b>' + i.ad + '</b>Değişmeden idrarla: ' + (i.metab.feYazi || 'yaklaşık %' + G.fmt(i.metab.fe))) + '"></div></div>' +
+          '<div class="deger">' + esc(i.metab.feYazi || 'yaklaşık %' + G.fmt(i.metab.fe)) + '</div>';
+      }).join('') + '</div><p class="kucuk" style="margin-top:12px">Diğer ' + (window.ILACLAR.length - bobrek.length) + ' ilaçta bu oran %5\'in altındadır: vücuttan karaciğer metabolizmasıyla temizlenirler, idrarda başlıca metabolitleri bulunur.</p></section>';
+
+    // organ yetmezliği çizelgesi
+    h += '<section class="kart bolum"><h2>Böbrek ve karaciğer yetmezliğinde doz</h2><div class="alt-baslik">İlaç bazında özet. Ayrıntı için ilaç sayfasına bakın.</div><div class="matris-sar"><table class="matris metin-tablo"><thead><tr><th>İlaç</th><th>Böbrek yetmezliği</th><th>Karaciğer yetmezliği</th></tr></thead><tbody>';
+    SINIF_SIRA.forEach(function (k) {
+      h += '<tr class="grup-satir" style="--sinif:' + window.SINIFLAR[k].renk + '"><td colspan="3"><i class="nokta"></i>' + window.SINIFLAR[k].ad + '</td></tr>';
+      window.ILACLAR.filter(function (i) { return i.sinif === k; }).forEach(function (i) {
+        h += '<tr><td><a href="#/ilac/' + i.id + '">' + esc(i.ad) + '</a></td><td>' + esc(i.metab.bobrek) + '</td><td>' + esc(i.metab.karaciger) + '</td></tr>';
+      });
+    });
+    h += '</tbody></table></div></section>';
+
+    icerik.innerHTML = h;
+  }
+
   /* ───────────── SAYFA: ilaç listesi ───────────── */
   function sayfaIlaclar() {
     var h = '<section class="kart kahraman">' +
       '<div><h1>Psikofarmakoloji Rehberi</h1>' +
       '<p>Psikiyatrik ilaçlarda başlama, titrasyon, sürdürüm, kesme ve ilaç değişimi için görsel karar desteği. ' +
       'Çocuk ve ergen dozları, onay yaşları ve izlem tetkikleri her ilaçta ayrıca gösterilir.</p>' +
-      '<p class="kucuk">' + window.ILACLAR.length + ' ilaç · 5 sınıf · ' + window.DEPOLAR.length + ' uzun etkili enjektabl · titrasyon ve kesme grafikleri · izlem matrisleri · değişim planlayıcı</p></div>' +
+      '<p class="kucuk">' + window.ILACLAR.length + ' ilaç · 5 sınıf · ' + window.DEPOLAR.length + ' uzun etkili enjektabl · titrasyon ve kesme grafikleri · izlem matrisleri · CYP haritası · değişim planlayıcı</p></div>' +
       '<div class="dongu">' +
       [['basla', 'Başlama', 'Başlangıç tetkiki, onam, düşük doz'], ['artir', 'Titrasyon', 'Basamaklı artış, hedef doz'], ['surdur', 'Sürdürüm', 'İzlem, etkin en düşük doz'], ['azalt', 'Kesme / değişim', 'Kademeli azaltım, geçiş']]
         .map(function (a) { return '<div class="dongu-adim"><div class="dongu-simge">' + SIMGE[a[0]] + '</div><b>' + a[1] + '</b><span>' + a[2] + '</span></div>'; }).join('') +
@@ -105,7 +287,8 @@
     if (durum.onayli && !(i.onay && i.onay.length)) return false;
     var q = durum.arama.trim().toLocaleLowerCase('tr');
     if (!q) return true;
-    var metin = [i.ad, i.altSinif, window.SINIFLAR[i.sinif].ad, (i.onay || []).map(function (o) { return o[0]; }).join(' '), i.mek].join(' ').toLocaleLowerCase('tr');
+    var enzimler = i.metab ? ['sub', 'inh', 'ind'].map(function (r) { return Object.keys(i.metab[r]).map(function (e) { return window.CYP_AD(e) + ' ' + e; }).join(' '); }).join(' ') : '';
+    var metin = [i.ad, i.altSinif, window.SINIFLAR[i.sinif].ad, (i.onay || []).map(function (o) { return o[0]; }).join(' '), i.mek, enzimler].join(' ').toLocaleLowerCase('tr');
     return q.split(/\s+/).every(function (p) { return metin.indexOf(p) >= 0; });
   }
   function listeyiCiz() {
@@ -178,7 +361,7 @@
       '</div></section>';
 
     h += '<nav class="kart yol" style="--sinif:' + r + '">' +
-      [['baslama', 'Başlama'], ['surdurum', 'Sürdürüm'], ['kesme', 'Kesme'], ['izlem', 'Tetkik / izlem'], ['guvenlik', 'Güvenlik'], ['gecis', 'Değişim']]
+      [['baslama', 'Başlama'], ['surdurum', 'Sürdürüm'], ['kesme', 'Kesme'], ['izlem', 'Tetkik / izlem'], ['guvenlik', 'Güvenlik'], ['metabolizma', 'Metabolizma'], ['gecis', 'Değişim']]
         .map(function (a, n) { return '<a href="#' + a[0] + '" data-kaydir="' + a[0] + '"><span class="no">' + (n + 1) + '</span>' + a[1] + '</a>'; }).join('') + '</nav>';
 
     // 1 Başlama
@@ -215,8 +398,13 @@
     }).join('') + '</div>';
     h += '<div class="iki-sutun"><div><h3>Önemli yan etkiler ve uyarılar</h3>' + liste(i.uyari) + '</div><div><h3>İlaç etkileşimleri</h3>' + liste(i.etkilesim) + '</div></div></section>';
 
-    // 6 Değişim
-    h += '<section class="kart bolum" id="gecis" style="--sinif:' + r + '"><h2><span class="no">6</span>Başka ilaca geçiş</h2>' +
+    // 6 Metabolizma
+    h += '<section class="kart bolum" id="metabolizma" style="--sinif:' + r + '"><h2><span class="no">6</span>Metabolizma ve eliminasyon</h2>' +
+      '<div class="alt-baslik">Hangi enzimlerle yıkılır, hangi enzimleri etkiler, vücuttan nasıl atılır. Tüm ilaçların karşılaştırması için <a href="#/cyp">CYP haritasına</a> bakın.</div>' +
+      metabBolumu(i) + '</section>';
+
+    // 7 Değişim
+    h += '<section class="kart bolum" id="gecis" style="--sinif:' + r + '"><h2><span class="no">7</span>Başka ilaca geçiş</h2>' +
       '<div class="alt-baslik">' + esc(i.ad) + ' tedavisinden başka bir ilaca geçiş planı oluşturun.</div>' +
       window.DEPOLAR.filter(function (d) { return d.oral === i.id; }).map(function (d) {
         return '<div class="cagri bilgi">' + SIMGE.bilgi + '<div><b>Uzun etkili enjektabl formu var:</b> <a href="#/depo/' + d.id + '">' + esc(d.ad) + '</a> · ' + esc(d.aralik.toLocaleLowerCase('tr')) + ' · oral formdan geçiş şeması ve doz dönüşümü için tıklayın.</div></div>';
@@ -508,11 +696,16 @@
     else if (p[0] === 'izlem') { sayfa = 'izlem'; sayfaIzlem(); }
     else if (p[0] === 'ilkeler') { sayfa = 'ilkeler'; sayfaIlkeler(); }
     else if (p[0] === 'depo') { sayfa = 'depo'; sayfaDepo(); }
+    else if (p[0] === 'cyp') { sayfa = 'cyp'; sayfaCyp(p[1]); }
     else sayfaIlaclar();
     Array.prototype.forEach.call(document.querySelectorAll('#gezinti a'), function (a) { a.classList.toggle('aktif', a.dataset.sayfa === sayfa); });
     var hedef = p[0] === 'depo' && p[1] ? document.getElementById('depo-' + p[1]) : null;
-    if (hedef) hedef.scrollIntoView({ behavior: 'auto', block: 'start' }); else window.scrollTo(0, 0);
+    if (p[0] === 'cyp' && p[1] && document.getElementById('harita')) hedef = document.getElementById('harita');
+    if (hedef) hedef.scrollIntoView({ behavior: 'auto', block: 'start' });
+    else if (!(sayfa === 'cyp' && oncekiSayfa === 'cyp')) window.scrollTo(0, 0);
+    oncekiSayfa = sayfa;
   }
+  var oncekiSayfa = null;
   window.addEventListener('hashchange', yonlendir);
 
   /* ───────────── ipucu (tooltip) ───────────── */

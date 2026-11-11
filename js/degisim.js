@@ -222,14 +222,26 @@
       uyari: [] };
   }
 
+  /* x'in orta/güçlü inhibe ettiği ve y'nin ana yıkım yolu olan CYP enzimleri (UGT izoforma özgü olduğu için dışarıda) */
+  function inhibeEttigi(x, y) {
+    var s = { enzim: [], guclu: false };
+    if (!x.metab || !y.metab) return s;
+    ['1A2', '2B6', '2C9', '2C19', '2D6', '3A4'].forEach(function (e) {
+      var g = x.metab.inh[e] || 0;
+      if (g >= 2 && y.metab.sub[e] === 2) { s.enzim.push('CYP' + e); if (g === 3) s.guclu = true; }
+    });
+    return s;
+  }
+
   /* Farmakolojik özelliklere göre otomatik uyarılar */
   function otomatikUyari(a, b, tur) {
     var u = [], ortus = tur !== 'yikama';
     if (var_(a, 'sero') && var_(b, 'sero')) u.push('İki serotonerjik ilaç: geçiş döneminde serotonin sendromu belirtilerini (ajitasyon, tremor, klonus, hiperrefleksi, terleme, ishal, ateş) izleyin.');
-    if (var_(a, '2d6inh') && var_(b, '2d6sub')) u.push(a.ad + ' CYP2D6 inhibitörüdür: ' + b.ad + ' düzeyi beklenenden yüksek olur; düşük dozla başlayıp yavaş artırın' + (a.id === 'fluoksetin' ? ' (etki fluoksetin kesildikten sonra 5 haftaya dek sürer).' : '.'));
-    if (var_(b, '2d6inh') && var_(a, '2d6sub') && ortus) u.push(b.ad + ' CYP2D6 inhibitörüdür: örtüşme döneminde ' + a.ad + ' düzeyi yükselir; eski ilacın dozunu daha hızlı azaltmak gerekebilir.');
-    if (var_(a, '1a2inh') && var_(b, '1a2sub')) u.push('Fluvoksamin CYP1A2 inhibitörüdür: ' + b.ad + ' düzeyi belirgin artar; birlikte kullanmaktan kaçının veya dozu belirgin azaltın.');
-    if (var_(b, '1a2inh') && var_(a, '1a2sub')) u.push('Fluvoksamin eklenince ' + a.ad + ' düzeyi belirgin artar; örtüşmeden kaçının veya dozu azaltıp düzey izleyin.');
+    // CYP: bir ilaç, diğerinin ana yıkım enzimini orta/güçlü düzeyde inhibe ediyorsa
+    var eA = inhibeEttigi(a, b), eB = inhibeEttigi(b, a);
+    if (eA.enzim.length) u.push(a.ad + ' ' + eA.enzim.join(' ve ') + ' inhibitörüdür' + (eA.guclu ? ' (güçlü)' : '') + ': ' + b.ad + ' başlıca bu yolla yıkılır, düzeyi beklenenden yüksek olur; düşük dozla başlayıp yavaş artırın' + (a.id === 'fluoksetin' ? ' (etki fluoksetin kesildikten sonra 5 haftaya dek sürer).' : '.') + (eA.guclu && eA.enzim.indexOf('CYP1A2') >= 0 ? ' Artış çok belirgindir: birlikte kullanmaktan kaçının veya dozu belirgin azaltın.' : ''));
+    if (eB.enzim.length && (ortus || eB.enzim.indexOf('CYP1A2') >= 0)) u.push(b.ad + ' ' + eB.enzim.join(' ve ') + ' inhibitörüdür' + (eB.guclu ? ' (güçlü)' : '') + ': örtüşme döneminde ' + a.ad + ' düzeyi yükselir; eski ilacın dozunu daha hızlı azaltmak veya düzey izlemek gerekebilir.');
+    if ((a.id === 'valproat' && b.id === 'lorazepam') || (b.id === 'valproat' && a.id === 'lorazepam' && ortus)) u.push('Valproat lorazepamın glukuronidasyonunu yavaşlatır: lorazepam dozunu yaklaşık %50 azaltın.');
     if (var_(a, 'induk')) u.push('Karbamazepin kesildikten 2–4 hafta sonra enzim indüksiyonu kalkar: ' + b.ad + ' ve diğer ilaçların düzeyi yükselebilir, doz azaltımı gerekebilir.');
     if (var_(b, 'induk')) u.push('Karbamazepin enzim indükleyicidir: örtüşmede ' + a.ad + ' ve diğer ilaçların (hormonal kontraseptif dahil) düzeyi düşer.');
     if ((var_(a, 'kloz') && var_(b, 'cbz')) || (var_(b, 'kloz') && var_(a, 'cbz'))) u.push('Klozapin ile karbamazepin birlikte kullanılmamalıdır (kemik iliği baskılanması): örtüşme yapmayın.');

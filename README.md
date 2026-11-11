@@ -10,8 +10,9 @@ Psikiyatrik ilaçların başlanması, titrasyonu, sürdürümü, kesilmesi ve ba
 
 | Sayfa | Ne gösterir |
 |---|---|
-| **İlaçlar** | 37 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları). Her ilaç için başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili ve uyarılar. |
-| **İlaç Değişimi** | İki ilaç seçildiğinde geçiş stratejisini (doğrudan, çapraz, yıkama aralıklı, örtüşmeli), haftalık zaman çizelgesini ve etkileşim uyarılarını gösterir. |
+| **İlaçlar** | 37 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları). Her ilaç için başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili, uyarılar, metabolizma ve eliminasyon (yıkım enzimleri, aktif metabolit, atılım yolu, organ yetmezliğinde doz). |
+| **Metabolizma (CYP)** | Tüm ilaçların CYP ve UGT enzimleriyle ilişkisini gösteren harita (substrat, inhibitör, indükleyici). Enzim seçildiğinde o enzimin substratları, inhibitörleri, indükleyicileri ve rehber dışı etkenler (sigara, greyfurt suyu, antibiyotikler vb.) listelenir. Böbrekle değişmeden atılan ilaçlar ve organ yetmezliğinde doz çizelgesi. |
+| **İlaç Değişimi** | İki ilaç seçildiğinde geçiş stratejisini (doğrudan, çapraz, yıkama aralıklı, örtüşmeli), haftalık zaman çizelgesini ve etkileşim uyarılarını (CYP inhibisyonu dahil) gösterir. |
 | **Uzun Etkili (Depo)** | 8 uzun etkili enjektabl antipsikotik: başlama şeması, oral örtüşme süresi, oral dozdan dönüşüm tabloları, kaçırılan doz kuralları. |
 | **Tetkik ve İzlem** | İlaç gruplarına göre başlangıç ve takip tetkikleri, ölçümler ve eşik değerler. |
 | **Genel İlkeler** | Başlama akış şeması, pediatrik ilkeler, antidepresan tedavi evreleri, kesilme belirtileri, yarı ömür karşılaştırması, acil durumlar. |
@@ -40,6 +41,7 @@ js/veri-antidepresan.js Antidepresanlar
 js/veri-dehb.js         DEHB ilaçları
 js/veri-antipsikotik.js Antipsikotikler
 js/veri-diger.js        Duygudurum düzenleyiciler, anksiyolitikler, uyku ilaçları
+js/veri-metabolizma.js  Metabolizma, CYP rolleri ve eliminasyon
 js/veri-depo.js         Uzun etkili enjektabl antipsikotikler
 js/grafik.js            SVG grafikler (titrasyon, kesme, geçiş, depo)
 js/degisim.js           İlaç değişimi kural motoru
