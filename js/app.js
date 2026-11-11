@@ -2,6 +2,24 @@
 (function () {
   var $ = function (s, k) { return (k || document).querySelector(s); };
   var icerik = $('#icerik');
+
+  /* Veri dosyalarından biri yüklenemediyse (ağ kesintisi, yarım kalmış güncelleme) sessizce eksik göstermek yerine uyar */
+  var eksik = [];
+  if (!window.ILACLAR || !window.SINIFLAR || !window.IZLEM) eksik.push('temel veri');
+  else Object.keys(window.SINIFLAR).forEach(function (k) {
+    if (!window.ILACLAR.some(function (i) { return i.sinif === k; })) eksik.push(window.SINIFLAR[k].ad);
+  });
+  if (!window.METAB) eksik.push('metabolizma verisi');
+  if (!window.DEPOLAR) eksik.push('uzun etkili ilaç verisi');
+  if (!window.Grafik || !window.Degisim) eksik.push('grafik ve değişim bileşenleri');
+  if (eksik.length) {
+    icerik.innerHTML = '<div class="kart bolum" style="max-width:640px;margin:40px auto;text-align:center"><h2 style="justify-content:center">Sayfa eksik yüklendi</h2>' +
+      '<p style="margin:10px 0 16px">Şu bölümler yüklenemedi: <b>' + eksik.join(', ') + '</b>. Bağlantı kesintisi ya da güncelleme sırasında açılmış bir sayfa buna yol açabilir.</p>' +
+      '<button class="cip aktif" id="yenidenYukle" style="margin:0 auto">Yeniden yükle</button></div>';
+    document.getElementById('yenidenYukle').onclick = function () { location.reload(); };
+    return;
+  }
+
   var ILAC = {};
   window.ILACLAR.forEach(function (i) { ILAC[i.id] = i; });
   var SINIF_SIRA = ['ad', 'dehb', 'ap', 'dd', 'anks'];
@@ -214,9 +232,14 @@
     h += '<div class="matris-sar"><table class="matris cyp-harita"><thead><tr><th>İlaç</th>' +
       CYP.map(function (e) { return '<th class="' + (sec === e ? 'secili' : '') + '"><a href="#/cyp/' + e + '">' + cypAd(e) + '</a></th>'; }).join('') + '<th style="text-align:left">CYP dışı yol</th></tr></thead><tbody>';
     SINIF_SIRA.forEach(function (k) {
-      var grup = window.ILACLAR.filter(function (i) { return i.sinif === k && (!sec || i.metab.sub[sec] || i.metab.inh[sec] || i.metab.ind[sec]); });
-      if (!grup.length) return;
-      h += '<tr class="grup-satir" style="--sinif:' + window.SINIFLAR[k].renk + '"><td colspan="' + (CYP.length + 2) + '"><i class="nokta"></i>' + window.SINIFLAR[k].ad + '</td></tr>';
+      var hepsi = window.ILACLAR.filter(function (i) { return i.sinif === k; });
+      var grup = hepsi.filter(function (i) { return !sec || i.metab.sub[sec] || i.metab.inh[sec] || i.metab.ind[sec]; });
+      var iliskisiz = hepsi.filter(function (i) { return grup.indexOf(i) < 0; });
+      if (!hepsi.length) return;
+      h += '<tr class="grup-satir" style="--sinif:' + window.SINIFLAR[k].renk + '"><td colspan="' + (CYP.length + 2) + '"><i class="nokta"></i>' + window.SINIFLAR[k].ad +
+        (sec ? ' <span class="sayi">' + grup.length + ' / ' + hepsi.length + '</span>' : '') + '</td></tr>';
+      if (iliskisiz.length) h += '<tr class="iliskisiz"><td colspan="' + (CYP.length + 2) + '"><div class="yapisik"><b>' + cypAd(sec) + ' ile ilişkisi yok:</b> ' +
+        iliskisiz.map(function (i) { return '<a href="#/ilac/' + i.id + '">' + esc(i.ad) + '</a>'; }).join(' · ') + '</div></td></tr>';
       grup.forEach(function (i) {
         h += '<tr><td><a href="#/ilac/' + i.id + '">' + esc(i.ad) + '</a></td>' + CYP.map(function (e) {
           var ic = ['sub', 'inh', 'ind'].map(function (r) {

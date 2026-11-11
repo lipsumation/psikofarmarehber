@@ -10,7 +10,7 @@ Psikiyatrik ilaçların başlanması, titrasyonu, sürdürümü, kesilmesi ve ba
 
 | Sayfa | Ne gösterir |
 |---|---|
-| **İlaçlar** | 37 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları). Her ilaç için başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili, uyarılar, metabolizma ve eliminasyon (yıkım enzimleri, aktif metabolit, atılım yolu, organ yetmezliğinde doz). |
+| **İlaçlar** | 55 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları). Her ilaç için başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili, uyarılar, metabolizma ve eliminasyon (yıkım enzimleri, aktif metabolit, atılım yolu, organ yetmezliğinde doz). |
 | **Metabolizma (CYP)** | Tüm ilaçların CYP ve UGT enzimleriyle ilişkisini gösteren harita (substrat, inhibitör, indükleyici). Enzim seçildiğinde o enzimin substratları, inhibitörleri, indükleyicileri ve rehber dışı etkenler (sigara, greyfurt suyu, antibiyotikler vb.) listelenir. Böbrekle değişmeden atılan ilaçlar ve organ yetmezliğinde doz çizelgesi. |
 | **İlaç Değişimi** | İki ilaç seçildiğinde geçiş stratejisini (doğrudan, çapraz, yıkama aralıklı, örtüşmeli), haftalık zaman çizelgesini ve etkileşim uyarılarını (CYP inhibisyonu dahil) gösterir. |
 | **Uzun Etkili (Depo)** | 8 uzun etkili enjektabl antipsikotik: başlama şeması, oral örtüşme süresi, oral dozdan dönüşüm tabloları, kaçırılan doz kuralları. |

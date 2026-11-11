@@ -48,15 +48,20 @@
         'Her basamakta kan basıncı, nabız, iştah, uyku ve aile/öğretmen ölçeğini değerlendirin.'],
       uyari: ['İki stimulanı birlikte kullanmayın.'] };
     if (ag === 'stimulan' && bg === 'nonstim') return { tur: 'ortusme', p: { titr: 14, ortus: 21, azalt: 0 }, sure: '4–6 hafta',
-      adim: [b.ad + ' başlangıç dozuyla (0,5 mg/kg/gün) ekleyin; 1–2 hafta sonra hedef doza (1,2 mg/kg/gün) çıkın.',
-        a.ad + ' tedavisini bu sırada aynı dozda sürdürün: atomoksetinin etkisi 4–6 haftada belirginleşir.',
+      adim: [b.ad + ' başlangıç dozuyla (' + b.ped.bas + ') ekleyin; 1–2 hafta içinde hedef doza (' + b.ped.hedef + ') çıkın.',
+        a.ad + ' tedavisini bu sırada aynı dozda sürdürün: ' + b.ad + ' etkisi haftalar içinde belirginleşir (' + b.etki + ').',
         'Hedef dozda 2–4 hafta geçtikten sonra stimulanı kesin (kademeli azaltım gerekmez; isterseniz bir hafta yarı doz verin).',
         'Örtüşme döneminde kan basıncı ve nabzı her vizitte ölçün.'],
       uyari: ['Örtüşme döneminde additif kardiyovasküler etki (KB, nabız artışı) ve iştah azalması olabilir.', 'Stimulanın hemen kesilmesi gerekiyorsa (ağır yan etki) doğrudan geçiş yapılabilir; aileyi etkinin gecikeceği konusunda bilgilendirin.'] };
+    if (ag === 'nonstim' && bg === 'nonstim') return { tur: 'dogrudan', p: { titr: 14 }, sure: '1 gün (ardından 2–4 hafta titrasyon)',
+      adim: [a.ad + ' kademeli azaltım gerektirmez: son dozu verin ve ertesi gün ' + b.ad + ' başlangıç dozuyla başlayın.',
+        b.ad + ' dozunu kendi şemasına göre titre edin; etkinin oturması haftalar alır.',
+        'Geçiş boyunca kan basıncı, nabız ve duygudurum/intihar düşüncesini izleyin.'],
+      uyari: ['İki noradrenerjik ilacı tam dozda birlikte kullanmayın (kan basıncı ve nabız artışı).'] };
     if (ag === 'nonstim' && bg === 'stimulan') return { tur: 'dogrudan', p: { titr: 14 }, sure: '1 gün (ardından 2–3 hafta doz optimizasyonu)',
       adim: [a.ad + ' kademeli azaltım gerektirmez: son dozu verin ve ertesi gün ' + b.ad + ' başlangıç dozuyla başlayın.',
         'Stimulanı haftalık aralıklarla titre edin.',
-        'Kısmi yanıt nedeniyle geçiliyorsa atomoksetini kesmeden stimulan eklemek (kombinasyon) de bir seçenektir; bu durumda KB ve nabzı yakından izleyin.'],
+        'Kısmi yanıt nedeniyle geçiliyorsa ' + a.ad + ' tedavisini kesmeden stimulan eklemek (kombinasyon) de bir seçenektir; bu durumda KB ve nabzı yakından izleyin.'],
       uyari: [] };
     if ((ag === 'stimulan' || ag === 'nonstim') && bg === 'alfa2') return { tur: 'ortusme', p: { titr: 21, ortus: 14, azalt: 0 }, sure: '4–6 hafta',
       adim: [b.ad + ' başlangıç dozuyla ekleyin; haftada bir basamak artırarak hedef doza ulaşın.',
@@ -98,6 +103,13 @@
           '1–2 hafta sonra fluoksetini 20 mg\'a çıkarın.',
           'Fluoksetinin uzun yarı ömrü önceki ilacın kesilme belirtilerini büyük ölçüde örter.'],
         uyari: [] };
+      if (a.id === 'fluvoksamin' && b.id === 'agomelatin') return { tur: 'yikama', p: { azalt: 14, bekle: 7, titr: 14 }, sure: '3–5 hafta',
+        adim: ['Fluvoksamini 1–2 haftada kademeli azaltıp kesin.', 'Yaklaşık 1 hafta bekleyin: fluvoksamin vücuttan temizlenmeden agomelatin başlanmaz.',
+          'Karaciğer enzimlerine bakın; ardından agomelatini 25 mg gece dozuyla başlayın.'],
+        uyari: ['Fluvoksamin agomelatin düzeyini yaklaşık 60 kat artırır: birlikte kullanım kontrendikedir, çapraz geçiş yapılmaz.'] };
+      if (a.kesme.risk === 0 && bg !== 'tca') return { tur: 'dogrudan', p: { titr: 14 }, sure: '1–2 hafta',
+        adim: [a.ad + ' kesilme belirtisi yapmaz: kademeli azaltım gerekmeden kesin.', b.ad + ' ertesi gün başlangıç dozuyla başlayın ve kendi şemasına göre titre edin.'],
+        uyari: [] };
       if (ag === 'tca' && bg === 'tca') return { tur: 'capraz', p: { azalt: 21 }, sure: '2–4 hafta',
         adim: [a.ad + ' dozunu haftada %25 azaltırken ' + b.ad + ' dozunu düşük dozdan kademeli artırın.', 'Toplam trisiklik yükünü aşmamaya dikkat edin; EKG ile izleyin.'],
         uyari: ['Additif antikolinerjik ve kardiyak etki.'] };
@@ -127,10 +139,10 @@
           uyari: ['Geçişin ilk haftasında geçici kesilme belirtileri veya serotonerjik yan etkiler görülebilir.'] };
       }
       if (ag === 'ssri' && bg === 'snri') return { tur: 'capraz', p: { azalt: 14 }, sure: '2–3 hafta',
-        adim: [a.ad + ' dozunu 1–2 haftada kademeli azaltın.', b.ad + ' en düşük dozla (venlafaksin 37,5 mg / duloksetin 30 mg) başlayın.', 'Eski ilaç kesildikten sonra yeni ilacı hedef doza titre edin.', 'Düşük dozlu SSRI\'dan doğrudan geçiş de yapılabilir.'],
+        adim: [a.ad + ' dozunu 1–2 haftada kademeli azaltın.', b.ad + ' en düşük dozla (venlafaksin 37,5 mg / duloksetin 30 mg / desvenlafaksin 25–50 mg) başlayın.', 'Eski ilaç kesildikten sonra yeni ilacı hedef doza titre edin.', 'Düşük dozlu SSRI\'dan doğrudan geçiş de yapılabilir.'],
         uyari: ['Kan basıncı ve nabzı izleyin.'] };
       if (ag === 'snri') return { tur: 'capraz', p: { azalt: 21 }, sure: '3–4 hafta',
-        adim: [a.ad + ' dozunu 1–2 haftada bir basamak (37,5 mg / 30 mg) azaltın.', b.ad + ' düşük dozla ekleyin.', 'SNRI kesildikten sonra yeni ilacı hedef doza çıkarın.', 'Kesilme belirtileri şiddetliyse azaltımı yavaşlatın.'],
+        adim: [a.ad + ' dozunu 1–2 haftada bir basamak (venlafaksin 37,5 mg / duloksetin 30 mg / desvenlafaksin 25 mg) azaltın.', b.ad + ' düşük dozla ekleyin.', 'SNRI kesildikten sonra yeni ilacı hedef doza çıkarın.', 'Kesilme belirtileri şiddetliyse azaltımı yavaşlatın.'],
         uyari: ['SNRI kesilme belirtileri (baş dönmesi, elektrik çarpması hissi, bulantı, irritabilite) sıktır.'] };
       return { tur: 'capraz', p: { azalt: 21 }, sure: '2–4 hafta',
         adim: [a.ad + ' dozunu haftada yaklaşık %25 azaltın.', b.ad + ' başlangıç dozuyla ekleyin ve eski ilaç azaldıkça artırın.', 'Eski ilaç kesildikten sonra yeni ilacı hedef doza titre edin.'],
@@ -152,10 +164,11 @@
         adim: ['Başlangıç tetkiklerini tamamlayın (hemogram, EKG, troponin/CRP, metabolik).', 'Klozapini 12,5 mg ile başlayıp kademeli titre edin; bu sırada ' + a.ad + ' dozunu koruyun.',
           'Klozapin etkin doza (genellikle ≥ 150–200 mg/gün) yaklaşınca ' + a.ad + ' dozunu 2–4 haftada azaltıp kesin.', 'Haftalık hemogram ve titrasyon boyunca nabız, KB, ateş izlemi.'],
         uyari: ['Örtüşme döneminde sedasyon, ortostatik hipotansiyon, QT uzaması ve nöbet eşiği düşmesi additiftir.', 'Eski ilaç uzun etkili depo ise bir sonraki enjeksiyon gününde klozapine başlanır.'] };
-      if (b.id === 'aripiprazol') return { tur: 'ortusme', p: { titr: 7, ortus: 14, azalt: 28 }, sure: '6–8 hafta',
-        adim: ['Aripiprazolü 2 mg (ergende 2–5 mg) ile ekleyin; 1–2 haftada hedef doza çıkın.', a.ad + ' dozunu en az 2 hafta değiştirmeyin (aripiprazol kararlı duruma 2 haftada ulaşır).',
+      if (var_(b, 'd2p')) return { tur: 'ortusme', p: { titr: 7, ortus: 14, azalt: 28 }, sure: '6–8 hafta',
+        adim: [b.id === 'aripiprazol' ? 'Aripiprazolü 2 mg (ergende 2–5 mg) ile ekleyin; 1–2 haftada hedef doza çıkın.' : b.ad + ' başlangıç dozuyla (' + b.ped.bas + ') ekleyin ve kendi şemasına göre hedef doza çıkın.',
+          a.ad + ' dozunu en az 2 hafta değiştirmeyin (' + b.ad + ' uzun yarı ömürlüdür; kararlı duruma ' + (b.id === 'aripiprazol' ? '2 haftada' : 'haftalar içinde') + ' ulaşır).',
           'Sonra ' + a.ad + ' dozunu 2–4 haftada (her 1–2 haftada %25–50) azaltıp kesin.', 'Akatizi, uykusuzluk ve ajitasyon açısından izleyin.'],
-        uyari: ['Aripiprazol parsiyel agonisttir: güçlü D2 blokörlerinden (risperidon, haloperidol) hızlı geçişte geçici ajitasyon, uykusuzluk veya psikotik alevlenme olabilir.', 'Prolaktin düşer; adetler ve fertilite geri dönebilir (ergenlerde kontrasepsiyon danışmanlığı).'] };
+        uyari: [b.ad + ' parsiyel agonisttir: güçlü D2 blokörlerinden (risperidon, haloperidol) hızlı geçişte geçici ajitasyon, uykusuzluk veya psikotik alevlenme olabilir.', 'Prolaktin düşer; adetler ve fertilite geri dönebilir (ergenlerde kontrasepsiyon danışmanlığı).'] };
       if (var_(a, 'antikol')) return { tur: 'capraz', p: { azalt: 28 }, sure: '4–6 hafta',
         adim: [b.ad + ' başlangıç dozuyla ekleyin ve kademeli artırın.', a.ad + ' dozunu her hafta %25 azaltın (yavaş azaltım rebound uykusuzluğu ve kolinerjik reboundu önler).',
           'Uyku bozulursa azaltımı yavaşlatın; kısa süreli uyku desteği düşünün.', 'Kilo, iştah ve EPS açısından yeniden değerlendirin.'],
@@ -185,6 +198,14 @@
       if (a.id === 'lamotrijin' && b.id === 'karbamazepin') return { tur: 'ortusme', p: { titr: 21, ortus: 7, azalt: 14 }, sure: '5–7 hafta',
         adim: ['Karbamazepini başlangıç dozuyla ekleyip haftalık titre edin.', 'Karbamazepin hedef doza ulaşınca lamotrijini 2 haftada azaltıp kesin.', 'Karbamazepin indüksiyonu lamotrijin düzeyini düşürür; örtüşmede nörotoksisite belirtilerini izleyin.'],
         uyari: ['Her iki ilaç da döküntü yapabilir: yeni döküntüde ikisini de değerlendirin.'] };
+      if (a.id === 'karbamazepin' && b.id === 'okskarbazepin') return { tur: 'dogrudan', p: { titr: 14 }, sure: '1 gün (ardından 2–4 hafta doz ayarı)',
+        adim: ['Karbamazepini kesin ve ertesi gün okskarbazepine geçin: karbamazepin 200 mg ≈ okskarbazepin 300 mg.', 'Yüksek dozda (karbamazepin > 800 mg/gün) geçişi 1–2 haftaya yayın ve daha düşük oranla başlayın.',
+          'Karbamazepinin enzim indüksiyonu 2–4 haftada kalkar: eşlik eden ilaçların (antipsikotik, lamotrijin, valproat) düzeyi yükselebilir.', 'İlk 3 ayda sodyum bakın.'],
+        uyari: ['Karbamazepine bağlı döküntüsü olanların yaklaşık %25–30\'unda okskarbazepinle de döküntü gelişir.', 'Hiponatremi okskarbazepinle daha sıktır.'] };
+      if (a.id === 'okskarbazepin' && b.id === 'karbamazepin') return { tur: 'dogrudan', p: { titr: 21 }, sure: '1 gün (ardından 3–5 hafta doz ayarı)',
+        adim: ['Okskarbazepini kesin ve ertesi gün karbamazepine geçin: okskarbazepin 300 mg ≈ karbamazepin 200 mg.', 'Karbamazepinin oto-indüksiyonu nedeniyle ilk 3–5 haftada düzey düşer: düzey bakarak dozu artırın.',
+          'Eşlik eden ilaçların düzeyi karbamazepin indüksiyonuyla düşer: dozlarını gözden geçirin.'],
+        uyari: ['Asya kökenli hastalarda karbamazepin öncesi HLA-B*1502 bakın.'] };
       if (a.id === 'lityum') return { tur: 'ortusme', p: { titr: b.id === 'lamotrijin' ? 42 : 14, ortus: 14, azalt: 28 }, sure: b.id === 'lamotrijin' ? '12–14 hafta' : '8–10 hafta',
         adim: [b.ad + ' başlangıç dozuyla ekleyin ve etkin doza/düzeye titre edin.', 'Yeni ilaç etkin dozda en az 2 hafta sürdükten sonra lityumu azaltmaya başlayın.',
           'Lityumu en az 4 haftada (tercihen 3 aya dek) kademeli azaltıp kesin.', 'Kesme sonrası ilk 3 ay nüks ve intihar riski açısından sık görün.'],
@@ -195,12 +216,12 @@
         uyari: a.id === 'karbamazepin' ? ['Karbamazepin + lityum birlikteliğinde nörotoksisite bildirilmiştir; örtüşmede tremor, ataksi, konfüzyon izleyin.'] : [] };
       return { tur: 'ortusme', p: { titr: 21, ortus: 7, azalt: 28 }, sure: '8–10 hafta',
         adim: [b.ad + ' başlangıç dozuyla ekleyin ve serum düzeyi eşliğinde titre edin.', 'Yeni ilaç terapötik düzeye ulaşınca ' + a.ad + ' dozunu 4 haftada kademeli azaltın.', 'Örtüşme döneminde her iki ilacın düzeyini kontrol edin.'],
-        uyari: ['Valproat karbamazepinin aktif epoksit metabolitini artırır (toksisite); karbamazepin valproat düzeyini düşürür.'] };
+        uyari: [a.id, b.id].sort().join('+') === 'karbamazepin+valproat' ? ['Valproat karbamazepinin aktif epoksit metabolitini artırır (toksisite); karbamazepin valproat düzeyini düşürür.'] : [] };
     }
 
     /* ───── Benzodiazepinler ───── */
     if (ag === 'benzo' && bg === 'benzo') return { tur: 'dogrudan', p: { titr: 0 }, sure: '1–7 gün',
-      adim: ['Eşdeğer dozu hesaplayın: lorazepam 1 mg ≈ klonazepam 0,5 mg (≈ diazepam 10 mg).', 'Doğrudan veya günlük dozları birer birer değiştirerek 3–7 günde geçin.',
+      adim: ['Eşdeğer dozu hesaplayın: diazepam 10 mg ≈ lorazepam 1 mg ≈ klonazepam 0,5 mg ≈ alprazolam 0,5 mg.', 'Doğrudan veya günlük dozları birer birer değiştirerek 3–7 günde geçin.',
         'Amaç kesmekse: uzun etkili benzodiazepine geçtikten sonra her 1–2 haftada %10–25 azaltın.'],
       uyari: ['Eşdeğerlikler yaklaşıktır; aşırı sedasyon veya yoksunluk belirtilerine göre ayarlayın.'] };
     if (ag === 'benzo') return { tur: 'ortusme', p: { titr: 14, ortus: 14, azalt: 42 }, sure: '8–12 hafta',

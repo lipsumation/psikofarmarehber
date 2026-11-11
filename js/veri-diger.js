@@ -105,6 +105,29 @@
     oz: ['induk', 'cbz']
   },
   {
+    id: 'okskarbazepin', ad: 'Okskarbazepin', sinif: 'dd', altSinif: 'Duygudurum dengeleyici (antiepileptik)', grup: 'dd',
+    mek: 'Karbamazepinin keto türevi; voltaja bağlı sodyum kanallarını bloke eder. Enzim indüksiyonu ve kan tablosu üzerine etkisi karbamazepinden az, hiponatremi riski daha fazladır. Pediatrik bipolar manide plaseboya üstünlük gösterilememiştir; karbamazepini tolere edemeyenlerde düşünülür.',
+    t12: 'Ön ilaç 2 saat; aktif metabolit ~9 saat', t12s: 9, etki: '1–2 hafta', form: 'Tablet 150 / 300 / 600 mg; oral süspansiyon 60 mg/mL',
+    onay: [], onayNot: 'Psikiyatrik endikasyonda pediatrik onay yok (epilepside ≥ 4 yaş onaylı)',
+    ped: {
+      bas: '8–10 mg/kg/gün, ikiye bölünmüş (en fazla 600 mg/gün)', artis: 'Haftada bir 5–10 mg/kg/gün (150–300 mg)', hedef: '20–30 mg/kg/gün (900–1800 mg/gün)', maks: 'Kiloya göre 900–2100 mg/gün',
+      birim: 'mg/gün', adim: [[0, 300], [7, 600], [14, 900], [21, 1200]], bant: [900, 1800], tavan: 2100,
+      not: ['Grafik yaklaşık 30–40 kg bir çocuk içindir; doz kiloya göre hesaplanır.', 'Günde iki doza bölünür; yemekten bağımsızdır.', 'Karbamazepinden geçişte 200 mg karbamazepin yaklaşık 300 mg okskarbazepine karşılık gelir.', 'Asya kökenli hastalarda başlamadan önce HLA-B*1502 bakın.', 'Hormonal kontraseptif etkinliğini azaltır: ergenlerde ek yöntem önerin.']
+    },
+    eri: {
+      bas: '300 mg ×2', artis: 'Haftada bir 300–600 mg/gün', hedef: '1200–2400 mg/gün', maks: '2400 mg/gün',
+      birim: 'mg/gün', adim: [[0, 600], [7, 900], [14, 1200], [28, 1800]], bant: [1200, 2400], tavan: 2400, not: []
+    },
+    surdurum: SURDURUM_DD.concat(['İlk 3 ayda ve belirti olduğunda sodyum bakın.', 'Hormonal kontrasepsiyon etkinliği azalır: alternatif yöntem danışmanlığı verin.']),
+    kesme: { risk: 2, sure: '4–8 hafta', adim: [[0, 100], [14, 75], [28, 50], [42, 25], [56, 0]], not: ['Her 1–2 haftada dozun %25\'i kadar azaltın.', 'Ani kesmede nöbet (epilepsi öyküsü olmasa da) ve duygudurum nüksü riski.'] },
+    izlem: 'karbamazepin', izlemEk: [['Sodyum', [1, 1, 1, 2, 1], 'Hiponatremi karbamazepinden sıktır: ilk 3 ayda ve bulantı, baş ağrısı, uyuşukluk, konfüzyon olduğunda.'], ['Serum düzeyi', [0, 0, 0, 0, 0], 'Rutin düzey izlemi gerekmez.'], ['Tam kan sayımı', [1, 0, 2, 0, 2], 'Kan tablosu etkisi karbamazepinden azdır; başlangıçta ve belirti varsa.']],
+    profil: { sed: 2, kilo: 1, gis: 2, ach: 0, kes: 2 },
+    kutu: 'Ağır deri reaksiyonları (Stevens-Johnson sendromu, toksik epidermal nekroliz) ve klinik olarak anlamlı hiponatremi bildirilmiştir. Karbamazepine aşırı duyarlılığı olanların dörtte birinde çapraz reaksiyon görülür.',
+    uyari: ['Hiponatremi (çoğu ilk 3 ayda)', 'Baş dönmesi, çift görme, ataksi, uyuklama', 'Döküntü; karbamazepinle çapraz duyarlılık', 'Bulantı, kusma', 'Antiepileptik sınıf uyarısı: intihar düşüncesi'],
+    etkilesim: ['Hormonal kontraseptif etkinliğini azaltır', 'Karbamazepin, fenitoin, fenobarbital aktif metabolit düzeyini %30–40 düşürür', 'Yüksek dozda fenitoin düzeyini artırır (CYP2C19 inhibisyonu)', 'Lamotrijin düzeyini hafif düşürebilir', 'Diüretikler ve SSRI\'larla hiponatremi riski artar'],
+    oz: []
+  },
+  {
     id: 'melatonin', ad: 'Melatonin', sinif: 'anks', altSinif: 'Uyku düzenleyici', grup: 'diger',
     mek: 'MT1/MT2 reseptör agonisti; uykuya dalmayı kolaylaştırır ve sirkadiyen fazı öne çeker. Otizm ve DEHB\'de uykuya dalma güçlüğünde davranışsal önlemlerden sonra ilk seçenek.',
     t12: '30–60 dakika (uzatılmış salımlı formda etki 8–10 saat)', t12s: 0.8, etki: '30–60 dakika; faz kaydırma 1–2 hafta', form: 'Tablet 1 / 3 / 5 mg; damla; uzatılmış salımlı mini tablet 1 / 5 mg',
@@ -212,6 +235,76 @@
     uyari: ['Baş dönmesi, bulantı, baş ağrısı', 'Huzursuzluk, uykusuzluk', 'Serotonerjiklerle birlikte serotonin sendromu (nadir)'],
     etkilesim: ['MAOİ ile kontrendike', 'Güçlü CYP3A4 inhibitörleri (eritromisin, itrakonazol, greyfurt suyu) düzeyi belirgin artırır', 'Karbamazepin, rifampisin düzeyi düşürür'],
     oz: ['sero']
+  },
+  {
+    id: 'diazepam', ad: 'Diazepam', sinif: 'anks', altSinif: 'Benzodiazepin (uzun etkili)', grup: 'benzo',
+    mek: 'GABA-A reseptörü pozitif allosterik modülatörü. Hızlı başlangıçlı ve uzun etkilidir; aktif metabolitleri günlerce dolaşımda kalır. Uzun yarı ömrü nedeniyle diğer benzodiazepinlerden çıkışta ara basamak olarak kullanılır.',
+    t12: '20–50 saat (aktif metabolit 36–200 saat)', t12s: 48, etki: 'Oral 15–60 dakika', form: 'Tablet 2 / 5 / 10 mg; ampul 10 mg; rektal tüp 5 / 10 mg',
+    onay: [['Anksiyete, kas spazmı, nöbette ek tedavi', '≥ 6 ay']],
+    ped: {
+      bas: '1–2,5 mg ×2–3 (0,1–0,3 mg/kg/gün, bölünmüş)', artis: 'Yanıta göre 3–4 günde bir kademeli', hedef: 'Çocuk: 2–10 mg/gün · ergen: 4–20 mg/gün (bölünmüş)', maks: '0,8 mg/kg/gün; ergende 30 mg/gün',
+      birim: 'mg/gün', adim: [[0, 3], [4, 6], [8, 10]], bant: [3, 10], tavan: 30,
+      not: ['Altı aydan küçük bebeklerde oral form kullanılmaz.', 'Kullanım süresini 2–4 hafta ile sınırlayın.', 'Aktif metabolitler birikir: sedasyon ilk hafta boyunca artabilir, dozu erken artırmayın.', 'Paradoksal disinhibisyon (ajitasyon, saldırganlık) çocuklarda ve gelişimsel bozukluklarda daha sıktır.']
+    },
+    eri: {
+      bas: '2–5 mg ×2–3', artis: '3–4 günde bir', hedef: '5–30 mg/gün (bölünmüş)', maks: '40 mg/gün',
+      birim: 'mg/gün', adim: [[0, 6], [4, 15], [8, 30]], bant: [6, 30], tavan: 40, not: []
+    },
+    surdurum: ['Kullanımı 2–4 hafta ile sınırlayın; daha uzun kullanım gerekiyorsa gerekçeyi yazın ve çıkış planını baştan yapın.', 'Asıl tedavi (SSRI, psikoterapi) etkisini gösterene dek köprü olarak kullanın.'],
+    kesme: { risk: 3, sure: 'Kullanım süresine göre 4–12+ hafta', adim: [[0, 100], [14, 75], [28, 50], [42, 25], [56, 10], [70, 0]],
+      not: ['Her 1–2 haftada dozun %10–25\'i kadar azaltın; son basamakları daha yavaş inin.', 'Uzun yarı ömür azaltımı kolaylaştırır: kesilme belirtileri geç (5–10. gün) başlar ve daha hafif seyreder.', 'Ani kesmede nöbet riski.'] },
+    izlem: 'benzo', profil: { sed: 3, kilo: 0, gis: 0, akt: 0, kes: 3 },
+    kutu: 'Kötüye kullanım, bağımlılık ve kesilme reaksiyonları; opioidlerle birlikte kullanımda solunum depresyonu ve ölüm riski.',
+    uyari: ['Sedasyon, ataksi, anterograd amnezi', 'Paradoksal disinhibisyon', 'Birikime bağlı gündüz uyuklaması, okul performansında düşme', 'Tolerans ve bağımlılık', 'Solunum depresyonu (parenteral/yüksek doz)'],
+    etkilesim: ['Opioid, alkol ve diğer sedatiflerle solunum depresyonu', 'Fluvoksamin, fluoksetin, omeprazol (CYP2C19) düzeyi artırır', 'Güçlü CYP3A4 inhibitörleri düzeyi artırır', 'Karbamazepin, fenitoin, rifampisin düzeyi düşürür'],
+    oz: ['benzo', 'uzun']
+  },
+  {
+    id: 'alprazolam', ad: 'Alprazolam', sinif: 'anks', altSinif: 'Benzodiazepin (kısa–orta etkili)', grup: 'benzo',
+    mek: 'GABA-A reseptörü pozitif allosterik modülatörü; panik bozuklukta etkilidir. Hızlı başlangıç ve kısa etki süresi nedeniyle doz arası rebound anksiyete ve bağımlılık riski diğer benzodiazepinlerden yüksektir.',
+    t12: '11 saat (6–27 saat)', t12s: 11, etki: '15–60 dakika', form: 'Tablet 0,25 / 0,5 / 1 mg',
+    onay: [], onayNot: 'Pediatrik onay yok · endikasyon dışı',
+    ped: {
+      bas: '0,125–0,25 mg ×2–3 (ergen)', artis: '3–4 günde bir 0,125–0,25 mg', hedef: '0,5–1,5 mg/gün (bölünmüş)', maks: '2 mg/gün',
+      birim: 'mg/gün', adim: [[0, 0.5], [4, 0.75], [8, 1]], bant: [0.5, 1.5], tavan: 2,
+      not: ['Endikasyon dışı kullanım; çocuk ve ergende ilk seçenek değildir, yalnızca kısa süreli (2–4 hafta) kullanın.', 'Doz aralarında rebound anksiyete olursa daha uzun etkili bir benzodiazepine geçin.', 'Madde kullanım öyküsü olan gençte kullanmayın.']
+    },
+    eri: {
+      bas: '0,25–0,5 mg ×3', artis: '3–4 günde bir en fazla 1 mg/gün', hedef: 'Anksiyete: 0,75–4 mg/gün · panik: 4–6 mg/gün', maks: 'Anksiyete: 4 mg/gün',
+      birim: 'mg/gün', adim: [[0, 0.75], [4, 1.5], [8, 3]], bant: [0.75, 4], tavan: 4, not: []
+    },
+    surdurum: ['Kullanımı 2–4 hafta ile sınırlayın; daha uzun kullanım gerekiyorsa gerekçeyi yazın ve çıkış planını baştan yapın.', 'Asıl tedavi (SSRI, psikoterapi) etkisini gösterene dek köprü olarak kullanın.'],
+    kesme: { risk: 3, sure: 'Kullanım süresine göre 6–12+ hafta', adim: [[0, 100], [14, 75], [28, 50], [42, 25], [56, 10], [70, 0]],
+      not: ['Günlük dozu 3 günde bir en fazla 0,5 mg azaltın; uzun kullanımda her 1–2 haftada %10–25.', 'Kesilme belirtileri şiddetliyse eşdeğer dozda diazepam veya klonazepama geçip onu azaltın.', 'Ani kesmede nöbet riski; kısa yarı ömür nedeniyle belirtiler 1–2 gün içinde başlar.'] },
+    izlem: 'benzo', profil: { sed: 2, kilo: 0, gis: 0, akt: 0, kes: 3 },
+    kutu: 'Kötüye kullanım, bağımlılık ve kesilme reaksiyonları; opioidlerle birlikte kullanımda solunum depresyonu ve ölüm riski.',
+    uyari: ['Sedasyon, dikkat ve bellek bozukluğu', 'Doz arası rebound anksiyete', 'Paradoksal disinhibisyon', 'Tolerans ve bağımlılık (diğer benzodiazepinlerden yüksek)'],
+    etkilesim: ['Ketokonazol, itrakonazol ile kontrendike (düzey 3–4 kat)', 'Fluvoksamin düzeyi 2 kat artırır: dozu yarıya indirin', 'Klaritromisin, eritromisin, greyfurt suyu düzeyi artırır', 'Karbamazepin düzeyi düşürür', 'Opioid, alkol ve sedatiflerle solunum depresyonu'],
+    oz: ['benzo']
+  },
+  {
+    id: 'pregabalin', ad: 'Pregabalin', sinif: 'anks', altSinif: 'Alfa-2-delta ligandı', grup: 'diger',
+    mek: 'Voltaja bağlı kalsiyum kanallarının alfa-2-delta alt birimine bağlanır; uyarıcı nörotransmitter salınımını azaltır. Erişkinde yaygın anksiyete bozukluğunda etkilidir, etkisi ilk haftada başlar. Metabolize olmaz, böbrekle atılır. Kötüye kullanım potansiyeli vardır.',
+    t12: '~6 saat', t12s: 6, etki: '1 hafta', form: 'Kapsül 25 / 75 / 150 / 300 mg; oral solüsyon 20 mg/mL',
+    onay: [], onayNot: 'Anksiyetede pediatrik onay yok · endikasyon dışı',
+    ped: {
+      bas: '25–50 mg ×2 (ergen)', artis: 'Haftada bir 50–75 mg/gün', hedef: '150–300 mg/gün (2–3 doza bölünmüş)', maks: '300 mg/gün',
+      birim: 'mg/gün', adim: [[0, 75], [7, 150], [14, 225], [21, 300]], bant: [150, 300], tavan: 300,
+      not: ['Endikasyon dışı kullanım; çocuk ve ergen anksiyetesinde kontrollü çalışma yoktur.', 'Madde kullanım öyküsünü sorgulayın; kötüye kullanım ergenlerde bildirilmiştir.', 'Sedasyon ve baş dönmesi ilk haftalarda belirgindir: okul ve araç kullanımı konusunda uyarın.']
+    },
+    eri: {
+      bas: '75 mg ×2', artis: 'Haftada bir 150 mg/gün', hedef: '300–450 mg/gün', maks: '600 mg/gün',
+      birim: 'mg/gün', adim: [[0, 150], [7, 300], [14, 450], [21, 600]], bant: [300, 450], tavan: 600, not: []
+    },
+    surdurum: ['Yeterli dozda 4–6 hafta sonunda yanıt yoksa kademeli keserek başka seçeneğe geçin.', 'Her vizitte doz artırma eğilimi ve kötüye kullanım belirtilerini sorgulayın.'],
+    kesme: { risk: 2, sure: 'En az 1–2 hafta (uzun kullanımda daha yavaş)', adim: [[0, 100], [7, 50], [14, 0]],
+      not: ['En az bir haftada kademeli azaltın.', 'Ani kesmede uykusuzluk, bulantı, baş ağrısı, anksiyete, terleme; yüksek dozda nöbet bildirilmiştir.'] },
+    izlem: 'benzo', izlemEk: [['Böbrek işlevi', [1, 0, 0, 0, 2], 'Doz kreatinin klirensine göre ayarlanır.'], ['Kilo / ödem', [1, 1, 1, 1, 1], 'Kilo artışı ve periferik ödem.'], ['İntihar düşüncesi', [1, 1, 1, 1, 1], 'Antiepileptik sınıf uyarısı.']],
+    profil: { sed: 2, kilo: 2, gis: 1, akt: 0, kes: 2 },
+    kutu: 'Kötüye kullanım ve bağımlılık bildirilmiştir; opioidlerle birlikte kullanımda solunum depresyonu riski.',
+    uyari: ['Baş dönmesi, somnolans', 'Kilo artışı, periferik ödem', 'Bulanık görme, dikkat bozukluğu', 'Kötüye kullanım, bağımlılık', 'İntihar düşüncesi (antiepileptik sınıf uyarısı)'],
+    etkilesim: ['Opioid, benzodiazepin ve alkolle additif sedasyon ve solunum depresyonu', 'CYP üzerinden etkileşimi yoktur', 'Tiyazolidindionlarla ödem artar'],
+    oz: []
   }
   );
 })();

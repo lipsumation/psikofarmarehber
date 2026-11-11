@@ -471,6 +471,204 @@
       artiran: ['İtrakonazol (yaklaşık 19 kat), eritromisin (6 kat), diltiazem ve verapamil (3–5 kat): 2,5 mg ile başlayın', 'Greyfurt suyu: 4–9 kat', 'Fluvoksamin: 2–3 kat'],
       dusuren: ['Rifampisin: düzey yaklaşık %90 düşer', 'Karbamazepin, fenitoin'],
       not: ['Yemekle alındığında biyoyararlanım artar: her zaman aynı biçimde (aç ya da tok) alınmalıdır.']
+    },
+
+    /* ───────── Sonradan eklenen ilaçlar ───────── */
+    deksmetilfenidat: {
+      ozet: 'Metilfenidat gibi CYP enzimleriyle değil, karaciğerdeki karboksilesteraz 1 (CES1) ile etkisiz d-ritalinik aside hidrolize olur. CYP üzerinden etkileşimi azdır.',
+      sub: {}, inh: {}, ind: {},
+      diger: 'Karboksilesteraz 1 (CES1)',
+      aktif: null,
+      atilim: [90, 3], fe: 0.5, feYazi: '%1\'in altında',
+      bobrek: 'Doz ayarı gerekmez (etkisiz metabolit idrarla atılır).',
+      karaciger: 'Resmi doz ayarı yok; klinik yanıta göre titre edin.',
+      etkiler: ['Trisiklik antidepresan, fenitoin, fenobarbital ve varfarin düzeylerinde artış bildirilmiştir; birlikte kullanımda izleyin.']
+    },
+    amfetamin: {
+      ozet: 'Bir bölümü karaciğerde oksidatif deaminasyon ve hidroksilasyonla (kısmen CYP2D6) yıkılır, önemli bir bölümü değişmeden idrarla atılır. Atılım idrar pH\'sına çok bağlıdır: asit idrarda hızlanır, alkali idrarda yavaşlar.',
+      sub: { '2D6': 1 }, inh: {}, ind: {},
+      diger: 'Oksidatif deaminasyon; böbrekle değişmeden atılım',
+      aktif: null,
+      atilim: [90, 0], fe: 35, feYazi: 'yaklaşık %30–40 (idrar pH\'sına göre %1–75)',
+      bobrek: 'Ağır bozuklukta dozu azaltın; son dönem böbrek yetmezliğinde düşük dozda kalın.',
+      karaciger: 'Resmi doz ayarı yok; dikkatli titre edin.',
+      artiran: ['İdrarı alkalileştirenler (sodyum bikarbonat, asetazolamid): atılım azalır, etki uzar', 'Mide asidini azaltanlar (proton pompa inhibitörleri): uzun salımlı formun emilimi hızlanır'],
+      dusuren: ['İdrarı ve mideyi asitleştirenler (C vitamini, meyve suyu, amonyum klorür): emilim azalır, atılım hızlanır'],
+      cocuk: 'Yarı ömür çocuklarda yaklaşık 9 saat, ergenlerde 11 saat, erişkinde 10–13 saattir; kg başına klirens çocuklarda daha yüksektir.'
+    },
+    viloksazin: {
+      ozet: 'Karaciğerde CYP2D6 ile hidroksillenir, ardından glukuronidlenir (UGT1A9, UGT2B15). Asıl önemi güçlü CYP1A2 inhibitörü olmasıdır: bu enzimle yıkılan ilaçların düzeyini belirgin artırır.',
+      sub: { '2D6': 2, 'UGT': 2 }, inh: { '1A2': 3, '2D6': 1, '3A4': 1 }, ind: {},
+      aktif: null,
+      atilim: [90, 1], fe: 0.5, feYazi: '%1\'in altında',
+      bobrek: 'Ağır bozuklukta (glomerüler filtrasyon hızı < 30 mL/dk) 100 mg ile başlayın, haftada 50–100 mg artırın, en fazla 200 mg/gün.',
+      karaciger: 'Karaciğer yetmezliğinde çalışılmamıştır: dikkatli kullanın.',
+      etkiler: ['CYP1A2 (güçlü): duloksetin, tizanidin ve teofilin ile birlikte kullanılmaz; klozapin, olanzapin, melatonin, agomelatin düzeyi belirgin artar. Kafeinin etkisi uzar.', 'CYP2D6 ve CYP3A4 (zayıf): atomoksetin, aripiprazol, risperidon düzeyinde hafif artış olabilir.'],
+      gen: 'CYP2D6 yavaş metabolizörlerde düzey hafif artar; doz ayarı önerilmez.'
+    },
+    modafinil: {
+      ozet: 'Karaciğerde başlıca amid hidroliziyle, daha az oranda CYP3A4 ile yıkılır; metabolitleri etkisizdir. Orta düzeyde CYP3A4 indükleyicisi ve zayıf CYP2C19 inhibitörüdür.',
+      sub: { '3A4': 1 }, inh: { '2C19': 1 }, ind: { '3A4': 2, '1A2': 1, '2B6': 1 },
+      diger: 'Amid hidrolizi (ana yol)',
+      aktif: null,
+      atilim: [80, 1], fe: 8, feYazi: '%10\'un altında',
+      bobrek: 'Ağır bozuklukta veri yetersiz: dikkatli kullanın.',
+      karaciger: 'Ağır bozuklukta dozu yarıya indirin.',
+      dusuren: ['Karbamazepin, fenitoin, rifampisin (CYP3A4 indüksiyonu)'],
+      etkiler: ['CYP3A4 indüksiyonu: hormonal kontraseptiflerin etkinliği azalır (kesildikten sonra 1 ay daha ek yöntem); ketiapin, aripiprazol, lurasidon, buspiron, midazolam düzeyi düşebilir.', 'CYP2C19 inhibisyonu: diazepam, fenitoin, klomipramin, sitalopram düzeyi artabilir.']
+    },
+    amitriptilin: {
+      ozet: 'Karaciğerde CYP2C19 (ayrıca CYP3A4 ve CYP1A2) ile aktif metaboliti nortriptiline demetile olur; ana ilaç ve metabolit CYP2D6 ile hidroksillenip etkisizleşir. Terapötik aralığı dardır.',
+      sub: { '2C19': 2, '2D6': 2, '3A4': 1, '1A2': 1, '2C9': 1 }, inh: { '2D6': 1 }, ind: {},
+      aktif: 'Nortriptilin: noradrenerjik etkisi baskın, yarı ömrü 18–44 saat.',
+      atilim: null, atilimYazi: 'Metabolitler (serbest ve glukuronid) başlıca idrarla atılır.', fe: 2, feYazi: '%5\'in altında',
+      bobrek: 'Doz ayarı genellikle gerekmez; dikkatli kullanın.',
+      karaciger: 'Düşük dozla başlayın; düzey ve EKG izleyin.',
+      artiran: ['Fluoksetin, paroksetin, bupropion (CYP2D6): düzey 2–4 kat artar, kardiyotoksisite riski', 'Fluvoksamin (CYP2C19, CYP1A2)', 'Valproat düzeyi artırabilir'],
+      dusuren: ['Karbamazepin, fenitoin, rifampisin', 'Sigara'],
+      gen: 'CYP2D6 veya CYP2C19 yavaş metabolizörlerde düzey belirgin artar: dozu yaklaşık %50 azaltıp düzey izleyin. Ultra hızlı metabolizörlerde etkisiz kalabilir.'
+    },
+    desvenlafaksin: {
+      ozet: 'Başlıca glukuronidasyonla (UGT), küçük oranda CYP3A4 ile yıkılır; yaklaşık yarısı değişmeden idrarla atılır. CYP2D6\'dan bağımsızdır: genotip ve CYP2D6 inhibitörleri düzeyini etkilemez.',
+      sub: { 'UGT': 2, '3A4': 1 }, inh: { '2D6': 1 }, ind: {},
+      aktif: null,
+      atilim: [69, 0], fe: 45,
+      bobrek: 'Kreatinin klirensi 30–50 mL/dk: en fazla 50 mg/gün; < 30 mL/dk: 25 mg/gün veya 50 mg gün aşırı.',
+      karaciger: 'Orta–ağır bozuklukta en fazla 100 mg/gün.',
+      artiran: ['Ketokonazol (CYP3A4): düzey yaklaşık %40 artar'],
+      etkiler: ['Yüksek dozda CYP2D6\'yı zayıf inhibe eder: desipramin, atomoksetin düzeyinde hafif artış.']
+    },
+    agomelatin: {
+      ozet: 'Karaciğerde başlıca CYP1A2 ile (yaklaşık %90), kalanı CYP2C9 ve CYP2C19 ile yıkılır. İlk geçiş metabolizması çok yoğundur (biyoyararlanım %5\'in altında); bu nedenle CYP1A2\'yi etkileyen her şey düzeyi kat kat değiştirir.',
+      sub: { '1A2': 2, '2C9': 1, '2C19': 1 }, inh: {}, ind: {},
+      aktif: null,
+      atilim: [80, 0], fe: 0.5, feYazi: 'ihmal edilebilir',
+      bobrek: 'Doz ayarı gerekmez; ağır bozuklukta dikkatli kullanın.',
+      karaciger: 'Karaciğer hastalığında ve transaminazlar üst sınırın 3 katını aşıyorsa kontrendikedir.',
+      artiran: ['Fluvoksamin: düzey yaklaşık 60 kat artar, kontrendike', 'Siprofloksasin: kontrendike', 'Östrojen içeren kontraseptifler: düzey birkaç kat artar', 'Propranolol'],
+      dusuren: ['Sigara (günde 15 adetten fazla): düzey belirgin düşer', 'Rifampisin'],
+      not: ['Kadınlarda ve yaşlılarda maruziyet daha yüksektir.']
+    },
+    tianeptin: {
+      ozet: 'CYP enzimleriyle değil, karaciğerde beta-oksidasyon ve N-demetilasyonla yıkılır. Bu nedenle CYP üzerinden ilaç etkileşimi yoktur. Metabolitleri böbrekle atılır.',
+      sub: {}, inh: {}, ind: {},
+      diger: 'Beta-oksidasyon',
+      aktif: 'Pentanoik asit metaboliti (MC5): etkin, yarı ömrü yaklaşık 7 saat.',
+      atilim: [65, 15], fe: 8, feYazi: '%10\'un altında',
+      bobrek: 'Yarı ömür uzar: 12,5 mg ×2.',
+      karaciger: 'Alkole bağlı sirozda doz ayarı gerekmez; ağır yetmezlikte 12,5 mg ×2.',
+      not: ['İleri yaşta yarı ömür yaklaşık 1 saat uzar: 70 yaş üzerinde 12,5 mg ×2.']
+    },
+    amisulpirid: {
+      ozet: 'Karaciğerde çok az metabolize olur; CYP enzimleri rol oynamaz. Emilen ilacın büyük bölümü değişmeden böbrekle atılır. Doz karaciğere değil böbrek işlevine göre ayarlanır ve CYP üzerinden etkileşimi yoktur.',
+      sub: {}, inh: {}, ind: {},
+      diger: 'Böbrekle değişmeden atılım',
+      aktif: null,
+      atilim: null, atilimYazi: 'Emilen bölüm değişmeden idrarla, emilmeyen bölüm dışkıyla atılır (oral biyoyararlanım yaklaşık %48).', fe: 50, feYazi: 'emilen dozun yaklaşık %50\'si',
+      bobrek: 'Kreatinin klirensi 30–60 mL/dk: dozu yarıya; 10–30 mL/dk: üçte bire indirin; < 10 mL/dk: kullanmayın.',
+      karaciger: 'Doz ayarı gerekmez.',
+      artiran: ['Böbrek işlevini bozan durumlar ve ilaçlar', 'Lityum (böbrek atılımıyla yarışabilir)']
+    },
+    klorpromazin: {
+      ozet: 'Karaciğerde yoğun ilk geçiş metabolizmasına uğrar; başlıca CYP2D6, daha az CYP1A2 ve CYP3A4 ile çok sayıda metabolite dönüşür. Kendisi orta düzeyde CYP2D6 inhibitörüdür.',
+      sub: { '2D6': 2, '1A2': 1, '3A4': 1 }, inh: { '2D6': 2 }, ind: {},
+      aktif: '7-hidroksiklorpromazin ve başka aktif metabolitler; klinik katkıları değişkendir.',
+      atilim: null, atilimYazi: 'Metabolitler idrar ve safra yoluyla atılır.', fe: 0.5, feYazi: '%1\'in altında',
+      bobrek: 'Dikkatli kullanın; düşük dozla başlayın.',
+      karaciger: 'Düşük dozla başlayın; kolestatik sarılık öyküsünde kullanmayın.',
+      artiran: ['Fluoksetin, paroksetin (CYP2D6)', 'Fluvoksamin, siprofloksasin (CYP1A2)'],
+      dusuren: ['Sigara', 'Karbamazepin, fenobarbital', 'Antiasitler emilimi azaltır'],
+      etkiler: ['CYP2D6 (orta): trisiklik antidepresan, risperidon, atomoksetin düzeyi artabilir.', 'Valproat düzeyini artırabilir; propranolol ile karşılıklı düzey artışı.'],
+      gen: 'CYP2D6 yavaş metabolizörlerde düzey ve sedasyon/hipotansiyon riski artar.'
+    },
+    asenapin: {
+      ozet: 'Karaciğerde iki ana yolla yıkılır: doğrudan glukuronidasyon (UGT1A4) ve CYP1A2 ile oksidasyon. Yutulduğunda ilk geçişte neredeyse tamamen yıkıldığı için dilaltı verilir.',
+      sub: { '1A2': 2, 'UGT': 2, '3A4': 1, '2D6': 1 }, inh: { '2D6': 1 }, ind: {},
+      aktif: null,
+      atilim: [50, 40], fe: 0.5, feYazi: 'eser miktarda',
+      bobrek: 'Doz ayarı gerekmez.',
+      karaciger: 'Ağır bozuklukta (Child-Pugh C) maruziyet 7 kat artar: kontrendikedir.',
+      artiran: ['Fluvoksamin (CYP1A2): düzey artar, dikkatli kullanın'],
+      dusuren: ['Karbamazepin: düzey yaklaşık %15 düşer', 'Sigara (etkisi sınırlı)'],
+      etkiler: ['CYP2D6\'yı zayıf inhibe eder: paroksetin düzeyi yaklaşık 2 kat artar.'],
+      cocuk: '10–17 yaşta farmakokinetik erişkine benzer; doz ayarı gerekmez.'
+    },
+    brekspiprazol: {
+      ozet: 'Karaciğerde CYP3A4 ve CYP2D6 ile yıkılır; ana metaboliti etkisizdir. Aripiprazolde olduğu gibi her iki yolun inhibitör ve indükleyicilerinde doz ayarı gerekir.',
+      sub: { '3A4': 2, '2D6': 2 }, inh: {}, ind: {},
+      aktif: null,
+      atilim: [25, 46], fe: 0.5, feYazi: '%1\'in altında',
+      bobrek: 'Kreatinin klirensi < 60 mL/dk: en fazla 3 mg/gün (şizofreni).',
+      karaciger: 'Orta–ağır bozuklukta en fazla 3 mg/gün (şizofreni).',
+      artiran: ['Fluoksetin, paroksetin, bupropion (güçlü CYP2D6 inhibitörleri) veya klaritromisin, ketokonazol (güçlü CYP3A4 inhibitörleri): dozu yarıya indirin', 'İkisi birlikte: dozu dörtte bire indirin'],
+      dusuren: ['Karbamazepin, rifampisin, sarı kantaron (güçlü CYP3A4 indükleyicileri): dozu 1–2 haftada iki katına çıkarın'],
+      gen: 'CYP2D6 yavaş metabolizörlerde dozu yarıya indirin; ayrıca güçlü CYP3A4 inhibitörü kullanıyorsa dörtte bire.'
+    },
+    kariprazin: {
+      ozet: 'Karaciğerde başlıca CYP3A4 ile (daha az CYP2D6) iki aktif metabolite dönüşür. Didesmetil-kariprazinin yarı ömrü 1–3 haftadır ve kararlı durumda ana ilaçtan daha yüksek düzeydedir: etkileşimlerin sonucu haftalar içinde ortaya çıkar.',
+      sub: { '3A4': 2, '2D6': 1 }, inh: {}, ind: {},
+      aktif: 'Desmetil-kariprazin ve didesmetil-kariprazin: ana ilaçla eşdeğer etkili; didesmetil metabolitinin yarı ömrü 1–3 hafta.',
+      atilim: null, atilimYazi: 'Başlıca karaciğer metabolizmasıyla temizlenir; dozun yaklaşık beşte biri idrarla (çoğu metabolit olarak) atılır.', fe: 1,
+      bobrek: 'Kreatinin klirensi < 30 mL/dk: önerilmez.',
+      karaciger: 'Ağır bozuklukta önerilmez.',
+      artiran: ['Klaritromisin, ketokonazol, itrakonazol, ritonavir (güçlü CYP3A4 inhibitörleri): dozu yarıya indirin', 'Greyfurt suyu'],
+      dusuren: ['Karbamazepin, rifampisin, sarı kantaron (CYP3A4 indükleyicileri): birlikte kullanım önerilmez']
+    },
+    pimozid: {
+      ozet: 'Karaciğerde CYP3A4 ve CYP2D6 ile (daha az CYP1A2) yıkılır. Düzey arttıkça QT aralığı uzadığı için bu enzimlerin inhibitörleriyle birlikte kullanımı kontrendikedir ve doz CYP2D6 genotipine göre sınırlanır.',
+      sub: { '3A4': 2, '2D6': 2, '1A2': 1 }, inh: {}, ind: {},
+      aktif: null,
+      atilim: null, atilimYazi: 'Metabolitler başlıca idrarla atılır.', fe: 0.5, feYazi: '%1\'in altında',
+      bobrek: 'Dikkatli kullanın.',
+      karaciger: 'Dikkatli kullanın; düşük dozla başlayın.',
+      artiran: ['Klaritromisin, eritromisin, azol antifungaller, proteaz inhibitörleri (CYP3A4): kontrendike', 'Paroksetin, fluoksetin (CYP2D6): kontrendike', 'Sertralin: düzey yaklaşık %40 artar, kontrendike', 'Greyfurt suyu'],
+      dusuren: ['Karbamazepin, rifampisin'],
+      gen: 'CYP2D6 yavaş metabolizörlerde çocukta 0,05 mg/kg/gün, erişkinde 4 mg/gün aşılmaz; doz en erken 14 günde bir artırılır.',
+      cocuk: 'Çocuklarda yarı ömür erişkinden biraz uzundur (yaklaşık 66 saat) ve bireyler arası fark büyüktür.'
+    },
+    okskarbazepin: {
+      ozet: 'Ön ilaçtır: karaciğerde sitozolik redüktazlarla hızla aktif metaboliti likarbazepine (MHD) indirgenir; bu basamak CYP\'den bağımsızdır. MHD glukuronidlenerek ve değişmeden böbrekle atılır. Karbamazepinin aksine epoksit oluşmaz, oto-indüksiyon yapmaz ve enzim indüksiyonu zayıftır.',
+      sub: { 'UGT': 2 }, inh: { '2C19': 1 }, ind: { '3A4': 1 },
+      diger: 'Sitozolik aril keton redüktaz (ön ilaç aktivasyonu)',
+      aktif: 'Likarbazepin (MHD): etkiden sorumlu madde, yarı ömrü yaklaşık 9 saat.',
+      atilim: [95, 4], fe: 27, feYazi: 'aktif metabolit olarak yaklaşık %27',
+      bobrek: 'Kreatinin klirensi < 30 mL/dk: başlangıç dozunu yarıya indirin (300 mg/gün), yavaş artırın.',
+      karaciger: 'Hafif–orta bozuklukta doz ayarı gerekmez.',
+      dusuren: ['Karbamazepin, fenitoin, fenobarbital: aktif metabolit düzeyi %30–40 düşer', 'Rifampisin'],
+      etkiler: ['Hormonal kontraseptiflerin düzeyini yaklaşık yarıya indirir: zayıf indükleyici olmasına karşın bu etkileşim klinik olarak önemlidir.', 'Yüksek dozda (> 1200 mg/gün) CYP2C19 inhibisyonuyla fenitoin düzeyini %40\'a dek artırır.', 'Lamotrijin düzeyini hafif düşürebilir.'],
+      cocuk: 'Sekiz yaş altında kg başına klirens erişkinden %30–40 yüksektir: kg başına daha yüksek doz gerekir.'
+    },
+    diazepam: {
+      ozet: 'Karaciğerde CYP2C19 ile aktif metaboliti desmetildiazepama, CYP3A4 ile temazepama dönüşür; ikisi de oksazepama yıkılır ve glukuronidlenerek atılır. Aktif metabolitler ana ilaçtan uzun ömürlüdür ve tekrarlayan dozlarda birikir.',
+      sub: { '2C19': 2, '3A4': 2 }, inh: {}, ind: {},
+      aktif: 'Desmetildiazepam (yarı ömrü 36–200 saat), temazepam ve oksazepam.',
+      atilim: [75, 10], fe: 0.5, feYazi: '%1\'in altında',
+      bobrek: 'Doz ayarı genellikle gerekmez; metabolitler birikebilir.',
+      karaciger: 'Yarı ömür 2–5 kat uzar: dozu azaltın; ağır yetmezlikte kullanmayın (lorazepam tercih edilir).',
+      artiran: ['Fluvoksamin, fluoksetin, omeprazol, esomeprazol (CYP2C19)', 'Ketokonazol, itrakonazol, klaritromisin, ritonavir (CYP3A4)', 'Valproat (proteinden ayırır, metabolizmayı yavaşlatır)'],
+      dusuren: ['Karbamazepin, fenitoin, rifampisin'],
+      gen: 'CYP2C19 yavaş metabolizörlerde klirens yaklaşık yarıya iner: sedasyon uzar.',
+      cocuk: 'Yenidoğan ve küçük bebeklerde yarı ömür çok uzundur; okul çağında erişkinden kısadır (yaklaşık 18–20 saat).'
+    },
+    alprazolam: {
+      ozet: 'Karaciğerde neredeyse yalnızca CYP3A4 ile hidroksillenir; metabolitlerinin klinik katkısı azdır. CYP3A4 inhibitörleri düzeyi belirgin artırır.',
+      sub: { '3A4': 2 }, inh: {}, ind: {},
+      aktif: 'Alfa-hidroksialprazolam: zayıf etkili, düzeyi düşük.',
+      atilim: [80, 7], fe: 20,
+      bobrek: 'Doz ayarı genellikle gerekmez.',
+      karaciger: 'Yarı ömür yaklaşık 2 kat uzar: 0,25 mg ×2–3 ile başlayın.',
+      artiran: ['Ketokonazol, itrakonazol: düzey 3–4 kat, kontrendike', 'Fluvoksamin: düzey 2 kat, dozu yarıya indirin', 'Fluoksetin: düzey yaklaşık %30 artar', 'Klaritromisin, eritromisin, ritonavir, greyfurt suyu', 'Östrojen içeren kontraseptifler'],
+      dusuren: ['Karbamazepin, fenitoin, rifampisin, sarı kantaron', 'Sigara: düzey %50\'ye dek düşer']
+    },
+    pregabalin: {
+      ozet: 'Metabolize olmaz ve plazma proteinlerine bağlanmaz; neredeyse tamamı değişmeden böbrekle atılır. CYP enzimlerini etkilemez, farmakokinetik ilaç etkileşimi yoktur. Doz yalnızca böbrek işlevine göre ayarlanır.',
+      sub: {}, inh: {}, ind: {},
+      diger: 'Metabolize olmaz; böbrekle değişmeden atılır',
+      aktif: null,
+      atilim: [98, 0], fe: 95, feYazi: '%90–98',
+      bobrek: 'Kreatinin klirensi 30–60 mL/dk: dozu yarıya; 15–30 mL/dk: dörtte bire indirin; < 15 mL/dk: 25–75 mg/gün tek doz. Hemodiyaliz sonrası ek doz.',
+      karaciger: 'Doz ayarı gerekmez.',
+      cocuk: '30 kg altındaki çocuklarda kg başına klirens yaklaşık %40 daha yüksektir: kg başına daha yüksek doz gerekir.'
     }
   };
 

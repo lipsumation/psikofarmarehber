@@ -133,6 +133,103 @@
     uyari: ['Belirgin sedasyon', 'Hipotansiyon, bradikardi, senkop', 'Ağız kuruluğu, kabızlık', 'Depresif duygudurum (nadir)'],
     etkilesim: ['Diğer antihipertansifler, beta blokerler, digoksin: bradikardi/AV blok', 'Sedatifler ve alkolle additif etki', 'TCA\'lar antihipertansif etkiyi azaltabilir'],
     oz: ['alfa2']
+  },
+  {
+    id: 'deksmetilfenidat', ad: 'Deksmetilfenidat', sinif: 'dehb', altSinif: 'Psikostimulan', grup: 'stimulan',
+    mek: 'Metilfenidatın etkin d-treo enantiyomeri; dopamin ve noradrenalin geri alım inhibitörü. Metilfenidatın yarı dozunda eşdeğer etki sağlar. Türkiye\'de ruhsat ve erişim durumunu güncel olarak kontrol ediniz.',
+    t12: '2–3 saat (uzun salımlı formda etki 10–12 saat)', t12s: 2.5, etki: '30–60 dakika; doz optimizasyonu 2–4 hafta', form: 'Kısa etkili tablet 2,5 / 5 / 10 mg · uzun salımlı kapsül 5–40 mg',
+    onay: [['DEHB', '≥ 6 yaş']],
+    sureGrafik: [
+      { ad: 'Kısa etkili (IR)', saat: 5, not: 'Günde 2 doz, en az 4 saat arayla' },
+      { ad: 'Uzun salımlı (XR) kapsül', saat: 11, not: 'Sabah tek doz; kapsül açılıp yiyeceğe serpilebilir' }
+    ],
+    ped: {
+      bas: 'XR: 5 mg sabah · IR: 2,5 mg ×2', artis: 'Haftada bir 5 mg (XR) veya 2,5–5 mg (IR)', hedef: '10–20 mg/gün', maks: 'XR: 30 mg/gün · IR: 20 mg/gün',
+      birim: 'mg/gün (XR)', adim: [[0, 5], [7, 10], [14, 15], [21, 20]], bant: [10, 20], tavan: 30,
+      not: ['Metilfenidattan geçişte başlangıç dozu, kullanılan metilfenidat dozunun yarısıdır.', 'Yan etki profili metilfenidatla aynıdır; iştah ve uyku için aynı önlemler geçerlidir.', 'Okul öncesi yaşta veri yoktur.']
+    },
+    eri: {
+      bas: 'XR: 10 mg sabah', artis: 'Haftada bir 10 mg', hedef: '20–40 mg/gün', maks: '40 mg/gün (XR)',
+      birim: 'mg/gün (XR)', adim: [[0, 10], [7, 20], [14, 30], [21, 40]], bant: [20, 40], tavan: 40, not: []
+    },
+    surdurum: SURDURUM_DEHB,
+    kesme: { risk: 1, sure: 'Kademeli azaltım gerekmez', adim: [[0, 100], [7, 0]], not: ['Doğrudan kesilebilir; uzun süreli yüksek dozdan sonra birkaç gün yorgunluk ve iştah artışı olabilir.'] },
+    izlem: 'stimulan', profil: { sed: 0, kilo: 0, gis: 1, akt: 3, kv: 2, istah: 3, kes: 1 },
+    kutu: 'Kötüye kullanım ve bağımlılık potansiyeli: madde kullanım öyküsünü sorgulayın; ergenlerde ilacın başkasına verilmesi açısından uyarın.',
+    uyari: ['İştah azalması, kilo kaybı, büyüme hızında hafif yavaşlama', 'Uykuya dalma güçlüğü', 'Kan basıncı ve nabız artışı; yapısal kalp hastalığı/aritmide kaçının', 'Tik, irritabilite, anksiyete, nadiren psikotik/manik belirtiler'],
+    etkilesim: ['MAOİ ile kontrendike (14 gün ara)', 'Metilfenidat ile birlikte kullanılmaz (aynı etkin madde)', 'Klonidin/guanfasin ile birlikte kullanımda KB ve nabız izlenmeli'],
+    oz: ['stim']
+  },
+  {
+    id: 'amfetamin', ad: 'Amfetamin (karışık tuzlar)', sinif: 'dehb', altSinif: 'Psikostimulan', grup: 'stimulan',
+    mek: 'd- ve l-amfetamin tuzlarının karışımı; dopamin ve noradrenalin salınımını artırır, geri alımını engeller. Türkiye\'de ruhsatlı değildir; yurt dışından gelen hastalarda karşılaşılır.',
+    t12: 'Çocukta 9 saat; ergen ve erişkinde 10–13 saat', t12s: 10, etki: '30–60 dakika', form: 'Kısa etkili tablet 5–30 mg · uzun salımlı kapsül 5–30 mg',
+    onay: [['DEHB (kısa etkili form)', '≥ 3 yaş'], ['DEHB (uzun salımlı form)', '≥ 6 yaş']],
+    sureGrafik: [
+      { ad: 'Kısa etkili (IR)', saat: 5, not: 'Günde 1–3 doz, 4–6 saat arayla' },
+      { ad: 'Uzun salımlı (XR) kapsül', saat: 11, not: 'Sabah tek doz; kapsül açılıp yiyeceğe serpilebilir' }
+    ],
+    ped: {
+      bas: '3–5 yaş: IR 2,5 mg/gün · ≥ 6 yaş: IR 5 mg ×1–2 veya XR 5–10 mg sabah', artis: 'Haftada bir 2,5 mg (3–5 yaş) veya 5–10 mg (≥ 6 yaş)', hedef: '10–30 mg/gün', maks: 'XR: 30 mg/gün (6–12 yaş), 20 mg/gün (13–17 yaş için önerilen) · IR: 40 mg/gün',
+      birim: 'mg/gün (XR)', adim: [[0, 10], [7, 15], [14, 20], [21, 30]], bant: [10, 30], tavan: 30,
+      not: ['İştah ve uyku üzerine etkisi metilfenidattan daha belirgin ve uzun olabilir.', 'Asitli içecekler (meyve suyu, C vitamini) emilimi azaltır: ilaçtan bir saat önce ve sonra vermeyin.', 'Lisdeksamfetaminden veya lisdeksamfetamine geçişte kesin bir doz eşdeğerliği yoktur; düşük dozdan başlayın.']
+    },
+    eri: {
+      bas: 'XR: 20 mg sabah', artis: 'Haftada bir 10 mg', hedef: '20–40 mg/gün', maks: '60 mg/gün',
+      birim: 'mg/gün (XR)', adim: [[0, 20], [7, 30], [14, 40]], bant: [20, 40], tavan: 60, not: []
+    },
+    surdurum: SURDURUM_DEHB,
+    kesme: { risk: 1, sure: 'Kademeli azaltım genellikle gerekmez', adim: [[0, 100], [7, 0]], not: ['Uzun süreli yüksek dozdan sonra birkaç günlük yorgunluk, uyku artışı, disfori olabilir; gerekirse 1–2 haftada azaltın.'] },
+    izlem: 'stimulan', profil: { sed: 0, kilo: 0, gis: 1, akt: 3, kv: 2, istah: 3, kes: 1 },
+    kutu: 'Kötüye kullanım ve bağımlılık potansiyeli yüksektir; madde kullanım öyküsünü sorgulayın.',
+    uyari: ['İştah azalması, kilo kaybı, büyüme yavaşlaması', 'Uykusuzluk, irritabilite', 'Kan basıncı ve nabız artışı; ciddi kardiyak hastalıkta kontrendike', 'Psikotik/manik belirtiler, tik'],
+    etkilesim: ['MAOİ ile kontrendike', 'Serotonerjik ilaçlarla serotonin sendromu riski', 'İdrarı asitleştiren/alkalileştiren ajanlar düzeyi değiştirir', 'CYP2D6 inhibitörleri amfetamin maruziyetini artırabilir'],
+    oz: ['stim', 'sero']
+  },
+  {
+    id: 'viloksazin', ad: 'Viloksazin', sinif: 'dehb', altSinif: 'Noradrenalin geri alım inhibitörü', grup: 'nonstim',
+    mek: 'Seçici noradrenalin geri alım inhibitörü; serotonerjik etkisi de vardır. Stimulan değildir, kötüye kullanım potansiyeli yoktur. Güçlü CYP1A2 inhibitörüdür. Türkiye\'de ruhsat ve erişim durumunu güncel olarak kontrol ediniz.',
+    t12: '~7 saat', t12s: 7, etki: '1–2 hafta; tam etki 4–6 hafta', form: 'Uzun salımlı kapsül 100 / 150 / 200 mg',
+    onay: [['DEHB', '≥ 6 yaş']],
+    ped: {
+      bas: '6–11 yaş: 100 mg/gün · 12–17 yaş: 200 mg/gün', artis: 'Haftada bir 100 mg (6–11 yaş) veya 200 mg (12–17 yaş)', hedef: '200–400 mg/gün', maks: '400 mg/gün',
+      birim: 'mg/gün', adim: [[0, 100], [7, 200], [14, 300], [21, 400]], bant: [200, 400], tavan: 400,
+      not: ['Grafik 6–11 yaş şemasını gösterir; 12–17 yaşta 200 mg ile başlanıp bir hafta sonra 400 mg\'a çıkılabilir.', 'Günde tek doz; kapsül açılıp elma püresine serpilebilir, çiğnenmez.', 'Somnolans olursa akşam verin.']
+    },
+    eri: {
+      bas: '200 mg/gün', artis: 'Haftada bir 200 mg', hedef: '200–600 mg/gün', maks: '600 mg/gün',
+      birim: 'mg/gün', adim: [[0, 200], [7, 400], [14, 600]], bant: [200, 600], tavan: 600, not: []
+    },
+    surdurum: SURDURUM_DEHB,
+    kesme: { risk: 1, sure: 'Kademeli azaltım gerekmez', adim: [[0, 100], [7, 0]], not: ['Kesilme sendromu tanımlanmamıştır; doğrudan kesilebilir.'] },
+    izlem: 'atomoksetin', profil: { sed: 2, kilo: 0, gis: 2, akt: 1, kv: 2, istah: 2, kes: 1 },
+    kutu: 'Kara kutu uyarısı: çocuk ve ergenlerde intihar düşüncesi ve davranışı riskinde artış. Başlangıçta ve doz değişimlerinde yakın izlem.',
+    uyari: ['Somnolans, yorgunluk', 'İştah azalması, bulantı, kusma', 'Kan basıncı ve nabız artışı', 'İrritabilite, uykusuzluk', 'Manik/hipomanik kayma: bipolar bozukluk açısından tarayın'],
+    etkilesim: ['MAOİ ile kontrendike (14 gün ara)', 'Güçlü CYP1A2 inhibitörüdür: duloksetin, tizanidin, teofilin ile kontrendike; klozapin, olanzapin, melatonin düzeyini artırır', 'Kafein etkisini uzatır'],
+    oz: ['1a2inh', '2d6sub']
+  },
+  {
+    id: 'modafinil', ad: 'Modafinil', sinif: 'dehb', altSinif: 'Uyanıklığı artırıcı ajan', grup: 'stimulan',
+    mek: 'Dopamin taşıyıcısını zayıf inhibe eder; uyanıklığı artırır. Narkolepside onaylıdır; DEHB\'de etkinlik çalışmaları olmakla birlikte ciddi deri reaksiyonları nedeniyle pediatrik onay verilmemiştir. Diğer seçenekler denendikten sonra düşünülür.',
+    t12: '~15 saat', t12s: 15, etki: '1–2 saat; DEHB\'de tam etki 2–4 hafta', form: 'Tablet 100 / 200 mg',
+    onay: [], onayNot: 'Pediatrik onay yok · endikasyon dışı (deri reaksiyonu riski)',
+    ped: {
+      bas: '50–100 mg sabah', artis: 'Haftada bir 50–100 mg', hedef: '< 30 kg: 200–300 mg/gün · ≥ 30 kg: 300–400 mg/gün', maks: '400 mg/gün',
+      birim: 'mg/gün', adim: [[0, 100], [7, 200], [14, 300], [21, 400]], bant: [200, 400], tavan: 400,
+      not: ['Endikasyon dışı kullanım: aileyi ciddi döküntü riski konusunda bilgilendirin; ilk haftalarda döküntü, ateş, ağız içi yara olursa ilacı kesin.', 'Sabah tek doz; geç verilirse uykusuzluk yapar.', 'Hormonal kontraseptif etkinliğini azaltır: ergenlerde ek yöntem önerin.']
+    },
+    eri: {
+      bas: '100–200 mg sabah', artis: 'Haftada bir 100 mg', hedef: '200–400 mg/gün', maks: '400 mg/gün',
+      birim: 'mg/gün', adim: [[0, 100], [7, 200], [14, 400]], bant: [200, 400], tavan: 400, not: []
+    },
+    surdurum: SURDURUM_DEHB,
+    kesme: { risk: 1, sure: 'Kademeli azaltım gerekmez', adim: [[0, 100], [7, 0]], not: ['Doğrudan kesilebilir; birkaç gün uyuklama ve yorgunluk olabilir.'] },
+    izlem: 'stimulan', izlemEk: [['Döküntü sorgusu', [1, 'Her vizit', 1, 2, 2], 'Ciddi deri reaksiyonları çoğunlukla ilk 1–5 haftada görülür.']],
+    profil: { sed: 0, kilo: 0, gis: 2, akt: 2, kv: 1, istah: 2, kes: 1 },
+    kutu: 'Stevens-Johnson sendromu dahil ciddi deri ve aşırı duyarlılık reaksiyonları çocuklarda bildirilmiştir. Döküntüde ilacı hemen kesin.',
+    uyari: ['Baş ağrısı, bulantı, iştah azalması', 'Uykusuzluk, anksiyete, irritabilite', 'Nadiren psikotik/manik belirtiler', 'Kan basıncı ve nabız artışı (stimulanlardan az)'],
+    etkilesim: ['Hormonal kontraseptif etkinliğini azaltır (kesildikten sonra 1 ay daha)', 'CYP3A4 indükleyicisidir: ketiapin, aripiprazol, midazolam düzeyini düşürebilir', 'CYP2C19 inhibitörüdür: diazepam, fenitoin, klomipramin düzeyini artırabilir'],
+    oz: ['stim']
   }
   );
 })();

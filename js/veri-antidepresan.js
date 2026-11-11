@@ -323,6 +323,101 @@
     uyari: ['Kardiyak ileti bozukluğu, taşikardi', 'Antikolinerjik etkiler', 'Nöbet eşiğini düşürür', 'Aşırı dozda öldürücü'],
     etkilesim: ['CYP2D6 inhibitörleri (fluoksetin, paroksetin, bupropion) düzeyi artırır', 'MAOİ ile kontrendike', 'Metilfenidat TCA düzeyini artırabilir'],
     oz: ['sero', '2d6sub', 'qt', 'nobet']
+  },
+  {
+    id: 'amitriptilin', ad: 'Amitriptilin', sinif: 'ad', altSinif: 'Trisiklik antidepresan', grup: 'tca',
+    mek: 'Serotonin ve noradrenalin geri alım inhibitörü; güçlü antikolinerjik ve antihistaminik etkilidir. Çocuk ve ergende depresyondan çok migren profilaksisi, kronik ağrı ve uyku için düşük dozda kullanılır. Aktif metaboliti nortriptilindir.',
+    t12: '10–28 saat (nortriptilin 18–44 saat)', t12s: 20, etki: 'Ağrı/uyku: 1–2 hafta · depresyon: 2–4 hafta', form: 'Tablet 10 / 25 mg',
+    onay: [['Depresyon', '≥ 12 yaş']],
+    endikasyon: [
+      ['Migren profilaksisi / kronik ağrı', '0,25 mg/kg gece (5–10 mg)', '0,5–1 mg/kg gece (10–50 mg)', '1–2 haftada bir 0,25 mg/kg (5–10 mg)'],
+      ['Depresyon (ergen)', '10–25 mg gece', '50–100 mg/gün', 'Haftada bir 10–25 mg; EKG ile']
+    ],
+    ped: {
+      bas: '10 mg gece (0,25 mg/kg)', artis: '1–2 haftada bir 10 mg', hedef: 'Ağrı/migren: 10–50 mg gece · depresyon (ergen): 50–100 mg/gün', maks: '1,5 mg/kg/gün; ergende 100 mg/gün (düzey ve EKG ile 150 mg)',
+      birim: 'mg/gün', adim: [[0, 10], [7, 20], [14, 30], [28, 50]], bant: [10, 50], tavan: 100,
+      not: ['Çocuk ve ergen depresyonunda trisikliklerin etkinliği gösterilememiştir; ilk seçenek değildir.', 'Başlangıçta ve 1 mg/kg/gün üzerine çıkarken EKG çekin.', 'Aşırı dozda ölümcüldür: ilacı aile saklamalı, intihar riski olan gençte küçük miktarlarda reçete edin.', 'Gece tek doz; sabah sersemliği olursa dozu daha erken saate alın.']
+    },
+    eri: {
+      bas: '25 mg gece', artis: 'Haftada bir 25 mg', hedef: '75–150 mg/gün', maks: '150 mg/gün (yatan hastada 300 mg)',
+      birim: 'mg/gün', adim: [[0, 25], [7, 50], [14, 75], [28, 100], [42, 150]], bant: [75, 150], tavan: 300, not: []
+    },
+    surdurum: SURDURUM_AD,
+    kesme: { risk: 2, sure: '2–4 hafta', adim: [[0, 100], [14, 50], [28, 0]], not: ['Ani kesmede kolinerjik rebound (bulantı, terleme, uykusuzluk, baş ağrısı) görülür; kademeli azaltın.'] },
+    izlem: 'tca', profil: { sed: 3, kilo: 2, gis: 1, akt: 1, ach: 3, kv: 2, qt: 2, kes: 2 },
+    kutu: KUTU_AD,
+    uyari: ['Sedasyon, kilo artışı', 'Ağız kuruluğu, kabızlık, idrar retansiyonu, bulanık görme', 'Ortostatik hipotansiyon, taşikardi', 'İleti bozukluğu, QT/QRS uzaması; aşırı dozda ölümcül aritmi', 'Nöbet eşiğinde düşme'],
+    etkilesim: ['MAOİ ile kontrendike', 'CYP2D6 inhibitörleri (fluoksetin, paroksetin, bupropion) düzeyi 2–4 kat artırır', 'QT uzatan ilaçlarla additif etki', 'Antikolinerjik ve sedatif ilaçlarla additif etki'],
+    oz: ['sero', '2d6sub', 'qt', 'nobet', 'antikol']
+  },
+  {
+    id: 'desvenlafaksin', ad: 'Desvenlafaksin', sinif: 'ad', altSinif: 'SNRI', grup: 'snri',
+    mek: 'Venlafaksinin aktif metaboliti; serotonin ve noradrenalin geri alım inhibitörü. CYP2D6\'ya bağımlı değildir, bu nedenle etkileşimi ve genotip etkisi venlafaksinden azdır. Pediatrik depresyon çalışmalarında plaseboya üstünlük gösterilememiştir.',
+    t12: '~11 saat', t12s: 11, etki: '2–4 hafta', form: 'Uzun salımlı tablet 50 / 100 mg',
+    onay: [], onayNot: 'Pediatrik onay yok · çalışmalarda etkinlik gösterilememiştir',
+    ped: {
+      bas: '25 mg/gün', artis: '1–2 hafta sonra 50 mg', hedef: '50 mg/gün', maks: '100 mg/gün',
+      birim: 'mg/gün', adim: [[0, 25], [10, 50]], bant: [25, 50], tavan: 100,
+      not: ['Endikasyon dışı kullanım; SSRI\'lara yanıtsız ergenlerde düşünülür.', 'Tablet bütün yutulur; kırılmaz, çiğnenmez.', '50 mg üzerinde ek yarar gösterilmemiştir, yan etki artar.']
+    },
+    eri: {
+      bas: '50 mg/gün', artis: 'Gerekirse 2–4 hafta sonra 100 mg', hedef: '50 mg/gün', maks: '100 mg/gün',
+      birim: 'mg/gün', adim: [[0, 50], [21, 100]], bant: [50, 100], tavan: 100, not: ['Başlangıç dozu aynı zamanda hedef dozdur; titrasyon gerekmez.']
+    },
+    surdurum: SURDURUM_AD,
+    kesme: { risk: 3, sure: '4–8 hafta', adim: [[0, 100], [14, 50], [28, 25], [42, 0]],
+      not: ['Kesilme belirtileri sıktır: 50 mg\'dan 25 mg\'a inin, sonra gün aşırı verip kesin.', 'Belirti şiddetliyse fluoksetine geçip onu azaltmak bir seçenektir.'] },
+    izlem: 'snri', profil: { sed: 1, kilo: 0, gis: 2, akt: 2, kv: 2, qt: 0, kes: 3 },
+    kutu: KUTU_AD,
+    uyari: ['Bulantı, terleme, baş dönmesi, uykusuzluk', 'Kan basıncı ve nabız artışı', 'Hiponatremi, kanama eğilimi', 'Aktivasyon, mani kayması', 'Cinsel işlev bozukluğu'],
+    etkilesim: ['MAOİ ile kontrendike (14 gün ara)', 'Diğer serotonerjiklerle serotonin sendromu', 'Antikoagülan ve steroid olmayan antiinflamatuvarlarla kanama riski', 'Venlafaksin ile birlikte kullanılmaz'],
+    oz: ['sero']
+  },
+  {
+    id: 'agomelatin', ad: 'Agomelatin', sinif: 'ad', altSinif: 'Melatonerjik antidepresan', grup: 'addiger',
+    mek: 'Melatonin MT1/MT2 reseptör agonisti ve 5-HT2C antagonisti. Uyku-uyanıklık ritmini düzenler; cinsel yan etki, kilo artışı ve kesilme belirtisi yapmaz. Karaciğer enzim yükselmesi nedeniyle düzenli izlem gerektirir.',
+    t12: '1–2 saat', t12s: 1.5, etki: 'Uyku: ilk hafta · duygudurum: 2–4 hafta', form: 'Film tablet 25 mg',
+    onay: [], onayNot: 'Pediatrik onay yok · endikasyon dışı (erişkinde Avrupa onaylı)',
+    ped: {
+      bas: '25 mg gece (ergen)', artis: '2 hafta sonra yanıt yoksa 50 mg', hedef: '25 mg gece', maks: '50 mg/gün',
+      birim: 'mg/gün', adim: [[0, 25], [14, 50]], bant: [25, 50], tavan: 50,
+      not: ['Endikasyon dışı kullanım; ergen depresyonunda 25 mg ile tek olumlu çalışma vardır, çocuklarda (7–11 yaş) etkinlik gösterilememiştir.', 'Yatmadan önce tek doz.', 'Tedaviye başlamadan önce ve doz artışında karaciğer enzimlerine bakın; değerler üst sınırın 3 katını aşıyorsa başlamayın.']
+    },
+    eri: {
+      bas: '25 mg gece', artis: '2 hafta sonra yanıt yoksa 50 mg', hedef: '25–50 mg gece', maks: '50 mg/gün',
+      birim: 'mg/gün', adim: [[0, 25], [14, 50]], bant: [25, 50], tavan: 50, not: []
+    },
+    surdurum: SURDURUM_AD,
+    kesme: { risk: 0, sure: 'Kademeli azaltım gerekmez', adim: [[0, 100], [7, 0]], not: ['Kesilme belirtisi tanımlanmamıştır; doğrudan kesilebilir.'] },
+    izlem: 'ssri', izlemEk: [['Karaciğer işlev testleri', [1, '3. ve 6. hafta', 1, 1, 2], 'Başlangıçta, 3., 6., 12. ve 24. haftada ve her doz artışından sonra aynı sıklıkla; üst sınırın 3 katını aşarsa ilacı kesin.']],
+    profil: { sed: 1, kilo: 0, gis: 1, akt: 0, qt: 0, kes: 0 },
+    kutu: KUTU_AD,
+    uyari: ['Karaciğer enzim yükselmesi, nadiren hepatit ve karaciğer yetmezliği', 'Baş ağrısı, baş dönmesi, bulantı', 'Somnolans veya uykusuzluk', 'Karaciğer hastalığında kontrendike'],
+    etkilesim: ['Fluvoksamin ve siprofloksasin (güçlü CYP1A2 inhibitörleri) ile kontrendike: düzey 60 kata dek artar', 'Östrojen içeren kontraseptifler düzeyi artırır', 'Sigara düzeyi düşürür', 'Alkol karaciğer riskini artırır'],
+    oz: ['1a2sub']
+  },
+  {
+    id: 'tianeptin', ad: 'Tianeptin', sinif: 'ad', altSinif: 'Atipik antidepresan', grup: 'addiger',
+    mek: 'Glutamaterjik iletimi düzenler; mü-opioid reseptör agonistidir. Antikolinerjik ve kardiyovasküler yan etkisi azdır. Yüksek dozda kötüye kullanım ve bağımlılık bildirilmiştir.',
+    t12: '2,5–3 saat (aktif metabolit ~7 saat)', t12s: 3, etki: '2–4 hafta', form: 'Tablet 12,5 mg',
+    onay: [], onayNot: 'Pediatrik onay yok · 15 yaş altında önerilmez',
+    ped: {
+      bas: '12,5 mg ×2 (≥ 15 yaş)', artis: '1 hafta sonra 12,5 mg ×3', hedef: '25–37,5 mg/gün', maks: '37,5 mg/gün',
+      birim: 'mg/gün', adim: [[0, 25], [7, 37.5]], bant: [25, 37.5], tavan: 37.5,
+      not: ['15 yaş altında güvenlilik ve etkinlik verisi yoktur.', 'Yemeklerden önce, günde 2–3 doza bölünmüş.', 'Madde kullanım öyküsü olan gençte kullanmayın; reçeteyi kısa süreli yazın.']
+    },
+    eri: {
+      bas: '12,5 mg ×3', artis: 'Titrasyon gerekmez', hedef: '37,5 mg/gün', maks: '37,5 mg/gün',
+      birim: 'mg/gün', adim: [[0, 37.5], [14, 37.5]], bant: [25, 37.5], tavan: 37.5, not: ['Böbrek yetmezliği ve ileri yaşta 12,5 mg ×2.']
+    },
+    surdurum: SURDURUM_AD,
+    kesme: { risk: 2, sure: '1–2 hafta', adim: [[0, 100], [7, 50], [14, 0]], not: ['7–14 günde kademeli azaltın.', 'Önerilenin üzerinde doz kullanmış hastada opioid benzeri yoksunluk (ağrı, terleme, ajitasyon) görülebilir; daha yavaş azaltın.'] },
+    izlem: 'ssri', izlemEk: [['Kötüye kullanım sorgusu', [1, 1, 1, 1, 1], 'Doz artırma, erken reçete isteği, başka kaynaktan temin.']],
+    profil: { sed: 1, kilo: 0, gis: 2, akt: 1, qt: 0, kes: 2 },
+    kutu: 'Kötüye kullanım ve bağımlılık potansiyeli: önerilen dozun üzerine çıkılmamalı, madde kullanım öyküsü sorgulanmalıdır. ' + KUTU_AD,
+    uyari: ['Bulantı, karın ağrısı, kabızlık, ağız kuruluğu', 'Baş ağrısı, baş dönmesi, uykusuzluk veya uyuklama', 'Kötüye kullanım, bağımlılık, yüksek dozda solunum depresyonu', 'Nadiren karaciğer enzim yükselmesi'],
+    etkilesim: ['MAOİ ile kontrendike (14 gün ara)', 'Opioid, alkol ve sedatiflerle additif etki', 'CYP üzerinden etkileşimi yoktur'],
+    oz: []
   }
   );
 })();
