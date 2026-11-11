@@ -1,0 +1,138 @@
+/* DEHB ilaçları */
+(function () {
+  var SURDURUM_DEHB = [
+    'Doz optimizasyonu: her basamakta aile ve öğretmen ölçeği ile etkinlik ve yan etkiyi birlikte değerlendirin.',
+    'Stabil dönemde 3–6 ayda bir boy, kilo, kan basıncı ve nabız.',
+    'Yılda en az bir kez tedavi gerekliliğini gözden geçirin; uygun hastada gözetimli ilaçsız dönem deneyin.',
+    'Büyüme yavaşlaması veya belirgin iştah kaybında doz azaltımı, zamanlama değişikliği veya hafta sonu/tatil arası düşünün.'
+  ];
+
+  window.ILACLAR.push(
+  {
+    id: 'metilfenidat', ad: 'Metilfenidat', sinif: 'dehb', altSinif: 'Psikostimulan', grup: 'stimulan',
+    mek: 'Dopamin ve noradrenalin geri alım inhibitörü. Okul çağı çocuk ve ergenlerde DEHB\'nin ilk basamak ilaç tedavisi; etki aynı gün başlar.',
+    t12: '2–4 saat (etki süresi forma göre 3–12 saat)', t12s: 3, etki: '30–60 dakika; doz optimizasyonu 2–4 hafta', form: 'Kısa etkili tablet 10 mg · değiştirilmiş salımlı kapsül 10 / 20 / 30 / 40 mg · OROS tablet 18 / 27 / 36 / 54 mg',
+    onay: [['DEHB', '≥ 6 yaş']],
+    sureGrafik: [
+      { ad: 'Kısa etkili (IR)', saat: 4, not: 'Günde 2–3 doz' },
+      { ad: 'Değiştirilmiş salımlı (MR) kapsül', saat: 8, not: 'Sabah tek doz; kapsül açılıp yiyeceğe serpilebilir' },
+      { ad: 'OROS tablet', saat: 12, not: 'Sabah tek doz; bütün yutulmalı' }
+    ],
+    ped: {
+      bas: 'OROS: 18 mg sabah · MR: 10 mg sabah · IR: 5 mg ×1–2', artis: 'Haftada bir: OROS 18 mg (9 mg ara basamak 27 mg ile), MR 10 mg, IR 5–10 mg', hedef: '0,3–1 mg/kg/gün (IR eşdeğeri); yanıta göre',
+      maks: 'OROS: 54 mg (6–12 yaş), 72 mg (≥ 13 yaş) · IR/MR: 60 mg/gün',
+      birim: 'mg/gün (OROS)', adim: [[0, 18], [7, 27], [14, 36], [21, 54]], bant: [18, 54], tavan: 72,
+      not: [
+        'Okul öncesi (4–5 yaş): endikasyon dışı; önce ebeveyn eğitimi. Gerekirse IR 2,5 mg ile başlayıp çok yavaş titre edin; yan etki duyarlılığı yüksektir.',
+        'Eşdeğerlik: OROS 18 mg ≈ IR 5 mg ×3; OROS 36 mg ≈ IR 10 mg ×3.',
+        'Son dozu saat 16–17\'den sonra vermeyin (uykusuzluk). İştah için ilacı kahvaltıyla/sonrasında verin.',
+        'Etki bitiminde rebound irritabilite olursa uzun etkili forma geçin veya öğleden sonra küçük IR dozu ekleyin.'
+      ]
+    },
+    eri: {
+      bas: 'OROS: 18–36 mg sabah · MR: 10–20 mg', artis: 'Haftada bir 18 mg (OROS)', hedef: '36–72 mg/gün (OROS)', maks: '72 mg/gün (OROS); IR/MR 60–80 mg/gün',
+      birim: 'mg/gün (OROS)', adim: [[0, 18], [7, 36], [14, 54], [21, 72]], bant: [36, 72], tavan: 72, not: []
+    },
+    surdurum: SURDURUM_DEHB,
+    kesme: { risk: 1, sure: 'Kademeli azaltım gerekmez', adim: [[0, 100], [7, 0]],
+      not: ['Doğrudan kesilebilir; yüksek dozda uzun süreli kullanım sonrası birkaç gün yorgunluk, iştah artışı, disfori görülebilir.', 'İlaçsız dönem denemesini okul döneminin sakin bir zamanında, öğretmen geri bildirimi alarak yapın.'] },
+    izlem: 'stimulan', profil: { sed: 0, kilo: 0, gis: 1, akt: 3, kv: 2, istah: 3, kes: 1 },
+    kutu: 'Kötüye kullanım ve bağımlılık potansiyeli: madde kullanım öyküsünü sorgulayın; ergenlerde ilacın başkasına verilmesi açısından uyarın.',
+    uyari: ['İştah azalması, kilo kaybı, büyüme hızında hafif yavaşlama', 'Uykuya dalma güçlüğü', 'Kan basıncı ve nabız artışı; yapısal kalp hastalığı/aritmide kaçının', 'Tik, irritabilite, anksiyete, nadiren psikotik/manik belirtiler', 'Priapizm, periferik vaskülopati (Raynaud) – nadir'],
+    etkilesim: ['MAOİ ile kontrendike (14 gün ara)', 'TCA, SSRI, antiepileptik (fenitoin, fenobarbital) ve varfarin düzeylerini artırabilir', 'Klonidin/guanfasin ile birlikte kullanımda KB ve nabız izlenmeli'],
+    oz: ['stim']
+  },
+  {
+    id: 'lisdeksamfetamin', ad: 'Lisdeksamfetamin', sinif: 'dehb', altSinif: 'Psikostimulan (ön ilaç)', grup: 'stimulan',
+    mek: 'Kanda d-amfetamine dönüşen ön ilaç; dopamin ve noradrenalin salınımını artırır. Etki süresi 12–14 saattir. Türkiye\'de ruhsat ve erişim durumunu güncel olarak kontrol ediniz.',
+    t12: 'Ön ilaç < 1 saat; d-amfetamin 10–12 saat', t12s: 11, etki: '1–2 saat', form: 'Kapsül 20 / 30 / 40 / 50 / 60 / 70 mg',
+    onay: [['DEHB', '≥ 6 yaş']],
+    ped: {
+      bas: '20–30 mg sabah', artis: 'Haftada bir 10–20 mg', hedef: '30–50 mg/gün', maks: '70 mg/gün',
+      birim: 'mg/gün', adim: [[0, 30], [7, 40], [14, 50], [21, 60]], bant: [30, 50], tavan: 70,
+      not: ['Genellikle metilfenidata yetersiz yanıt veya intolerans sonrası ikinci basamak.', 'Kapsül açılıp suya/yoğurda karıştırılabilir.', 'İştah ve uyku üzerine etkisi metilfenidata göre daha uzun sürebilir.']
+    },
+    eri: {
+      bas: '30 mg sabah', artis: 'Haftada bir 10–20 mg', hedef: '30–70 mg/gün', maks: '70 mg/gün',
+      birim: 'mg/gün', adim: [[0, 30], [7, 50], [14, 70]], bant: [30, 70], tavan: 70, not: []
+    },
+    surdurum: SURDURUM_DEHB,
+    kesme: { risk: 1, sure: 'Kademeli azaltım genellikle gerekmez', adim: [[0, 100], [7, 0]], not: ['Uzun süreli yüksek dozdan sonra birkaç günlük yorgunluk, uyku artışı, disfori olabilir; gerekirse 1–2 haftada azaltın.'] },
+    izlem: 'stimulan', profil: { sed: 0, kilo: 0, gis: 1, akt: 3, kv: 2, istah: 3, kes: 1 },
+    kutu: 'Kötüye kullanım ve bağımlılık potansiyeli yüksektir; madde kullanım öyküsünü sorgulayın.',
+    uyari: ['İştah azalması, kilo kaybı, büyüme yavaşlaması', 'Uykusuzluk, irritabilite', 'Kan basıncı ve nabız artışı; ciddi kardiyak hastalıkta kontrendike', 'Psikotik/manik belirtiler, tik'],
+    etkilesim: ['MAOİ ile kontrendike', 'Serotonerjik ilaçlarla serotonin sendromu riski', 'İdrarı asitleştiren/alkalileştiren ajanlar düzeyi değiştirir', 'CYP2D6 inhibitörleri amfetamin maruziyetini artırabilir'],
+    oz: ['stim', 'sero']
+  },
+  {
+    id: 'atomoksetin', ad: 'Atomoksetin', sinif: 'dehb', altSinif: 'Noradrenalin geri alım inhibitörü', grup: 'nonstim',
+    mek: 'Seçici presinaptik noradrenalin geri alım inhibitörü. Kötüye kullanım potansiyeli yoktur; tik, anksiyete veya madde kullanımı eş tanısında tercih edilebilir. 24 saat etki sağlar.',
+    t12: '~5 saat (CYP2D6 zayıf metabolizör: ~21 saat)', t12s: 5, etki: '2–4 hafta; tam etki 6–12 hafta', form: 'Kapsül 10 / 18 / 25 / 40 / 60 / 80 mg; oral solüsyon 4 mg/mL',
+    onay: [['DEHB', '≥ 6 yaş']],
+    ped: {
+      bas: '≤ 70 kg: 0,5 mg/kg/gün · > 70 kg: 40 mg/gün', artis: 'En az 3 gün (pratikte 1–2 hafta) sonra hedef doza', hedef: '≤ 70 kg: 1,2 mg/kg/gün · > 70 kg: 80 mg/gün', maks: '1,4 mg/kg/gün veya 100 mg/gün (hangisi düşükse)',
+      birim: 'mg/kg/gün', adim: [[0, 0.5], [7, 0.8], [14, 1.2]], bant: [1.2, 1.4], tavan: 1.4,
+      not: [
+        'Tek sabah dozu veya sabah–akşamüstü ikiye bölünmüş; bulantı/sedasyonda akşam verin ya da bölün.',
+        'Güçlü CYP2D6 inhibitörü (fluoksetin, paroksetin) kullananlarda 0,5 mg/kg ile başlayın; 4 hafta sonra yanıt yoksa 1,2 mg/kg\'a çıkın.',
+        'Kapsül açılmaz (göz tahrişi). Aileyi etkinin haftalar içinde geleceği konusunda bilgilendirin.'
+      ]
+    },
+    eri: {
+      bas: '40 mg/gün', artis: '≥ 3 gün sonra 80 mg; 2–4 hafta sonra gerekirse 100 mg', hedef: '80 mg/gün', maks: '100 mg/gün',
+      birim: 'mg/gün', adim: [[0, 40], [7, 80], [35, 100]], bant: [80, 100], tavan: 100, not: []
+    },
+    surdurum: SURDURUM_DEHB.concat(['Yeterli dozda 6–8 hafta sonunda yanıt yoksa ilacı değiştirin.']),
+    kesme: { risk: 1, sure: 'Kademeli azaltım gerekmez', adim: [[0, 100], [7, 0]], not: ['Doğrudan kesilebilir; kesilme sendromu tanımlanmamıştır.', 'Belirtilerin geri dönüşü günler–haftalar içinde yavaş olur.'] },
+    izlem: 'atomoksetin', profil: { sed: 2, kilo: 0, gis: 2, akt: 1, kv: 2, istah: 2, kes: 0 },
+    kutu: 'Kara kutu uyarısı: çocuk ve ergenlerde intihar düşüncesinde artış. Özellikle ilk aylarda ve doz değişimlerinde yakın izleyin.',
+    uyari: ['Nadir ağır karaciğer hasarı: sarılık, koyu idrar, kaşıntı, sağ üst kadran ağrısında ilacı kesin ve yeniden başlamayın', 'Kan basıncı ve nabız artışı', 'Bulantı, karın ağrısı, iştah azalması, somnolans', 'İrritabilite, duygudurum dalgalanması; nadiren psikotik/manik belirtiler', 'İdrar retansiyonu, priapizm (nadir)'],
+    etkilesim: ['Güçlü CYP2D6 inhibitörleri (fluoksetin, paroksetin, bupropion) düzeyi 6–8 kat artırabilir', 'MAOİ ile kontrendike', 'Salbutamol ve diğer beta-2 agonistlerle kardiyovasküler etki artar', 'Dar açılı glokom ve feokromositomada kontrendike'],
+    oz: ['2d6sub']
+  },
+  {
+    id: 'guanfasin', ad: 'Guanfasin XR', sinif: 'dehb', altSinif: 'Alfa-2A agonisti', grup: 'alfa2',
+    mek: 'Seçici alfa-2A adrenerjik agonist; prefrontal noradrenerjik iletimi güçlendirir. Stimulanlara yanıtsızlık/intoleransta veya ek tedavi olarak; tik, uyku sorunu ve emosyonel düzensizlik eş tanısında yararlı.',
+    t12: '~17 saat', t12s: 17, etki: '1–3 hafta', form: 'Uzatılmış salımlı tablet 1 / 2 / 3 / 4 mg',
+    onay: [['DEHB', '6–17 yaş']],
+    ped: {
+      bas: '1 mg/gün (sabah veya akşam)', artis: 'Haftada en fazla 1 mg', hedef: '0,05–0,12 mg/kg/gün', maks: '6–12 yaş: 4 mg/gün · 13–17 yaş: 7 mg/gün (kiloya göre)',
+      birim: 'mg/gün', adim: [[0, 1], [7, 2], [14, 3], [21, 4]], bant: [2, 4], tavan: 7,
+      not: ['Tablet bütün yutulmalı; ezilmez, çiğnenmez. Yüksek yağlı öğünle alınmamalı (emilim artar).', 'Sedasyon belirginse akşam dozuna geçin.', 'Doz atlanmamalı: iki veya daha fazla ardışık doz atlandıysa yeniden titrasyon düşünün.']
+    },
+    eri: {
+      bas: '1 mg/gün', artis: 'Haftada 1 mg', hedef: '2–4 mg/gün', maks: '7 mg/gün',
+      birim: 'mg/gün', adim: [[0, 1], [7, 2], [14, 3], [21, 4]], bant: [2, 4], tavan: 7, not: ['Erişkin DEHB\'de kullanımı çoğu ülkede endikasyon dışıdır.']
+    },
+    surdurum: SURDURUM_DEHB.concat(['İlk yıl 3 ayda bir, sonrasında 6 ayda bir KB, nabız, somnolans ve kilo değerlendirin.']),
+    kesme: { risk: 3, sure: 'Her 3–7 günde en fazla 1 mg azaltın', adim: [[0, 100], [5, 75], [10, 50], [15, 25], [20, 0]],
+      not: ['Ani kesme rebound hipertansiyon ve taşikardiye yol açabilir; hipertansif ensefalopati bildirilmiştir.', 'Azaltım sırasında ve kestikten sonra kan basıncı ve nabzı ölçün.', 'Aileyi ilacın ani bırakılmaması konusunda yazılı/sözlü uyarın.'] },
+    izlem: 'alfa2', profil: { sed: 3, kilo: 1, gis: 1, akt: 0, kv: 3, qt: 1, kes: 3 },
+    uyari: ['Somnolans ve sedasyon (özellikle ilk haftalar)', 'Hipotansiyon, bradikardi, senkop', 'Kilo artışı', 'Ani kesmede rebound hipertansiyon'],
+    etkilesim: ['Güçlü CYP3A4 inhibitörleri (ketokonazol, klaritromisin): dozu yarıya indirin', 'CYP3A4 indükleyicileri (karbamazepin, rifampisin): doz artışı gerekebilir', 'Valproat düzeyini artırabilir', 'Diğer antihipertansif ve sedatiflerle additif etki'],
+    oz: ['alfa2']
+  },
+  {
+    id: 'klonidin', ad: 'Klonidin', sinif: 'dehb', altSinif: 'Alfa-2 agonisti', grup: 'alfa2',
+    mek: 'Seçici olmayan alfa-2 adrenerjik agonist. DEHB, tik bozuklukları, uykuya dalma güçlüğü ve aşırı uyarılmışlıkta kullanılır. Türkiye\'de erişimi sınırlı olabilir; temin koşullarını kontrol ediniz.',
+    t12: '6–20 saat (çocukta daha kısa)', t12s: 12, etki: 'Sedasyon: aynı gün · DEHB: 2–4 hafta', form: 'Tablet 0,1 mg (bazı ülkelerde uzatılmış salımlı 0,1 mg)',
+    onay: [['DEHB (uzatılmış salımlı form)', '6–17 yaş']],
+    ped: {
+      bas: '0,05 mg (gece)', artis: '3–7 günde bir 0,05 mg; günde 2–4 doza bölünür', hedef: '0,1–0,3 mg/gün (3–5 µg/kg/gün)', maks: '27–40 kg: 0,2 mg · 40–45 kg: 0,3 mg · > 45 kg: 0,4 mg/gün',
+      birim: 'mg/gün', adim: [[0, 0.05], [7, 0.1], [14, 0.15], [21, 0.2]], bant: [0.1, 0.3], tavan: 0.4,
+      not: ['Kısa etkili form sedasyon ve KB dalgalanması nedeniyle bölünmüş dozda verilir.', 'Uyku için tek gece dozu 0,05–0,1 mg.', 'Aşırı dozda bradikardi, hipotansiyon, solunum depresyonu: evde güvenli saklama.']
+    },
+    eri: {
+      bas: '0,1 mg (gece)', artis: 'Haftada 0,1 mg', hedef: '0,2–0,4 mg/gün', maks: '0,4 mg/gün (DEHB)',
+      birim: 'mg/gün', adim: [[0, 0.1], [7, 0.2], [14, 0.3]], bant: [0.2, 0.4], tavan: 0.4, not: []
+    },
+    surdurum: SURDURUM_DEHB,
+    kesme: { risk: 3, sure: 'Her 3–7 günde en fazla 0,05–0,1 mg azaltın', adim: [[0, 100], [5, 75], [10, 50], [15, 25], [20, 0]],
+      not: ['Ani kesme rebound hipertansiyon, taşikardi, ajitasyon ve baş ağrısı yapar (guanfasinden daha belirgin).', 'Azaltım boyunca kan basıncı ve nabız izleyin.', 'Beta bloker kullananlarda önce beta blokeri kesin.'] },
+    izlem: 'alfa2', profil: { sed: 3, kilo: 0, gis: 1, akt: 0, kv: 3, qt: 0, kes: 3 },
+    uyari: ['Belirgin sedasyon', 'Hipotansiyon, bradikardi, senkop', 'Ağız kuruluğu, kabızlık', 'Depresif duygudurum (nadir)'],
+    etkilesim: ['Diğer antihipertansifler, beta blokerler, digoksin: bradikardi/AV blok', 'Sedatifler ve alkolle additif etki', 'TCA\'lar antihipertansif etkiyi azaltabilir'],
+    oz: ['alfa2']
+  }
+  );
+})();
