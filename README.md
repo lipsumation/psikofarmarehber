@@ -19,6 +19,17 @@ Psikiyatrik ilaçların başlanması, titrasyonu, sürdürümü, kesilmesi ve ba
 
 Açık ve koyu tema desteklenir; sayfalar telefon ekranında da kullanılabilir.
 
+## Tasarımlar
+
+Üst bardaki tasarım düğmesinden (tema düğmesinin solunda) dört görünüm arasında geçilebilir. Seçim tarayıcıda saklanır; her tasarımın açık ve koyu teması vardır. Bağlantıya `?tasarim=` eklenerek belirli bir tasarım paylaşılabilir (ör. `?tasarim=bauhaus`).
+
+| Tasarım | Özellik |
+|---|---|
+| **Klasik** | Varsayılan görünüm: sade, yumuşak kartlar. |
+| **Bauhaus** | Neobrütalist: kırmızı, sarı, mavi ana renkler, kalın siyah kontur, sert gölge, keskin köşe, geometrik yazı (Jost). İlaç sınıfları renk ve biçimle ayrılır: ● antidepresan · ▲ DEHB · ■ antipsikotik · ◗ duygudurum · ◆ anksiyolitik. |
+| **İsviçre** | Uluslararası tipografik stil: beyaz zemin, ızgara, ince çizgiler, tek kırmızı vurgu, büyük rakamlar (Inter). |
+| **Farmakope** | Editoryal: basılı başvuru kitabı hissi, serif yazı (Source Serif 4), kâğıt zemin, bordo vurgu, kitap tipi tablolar. |
+
 ## Çalıştırma
 
 Kurulum ya da derleme adımı yoktur. `index.html` dosyasını tarayıcıda açmak yeterlidir.
@@ -35,7 +46,9 @@ Ardından tarayıcıda `http://localhost:5173` adresini açın.
 
 ```
 index.html              Sayfa iskeleti
-css/stil.css            Tüm stiller (açık/koyu tema)
+css/stil.css            Temel stiller (açık/koyu tema, klasik tasarım)
+css/tasarim-*.css       Alternatif tasarımlar (bauhaus, isvicre, farmakope)
+fonts/                  Tasarımların yerel yazı tipleri ve OFL lisansları
 js/veri-temel.js        Sınıflar ve izlem şablonları
 js/veri-antidepresan.js Antidepresanlar
 js/veri-dehb.js         DEHB ilaçları
@@ -48,7 +61,7 @@ js/degisim.js           İlaç değişimi kural motoru
 js/app.js               Sayfalar ve yönlendirme
 ```
 
-Uygulama dış kütüphane kullanmaz; yalnızca HTML, CSS ve JavaScript'ten oluşur.
+Uygulama dış kütüphane kullanmaz; yalnızca HTML, CSS ve JavaScript'ten oluşur. Alternatif tasarımların yazı tipleri (Jost, Inter, Source Serif 4 — SIL Open Font License 1.1) `fonts/` klasöründen yüklenir ve yalnızca o tasarım seçildiğinde indirilir.
 
 ## Yayın
 
