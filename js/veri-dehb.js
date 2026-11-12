@@ -137,6 +137,18 @@
     izlem: 'alfa2', profil: { sed: 3, kilo: 0, gis: 1, akt: 0, kv: 3, qt: 0, kes: 3 },
     uyari: ['Belirgin sedasyon', 'Hipotansiyon, bradikardi, senkop', 'Ağız kuruluğu, kabızlık', 'Depresif duygudurum (nadir)'],
     etkilesim: ['Diğer antihipertansifler, beta blokerler, digoksin: bradikardi/AV blok', 'Sedatifler ve alkolle additif etki', 'TCA\'lar antihipertansif etkiyi azaltabilir'],
+    ozel: [{
+      baslik: 'Opioid yoksunluğunda kullanım', etiket: 'endikasyon dışı', onaysiz: true,
+      uyari: { ped: 'Ergen için yerleşik bir şema yoktur: erişkin şeması düşük dozlarla (0,05–0,1 mg) ve kiloya göre uyarlanır. 15 yaş üstünde buprenorfin/nalokson tercih edilir.', eri: null },
+      giris: 'Otonomik yoksunluk belirtilerini (terleme, taşikardi, huzursuzluk, burun akıntısı, kramp, ishal) azaltır; istek, kas ağrısı ve uykusuzluk üzerine etkisi sınırlıdır. Opioid agonist tedavisi (buprenorfin/nalokson) yoksunlukta ve nüksü önlemede daha etkilidir; klonidin agonist tedavi istenmediğinde ya da naltrekson öncesi arınmada kullanılır.',
+      tablo: { bas: ['Basamak', 'Doz', 'Not'], satir: [
+        ['Test dozu', '0,1 mg ağızdan', 'Kan basıncı ve nabız 1 saat sonra ölçülür.'],
+        ['Yoksunluk dönemi', '0,1–0,2 mg, 4–6 saatte bir, belirtilere göre (genellikle 3–5 gün; metadonda daha uzun)', 'Günde en çok 1,2 mg. Her dozdan önce ölçüm: sistolik KB < 90 mmHg ya da nabız < 55/dk ise dozu atlayın.'],
+        ['Azaltma', 'Günlük doz 2–4 günde azaltılarak kesilir', 'Ani kesme rebound hipertansiyon ve ajitasyon yapar.']
+      ] },
+      not: ['Eşlik eden belirtiler için kısa süreli semptomatik ilaçlar: ishalde loperamid, ağrıda parasetamol ya da NSAİİ, bulantıda antiemetik, uykusuzlukta kısa süreli hipnotik.', 'Yoksunluk şiddetini klinik ölçekle (COWS) izleyin.', 'Türkiye\'de ruhsatlı oral klonidin ürünü yoktur; ABD\'de bu amaçla onaylı alfa-2 agonist lofeksidindir.'],
+      ilgili: ['buprenorfin', 'naltrekson', 'nalokson']
+    }],
     oz: ['alfa2']
   },
   {

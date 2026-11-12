@@ -390,6 +390,32 @@
     uyari: ['QT uzaması, torsades de pointes', 'EPS, akatizi, akut distoni, geç diskinezi', { ped: 'Sedasyon, okul performansında düşme', eri: 'Sedasyon' }, 'Hiperprolaktinemi', 'Nöroleptik malign sendrom'],
     etkilesim: ['Güçlü CYP3A4 inhibitörleri (klaritromisin, eritromisin, azol antifungaller, proteaz inhibitörleri) ile kontrendike', 'Paroksetin, fluoksetin (güçlü CYP2D6 inhibitörleri) ile kontrendike', 'Sertralin, sitalopram, essitalopram ile kontrendike', 'QT uzatan tüm ilaçlarla kontrendike', 'Greyfurt suyu düzeyi artırır'],
     oz: ['d2', 'qt', '2d6sub']
+  },
+  {
+    id: 'zuklopentiksol', ad: 'Zuklopentiksol', sinif: 'ap', altSinif: 'Birinci kuşak antipsikotik (tiyoksanten)', grup: 'ap',
+    mek: 'D1 ve D2 antagonisti (tiyoksanten); 5-HT2, H1 ve alfa-1 blokajı. Sedatif etkisi belirgindir; ajitasyon, düşmanlık ve saldırganlığın eşlik ettiği psikozda tercih edilir. Uzun etkili dekanoat (depo) ve kısa etkili asetat formları da vardır.',
+    t12: '~20 saat (oral)', t12s: 20, etki: 'Sedasyon: saatler · antipsikotik: 1–2 hafta', form: 'Film tablet 2 / 10 / 25 mg; oral damla 20 mg/mL (1 damla = 1 mg); asetat 50 mg/mL ve dekanoat 200 mg/mL ampul',
+    onay: [], onayNot: 'ABD\'de onaysız · Türkiye ve Avrupa\'da çocuklarda önerilmez',
+    onayEri: [['Akut ve kronik şizofreni, diğer psikozlar', 'Türkiye/Avrupa; ABD\'de onaysız'], ['Mani', 'Türkiye/Avrupa'], ['Mental retardasyonda ajitasyon ve davranış bozuklukları', 'Türkiye/Avrupa']],
+    ped: {
+      bas: 'Önerilmez: çocuklarda klinik deneyim yoktur (Türkiye KÜB\'ü).', artis: '—', hedef: '—', maks: '—',
+      birim: 'mg/gün', adim: [],
+      not: ['Ergende ajitasyonlu psikozda başka seçenekler (ör. risperidon, aripiprazol) önceliklidir.']
+    },
+    eri: {
+      bas: 'Akut psikoz, şiddetli ajitasyon, mani: 10–20 mg/gün (orta–şiddetli tabloda 20 mg)', artis: '2–3 günde bir 10–20 mg', hedef: 'Akut: 10–50 mg/gün (gerekirse 75 mg ve üzeri) · kronik idame: 20–40 mg/gün', maks: '150 mg/gün; tek seferde en çok 40 mg',
+      birim: 'mg/gün', adim: [[0, 20], [3, 30], [6, 40], [9, 50]], bant: [20, 50], tavan: 150,
+      not: ['İdame dozu genellikle tek doz olarak yatmadan önce verilir.', 'Mental retardasyonda ajitasyon: 6–20 mg/gün, gerekirse 25–40 mg.', 'Yaşlıda doz aralığının alt sınırı.', 'Uzun süreli tedavide uyum sorunu varsa dekanoat (depo) formuna geçilebilir.']
+    },
+    surdurum: SURDURUM_AP,
+    kesme: { risk: 2, sure: '2–4 hafta veya daha uzun', adim: [[0, 100], [7, 75], [14, 50], [21, 25], [28, 0]],
+      not: ['Kesilme diskinezisi, rebound psikoz ve kolinerjik rebound açısından izleyin.', 'Antikolinerjik kullanılıyorsa antipsikotik kesildikten 1–2 hafta sonra kesin.'] },
+    izlem: 'antipsikotik', izlemEk: [['EPS, akatizi, diskinezi (AIMS)', [1, 'Her vizit', 1, 1, 1], 'Ekstrapiramidal yan etkiler sıktır; AIMS 3–6 ayda bir.']],
+    profil: { sed: 3, kilo: 2, eps: 3, prl: 3, qt: 1, ach: 1, kes: 2 },
+    kutu: KUTU_AP,
+    uyari: ['Belirgin sedasyon', 'Akut distoni, parkinsonizm, akatizi; geç diskinezi', 'Hiperprolaktinemi', 'Ortostatik hipotansiyon', 'Nöroleptik malign sendrom', 'QT uzaması (doza bağlı)'],
+    etkilesim: ['CYP2D6 inhibitörleri (fluoksetin, paroksetin) düzeyi artırır', 'Alkol ve diğer sedatiflerle additif sedasyon', 'Levodopa ve dopamin agonistlerinin etkisini azaltır', 'QT uzatan ilaçlarla dikkat'],
+    oz: ['d2', '2d6sub', 'antikol']
   }
   );
 })();

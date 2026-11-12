@@ -22,6 +22,7 @@
   --bh-mavi: #1e4fa0;
   --bh-yesil: #12805a;
   --bh-pembe: #ee87ac;
+  --bh-turuncu: #ef7a22;
   --bh-font: "Jost", "Futura", "Century Gothic", "Avenir Next", system-ui, sans-serif;
 
   --zemin: #efe7d6;
@@ -45,6 +46,7 @@
   --s-ap: var(--bh-kirmizi);
   --s-dd: var(--bh-yesil);
   --s-anks: var(--bh-pembe);
+  --s-diger: var(--bh-turuncu);
 
   --ton-1: #d3def3;
   --ton-2: #8aa5da;
@@ -71,7 +73,7 @@
 @media (prefers-color-scheme: dark) {
   :root[data-tasarim="bauhaus"]:not([data-theme="light"]) {
     color-scheme: dark;
-    --bh-mavi: #3567c9; --bh-kirmizi: #e0392a; --bh-yesil: #1b9467; --bh-pembe: #f093b5;
+    --bh-mavi: #3567c9; --bh-kirmizi: #e0392a; --bh-yesil: #1b9467; --bh-pembe: #f093b5; --bh-turuncu: #f28a3a;
     --zemin: #151412; --yuzey: #201f1b; --yuzey-2: #2a2823;
     --murekkep: #f3ecdc; --murekkep-2: #cfc6b2; --soluk: #a0988a;
     --cizgi: #3d3a33; --eksen: #6f6859; --kenar: #e9e1cf; --kontur: #e9e1cf; --golge-renk: #e9e1cf;
@@ -82,7 +84,7 @@
 }
 :root[data-tasarim="bauhaus"][data-theme="dark"] {
   color-scheme: dark;
-  --bh-mavi: #3567c9; --bh-kirmizi: #e0392a; --bh-yesil: #1b9467; --bh-pembe: #f093b5;
+  --bh-mavi: #3567c9; --bh-kirmizi: #e0392a; --bh-yesil: #1b9467; --bh-pembe: #f093b5; --bh-turuncu: #f28a3a;
   --zemin: #151412; --yuzey: #201f1b; --yuzey-2: #2a2823;
   --murekkep: #f3ecdc; --murekkep-2: #cfc6b2; --soluk: #a0988a;
   --cizgi: #3d3a33; --eksen: #6f6859; --kenar: #e9e1cf; --kontur: #e9e1cf; --golge-renk: #e9e1cf;
@@ -97,11 +99,13 @@
 [data-tasarim="bauhaus"] [style*="--sinif:var(--s-ap)"]   { --sekil: inset(6%); --sinif-ink: #fff; }
 [data-tasarim="bauhaus"] [style*="--sinif:var(--s-dd)"]   { --sekil: inset(22% 0 22% 0 round 999px 999px 0 0); --sinif-ink: #fff; }
 [data-tasarim="bauhaus"] [style*="--sinif:var(--s-anks)"] { --sekil: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); --sinif-ink: #111; }
+[data-tasarim="bauhaus"] [style*="--sinif:var(--s-diger)"] { --sekil: inset(4% round 100% 0 0 0); --sinif-ink: #111; }
 [data-tasarim="bauhaus"] .lejant i[style*="--renk:var(--s-ad)"]   { clip-path: circle(50% at 50% 50%); }
 [data-tasarim="bauhaus"] .lejant i[style*="--renk:var(--s-dehb)"] { clip-path: polygon(50% 4%, 100% 96%, 0 96%); }
 [data-tasarim="bauhaus"] .lejant i[style*="--renk:var(--s-ap)"]   { clip-path: inset(6%); border-radius: 0 !important; }
 [data-tasarim="bauhaus"] .lejant i[style*="--renk:var(--s-dd)"]   { clip-path: inset(22% 0 22% 0 round 999px 999px 0 0); border-radius: 0 !important; }
 [data-tasarim="bauhaus"] .lejant i[style*="--renk:var(--s-anks)"] { clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); border-radius: 0 !important; }
+[data-tasarim="bauhaus"] .lejant i[style*="--renk:var(--s-diger)"] { clip-path: inset(4% round 100% 0 0 0); border-radius: 0 !important; }
 [data-tasarim="bauhaus"] .lejant i[style*="--renk:var(--s-"] { width: 12px !important; height: 12px !important; }
 
 /* ── temel ── */
