@@ -722,6 +722,8 @@
     else if (p[0] === 'cyp') { sayfa = 'cyp'; sayfaCyp(p[1]); }
     else sayfaIlaclar();
     Array.prototype.forEach.call(document.querySelectorAll('#gezinti a'), function (a) { a.classList.toggle('aktif', a.dataset.sayfa === sayfa); });
+    var gz = $('#gezinti'), ak = $('#gezinti a.aktif');
+    if (ak && gz.scrollWidth > gz.clientWidth) gz.scrollLeft = ak.offsetLeft - gz.offsetLeft - 16; // yatay kaydırmalı gezintide etkin sayfa görünür kalsın
     var hedef = p[0] === 'depo' && p[1] ? document.getElementById('depo-' + p[1]) : null;
     if (p[0] === 'cyp' && p[1] && document.getElementById('harita')) hedef = document.getElementById('harita');
     if (hedef) hedef.scrollIntoView({ behavior: 'auto', block: 'start' });
@@ -745,13 +747,48 @@
 
   /* ───────────── tema ───────────── */
   var kok = document.documentElement;
-  try { var kayitli = localStorage.getItem('pr-tema'); if (kayitli) kok.setAttribute('data-theme', kayitli); } catch (e) {}
   $('#temaDugme').onclick = function () {
     var simdi = kok.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     var yeni = simdi === 'dark' ? 'light' : 'dark';
     kok.setAttribute('data-theme', yeni);
     try { localStorage.setItem('pr-tema', yeni); } catch (e) {}
   };
+
+  /* üst bar yüksekliği (sarma ve tasarıma göre değişir): yapışkan bölüm gezintisi bunun altına oturur */
+  var ust = $('.ust');
+  function ustOlc() { kok.style.setProperty('--ust-h', ust.getBoundingClientRect().height + 'px'); }
+  if (window.ResizeObserver) new ResizeObserver(ustOlc).observe(ust);
+  ustOlc();
+
+  /* ───────────── tasarım (klasik / bauhaus / isvicre / farmakope) ───────────── */
+  var tDugme = $('#tasarimDugme'), tMenu = $('#tasarimMenu');
+  function tasarimIsaretle() {
+    var t = kok.getAttribute('data-tasarim') || 'klasik';
+    Array.prototype.forEach.call(tMenu.querySelectorAll('[data-tasarim]'), function (b) { b.setAttribute('aria-checked', b.dataset.tasarim === t ? 'true' : 'false'); });
+  }
+  function menuKapat(odakGeri) {
+    tMenu.hidden = true; tDugme.setAttribute('aria-expanded', 'false');
+    if (odakGeri) tDugme.focus();
+  }
+  tDugme.onclick = function (e) {
+    e.stopPropagation();
+    var ac = tMenu.hidden;
+    tMenu.hidden = !ac; tDugme.setAttribute('aria-expanded', ac ? 'true' : 'false');
+    if (ac) { tasarimIsaretle(); (tMenu.querySelector('[aria-checked="true"]') || tMenu.querySelector('button')).focus(); }
+  };
+  tMenu.onclick = function (e) {
+    var b = e.target.closest('[data-tasarim]'); if (!b) return;
+    var t = b.dataset.tasarim;
+    if (t === 'klasik') kok.removeAttribute('data-tasarim'); else kok.setAttribute('data-tasarim', t);
+    try { localStorage.setItem('pr-tasarim', t); } catch (er) {}
+    tasarimIsaretle(); menuKapat(true);
+  };
+  tMenu.onkeydown = function (e) {
+    var d = Array.prototype.slice.call(tMenu.querySelectorAll('button')), n = d.indexOf(document.activeElement);
+    if (e.key === 'Escape') { e.preventDefault(); menuKapat(true); }
+    else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); d[(n + (e.key === 'ArrowDown' ? 1 : d.length - 1)) % d.length].focus(); }
+  };
+  document.addEventListener('click', function (e) { if (!tMenu.hidden && !e.target.closest('.tasarim-sec')) menuKapat(false); });
 
   yonlendir();
 })();

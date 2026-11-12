@@ -4,7 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Psikofarmakoloji Rehberi</title>
-<link rel="stylesheet" href="css/stil.css?v=6">
+<script>
+/* Tema ve tasarım ilk boyamadan önce uygulanır (yanıp sönmeyi önler). ?tasarim=bauhaus ile bağlantı paylaşılabilir. */
+(function () {
+  var k = document.documentElement, T = /^(klasik|bauhaus|isvicre|farmakope)$/;
+  try {
+    var t = localStorage.getItem('pr-tema'); if (t === 'light' || t === 'dark') k.setAttribute('data-theme', t);
+    var q = (location.search.match(/[?&]tasarim=([a-z]+)/) || [])[1];
+    if (q && T.test(q)) localStorage.setItem('pr-tasarim', q);
+    var d = q && T.test(q) ? q : localStorage.getItem('pr-tasarim');
+    if (d && T.test(d) && d !== 'klasik') k.setAttribute('data-tasarim', d);
+  } catch (e) {}
+})();
+</script>
+<link rel="stylesheet" href="css/stil.css?v=7">
+<link rel="stylesheet" href="css/tasarim-bauhaus.css?v=7">
+<link rel="stylesheet" href="css/tasarim-isvicre.css?v=7">
+<link rel="stylesheet" href="css/tasarim-farmakope.css?v=7">
 </head>
 <body>
 <header class="ust">
@@ -14,6 +30,13 @@
         <rect x="3" y="11" width="26" height="10" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/>
         <path d="M16 11v10" stroke="currentColor" stroke-width="2.2"/>
         <path d="M3.6 16a5 5 0 0 1 5-5H16v10H8.6a5 5 0 0 1-5-5z" fill="currentColor" opacity=".28"/>
+      </svg>
+      <svg class="marka-bh" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="33" height="33" fill="var(--yuzey)" stroke="currentColor" stroke-width="3"/>
+        <circle cx="11" cy="11" r="6.5" fill="var(--bh-kirmizi)"/>
+        <path d="M19 4.5h12.5V17z" fill="var(--bh-sari)"/>
+        <rect x="19.5" y="19.5" width="11" height="11" fill="var(--bh-mavi)"/>
+        <path d="M4.5 31.5V19.5a12 12 0 0 1 12 12z" fill="currentColor"/>
       </svg>
       <span>Psikofarmakoloji Rehberi</span>
     </a>
@@ -25,6 +48,18 @@
       <a href="#/izlem" data-sayfa="izlem">Tetkik ve İzlem</a>
       <a href="#/ilkeler" data-sayfa="ilkeler">Genel İlkeler</a>
     </nav>
+    <div class="tasarim-sec">
+      <button class="tema-dugme" id="tasarimDugme" type="button" title="Tasarım seç" aria-label="Tasarımı değiştir" aria-haspopup="true" aria-expanded="false" aria-controls="tasarimMenu">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="7" cy="7" r="4" fill="currentColor"/><rect x="13" y="3" width="8" height="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 13.5 11.5 21h-9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><rect x="13" y="13" width="8" height="8" fill="currentColor" opacity=".45"/></svg>
+      </button>
+      <div class="tasarim-menu" id="tasarimMenu" role="menu" aria-label="Tasarım" hidden>
+        <div class="tasarim-menu-baslik">Tasarım</div>
+        <button type="button" role="menuitemradio" data-tasarim="klasik"><span class="ornek ornek-klasik"><i></i><i></i><i></i></span><span><b>Klasik</b><small>Sade, yumuşak kartlar</small></span></button>
+        <button type="button" role="menuitemradio" data-tasarim="bauhaus"><span class="ornek ornek-bauhaus"><i></i><i></i><i></i></span><span><b>Bauhaus</b><small>Neobrütalist, ana renkler, kalın kontur</small></span></button>
+        <button type="button" role="menuitemradio" data-tasarim="isvicre"><span class="ornek ornek-isvicre"><i></i><i></i><i></i></span><span><b>İsviçre</b><small>Izgara, ince çizgi, tek kırmızı vurgu</small></span></button>
+        <button type="button" role="menuitemradio" data-tasarim="farmakope"><span class="ornek ornek-farmakope"><i></i><i></i><i></i></span><span><b>Farmakope</b><small>Editoryal, serif, basılı kitap hissi</small></span></button>
+      </div>
+    </div>
     <button class="tema-dugme" id="temaDugme" type="button" title="Açık / koyu tema" aria-label="Temayı değiştir">
       <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/></svg>
     </button>
@@ -42,15 +77,15 @@
 
 <div id="ipucu" class="ipucu" role="tooltip" hidden></div>
 
-<script src="js/veri-temel.js?v=6"></script>
-<script src="js/veri-antidepresan.js?v=6"></script>
-<script src="js/veri-dehb.js?v=6"></script>
-<script src="js/veri-antipsikotik.js?v=6"></script>
-<script src="js/veri-diger.js?v=6"></script>
-<script src="js/veri-metabolizma.js?v=6"></script>
-<script src="js/veri-depo.js?v=6"></script>
-<script src="js/grafik.js?v=6"></script>
-<script src="js/degisim.js?v=6"></script>
-<script src="js/app.js?v=6"></script>
+<script src="js/veri-temel.js?v=7"></script>
+<script src="js/veri-antidepresan.js?v=7"></script>
+<script src="js/veri-dehb.js?v=7"></script>
+<script src="js/veri-antipsikotik.js?v=7"></script>
+<script src="js/veri-diger.js?v=7"></script>
+<script src="js/veri-metabolizma.js?v=7"></script>
+<script src="js/veri-depo.js?v=7"></script>
+<script src="js/grafik.js?v=7"></script>
+<script src="js/degisim.js?v=7"></script>
+<script src="js/app.js?v=7"></script>
 </body>
 </html>

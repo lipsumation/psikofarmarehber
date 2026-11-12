@@ -1,0 +1,238 @@
+/* ───────── Tasarım: Farmakope (editoryal) ─────────
+   Basılı başvuru kitabı / dergi hissi: serif yazı, kâğıt zemin, bordo vurgu, küçük büyük harfli etiketler,
+   kitap tipi tablolar (üst-alt kalın çizgi), Roma rakamlı adımlar. Yalnızca <html data-tasarim="farmakope"> iken etkindir. */
+
+@font-face {
+  font-family: "Source Serif 4"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url(../fonts/sourceserif4-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Serif 4"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url(../fonts/sourceserif4-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Serif 4"; font-style: italic; font-weight: 400 600; font-display: swap;
+  src: url(../fonts/sourceserif4-italic-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Serif 4"; font-style: italic; font-weight: 400 600; font-display: swap;
+  src: url(../fonts/sourceserif4-italic-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root[data-tasarim="farmakope"] {
+  color-scheme: light;
+  --fk-font: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --zemin: #f4efe4; --yuzey: #fbf8f1; --yuzey-2: #efe8da;
+  --murekkep: #25211b; --murekkep-2: #4f483d; --soluk: #7a7164;
+  --cizgi: #dbd1be; --eksen: #a99e89; --kenar: #d5cab5;
+  --golge: 0 1px 0 rgba(60,45,20,.06);
+  --vurgu: #7b2333; --vurgu-zemin: #f1e1de;
+  --s-ad: #2f5d8c; --s-dehb: #b5761b; --s-ap: #6b3f7a; --s-dd: #3c6e4f; --s-anks: #b4566f;
+  --ton-1: #e6dcc8; --ton-2: #c2b293; --ton-3: #85725a; --ton-4: #3e3326;
+  --iyi: #3c6e4f; --uyari: #c48c1f; --ciddi: #b8622e; --kritik: #a1262e;
+  --kritik-zemin: #f4e0dc; --uyari-zemin: #f6ebcf; --iyi-zemin: #e2ebdc;
+  --rol-sub: #2f5d8c; --rol-inh: #a1262e; --rol-ind: #3c6e4f;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-tasarim="farmakope"]:not([data-theme="light"]) {
+    color-scheme: dark;
+    --zemin: #191612; --yuzey: #211d18; --yuzey-2: #2a251f;
+    --murekkep: #ece3d2; --murekkep-2: #c7bba6; --soluk: #9a8f7d;
+    --cizgi: #3a332b; --eksen: #6b6152; --kenar: #3a332b; --golge: none;
+    --vurgu: #e2919b; --vurgu-zemin: #3a1f22;
+    --s-ad: #7fa6d1; --s-dehb: #d9a24a; --s-ap: #b48ac2; --s-dd: #7fb08f; --s-anks: #dd8aa1;
+    --ton-1: #332c24; --ton-2: #6b5d48; --ton-3: #a9977a; --ton-4: #e6d8bd;
+    --kritik: #e0646b; --kritik-zemin: #3b1d1c; --uyari-zemin: #3a2f15; --iyi-zemin: #1f2e22;
+    --rol-sub: #7fa6d1; --rol-inh: #e0646b; --rol-ind: #7fb08f;
+  }
+}
+:root[data-tasarim="farmakope"][data-theme="dark"] {
+  color-scheme: dark;
+  --zemin: #191612; --yuzey: #211d18; --yuzey-2: #2a251f;
+  --murekkep: #ece3d2; --murekkep-2: #c7bba6; --soluk: #9a8f7d;
+  --cizgi: #3a332b; --eksen: #6b6152; --kenar: #3a332b; --golge: none;
+  --vurgu: #e2919b; --vurgu-zemin: #3a1f22;
+  --s-ad: #7fa6d1; --s-dehb: #d9a24a; --s-ap: #b48ac2; --s-dd: #7fb08f; --s-anks: #dd8aa1;
+  --ton-1: #332c24; --ton-2: #6b5d48; --ton-3: #a9977a; --ton-4: #e6d8bd;
+  --kritik: #e0646b; --kritik-zemin: #3b1d1c; --uyari-zemin: #3a2f15; --iyi-zemin: #1f2e22;
+  --rol-sub: #7fa6d1; --rol-inh: #e0646b; --rol-ind: #7fb08f;
+}
+
+/* ── temel ── */
+[data-tasarim="farmakope"] body { font-family: var(--fk-font); font-size: 16px; line-height: 1.55; font-variant-numeric: lining-nums; }
+[data-tasarim="farmakope"] svg text { font-family: var(--fk-font); }
+[data-tasarim="farmakope"] h1, [data-tasarim="farmakope"] h2, [data-tasarim="farmakope"] h3 { font-weight: 600; letter-spacing: -.005em; }
+[data-tasarim="farmakope"] a { text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); }
+[data-tasarim="farmakope"] a:hover { text-decoration: underline; text-underline-offset: 3px; }
+[data-tasarim="farmakope"] ::selection { background: var(--vurgu-zemin); }
+/* küçük büyük harfli etiketler */
+[data-tasarim="farmakope"] .kutu .ad, [data-tasarim="farmakope"] .alt-b, [data-tasarim="farmakope"] .iki-sutun h3, [data-tasarim="farmakope"] table.matris th,
+[data-tasarim="farmakope"] .secici label, [data-tasarim="farmakope"] .metab-kutu .ad, [data-tasarim="farmakope"] .enzim-kol h3, [data-tasarim="farmakope"] .grup-baslik,
+[data-tasarim="farmakope"] table.matris tr.grup-satir td, [data-tasarim="farmakope"] .akis-kol .dal-etiket, [data-tasarim="farmakope"] .tasarim-menu-baslik,
+[data-tasarim="farmakope"] .esik .ad, [data-tasarim="farmakope"] .ilac-kart .alt-sinif {
+  text-transform: none; font-variant-caps: all-small-caps; letter-spacing: .07em; font-weight: 600;
+}
+
+/* üst bar: dergi künyesi */
+[data-tasarim="farmakope"] .ust { background: var(--zemin); backdrop-filter: none; border-bottom: 4px double var(--murekkep); }
+[data-tasarim="farmakope"] .ust-ic { padding: 12px 20px; max-width: 1120px; gap: 14px; }
+[data-tasarim="farmakope"] .marka { font-size: 19px; font-weight: 700; letter-spacing: -.01em; gap: 10px; white-space: nowrap; }
+[data-tasarim="farmakope"] .marka svg { display: none; }
+[data-tasarim="farmakope"] .marka::before { content: "Rx"; font-style: italic; font-weight: 600; font-size: 17px; color: var(--yuzey); background: var(--vurgu);
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; flex: none; padding-right: 2px; }
+[data-tasarim="farmakope"] .gezinti { gap: 0; }
+[data-tasarim="farmakope"] .gezinti a { border-radius: 0; color: var(--murekkep-2); font-weight: 500; font-size: 14.5px; padding: 6px 8px; }
+[data-tasarim="farmakope"] .gezinti a:hover { background: none; color: var(--vurgu); }
+[data-tasarim="farmakope"] .gezinti a.aktif { background: none; color: var(--vurgu); font-style: italic; box-shadow: inset 0 -2px 0 var(--vurgu); }
+[data-tasarim="farmakope"] .tema-dugme { border-radius: 50%; border-color: var(--kenar); background: var(--yuzey); }
+[data-tasarim="farmakope"] .tasarim-menu { border-radius: 4px; border-color: var(--kenar); background: var(--yuzey); }
+[data-tasarim="farmakope"] .tasarim-menu button { border-radius: 3px; }
+[data-tasarim="farmakope"] .tasarim-menu button[aria-checked="true"] { background: var(--vurgu-zemin); }
+[data-tasarim="farmakope"] main.kap { padding-top: 34px; max-width: 1120px; }
+[data-tasarim="farmakope"] .alt { border-top: 4px double var(--murekkep); font-size: 13.5px; font-style: italic; max-width: 1120px; }
+[data-tasarim="farmakope"] .alt strong { font-style: normal; font-variant-caps: all-small-caps; letter-spacing: .07em; color: var(--vurgu); }
+@media (max-width: 760px) {
+  [data-tasarim="farmakope"] .ust-ic { padding: 10px 16px 0; gap: 10px; }
+  [data-tasarim="farmakope"] .marka { flex: 1; min-width: 0; font-size: 17px; }
+  [data-tasarim="farmakope"] .tasarim-sec, [data-tasarim="farmakope"] #temaDugme { order: 2; }
+  [data-tasarim="farmakope"] .gezinti { order: 3; flex: 1 0 100%; margin: 0 -16px; padding: 4px 6px 6px; flex-wrap: nowrap; overflow-x: auto;
+    border-top: 1px solid var(--cizgi); scrollbar-width: none; }
+  [data-tasarim="farmakope"] .gezinti::-webkit-scrollbar { display: none; }
+  [data-tasarim="farmakope"] .gezinti a { white-space: nowrap; flex: none; }
+}
+
+/* ── kartlar: sayfa ── */
+[data-tasarim="farmakope"] .kart { border-radius: 3px; border: 1px solid var(--kenar); box-shadow: var(--golge); }
+[data-tasarim="farmakope"] .bolum { padding: 26px 32px 28px; margin-bottom: 22px; scroll-margin-top: calc(var(--ust-h, 60px) + 80px); }
+[data-tasarim="farmakope"] .bolum > h2 { font-size: 27px; font-weight: 600; gap: 12px; align-items: baseline; padding-bottom: 8px; margin-bottom: 8px; border-bottom: 1px solid var(--murekkep); }
+[data-tasarim="farmakope"] .bolum > .alt-baslik { font-style: italic; font-size: 15px; margin-bottom: 18px; }
+[data-tasarim="farmakope"] .no { background: none; color: var(--vurgu); width: auto; height: auto; border-radius: 0; font-size: inherit; font-weight: 500; display: inline; }
+[data-tasarim="farmakope"] .no::before { content: "§\00a0"; font-weight: 400; }
+[data-tasarim="farmakope"] .yol .no::before { content: ""; }
+[data-tasarim="farmakope"] .etiket { border-radius: 2px; background: transparent; border-color: var(--kenar); color: var(--murekkep-2); font-weight: 500; font-style: italic; font-size: 13px; }
+[data-tasarim="farmakope"] .etiket.onay, [data-tasarim="farmakope"] .etiket.onaysiz { font-style: normal; }
+[data-tasarim="farmakope"] .etiket.onay { background: var(--iyi-zemin); }
+[data-tasarim="farmakope"] .etiket.onaysiz { background: var(--uyari-zemin); }
+[data-tasarim="farmakope"] .cagri { border-radius: 2px; border: 1px solid; font-size: 15px; }
+[data-tasarim="farmakope"] .cagri.kritik { border-color: color-mix(in srgb, var(--kritik) 45%, transparent); }
+[data-tasarim="farmakope"] .cagri.uyari { border-color: color-mix(in srgb, var(--uyari) 55%, transparent); }
+[data-tasarim="farmakope"] .cagri.bilgi { border-color: color-mix(in srgb, var(--vurgu) 30%, transparent); background: var(--vurgu-zemin); }
+[data-tasarim="farmakope"] .cagri.bilgi svg { color: var(--vurgu); }
+
+/* ── ana sayfa: kitap iç kapağı ── */
+[data-tasarim="farmakope"] .kahraman { padding: 40px 44px; grid-template-columns: minmax(0, 1fr); text-align: center; gap: 28px; border-top: 3px solid var(--vurgu); }
+[data-tasarim="farmakope"] .kahraman h1 { font-size: clamp(34px, 5vw, 56px); font-weight: 600; letter-spacing: -.015em; margin-bottom: 12px; }
+[data-tasarim="farmakope"] .kahraman h1::after { content: "❦"; display: block; font-size: 22px; color: var(--vurgu); margin-top: 6px; font-weight: 400; }
+[data-tasarim="farmakope"] .kahraman p { margin-left: auto; margin-right: auto; font-size: 18px; font-style: italic; max-width: 56ch; color: var(--murekkep-2); }
+[data-tasarim="farmakope"] .kahraman p.kucuk { font-style: normal; font-variant-caps: all-small-caps; letter-spacing: .08em; font-size: 15px; }
+[data-tasarim="farmakope"] .dongu { counter-reset: fk; border-top: 1px solid var(--murekkep); border-bottom: 1px solid var(--murekkep); padding: 18px 0 16px; max-width: 860px; margin: 0 auto; width: 100%; }
+[data-tasarim="farmakope"] .dongu-adim { counter-increment: fk; padding: 0 14px; }
+[data-tasarim="farmakope"] .dongu-adim + .dongu-adim { border-left: 1px solid var(--cizgi); }
+[data-tasarim="farmakope"] .dongu-adim::before { content: counter(fk, upper-roman); position: static; display: block; width: auto; height: auto; background: none;
+  font-size: 26px; font-weight: 500; color: var(--vurgu); line-height: 1; margin-bottom: 6px; }
+[data-tasarim="farmakope"] .dongu-adim:last-child::before { display: block; }
+[data-tasarim="farmakope"] .dongu-simge { display: none; }
+[data-tasarim="farmakope"] .dongu-adim b { font-size: 16px; font-weight: 600; }
+[data-tasarim="farmakope"] .dongu-adim span { font-size: 13.5px; font-style: italic; }
+@media (max-width: 600px) {
+  [data-tasarim="farmakope"] .kahraman { padding: 28px 20px; }
+  [data-tasarim="farmakope"] .dongu { grid-template-columns: 1fr 1fr; row-gap: 16px; }
+  [data-tasarim="farmakope"] .dongu-adim:nth-child(3) { border-left: 0; }
+}
+
+[data-tasarim="farmakope"] .arama input { border-radius: 2px; border-color: var(--kenar); font-size: 16px; font-style: italic; }
+[data-tasarim="farmakope"] .arama input:not(:placeholder-shown) { font-style: normal; }
+[data-tasarim="farmakope"] .arama input:focus { border-color: var(--vurgu); box-shadow: 0 0 0 3px var(--vurgu-zemin); }
+[data-tasarim="farmakope"] .cip { border-radius: 2px; border-color: var(--kenar); background: var(--yuzey); font-weight: 500; font-size: 14px; }
+[data-tasarim="farmakope"] .cip.aktif { background: var(--vurgu); border-color: var(--vurgu); color: var(--zemin); }
+[data-tasarim="farmakope"] .grup-baslik { font-size: 19px; color: var(--murekkep); margin: 34px 0 12px; gap: 12px; }
+[data-tasarim="farmakope"] .grup-baslik::after { content: ""; flex: 1; height: 1px; background: var(--murekkep); order: 3; }
+[data-tasarim="farmakope"] .grup-baslik .sayi { order: 4; font-variant-caps: normal; font-style: italic; letter-spacing: 0; }
+[data-tasarim="farmakope"] .ilac-kart { border-left: 1px solid var(--kenar); border-top: 3px solid var(--sinif); border-radius: 2px; padding: 14px 18px 14px; }
+[data-tasarim="farmakope"] .ilac-kart:hover { transform: none; box-shadow: 0 0 0 1px var(--sinif); }
+[data-tasarim="farmakope"] .ilac-kart h3 { font-size: 20px; font-weight: 600; }
+[data-tasarim="farmakope"] .ilac-kart .alt-sinif { font-size: 14px; color: var(--soluk); }
+[data-tasarim="farmakope"] .ilac-kart .satir { border-top: 1px dotted var(--eksen); font-size: 14px; }
+[data-tasarim="farmakope"] .ilac-kart .satir span:first-child { font-style: italic; }
+
+/* ── ilaç ayrıntısı ── */
+[data-tasarim="farmakope"] .geri { font-style: italic; font-size: 15px; }
+[data-tasarim="farmakope"] .ilac-bas { border-top: 4px solid var(--sinif); padding: 30px 32px; }
+[data-tasarim="farmakope"] .ilac-bas h1 { font-size: clamp(34px, 4.6vw, 50px); font-weight: 600; letter-spacing: -.015em; }
+[data-tasarim="farmakope"] .ilac-bas .mek { font-size: 17.5px; font-style: italic; color: var(--murekkep-2); max-width: 68ch; }
+[data-tasarim="farmakope"] .kutu { border-radius: 2px; background: transparent; border: 1px solid var(--cizgi); }
+[data-tasarim="farmakope"] .kutu .ad { font-size: 14px; color: var(--soluk); }
+[data-tasarim="farmakope"] .kutu .deger { font-size: 17px; font-weight: 600; }
+[data-tasarim="farmakope"] .kutu.vurgulu { background: color-mix(in srgb, var(--sinif) 10%, var(--yuzey)); border-color: color-mix(in srgb, var(--sinif) 40%, var(--yuzey)); }
+[data-tasarim="farmakope"] .metin-kutular .kutu .deger { font-size: 15px; font-weight: 400; }
+[data-tasarim="farmakope"] .yol { border-radius: 2px; background: color-mix(in srgb, var(--yuzey) 96%, transparent); }
+[data-tasarim="farmakope"] .yol a { border-radius: 2px; font-weight: 500; font-size: 14.5px; }
+[data-tasarim="farmakope"] .yol a .no { font-style: italic; font-size: 15px; width: auto; height: auto; }
+[data-tasarim="farmakope"] .sekmeler { border-radius: 3px; background: var(--yuzey-2); }
+[data-tasarim="farmakope"] .sekmeler button { border-radius: 2px; font-weight: 500; font-size: 15px; }
+[data-tasarim="farmakope"] .sekmeler button.aktif { box-shadow: 0 0 0 1px var(--kenar); font-style: italic; color: var(--vurgu); }
+[data-tasarim="farmakope"] .grafik-kutu { border-radius: 2px; border-color: var(--cizgi); }
+[data-tasarim="farmakope"] .grafik-baslik { font-size: 15px; font-weight: 600; }
+[data-tasarim="farmakope"] .grafik-alt { font-style: italic; font-size: 13px; }
+[data-tasarim="farmakope"] .alt-b, [data-tasarim="farmakope"] .iki-sutun h3 { font-size: 15px; color: var(--vurgu); margin: 20px 0 6px; }
+[data-tasarim="farmakope"] .notlar li { font-size: 15.5px; }
+[data-tasarim="farmakope"] .notlar li::marker { color: var(--vurgu); }
+[data-tasarim="farmakope"] .olcer i { border-radius: 1px; height: 6px; }
+[data-tasarim="farmakope"] .pipler { gap: 4px; }
+[data-tasarim="farmakope"] .pipler i { width: 11px; height: 11px; border-radius: 50%; background: transparent; border: 1px solid var(--eksen); }
+[data-tasarim="farmakope"] .profil-satir { border-bottom: 1px dotted var(--eksen); font-size: 15px; }
+[data-tasarim="farmakope"] .cetvel .ray { height: 2px; top: 10px; background: var(--murekkep-2); }
+[data-tasarim="farmakope"] .cetvel .im { width: 14px; height: 14px; margin-left: -7px; top: 4px; border: 2px solid var(--vurgu); background: var(--yuzey); }
+
+/* kitap tipi tablolar */
+[data-tasarim="farmakope"] table.matris { border-top: 1.5px solid var(--murekkep); border-bottom: 1.5px solid var(--murekkep); font-size: 14.5px; }
+[data-tasarim="farmakope"] table.matris th { color: var(--murekkep); font-size: 14px; border-bottom: 1px solid var(--murekkep); }
+[data-tasarim="farmakope"] table.matris td { border-bottom: 1px solid color-mix(in srgb, var(--cizgi) 70%, transparent); }
+[data-tasarim="farmakope"] table.matris td.aciklama { font-style: italic; font-size: 13.5px; }
+[data-tasarim="farmakope"] table.matris tr:hover td { background: color-mix(in srgb, var(--vurgu-zemin) 60%, transparent); }
+[data-tasarim="farmakope"] .hucre-yazi { border-radius: 2px; font-weight: 600; }
+[data-tasarim="farmakope"] table.matris tr.grup-satir td { font-size: 15px; color: var(--murekkep); border-bottom: 1px solid var(--murekkep); }
+[data-tasarim="farmakope"] .matris-lejant { font-style: italic; font-size: 14px; }
+
+/* metabolizma */
+[data-tasarim="farmakope"] .rz { border-radius: 2px; font-weight: 600; }
+[data-tasarim="farmakope"] .metab-kutu, [data-tasarim="farmakope"] .enzim-kart { border-radius: 2px; border-width: 1px; }
+[data-tasarim="farmakope"] .enzim-kart { border-color: var(--vurgu); border-top-width: 3px; }
+[data-tasarim="farmakope"] .metab-kutu .ad { font-size: 14px; color: var(--vurgu); }
+[data-tasarim="farmakope"] .metab-kutu .metin, [data-tasarim="farmakope"] p.metin { font-size: 15px; }
+[data-tasarim="farmakope"] .enz { border-radius: 2px; border-width: 1px; }
+[data-tasarim="farmakope"] .enz span { font-style: italic; font-size: 12px; }
+[data-tasarim="farmakope"] .metab-ozet { font-size: 16.5px; }
+[data-tasarim="farmakope"] .komsu-ad { font-style: italic; font-weight: 500; font-size: 14.5px; }
+
+/* değişim, akış, ilkeler */
+[data-tasarim="farmakope"] .secici select { border-radius: 2px; border-color: var(--kenar); font-weight: 500; font-size: 16px; }
+[data-tasarim="farmakope"] .strateji-bas h2 { font-size: 28px; font-weight: 600; }
+[data-tasarim="farmakope"] .strateji-mini { border-radius: 2px; }
+[data-tasarim="farmakope"] .strateji-mini.secili { border-color: var(--vurgu); box-shadow: 0 0 0 1px var(--vurgu); }
+[data-tasarim="farmakope"] .strateji-mini span { font-style: italic; font-size: 13.5px; }
+[data-tasarim="farmakope"] .adimlar li::before { background: none; color: var(--vurgu); border: 1px solid var(--vurgu); font-weight: 500; font-style: italic; }
+[data-tasarim="farmakope"] .adimlar li::after { width: 1px; left: 13px; }
+[data-tasarim="farmakope"] .akis-dugum { border-radius: 2px; border-width: 1px; font-size: 15px; }
+[data-tasarim="farmakope"] .akis-dugum b { font-size: 16px; font-weight: 600; }
+[data-tasarim="farmakope"] .akis-dugum span { font-style: italic; font-size: 13.5px; }
+[data-tasarim="farmakope"] .akis-dugum.karar { border-radius: 999px; border-color: var(--vurgu); background: var(--vurgu-zemin); }
+[data-tasarim="farmakope"] .akis-ok { width: 1px; }
+[data-tasarim="farmakope"] .akis-dal::before { border-width: 1px; border-radius: 2px 2px 0 0; }
+[data-tasarim="farmakope"] .akis-kol .dal-etiket { border-radius: 2px; font-size: 13px; }
+[data-tasarim="farmakope"] .zaman-seridi div { font-size: 14px; }
+[data-tasarim="farmakope"] .zaman-seridi div:first-child { border-radius: 2px 0 0 2px; }
+[data-tasarim="farmakope"] .zaman-seridi div:last-child { border-radius: 0 2px 2px 0; }
+[data-tasarim="farmakope"] .ilke { border-radius: 2px; }
+[data-tasarim="farmakope"] .ilke .simge { border-radius: 50%; }
+[data-tasarim="farmakope"] .ilke b { font-size: 16.5px; font-weight: 600; }
+[data-tasarim="farmakope"] .ilke p, [data-tasarim="farmakope"] .ilke li { font-size: 14.5px; }
+[data-tasarim="farmakope"] .harf { border-radius: 2px; background: transparent; border: 1px solid var(--cizgi); }
+[data-tasarim="farmakope"] .harf .h { font-weight: 600; font-style: italic; color: var(--vurgu); font-size: 34px; }
+[data-tasarim="farmakope"] .esik { border-radius: 2px; background: transparent; border: 1px solid var(--cizgi); }
+[data-tasarim="farmakope"] .esik .deger { font-weight: 600; }
+[data-tasarim="farmakope"] .ipucu { border-radius: 2px; font-size: 13.5px; }
