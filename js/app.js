@@ -27,9 +27,17 @@
 
   var durum = { arama: '', sinif: 'hepsi', onayli: false, yas: 'ped', izlem: 'antipsikotik' };
 
+  /* Hasta grubu (kitle): 'ped' çocuk-ergen, 'eri' erişkin. Varsayılan görünümü, onay bilgisini, izlem satırlarını ve ilkeleri belirler. */
+  var kok = document.documentElement;
+  var ilkSecim = !kok.hasAttribute('data-kitle');
+  var kitle = kok.getAttribute('data-kitle') === 'eri' ? 'eri' : 'ped';
+  durum.yas = kitle;
+  function eri() { return kitle === 'eri'; }
+  function kt(x) { return window.kitleSec(x, kitle); }
+
   function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
   function renk(i) { return window.SINIFLAR[i.sinif].renk; }
-  function liste(d) { return '<ul class="notlar">' + d.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'; }
+  function liste(d) { return '<ul class="notlar">' + window.kitleDizi(d, kitle).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'; }
 
   var SIMGE = {
     ara: '<svg viewBox="0 0 24 24" width="17" height="17"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
@@ -48,7 +56,9 @@
     tek: '<svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10.500 9 12.500 8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     olc: '<svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 19V5M4 19h16M8 15l4-5 3 3 4-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     saat: '<svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
-    el: '<svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 21a8 8 0 0 0 8-8V7M4 13a8 8 0 0 0 8 8M4 13V9M8 12V5M12 12V4M16 12V5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+    el: '<svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 21a8 8 0 0 0 8-8V7M4 13a8 8 0 0 0 8 8M4 13V9M8 12V5M12 12V4M16 12V5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    eriskin: '<svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="5" r="2.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 22v-8.5A3.5 3.5 0 0 1 10.5 10h3a3.5 3.5 0 0 1 3.5 3.5V22M10 22v-6M14 22v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    aile: '<svg viewBox="0 0 24 24" width="20" height="20"><circle cx="8" cy="5" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="10" r="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 22v-7.5A3.5 3.5 0 0 1 7 11h2a3.5 3.5 0 0 1 3.5 3.5V22M14 22v-4.5a3 3 0 0 1 6 0V22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
   };
 
   /* ───────────── izlem matrisi ───────────── */
@@ -78,12 +88,18 @@
     return h + '</div><div class="deger">' + ad + '</div>';
   }
 
+  /* Onay rozetleri: çocuk-ergende [endikasyon, yaş], erişkinde [endikasyon, kaynak notu (ör. Avrupa)] */
   function onayRozet(i, kisa) {
-    if (i.onay && i.onay.length) {
-      if (kisa) return '<span class="etiket onay">✓ ' + esc(i.onay[0][0]) + ' · ' + esc(i.onay[0][1]) + (i.onay.length > 1 ? ' +' + (i.onay.length - 1) : '') + '</span>';
-      return i.onay.map(function (o) { return '<span class="etiket onay">✓ ' + esc(o[0]) + ' · ' + esc(o[1]) + '</span>'; }).join('');
+    var o = eri() ? i.onayEri : i.onay;
+    var yaz = function (x) { return '✓ ' + esc(x[0]) + (x[1] ? ' · ' + esc(x[1]) : ''); };
+    if (o && o.length) {
+      if (kisa) return '<span class="etiket onay">' + yaz(o[0]) + (o.length > 1 ? ' +' + (o.length - 1) : '') + '</span>';
+      return o.map(function (x) { return '<span class="etiket onay">' + yaz(x) + '</span>'; }).join('');
     }
-    return '<span class="etiket onaysiz">' + esc(i.onayNot || 'Pediatrik onay yok · endikasyon dışı') + '</span>';
+    return '<span class="etiket onaysiz">' + esc(eri() ? (i.onayEriNot || 'Psikiyatrik endikasyonda onay yok') : (i.onayNot || 'Pediatrik onay yok · endikasyon dışı')) + '</span>';
+  }
+  function pedOzet(i) {
+    return i.onay && i.onay.length ? i.onay.map(function (o) { return esc(o[0]) + ' ' + esc(o[1]); }).join(' · ') : esc(i.onayNot || 'Pediatrik onay yok');
   }
 
   /* ───────────── metabolizma / CYP ───────────── */
@@ -210,7 +226,8 @@
         ['<span class="rz g2" style="--rol:var(--soluk)">Ön ilaç</span><span class="arti">+</span>' + rz('inh', 3, 'İnhibitör'), 'Etki azalır', 'Enzim ilacı etkinleştiriyorsa sonuç tersine döner: kodein, tramadol ve tamoksifen CYP2D6 inhibitörleriyle etkisizleşir. Aktif metaboliti olan ilaçlarda (risperidon, venlafaksin) toplam aktif madde daha az değişir.'],
         ['<span class="rz g2" style="--rol:var(--soluk)">Genotip</span>', 'Kalıcı fark', 'CYP2D6 ve CYP2C19 genetik çeşitlilik gösterir. Yavaş metabolizör sürekli inhibitör alıyormuş gibi davranır (düzey yüksek, yan etki fazla); ultra hızlı metabolizörde olağan doz yetersiz kalır.']
       ].map(function (x) { return '<div class="ilke"><div class="formul">' + x[0] + '</div><b>' + x[1] + '</b><p>' + x[2] + '</p></div>'; }).join('') + '</div>' +
-      '<div class="cagri bilgi">' + SIMGE.cocuk + '<div><b>Çocuk ve ergende:</b> kg başına karaciğer klirensi çoğu ilaçta erişkinden yüksektir (özellikle CYP1A2 ve CYP3A4 ile yıkılanlarda) ve ergenlikte erişkin değerlerine iner. Buna karşın vücut ağırlığı düşük olduğu için mutlak doz düşüktür. İlaca özgü farklar ilaç sayfalarındaki “Metabolizma” bölümünde yer alır.</div></div></section>';
+      (eri() ? '<div class="cagri bilgi">' + SIMGE.bilgi + '<div><b>İleri yaşta ve sigara içenlerde:</b> yaşla karaciğer kan akımı ve CYP3A4 etkinliği azalabilir, böbrek işlevi düşer: düşük başlangıç dozu ve yavaş titrasyon uygulayın. Konjugasyonla (UGT) yıkılan lorazepam yaşlıda görece güvenlidir. Sigara dumanı CYP1A2\'yi indükler: sigara bırakıldığında ya da hastaneye yatışta klozapin ve olanzapin düzeyi belirgin yükselebilir.</div></div></section>'
+        : '<div class="cagri bilgi">' + SIMGE.cocuk + '<div><b>Çocuk ve ergende:</b> kg başına karaciğer klirensi çoğu ilaçta erişkinden yüksektir (özellikle CYP1A2 ve CYP3A4 ile yıkılanlarda) ve ergenlikte erişkin değerlerine iner. Buna karşın vücut ağırlığı düşük olduğu için mutlak doz düşüktür. İlaca özgü farklar ilaç sayfalarındaki “Metabolizma” bölümünde yer alır.</div></div></section>');
 
     // harita
     h += '<section class="kart bolum" id="harita"><h2>CYP haritası</h2><div class="alt-baslik">Rehberdeki ' + window.ILACLAR.length + ' ilacın enzimlerle ilişkisi. Bir enzim seçerek o enzimin substratlarını, inhibitörlerini ve indükleyicilerini görün.</div>' +
@@ -278,7 +295,8 @@
     var h = '<section class="kart kahraman">' +
       '<div><h1>Psikofarmakoloji Rehberi</h1>' +
       '<p>Psikiyatrik ilaçlarda başlama, titrasyon, sürdürüm, kesme ve ilaç değişimi için görsel karar desteği. ' +
-      'Çocuk ve ergen dozları, onay yaşları ve izlem tetkikleri her ilaçta ayrıca gösterilir.</p>' +
+      (eri() ? 'Erişkin dozları, onaylı endikasyonlar ve izlem tetkikleri öne çıkarılır; çocuk-ergen şemaları da her ilaçta yer alır.</p>'
+        : 'Çocuk ve ergen dozları, onay yaşları ve izlem tetkikleri her ilaçta ayrıca gösterilir.</p>') +
       '<p class="kucuk">' + window.ILACLAR.length + ' ilaç · 5 sınıf · ' + window.DEPOLAR.length + ' uzun etkili enjektabl · titrasyon ve kesme grafikleri · izlem matrisleri · CYP haritası · değişim planlayıcı</p></div>' +
       '<div class="dongu">' +
       [['basla', 'Başlama', 'Başlangıç tetkiki, onam, düşük doz'], ['artir', 'Titrasyon', 'Basamaklı artış, hedef doz'], ['surdur', 'Sürdürüm', 'İzlem, etkin en düşük doz'], ['azalt', 'Kesme / değişim', 'Kademeli azaltım, geçiş']]
@@ -297,7 +315,7 @@
     SINIF_SIRA.forEach(function (k) {
       h += '<button class="cip ' + (durum.sinif === k ? 'aktif' : '') + '" data-sinif="' + k + '" style="--sinif:' + window.SINIFLAR[k].renk + '"><i class="nokta"></i>' + window.SINIFLAR[k].ad + '</button>';
     });
-    h += '<button class="cip ' + (durum.onayli ? 'aktif' : '') + '" data-onayli="1">✓ Pediatrik onaylı</button>';
+    if (!eri()) h += '<button class="cip ' + (durum.onayli ? 'aktif' : '') + '" data-onayli="1">✓ Pediatrik onaylı</button>';
     var c = $('#cipler'); c.innerHTML = h;
     c.onclick = function (e) {
       var b = e.target.closest('.cip'); if (!b) return;
@@ -307,11 +325,11 @@
   }
   function eslesir(i) {
     if (durum.sinif !== 'hepsi' && i.sinif !== durum.sinif) return false;
-    if (durum.onayli && !(i.onay && i.onay.length)) return false;
+    if (durum.onayli && !eri() && !(i.onay && i.onay.length)) return false;
     var q = durum.arama.trim().toLocaleLowerCase('tr');
     if (!q) return true;
     var enzimler = i.metab ? ['sub', 'inh', 'ind'].map(function (r) { return Object.keys(i.metab[r]).map(function (e) { return window.CYP_AD(e) + ' ' + e; }).join(' '); }).join(' ') : '';
-    var metin = [i.ad, i.altSinif, window.SINIFLAR[i.sinif].ad, (i.onay || []).map(function (o) { return o[0]; }).join(' '), i.mek, enzimler].join(' ').toLocaleLowerCase('tr');
+    var metin = [i.ad, i.altSinif, window.SINIFLAR[i.sinif].ad, (i.onay || []).concat(i.onayEri || []).map(function (o) { return o[0]; }).join(' '), kt(i.mek), enzimler].join(' ').toLocaleLowerCase('tr');
     return q.split(/\s+/).every(function (p) { return metin.indexOf(p) >= 0; });
   }
   function listeyiCiz() {
@@ -324,7 +342,7 @@
       grup.forEach(function (i) {
         h += '<a class="kart ilac-kart" href="#/ilac/' + i.id + '" style="--sinif:' + renk(i) + '">' +
           '<h3>' + esc(i.ad) + '</h3><div class="alt-sinif">' + esc(i.altSinif) + '</div>' +
-          '<div class="satir"><span>Çocuk/ergen başlangıç</span><span>' + esc(i.ped.bas) + '</span></div>' +
+          '<div class="satir"><span>' + (eri() ? 'Erişkin başlangıç' : 'Çocuk/ergen başlangıç') + '</span><span>' + esc(i[kitle].bas) + '</span></div>' +
           '<div class="satir"><span>Yarı ömür</span><span>' + esc(i.t12.split(' (')[0]) + '</span></div>' +
           onayRozet(i, true) + '</a>';
       });
@@ -374,8 +392,10 @@
 
     h += '<section class="kart ilac-bas" style="--sinif:' + r + '">' +
       '<div class="ust-satir"><h1>' + esc(i.ad) + '</h1><span class="etiket"><i class="nokta"></i>' + S.ad + '</span><span class="etiket">' + esc(i.altSinif) + '</span></div>' +
-      '<p class="mek">' + esc(i.mek) + '</p>' +
-      '<div class="alt-b" style="margin-top:0">Çocuk ve ergende onay durumu (FDA)</div><div class="onaylar">' + onayRozet(i, false) + '</div>' +
+      '<p class="mek">' + esc(kt(i.mek)) + '</p>' +
+      (eri() ? '<div class="alt-b" style="margin-top:0">Erişkinde onaylı endikasyonlar (FDA; aksi belirtilmedikçe)</div><div class="onaylar">' + onayRozet(i, false) + '</div>' +
+          '<p class="kucuk ped-ozet"><b>Çocuk-ergen:</b> ' + pedOzet(i) + '</p>'
+        : '<div class="alt-b" style="margin-top:0">Çocuk ve ergende onay durumu (FDA)</div><div class="onaylar">' + onayRozet(i, false) + '</div>') +
       '<div class="kutular">' +
       '<div class="kutu"><div class="ad">Yarı ömür</div><div class="deger">' + esc(i.t12) + '</div>' + G.cetvel(i.t12s) + '</div>' +
       '<div class="kutu"><div class="ad">Etki başlangıcı</div><div class="deger">' + esc(i.etki) + '</div></div>' +
@@ -390,7 +410,9 @@
     // 1 Başlama
     h += '<section class="kart bolum" id="baslama" style="--sinif:' + r + '"><h2><span class="no">1</span>Başlama ve titrasyon</h2>' +
       '<div class="alt-baslik">Başlangıç dozu, artış hızı ve hedef doz. Önce 4. bölümdeki başlangıç tetkiklerini tamamlayın.</div>' +
-      '<div class="sekmeler" id="yasSekme"><button data-yas="ped" class="' + (durum.yas === 'ped' ? 'aktif' : '') + '">Çocuk / ergen</button><button data-yas="eri" class="' + (durum.yas === 'eri' ? 'aktif' : '') + '">Erişkin</button></div>' +
+      '<div class="sekmeler" id="yasSekme">' + (eri() ? ['eri', 'ped'] : ['ped', 'eri']).map(function (y) {
+        return '<button data-yas="' + y + '" class="' + (durum.yas === y ? 'aktif' : '') + '">' + (y === 'ped' ? 'Çocuk / ergen' : 'Erişkin') + '</button>';
+      }).join('') + '</div>' +
       '<div id="dozAlan">' + dozBolumu(i) + '</div></section>';
 
     // 2 Sürdürüm
@@ -408,12 +430,12 @@
 
     // 4 İzlem
     h += '<section class="kart bolum" id="izlem" style="--sinif:' + r + '"><h2><span class="no">4</span>Tetkik ve izlem</h2>' +
-      '<div class="alt-baslik">Başlangıçta ve takipte yapılacak tetkik, ölçüm ve değerlendirmeler.</div>' + matris(window.izlemSatirlari(i), r) + '</section>';
+      '<div class="alt-baslik">Başlangıçta ve takipte yapılacak tetkik, ölçüm ve değerlendirmeler.</div>' + matris(window.izlemSatirlari(i, kitle), r) + '</section>';
 
     // 5 Güvenlik
     h += '<section class="kart bolum" id="guvenlik" style="--sinif:' + r + '"><h2><span class="no">5</span>Yan etki profili ve uyarılar</h2>' +
       '<div class="alt-baslik">Göreli yan etki yükü (0–3), önemli uyarılar ve ilaç etkileşimleri.</div>';
-    if (i.kutu) h += '<div class="cagri kritik">' + SIMGE.uyari + '<div>' + esc(i.kutu) + '</div></div>';
+    if (kt(i.kutu)) h += '<div class="cagri kritik">' + SIMGE.uyari + '<div>' + esc(kt(i.kutu)) + '</div></div>';
     h += '<div class="profil">' + Object.keys(i.profil).map(function (k) {
       var v = i.profil[k], p = '';
       for (var n = 1; n <= 3; n++) p += '<i class="' + (n <= v ? 'd' + v : '') + '"></i>';
@@ -491,12 +513,12 @@
     var el = $('#degisimSonuc');
     if (!a || !b) {
       el.innerHTML = '<section class="kart bolum"><h2>Dört temel geçiş stratejisi</h2><div class="alt-baslik">Gri çizgi eski ilacı, mavi çizgi yeni ilacı gösterir.</div>' + stratejiKartlari(null) +
-        '<div class="cagri bilgi">' + SIMGE.bilgi + '<div>Strateji seçimini belirleyenler: eski ilacın yarı ömrü ve kesilme riski, iki ilacın farmakodinamik/farmakokinetik etkileşimi, hastalığın ağırlığı ve nüks riski. Çocuk ve ergende geçişler genellikle daha yavaş yapılır.</div></div></section>';
+        '<div class="cagri bilgi">' + SIMGE.bilgi + '<div>Strateji seçimini belirleyenler: eski ilacın yarı ömrü ve kesilme riski, iki ilacın farmakodinamik/farmakokinetik etkileşimi, hastalığın ağırlığı ve nüks riski. ' + (eri() ? 'İleri yaşta ve eş hastalıkta geçişler daha yavaş yapılır.' : 'Çocuk ve ergende geçişler genellikle daha yavaş yapılır.') + '</div></div></section>';
       return;
     }
     if (a.id === b.id) { el.innerHTML = '<div class="kart bos">Aynı ilacı seçtiniz. Farklı bir ilaç seçin.</div>'; return; }
-    var p = window.Degisim.planla(a, b);
-    var bazal = window.izlemSatirlari(b).filter(function (s) { return s[1][0] === 1 || typeof s[1][0] === 'string'; }).map(function (s) { return s[0]; });
+    var p = window.Degisim.planla(a, b, kitle);
+    var bazal = window.izlemSatirlari(b, kitle).filter(function (s) { return s[1][0] === 1 || typeof s[1][0] === 'string'; }).map(function (s) { return s[0]; });
 
     var h = '<section class="kart bolum"><div class="strateji-bas"><h2>' + p.strateji.ad + '</h2><span class="etiket">Toplam süre: ' + esc(p.sure) + '</span>' +
       (p.genel ? '<span class="etiket onaysiz">Farklı sınıflar · genel kural</span>' : '') + '</div>' +
@@ -508,7 +530,8 @@
       p.adim.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ol></div><div>' +
       '<h2 style="margin-bottom:10px">Dikkat edilecekler</h2>' +
       (p.uyari.length ? p.uyari.map(function (u) { return '<div class="cagri uyari">' + SIMGE.uyari + '<div>' + esc(u) + '</div></div>'; }).join('') : '<div class="cagri bilgi">' + SIMGE.bilgi + '<div>Bu ilaç çifti için özgül bir etkileşim uyarısı tanımlı değil; genel izlem kurallarını uygulayın.</div></div>') +
-      '<div class="cagri bilgi">' + SIMGE.cocuk + '<div><b>Çocuk ve ergende:</b> geçişi erişkine göre daha yavaş yapın, her vizitte tek değişiklik uygulayın ve aileye yazılı doz takvimi verin. Geçiş döneminde haftalık temas kurun.</div></div>' +
+      (eri() ? '<div class="cagri bilgi">' + SIMGE.bilgi + '<div><b>İleri yaşta ve hassas hastada:</b> geçişi daha yavaş ve düşük dozlarla yapın; ortostatik hipotansiyon, sedasyon, düşme, hiponatremi ve QT uzaması açısından izleyin. Geçiş takvimini hastaya yazılı verin.</div></div>'
+        : '<div class="cagri bilgi">' + SIMGE.cocuk + '<div><b>Çocuk ve ergende:</b> geçişi erişkine göre daha yavaş yapın, her vizitte tek değişiklik uygulayın ve aileye yazılı doz takvimi verin. Geçiş döneminde haftalık temas kurun.</div></div>') +
       '</div></div></section>';
 
     h += '<section class="kart bolum"><h2 style="margin-bottom:14px">İki ilacın özeti</h2><div class="iki-sutun">' +
@@ -518,8 +541,8 @@
       '<div class="kutu" style="grid-column:1/-1"><div class="ad">Yarı ömür</div><div class="deger">' + esc(a.t12) + '</div></div></div>' +
       '<p class="kucuk" style="margin-top:8px"><a href="#/ilac/' + a.id + '">' + esc(a.ad) + ' sayfasını aç →</a></p></div>' +
       '<div><h3 style="margin-top:0">Yeni ilaç · ' + esc(b.ad) + '</h3><div class="doz-kutular">' +
-      '<div class="kutu vurgulu" style="--sinif:' + renk(b) + '"><div class="ad">Çocuk/ergen başlangıç</div><div class="deger">' + esc(b.ped.bas) + '</div></div>' +
-      '<div class="kutu"><div class="ad">Artış hızı</div><div class="deger">' + esc(b.ped.artis) + '</div></div>' +
+      '<div class="kutu vurgulu" style="--sinif:' + renk(b) + '"><div class="ad">' + (eri() ? 'Erişkin başlangıç' : 'Çocuk/ergen başlangıç') + '</div><div class="deger">' + esc(b[kitle].bas) + '</div></div>' +
+      '<div class="kutu"><div class="ad">Artış hızı</div><div class="deger">' + esc(b[kitle].artis) + '</div></div>' +
       '<div class="kutu" style="grid-column:1/-1"><div class="ad">Başlamadan önce</div><div class="deger" style="font-size:13.5px;font-weight:550">' + esc(bazal.join(' · ')) + '</div></div></div>' +
       '<p class="kucuk" style="margin-top:8px"><a href="#/ilac/' + b.id + '">' + esc(b.ad) + ' sayfasını aç →</a></p></div></div></section>';
 
@@ -532,9 +555,11 @@
     var r = 'var(--s-ap)', D = window.DEPOLAR;
     var h = '<section class="kart bolum" style="--sinif:' + r + '"><h2>Uzun etkili enjektabl (depo) antipsikotikler</h2>' +
       '<div class="alt-baslik">Oral tedaviden depo forma geçiş: tolerabilite testi, başlama şeması, oral örtüşme süresi ve doz dönüşümü.</div>' +
-      '<div class="cagri uyari">' + SIMGE.cocuk + '<div><b>Çocuk ve ergende:</b> depo antipsikotiklerin hiçbiri 18 yaş altında onaylı değildir; veriler olgu serileriyle sınırlıdır. ' +
+      (eri() ? '<div class="cagri bilgi">' + SIMGE.bilgi + '<div><b>Kimlere önerilir:</b> uzun etkili enjektabller yalnızca uyumsuzlukta “son çare” değildir; hasta tercih ediyorsa, uyum öyküsü zayıf ya da belirsizse ve ilk epizot dahil şizofreninin her evresinde seçenek olarak sunulabilir. ' +
+          'Depo formlar 18 yaş altında onaylı değildir.</div></div>'
+        : '<div class="cagri uyari">' + SIMGE.cocuk + '<div><b>Çocuk ve ergende:</b> depo antipsikotiklerin hiçbiri 18 yaş altında onaylı değildir; veriler olgu serileriyle sınırlıdır. ' +
       'Yalnızca psikotik bozukluk veya bipolar bozukluğu olan, tedavi uyumsuzluğu nedeniyle yineleyen nüksleri bulunan büyük ergenlerde, oral formla etkinlik ve tolerabilite gösterildikten sonra, ' +
-      'endikasyon dışı kullanım onamıyla ve erişkin aralığının alt dozlarıyla düşünülmelidir.</div></div>';
+      'endikasyon dışı kullanım onamıyla ve erişkin aralığının alt dozlarıyla düşünülmelidir.</div></div>');
 
     // karşılaştırma: oral örtüşme süresi
     h += '<div class="alt-b">Oral ek tedavi (örtüşme) süresi ve uygulama aralığı</div><div class="yo-liste depo-ozet" style="--sinif:' + r + '">';
@@ -550,7 +575,7 @@
       dugum('Endikasyon ve hasta tercihi', 'Uyumsuzluk öyküsü, yineleyen nüks, hastanın/ailenin isteği; depo "son çare" olarak sunulmamalı') + OK +
       dugum('Aynı etkin maddenin oral formuyla tolerabilite', 'Hiç kullanmamışsa önce oral form (genellikle en az 1–2 hafta) veya test dozu') + OK +
       dugum('Başlangıç değerlendirmesi', 'Kilo/BKİ, bel çevresi, KB, açlık glukoz ve lipid, prolaktin, EKG, hareket bozukluğu muayenesi') + OK +
-      dugum('Depo dozunu belirle', 'Stabil olunan oral doza göre dönüşüm tablosu; ergende ve antipsikotiğe yeni hastada alt doz') + OK +
+      dugum('Depo dozunu belirle', 'Stabil olunan oral doza göre dönüşüm tablosu; ergende, yaşlıda ve antipsikotiğe yeni hastada alt doz') + OK +
       dugum('Oral ek tedavi gerekiyor mu?', 'Preparata göre 0–4 hafta', 'karar') +
       '<div class="akis-dal"><div class="akis-kol"><span class="dal-etiket">Gerekmez</span>' +
       dugum('İlk enjeksiyon günü oral ilacı kes', 'Paliperidon palmitat, olanzapin pamoat', 'son') + '</div>' +
@@ -607,18 +632,21 @@
 
     h += '<section class="kart bolum"><h2>Eşik değerler ve eylem noktaları</h2><div class="alt-baslik">İzlemde sık kullanılan sınır değerler. Laboratuvar referans aralıklarını ve yaşa göre normları ayrıca dikkate alın.</div><div class="esikler">' +
       [
-        ['Kilo artışı (antipsikotik)', '≥ %7 veya BKİ z-skoru +0,5', 'Yaşam tarzı müdahalesi; ilaç değişimi veya metformin değerlendirin.'],
+        eri() ? ['Kilo artışı (antipsikotik)', '≥ %5 (başlangıca göre)', 'Yaşam tarzı müdahalesi; ilaç değişimi veya metformin değerlendirin.']
+          : ['Kilo artışı (antipsikotik)', '≥ %7 veya BKİ z-skoru +0,5', 'Yaşam tarzı müdahalesi; ilaç değişimi veya metformin değerlendirin.'],
         ['Açlık glukozu', '100–125 · ≥ 126 mg/dL', 'Bozulmuş açlık glukozu · diyabet. HbA1c: 5,7–6,4 prediyabet, ≥ 6,5 diyabet.'],
         ['QTc', '> 450–460 ms · > 500 ms', 'Sınırda: risk faktörlerini düzelt, tekrar çek. > 500 ms veya başlangıca göre +60 ms: ilacı azalt/kes, kardiyoloji.'],
         ['TCA için EKG sınırları', 'PR > 200 · QRS > 120 ms', 'Veya QTc > 450 ms, istirahat nabzı > 130/dk: doz artırmayın, azaltın.'],
-        ['Kan basıncı (çocuk)', '≥ 95. persentil', 'Yaş, cinsiyet ve boya göre; iki ayrı ölçümde: doz azalt veya ilacı gözden geçir.'],
+        eri() ? ['Kan basıncı', '≥ 140/90 mmHg', 'İki ayrı ölçümde veya belirgin artış/taşikardide: doz azalt veya ilacı gözden geçir; kardiyovasküler riski değerlendir.']
+          : ['Kan basıncı (çocuk)', '≥ 95. persentil', 'Yaş, cinsiyet ve boya göre; iki ayrı ölçümde: doz azalt veya ilacı gözden geçir.'],
         ['Nötrofil (klozapin)', '< 1500/mm³', 'Veya lökosit < 3000/mm³: ilacı derhal kes, günlük hemogram, hematoloji. 1500–2000: haftada iki kez izlem.'],
         ['Lityum düzeyi', '0,6–1,0 · 0,8–1,2 mEq/L', 'Sürdürüm · akut mani. > 1,5: toksik, ilacı durdur. > 2,0–2,5: acil, diyaliz değerlendir.'],
         ['Valproat düzeyi', '50–100 µg/mL', 'Akut manide 125\'e dek. Trombosit < 100.000/mm³: doz azalt.'],
         ['Karbamazepin düzeyi', '4–12 µg/mL', 'Sodyum < 130 mEq/L veya belirtili hiponatremi: ilacı gözden geçir.'],
         ['Karaciğer enzimleri', '> 3 × üst sınır', 'İlacı kesmeyi/azaltmayı değerlendir; belirti (sarılık, kusma, halsizlik) varsa hemen kes.'],
         ['Prolaktin', 'Belirtili artış veya > 100 ng/mL', 'Doz azalt, prolaktin koruyucu ilaca geç (aripiprazol); çok yüksek değerde hipofiz değerlendirmesi.'],
-        ['Büyüme (stimulan)', 'Boy persentilinde ≥ 2 ana eğri düşüş', 'Doz azaltımı, ilaç tatili veya ilaç değişimi; gerekirse pediatrik endokrin.']
+        eri() ? ['Böbrek işlevi (lityum)', 'eGFR < 60 veya belirgin düşüş', 'Lityum düzeyini, dozu ve endikasyonu gözden geçir; eş ilaçları (NSAİİ, ACE inhibitörü, diüretik) kontrol et; nefroloji görüşü.']
+          : ['Büyüme (stimulan)', 'Boy persentilinde ≥ 2 ana eğri düşüş', 'Doz azaltımı, ilaç tatili veya ilaç değişimi; gerekirse pediatrik endokrin.']
       ].map(function (e) { return '<div class="esik"><div class="ad">' + e[0] + '</div><div class="deger">' + e[1] + '</div><div class="not">' + e[2] + '</div></div>'; }).join('') +
       '</div></section>';
     icerik.innerHTML = h;
@@ -635,7 +663,7 @@
     var ilaclar = window.ILACLAR.filter(function (i) { return i.izlem === k; });
     $('#izlemAlan').innerHTML = '<p class="kucuk" style="margin-bottom:10px">Bu çizelgeyi kullanan ilaçlar: ' +
       ilaclar.map(function (i) { return '<a href="#/ilac/' + i.id + '">' + esc(i.ad) + '</a>'; }).join(' · ') +
-      '. İlaca özgü ek satırlar ilaç sayfasında gösterilir.</p>' + matris(window.IZLEM[k].satir, r);
+      '. İlaca özgü ek satırlar ilaç sayfasında gösterilir.</p>' + matris(window.izlemSablon(k, kitle), r);
   }
 
   /* ───────────── SAYFA: genel ilkeler ───────────── */
@@ -643,7 +671,35 @@
   var OK = '<div class="akis-ok"></div>';
 
   function sayfaIlkeler() {
-    var h = '<section class="kart bolum"><h2>Çocuk ve ergende ilaç başlama akışı</h2><div class="alt-baslik">Tanıdan sürdürüme kadar karar basamakları.</div><div class="akis">' +
+    var h;
+    if (eri()) {
+      h = '<section class="kart bolum"><h2>Erişkinde ilaç başlama akışı</h2><div class="alt-baslik">Tanıdan sürdürüme kadar karar basamakları.</div><div class="akis">' +
+        dugum('Tanı, işlev kaybı ve hedef belirtiler', 'Eş tanılar, tıbbi nedenler ve kullanılan ilaçlar, madde kullanımı, önceki tedavilere yanıt') + OK +
+        dugum('Tedavi seçeneklerini birlikte değerlendirin', 'Psikoterapi, ilaç ya da ikisi birlikte; hastanın tercihi, önceki yanıtlar, ailede ilaç yanıtı öyküsü') + OK +
+        dugum('İlaç gerekli mi?', 'Orta–ağır şiddet, belirgin işlev kaybı, nüks öyküsü, psikoterapiye yetersiz yanıt ya da erişim güçlüğü', 'karar') + OK +
+        dugum('Başlangıç değerlendirmesi', 'Kilo, BKİ, bel çevresi, kan basıncı, nabız, ilaca özgü tetkikler (metabolik, EKG, böbrek/karaciğer), gebelik olasılığı, başlangıç ölçeği') + OK +
+        dugum('Bilgilendirme ve ortak karar', 'Beklenen yarar, etki başlangıç süresi, yan etkiler, kara kutu uyarıları, araç kullanımı, gebelik planı ve emzirme') + OK +
+        dugum('Etkin dozla başla, gerekirse basamaklı artır', 'Yaşlı ve hassas hastada düşük başla, yavaş artır; her vizitte tek değişiklik') + OK +
+        dugum('Yeterli doz ve sürede yanıt var mı?', 'Antidepresan 4–8 hf · stimulan 1–2 hf · atomoksetin 6–8 hf · antipsikotik 2–6 hf', 'karar') +
+        '<div class="akis-dal"><div class="akis-kol"><span class="dal-etiket">Evet</span>' +
+        dugum('Sürdürüm', 'Etkin doz, düzenli izlem; depresyonda remisyondan sonra en az 6–12 ay, yineleyen dönemlerde daha uzun', 'son') + OK + dugum('Kesmeyi planla', 'Stabil dönemde, kademeli azaltım, nüks izlemi', 'son') + '</div>' +
+        '<div class="akis-kol"><span class="dal-etiket">Hayır / kısmi</span>' +
+        dugum('Yeniden değerlendir', 'Tanı doğru mu? Uyum? Doz ve süre yeterli mi? Eş tanı, madde kullanımı, etkileşim, ilaç düzeyi?', 'dikkat') + OK + dugum('Dozu optimize et → ilacı değiştir → güçlendir / birleştir', 'Değişim planlayıcıyı kullanın', 'dikkat') + '</div></div>' +
+        '</div></section>';
+
+      h += '<section class="kart bolum"><h2>Erişkin psikofarmakolojisinin temel ilkeleri</h2><div class="alt-baslik">Doğru tanı, yeterli doz ve süre, ölçerek izlem.</div><div class="ilke-izgara">' +
+        [
+          ['artir', 'Yeterli doz, yeterli süre', 'Yanıtsızlığın en sık nedenleri yetersiz doz, yetersiz süre ve uyumsuzluktur; ilacı değiştirmeden önce üçünü de doğrulayın.'],
+          ['tek', 'Her seferinde tek değişiklik', 'Doz ve ilaç değişikliklerini üst üste bindirmeyin; etkiyi ve yan etkiyi hangi değişikliğe bağlayacağınızı bilin.'],
+          ['olc', 'Ölçerek izleyin', 'Ölçüm temelli bakım: başlangıçta ve takipte standart ölçek (PHQ-9, GAD-7, YMRS vb.), metabolik ve yapılandırılmış yan etki izlemi.'],
+          ['saat', 'İleri yaş', 'Böbrek ve karaciğer klirensi azalır, ilaç duyarlılığı artar: düşük başlayın, yavaş artırın. Antikolinerjik yük, benzodiazepinler ve düşme riskine dikkat (Beers ölçütleri).'],
+          ['kalp', 'Eş hastalık ve çoklu ilaç', 'Kardiyovasküler, metabolik, böbrek ve karaciğer hastalıklarını ve eş ilaçları gözden geçirin; CYP etkileşimleri ve QT uzatan kombinasyonlar için CYP haritasına bakın.'],
+          ['belge', 'Gebelik ve emzirme', 'Çocuk doğurma potansiyeli olan her hastada gebelik planını sorun. Valproat ve karbamazepin teratojendir; valproat gebelik önleme programı olmadan önerilmez.'],
+          ['el', 'İlaç tek başına değil', 'Çoğu bozuklukta ilaç; psikoterapi, psikoeğitim ve sosyal destekle birlikte en etkilidir.'],
+          ['azalt', 'Kesmeyi baştan konuşun', 'Tedavi süresini ve kesme ölçütlerini baştan belirleyin; hastayı ilacı kendi başına aniden kesmemesi konusunda uyarın.']
+        ].map(function (x) { return '<div class="ilke"><div class="simge">' + SIMGE[x[0]] + '</div><b>' + x[1] + '</b><p>' + x[2] + '</p></div>'; }).join('') + '</div></section>';
+    } else {
+      h = '<section class="kart bolum"><h2>Çocuk ve ergende ilaç başlama akışı</h2><div class="alt-baslik">Tanıdan sürdürüme kadar karar basamakları.</div><div class="akis">' +
       dugum('Tanı, işlevsellik kaybı ve hedef belirtiler', 'Eş tanılar, tıbbi nedenler, aile öyküsü, daha önceki tedaviler') + OK +
       dugum('Psikososyal müdahale değerlendirmesi', 'Psikoeğitim, ebeveyn eğitimi, BDT, okul düzenlemeleri: tek başına yeterli mi, ilaçla birlikte mi?') + OK +
       dugum('İlaç gerekli mi?', 'Orta–ağır şiddet, işlev kaybı, psikososyal müdahaleye yetersiz yanıt', 'karar') + OK +
@@ -668,11 +724,14 @@
         ['kalp', 'Yan etki duyarlılığı yüksektir', 'SSRI ile aktivasyon, antipsikotikle kilo artışı/metabolik etki ve distoni, benzodiazepinle disinhibisyon çocuklarda daha sıktır.'],
         ['azalt', 'Kesmeyi baştan konuşun', 'Tedavi süresini ve kesme ölçütlerini ilk görüşmede belirleyin; aileyi ilacı kendi başına aniden kesmemesi konusunda uyarın.']
       ].map(function (x) { return '<div class="ilke"><div class="simge">' + SIMGE[x[0]] + '</div><b>' + x[1] + '</b><p>' + x[2] + '</p></div>'; }).join('') + '</div></section>';
+    }
 
     h += '<section class="kart bolum"><h2>Antidepresan tedavisinin evreleri</h2><div class="alt-baslik">Depresyon ve anksiyete bozukluklarında tedavi süresi.</div>' +
       '<div class="zaman-seridi"><div><b>Akut evre</b>6–12 hafta · yanıt ve remisyon</div><div><b>Devam evresi</b>Remisyondan sonra 6–12 ay · aynı dozda</div><div><b>Kesme</b>2–8+ hafta · kademeli</div></div>' +
       '<ul class="notlar"><li>İlk 4 hafta haftalık temas: intihar düşüncesi, aktivasyon ve yan etki sorgusu.</li><li>4. haftada hiç yanıt yoksa dozu artırın; yeterli dozda 8 haftada yanıt yoksa ilacı değiştirin.</li>' +
-      '<li>İkinci SSRI\'a geçerken BDT eklenmesi yanıtı artırır (dirençli ergen depresyonu).</li><li>Kesme sonrası ilk 2–3 ay nüks açısından izleyin.</li></ul></section>';
+      (eri() ? '<li>İki yeterli denemeye yanıtsızlıkta güçlendirme (ör. aripiprazol, lityum) veya kombinasyon değerlendirin; psikoterapi eklemek yanıtı artırır.</li><li>Üç ve daha fazla dönem geçirenlerde sürdürüm tedavisini yıllarca, gerekirse süresiz düşünün.</li>'
+        : '<li>İkinci SSRI\'a geçerken BDT eklenmesi yanıtı artırır (dirençli ergen depresyonu).</li>') +
+      '<li>Kesme sonrası ilk 2–3 ay nüks açısından izleyin.</li></ul></section>';
 
     h += '<section class="kart bolum"><h2>Kesilme belirtilerini tanıma</h2><div class="alt-baslik">Antidepresan kesilme sendromu: ilacı azalttıktan 1–4 gün sonra başlar, genellikle 1–3 haftada geçer.</div><div class="harf-izgara">' +
       [['G', 'Grip benzeri', 'Halsizlik, kas ağrısı, terleme, baş ağrısı'], ['U', 'Uyku bozukluğu', 'Uykusuzluk, canlı rüyalar, kâbus'], ['B', 'Bulantı', 'Bulantı, kusma, ishal'],
@@ -682,13 +741,13 @@
 
     h += '<section class="kart bolum"><h2>Yarı ömür karşılaştırması</h2><div class="alt-baslik">Uzun yarı ömür: kesilme belirtisi daha az, ancak arınma ve etkileşim süresi daha uzun. Logaritmik ölçek.</div>' + yariOmurGrafik() + '</section>';
 
-    h += '<section class="kart bolum"><h2>Acil durumları tanıma</h2><div class="alt-baslik">Aileye ve gence öğretilmesi gereken alarm belirtileri ve ilk yaklaşım.</div><div class="ilke-izgara">' +
+    h += '<section class="kart bolum"><h2>Acil durumları tanıma</h2><div class="alt-baslik">' + (eri() ? 'Hastaya ve yakınlarına öğretilmesi gereken' : 'Aileye ve gence öğretilmesi gereken') + ' alarm belirtileri ve ilk yaklaşım.</div><div class="ilke-izgara">' +
       [
         ['Serotonin sendromu', 'Ajitasyon, tremor, klonus (spontan, uyarılabilir, oküler), hiperrefleksi, terleme, ishal, ateş, midriyazis. Saatler içinde gelişir.', 'Serotonerjik ilaçları kesin; destek tedavisi, benzodiazepin; ağır olguda siproheptadin ve acil servis.'],
         ['Nöroleptik malign sendrom', 'Kas rijiditesi, yüksek ateş, bilinç değişikliği, otonom dengesizlik; CK ve lökosit yüksekliği. Günler içinde gelişir.', 'Antipsikotiği kesin; acil yatış, hidrasyon, soğutma, yoğun bakım değerlendirmesi.'],
-        ['Akut distoni', 'Boyun, çene, dil kasılması, okülojirik kriz; nadiren laringospazm. İlk günlerde, genç erkeklerde sık.', 'Biperiden 0,04 mg/kg IM/IV veya difenhidramin 1 mg/kg (maks. 50 mg); dakikalar içinde düzelir, sonrasında doz/ilaç gözden geçirilir.'],
+        ['Akut distoni', 'Boyun, çene, dil kasılması, okülojirik kriz; nadiren laringospazm. İlk günlerde, genç erkeklerde sık.', eri() ? 'Biperiden 2,5–5 mg IM/IV veya difenhidramin 25–50 mg IM/IV; dakikalar içinde düzelir, sonrasında doz/ilaç gözden geçirilir.' : 'Biperiden 0,04 mg/kg IM/IV veya difenhidramin 1 mg/kg (maks. 50 mg); dakikalar içinde düzelir, sonrasında doz/ilaç gözden geçirilir.'],
         ['Lityum toksisitesi', 'Kusma, ishal, kaba tremor, ataksi, dizartri, uyuşukluk, konfüzyon, nöbet.', 'İlacı durdurun; acil lityum düzeyi, böbrek işlevi, elektrolit; hidrasyon; ağır olguda hemodiyaliz.'],
-        ['Ağır deri reaksiyonu', 'Ateş ve halsizlikle birlikte yaygın döküntü, mukoza tutulumu (ağız, göz, genital), deride soyulma, lenfadenopati. Lamotrijin, karbamazepin.', 'İlacı hemen kesin ve yeniden başlamayın; acil dermatoloji/pediatri değerlendirmesi.'],
+        ['Ağır deri reaksiyonu', 'Ateş ve halsizlikle birlikte yaygın döküntü, mukoza tutulumu (ağız, göz, genital), deride soyulma, lenfadenopati. Lamotrijin, karbamazepin.', 'İlacı hemen kesin ve yeniden başlamayın; ' + (eri() ? 'acil dermatoloji değerlendirmesi.' : 'acil dermatoloji/pediatri değerlendirmesi.')],
         ['Agranülositoz', 'Ateş, boğaz ağrısı, ağız içi yaralar, enfeksiyon bulguları. Klozapin, karbamazepin; nadiren mirtazapin.', 'Acil hemogram; nötrofil < 1500/mm³ ise ilacı kesin, hematoloji.'],
         ['Aktivasyon ve mani kayması', 'Uykusuzluk, huzursuzluk, dürtüsellik, irritabilite (aktivasyon); uyku gereksiniminde azalma, öfori, hızlı konuşma (mani). SSRI/SNRI başlangıcında.', 'Dozu azaltın veya kesin; intihar riskini değerlendirin; mani bulgularında bipolar bozukluk açısından yeniden değerlendirin.'],
         ['Priapizm', '4 saatten uzun süren ağrılı ereksiyon. Trazodon, antipsikotikler, nadiren atomoksetin ve stimulanlar.', 'Acil üroloji başvurusu; ilacı kesin.']
@@ -746,7 +805,6 @@
   });
 
   /* ───────────── tema ───────────── */
-  var kok = document.documentElement;
   $('#temaDugme').onclick = function () {
     var simdi = kok.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     var yeni = simdi === 'dark' ? 'light' : 'dark';
@@ -790,5 +848,99 @@
   };
   document.addEventListener('click', function (e) { if (!tMenu.hidden && !e.target.closest('.tasarim-sec')) menuKapat(false); });
 
+  /* ───────────── hasta grubu (çocuk-ergen / erişkin) ───────────── */
+  var kSec = $('#kitleSec');
+  function kitleIsaretle() {
+    Array.prototype.forEach.call(kSec.querySelectorAll('[data-kitle]'), function (b) { b.setAttribute('aria-checked', b.dataset.kitle === kitle ? 'true' : 'false'); });
+  }
+  function kitleUygula(k) {
+    kitle = k === 'eri' ? 'eri' : 'ped';
+    durum.yas = kitle;
+    if (kitle === 'eri') durum.onayli = false;
+    kok.setAttribute('data-kitle', kitle);
+    try { localStorage.setItem('pr-kitle', kitle); } catch (e) {}
+    kitleIsaretle();
+    var y = window.scrollY;
+    yonlendir();
+    window.scrollTo(0, y);
+  }
+  kSec.onclick = function (e) {
+    var b = e.target.closest('[data-kitle]');
+    if (b && b.dataset.kitle !== kitle) kitleUygula(b.dataset.kitle);
+  };
+  kSec.onkeydown = function (e) { // radyo grubu: oklarla seçim
+    if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].indexOf(e.key) < 0) return;
+    e.preventDefault();
+    var y = kitle === 'ped' ? 'eri' : 'ped';
+    kitleUygula(y);
+    kSec.querySelector('[data-kitle="' + y + '"]').focus();
+  };
+  kitleIsaretle();
+
+  /* ───────────── ilk açılış: hasta grubu ve tasarım seçimi ───────────── */
+  function karsilama() {
+    var secilen = null, onceOdak = document.activeElement;
+    var kart = function (k, simge, baslik, metin) {
+      return '<button type="button" role="radio" aria-checked="false" class="kitle-kart" data-kitle="' + k + '"><span class="kitle-simge">' + simge + '</span>' +
+        '<span><b>' + baslik + '</b><small>' + metin + '</small></span></button>';
+    };
+    var d = document.createElement('div');
+    d.className = 'karsilama';
+    d.setAttribute('role', 'dialog'); d.setAttribute('aria-modal', 'true'); d.setAttribute('aria-labelledby', 'karsilamaBaslik');
+    d.innerHTML = '<div class="karsilama-ic kart">' +
+      '<div class="karsilama-bas"><h2 id="karsilamaBaslik">Psikofarmakoloji Rehberi</h2>' +
+      '<p>Başlamadan önce rehberi kendi pratiğinize göre ayarlayın. Bu seçimleri daha sonra üst bardan değiştirebilirsiniz.</p></div>' +
+      '<div class="karsilama-adim"><span class="no">1</span>Hangi hasta grubuyla çalışıyorsunuz?</div>' +
+      '<div class="kitle-kartlar" role="radiogroup" aria-label="Hasta grubu">' +
+      kart('ped', SIMGE.aile, 'Çocuk ve ergen psikiyatrisi', 'Pediatrik doz şemaları ve FDA onay yaşları, büyüme izlemi, aile ve okul odaklı ilkeler') +
+      kart('eri', SIMGE.eriskin, 'Erişkin psikiyatrisi', 'Erişkin doz şemaları ve onaylı endikasyonlar, metabolik ve kardiyak izlem, ileri yaş ve gebelik notları') +
+      '</div><p class="kucuk karsilama-not">İki yaş grubunun doz şemaları her ilaç sayfasında yer alır; seçiminiz öne çıkan bilgileri belirler.</p>' +
+      '<div class="karsilama-adim"><span class="no">2</span>Görünümü seçin</div>' +
+      '<div class="tasarim-kartlar" role="radiogroup" aria-label="Tasarım">' +
+      Array.prototype.map.call(tMenu.querySelectorAll('[data-tasarim]'), function (b) {
+        return '<button type="button" role="radio" class="tasarim-kart" data-tasarim="' + b.dataset.tasarim + '" aria-checked="false">' + b.innerHTML + '</button>';
+      }).join('') + '</div>' +
+      '<div class="karsilama-alt"><span class="kucuk" id="karsilamaIpucu">Devam etmek için hasta grubunu seçin.</span>' +
+      '<button type="button" class="cip aktif karsilama-tamam" id="karsilamaTamam" disabled>Rehberi aç →</button></div></div>';
+    document.body.appendChild(d);
+    document.body.classList.add('pencere-acik');
+
+    function isaretle() {
+      var t = kok.getAttribute('data-tasarim') || 'klasik';
+      Array.prototype.forEach.call(d.querySelectorAll('.tasarim-kart'), function (b) { b.setAttribute('aria-checked', b.dataset.tasarim === t ? 'true' : 'false'); });
+      Array.prototype.forEach.call(d.querySelectorAll('.kitle-kart'), function (b) { b.setAttribute('aria-checked', b.dataset.kitle === secilen ? 'true' : 'false'); });
+      $('#karsilamaTamam').disabled = !secilen;
+      $('#karsilamaIpucu').textContent = secilen ? (secilen === 'eri' ? 'Erişkin' : 'Çocuk ve ergen') + ' görünümüyle açılacak.' : 'Devam etmek için hasta grubunu seçin.';
+    }
+    function kapat() {
+      document.body.classList.remove('pencere-acik');
+      d.remove();
+      kitleUygula(secilen);
+      ilkSecim = false;
+      if (onceOdak && onceOdak.focus && onceOdak !== document.body) onceOdak.focus(); else kSec.querySelector('[aria-checked="true"]').focus();
+    }
+    d.onclick = function (e) {
+      var k = e.target.closest('.kitle-kart'), t = e.target.closest('.tasarim-kart');
+      if (k) { secilen = k.dataset.kitle; isaretle(); }
+      if (t) { // seçilen tasarım arka planda hemen uygulanır (önizleme)
+        if (t.dataset.tasarim === 'klasik') kok.removeAttribute('data-tasarim'); else kok.setAttribute('data-tasarim', t.dataset.tasarim);
+        try { localStorage.setItem('pr-tasarim', t.dataset.tasarim); } catch (er) {}
+        isaretle(); tasarimIsaretle();
+      }
+      if (e.target.closest('#karsilamaTamam') && secilen) kapat();
+    };
+    d.onkeydown = function (e) {
+      if (e.key === 'Enter' && secilen && e.target.closest('.kitle-kart')) { e.preventDefault(); kapat(); return; }
+      if (e.key !== 'Tab') return; // odak pencerenin içinde kalsın
+      var o = Array.prototype.filter.call(d.querySelectorAll('button'), function (b) { return !b.disabled; });
+      var i = o.indexOf(document.activeElement);
+      if (e.shiftKey && i <= 0) { e.preventDefault(); o[o.length - 1].focus(); }
+      else if (!e.shiftKey && i === o.length - 1) { e.preventDefault(); o[0].focus(); }
+    };
+    isaretle();
+    d.querySelector('.kitle-kart').focus();
+  }
+
   yonlendir();
+  if (ilkSecim) karsilama();
 })();

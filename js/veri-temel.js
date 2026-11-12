@@ -22,14 +22,21 @@ window.IZLEM = {
   ssri: {
     ad: 'SSRI / yeni kuşak antidepresanlar',
     satir: [
-      ['İntihar düşüncesi / davranışı', [1, 'Haftalık (ilk 4 hf)', 1, 1, 1], 'İlk 4 hafta haftalık, sonraki 4 hafta 2 haftada bir, 12. haftada ve her doz değişiminde değerlendirin.'],
-      ['Aktivasyon, ajitasyon, mani kayması', [1, 1, 1, 2, 2], 'Özellikle ilk 2–3 hafta ve doz artışlarından sonra; küçük çocuklarda daha sık.'],
-      ['Belirti ölçeği (ör. ÇDÖ, SCARED, CY-BOCS)', [1, 1, 1, 1, 1], 'Yanıtı nesnel izlemek için başlangıç ve 4–6 haftada bir.'],
-      ['Boy – kilo', [1, 0, 1, 1, 1], 'Uzun süreli kullanımda büyüme eğrisi.'],
+      { ped: ['İntihar düşüncesi / davranışı', [1, 'Haftalık (ilk 4 hf)', 1, 1, 1], 'İlk 4 hafta haftalık, sonraki 4 hafta 2 haftada bir, 12. haftada ve her doz değişiminde değerlendirin.'],
+        eri: ['İntihar düşüncesi / davranışı', [1, 1, 1, 1, 1], 'İlk haftalarda ve her doz değişiminde; 25 yaş altında daha sık temas.'] },
+      { ped: ['Aktivasyon, ajitasyon, mani kayması', [1, 1, 1, 2, 2], 'Özellikle ilk 2–3 hafta ve doz artışlarından sonra; küçük çocuklarda daha sık.'],
+        eri: ['Aktivasyon, ajitasyon, mani kayması', [1, 1, 1, 2, 2], 'Özellikle ilk 2–3 hafta ve doz artışlarından sonra. Başlamadan önce bipolarite öyküsünü sorgulayın.'] },
+      { ped: ['Belirti ölçeği (ör. ÇDÖ, SCARED, CY-BOCS)', [1, 1, 1, 1, 1], 'Yanıtı nesnel izlemek için başlangıç ve 4–6 haftada bir.'],
+        eri: ['Belirti ölçeği (ör. PHQ-9, GAD-7, Y-BOCS)', [1, 1, 1, 1, 1], 'Yanıtı nesnel izlemek için başlangıç ve 4–6 haftada bir.'] },
+      { ped: ['Boy – kilo', [1, 0, 1, 1, 1], 'Uzun süreli kullanımda büyüme eğrisi.'],
+        eri: ['Kilo / BKİ', [1, 0, 1, 1, 1], 'Uzun süreli kullanımda kilo artışı (özellikle paroksetin).'] },
       ['Kan basıncı / nabız', [1, 2, 2, 2, 2], ''],
-      ['Sodyum', [2, 2, 0, 0, 0], 'Hiponatremi riski olanlarda (diüretik, düşük kilo, yeme bozukluğu).'],
-      ['EKG (QTc)', [2, 2, 0, 0, 0], 'Sitalopram/essitalopram yüksek doz, kardiyak öykü, QT uzatan eş ilaç.'],
-      ['Kanama / etkileşim sorgusu', [1, 2, 2, 2, 1], 'NSAİİ, antikoagülan, diğer serotonerjikler.']
+      { ped: ['Sodyum', [2, 2, 0, 0, 0], 'Hiponatremi riski olanlarda (diüretik, düşük kilo, yeme bozukluğu).'],
+        eri: ['Sodyum', [2, 2, 0, 0, 0], 'Risk grubunda ilk haftalarda: ≥ 65 yaş, diüretik kullanımı, düşük kilo, önceki hiponatremi.'] },
+      { ped: ['EKG (QTc)', [2, 2, 0, 0, 0], 'Sitalopram/essitalopram yüksek doz, kardiyak öykü, QT uzatan eş ilaç.'],
+        eri: ['EKG (QTc)', [2, 2, 0, 0, 0], 'Sitalopram/essitalopram yüksek doz veya ≥ 60 yaş, kardiyak öykü, QT uzatan eş ilaç.'] },
+      ['Kanama / etkileşim sorgusu', [1, 2, 2, 2, 1], 'NSAİİ, antikoagülan, antiagregan, diğer serotonerjikler.'],
+      { ped: null, eri: ['Cinsel işlev', [1, 0, 1, 1, 1], 'Başlangıçta sorgulayın; tedaviye bağlı cinsel işlev bozukluğu sık ve uyumu bozar.'] }
     ]
   },
   snri: {
@@ -37,10 +44,12 @@ window.IZLEM = {
     satir: [
       ['İntihar düşüncesi / davranışı', [1, 'Haftalık (ilk 4 hf)', 1, 1, 1], 'İlk 4 hafta haftalık, sonra 2 haftada bir; her doz değişiminde.'],
       ['Kan basıncı / nabız', [1, 1, 1, 1, 1], 'Doz bağımlı KB artışı; her doz artışında ölçün.'],
-      ['Boy – kilo', [1, 1, 1, 1, 1], 'İştah azalması ve kilo kaybı olabilir.'],
+      { ped: ['Boy – kilo', [1, 1, 1, 1, 1], 'İştah azalması ve kilo kaybı olabilir.'],
+        eri: ['Kilo', [1, 0, 1, 1, 1], 'İştah azalması ve kilo kaybı olabilir.'] },
       ['Aktivasyon / mani kayması', [1, 1, 1, 2, 2], ''],
       ['Karaciğer işlev testleri', [2, 0, 2, 0, 2], 'Duloksetin: karaciğer hastalığı / alkol kullanımı varsa.'],
-      ['Sodyum', [2, 2, 0, 0, 0], 'Risk grubunda.']
+      ['Sodyum', [2, 2, 0, 0, 0], 'Risk grubunda.'],
+      { ped: null, eri: ['Cinsel işlev, idrar yapma güçlüğü', [1, 0, 1, 1, 1], ''] }
     ]
   },
   tca: {
@@ -51,8 +60,9 @@ window.IZLEM = {
       ['Kardiyak öykü ve aile öyküsü', [1, 0, 0, 0, 1], 'Ani ölüm, aritmi, senkop öyküsü.'],
       ['İntihar düşüncesi / aşırı doz riski', [1, 1, 1, 1, 1], 'Aşırı dozda öldürücü: sınırlı miktarda reçete, evde güvenli saklama.'],
       ['Plazma düzeyi', [0, 2, 2, 0, 0], 'Yanıtsızlık, toksisite şüphesi veya CYP2D6 inhibitörü eş kullanımı.'],
-      ['Boy – kilo', [1, 0, 1, 1, 1], ''],
-      ['Antikolinerjik etkiler', [0, 1, 1, 1, 1], 'Kabızlık, idrar retansiyonu, ağız kuruluğu, bulanık görme.']
+      { ped: ['Boy – kilo', [1, 0, 1, 1, 1], ''], eri: ['Kilo / BKİ', [1, 0, 1, 1, 1], ''] },
+      { ped: ['Antikolinerjik etkiler', [0, 1, 1, 1, 1], 'Kabızlık, idrar retansiyonu, ağız kuruluğu, bulanık görme.'],
+        eri: ['Antikolinerjik etkiler, düşme riski', [0, 1, 1, 1, 1], 'Kabızlık, idrar retansiyonu, bulanık görme; yaşlıda konfüzyon, ortostatik hipotansiyon ve düşme.'] }
     ]
   },
   mirtazapin: {
@@ -71,15 +81,16 @@ window.IZLEM = {
       ['Nöbet riski sorgusu', [1, 1, 2, 2, 1], 'Epilepsi, yeme bozukluğu, kafa travması, alkol/benzodiazepin kesilmesi.'],
       ['Kan basıncı / nabız', [1, 1, 1, 1, 1], ''],
       ['İntihar düşüncesi / davranışı', [1, 'Haftalık (ilk 4 hf)', 1, 1, 1], ''],
-      ['Boy – kilo', [1, 1, 1, 1, 1], 'İştah azalması olabilir.'],
-      ['Tik, uykusuzluk, ajitasyon', [0, 1, 1, 2, 2], '']
+      { ped: ['Boy – kilo', [1, 1, 1, 1, 1], 'İştah azalması olabilir.'], eri: ['Kilo', [1, 0, 1, 1, 1], 'İştah azalması olabilir.'] },
+      { ped: ['Tik, uykusuzluk, ajitasyon', [0, 1, 1, 2, 2], ''], eri: ['Uykusuzluk, ajitasyon, anksiyete', [0, 1, 1, 2, 2], ''] }
     ]
   },
   trazodon: {
     ad: 'Trazodon',
     satir: [
       ['Kan basıncı (ortostatik)', [1, 1, 2, 2, 2], ''],
-      ['Priapizm eğitimi', [1, 1, 0, 0, 0], '4 saatten uzun süren ereksiyon acildir; aileyi ve genci bilgilendirin.'],
+      { ped: ['Priapizm eğitimi', [1, 1, 0, 0, 0], '4 saatten uzun süren ereksiyon acildir; aileyi ve genci bilgilendirin.'],
+        eri: ['Priapizm eğitimi', [1, 1, 0, 0, 0], '4 saatten uzun süren ereksiyon acildir; hastayı bilgilendirin.'] },
       ['Sabah sedasyonu', [0, 1, 1, 2, 2], ''],
       ['EKG (QTc)', [2, 0, 0, 0, 0], 'Kardiyak risk veya QT uzatan eş ilaç.'],
       ['İntihar düşüncesi / davranışı', [1, 1, 1, 1, 1], '']
@@ -88,23 +99,31 @@ window.IZLEM = {
   stimulan: {
     ad: 'Psikostimulanlar',
     satir: [
-      ['Kardiyak öykü ve muayene', [1, 0, 0, 0, 1], 'Senkop, egzersizle göğüs ağrısı, ailede < 40 yaş ani ölüm, yapısal kalp hastalığı.'],
-      ['Kan basıncı / nabız', [1, 'Her doz artışında', 1, 1, 1], 'Yaşa göre persentile göre değerlendirin; 3–6 ayda bir.'],
-      ['Boy', [1, 0, 0, 1, 1], '6 ayda bir büyüme eğrisine işleyin.'],
-      ['Kilo', [1, 1, 1, 1, 1], '3–6 ayda bir; belirgin kayıpta doz/zamanlama/ilaç tatili düşünün.'],
+      { ped: ['Kardiyak öykü ve muayene', [1, 0, 0, 0, 1], 'Senkop, egzersizle göğüs ağrısı, ailede < 40 yaş ani ölüm, yapısal kalp hastalığı.'],
+        eri: ['Kardiyak öykü ve risk değerlendirmesi', [1, 0, 0, 0, 1], 'Senkop, göğüs ağrısı, aritmi, yapısal kalp hastalığı, ailede erken ani ölüm; hipertansiyon ve kardiyovasküler risk etkenleri.'] },
+      { ped: ['Kan basıncı / nabız', [1, 'Her doz artışında', 1, 1, 1], 'Yaşa göre persentile göre değerlendirin; 3–6 ayda bir.'],
+        eri: ['Kan basıncı / nabız', [1, 'Her doz artışında', 1, 1, 1], 'Her doz artışında ve 3–6 ayda bir; anlamlı artışta doz veya ilacı gözden geçirin.'] },
+      { ped: ['Boy', [1, 0, 0, 1, 1], '6 ayda bir büyüme eğrisine işleyin.'], eri: null },
+      { ped: ['Kilo', [1, 1, 1, 1, 1], '3–6 ayda bir; belirgin kayıpta doz/zamanlama/ilaç tatili düşünün.'],
+        eri: ['Kilo', [1, 1, 1, 1, 1], '3–6 ayda bir; belirgin kayıpta doz veya zamanlamayı gözden geçirin.'] },
       ['İştah ve uyku', [1, 1, 1, 1, 1], ''],
-      ['Tik, irritabilite, duygudurum, psikotik belirti', [1, 1, 1, 1, 1], ''],
+      { ped: ['Tik, irritabilite, duygudurum, psikotik belirti', [1, 1, 1, 1, 1], ''],
+        eri: ['Anksiyete, irritabilite, duygudurum, psikotik belirti', [1, 1, 1, 1, 1], ''] },
       ['EKG', [2, 0, 0, 0, 0], 'Rutin gerekmez; kardiyak risk/öykü varsa ve kardiyoloji görüşü ile.'],
-      ['Kötüye kullanım / ilacı başkasına verme', [1, 0, 2, 2, 1], 'Özellikle ergenlerde.'],
-      ['DEHB ölçeği (aile + öğretmen)', [1, 1, 1, 1, 1], 'Doz optimizasyonunda her basamakta.']
+      { ped: ['Kötüye kullanım / ilacı başkasına verme', [1, 0, 2, 2, 1], 'Özellikle ergenlerde.'],
+        eri: ['Kötüye kullanım / ilacı başkasına verme', [1, 0, 2, 2, 1], 'Madde kullanım öyküsü; reçete takibi, erken reçete istemi.'] },
+      { ped: ['DEHB ölçeği (aile + öğretmen)', [1, 1, 1, 1, 1], 'Doz optimizasyonunda her basamakta.'],
+        eri: ['DEHB ölçeği (ör. ASRS; öz bildirim ± yakın bildirimi)', [1, 1, 1, 1, 1], 'Doz optimizasyonunda her basamakta.'] }
     ]
   },
   atomoksetin: {
     ad: 'Atomoksetin',
     satir: [
-      ['İntihar düşüncesi / davranışı', [1, 'Haftalık (ilk 4 hf)', 1, 1, 1], 'Kara kutu uyarısı: özellikle ilk aylar ve doz değişimleri.'],
+      { ped: ['İntihar düşüncesi / davranışı', [1, 'Haftalık (ilk 4 hf)', 1, 1, 1], 'Kara kutu uyarısı: özellikle ilk aylar ve doz değişimleri.'],
+        eri: ['Duygudurum, intihar düşüncesi', [1, 1, 1, 1, 1], 'Kara kutu uyarısı çocuk ve ergenler içindir; erişkinde de ilk aylarda ve doz değişimlerinde sorgulayın.'] },
       ['Kan basıncı / nabız', [1, 'Her doz artışında', 1, 1, 1], ''],
-      ['Boy – kilo', [1, 1, 1, 1, 1], ''],
+      { ped: ['Boy – kilo', [1, 1, 1, 1, 1], ''], eri: ['Kilo', [1, 1, 1, 1, 1], ''] },
+      { ped: null, eri: ['İdrar yapma güçlüğü, cinsel işlev', [0, 1, 1, 2, 2], 'Erişkinde idrar retansiyonu ve erektil işlev bozukluğu bildirilir; prostat büyümesinde dikkat.'] },
       ['Kardiyak öykü ve muayene', [1, 0, 0, 0, 1], ''],
       ['Karaciğer işlev testleri', [2, 2, 2, 2, 2], 'Rutin gerekmez; sarılık, koyu idrar, kaşıntı, karın ağrısı olursa bakın ve ilacı kesin.'],
       ['İrritabilite, duygudurum, uyku', [1, 1, 1, 1, 1], ''],
@@ -117,20 +136,25 @@ window.IZLEM = {
       ['Kan basıncı / nabız', [1, 'Haftalık (titrasyonda)', 1, 1, 1], 'Hipotansiyon ve bradikardi; ilk yıl 3 ayda bir, sonra 6 ayda bir.'],
       ['Kardiyak öykü ve muayene', [1, 0, 0, 0, 1], 'Senkop, bradikardi, AV blok öyküsü.'],
       ['EKG', [2, 0, 0, 0, 0], 'Kardiyak risk veya QT uzatan eş ilaç varsa.'],
-      ['Sedasyon / somnolans', [0, 1, 1, 1, 1], 'İlk haftalarda belirgin; okul performansını sorun.'],
-      ['Boy – kilo / BKİ', [1, 0, 1, 1, 1], 'Kilo artışı olabilir.'],
-      ['Uyum (doz atlama)', [0, 1, 1, 1, 1], 'Ani kesilme rebound hipertansiyon yapar; aileyi uyarın.']
+      { ped: ['Sedasyon / somnolans', [0, 1, 1, 1, 1], 'İlk haftalarda belirgin; okul performansını sorun.'],
+        eri: ['Sedasyon / somnolans', [0, 1, 1, 1, 1], 'İlk haftalarda belirgin; gündüz işlevselliğini ve araç kullanımını sorun.'] },
+      { ped: ['Boy – kilo / BKİ', [1, 0, 1, 1, 1], 'Kilo artışı olabilir.'], eri: ['Kilo / BKİ', [1, 0, 1, 1, 1], 'Kilo artışı olabilir.'] },
+      { ped: ['Uyum (doz atlama)', [0, 1, 1, 1, 1], 'Ani kesilme rebound hipertansiyon yapar; aileyi uyarın.'],
+        eri: ['Uyum (doz atlama)', [0, 1, 1, 1, 1], 'Ani kesilme rebound hipertansiyon yapar; hastayı uyarın.'] }
     ]
   },
   antipsikotik: {
     ad: 'Antipsikotikler',
     satir: [
       ['Kişisel / ailesel risk öyküsü', [1, 0, 0, 0, 1], 'Obezite, diyabet, dislipidemi, hipertansiyon, erken kardiyovasküler hastalık.'],
-      ['Kilo, boy, BKİ (persentil / z-skor)', [1, 1, 1, 1, 1], 'Her vizitte. Başlangıca göre ≥ %7 kilo artışı veya BKİ z-skorunda ≥ 0,5 artış: müdahale edin.'],
+      { ped: ['Kilo, boy, BKİ (persentil / z-skor)', [1, 1, 1, 1, 1], 'Her vizitte. Başlangıca göre ≥ %7 kilo artışı veya BKİ z-skorunda ≥ 0,5 artış: müdahale edin.'],
+        eri: ['Kilo, BKİ', [1, 'Aylık (ilk 3 ay)', 1, 1, 1], 'Sonra 3 ayda bir. Başlangıca göre ≥ %5 kilo artışı: yaşam tarzı müdahalesi, ilaç değişimi veya metformin değerlendirin.'] },
       ['Bel çevresi', [1, 0, 1, 1, 1], ''],
       ['Kan basıncı / nabız', [1, 1, 1, 1, 1], ''],
-      ['Açlık glukoz veya HbA1c', [1, 0, 1, 1, 1], 'Sonrasında yılda bir; kilo artışı belirginse daha sık.'],
-      ['Açlık lipid profili', [1, 0, 1, 1, 1], ''],
+      { ped: ['Açlık glukoz veya HbA1c', [1, 0, 1, 1, 1], 'Sonrasında yılda bir; kilo artışı belirginse daha sık.'],
+        eri: ['Açlık glukoz veya HbA1c', [1, 0, 1, 0, 1], '12. haftada ve sonra yılda bir; risk etkeni veya kilo artışı varsa daha sık.'] },
+      { ped: ['Açlık lipid profili', [1, 0, 1, 1, 1], ''],
+        eri: ['Açlık lipid profili', [1, 0, 1, 0, 1], '12. haftada ve sonra yılda bir.'] },
       ['Karaciğer işlev testleri', [1, 0, 2, 1, 1], ''],
       ['Prolaktin', [2, 0, 2, 0, 2], 'Belirti varsa (adet düzensizliği, galaktore, jinekomasti, cinsel işlev). Risperidon/paliperidonda eşik düşük tutun.'],
       ['EPS, akatizi, diskinezi (AIMS)', [1, 1, 1, 1, 1], 'Titrasyonda her vizit; sonra 6 ayda bir AIMS.'],
@@ -158,12 +182,15 @@ window.IZLEM = {
     satir: [
       ['Serum lityum düzeyi (12. saat)', [0, 'Her doz değişiminden 5–7 gün sonra', 1, 1, '3–6 ayda bir'], 'Son dozdan 12 saat sonra. Stabil olana dek haftalık; ilk yıl 3 ayda bir.'],
       ['Kreatinin, eGFR, üre', [1, 0, 1, 1, '6 ayda bir'], ''],
-      ['TSH (± sT4)', [1, 0, 2, 1, '6 ayda bir'], 'Hipotiroidi sık; ergen kızlarda daha dikkatli.'],
+      { ped: ['TSH (± sT4)', [1, 0, 2, 1, '6 ayda bir'], 'Hipotiroidi sık; ergen kızlarda daha dikkatli.'],
+        eri: ['TSH (± sT4)', [1, 0, 2, 1, '6 ayda bir'], 'Hipotiroidi sık; kadınlarda ve ileri yaşta daha sık.'] },
       ['Kalsiyum', [1, 0, 0, 2, 1], 'Hiperparatiroidi.'],
       ['Elektrolitler', [1, 0, 2, 1, 1], ''],
       ['Tam kan, tam idrar tetkiki', [1, 0, 0, 0, 1], 'Lökositoz beklenir; idrar dansitesi (poliüri).'],
-      ['EKG', [1, 0, 0, 0, 2], 'Çocuk/ergende başlangıçta önerilir; kardiyak riskte tekrar.'],
-      ['Gebelik testi', [1, 2, 2, 2, 2], 'Çocuk doğurma potansiyeli olan ergenlerde.'],
+      { ped: ['EKG', [1, 0, 0, 0, 2], 'Çocuk/ergende başlangıçta önerilir; kardiyak riskte tekrar.'],
+        eri: ['EKG', [2, 0, 0, 0, 2], '≥ 40 yaş veya kardiyak risk varsa başlangıçta; kardiyak riskte tekrar.'] },
+      { ped: ['Gebelik testi', [1, 2, 2, 2, 2], 'Çocuk doğurma potansiyeli olan ergenlerde.'],
+        eri: ['Gebelik testi', [1, 2, 2, 2, 2], 'Çocuk doğurma potansiyeli olan kadınlarda.'] },
       ['Kilo / BKİ', [1, 1, 1, 1, 1], ''],
       ['Toksisite belirtileri eğitimi', [1, 1, 1, 1, 1], 'Kusma, ishal, kaba tremor, ataksi, dizartri → ilacı durdur, düzey bak. Sıvı alımı, NSAİİ uyarısı.']
     ]
@@ -207,8 +234,10 @@ window.IZLEM = {
     ad: 'Benzodiazepinler',
     satir: [
       ['Tedavi süresi ve gereklilik', [1, 1, 1, 1, 1], 'Mümkünse 2–4 hafta ile sınırlayın; her vizitte kesme planını gözden geçirin.'],
-      ['Sedasyon, dikkat, bellek', [1, 1, 1, 1, 1], 'Okul performansı, araç/bisiklet kullanımı.'],
-      ['Paradoksal disinhibisyon', [0, 1, 2, 2, 2], 'Çocuklarda ve nörogelişimsel bozuklukta daha sık.'],
+      { ped: ['Sedasyon, dikkat, bellek', [1, 1, 1, 1, 1], 'Okul performansı, araç/bisiklet kullanımı.'],
+        eri: ['Sedasyon, dikkat, bellek', [1, 1, 1, 1, 1], 'Araç kullanımı ve iş güvenliği; yaşlıda bilişsel bozulma.'] },
+      { ped: ['Paradoksal disinhibisyon', [0, 1, 2, 2, 2], 'Çocuklarda ve nörogelişimsel bozuklukta daha sık.'],
+        eri: ['Düşme riski (≥ 65 yaş)', [1, 1, 1, 1, 1], 'Beers ölçütleri: yaşlılarda benzodiazepinlerden mümkünse kaçının.'] },
       ['Tolerans / kötüye kullanım', [1, 1, 1, 1, 1], 'Madde kullanım öyküsü; doz artırma isteği.'],
       ['Solunum riski', [1, 0, 0, 0, 0], 'Uyku apnesi, opioid/alkol ile birlikte kullanım.']
     ]
@@ -220,15 +249,16 @@ window.IZLEM = {
       ['Uyku hijyeni değerlendirmesi', [1, 1, 1, 1, 1], 'Ekran, kafein, yatış saati düzeni; ilaçtan önce ve birlikte.'],
       ['Gündüz uykululuğu, baş ağrısı', [0, 1, 1, 2, 2], ''],
       ['Tedavi gerekliliğini gözden geçirme', [0, 0, 1, 1, 1], '3–6 ayda bir ilaçsız deneme düşünün.'],
-      ['Puberte gelişimi', [1, 0, 0, 0, 1], 'Uzun süreli kullanımda yıllık izlem (veriler güven vericidir ancak sınırlıdır).']
+      { ped: ['Puberte gelişimi', [1, 0, 0, 0, 1], 'Uzun süreli kullanımda yıllık izlem (veriler güven vericidir ancak sınırlıdır).'], eri: null }
     ]
   },
   hidroksizin: {
     ad: 'Hidroksizin',
     satir: [
       ['QT riski sorgusu / EKG', [2, 0, 0, 0, 0], 'Kardiyak öykü, QT uzatan eş ilaç, elektrolit bozukluğu varsa EKG.'],
-      ['Sedasyon, okul performansı', [1, 1, 1, 0, 0], ''],
-      ['Paradoksal ajitasyon', [0, 1, 0, 0, 0], 'Küçük çocuklarda.'],
+      { ped: ['Sedasyon, okul performansı', [1, 1, 1, 0, 0], ''], eri: ['Sedasyon, psikomotor performans', [1, 1, 1, 0, 0], 'Araç kullanımı.'] },
+      { ped: ['Paradoksal ajitasyon', [0, 1, 0, 0, 0], 'Küçük çocuklarda.'],
+        eri: ['Antikolinerjik etki, konfüzyon (yaşlı)', [1, 1, 0, 0, 0], 'Beers ölçütleri: yaşlılarda birinci kuşak antihistaminiklerden kaçının.'] },
       ['Tedavi süresi', [1, 1, 1, 0, 0], 'Kısa süreli kullanım; tolerans gelişir.']
     ]
   },
@@ -242,10 +272,25 @@ window.IZLEM = {
   }
 };
 
+/* Kitleye göre içerik: bir değer düz metin/dizi olabilir ya da { ped: ..., eri: ... } biçiminde iki sürüm taşıyabilir.
+   Sürümlerden biri null ise o kitlede gösterilmez; eri sürümü yazılmamışsa çocuk-ergen sürümü kullanılır. */
+window.kitleSec = function (x, kitle) {
+  if (x && typeof x === 'object' && !Array.isArray(x) && ('ped' in x || 'eri' in x)) return (kitle in x) ? x[kitle] : x.ped;
+  return x;
+};
+window.kitleDizi = function (d, kitle) {
+  return (d || []).map(function (x) { return window.kitleSec(x, kitle); }).filter(function (x) { return x != null && x !== ''; });
+};
+/* satırın adı ve açıklaması da ayrıca iki sürümlü olabilir */
+function izlemSatirCoz(r, kitle) { return [window.kitleSec(r[0], kitle), r[1], window.kitleSec(r[2], kitle) || '']; }
+window.izlemSablon = function (k, kitle) {
+  return window.kitleDizi((window.IZLEM[k] || { satir: [] }).satir, kitle).map(function (r) { return izlemSatirCoz(r, kitle); });
+};
+
 /* Yardımcı: izlem şablonuna ilaca özgü satır ekle / satır değiştir */
-window.izlemSatirlari = function (ilac) {
-  var s = (window.IZLEM[ilac.izlem] || { satir: [] }).satir.slice();
-  (ilac.izlemEk || []).forEach(function (r) {
+window.izlemSatirlari = function (ilac, kitle) {
+  var s = window.izlemSablon(ilac.izlem, kitle);
+  window.kitleDizi(ilac.izlemEk, kitle).map(function (r) { return izlemSatirCoz(r, kitle); }).forEach(function (r) {
     var i = s.findIndex(function (x) { return x[0] === r[0]; });
     if (i >= 0) s[i] = r; else s.push(r);
   });

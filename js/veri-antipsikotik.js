@@ -2,11 +2,11 @@
 (function () {
   var SURDURUM_AP = [
     'Etkin en düşük dozu hedefleyin; her vizitte kilo/BKİ ve hareket bozukluğu değerlendirin.',
-    'İrritabilite/davranış endikasyonunda 6–12 ay stabil dönemden sonra kademeli azaltım ve kesme denemesi yapın.',
+    { ped: 'İrritabilite/davranış endikasyonunda 6–12 ay stabil dönemden sonra kademeli azaltım ve kesme denemesi yapın.', eri: 'Şizofrenide sürdürüm tedavisini kesmek nüks riskini belirgin artırır; kesme kararını ortak karar ve yakın izlemle verin.' },
     'İlk psikotik epizoddan sonra en az 12–24 ay; yineleyen epizodlarda daha uzun sürdürüm.',
     'Metabolik yan etkide önce yaşam tarzı müdahalesi; yetersizse metabolik riski düşük ilaca geçiş veya metformin eklenmesi düşünün.'
   ];
-  var KUTU_AP = 'Çocuk ve ergenler antipsikotiklerin metabolik yan etkilerine (kilo artışı, dislipidemi, insülin direnci), sedasyona ve prolaktin artışına erişkinlerden daha duyarlıdır. Endikasyonu, hedef belirtiyi ve kesme planını baştan belirleyin.';
+  var KUTU_AP = { ped: 'Çocuk ve ergenler antipsikotiklerin metabolik yan etkilerine (kilo artışı, dislipidemi, insülin direnci), sedasyona ve prolaktin artışına erişkinlerden daha duyarlıdır. Endikasyonu, hedef belirtiyi ve kesme planını baştan belirleyin.', eri: 'Kara kutu uyarısı: demansa bağlı psikozu olan yaşlı hastalarda antipsikotikler ölüm riskini artırır; bu endikasyonda onaylı değildir. Tüm hastalarda metabolik izlem (kilo, glukoz, lipid) ve hareket bozukluğu değerlendirmesi gerekir.' };
 
   window.ILACLAR.push(
   {
@@ -14,6 +14,7 @@
     mek: 'Güçlü D2 ve 5-HT2A antagonisti. Otizmde irritabilite, davranım sorunları ve tik bozukluklarında en çok deneyim olan antipsikotik. Aktif metaboliti paliperidondur.',
     t12: '3 saat (aktif metabolit ~21 saat)', t12s: 21, etki: 'İrritabilite: 1–2 hafta · psikoz: 2–6 hafta', form: 'Tablet 1 / 2 / 3 / 4 mg; oral solüsyon 1 mg/mL; ağızda dağılan tablet',
     onay: [['Otizmde irritabilite', '5–16 yaş'], ['Bipolar mani', '≥ 10 yaş'], ['Şizofreni', '≥ 13 yaş']],
+    onayEri: [['Şizofreni'], ['Bipolar I mani / karma dönem']],
     endikasyon: [
       ['Otizmde irritabilite, < 20 kg', '0,25 mg/gün', '0,5 mg/gün', '≥ 4 gün sonra 0,5 mg; sonra ≥ 2 haftada bir 0,25 mg'],
       ['Otizmde irritabilite, ≥ 20 kg', '0,5 mg/gün', '1 mg/gün (0,5–3 mg)', '≥ 4 gün sonra 1 mg; sonra ≥ 2 haftada bir 0,5 mg'],
@@ -46,6 +47,7 @@
     mek: 'D2 ve 5-HT1A parsiyel agonisti, 5-HT2A antagonisti. Metabolik ve prolaktin profili elverişlidir; akatizi ve aktivasyon daha sıktır.',
     t12: '~75 saat (metabolit 94 saat)', t12s: 75, etki: '1–2 hafta (kararlı durum 2 hafta)', form: 'Tablet 5 / 10 / 15 / 30 mg; oral solüsyon 1 mg/mL',
     onay: [['Otizmde irritabilite', '6–17 yaş'], ['Tourette', '6–18 yaş'], ['Bipolar mani', '≥ 10 yaş'], ['Şizofreni', '≥ 13 yaş']],
+    onayEri: [['Şizofreni'], ['Bipolar I (akut mani ve sürdürüm)'], ['Majör depresyonda ek tedavi']],
     endikasyon: [
       ['Otizmde irritabilite', '2 mg/gün', '5–10 mg/gün', '1 hafta sonra 5 mg; ≥ 1 hafta arayla 5 mg; maks. 15 mg'],
       ['Tourette, < 50 kg', '2 mg/gün', '5 mg/gün', '2 gün sonra 5 mg; maks. 10 mg'],
@@ -73,9 +75,10 @@
   },
   {
     id: 'olanzapin', ad: 'Olanzapin', sinif: 'ap', altSinif: 'İkinci kuşak antipsikotik', grup: 'ap',
-    mek: 'D2, 5-HT2A, H1 ve M1 antagonisti. Etkin ancak metabolik yan etkisi en belirgin antipsikotiklerden; ergenlerde ilk seçenek olarak önerilmez.',
+    mek: { ped: 'D2, 5-HT2A, H1 ve M1 antagonisti. Etkin ancak metabolik yan etkisi en belirgin antipsikotiklerden; ergenlerde ilk seçenek olarak önerilmez.', eri: 'D2, 5-HT2A, H1 ve M1 antagonisti. Etkinliği güçlü, ancak kilo artışı ve metabolik yan etkisi en belirgin antipsikotiklerdendir; yakın metabolik izlem gerekir.' },
     t12: '~30 saat (21–54)', t12s: 30, etki: '1–2 hafta', form: 'Tablet / ağızda dağılan tablet 2,5 / 5 / 10 / 15 / 20 mg',
     onay: [['Şizofreni', '≥ 13 yaş'], ['Bipolar mani', '≥ 13 yaş'], ['Bipolar depresyon (fluoksetin ile)', '≥ 10 yaş']],
+    onayEri: [['Şizofreni'], ['Bipolar I (akut mani ve sürdürüm)'], ['Bipolar depresyon', 'fluoksetin ile'], ['Dirençli depresyon', 'fluoksetin ile']],
     ped: {
       bas: '2,5–5 mg/gün (gece)', artis: '≥ 1 hafta arayla 2,5–5 mg', hedef: '10 mg/gün', maks: '20 mg/gün',
       birim: 'mg/gün', adim: [[0, 2.5], [4, 5], [11, 7.5], [18, 10]], bant: [5, 10], tavan: 20,
@@ -99,6 +102,7 @@
     mek: 'Düşük afiniteli D2 ve 5-HT2A antagonisti; güçlü H1 ve alfa-1 blokajı. Metaboliti norketiapin noradrenalin geri alımını inhibe eder. EPS ve prolaktin etkisi düşüktür.',
     t12: '~7 saat (norketiapin 12 saat)', t12s: 7, etki: '1–2 hafta', form: 'Tablet 25 / 100 / 200 / 300 mg; uzatılmış salımlı (XR) 50–400 mg',
     onay: [['Bipolar mani', '≥ 10 yaş'], ['Şizofreni', '≥ 13 yaş']],
+    onayEri: [['Şizofreni'], ['Bipolar mani'], ['Bipolar depresyon'], ['Bipolar sürdürüm', 'lityum/valproata ek'], ['Majör depresyonda ek tedavi', 'uzatılmış salımlı form']],
     endikasyon: [
       ['Bipolar mani (10–17 yaş)', '50 mg/gün', '400–600 mg/gün', '1. gün 50, 2. gün 100, 3. gün 200, 4. gün 300, 5. gün 400 mg'],
       ['Şizofreni (13–17 yaş)', '50 mg/gün', '400–800 mg/gün', 'Aynı şema; sonrasında günde en fazla 100 mg artış'],
@@ -116,18 +120,19 @@
     surdurum: SURDURUM_AP,
     kesme: { risk: 2, sure: '2–4 hafta veya daha uzun', adim: [[0, 100], [7, 75], [14, 50], [21, 25], [28, 0]],
       not: ['Ani kesmede uykusuzluk, bulantı, kusma, baş dönmesi, irritabilite.', 'Rebound uykusuzluk en sık yakınmadır; son basamakları yavaşlatın.'] },
-    izlem: 'antipsikotik', izlemEk: [['TSH / sT4', [2, 0, 2, 0, 2], 'Doza bağlı T4 düşüşü; belirti veya tiroid öyküsü varsa.'], ['Kan basıncı / nabız', [1, 1, 1, 1, 1], 'Çocuk/ergende KB artışı; titrasyonda ortostatik hipotansiyon.']],
+    izlem: 'antipsikotik', izlemEk: [['TSH / sT4', [2, 0, 2, 0, 2], 'Doza bağlı T4 düşüşü; belirti veya tiroid öyküsü varsa.'], ['Kan basıncı / nabız', [1, 1, 1, 1, 1], { ped: 'Çocuk/ergende KB artışı; titrasyonda ortostatik hipotansiyon.', eri: 'Titrasyonda ortostatik hipotansiyon; yaşlıda düşme riski.' }]],
     profil: { sed: 3, kilo: 2, eps: 0, prl: 0, qt: 2, ach: 1, kv: 2, kes: 2 },
     kutu: KUTU_AP,
-    uyari: ['Sedasyon, baş dönmesi, ortostatik hipotansiyon', 'Kilo artışı, lipid ve glukoz artışı', 'Çocuk ve ergenlerde kan basıncı artışı', 'QT uzaması', 'Kötüye kullanım potansiyeli (ergenlerde dikkat)'],
+    uyari: ['Sedasyon, baş dönmesi, ortostatik hipotansiyon', 'Kilo artışı, lipid ve glukoz artışı', { ped: 'Çocuk ve ergenlerde kan basıncı artışı', eri: null }, 'QT uzaması', { ped: 'Kötüye kullanım potansiyeli (ergenlerde dikkat)', eri: 'Kötüye kullanım potansiyeli (madde kullanım öyküsünde dikkat)' }],
     etkilesim: ['Güçlü CYP3A4 inhibitörleri (ketokonazol, klaritromisin): dozu altıda birine indirin', 'Karbamazepin, fenitoin düzeyi belirgin düşürür', 'Diğer QT uzatan ve sedatif ilaçlarla dikkat'],
     oz: ['qt', 'd2', 'antikol']
   },
   {
     id: 'klozapin', ad: 'Klozapin', sinif: 'ap', altSinif: 'İkinci kuşak antipsikotik', grup: 'ap',
-    mek: 'Çoklu reseptör antagonisti (D4, 5-HT2A, M1, H1, alfa-1); düşük D2 işgali. Tedaviye dirençli şizofrenide en etkili ilaç. Pediatrik onayı yoktur; en az iki antipsikotiğe yanıtsız erken başlangıçlı şizofrenide kullanılır.',
+    mek: { ped: 'Çoklu reseptör antagonisti (D4, 5-HT2A, M1, H1, alfa-1); düşük D2 işgali. Tedaviye dirençli şizofrenide en etkili ilaç. Pediatrik onayı yoktur; en az iki antipsikotiğe yanıtsız erken başlangıçlı şizofrenide kullanılır.', eri: 'Çoklu reseptör antagonisti (D4, 5-HT2A, M1, H1, alfa-1); düşük D2 işgali. Tedaviye dirençli şizofrenide (en az iki yeterli antipsikotik denemesine yanıtsızlık) en etkili ilaçtır; intihar davranışını da azaltır.' },
     t12: '~12 saat (4–66)', t12s: 12, etki: '2–8 hafta; tam yanıt 6 aya dek', form: 'Tablet 25 / 100 mg',
     onay: [], onayNot: 'Dirençli şizofrenide endikasyon dışı (genellikle ≥ 12 yaş)',
+    onayEri: [['Dirençli şizofreni'], ['Şizofreni/şizoaffektifte intihar davranışını azaltma']],
     ped: {
       bas: '6,25–12,5 mg/gün', artis: '3–5 günde bir 12,5–25 mg (tolere edildikçe)', hedef: '150–400 mg/gün (plazma düzeyi ≥ 350 ng/mL)', maks: '600 mg/gün',
       birim: 'mg/gün', adim: [[0, 12.5], [3, 25], [7, 50], [11, 75], [15, 100], [21, 150], [28, 200], [42, 300]], bant: [150, 400], tavan: 600,
@@ -151,6 +156,7 @@
     mek: 'Yüksek potensli D2 antagonisti. Akut ajitasyon, psikoz ve dirençli tik bozukluklarında; EPS riski yüksektir.',
     t12: '12–36 saat', t12s: 20, etki: 'Ajitasyon: saatler · psikoz: 1–2 hafta', form: 'Tablet 5 / 10 / 20 mg; damla 2 mg/mL (1 damla = 0,1 mg); ampul 5 mg',
     onay: [['Psikoz, Tourette, ağır davranış sorunları', '≥ 3 yaş']],
+    onayEri: [['Şizofreni'], ['Tourette bozukluğu']],
     ped: {
       bas: '3–12 yaş (15–40 kg): 0,25–0,5 mg/gün (2–3 doza bölünmüş)', artis: '5–7 günde bir 0,25–0,5 mg', hedef: 'Tik/davranış: 0,05–0,075 mg/kg/gün · psikoz: 0,05–0,15 mg/kg/gün', maks: 'Çocuk: 0,15 mg/kg/gün · ergen: genellikle ≤ 6–10 mg/gün',
       birim: 'mg/gün', adim: [[0, 0.5], [7, 1], [14, 1.5], [21, 2]], bant: [1, 3], tavan: 6,
@@ -175,6 +181,7 @@
     mek: 'Risperidonun aktif metaboliti (9-hidroksirisperidon); OROS uzatılmış salım. Karaciğer metabolizması minimaldir, böbrekle atılır.',
     t12: '~23 saat', t12s: 23, etki: '1–2 hafta', form: 'Uzatılmış salımlı tablet 3 / 6 / 9 mg',
     onay: [['Şizofreni', '≥ 12 yaş']],
+    onayEri: [['Şizofreni'], ['Şizoaffektif bozukluk']],
     ped: {
       bas: '3 mg/gün (sabah)', artis: '≥ 5 gün arayla 3 mg', hedef: '3–6 mg/gün', maks: '< 51 kg: 6 mg/gün · ≥ 51 kg: 12 mg/gün',
       birim: 'mg/gün', adim: [[0, 3], [7, 6], [21, 9]], bant: [3, 6], tavan: 12,
@@ -195,9 +202,10 @@
   },
   {
     id: 'ziprasidon', ad: 'Ziprasidon', sinif: 'ap', altSinif: 'İkinci kuşak antipsikotik', grup: 'ap',
-    mek: 'D2 ve 5-HT2A antagonisti; 5-HT1A agonizmi. Kilo ve metabolik açıdan nötrdür; QT uzaması izlem gerektirir. FDA pediatrik onayı yoktur.',
+    mek: { ped: 'D2 ve 5-HT2A antagonisti; 5-HT1A agonizmi. Kilo ve metabolik açıdan nötrdür; QT uzaması izlem gerektirir. FDA pediatrik onayı yoktur.', eri: 'D2 ve 5-HT2A antagonisti; 5-HT1A agonizmi. Kilo ve metabolik açıdan nötrdür; QT uzaması izlem gerektirir. Emilim için yemekle alınmalıdır.' },
     t12: '~7 saat', t12s: 7, etki: '1–2 hafta', form: 'Kapsül 20 / 40 / 60 / 80 mg',
     onay: [], onayNot: 'Bazı Avrupa ülkelerinde bipolar mani 10–17 yaş onaylı',
+    onayEri: [['Şizofreni'], ['Bipolar I mani / karma dönem'], ['Bipolar sürdürüm', 'lityum/valproata ek']],
     ped: {
       bas: '20 mg/gün (yemekle)', artis: '2–3 günde bir 20 mg; günde 2 doza bölünür', hedef: '< 45 kg: 60–80 mg/gün · ≥ 45 kg: 80–160 mg/gün', maks: '< 45 kg: 80 mg/gün · ≥ 45 kg: 160 mg/gün',
       birim: 'mg/gün', adim: [[0, 20], [3, 40], [7, 60], [10, 80], [14, 120]], bant: [80, 160], tavan: 160,
@@ -218,9 +226,10 @@
   },
   {
     id: 'lurasidon', ad: 'Lurasidon', sinif: 'ap', altSinif: 'İkinci kuşak antipsikotik', grup: 'ap',
-    mek: 'D2, 5-HT2A ve 5-HT7 antagonisti; 5-HT1A parsiyel agonisti. Pediatrik bipolar depresyonda onaylı; metabolik profili elverişlidir.',
+    mek: { ped: 'D2, 5-HT2A ve 5-HT7 antagonisti; 5-HT1A parsiyel agonisti. Pediatrik bipolar depresyonda onaylı; metabolik profili elverişlidir.', eri: 'D2, 5-HT2A ve 5-HT7 antagonisti; 5-HT1A parsiyel agonisti. Bipolar depresyonda onaylı; metabolik profili elverişlidir. Emilim için en az 350 kcal\'lik yemekle alınmalıdır.' },
     t12: '~18 saat', t12s: 18, etki: '1–3 hafta', form: 'Tablet 20 / 40 / 80 mg',
     onay: [['Bipolar depresyon', '≥ 10 yaş'], ['Şizofreni', '≥ 13 yaş']],
+    onayEri: [['Şizofreni'], ['Bipolar depresyon']],
     ped: {
       bas: 'Bipolar depresyon: 20 mg/gün · şizofreni: 40 mg/gün', artis: '≥ 1 hafta arayla 20 mg', hedef: '20–40 mg/gün (bipolar depresyon) · 40–80 mg/gün (şizofreni)', maks: '80 mg/gün',
       birim: 'mg/gün', adim: [[0, 20], [7, 40], [21, 60]], bant: [20, 40], tavan: 80,
@@ -243,6 +252,7 @@
     mek: 'Seçici D2/D3 antagonisti. Düşük dozda presinaptik etkiyle negatif belirtilere, yüksek dozda pozitif belirtilere etkilidir. Karaciğerde metabolize olmaz, böbrekle atılır; prolaktini belirgin artırır.',
     t12: '~12 saat', t12s: 12, etki: '1–2 hafta; tam etki 4–6 hafta', form: 'Tablet 200 / 400 mg; oral solüsyon 100 mg/mL',
     onay: [], onayNot: 'Pediatrik onay yok · 15 yaş altında kontrendike, 15–18 yaşta önerilmez',
+    onayEri: [['Şizofreni', 'Avrupa; ABD\'de bu endikasyonda onaysız']],
     ped: {
       bas: '50–100 mg/gün (≥ 15 yaş)', artis: '3–7 günde bir 50–100 mg', hedef: '200–600 mg/gün', maks: '800 mg/gün',
       birim: 'mg/gün', adim: [[0, 100], [5, 200], [12, 400]], bant: [200, 600], tavan: 800,
@@ -266,6 +276,7 @@
     mek: 'D2 antagonisti; güçlü antihistaminik, antikolinerjik ve alfa-1 bloke edici etkilidir. Sedasyonu belirgindir; akut ajitasyon ve ağır davranış sorunlarında kısa süreli kullanılır.',
     t12: '~30 saat (8–35 saat)', t12s: 30, etki: 'Sedasyon: 30–60 dakika · psikoz: 2–6 hafta', form: 'Tablet 25 / 100 mg; ampul 25 mg',
     onay: [['Ağır davranış sorunları', '1–12 yaş'], ['Psikoz', 'Ergen (erişkin dozu)']],
+    onayEri: [['Şizofreni'], ['Bipolar mani'], ['Bulantı ve kusma'], ['İnatçı hıçkırık']],
     ped: {
       bas: '0,5 mg/kg/doz, 4–6 saatte bir (pratikte 10–25 mg ×2–3)', artis: '3–4 günde bir 10–25 mg/gün', hedef: 'Çocuk: 50–100 mg/gün · ergen psikoz: 100–400 mg/gün', maks: '5 yaş altı 40 mg/gün, 5–12 yaş 75 mg/gün (ağır yatan olguda 200 mg/gün\'e dek)',
       birim: 'mg/gün', adim: [[0, 25], [4, 50], [8, 75], [14, 100]], bant: [50, 100], tavan: 200,
@@ -289,6 +300,7 @@
     mek: 'D2 ve 5-HT2A antagonisti; birçok serotonin reseptörüne bağlanır. Yalnızca dilaltı emilir: yutulursa biyoyararlanımı %2\'nin altına düşer. Türkiye\'de ruhsat ve erişim durumunu güncel olarak kontrol ediniz.',
     t12: '~24 saat', t12s: 24, etki: 'Mani: 1 hafta · psikoz: 2–6 hafta', form: 'Dilaltı tablet 2,5 / 5 / 10 mg',
     onay: [['Bipolar mani / karma dönem', '≥ 10 yaş']],
+    onayEri: [['Şizofreni'], ['Bipolar I mani / karma dönem']],
     ped: {
       bas: '2,5 mg ×2 dilaltı', artis: '3 gün sonra 5 mg ×2; 3 gün sonra gerekirse 10 mg ×2', hedef: '5–10 mg ×2', maks: '10 mg ×2 (20 mg/gün)',
       birim: 'mg/gün', adim: [[0, 5], [3, 10], [6, 20]], bant: [10, 20], tavan: 20,
@@ -311,6 +323,7 @@
     mek: 'D2 ve 5-HT1A parsiyel agonisti, 5-HT2A antagonisti. Aripiprazole göre içsel etkinliği daha düşüktür; akatizi ve uykusuzluk daha az, kilo artışı biraz daha fazladır. Türkiye\'de ruhsat ve erişim durumunu güncel olarak kontrol ediniz.',
     t12: '~91 saat', t12s: 91, etki: '2–6 hafta', form: 'Tablet 0,25 / 0,5 / 1 / 2 / 3 / 4 mg',
     onay: [['Şizofreni', '≥ 13 yaş']],
+    onayEri: [['Şizofreni'], ['Majör depresyonda ek tedavi'], ['Alzheimer demansına bağlı ajitasyon']],
     ped: {
       bas: '0,5 mg/gün (1–4. gün)', artis: '5–7. gün 1 mg; 8. günden itibaren 2 mg; sonra haftada 1 mg', hedef: '2–4 mg/gün', maks: '4 mg/gün',
       birim: 'mg/gün', adim: [[0, 0.5], [4, 1], [7, 2], [14, 3]], bant: [2, 4], tavan: 4,
@@ -334,6 +347,7 @@
     mek: 'D3 seçiciliği yüksek D3/D2 parsiyel agonisti. Negatif belirtilere ve bipolar depresyona etkilidir. Aktif metaboliti haftalarca dolaşımda kalır: etki ve yan etkiler geç ortaya çıkar, geç geçer. Türkiye\'de ruhsat ve erişim durumunu güncel olarak kontrol ediniz.',
     t12: '2–4 gün (aktif metabolit 1–3 hafta)', t12s: 168, etki: '2–6 hafta', form: 'Kapsül 1,5 / 3 / 4,5 / 6 mg',
     onay: [], onayNot: 'Pediatrik onay yok · endikasyon dışı',
+    onayEri: [['Şizofreni'], ['Bipolar I mani / karma dönem'], ['Bipolar I depresyon'], ['Majör depresyonda ek tedavi']],
     ped: {
       bas: '1,5 mg/gün (ergen)', artis: '1–2 haftada bir 1,5 mg', hedef: '1,5–4,5 mg/gün', maks: '6 mg/gün',
       birim: 'mg/gün', adim: [[0, 1.5], [10, 3], [24, 4.5]], bant: [1.5, 4.5], tavan: 6,
@@ -357,6 +371,7 @@
     mek: 'Seçici D2 antagonisti. Tourette bozukluğunda diğer tedavilere yanıtsız, ağır tiklerde kullanılır. QT aralığını uzatır ve ilaç etkileşimlerine çok duyarlıdır; bu nedenle ikinci basamak bir seçenektir.',
     t12: '~55 saat (çocukta ~66 saat)', t12s: 55, etki: '1–3 hafta', form: 'Tablet 1 / 2 / 4 mg',
     onay: [['Tourette bozukluğu (diğer tedavilere yanıtsız)', '≥ 12 yaş']],
+    onayEri: [['Tourette bozukluğu', 'diğer tedavilere yanıtsız']],
     ped: {
       bas: '0,05 mg/kg gece (0,5–1 mg)', artis: 'Haftada bir 0,5–1 mg (en erken 3 günde bir)', hedef: '2–4 mg/gün', maks: '0,2 mg/kg/gün veya 10 mg/gün (hangisi düşükse)',
       birim: 'mg/gün', adim: [[0, 1], [7, 2], [14, 3], [21, 4]], bant: [2, 4], tavan: 10,
@@ -371,7 +386,7 @@
     izlem: 'antipsikotik', izlemEk: [['EKG (QTc)', [1, 'Her doz artışı', 1, 1, 1], 'Başlangıçta, her doz artışından sonra ve yılda en az bir kez.'], ['Potasyum / magnezyum', [1, 0, 2, 0, 1], 'Düşük değerler QT riskini artırır; kusma, ishal veya diüretik kullanımında tekrarlayın.']],
     profil: { sed: 1, kilo: 1, eps: 3, prl: 2, qt: 3, ach: 1, kes: 2 },
     kutu: 'QT uzaması ve ani kardiyak ölüm bildirilmiştir: EKG izlemi zorunludur. Makrolid antibiyotikler, azol antifungaller, proteaz inhibitörleri ve birçok SSRI ile birlikte kullanılmaz.',
-    uyari: ['QT uzaması, torsades de pointes', 'EPS, akatizi, akut distoni, geç diskinezi', 'Sedasyon, okul performansında düşme', 'Hiperprolaktinemi', 'Nöroleptik malign sendrom'],
+    uyari: ['QT uzaması, torsades de pointes', 'EPS, akatizi, akut distoni, geç diskinezi', { ped: 'Sedasyon, okul performansında düşme', eri: 'Sedasyon' }, 'Hiperprolaktinemi', 'Nöroleptik malign sendrom'],
     etkilesim: ['Güçlü CYP3A4 inhibitörleri (klaritromisin, eritromisin, azol antifungaller, proteaz inhibitörleri) ile kontrendike', 'Paroksetin, fluoksetin (güçlü CYP2D6 inhibitörleri) ile kontrendike', 'Sertralin, sitalopram, essitalopram ile kontrendike', 'QT uzatan tüm ilaçlarla kontrendike', 'Greyfurt suyu düzeyi artırır'],
     oz: ['d2', 'qt', '2d6sub']
   }

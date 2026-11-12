@@ -37,6 +37,7 @@
     return { egriA: A, egriB: B, bosluk: bosluk };
   }
 
+  var K = 'ped'; // planla() çağrısında ayarlanan hasta grubu
   function var_(i, o) { return (i.oz || []).indexOf(o) >= 0; }
 
   function kural(a, b) {
@@ -45,14 +46,14 @@
     if (ag === 'stimulan' && bg === 'stimulan') return { tur: 'dogrudan', p: { titr: 14 }, sure: '1 gün (ardından 2–3 hafta doz optimizasyonu)',
       adim: [a.ad + ' son dozunu verin; ertesi sabah ' + b.ad + ' başlangıç dozuyla başlayın. Arınma süresi gerekmez.',
         'İki stimulan arasında kesin bir doz eşdeğerliği yoktur: yeni ilacı düşük dozdan başlayıp haftalık aralıklarla etkinlik ve yan etkiye göre titre edin.',
-        'Her basamakta kan basıncı, nabız, iştah, uyku ve aile/öğretmen ölçeğini değerlendirin.'],
+        'Her basamakta kan basıncı, nabız, iştah, uyku ve DEHB ölçeğini (' + (K === 'eri' ? 'öz bildirim ± yakın bildirimi' : 'aile ve öğretmen') + ') değerlendirin.'],
       uyari: ['İki stimulanı birlikte kullanmayın.'] };
     if (ag === 'stimulan' && bg === 'nonstim') return { tur: 'ortusme', p: { titr: 14, ortus: 21, azalt: 0 }, sure: '4–6 hafta',
-      adim: [b.ad + ' başlangıç dozuyla (' + b.ped.bas + ') ekleyin; 1–2 hafta içinde hedef doza (' + b.ped.hedef + ') çıkın.',
+      adim: [b.ad + ' başlangıç dozuyla (' + b[K].bas + ') ekleyin; 1–2 hafta içinde hedef doza (' + b[K].hedef + ') çıkın.',
         a.ad + ' tedavisini bu sırada aynı dozda sürdürün: ' + b.ad + ' etkisi haftalar içinde belirginleşir (' + b.etki + ').',
         'Hedef dozda 2–4 hafta geçtikten sonra stimulanı kesin (kademeli azaltım gerekmez; isterseniz bir hafta yarı doz verin).',
         'Örtüşme döneminde kan basıncı ve nabzı her vizitte ölçün.'],
-      uyari: ['Örtüşme döneminde additif kardiyovasküler etki (KB, nabız artışı) ve iştah azalması olabilir.', 'Stimulanın hemen kesilmesi gerekiyorsa (ağır yan etki) doğrudan geçiş yapılabilir; aileyi etkinin gecikeceği konusunda bilgilendirin.'] };
+      uyari: ['Örtüşme döneminde additif kardiyovasküler etki (KB, nabız artışı) ve iştah azalması olabilir.', 'Stimulanın hemen kesilmesi gerekiyorsa (ağır yan etki) doğrudan geçiş yapılabilir; ' + (K === 'eri' ? 'hastayı' : 'aileyi') + ' etkinin gecikeceği konusunda bilgilendirin.'] };
     if (ag === 'nonstim' && bg === 'nonstim') return { tur: 'dogrudan', p: { titr: 14 }, sure: '1 gün (ardından 2–4 hafta titrasyon)',
       adim: [a.ad + ' kademeli azaltım gerektirmez: son dozu verin ve ertesi gün ' + b.ad + ' başlangıç dozuyla başlayın.',
         b.ad + ' dozunu kendi şemasına göre titre edin; etkinin oturması haftalar alır.',
@@ -165,10 +166,10 @@
           'Klozapin etkin doza (genellikle ≥ 150–200 mg/gün) yaklaşınca ' + a.ad + ' dozunu 2–4 haftada azaltıp kesin.', 'Haftalık hemogram ve titrasyon boyunca nabız, KB, ateş izlemi.'],
         uyari: ['Örtüşme döneminde sedasyon, ortostatik hipotansiyon, QT uzaması ve nöbet eşiği düşmesi additiftir.', 'Eski ilaç uzun etkili depo ise bir sonraki enjeksiyon gününde klozapine başlanır.'] };
       if (var_(b, 'd2p')) return { tur: 'ortusme', p: { titr: 7, ortus: 14, azalt: 28 }, sure: '6–8 hafta',
-        adim: [b.id === 'aripiprazol' ? 'Aripiprazolü 2 mg (ergende 2–5 mg) ile ekleyin; 1–2 haftada hedef doza çıkın.' : b.ad + ' başlangıç dozuyla (' + b.ped.bas + ') ekleyin ve kendi şemasına göre hedef doza çıkın.',
+        adim: [b.id === 'aripiprazol' && K === 'ped' ? 'Aripiprazolü 2 mg (ergende 2–5 mg) ile ekleyin; 1–2 haftada hedef doza çıkın.' : b.ad + ' başlangıç dozuyla (' + b[K].bas + ') ekleyin ve kendi şemasına göre hedef doza çıkın.',
           a.ad + ' dozunu en az 2 hafta değiştirmeyin (' + b.ad + ' uzun yarı ömürlüdür; kararlı duruma ' + (b.id === 'aripiprazol' ? '2 haftada' : 'haftalar içinde') + ' ulaşır).',
           'Sonra ' + a.ad + ' dozunu 2–4 haftada (her 1–2 haftada %25–50) azaltıp kesin.', 'Akatizi, uykusuzluk ve ajitasyon açısından izleyin.'],
-        uyari: [b.ad + ' parsiyel agonisttir: güçlü D2 blokörlerinden (risperidon, haloperidol) hızlı geçişte geçici ajitasyon, uykusuzluk veya psikotik alevlenme olabilir.', 'Prolaktin düşer; adetler ve fertilite geri dönebilir (ergenlerde kontrasepsiyon danışmanlığı).'] };
+        uyari: [b.ad + ' parsiyel agonisttir: güçlü D2 blokörlerinden (risperidon, haloperidol) hızlı geçişte geçici ajitasyon, uykusuzluk veya psikotik alevlenme olabilir.', 'Prolaktin düşer; adetler ve fertilite geri dönebilir (' + (K === 'eri' ? 'kontrasepsiyon danışmanlığı verin' : 'ergenlerde kontrasepsiyon danışmanlığı') + ').'] };
       if (var_(a, 'antikol')) return { tur: 'capraz', p: { azalt: 28 }, sure: '4–6 hafta',
         adim: [b.ad + ' başlangıç dozuyla ekleyin ve kademeli artırın.', a.ad + ' dozunu her hafta %25 azaltın (yavaş azaltım rebound uykusuzluğu ve kolinerjik reboundu önler).',
           'Uyku bozulursa azaltımı yavaşlatın; kısa süreli uyku desteği düşünün.', 'Kilo, iştah ve EPS açısından yeniden değerlendirin.'],
@@ -277,7 +278,9 @@
 
   window.Degisim = {
     STRATEJI: STRATEJI,
-    planla: function (a, b) {
+    /* kitle: 'ped' (varsayılan) veya 'eri' — adımlarda hangi yaş grubunun dozunun yazılacağını belirler */
+    planla: function (a, b, kitle) {
+      K = kitle === 'eri' ? 'eri' : 'ped';
       var k = kural(a, b), e = egriler(k.tur, k.p);
       return {
         tur: k.tur, strateji: STRATEJI[k.tur], sure: k.sure, adim: k.adim, genel: !!k.genel,

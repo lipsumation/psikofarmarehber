@@ -97,7 +97,7 @@
 [data-tasarim="farmakope"] .alt strong { font-style: normal; font-variant-caps: all-small-caps; letter-spacing: .07em; color: var(--vurgu); }
 @media (max-width: 760px) {
   [data-tasarim="farmakope"] .ust-ic { padding: 10px 16px 0; gap: 10px; }
-  [data-tasarim="farmakope"] .marka { flex: 1; min-width: 0; font-size: 17px; }
+  [data-tasarim="farmakope"] .marka { font-size: 17px; }
   [data-tasarim="farmakope"] .tasarim-sec, [data-tasarim="farmakope"] #temaDugme { order: 2; }
   [data-tasarim="farmakope"] .gezinti { order: 3; flex: 1 0 100%; margin: 0 -16px; padding: 4px 6px 6px; flex-wrap: nowrap; overflow-x: auto;
     border-top: 1px solid var(--cizgi); scrollbar-width: none; }
@@ -236,3 +236,23 @@
 [data-tasarim="farmakope"] .esik { border-radius: 2px; background: transparent; border: 1px solid var(--cizgi); }
 [data-tasarim="farmakope"] .esik .deger { font-weight: 600; }
 [data-tasarim="farmakope"] .ipucu { border-radius: 2px; font-size: 13.5px; }
+
+/* ── hasta grubu seçici ve ilk açılış penceresi ── */
+:root[data-tasarim="farmakope"] { --marka-girinti: 42px; }
+[data-tasarim="farmakope"] .kitle-sec { border-radius: 3px; background: transparent; border-color: var(--kenar); }
+[data-tasarim="farmakope"] .kitle-sec button { border-radius: 2px; font-weight: 500; font-size: 12.5px; }
+[data-tasarim="farmakope"] .kitle-sec button[aria-checked="true"] { background: var(--vurgu); color: var(--zemin); box-shadow: none; font-style: italic; }
+[data-tasarim="farmakope"] .karsilama { background: rgba(30,22,14,.5); }
+[data-tasarim="farmakope"] .karsilama-ic { border-top: 3px solid var(--vurgu); padding: 30px 34px 24px; }
+[data-tasarim="farmakope"] .karsilama-bas { text-align: center; }
+[data-tasarim="farmakope"] .karsilama-bas h2 { font-size: 32px; font-weight: 600; }
+[data-tasarim="farmakope"] .karsilama-bas h2::after { content: "❦"; display: block; font-size: 18px; color: var(--vurgu); font-weight: 400; margin-top: 4px; }
+[data-tasarim="farmakope"] .karsilama-bas p { margin-left: auto; margin-right: auto; font-style: italic; font-size: 16px; }
+[data-tasarim="farmakope"] .karsilama-adim { font-size: 17px; font-weight: 600; border-bottom: 1px solid var(--murekkep); padding-bottom: 6px; }
+[data-tasarim="farmakope"] .kitle-kart, [data-tasarim="farmakope"] .tasarim-kart { border-radius: 2px; border: 1px solid var(--kenar); }
+[data-tasarim="farmakope"] .kitle-kart small, [data-tasarim="farmakope"] .tasarim-kart small { font-style: italic; font-size: 13px; }
+[data-tasarim="farmakope"] .kitle-kart[aria-checked="true"], [data-tasarim="farmakope"] .tasarim-kart[aria-checked="true"] { border-color: var(--vurgu); box-shadow: 0 0 0 1px var(--vurgu); background: var(--vurgu-zemin); }
+[data-tasarim="farmakope"] .kitle-simge { border-radius: 50%; background: var(--vurgu-zemin); color: var(--vurgu); }
+[data-tasarim="farmakope"] .karsilama-not { font-style: italic; }
+[data-tasarim="farmakope"] .karsilama-alt { border-top: 4px double var(--murekkep); }
+[data-tasarim="farmakope"] .karsilama-alt .kucuk { font-style: italic; }
