@@ -126,8 +126,12 @@
       (fark.length ? '<div class="alt-b">Türkiye KÜB\'ünde farklı olanlar</div><ul class="notlar tr-fark">' + fark.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '') +
       '<div class="kutular metin-kutular">' + dozlar.map(function (d) { return kutu(d[0], d[1]); }).join('') +
       kutu('Böbrek yetmezliği (KÜB)', t.organ.bobrek) + kutu('Karaciğer yetmezliği (KÜB)', t.organ.karaciger) + '</div>' +
-      '<p class="kucuk tr-satir">Kaynak: <a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.urun) + ' KÜB\'ü</a> · ' + esc(t.firma) + ' · KÜB onay tarihi ' + esc(t.tarih) +
-      '. Aynı etkin maddenin diğer ürünlerinde endikasyon ve formlar farklı olabilir; reçeteden önce güncel KÜB\'e bakın.</p>' +
+      (t.kaynaklar && t.kaynaklar.length
+        ? '<p class="kucuk tr-satir">Kaynak KÜB\'ler (her form için en güncel): ' + t.kaynaklar.map(function (k) {
+            return esc(k.form) + ': <a href="' + esc(k.url) + '" target="_blank" rel="noopener">' + esc(k.urun) + '</a> (' + esc(k.tarih) + ')';
+          }).join(' · ') + '. Aynı formun diğer ürünlerinde de ifadeler farklı olabilir; reçeteden önce ürünün güncel KÜB\'üne bakın.</p>'
+        : '<p class="kucuk tr-satir">Kaynak: <a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.urun) + ' KÜB\'ü</a> · ' + esc(t.firma) + ' · KÜB onay tarihi ' + esc(t.tarih) +
+          '. Aynı etkin maddenin diğer ürünlerinde endikasyon ve formlar farklı olabilir; reçeteden önce güncel KÜB\'e bakın.</p>') +
       (t.ek && t.ek.length ? '<p class="kucuk tr-satir">Kombinasyon ürünlerinin KÜB\'leri: ' + t.ek.map(function (e) {
         return '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.urun) + '</a> (' + esc(e.tarih) + ')';
       }).join(' · ') + '</p>' : '') + '</details>';
