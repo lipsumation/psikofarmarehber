@@ -2,8 +2,8 @@
 (function () {
   var SURDURUM_DD = [
     'Akut epizod sonrası en az 12–24 ay sürdürüm; yineleyen veya ağır epizodlarda daha uzun.',
-    'Kesme kararını stabil dönemde, aile ile birlikte ve nüks belirtileri eğitimi vererek alın.',
-    'Çocuk doğurma potansiyeli olan ergenlerde gebelik planı ve kontrasepsiyonu her yıl gözden geçirin.'
+    { ped: 'Kesme kararını stabil dönemde, aile ile birlikte ve nüks belirtileri eğitimi vererek alın.', eri: 'Kesme kararını stabil dönemde, hasta ve yakınlarıyla birlikte ve nüks belirtileri eğitimi vererek alın.' },
+    { ped: 'Çocuk doğurma potansiyeli olan ergenlerde gebelik planı ve kontrasepsiyonu her yıl gözden geçirin.', eri: 'Çocuk doğurma potansiyeli olan kadınlarda gebelik planını ve kontrasepsiyonu her yıl gözden geçirin.' }
   ];
 
   window.ILACLAR.push(
@@ -12,6 +12,7 @@
     mek: 'İnositol monofosfataz ve GSK-3 inhibisyonu dahil çoklu hücre içi etki. Bipolar bozuklukta akut mani ve sürdürümde altın standart; intihar riskini azaltır. Terapötik aralığı dardır.',
     t12: '18–24 saat (çocukta daha kısa)', t12s: 20, etki: 'Antimanik: 1–2 hafta', form: 'Lityum karbonat tablet / kapsül 300 mg (uzatılmış salımlı formlar)',
     onay: [['Bipolar I (akut mani ve sürdürüm)', '≥ 7 yaş']],
+    onayEri: [['Bipolar I (akut mani ve sürdürüm)']],
     ped: {
       bas: '20–30 kg: 300 mg ×2 · > 30 kg: 300 mg ×3', artis: '20–30 kg: haftada 300 mg · > 30 kg: 3 günde bir 300 mg (serum düzeyine göre)', hedef: 'Akut: 0,8–1,2 mEq/L · sürdürüm: 0,6–1,0 mEq/L', maks: 'Serum düzeyi 1,2 mEq/L\'yi geçmemeli',
       birim: 'mg/gün', adim: [[0, 900], [3, 1200], [8, 1500]], bant: [900, 1500], tavan: 1800,
@@ -32,9 +33,10 @@
   },
   {
     id: 'valproat', ad: 'Valproat', sinif: 'dd', altSinif: 'Duygudurum dengeleyici / antiepileptik', grup: 'dd',
-    mek: 'GABA düzeyini artırır, sodyum kanallarını bloke eder, histon deasetilazı inhibe eder. Akut manide etkilidir; pediatrik psikiyatrik onayı yoktur.',
+    mek: { ped: 'GABA düzeyini artırır, sodyum kanallarını bloke eder, histon deasetilazı inhibe eder. Akut manide etkilidir; pediatrik psikiyatrik onayı yoktur.', eri: 'GABA düzeyini artırır, sodyum kanallarını bloke eder, histon deasetilazı inhibe eder. Akut manide etkilidir. Teratojenite nedeniyle çocuk doğurma potansiyeli olan kadınlarda gebelik önleme programı olmadan kullanılmaz.' },
     t12: '9–16 saat', t12s: 12, etki: 'Antimanik: 5–10 gün', form: 'Enterik tablet 250 / 500 mg; uzatılmış salımlı tablet 500 mg; şurup / solüsyon',
     onay: [], onayNot: 'Psikiyatrik endikasyonda pediatrik onay yok (epilepside onaylı)',
+    onayEri: [['Bipolar mani'], ['Epilepsi'], ['Migren profilaksisi']],
     ped: {
       bas: '10–15 mg/kg/gün (2 doza bölünmüş)', artis: 'Haftada 5–10 mg/kg/gün', hedef: 'Serum düzeyi 50–100 µg/mL (akut manide 85–125)', maks: '60 mg/kg/gün',
       birim: 'mg/kg/gün', adim: [[0, 15], [7, 20], [14, 25], [21, 30]], bant: [20, 30], tavan: 60,
@@ -44,7 +46,7 @@
       bas: '750 mg/gün (bölünmüş) veya 20 mg/kg/gün', artis: '2–3 günde bir 250–500 mg', hedef: 'Serum düzeyi 50–125 µg/mL (1000–2000 mg/gün)', maks: '60 mg/kg/gün',
       birim: 'mg/gün', adim: [[0, 750], [3, 1000], [7, 1250], [14, 1500]], bant: [1000, 2000], tavan: 2500, not: []
     },
-    surdurum: SURDURUM_DD.concat(['Stabil dönemde 6–12 ayda bir KCFT, tam kan ve gerektiğinde düzey.', 'Kız ergenlerde adet düzeni, kilo ve hirsutizmi her vizitte sorun.']),
+    surdurum: SURDURUM_DD.concat(['Stabil dönemde 6–12 ayda bir KCFT, tam kan ve gerektiğinde düzey.', { ped: 'Kız ergenlerde adet düzeni, kilo ve hirsutizmi her vizitte sorun.', eri: 'Kadınlarda adet düzeni, kilo ve hirsutizmi her vizitte sorun (polikistik over sendromu).' }]),
     kesme: { risk: 2, sure: 'En az 4 hafta', adim: [[0, 100], [7, 75], [14, 50], [21, 25], [28, 0]],
       not: ['Haftada dozun yaklaşık %25\'i kadar azaltın.', 'Epilepsi eş tanısında nöroloji ile birlikte ve çok daha yavaş (aylar içinde).', 'Ani kesmede duygudurum nüksü ve nöbet riski.'] },
     izlem: 'valproat', profil: { sed: 2, kilo: 3, gis: 2, eps: 0, kes: 2 },
@@ -58,6 +60,7 @@
     mek: 'Sodyum kanal blokajı ile glutamat salınımını azaltır. Bipolar depresyonun önlenmesinde etkilidir; akut manide etkisizdir. Metabolik ve bilişsel profili elverişlidir.',
     t12: '25–33 saat (valproat ile ~70, indükleyici ile ~13 saat)', t12s: 29, etki: 'Hedef doza ulaşım 6 hafta; etki haftalar–aylar', form: 'Tablet / çiğneme–suda dağılan tablet 25 / 50 / 100 / 200 mg',
     onay: [], onayNot: 'Bipolar sürdürüm ≥ 18 yaş; epilepside ≥ 2 yaş',
+    onayEri: [['Bipolar I sürdürüm'], ['Epilepsi']],
     endikasyon: [
       ['Monoterapi (≥ 12 yaş)', '25 mg/gün', '200 mg/gün', '1–2. hf 25 mg · 3–4. hf 50 mg · 5. hf 100 mg · 6. hf 200 mg'],
       ['Valproat ile birlikte', '25 mg gün aşırı', '100 mg/gün', '1–2. hf 25 mg gün aşırı · 3–4. hf 25 mg · 5. hf 50 mg · 6. hf 100 mg'],
@@ -83,9 +86,10 @@
   },
   {
     id: 'karbamazepin', ad: 'Karbamazepin', sinif: 'dd', altSinif: 'Duygudurum dengeleyici / antiepileptik', grup: 'dd',
-    mek: 'Sodyum kanal blokeri. Güçlü enzim indükleyicisi olduğundan etkileşimleri fazladır; pediatrik bipolar bozuklukta kanıtı zayıftır, ikinci–üçüncü basamak.',
+    mek: { ped: 'Sodyum kanal blokeri. Güçlü enzim indükleyicisi olduğundan etkileşimleri fazladır; pediatrik bipolar bozuklukta kanıtı zayıftır, ikinci–üçüncü basamak.', eri: 'Sodyum kanal blokeri. Güçlü enzim indükleyicisi olduğundan etkileşimleri fazladır; bipolar bozuklukta ikinci basamaktır.' },
     t12: 'Başlangıç 25–65 saat; otoindüksiyon sonrası 12–17 saat', t12s: 15, etki: 'Antimanik: 1–2 hafta', form: 'Tablet 200 / 400 mg; kontrollü salımlı tablet 200 / 400 mg; süspansiyon 100 mg/5 mL',
     onay: [], onayNot: 'Psikiyatrik endikasyonda pediatrik onay yok (epilepside onaylı)',
+    onayEri: [['Bipolar I mani / karma dönem', 'uzatılmış salımlı kapsül'], ['Epilepsi'], ['Trigeminal nevralji']],
     ped: {
       bas: '6–12 yaş: 100 mg ×2 · > 12 yaş: 200 mg ×2', artis: 'Haftada bir 100 mg (6–12 yaş) / 200 mg (> 12 yaş)', hedef: '6–12 yaş: 400–800 mg/gün · > 12 yaş: 800–1200 mg/gün (düzey 4–12 µg/mL)', maks: '6–12 yaş: 1000 mg · 13–15 yaş: 1000 mg · > 15 yaş: 1200 mg/gün',
       birim: 'mg/gün', adim: [[0, 200], [7, 300], [14, 400], [21, 600]], bant: [400, 800], tavan: 1000,
@@ -106,9 +110,10 @@
   },
   {
     id: 'okskarbazepin', ad: 'Okskarbazepin', sinif: 'dd', altSinif: 'Duygudurum dengeleyici (antiepileptik)', grup: 'dd',
-    mek: 'Karbamazepinin keto türevi; voltaja bağlı sodyum kanallarını bloke eder. Enzim indüksiyonu ve kan tablosu üzerine etkisi karbamazepinden az, hiponatremi riski daha fazladır. Pediatrik bipolar manide plaseboya üstünlük gösterilememiştir; karbamazepini tolere edemeyenlerde düşünülür.',
+    mek: { ped: 'Karbamazepinin keto türevi; voltaja bağlı sodyum kanallarını bloke eder. Enzim indüksiyonu ve kan tablosu üzerine etkisi karbamazepinden az, hiponatremi riski daha fazladır. Pediatrik bipolar manide plaseboya üstünlük gösterilememiştir; karbamazepini tolere edemeyenlerde düşünülür.', eri: 'Karbamazepinin keto türevi; voltaja bağlı sodyum kanallarını bloke eder. Enzim indüksiyonu ve kan tablosu üzerine etkisi karbamazepinden az, hiponatremi riski (özellikle yaşlıda) daha fazladır. Bipolar bozuklukta kanıtı sınırlıdır; karbamazepini tolere edemeyenlerde düşünülür.' },
     t12: 'Ön ilaç 2 saat; aktif metabolit ~9 saat', t12s: 9, etki: '1–2 hafta', form: 'Tablet 150 / 300 / 600 mg; oral süspansiyon 60 mg/mL',
     onay: [], onayNot: 'Psikiyatrik endikasyonda pediatrik onay yok (epilepside ≥ 4 yaş onaylı)',
+    onayEri: [], onayEriNot: 'Psikiyatrik endikasyonda onay yok · bipolar bozuklukta endikasyon dışı (epilepside onaylı)',
     ped: {
       bas: '8–10 mg/kg/gün, ikiye bölünmüş (en fazla 600 mg/gün)', artis: 'Haftada bir 5–10 mg/kg/gün (150–300 mg)', hedef: '20–30 mg/kg/gün (900–1800 mg/gün)', maks: 'Kiloya göre 900–2100 mg/gün',
       birim: 'mg/gün', adim: [[0, 300], [7, 600], [14, 900], [21, 1200]], bant: [900, 1800], tavan: 2100,
@@ -132,6 +137,7 @@
     mek: 'MT1/MT2 reseptör agonisti; uykuya dalmayı kolaylaştırır ve sirkadiyen fazı öne çeker. Otizm ve DEHB\'de uykuya dalma güçlüğünde davranışsal önlemlerden sonra ilk seçenek.',
     t12: '30–60 dakika (uzatılmış salımlı formda etki 8–10 saat)', t12s: 0.8, etki: '30–60 dakika; faz kaydırma 1–2 hafta', form: 'Tablet 1 / 3 / 5 mg; damla; uzatılmış salımlı mini tablet 1 / 5 mg',
     onay: [['Otizmde uykusuzluk (uzatılmış salımlı form, Avrupa)', '2–18 yaş']],
+    onayEri: [['Primer uykusuzluk', '≥ 55 yaş, uzatılmış salımlı, kısa süreli · Avrupa']],
     ped: {
       bas: '0,5–1 mg (yatmadan 30–60 dk önce)', artis: '1–2 haftada bir 0,5–1 mg', hedef: '1–5 mg/gece', maks: '10 mg/gece',
       birim: 'mg/gece', adim: [[0, 1], [14, 2], [28, 3], [42, 5]], bant: [1, 5], tavan: 10,
@@ -141,7 +147,7 @@
       bas: '1–2 mg (yatmadan 1–2 saat önce)', artis: 'Gerekirse 1–2 haftada', hedef: '2–5 mg/gece', maks: '10 mg/gece',
       birim: 'mg/gece', adim: [[0, 2], [14, 3], [28, 5]], bant: [2, 5], tavan: 10, not: []
     },
-    surdurum: ['3–6 ayda bir gerekliliği gözden geçirin; uyku düzeni oturduysa ilaçsız dönem deneyin (tercihen tatil döneminde).', 'Uzun süreli (2 yıla dek) kullanım verileri büyüme ve puberte açısından güven vericidir; yine de yıllık izleyin.'],
+    surdurum: ['3–6 ayda bir gerekliliği gözden geçirin; uyku düzeni oturduysa ilaçsız dönem deneyin (tercihen tatil döneminde).', { ped: 'Uzun süreli (2 yıla dek) kullanım verileri büyüme ve puberte açısından güven vericidir; yine de yıllık izleyin.', eri: null }],
     kesme: { risk: 0, sure: 'Kademeli azaltım gerekmez', adim: [[0, 100], [7, 0]], not: ['Doğrudan kesilebilir; bağımlılık veya kesilme sendromu yapmaz.', 'Uyku sorunu yinelerse aynı dozla yeniden başlanabilir.'] },
     izlem: 'melatonin', profil: { sed: 1, kilo: 0, gis: 0, akt: 0, kes: 0 },
     uyari: ['Sabah sersemliği, baş ağrısı', 'Canlı rüyalar, nadiren enürezis', 'Takviye ürünlerde içerik ve doz tutarsızlığı olabilir; ilaç formunu tercih edin'],
@@ -153,6 +159,7 @@
     mek: 'Birinci kuşak H1 antagonisti; sedatif ve anksiyolitik etki. Bağımlılık potansiyeli yoktur; kısa süreli anksiyete ve uyku sorunlarında kullanılır.',
     t12: 'Çocukta ~7 saat; erişkinde ~20 saat', t12s: 10, etki: '15–30 dakika', form: 'Tablet 25 mg; şurup 10 mg/5 mL',
     onay: [['Anksiyete, sedasyon, kaşıntı', 'Çocuklarda onaylı']],
+    onayEri: [['Anksiyete (semptomatik)'], ['Kaşıntı'], ['Premedikasyonda sedasyon']],
     ped: {
       bas: '0,5 mg/kg/doz (genellikle 10–12,5 mg, gece)', artis: 'Gerekirse günde 2–3 doza', hedef: '1–2 mg/kg/gün (bölünmüş)', maks: '≤ 40 kg: 2 mg/kg/gün · > 40 kg: 100 mg/gün',
       birim: 'mg/gün', adim: [[0, 12.5], [3, 25], [7, 50]], bant: [25, 50], tavan: 100,
@@ -165,15 +172,16 @@
     surdurum: ['Kısa süreli (günler–birkaç hafta) kullanım için uygundur.', 'Süregelen anksiyetede SSRI ve psikoterapi planlayın.'],
     kesme: { risk: 0, sure: 'Kademeli azaltım gerekmez', adim: [[0, 100], [7, 0]], not: ['Doğrudan kesilebilir; uzun süreli düzenli kullanımda birkaç günde azaltmak rebound uykusuzluğu önler.'] },
     izlem: 'hidroksizin', profil: { sed: 3, kilo: 1, ach: 2, qt: 2, kes: 0 },
-    uyari: ['Sedasyon, dikkat ve okul performansında azalma', 'QT uzaması: uzun QT sendromu ve risk faktörlerinde kontrendike', 'Ağız kuruluğu, kabızlık, idrar retansiyonu', 'Paradoksal ajitasyon'],
+    uyari: [{ ped: 'Sedasyon, dikkat ve okul performansında azalma', eri: 'Sedasyon, dikkat ve psikomotor performansta azalma; yaşlıda antikolinerjik etki ve konfüzyon' }, 'QT uzaması: uzun QT sendromu ve risk faktörlerinde kontrendike', 'Ağız kuruluğu, kabızlık, idrar retansiyonu', 'Paradoksal ajitasyon'],
     etkilesim: ['QT uzatan ilaçlarla (sitalopram, ziprasidon, makrolidler) birlikte kullanmayın', 'Alkol ve diğer sedatiflerle additif etki', 'Antikolinerjik yükü artırır'],
     oz: ['qt', 'antikol']
   },
   {
     id: 'klonazepam', ad: 'Klonazepam', sinif: 'anks', altSinif: 'Benzodiazepin (uzun etkili)', grup: 'benzo',
-    mek: 'GABA-A reseptörü pozitif allosterik modülatörü. Çocuk ve ergenlerde anksiyetede kanıtı zayıftır; ağır anksiyete/panikte SSRI etkisi başlayana dek kısa süreli köprü veya katatonide kullanılır.',
+    mek: { ped: 'GABA-A reseptörü pozitif allosterik modülatörü. Çocuk ve ergenlerde anksiyetede kanıtı zayıftır; ağır anksiyete/panikte SSRI etkisi başlayana dek kısa süreli köprü veya katatonide kullanılır.', eri: 'GABA-A reseptörü pozitif allosterik modülatörü. Panik bozuklukta onaylıdır; uzun yarı ömrü nedeniyle doz arası rebound azdır. Bağımlılık riski nedeniyle kısa süreli veya köprü tedavi olarak tercih edilir.' },
     t12: '30–40 saat', t12s: 35, etki: '20–60 dakika', form: 'Tablet 0,5 / 2 mg; damla 2,5 mg/mL',
     onay: [], onayNot: 'Psikiyatrik endikasyonda pediatrik onay yok (epilepside onaylı)',
+    onayEri: [['Panik bozukluk'], ['Epilepsi']],
     ped: {
       bas: '0,25 mg (gece) veya 0,01 mg/kg/gün', artis: '3–7 günde bir 0,25 mg', hedef: '0,25–1 mg/gün (2 doza bölünmüş)', maks: 'Anksiyetede genellikle ≤ 2 mg/gün',
       birim: 'mg/gün', adim: [[0, 0.25], [4, 0.5], [10, 1]], bant: [0.25, 1], tavan: 2,
@@ -188,7 +196,7 @@
       not: ['Her 1–2 haftada dozun %10–25\'i kadar azaltın; son basamakları daha küçük tutun.', 'Ani kesme nöbet, rebound anksiyete, uykusuzluk, tremor ve deliryuma yol açabilir.', '4 haftadan kısa kullanımda 1–2 haftalık azaltım yeterlidir.'] },
     izlem: 'benzo', profil: { sed: 3, kilo: 0, gis: 0, akt: 0, kes: 3 },
     kutu: 'Kötüye kullanım, bağımlılık ve kesilme reaksiyonları; opioidlerle birlikte kullanımda solunum depresyonu ve ölüm riski.',
-    uyari: ['Sedasyon, ataksi, bilişsel yavaşlama', 'Paradoksal disinhibisyon', 'Tolerans ve bağımlılık', 'Siyalore (küçük çocuklar)'],
+    uyari: ['Sedasyon, ataksi, bilişsel yavaşlama', 'Paradoksal disinhibisyon', 'Tolerans ve bağımlılık', { ped: 'Siyalore (küçük çocuklar)', eri: null }],
     etkilesim: ['Opioid, alkol ve diğer sedatiflerle solunum depresyonu', 'CYP3A4 inhibitörleri düzeyi artırır; karbamazepin düşürür', 'Klozapin başlangıcında birlikte kullanımda dikkat'],
     oz: ['benzo']
   },
@@ -197,6 +205,7 @@
     mek: 'GABA-A reseptörü pozitif allosterik modülatörü; aktif metaboliti yoktur, glukuronidasyonla atılır. Akut ajitasyon ve katatonide ilk seçenek benzodiazepin.',
     t12: '10–20 saat', t12s: 14, etki: 'Oral 30–60 dk; dilaltı/IM daha hızlı', form: 'Tablet 1 / 2,5 mg',
     onay: [], onayNot: 'Anksiyetede ≥ 12 yaş (FDA)',
+    onayEri: [['Anksiyete bozuklukları'], ['Status epileptikus', 'parenteral']],
     ped: {
       bas: 'Anksiyete: 0,25–0,5 mg ×1–2 · akut ajitasyon: 0,05–0,1 mg/kg/doz', artis: 'Yanıta göre 2–3 günde bir', hedef: 'Anksiyete: 0,5–2 mg/gün (bölünmüş) · katatoni: 3–8 mg/gün', maks: 'Akut ajitasyon: 2 mg/doz · anksiyete: genellikle ≤ 4 mg/gün',
       birim: 'mg/gün', adim: [[0, 0.5], [3, 1], [7, 2]], bant: [0.5, 2], tavan: 4,
@@ -217,9 +226,10 @@
   },
   {
     id: 'buspiron', ad: 'Buspiron', sinif: 'anks', altSinif: 'Azapiron anksiyolitik', grup: 'diger',
-    mek: '5-HT1A parsiyel agonisti. Sedasyon ve bağımlılık yapmaz; pediatrik yaygın anksiyete çalışmalarında plaseboya üstünlük gösterilememiştir, SSRI\'lara ek veya alternatif olarak kullanılır.',
+    mek: { ped: '5-HT1A parsiyel agonisti. Sedasyon ve bağımlılık yapmaz; pediatrik yaygın anksiyete çalışmalarında plaseboya üstünlük gösterilememiştir, SSRI\'lara ek veya alternatif olarak kullanılır.', eri: '5-HT1A parsiyel agonisti. Sedasyon ve bağımlılık yapmaz; yaygın anksiyetede etkilidir, etkisi 2–4 haftada başlar. Panik bozuklukta etkisizdir.' },
     t12: '2–3 saat', t12s: 2.5, etki: '2–4 hafta', form: 'Tablet 5 / 10 mg',
     onay: [], onayNot: 'Pediatrik etkinlik gösterilememiştir',
+    onayEri: [['Anksiyete bozuklukları']],
     ped: {
       bas: 'Çocuk: 2,5–5 mg ×2 · ergen: 5 mg ×2', artis: 'Haftada bir 5–10 mg/gün', hedef: '15–30 mg/gün (2–3 doza bölünmüş)', maks: '60 mg/gün',
       birim: 'mg/gün', adim: [[0, 10], [7, 15], [14, 20], [28, 30]], bant: [15, 30], tavan: 60,
@@ -241,6 +251,7 @@
     mek: 'GABA-A reseptörü pozitif allosterik modülatörü. Hızlı başlangıçlı ve uzun etkilidir; aktif metabolitleri günlerce dolaşımda kalır. Uzun yarı ömrü nedeniyle diğer benzodiazepinlerden çıkışta ara basamak olarak kullanılır.',
     t12: '20–50 saat (aktif metabolit 36–200 saat)', t12s: 48, etki: 'Oral 15–60 dakika', form: 'Tablet 2 / 5 / 10 mg; ampul 10 mg; rektal tüp 5 / 10 mg',
     onay: [['Anksiyete, kas spazmı, nöbette ek tedavi', '≥ 6 ay']],
+    onayEri: [['Anksiyete bozuklukları'], ['Alkol yoksunluğu'], ['Kas spazmı'], ['Nöbetlerde ek tedavi']],
     ped: {
       bas: '1–2,5 mg ×2–3 (0,1–0,3 mg/kg/gün, bölünmüş)', artis: 'Yanıta göre 3–4 günde bir kademeli', hedef: 'Çocuk: 2–10 mg/gün · ergen: 4–20 mg/gün (bölünmüş)', maks: '0,8 mg/kg/gün; ergende 30 mg/gün',
       birim: 'mg/gün', adim: [[0, 3], [4, 6], [8, 10]], bant: [3, 10], tavan: 30,
@@ -255,7 +266,7 @@
       not: ['Her 1–2 haftada dozun %10–25\'i kadar azaltın; son basamakları daha yavaş inin.', 'Uzun yarı ömür azaltımı kolaylaştırır: kesilme belirtileri geç (5–10. gün) başlar ve daha hafif seyreder.', 'Ani kesmede nöbet riski.'] },
     izlem: 'benzo', profil: { sed: 3, kilo: 0, gis: 0, akt: 0, kes: 3 },
     kutu: 'Kötüye kullanım, bağımlılık ve kesilme reaksiyonları; opioidlerle birlikte kullanımda solunum depresyonu ve ölüm riski.',
-    uyari: ['Sedasyon, ataksi, anterograd amnezi', 'Paradoksal disinhibisyon', 'Birikime bağlı gündüz uyuklaması, okul performansında düşme', 'Tolerans ve bağımlılık', 'Solunum depresyonu (parenteral/yüksek doz)'],
+    uyari: ['Sedasyon, ataksi, anterograd amnezi', 'Paradoksal disinhibisyon', { ped: 'Birikime bağlı gündüz uyuklaması, okul performansında düşme', eri: 'Birikime bağlı gündüz uyuklaması (özellikle yaşlıda), düşme riski' }, 'Tolerans ve bağımlılık', 'Solunum depresyonu (parenteral/yüksek doz)'],
     etkilesim: ['Opioid, alkol ve diğer sedatiflerle solunum depresyonu', 'Fluvoksamin, fluoksetin, omeprazol (CYP2C19) düzeyi artırır', 'Güçlü CYP3A4 inhibitörleri düzeyi artırır', 'Karbamazepin, fenitoin, rifampisin düzeyi düşürür'],
     oz: ['benzo', 'uzun']
   },
@@ -264,6 +275,7 @@
     mek: 'GABA-A reseptörü pozitif allosterik modülatörü; panik bozuklukta etkilidir. Hızlı başlangıç ve kısa etki süresi nedeniyle doz arası rebound anksiyete ve bağımlılık riski diğer benzodiazepinlerden yüksektir.',
     t12: '11 saat (6–27 saat)', t12s: 11, etki: '15–60 dakika', form: 'Tablet 0,25 / 0,5 / 1 mg',
     onay: [], onayNot: 'Pediatrik onay yok · endikasyon dışı',
+    onayEri: [['Yaygın anksiyete'], ['Panik bozukluk']],
     ped: {
       bas: '0,125–0,25 mg ×2–3 (ergen)', artis: '3–4 günde bir 0,125–0,25 mg', hedef: '0,5–1,5 mg/gün (bölünmüş)', maks: '2 mg/gün',
       birim: 'mg/gün', adim: [[0, 0.5], [4, 0.75], [8, 1]], bant: [0.5, 1.5], tavan: 2,
@@ -287,6 +299,7 @@
     mek: 'Voltaja bağlı kalsiyum kanallarının alfa-2-delta alt birimine bağlanır; uyarıcı nörotransmitter salınımını azaltır. Erişkinde yaygın anksiyete bozukluğunda etkilidir, etkisi ilk haftada başlar. Metabolize olmaz, böbrekle atılır. Kötüye kullanım potansiyeli vardır.',
     t12: '~6 saat', t12s: 6, etki: '1 hafta', form: 'Kapsül 25 / 75 / 150 / 300 mg; oral solüsyon 20 mg/mL',
     onay: [], onayNot: 'Anksiyetede pediatrik onay yok · endikasyon dışı',
+    onayEri: [['Yaygın anksiyete', 'Avrupa; ABD\'de onaysız'], ['Nöropatik ağrı'], ['Fibromiyalji', 'ABD'], ['Epilepside ek tedavi']],
     ped: {
       bas: '25–50 mg ×2 (ergen)', artis: 'Haftada bir 50–75 mg/gün', hedef: '150–300 mg/gün (2–3 doza bölünmüş)', maks: '300 mg/gün',
       birim: 'mg/gün', adim: [[0, 75], [7, 150], [14, 225], [21, 300]], bant: [150, 300], tavan: 300,

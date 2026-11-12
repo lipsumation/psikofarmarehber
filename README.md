@@ -1,16 +1,16 @@
 # Psikofarmakoloji Rehberi
 
-Psikiyatrik ilaçların başlanması, titrasyonu, sürdürümü, kesilmesi ve başka ilaca geçişi için hazırlanmış, hekimlere yönelik bir karar destek ve eğitim uygulaması. Çocuk ve ergenlerde kullanım bilgisi ayrı olarak öne çıkarılmıştır.
+Psikiyatrik ilaçların başlanması, titrasyonu, sürdürümü, kesilmesi ve başka ilaca geçişi için hazırlanmış, hekimlere yönelik bir karar destek ve eğitim uygulaması. Çocuk-ergen ve erişkin psikiyatrisi için iki ayrı görünümü vardır.
 
 **Canlı sürüm:** https://lipsumation.github.io/psikofarmarehber/
 
-> **Önemli uyarı:** Bu uygulama klinik değerlendirmenin, güncel Kısa Ürün Bilgisi'nin (KÜB) ve kılavuzların yerini tutmaz. İçerikteki dozlar genel literatür aralıklarıdır ve güncel KÜB ile tek tek karşılaştırılarak doğrulanmamıştır. Pediatrik onay bilgileri ağırlıklı olarak FDA etiketlerine dayanır; Türkiye'deki ruhsat ve endikasyon dışı kullanım koşulları ayrıca kontrol edilmelidir. Hastalar için tıbbi tavsiye niteliği taşımaz.
+> **Önemli uyarı:** Bu uygulama klinik değerlendirmenin, güncel Kısa Ürün Bilgisi'nin (KÜB) ve kılavuzların yerini tutmaz. İçerikteki dozlar genel literatür aralıklarıdır ve güncel KÜB ile tek tek karşılaştırılarak doğrulanmamıştır. Pediatrik ve erişkin onay bilgileri ağırlıklı olarak FDA etiketlerine (belirtilenlerde Avrupa onayına) dayanır; Türkiye'deki ruhsat ve endikasyon dışı kullanım koşulları ayrıca kontrol edilmelidir. Hastalar için tıbbi tavsiye niteliği taşımaz.
 
 ## İçerik
 
 | Sayfa | Ne gösterir |
 |---|---|
-| **İlaçlar** | 55 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları). Her ilaç için başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili, uyarılar, metabolizma ve eliminasyon (yıkım enzimleri, aktif metabolit, atılım yolu, organ yetmezliğinde doz). |
+| **İlaçlar** | 55 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları). Her ilaç için onay durumu (çocuk-ergende onay yaşları, erişkinde onaylı endikasyonlar), başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili, uyarılar, metabolizma ve eliminasyon (yıkım enzimleri, aktif metabolit, atılım yolu, organ yetmezliğinde doz). |
 | **Metabolizma (CYP)** | Tüm ilaçların CYP ve UGT enzimleriyle ilişkisini gösteren harita (substrat, inhibitör, indükleyici). Enzim seçildiğinde o enzimin substratları, inhibitörleri, indükleyicileri ve rehber dışı etkenler (sigara, greyfurt suyu, antibiyotikler vb.) listelenir. Böbrekle değişmeden atılan ilaçlar ve organ yetmezliğinde doz çizelgesi. |
 | **İlaç Değişimi** | İki ilaç seçildiğinde geçiş stratejisini (doğrudan, çapraz, yıkama aralıklı, örtüşmeli), haftalık zaman çizelgesini ve etkileşim uyarılarını (CYP inhibisyonu dahil) gösterir. |
 | **Uzun Etkili (Depo)** | 8 uzun etkili enjektabl antipsikotik: başlama şeması, oral örtüşme süresi, oral dozdan dönüşüm tabloları, kaçırılan doz kuralları. |
@@ -18,6 +18,20 @@ Psikiyatrik ilaçların başlanması, titrasyonu, sürdürümü, kesilmesi ve ba
 | **Genel İlkeler** | Başlama akış şeması, pediatrik ilkeler, antidepresan tedavi evreleri, kesilme belirtileri, yarı ömür karşılaştırması, acil durumlar. |
 
 Açık ve koyu tema desteklenir; sayfalar telefon ekranında da kullanılabilir.
+
+## Çocuk-ergen ve erişkin görünümü
+
+İlk açılışta hasta grubu (çocuk-ergen ya da erişkin) ve tasarım seçilir. Hasta grubu sonradan marka adının altındaki seçiciden değiştirilebilir; seçim tarayıcıda saklanır. Bağlantıya `?kitle=eri` ya da `?kitle=ped` eklenerek belirli görünüm paylaşılabilir (ör. `?kitle=eri&tasarim=bauhaus`).
+
+| | Çocuk-ergen | Erişkin |
+|---|---|---|
+| **İlaç kartı ve sayfası** | Çocuk/ergen başlangıç dozu, FDA onay yaşları | Erişkin başlangıç dozu, onaylı endikasyonlar (çocuk-ergen onayı kısa satır olarak) |
+| **Doz sekmesi** | Önce çocuk/ergen şeması | Önce erişkin şeması (diğeri her zaman bir tık uzakta) |
+| **Tetkik ve izlem** | Boy, büyüme eğrisi, aile/öğretmen ölçekleri | Kilo/BKİ, metabolik izlem aralıkları, cinsel işlev, düşme riski, erişkin ölçekleri |
+| **Uyarılar** | Pediatrik kara kutu ve çocuklara özgü riskler | Erişkin kara kutu uyarıları (ör. demansta antipsikotik), ileri yaş notları |
+| **Genel İlkeler** | Pediatrik başlama akışı ve ilkeler | Erişkin başlama akışı; ileri yaş, gebelik/emzirme, eş hastalık ve çoklu ilaç ilkeleri |
+
+Veri dosyalarında bir metin `{ ped: '…', eri: '…' }` biçiminde iki sürüm taşıyabilir; `eri: null` o öğeyi erişkin görünümünde gizler. Sürümü yazılmamış metinler iki görünümde de aynıdır.
 
 ## Tasarımlar
 

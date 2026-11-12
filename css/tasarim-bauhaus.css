@@ -155,7 +155,7 @@
 /* telefon: marka + düğmeler tek satır, gezinti yatay kaydırmalı şerit */
 @media (max-width: 760px) {
   [data-tasarim="bauhaus"] .ust-ic { padding: 10px 16px 0; gap: 10px; }
-  [data-tasarim="bauhaus"] .marka { flex: 1; min-width: 0; font-size: 14px; gap: 9px; }
+  [data-tasarim="bauhaus"] .marka { font-size: 14px; gap: 9px; }
   [data-tasarim="bauhaus"] .marka span { overflow: hidden; text-overflow: ellipsis; }
   [data-tasarim="bauhaus"] .marka .marka-bh { width: 30px; height: 30px; }
   [data-tasarim="bauhaus"] .tasarim-sec, [data-tasarim="bauhaus"] #temaDugme { order: 2; }
@@ -471,6 +471,31 @@
 }
 :root[data-tasarim="bauhaus"][data-theme="dark"] .dongu-adim:nth-child(4) .dongu-simge { background: var(--murekkep); color: #111; }
 :root[data-tasarim="bauhaus"][data-theme="dark"] .grafik-kutu svg path { filter: none; }
+
+/* ── hasta grubu seçici ve ilk açılış penceresi ── */
+:root[data-tasarim="bauhaus"] { --marka-girinti: 46px; }
+@media (max-width: 760px) { :root[data-tasarim="bauhaus"] { --marka-girinti: 39px; } }
+[data-tasarim="bauhaus"] .kitle-sec { border: 2px solid var(--kontur); border-radius: 0; padding: 0; gap: 0; background: var(--yuzey); }
+[data-tasarim="bauhaus"] .kitle-sec button { border-radius: 0; font-family: var(--bh-font); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: 11px; padding: 2px 8px; color: var(--murekkep); }
+[data-tasarim="bauhaus"] .kitle-sec button + button { border-left: 2px solid var(--kontur); }
+[data-tasarim="bauhaus"] .kitle-sec button[aria-checked="true"] { background: var(--murekkep); color: var(--yuzey); box-shadow: none; }
+[data-tasarim="bauhaus"] .karsilama { background: color-mix(in srgb, var(--zemin) 40%, rgba(17,17,17,.6)); backdrop-filter: none; }
+[data-tasarim="bauhaus"] .karsilama-ic { box-shadow: 10px 10px 0 var(--golge-renk); border-width: 3px; }
+[data-tasarim="bauhaus"] .karsilama-bas h2 { font-family: var(--bh-font); font-weight: 800; text-transform: uppercase; font-size: 30px; line-height: 1; }
+[data-tasarim="bauhaus"] .karsilama-bas h2::after { content: ""; display: block; width: 110px; height: 9px; margin-top: 10px; border: 2.5px solid var(--kontur);
+  background: linear-gradient(90deg, var(--bh-kirmizi) 0 33.34%, var(--bh-sari) 0 66.67%, var(--bh-mavi) 0); }
+[data-tasarim="bauhaus"] .karsilama-adim { font-family: var(--bh-font); font-weight: 800; text-transform: uppercase; letter-spacing: .03em; }
+[data-tasarim="bauhaus"] .kitle-kart, [data-tasarim="bauhaus"] .tasarim-kart { border-radius: 0; border: 2.5px solid var(--kontur); box-shadow: 4px 4px 0 var(--golge-renk); transition: transform .08s, box-shadow .08s; }
+[data-tasarim="bauhaus"] .kitle-kart b, [data-tasarim="bauhaus"] .tasarim-kart b { font-family: var(--bh-font); font-weight: 800; }
+[data-tasarim="bauhaus"] .kitle-kart:hover, [data-tasarim="bauhaus"] .tasarim-kart:hover { border-color: var(--kontur); transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--golge-renk); }
+[data-tasarim="bauhaus"] .kitle-kart[aria-checked="true"], [data-tasarim="bauhaus"] .tasarim-kart[aria-checked="true"] { border-color: var(--kontur); background: var(--bh-sari); color: #111; transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--golge-renk); }
+[data-tasarim="bauhaus"] .kitle-kart[aria-checked="true"] small, [data-tasarim="bauhaus"] .tasarim-kart[aria-checked="true"] small { color: #3b3832; }
+[data-tasarim="bauhaus"] .kitle-simge { border-radius: 50%; border: 2.5px solid var(--kontur); background: var(--bh-kirmizi); color: #fff; }
+[data-tasarim="bauhaus"] .kitle-kart[data-kitle="eri"] .kitle-simge { border-radius: 0; background: var(--bh-mavi); }
+[data-tasarim="bauhaus"] .karsilama-alt { border-top: 2.5px solid var(--kontur); }
+[data-tasarim="bauhaus"] .karsilama-tamam.cip.aktif { transform: none; box-shadow: 4px 4px 0 var(--golge-renk); background: var(--bh-kirmizi); color: #fff; text-transform: uppercase; letter-spacing: .04em; font-family: var(--bh-font); font-weight: 800; }
+[data-tasarim="bauhaus"] .karsilama-tamam.cip.aktif:disabled { background: var(--yuzey-2); color: var(--soluk); box-shadow: none; opacity: 1; }
+[data-tasarim="bauhaus"] .ped-ozet { margin-top: -6px; }
 
 @media print {
   [data-tasarim="bauhaus"] .kart { box-shadow: none; }

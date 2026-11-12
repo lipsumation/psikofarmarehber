@@ -5,10 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Psikofarmakoloji Rehberi</title>
 <script>
-/* Tema ve tasarım ilk boyamadan önce uygulanır (yanıp sönmeyi önler). ?tasarim=bauhaus ile bağlantı paylaşılabilir. */
+/* Tema, tasarım ve hasta grubu ilk boyamadan önce uygulanır (yanıp sönmeyi önler).
+   ?tasarim=bauhaus ve ?kitle=eri (ped | eri) ile bağlantı paylaşılabilir. Hasta grubu seçilmemişse karşılama penceresi açılır. */
 (function () {
   var k = document.documentElement, T = /^(klasik|bauhaus|isvicre|farmakope)$/;
+  var kq = (location.search.match(/[?&]kitle=(ped|eri)(?:&|$)/) || [])[1];
+  if (kq) k.setAttribute('data-kitle', kq);
   try {
+    if (kq) localStorage.setItem('pr-kitle', kq);
+    var kd = localStorage.getItem('pr-kitle');
+    if (!kq && (kd === 'ped' || kd === 'eri')) k.setAttribute('data-kitle', kd);
     var t = localStorage.getItem('pr-tema'); if (t === 'light' || t === 'dark') k.setAttribute('data-theme', t);
     var q = (location.search.match(/[?&]tasarim=([a-z]+)/) || [])[1];
     if (q && T.test(q)) localStorage.setItem('pr-tasarim', q);
@@ -17,29 +23,35 @@
   } catch (e) {}
 })();
 </script>
-<link rel="stylesheet" href="css/stil.css?v=7">
-<link rel="stylesheet" href="css/tasarim-bauhaus.css?v=7">
-<link rel="stylesheet" href="css/tasarim-isvicre.css?v=7">
-<link rel="stylesheet" href="css/tasarim-farmakope.css?v=7">
+<link rel="stylesheet" href="css/stil.css?v=8">
+<link rel="stylesheet" href="css/tasarim-bauhaus.css?v=8">
+<link rel="stylesheet" href="css/tasarim-isvicre.css?v=8">
+<link rel="stylesheet" href="css/tasarim-farmakope.css?v=8">
 </head>
 <body>
 <header class="ust">
   <div class="ust-ic">
-    <a class="marka" href="#/">
-      <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
-        <rect x="3" y="11" width="26" height="10" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/>
-        <path d="M16 11v10" stroke="currentColor" stroke-width="2.2"/>
-        <path d="M3.6 16a5 5 0 0 1 5-5H16v10H8.6a5 5 0 0 1-5-5z" fill="currentColor" opacity=".28"/>
-      </svg>
-      <svg class="marka-bh" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
-        <rect x="1.5" y="1.5" width="33" height="33" fill="var(--yuzey)" stroke="currentColor" stroke-width="3"/>
-        <circle cx="11" cy="11" r="6.5" fill="var(--bh-kirmizi)"/>
-        <path d="M19 4.5h12.5V17z" fill="var(--bh-sari)"/>
-        <rect x="19.5" y="19.5" width="11" height="11" fill="var(--bh-mavi)"/>
-        <path d="M4.5 31.5V19.5a12 12 0 0 1 12 12z" fill="currentColor"/>
-      </svg>
-      <span>Psikofarmakoloji Rehberi</span>
-    </a>
+    <div class="marka-blok">
+      <a class="marka" href="#/">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <rect x="3" y="11" width="26" height="10" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <path d="M16 11v10" stroke="currentColor" stroke-width="2.2"/>
+          <path d="M3.6 16a5 5 0 0 1 5-5H16v10H8.6a5 5 0 0 1-5-5z" fill="currentColor" opacity=".28"/>
+        </svg>
+        <svg class="marka-bh" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+          <rect x="1.5" y="1.5" width="33" height="33" fill="var(--yuzey)" stroke="currentColor" stroke-width="3"/>
+          <circle cx="11" cy="11" r="6.5" fill="var(--bh-kirmizi)"/>
+          <path d="M19 4.5h12.5V17z" fill="var(--bh-sari)"/>
+          <rect x="19.5" y="19.5" width="11" height="11" fill="var(--bh-mavi)"/>
+          <path d="M4.5 31.5V19.5a12 12 0 0 1 12 12z" fill="currentColor"/>
+        </svg>
+        <span>Psikofarmakoloji Rehberi</span>
+      </a>
+      <div class="kitle-sec" id="kitleSec" role="radiogroup" aria-label="Hasta grubu">
+        <button type="button" role="radio" data-kitle="ped" aria-checked="false" title="Çocuk ve ergen psikiyatrisi"><span class="uzun">Çocuk-ergen</span><span class="kisa">Çocuk</span></button>
+        <button type="button" role="radio" data-kitle="eri" aria-checked="false" title="Erişkin psikiyatrisi">Erişkin</button>
+      </div>
+    </div>
     <nav class="gezinti" id="gezinti">
       <a href="#/" data-sayfa="ilaclar">İlaçlar</a>
       <a href="#/degisim" data-sayfa="degisim">İlaç Değişimi</a>
@@ -71,21 +83,22 @@
 <footer class="alt kap">
   <strong>Önemli uyarı:</strong> Bu uygulama hekimler için hazırlanmış bir karar destek ve eğitim aracıdır; klinik değerlendirmenin,
   güncel Kısa Ürün Bilgisi'nin (KÜB) ve kılavuzların yerini tutmaz. Dozlar genel literatür aralıklarıdır; hastanın yaşı, kilosu,
-  eş tanıları, böbrek/karaciğer işlevi ve kullandığı diğer ilaçlara göre bireyselleştirilmelidir. Pediatrik onay bilgileri ağırlıklı olarak
-  FDA etiketlerine dayanır; Türkiye'deki ruhsat ve endikasyon dışı kullanım koşullarını ayrıca kontrol ediniz.
+  eş tanıları, böbrek/karaciğer işlevi ve kullandığı diğer ilaçlara göre bireyselleştirilmelidir.
+  <span data-yalniz="ped">Pediatrik onay bilgileri ağırlıklı olarak FDA etiketlerine dayanır; Türkiye'deki ruhsat ve endikasyon dışı kullanım koşullarını ayrıca kontrol ediniz.</span>
+  <span data-yalniz="eri">Onaylı endikasyon bilgileri FDA etiketlerine (belirtilenlerde Avrupa onayına) dayanır; Türkiye'deki ruhsat, endikasyon ve geri ödeme koşullarını ayrıca kontrol ediniz.</span>
 </footer>
 
 <div id="ipucu" class="ipucu" role="tooltip" hidden></div>
 
-<script src="js/veri-temel.js?v=7"></script>
-<script src="js/veri-antidepresan.js?v=7"></script>
-<script src="js/veri-dehb.js?v=7"></script>
-<script src="js/veri-antipsikotik.js?v=7"></script>
-<script src="js/veri-diger.js?v=7"></script>
-<script src="js/veri-metabolizma.js?v=7"></script>
-<script src="js/veri-depo.js?v=7"></script>
-<script src="js/grafik.js?v=7"></script>
-<script src="js/degisim.js?v=7"></script>
-<script src="js/app.js?v=7"></script>
+<script src="js/veri-temel.js?v=8"></script>
+<script src="js/veri-antidepresan.js?v=8"></script>
+<script src="js/veri-dehb.js?v=8"></script>
+<script src="js/veri-antipsikotik.js?v=8"></script>
+<script src="js/veri-diger.js?v=8"></script>
+<script src="js/veri-metabolizma.js?v=8"></script>
+<script src="js/veri-depo.js?v=8"></script>
+<script src="js/grafik.js?v=8"></script>
+<script src="js/degisim.js?v=8"></script>
+<script src="js/app.js?v=8"></script>
 </body>
 </html>

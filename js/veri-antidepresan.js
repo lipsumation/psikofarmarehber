@@ -1,19 +1,20 @@
 /* Antidepresanlar */
 (function () {
-  var KUTU_AD = 'Kara kutu uyarısı: 25 yaş altında antidepresanlar intihar düşüncesi ve davranışı riskini artırabilir. Başlangıçta ve her doz değişiminde yakın izlem; aile ve genç bilgilendirilmelidir.';
+  var KUTU_AD = { ped: 'Kara kutu uyarısı: 25 yaş altında antidepresanlar intihar düşüncesi ve davranışı riskini artırabilir. Başlangıçta ve her doz değişiminde yakın izlem; aile ve genç bilgilendirilmelidir.', eri: 'Kara kutu uyarısı: antidepresanlar 25 yaş altında intihar düşüncesi ve davranışı riskini artırabilir (24 yaş üstünde artış gösterilmemiş, 65 yaş üstünde risk azalmış). Tüm yaşlarda başlangıçta ve her doz değişiminde yakın izlem; hasta ve yakınları bilgilendirilmelidir.' };
   var SURDURUM_AD = [
     'Yanıt değerlendirmesi: yeterli dozda 4–6 hafta (OKB\'de 8–12 hafta) beklenir; 2–4 haftada hiç düzelme yoksa doz artırın.',
     'Remisyondan sonra depresyonda en az 6–12 ay, anksiyete bozuklukları ve OKB\'de en az 12 ay aynı dozda sürdürün.',
     'Yineleyen dönemler (≥ 2 epizod), ağır epizod veya kalıntı belirtide daha uzun sürdürüm düşünün.',
-    'Kesme denemesini düşük stresli bir dönemde yapın (okul başlangıcı, sınav dönemi gibi zamanlardan kaçının).'
+    { ped: 'Kesme denemesini düşük stresli bir dönemde yapın (okul başlangıcı, sınav dönemi gibi zamanlardan kaçının).', eri: 'Kesme denemesini stabil ve görece stressiz bir dönemde planlayın; nüks belirtilerini hastayla birlikte belirleyin.' }
   ];
 
   window.ILACLAR.push(
   {
     id: 'fluoksetin', ad: 'Fluoksetin', sinif: 'ad', altSinif: 'SSRI', grup: 'ssri',
-    mek: 'Seçici serotonin geri alım inhibitörü. Çocuk ve ergen depresyonunda kanıtı en güçlü antidepresan; aktif metaboliti norfluoksetin çok uzun yarı ömürlüdür.',
+    mek: { ped: 'Seçici serotonin geri alım inhibitörü. Çocuk ve ergen depresyonunda kanıtı en güçlü antidepresan; aktif metaboliti norfluoksetin çok uzun yarı ömürlüdür.', eri: 'Seçici serotonin geri alım inhibitörü. Aktif metaboliti norfluoksetin çok uzun yarı ömürlüdür: kesilme belirtisi seyrek, etkileşim ve arınma süresi uzundur. Aktive edici olabilir; sabah verilir.' },
     t12: '4–6 gün (norfluoksetin 4–16 gün)', t12s: 120, etki: '2–4 hafta (tam yanıt 6–8 hf)', form: 'Kapsül 20 mg; solüsyon 20 mg/5 mL',
     onay: [['Depresyon', '≥ 8 yaş'], ['OKB', '≥ 7 yaş']],
+    onayEri: [['Majör depresyon'], ['OKB'], ['Panik bozukluk'], ['Bulimiya nervoza'], ['PMDB'], ['Bipolar depresyon', 'olanzapin ile'], ['Dirençli depresyon', 'olanzapin ile']],
     ped: {
       bas: '5–10 mg/gün (sabah)', artis: '1–2 hafta sonra 20 mg; sonrasında 2–4 haftada bir 10–20 mg', hedef: '20 mg/gün (10–40 mg)', maks: '60 mg/gün (OKB, ergen)',
       birim: 'mg/gün', adim: [[0, 10], [14, 20], [42, 30], [70, 40]], bant: [20, 40], tavan: 60,
@@ -35,9 +36,10 @@
   },
   {
     id: 'sertralin', ad: 'Sertralin', sinif: 'ad', altSinif: 'SSRI', grup: 'ssri',
-    mek: 'Seçici serotonin geri alım inhibitörü; hafif dopamin geri alım inhibisyonu. Pediatrik anksiyete ve OKB\'de güçlü kanıt, düşük etkileşim potansiyeli.',
+    mek: { ped: 'Seçici serotonin geri alım inhibitörü; hafif dopamin geri alım inhibisyonu. Pediatrik anksiyete ve OKB\'de güçlü kanıt, düşük etkileşim potansiyeli.', eri: 'Seçici serotonin geri alım inhibitörü; hafif dopamin geri alım inhibisyonu. Depresyon ve anksiyete bozukluklarında geniş onaylı; etkileşim potansiyeli düşük, kardiyak hastalıkta güvenlilik verisi vardır.' },
     t12: '~26 saat (metabolit 62–104 saat)', t12s: 26, etki: '2–4 hafta (OKB 8–12 hf)', form: 'Tablet 25 / 50 / 100 mg; (oral konsantre 20 mg/mL)',
     onay: [['OKB', '≥ 6 yaş']],
+    onayEri: [['Majör depresyon'], ['OKB'], ['Panik bozukluk'], ['TSSB'], ['Sosyal anksiyete'], ['PMDB']],
     ped: {
       bas: '6–12 yaş: 12,5–25 mg/gün · 13–17 yaş: 25–50 mg/gün', artis: 'En az 1 hafta arayla 25–50 mg', hedef: '50–150 mg/gün', maks: '200 mg/gün',
       birim: 'mg/gün', adim: [[0, 25], [7, 50], [28, 100], [56, 150]], bant: [50, 150], tavan: 200,
@@ -61,6 +63,7 @@
     mek: 'Sitalopramın S-enantiyomeri; en seçici SSRI. Etkileşim potansiyeli düşüktür.',
     t12: '27–32 saat', t12s: 30, etki: '2–4 hafta', form: 'Tablet 5 / 10 / 20 mg; damla 20 mg/mL',
     onay: [['Depresyon', '≥ 12 yaş'], ['Yaygın anksiyete', '≥ 7 yaş']],
+    onayEri: [['Majör depresyon'], ['Yaygın anksiyete']],
     ped: {
       bas: 'Çocuk: 2,5–5 mg/gün · Ergen: 5–10 mg/gün', artis: 'Çocuk: ≥ 2 hafta sonra 10 mg · Ergen: ≥ 3 hafta sonra 20 mg', hedef: '10–20 mg/gün', maks: '20 mg/gün',
       birim: 'mg/gün', adim: [[0, 5], [7, 10], [35, 15], [56, 20]], bant: [10, 20], tavan: 20,
@@ -81,9 +84,10 @@
   },
   {
     id: 'sitalopram', ad: 'Sitalopram', sinif: 'ad', altSinif: 'SSRI', grup: 'ssri',
-    mek: 'Seçici serotonin geri alım inhibitörü. Pediatrik onayı yoktur; çocuk/ergende essitalopram genellikle tercih edilir.',
+    mek: { ped: 'Seçici serotonin geri alım inhibitörü. Pediatrik onayı yoktur; çocuk/ergende essitalopram genellikle tercih edilir.', eri: 'Seçici serotonin geri alım inhibitörü (rasemik). Doza bağlı QT uzaması nedeniyle günlük doz 40 mg ile, 60 yaş üstünde ve CYP2C19 zayıf metabolizörlerinde 20 mg ile sınırlıdır.' },
     t12: '~35 saat', t12s: 35, etki: '2–4 hafta', form: 'Tablet 20 / 40 mg',
     onay: [],
+    onayEri: [['Majör depresyon']],
     ped: {
       bas: '10 mg/gün', artis: '1–2 hafta sonra 20 mg; gerekirse ≥ 4 hafta sonra artış', hedef: '20–40 mg/gün', maks: '40 mg/gün',
       birim: 'mg/gün', adim: [[0, 10], [14, 20], [56, 30], [84, 40]], bant: [20, 40], tavan: 40,
@@ -104,9 +108,10 @@
   },
   {
     id: 'fluvoksamin', ad: 'Fluvoksamin', sinif: 'ad', altSinif: 'SSRI', grup: 'ssri',
-    mek: 'Seçici serotonin geri alım inhibitörü; sigma-1 agonisti. Pediatrik OKB\'de onaylıdır; ilaç etkileşimleri belirgindir.',
+    mek: { ped: 'Seçici serotonin geri alım inhibitörü; sigma-1 agonisti. Pediatrik OKB\'de onaylıdır; ilaç etkileşimleri belirgindir.', eri: 'Seçici serotonin geri alım inhibitörü; sigma-1 agonisti. OKB\'de onaylıdır; güçlü CYP1A2 ve CYP2C19 inhibisyonu nedeniyle ilaç etkileşimleri belirgindir.' },
     t12: '15–20 saat', t12s: 17, etki: '2–4 hafta (OKB 8–12 hf)', form: 'Tablet 50 / 100 mg',
     onay: [['OKB', '≥ 8 yaş']],
+    onayEri: [['OKB'], ['Sosyal anksiyete', 'uzatılmış salımlı form']],
     ped: {
       bas: '25 mg/gün (gece)', artis: '4–7 günde bir 25 mg', hedef: '50–200 mg/gün', maks: '8–11 yaş: 200 mg/gün · 12–17 yaş: 300 mg/gün',
       birim: 'mg/gün', adim: [[0, 25], [7, 50], [14, 75], [21, 100], [35, 150]], bant: [50, 200], tavan: 300,
@@ -126,9 +131,10 @@
   },
   {
     id: 'paroksetin', ad: 'Paroksetin', sinif: 'ad', altSinif: 'SSRI', grup: 'ssri',
-    mek: 'Güçlü serotonin geri alım inhibitörü; antikolinerjik etkisi vardır. Çocuk ve ergende etkinlik kanıtı zayıf, kesilme ve intihar sinyali belirgin olduğundan ilk seçenek değildir.',
+    mek: { ped: 'Güçlü serotonin geri alım inhibitörü; antikolinerjik etkisi vardır. Çocuk ve ergende etkinlik kanıtı zayıf, kesilme ve intihar sinyali belirgin olduğundan ilk seçenek değildir.', eri: 'Güçlü serotonin geri alım inhibitörü; antikolinerjik etkisi vardır. Anksiyete bozukluklarında geniş onaylıdır; ancak kesilme sendromu en belirgin SSRI\'dır, güçlü CYP2D6 inhibitörüdür ve kilo artışı yapabilir.' },
     t12: '~21 saat (doğrusal olmayan kinetik)', t12s: 21, etki: '2–4 hafta', form: 'Tablet 20 mg (kontrollü salımlı 12,5 / 25 mg)',
     onay: [], onayNot: 'Çocuk ve ergende kullanımı önerilmez',
+    onayEri: [['Majör depresyon'], ['OKB'], ['Panik bozukluk'], ['Sosyal anksiyete'], ['Yaygın anksiyete'], ['TSSB'], ['PMDB', 'kontrollü salımlı form']],
     ped: {
       bas: '10 mg/gün', artis: '≥ 1–2 hafta arayla 10 mg', hedef: '10–30 mg/gün', maks: '40 mg/gün',
       birim: 'mg/gün', adim: [[0, 10], [14, 20], [42, 30]], bant: [10, 30], tavan: 40,
@@ -143,15 +149,16 @@
       not: ['SSRI\'lar içinde kesilme belirtisi riski en yüksek ilaçtır.', 'Haftada en fazla 10 mg; son basamaklarda 5 mg adımlarla azaltın.', 'Tolere edilemezse fluoksetine geçip onu keserek köprüleme yapılabilir.'] },
     izlem: 'ssri', profil: { sed: 2, kilo: 2, gis: 2, akt: 1, ach: 2, qt: 0, kes: 3 },
     kutu: KUTU_AD,
-    uyari: ['Belirgin kesilme sendromu', 'Kilo artışı, sedasyon, antikolinerjik etkiler', 'Cinsel yan etkiler', 'Gebelikte kardiyak malformasyon riski (ergenlerde gebelik sorgusu)'],
+    uyari: ['Belirgin kesilme sendromu', 'Kilo artışı, sedasyon, antikolinerjik etkiler', 'Cinsel yan etkiler', { ped: 'Gebelikte kardiyak malformasyon riski (ergenlerde gebelik sorgusu)', eri: 'Gebelikte ilk trimesterde kardiyak malformasyon riski' }],
     etkilesim: ['Güçlü CYP2D6 inhibitörü: atomoksetin, aripiprazol, risperidon, TCA düzeylerini artırır', 'Tamoksifen etkinliğini azaltır', 'MAOİ, pimozid, tiyoridazin ile kontrendike'],
     oz: ['sero', '2d6inh']
   },
   {
     id: 'venlafaksin', ad: 'Venlafaksin XR', sinif: 'ad', altSinif: 'SNRI', grup: 'snri',
-    mek: 'Serotonin ve (yüksek dozda) noradrenalin geri alım inhibitörü. Pediatrik onayı yoktur; SSRI\'lara yanıtsız ergenlerde ikinci–üçüncü basamak.',
+    mek: { ped: 'Serotonin ve (yüksek dozda) noradrenalin geri alım inhibitörü. Pediatrik onayı yoktur; SSRI\'lara yanıtsız ergenlerde ikinci–üçüncü basamak.', eri: 'Serotonin ve (yüksek dozda, ≥ 150 mg) noradrenalin geri alım inhibitörü. Doza bağlı kan basıncı artışı ve belirgin kesilme sendromu yapabilir.' },
     t12: '5 saat (aktif metabolit 11 saat)', t12s: 11, etki: '2–4 hafta', form: 'Uzatılmış salımlı kapsül 37,5 / 75 / 150 mg',
     onay: [],
+    onayEri: [['Majör depresyon'], ['Yaygın anksiyete'], ['Sosyal anksiyete'], ['Panik bozukluk']],
     ped: {
       bas: '37,5 mg/gün (sabah, yemekle)', artis: '1–2 haftada bir 37,5 mg', hedef: '75–150 mg/gün', maks: '225 mg/gün (≥ 50 kg); 25–39 kg: 112,5 mg; 40–49 kg: 150 mg',
       birim: 'mg/gün', adim: [[0, 37.5], [7, 75], [28, 112.5], [42, 150]], bant: [75, 150], tavan: 225,
@@ -172,9 +179,10 @@
   },
   {
     id: 'duloksetin', ad: 'Duloksetin', sinif: 'ad', altSinif: 'SNRI', grup: 'snri',
-    mek: 'Serotonin ve noradrenalin geri alım inhibitörü. Pediatrik yaygın anksiyete bozukluğunda onaylı tek SNRI.',
+    mek: { ped: 'Serotonin ve noradrenalin geri alım inhibitörü. Pediatrik yaygın anksiyete bozukluğunda onaylı tek SNRI.', eri: 'Serotonin ve noradrenalin geri alım inhibitörü. Depresyon ve yaygın anksiyetenin yanı sıra nöropatik ağrı ve fibromiyaljide onaylıdır; ağrının eşlik ettiği depresyonda yararlıdır.' },
     t12: '~12 saat', t12s: 12, etki: '2–4 hafta', form: 'Gastro-rezistan kapsül 30 / 60 mg',
     onay: [['Yaygın anksiyete', '≥ 7 yaş'], ['Fibromiyalji', '≥ 13 yaş']],
+    onayEri: [['Majör depresyon'], ['Yaygın anksiyete'], ['Diyabetik nöropatik ağrı'], ['Fibromiyalji'], ['Kronik kas-iskelet ağrısı']],
     ped: {
       bas: '30 mg/gün', artis: '≥ 2 hafta sonra 60 mg; sonrasında 30 mg basamaklarla', hedef: '30–60 mg/gün', maks: '120 mg/gün',
       birim: 'mg/gün', adim: [[0, 30], [14, 60], [56, 90]], bant: [30, 60], tavan: 120,
@@ -194,9 +202,10 @@
   },
   {
     id: 'mirtazapin', ad: 'Mirtazapin', sinif: 'ad', altSinif: 'NaSSA', grup: 'addiger',
-    mek: 'Alfa-2 antagonisti; 5-HT2, 5-HT3 ve H1 blokajı. Uykusuzluk ve iştahsızlığın eşlik ettiği depresyonda yararlıdır. Pediatrik onayı yoktur.',
+    mek: { ped: 'Alfa-2 antagonisti; 5-HT2, 5-HT3 ve H1 blokajı. Uykusuzluk ve iştahsızlığın eşlik ettiği depresyonda yararlıdır. Pediatrik onayı yoktur.', eri: 'Alfa-2 antagonisti; 5-HT2, 5-HT3 ve H1 blokajı. Uykusuzluk ve iştahsızlığın eşlik ettiği depresyonda yararlıdır; cinsel yan etkisi azdır, kilo artışı sıktır.' },
     t12: '20–40 saat', t12s: 30, etki: 'Uyku/iştah: günler · duygudurum: 2–4 hafta', form: 'Tablet / ağızda dağılan tablet 15 / 30 / 45 mg',
     onay: [],
+    onayEri: [['Majör depresyon']],
     ped: {
       bas: '7,5–15 mg/gün (gece)', artis: '1–2 haftada bir 7,5–15 mg', hedef: '15–30 mg/gün', maks: '45 mg/gün',
       birim: 'mg/gün', adim: [[0, 7.5], [7, 15], [28, 30]], bant: [15, 30], tavan: 45,
@@ -216,9 +225,10 @@
   },
   {
     id: 'bupropion', ad: 'Bupropion XL', sinif: 'ad', altSinif: 'NDRI', grup: 'addiger',
-    mek: 'Noradrenalin ve dopamin geri alım inhibitörü. Serotonerjik etkisi yoktur; DEHB\'de üçüncü basamak, eş tanılı depresyonda seçenek. Pediatrik onayı yoktur.',
+    mek: { ped: 'Noradrenalin ve dopamin geri alım inhibitörü. Serotonerjik etkisi yoktur; DEHB\'de üçüncü basamak, eş tanılı depresyonda seçenek. Pediatrik onayı yoktur.', eri: 'Noradrenalin ve dopamin geri alım inhibitörü. Serotonerjik etkisi yoktur; cinsel yan etki ve kilo artışı yapmaz, sigarayı bırakmada da kullanılır. Nöbet riski doza bağlıdır.' },
     t12: '~21 saat', t12s: 21, etki: '2–4 hafta', form: 'Uzatılmış salımlı tablet 150 / 300 mg',
     onay: [],
+    onayEri: [['Majör depresyon'], ['Mevsimsel depresyonun önlenmesi'], ['Sigarayı bırakma', 'SR formu']],
     ped: {
       bas: 'Ergen: 150 mg/gün (sabah) · alternatif ~3 mg/kg/gün', artis: '≥ 1–2 hafta sonra 300 mg', hedef: '150–300 mg/gün (3–6 mg/kg/gün)', maks: '300 mg/gün veya 6 mg/kg/gün (hangisi düşükse)',
       birim: 'mg/gün', adim: [[0, 150], [14, 300]], bant: [150, 300], tavan: 300,
@@ -241,6 +251,7 @@
     mek: '5-HT2A antagonisti ve zayıf serotonin geri alım inhibitörü; H1 ve alfa-1 blokajı. Düşük dozda çoğunlukla uyku için endikasyon dışı kullanılır.',
     t12: '5–9 saat', t12s: 7, etki: 'Uyku: ilk doz · duygudurum: 2–4 hafta', form: 'Tablet 50 / 100 mg (uzatılmış salımlı 150 mg)',
     onay: [],
+    onayEri: [['Majör depresyon']],
     ped: {
       bas: 'Uyku: 12,5–25 mg (yatmadan 30–60 dk önce)', artis: '5–7 günde bir 12,5–25 mg', hedef: 'Uyku: 25–100 mg/gece', maks: 'Uyku: 100–150 mg/gece · depresyon (ergen): 6 mg/kg/gün\'e dek',
       birim: 'mg/gece', adim: [[0, 25], [7, 50], [21, 75]], bant: [25, 100], tavan: 150,
@@ -260,9 +271,10 @@
   },
   {
     id: 'vortioksetin', ad: 'Vortioksetin', sinif: 'ad', altSinif: 'Multimodal', grup: 'addiger',
-    mek: 'Serotonin geri alım inhibitörü ve çoklu 5-HT reseptör modülatörü. Ergen depresyon çalışmalarında plaseboya üstünlük gösterilememiştir.',
+    mek: { ped: 'Serotonin geri alım inhibitörü ve çoklu 5-HT reseptör modülatörü. Ergen depresyon çalışmalarında plaseboya üstünlük gösterilememiştir.', eri: 'Serotonin geri alım inhibitörü ve çoklu 5-HT reseptör modülatörü. Bulantı sıktır; cinsel yan etki ve kilo artışı görece azdır.' },
     t12: '~66 saat', t12s: 66, etki: '2–4 hafta', form: 'Tablet 5 / 10 / 20 mg',
     onay: [], onayNot: 'Pediatrik etkinlik gösterilememiştir',
+    onayEri: [['Majör depresyon']],
     ped: {
       bas: '5 mg/gün', artis: '1–2 hafta sonra 10 mg', hedef: '10–20 mg/gün', maks: '20 mg/gün',
       birim: 'mg/gün', adim: [[0, 5], [14, 10], [42, 20]], bant: [10, 20], tavan: 20,
@@ -285,6 +297,7 @@
     mek: 'Güçlü serotonin (ve metaboliti ile noradrenalin) geri alım inhibitörü trisiklik. OKB\'de SSRI\'lara yanıtsızlıkta kullanılır.',
     t12: '32 saat (metabolit ~69 saat)', t12s: 32, etki: 'OKB: 6–12 hafta', form: 'Draje 10 / 25 mg; SR tablet 75 mg',
     onay: [['OKB', '≥ 10 yaş']],
+    onayEri: [['OKB']],
     ped: {
       bas: '25 mg/gün (gece, yemekle)', artis: 'İlk 2 haftada kademeli olarak 3 mg/kg/gün veya 100 mg/gün\'e (hangisi düşükse)', hedef: '2–3 mg/kg/gün (75–150 mg)', maks: '3 mg/kg/gün veya 200 mg/gün (hangisi düşükse)',
       birim: 'mg/gün', adim: [[0, 25], [4, 50], [9, 75], [14, 100], [42, 150]], bant: [75, 150], tavan: 200,
@@ -304,9 +317,10 @@
   },
   {
     id: 'imipramin', ad: 'İmipramin', sinif: 'ad', altSinif: 'Trisiklik', grup: 'tca',
-    mek: 'Serotonin ve noradrenalin geri alım inhibitörü trisiklik. Çocuklarda temel kullanım alanı diğer tedavilere yanıtsız enürezis noktürnadır; pediatrik depresyonda etkisizdir.',
+    mek: { ped: 'Serotonin ve noradrenalin geri alım inhibitörü trisiklik. Çocuklarda temel kullanım alanı diğer tedavilere yanıtsız enürezis noktürnadır; pediatrik depresyonda etkisizdir.', eri: 'Serotonin ve noradrenalin geri alım inhibitörü trisiklik. Depresyonda etkindir; antikolinerjik ve kardiyak yan etkileri ve aşırı dozda toksisitesi nedeniyle ikinci basamak ilaçtır.' },
     t12: '11–25 saat', t12s: 18, etki: 'Enürezis: ilk hafta', form: 'Draje 10 / 25 mg',
     onay: [['Enürezis noktürna', '≥ 6 yaş']],
+    onayEri: [['Depresyon']],
     ped: {
       bas: '25 mg (yatmadan 1 saat önce)', artis: '1 hafta sonra yanıt yoksa 25 mg artış', hedef: '6–11 yaş: 25–50 mg · ≥ 12 yaş: 25–75 mg', maks: '2,5 mg/kg/gün (6–11 yaş: 50 mg · ≥ 12 yaş: 75 mg)',
       birim: 'mg/gece', adim: [[0, 25], [7, 50]], bant: [25, 50], tavan: 75,
@@ -326,9 +340,10 @@
   },
   {
     id: 'amitriptilin', ad: 'Amitriptilin', sinif: 'ad', altSinif: 'Trisiklik antidepresan', grup: 'tca',
-    mek: 'Serotonin ve noradrenalin geri alım inhibitörü; güçlü antikolinerjik ve antihistaminik etkilidir. Çocuk ve ergende depresyondan çok migren profilaksisi, kronik ağrı ve uyku için düşük dozda kullanılır. Aktif metaboliti nortriptilindir.',
+    mek: { ped: 'Serotonin ve noradrenalin geri alım inhibitörü; güçlü antikolinerjik ve antihistaminik etkilidir. Çocuk ve ergende depresyondan çok migren profilaksisi, kronik ağrı ve uyku için düşük dozda kullanılır. Aktif metaboliti nortriptilindir.', eri: 'Serotonin ve noradrenalin geri alım inhibitörü; güçlü antikolinerjik ve antihistaminik etkilidir. Depresyonda etkindir; düşük dozda nöropatik ağrı, migren profilaksisi ve uykusuzlukta kullanılır. Aktif metaboliti nortriptilindir. Yaşlılarda kaçınılması önerilir (Beers).' },
     t12: '10–28 saat (nortriptilin 18–44 saat)', t12s: 20, etki: 'Ağrı/uyku: 1–2 hafta · depresyon: 2–4 hafta', form: 'Tablet 10 / 25 mg',
     onay: [['Depresyon', '≥ 12 yaş']],
+    onayEri: [['Depresyon']],
     endikasyon: [
       ['Migren profilaksisi / kronik ağrı', '0,25 mg/kg gece (5–10 mg)', '0,5–1 mg/kg gece (10–50 mg)', '1–2 haftada bir 0,25 mg/kg (5–10 mg)'],
       ['Depresyon (ergen)', '10–25 mg gece', '50–100 mg/gün', 'Haftada bir 10–25 mg; EKG ile']
@@ -352,9 +367,10 @@
   },
   {
     id: 'desvenlafaksin', ad: 'Desvenlafaksin', sinif: 'ad', altSinif: 'SNRI', grup: 'snri',
-    mek: 'Venlafaksinin aktif metaboliti; serotonin ve noradrenalin geri alım inhibitörü. CYP2D6\'ya bağımlı değildir, bu nedenle etkileşimi ve genotip etkisi venlafaksinden azdır. Pediatrik depresyon çalışmalarında plaseboya üstünlük gösterilememiştir.',
+    mek: { ped: 'Venlafaksinin aktif metaboliti; serotonin ve noradrenalin geri alım inhibitörü. CYP2D6\'ya bağımlı değildir, bu nedenle etkileşimi ve genotip etkisi venlafaksinden azdır. Pediatrik depresyon çalışmalarında plaseboya üstünlük gösterilememiştir.', eri: 'Venlafaksinin aktif metaboliti; serotonin ve noradrenalin geri alım inhibitörü. CYP2D6\'ya bağımlı değildir, bu nedenle etkileşimi ve genotip etkisi venlafaksinden azdır. 50 mg üzerinde ek yarar gösterilmemiştir.' },
     t12: '~11 saat', t12s: 11, etki: '2–4 hafta', form: 'Uzun salımlı tablet 50 / 100 mg',
     onay: [], onayNot: 'Pediatrik onay yok · çalışmalarda etkinlik gösterilememiştir',
+    onayEri: [['Majör depresyon']],
     ped: {
       bas: '25 mg/gün', artis: '1–2 hafta sonra 50 mg', hedef: '50 mg/gün', maks: '100 mg/gün',
       birim: 'mg/gün', adim: [[0, 25], [10, 50]], bant: [25, 50], tavan: 100,
@@ -378,6 +394,7 @@
     mek: 'Melatonin MT1/MT2 reseptör agonisti ve 5-HT2C antagonisti. Uyku-uyanıklık ritmini düzenler; cinsel yan etki, kilo artışı ve kesilme belirtisi yapmaz. Karaciğer enzim yükselmesi nedeniyle düzenli izlem gerektirir.',
     t12: '1–2 saat', t12s: 1.5, etki: 'Uyku: ilk hafta · duygudurum: 2–4 hafta', form: 'Film tablet 25 mg',
     onay: [], onayNot: 'Pediatrik onay yok · endikasyon dışı (erişkinde Avrupa onaylı)',
+    onayEri: [['Majör depresyon', 'Avrupa; ABD\'de onaysız']],
     ped: {
       bas: '25 mg gece (ergen)', artis: '2 hafta sonra yanıt yoksa 50 mg', hedef: '25 mg gece', maks: '50 mg/gün',
       birim: 'mg/gün', adim: [[0, 25], [14, 50]], bant: [25, 50], tavan: 50,
@@ -401,6 +418,7 @@
     mek: 'Glutamaterjik iletimi düzenler; mü-opioid reseptör agonistidir. Antikolinerjik ve kardiyovasküler yan etkisi azdır. Yüksek dozda kötüye kullanım ve bağımlılık bildirilmiştir.',
     t12: '2,5–3 saat (aktif metabolit ~7 saat)', t12s: 3, etki: '2–4 hafta', form: 'Tablet 12,5 mg',
     onay: [], onayNot: 'Pediatrik onay yok · 15 yaş altında önerilmez',
+    onayEri: [['Depresyon', 'bazı Avrupa ülkeleri; ABD\'de onaysız']],
     ped: {
       bas: '12,5 mg ×2 (≥ 15 yaş)', artis: '1 hafta sonra 12,5 mg ×3', hedef: '25–37,5 mg/gün', maks: '37,5 mg/gün',
       birim: 'mg/gün', adim: [[0, 25], [7, 37.5]], bant: [25, 37.5], tavan: 37.5,
@@ -414,7 +432,8 @@
     kesme: { risk: 2, sure: '1–2 hafta', adim: [[0, 100], [7, 50], [14, 0]], not: ['7–14 günde kademeli azaltın.', 'Önerilenin üzerinde doz kullanmış hastada opioid benzeri yoksunluk (ağrı, terleme, ajitasyon) görülebilir; daha yavaş azaltın.'] },
     izlem: 'ssri', izlemEk: [['Kötüye kullanım sorgusu', [1, 1, 1, 1, 1], 'Doz artırma, erken reçete isteği, başka kaynaktan temin.']],
     profil: { sed: 1, kilo: 0, gis: 2, akt: 1, qt: 0, kes: 2 },
-    kutu: 'Kötüye kullanım ve bağımlılık potansiyeli: önerilen dozun üzerine çıkılmamalı, madde kullanım öyküsü sorgulanmalıdır. ' + KUTU_AD,
+    kutu: { ped: 'Kötüye kullanım ve bağımlılık potansiyeli: önerilen dozun üzerine çıkılmamalı, madde kullanım öyküsü sorgulanmalıdır. ' + KUTU_AD.ped,
+      eri: 'Kötüye kullanım ve bağımlılık potansiyeli: önerilen dozun üzerine çıkılmamalı, madde kullanım öyküsü sorgulanmalıdır. ' + KUTU_AD.eri },
     uyari: ['Bulantı, karın ağrısı, kabızlık, ağız kuruluğu', 'Baş ağrısı, baş dönmesi, uykusuzluk veya uyuklama', 'Kötüye kullanım, bağımlılık, yüksek dozda solunum depresyonu', 'Nadiren karaciğer enzim yükselmesi'],
     etkilesim: ['MAOİ ile kontrendike (14 gün ara)', 'Opioid, alkol ve sedatiflerle additif etki', 'CYP üzerinden etkileşimi yoktur'],
     oz: []

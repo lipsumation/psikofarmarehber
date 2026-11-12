@@ -94,6 +94,69 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tema-dugme:hover { background: var(--yuzey-2); }
 .marka-bh { display: none; }
 
+/* ── hasta grubu (çocuk-ergen / erişkin) ── */
+:root:not([data-kitle="eri"]) [data-yalniz="eri"], :root[data-kitle="eri"] [data-yalniz="ped"] { display: none !important; }
+/* marka adının altında küçük bir "baskı" seçicisi: üst bar tek satırda kalır */
+.marka-blok { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 0; }
+.kitle-sec { display: inline-flex; padding: 2px; gap: 2px; margin-left: var(--marka-girinti, 40px); background: var(--yuzey-2); border: 1px solid var(--cizgi); border-radius: 8px; flex: none; }
+.kitle-sec button { border: 0; background: transparent; padding: 2px 9px; border-radius: 6px; font-size: 12px; font-weight: 600; color: var(--murekkep-2); white-space: nowrap; line-height: 1.35; }
+.kitle-sec button:hover { color: var(--murekkep); }
+.kitle-sec button[aria-checked="true"] { background: var(--yuzey); color: var(--vurgu); box-shadow: 0 1px 3px rgba(0,0,0,.14); }
+.kitle-sec .kisa { display: none; }
+@media (max-width: 520px) {
+  .kitle-sec .uzun { display: none; } .kitle-sec .kisa { display: inline; }
+  /* dar ekranda marka adı yerine seçici logonun yanında durur; ad ana sayfa başlığında zaten var */
+  .marka-blok { flex-direction: row; align-items: center; gap: 10px; }
+  .marka span { display: none; }
+  .kitle-sec { margin-left: 0; }
+  .kitle-sec button { font-size: 13px; padding: 4px 10px; }
+}
+/* telefon: marka + düğmeler tek satır, gezinti yatay kaydırmalı şerit (tüm tasarımlarda) */
+@media (max-width: 760px) {
+  .ust-ic { padding: 10px 16px 0; gap: 10px; flex-wrap: wrap; }
+  .marka-blok { flex: 1; min-width: 0; }
+  .marka { max-width: 100%; font-size: 16px; }
+  .marka span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tasarim-sec, #temaDugme { order: 2; }
+  .gezinti { order: 3; flex: 1 0 100%; margin: 0 -16px; padding: 6px 12px 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; border-top: 1px solid var(--cizgi); }
+  .gezinti::-webkit-scrollbar { display: none; }
+  .gezinti a { white-space: nowrap; flex: none; }
+}
+.ped-ozet { margin: -8px 0 16px; }
+
+/* ── ilk açılış penceresi ── */
+body.pencere-acik { overflow: hidden; }
+.karsilama { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 16px; overflow-y: auto;
+  background: rgba(10,10,10,.5); backdrop-filter: blur(3px); }
+.karsilama-ic { width: min(760px, 100%); padding: 26px 28px 22px; margin: auto; }
+.karsilama-bas h2 { font-size: 25px; letter-spacing: -.01em; margin-bottom: 4px; }
+.karsilama-bas p { color: var(--murekkep-2); margin: 0 0 20px; max-width: 60ch; }
+.karsilama-adim { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15.5px; margin: 4px 0 12px; }
+.kitle-kartlar { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.kitle-kart, .tasarim-kart { text-align: left; border: 1.5px solid var(--cizgi); border-radius: 12px; background: var(--yuzey); color: var(--murekkep); transition: border-color .12s, box-shadow .12s; }
+.kitle-kart { display: flex; gap: 13px; align-items: flex-start; padding: 15px; }
+.kitle-kart b, .tasarim-kart b { display: block; font-size: 15.5px; }
+.kitle-kart small, .tasarim-kart small { display: block; font-size: 12.5px; color: var(--murekkep-2); line-height: 1.4; margin-top: 3px; }
+.kitle-simge { flex: none; width: 44px; height: 44px; border-radius: 11px; display: grid; place-items: center; background: var(--vurgu-zemin); color: var(--vurgu); }
+.kitle-simge svg { width: 26px; height: 26px; }
+.kitle-kart:hover, .tasarim-kart:hover { border-color: var(--eksen); }
+.kitle-kart[aria-checked="true"], .tasarim-kart[aria-checked="true"] { border-color: var(--vurgu); box-shadow: 0 0 0 3px var(--vurgu-zemin); }
+.karsilama-not { margin: 10px 0 20px; }
+.tasarim-kartlar { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.tasarim-kart { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; padding: 12px; }
+.tasarim-kart b { font-size: 14.5px; }
+.tasarim-kart small { font-size: 12px; }
+.karsilama-alt { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 22px;
+  padding-top: 16px; border-top: 1px solid var(--cizgi); }
+.karsilama-tamam { padding: 10px 22px; font-size: 15px; }
+.karsilama-tamam:disabled { opacity: .4; cursor: not-allowed; }
+@media (max-width: 680px) {
+  .karsilama { place-items: start center; }
+  .karsilama-ic { padding: 20px 18px 18px; }
+  .kitle-kartlar { grid-template-columns: 1fr; }
+  .tasarim-kartlar { grid-template-columns: 1fr 1fr; }
+}
+
 /* ── tasarım seçici ── */
 .tasarim-sec { position: relative; }
 .tasarim-menu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 40; width: 270px; padding: 6px;
