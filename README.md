@@ -70,6 +70,7 @@ js/veri-antipsikotik.js Antipsikotikler
 js/veri-diger.js        Duygudurum düzenleyiciler, anksiyolitikler, uyku ilaçları
 js/veri-metabolizma.js  Metabolizma, CYP rolleri ve eliminasyon
 js/veri-depo.js         Uzun etkili enjektabl antipsikotikler
+js/veri-turkiye.js      Türkiye ruhsatı (KÜB özetleri)
 js/grafik.js            SVG grafikler (titrasyon, kesme, geçiş, depo)
 js/degisim.js           İlaç değişimi kural motoru
 js/app.js               Sayfalar ve yönlendirme
@@ -84,6 +85,12 @@ Site `gh-pages` dalından GitHub Pages ile yayınlanır. `main` dalındaki bir d
 ```bash
 git push origin main main:gh-pages
 ```
+
+## Türkiye KÜB karşılaştırması
+
+Rehberin onay bilgileri FDA etiketine dayanır; Türkiye ruhsatı ise her ilaç sayfasında ayrıca gösterilir ("Türkiye ruhsatı · KÜB" kutusu): Türkiye'deki endikasyonlar ve yaş sınırları, KÜB'deki doz ve organ yetmezliği bilgisi, FDA'dan önemli farklar ve KÜB bağlantısı. Türkiye'de ruhsatlı ürünü olmayan 7 ilaç listede "TR'de ruhsatsız" olarak işaretlidir. Bu bilgiler `js/veri-turkiye.js` dosyasındadır.
+
+Rehberdeki endikasyon ve doz bilgileri, her ilaç için Türkiye'de ruhsatlı bir ürünün güncel KÜB'ü (TİTCK KÜB/KT veritabanı) ile karşılaştırılmıştır. İlaç bazında farklar, KÜB bağlantıları ve alıntılar [docs/kub-karsilastirma.md](docs/kub-karsilastirma.md) dosyasında; ham veri [docs/kub-karsilastirma.json](docs/kub-karsilastirma.json) dosyasındadır.
 
 ## Katkı ve düzeltme
 

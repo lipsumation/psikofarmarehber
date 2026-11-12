@@ -264,4 +264,11 @@
 [data-tasarim="isvicre"] .karsilama-tamam.cip.aktif { background: var(--vurgu); border-color: var(--vurgu); color: #fff; font-weight: 600; }
 [data-tasarim="isvicre"] .karsilama-tamam.cip.aktif:disabled { background: none; color: var(--soluk); border-color: var(--cizgi); opacity: 1; }
 
+/* ── Türkiye ruhsatı kutusu ── */
+[data-tasarim="isvicre"] .tr-kub { border-top: 1px solid var(--murekkep); }
+[data-tasarim="isvicre"] .tr-kaynak { border-radius: 0; background: var(--vurgu); }
+[data-tasarim="isvicre"] .etiket.tr { border: 0; border-left: 3px solid var(--vurgu); background: var(--vurgu-zemin); }
+[data-tasarim="isvicre"] .tr-detay > summary { color: var(--murekkep); }
+[data-tasarim="isvicre"] .tr-detay > summary:hover { color: var(--vurgu); }
+
 @media print { [data-tasarim="isvicre"] .kart { border-top-color: #000; } }
