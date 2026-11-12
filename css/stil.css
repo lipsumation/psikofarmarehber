@@ -141,7 +141,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tr-detay .alt-b { margin-top: 8px; }
 .tr-detay .metin-kutular { margin-top: 10px; }
 .tr-fark li { font-size: 14px; }
-.ilac-kart .etiket.tr-yok { margin-left: 4px; }
 
 /* ── ilk açılış penceresi ── */
 body.pencere-acik { overflow: hidden; }
@@ -264,14 +263,17 @@ main.kap { padding-top: 26px; padding-bottom: 40px; min-height: 70vh; }
 .grup-baslik .nokta { width: 10px; height: 10px; border-radius: 50%; background: var(--sinif); }
 .grup-baslik .sayi { color: var(--soluk); font-weight: 500; }
 .ilac-izgara { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
-.ilac-kart { display: block; padding: 14px 16px 13px; color: inherit; border-left: 4px solid var(--sinif); transition: transform .12s, box-shadow .12s; }
+.ilac-kart { display: flex; flex-direction: column; padding: 14px 16px 13px; color: inherit; border-left: 4px solid var(--sinif); transition: transform .12s, box-shadow .12s; }
 .ilac-kart:hover { text-decoration: none; transform: translateY(-2px); box-shadow: 0 2px 4px rgba(11,11,11,.06), 0 12px 28px rgba(11,11,11,.09); }
 .ilac-kart h3 { font-size: 16.5px; margin-bottom: 2px; }
 .ilac-kart .alt-sinif { font-size: 12.5px; color: var(--murekkep-2); margin-bottom: 10px; }
-.ilac-kart .satir { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; padding: 3px 0; border-top: 1px dashed var(--cizgi); }
+/* etiket sütunu sığdığı sürece tek satır; değer sütunu en uzun sözcükten dar olamaz (sözcük bölünmez, gerekirse etiket iki satıra iner) */
+.ilac-kart .satir { display: grid; grid-template-columns: auto minmax(min-content, 1fr); column-gap: 10px; font-size: 12.5px; padding: 3px 0; border-top: 1px dashed var(--cizgi); }
 .ilac-kart .satir span:first-child { color: var(--soluk); flex: none; }
 .ilac-kart .satir span:last-child { text-align: right; font-weight: 550; }
-.ilac-kart .etiket { margin-top: 9px; }
+/* kartın alt etiketleri: tek kapsayıcıda, her tasarımda aynı sol hizada; kart yüksekliği satırda eşitlendiğinde en altta toplanır */
+.ilac-kart .kart-etiketler { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 6px; margin-top: auto; padding-top: 9px; }
+.ilac-kart .kart-etiketler .etiket { margin: 0; max-width: 100%; }
 .bos { padding: 40px; text-align: center; color: var(--murekkep-2); }
 
 /* ── ilaç ayrıntı ── */

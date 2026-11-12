@@ -19,12 +19,12 @@
     onay: [], onayNot: 'Pediatrik onay yok · 18 yaş altında önerilmez',
     onayEri: [['Alkol kullanım bozukluğu'], ['Opioid kullanım bozukluğu', 'arınma sonrası nüks önleme']],
     ped: {
-      bas: 'Önerilmez: 18 yaş altında güvenlilik ve etkililik verisi yetersizdir.', artis: '—', hedef: '—', maks: '—',
+      bas: 'Önerilmez: 18 yaş altında güvenlilik ve etkililik verisi yetersizdir.', kart: 'Önerilmez (18 yaş altı)', artis: '—', hedef: '—', maks: '—',
       birim: 'mg/gün', adim: [],
       not: ['Ergen alkol kullanım bozukluğunda küçük çalışmalarda 50 mg/gün kullanılmıştır; kullanılacaksa endikasyon dışı onam, aile katılımı ve karaciğer işlev izlemiyle.']
     },
     eri: {
-      bas: '25 mg/gün ile başlanabilir (bulantıyı azaltır); opioid kullanımı şüphesinde önce nalokson provokasyon testi', artis: '1–3 gün sonra 50 mg', hedef: '50 mg/gün tek doz', maks: '50 mg/gün (Türkiye KÜB\'ü); FDA opioid bağımlılığında haftalık 350 mg\'lık şemaya (ör. 100–100–150 mg) izin verir',
+      bas: '25 mg/gün ile başlanabilir (bulantıyı azaltır); opioid kullanımı şüphesinde önce nalokson provokasyon testi', kart: '25 mg/gün → 50 mg/gün', artis: '1–3 gün sonra 50 mg', hedef: '50 mg/gün tek doz', maks: '50 mg/gün (Türkiye KÜB\'ü); FDA opioid bağımlılığında haftalık 350 mg\'lık şemaya (ör. 100–100–150 mg) izin verir',
       birim: 'mg/gün', adim: [[0, 25], [3, 50]], bant: [50, 50], tavan: 50,
       not: ['Opioid kullanıcısında başlamadan önce 7–10 gün opioidsiz dönem ve negatif idrar testi gerekir; aksi halde ani ve ağır yoksunluk tetiklenir.', 'Alkolde içmeyi bırakmış ya da azaltmış hastada başlanır; en az 3 aylık başlangıç dönemi, gerekirse uzun süreli.', 'Hastaya acil durum kartı verin: opioid analjezikler etkisiz kalır ya da çok yüksek doz gerekir.']
     },
@@ -45,12 +45,12 @@
     onay: [['Opioid aşırı dozu · burun spreyi/enjeksiyon (ABD)', '≥ 12 yaş']], onayNot: 'Oral nalmefen ABD\'de onaysız · Türkiye\'de 18 yaş altında değerlendirilmemiş',
     onayEri: [['Alkol tüketimini azaltma', 'oral · Türkiye/Avrupa'], ['Opioid aşırı dozu', 'burun spreyi, enjeksiyon · ABD']],
     ped: {
-      bas: 'Önerilmez: 18 yaş altında etkililik ve güvenlilik değerlendirilmemiştir.', artis: '—', hedef: '—', maks: '—',
+      bas: 'Önerilmez: 18 yaş altında etkililik ve güvenlilik değerlendirilmemiştir.', kart: 'Önerilmez (18 yaş altı)', artis: '—', hedef: '—', maks: '—',
       birim: 'mg', adim: [],
       not: ['Ergen alkol kullanım bozukluğunda veri yoktur; psikososyal tedavi esastır.']
     },
     eri: {
-      bas: '18 mg gerektiğinde: içme riski olan günlerde, beklenen içmeden 1–2 saat önce tek tablet', artis: 'Titrasyon yapılmaz', hedef: 'İçme riski olan günlerde 18 mg', maks: '18 mg/gün (günde bir tablet)',
+      bas: '18 mg gerektiğinde: içme riski olan günlerde, beklenen içmeden 1–2 saat önce tek tablet', kart: '18 mg gerektiğinde', artis: 'Titrasyon yapılmaz', hedef: 'İçme riski olan günlerde 18 mg', maks: '18 mg/gün (günde bir tablet)',
       birim: 'mg', adim: [], semaNot: 'Gerektiğinde kullanılır: içme riski olan günlerde tek tablet alınır, doz titrasyonu yapılmaz.',
       not: ['İlk görüşmeden sonra hasta 2 hafta içme günlüğü tutar; yüksek içme risk düzeyi sürerse başlanır (Türkiye KÜB\'ü).', 'Yalnız fiziksel yoksunluğu olmayan ve acil arınma gerektirmeyen hastada; tedaviye uyum ve tüketimi azaltmaya odaklı psikososyal destekle birlikte.', 'Hasta tableti almadan içmeye başladıysa en kısa sürede alır.', 'Tablet bütün yutulur; bölünmez (ciltle temasta hassasiyet yapabilir).']
     },
@@ -70,12 +70,12 @@
     onay: [], onayNot: 'FDA: 16 yaş altında güvenlilik belirlenmemiş · Türkiye: 15 yaş üstünde endike',
     onayEri: [['Opioid kullanım bozukluğu', 'indüksiyon ve idame']],
     ped: {
-      bas: '15–17 yaş (Türkiye KÜB\'ü): erişkinle aynı; 1. gün 2 mg/0,5 mg ×2 (4 mg)', artis: '1. gün gerekirse iki kez tekrarlanabilir; sonra 2–4 mg basamaklarla', hedef: '8–16 mg/gün', maks: '24 mg/gün',
+      bas: '15–17 yaş (Türkiye KÜB\'ü): erişkinle aynı; 1. gün 2 mg/0,5 mg ×2 (4 mg)', kart: '15–17 yaş: 2 mg/0,5 mg ×2 dil altı', artis: '1. gün gerekirse iki kez tekrarlanabilir; sonra 2–4 mg basamaklarla', hedef: '8–16 mg/gün', maks: '24 mg/gün',
       birim: 'mg/gün (buprenorfin)', adim: [[0, 4], [1, 8], [3, 12], [7, 16]], bant: [8, 16], tavan: 24,
       not: ['15 yaş altında önerilmez.', 'Ergen opioid kullanım bozukluğunda psikososyal tedavi ve aile katılımıyla; kısa süreli arınma yerine idame tedavisi nüksü azaltır.', 'Genç ve ailesine nalokson ve aşırı doz eğitimi verin.']
     },
     eri: {
-      bas: '2 mg/0,5 mg ×2 (4 mg) dil altı; yoksunluk bulguları başlayınca (COWS hafif–orta), kısa etkili opioidden ≥ 6 saat, metadondan ≥ 24 saat sonra', artis: '1. gün gerekirse 2–4 mg ek dozlar; sonraki günlerde 2–4 mg basamaklarla', hedef: '8–16 mg/gün (çoğu hasta 12–16 mg)', maks: '24 mg/gün',
+      bas: '2 mg/0,5 mg ×2 (4 mg) dil altı; yoksunluk bulguları başlayınca (COWS hafif–orta), kısa etkili opioidden ≥ 6 saat, metadondan ≥ 24 saat sonra', kart: '2 mg/0,5 mg ×2 dil altı (yoksunluk başlayınca)', artis: '1. gün gerekirse 2–4 mg ek dozlar; sonraki günlerde 2–4 mg basamaklarla', hedef: '8–16 mg/gün (çoğu hasta 12–16 mg)', maks: '24 mg/gün',
       birim: 'mg/gün (buprenorfin)', adim: [[0, 4], [1, 8], [2, 12], [7, 16]], bant: [12, 16], tavan: 24,
       not: ['Metadondan geçişte önce metadon dozu en çok 30 mg/gün\'e azaltılır (Türkiye KÜB\'ü).', 'Stabil hastada gün aşırı (iki günlük doz) ya da haftada 3 kez uygulanabilir; tek seferde en çok 24 mg.', 'Tablet tamamen eriyene dek dil altında tutulur; yutulursa etkisizdir.', 'Hafif–orta karaciğer yetmezliğinde düşük başlangıç dozu; şiddetli yetmezlikte kontrendike.']
     },
@@ -96,12 +96,12 @@
     onay: [['Opioid aşırı dozu, opioide bağlı solunum depresyonu', 'tüm yaşlar']], onayNot: 'Türkiye\'de ruhsatlı ürünü yok',
     onayEri: [['Opioid aşırı dozu'], ['Ameliyat sonrası opioid etkisinin geri döndürülmesi', 'enjeksiyon']],
     ped: {
-      bas: 'Opioid aşırı dozu: 0,01 mg/kg IV, IM ya da SC; yanıt yetersizse 0,1 mg/kg · burun spreyi 4 mg (ABD, tüm yaşlar)', artis: '2–3 dakikada bir yinelenir', hedef: 'Yeterli solunum', maks: 'Doz başına en çok 2 mg; toplam 10 mg\'a yanıt yoksa tanıyı gözden geçirin',
+      bas: 'Opioid aşırı dozu: 0,01 mg/kg IV, IM ya da SC; yanıt yetersizse 0,1 mg/kg · burun spreyi 4 mg (ABD, tüm yaşlar)', kart: '0,01 mg/kg IV, IM ya da SC', artis: '2–3 dakikada bir yinelenir', hedef: 'Yeterli solunum', maks: 'Doz başına en çok 2 mg; toplam 10 mg\'a yanıt yoksa tanıyı gözden geçirin',
       birim: 'mg', adim: [], semaNot: 'Acil kullanılan bir ilaçtır: titrasyon şeması yerine yanıta göre 2–3 dakikada bir yinelenen dozlarla uygulanır.',
       not: ['Opioid kullanım bozukluğu olan ergende ağır yoksunluktan kaçınmak için küçük dozlarla titre edin.', 'Opioid bağımlısı annenin yenidoğanında ani yoksunluk ve nöbet riski vardır.', 'Çocukta kazara opioid (ör. buprenorfin, metadon) alımında yeniden sedasyon sıktır: uzun süre gözlem gerekir.']
     },
     eri: {
-      bas: '0,4–2 mg IV, IM ya da SC; opioid bağımlısında 0,04–0,1 mg IV ile başlayıp titre edin · burun spreyi 4 mg (ABD)', artis: '2–3 dakikada bir yinelenir', hedef: 'Yeterli solunum (≥ 10/dk), tam uyanıklık değil', maks: 'Toplam 10 mg\'a yanıt yoksa tanıyı gözden geçirin',
+      bas: '0,4–2 mg IV, IM ya da SC; opioid bağımlısında 0,04–0,1 mg IV ile başlayıp titre edin · burun spreyi 4 mg (ABD)', kart: '0,4–2 mg IV, IM ya da SC', artis: '2–3 dakikada bir yinelenir', hedef: 'Yeterli solunum (≥ 10/dk), tam uyanıklık değil', maks: 'Toplam 10 mg\'a yanıt yoksa tanıyı gözden geçirin',
       birim: 'mg', adim: [], semaNot: 'Acil kullanılan bir ilaçtır: titrasyon şeması yerine yanıta göre 2–3 dakikada bir yinelenen dozlarla uygulanır.',
       not: ['Metadon ve uzun etkili opioidlerde yeniden sedasyon riski: yinelenen dozlar ya da infüzyon (saatte, başlangıçta etkili dozun yaklaşık üçte ikisi) gerekebilir.', 'Burun spreyinde her doz yeni cihazla, sırayla öteki burun deliğine verilir.', 'Opioid kullanım bozukluğu olan hasta ve yakınlarına aşırı doz belirtileri ve nalokson kullanımı öğretilir.']
     },
@@ -145,7 +145,7 @@
     onay: [], onayNot: 'Pediatrik güvenlilik ve etkililik belirlenmemiş (FDA) · Türkiye\'de ruhsatlı ürünü yok',
     onayEri: [['Parkinsonizm', 'ek tedavi'], ['İlaca bağlı ekstrapiramidal belirtiler']],
     ped: {
-      bas: 'Psikiyatride önerilen pediatrik doz yok; ilaca bağlı akut distonide çocukta biperiden tercih edilir.', artis: '—', hedef: '—', maks: '—',
+      bas: 'Psikiyatride önerilen pediatrik doz yok; ilaca bağlı akut distonide çocukta biperiden tercih edilir.', kart: 'Pediatrik doz yok; biperiden tercih edilir', artis: '—', hedef: '—', maks: '—',
       birim: 'mg/gün', adim: [],
       not: ['Çocuk nörolojisinde distoni tedavisinde uzman gözetiminde kullanılır.', 'Çocuklar santral antikolinerjik yan etkilere (konfüzyon, ajitasyon, halüsinasyon) daha duyarlıdır.']
     },
@@ -169,7 +169,7 @@
     onay: [], onayNot: 'Çocuklarda endike değil (Türkiye KÜB\'ü) · ABD\'de onaysız',
     onayEri: [['Parkinson sendromu', 'Türkiye/Avrupa'], ['İlaca bağlı ekstrapiramidal belirtiler', 'Türkiye/Avrupa'], ['Hiperhidroz', 'Türkiye/Avrupa']],
     ped: {
-      bas: 'Çocuklarda endike değildir; çocuk ve ergende deneyim yetersizdir.', artis: '—', hedef: '—', maks: '—',
+      bas: 'Çocuklarda endike değildir; çocuk ve ergende deneyim yetersizdir.', kart: 'Çocuklarda endike değil', artis: '—', hedef: '—', maks: '—',
       birim: 'mg/gün', adim: [],
       not: ['İlaca bağlı akut distonide çocukta biperiden tercih edilir.']
     },
