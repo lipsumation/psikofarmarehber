@@ -385,9 +385,9 @@
       grup.forEach(function (i) {
         h += '<a class="kart ilac-kart" href="#/ilac/' + i.id + '" style="--sinif:' + renk(i) + '">' +
           '<h3>' + esc(i.ad) + '</h3><div class="alt-sinif">' + esc(i.altSinif) + '</div>' +
-          '<div class="satir"><span>' + (eri() ? 'Erişkin başlangıç' : 'Çocuk/ergen başlangıç') + '</span><span>' + esc(i[kitle].bas) + '</span></div>' +
+          '<div class="satir"><span>' + (eri() ? 'Erişkin başlangıç' : 'Çocuk/ergen başlangıç') + '</span><span>' + esc(i[kitle].kart || i[kitle].bas) + '</span></div>' +
           '<div class="satir"><span>Yarı ömür</span><span>' + esc(i.t12.split(' (')[0]) + '</span></div>' +
-          onayRozet(i, true) + (trKub(i) && trKub(i).ruhsatsiz ? '<span class="etiket onaysiz tr-yok">TR\'de ruhsatsız</span>' : '') + '</a>';
+          '<div class="kart-etiketler">' + onayRozet(i, true) + (trKub(i) && trKub(i).ruhsatsiz ? '<span class="etiket onaysiz tr-yok">TR\'de ruhsatsız</span>' : '') + '</div></a>';
       });
       h += '</div>';
     });
