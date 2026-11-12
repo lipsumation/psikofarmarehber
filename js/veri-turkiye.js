@@ -11,20 +11,24 @@ window.TR_KUB = {
    "Depresyon",
    "OKB",
    "Bulimiya nervoza",
-   "PMDB",
+   "PMDB (kapsül; oral çözelti KÜB'ünde yok)",
    "Bipolar I depresyon · olanzapinle sabit doz kombinasyonu",
    "Tedaviye dirençli depresyon · olanzapinle sabit doz kombinasyonu"
   ],
   "pediatrik": [
+   "Orta–şiddetli majör depresyon · 8–18 yaş (oral çözelti, psikoterapiyle birlikte; kapsül KÜB'ünde yok)",
    "Bipolar I depresyon · 10–17 yaş (olanzapinle kombinasyon, yalnız REXAPİN PRO)"
   ],
-  "pedNot": "Tek başına fluoksetin 18 yaş altında önerilmez (PROZAC KÜB).",
+  "pedNot": "Kapsül KÜB'leri (PROZAC 2021, ZEDPREX 2022) 18 yaş altında önermez; oral çözelti KÜB'ü (PSENAC, 2026) 8–18 yaşta 4–6 seans psikoterapiye yanıt vermeyen orta–şiddetli MDB'de, psikoterapiyle birlikte endikasyon verir; 8 yaş altında önermez, diğer pediatrik endikasyonlarda kullanılmamalı der.",
   "doz": {
    "eri": {
     "bas": "20 mg/gün (bulimiya: 60 mg/gün; PMDB: sürekli ya da luteal faz 20 mg)",
     "maks": "60 mg/gün (depresyon, OKB); yaşlıda genelde ≤ 40 mg, en fazla 60 mg; 80 mg üzeri sistematik değerlendirilmemiş"
    },
-   "ped": null
+   "ped": {
+    "bas": "8–18 yaş MDB (oral çözelti): 10 mg/gün (2,5 mL); 1–2 hafta sonra 20 mg/gün'e çıkılabilir",
+    "maks": "Sayısal üst sınır verilmemiş; 20 mg/gün üzerinde klinik çalışma deneyimi düşük, düşük kiloluda daha düşük doz yeterli olabilir"
+   }
   },
   "organ": {
    "bobrek": "Özel doz ayarı gerekmez.",
@@ -36,7 +40,8 @@ window.TR_KUB = {
     "Maksimum doz 60 mg/gün, yaşlıda genelde 40 mg/gün aşılmamalı (FDA'da 80 mg)."
    ],
    "ped": [
-    "Tek başına 18 yaş altında önerilmez (FDA: depresyon ≥ 8, OKB ≥ 7 yaş); olanzapinle kombinasyon 10–17 yaşta ruhsatlı."
+    "Yalnız oral çözelti 8–18 yaşta psikoterapiye yanıtsız orta–şiddetli MDB'de ruhsatlı; kapsül 18 yaş altında önerilmez (FDA: ≥ 8 yaş).",
+    "Pediatrik OKB endikasyonu yok (FDA: ≥ 7 yaş); olanzapinle kombinasyon 10–17 yaşta bipolar I depresyonda ruhsatlı."
    ]
   },
   "ek": [
@@ -54,6 +59,26 @@ window.TR_KUB = {
     "urun": "TARGET 3 MG / 25MG KAPSÜL",
     "tarih": "24/03/2011",
     "url": "https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf"
+   }
+  ],
+  "kaynaklar": [
+   {
+    "form": "kapsül",
+    "urun": "PROZAC 20 MG KAPSÜL",
+    "tarih": "21/12/2021",
+    "url": "https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kb_4ab07df8-3a8a-41a2-85ea-48ef264f1b4d.pdf"
+   },
+   {
+    "form": "kapsül",
+    "urun": "ZEDPREX 20 MG KAPSÜL",
+    "tarih": "29/04/2022",
+    "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/ZEDPREX20mgkapslKB_fd90234d-dfcc-403a-9eda-011093e1229c.pdf"
+   },
+   {
+    "form": "oral çözelti / şurup",
+    "urun": "PSENAC 20 MG/5 ML ORAL ÇÖZELTİ",
+    "tarih": "04/07/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/PsenacKB_09_07_2026.pdf"
    }
   ]
  },
@@ -92,7 +117,21 @@ window.TR_KUB = {
    "eri": [],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "LUSTRAL 50 MG ÇENTIKLI FILM KAPLI TABLET",
+    "tarih": "19/01/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LUSTRAL50mgentiklifilmkapltabletkub_20_01_2025.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "MİSOL 100 MG FİLM KAPLI TABLET",
+    "tarih": "10/02/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/MSOLKBTEMZ_24_02_2026.pdf"
+   }
+  ]
  },
  "essitalopram": {
   "urun": "CIPRALEX 10 MG FILM KAPLI TABLET",
@@ -127,7 +166,33 @@ window.TR_KUB = {
     "18 yaş altında kullanılmamalıdır (FDA: depresyon ≥ 12 yaş, yaygın anksiyete ≥ 7 yaş)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "CIPRALEX 10 MG FILM KAPLI TABLET",
+    "tarih": "19/07/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/10kub_8bdb22b3-3328-4af6-95a5-c79f26746f2c.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "MEDOLAPRAM 10 MG FİLM KAPLI TABLET",
+    "tarih": "05/04/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/MEDOLAPRAMKB_06_04_2026.pdf"
+   },
+   {
+    "form": "oral çözelti / şurup",
+    "urun": "EGISIT 5MG/5ML ORAL ÇÖZELTI",
+    "tarih": "10/04/2015",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/a3a6b67393476.pdf"
+   },
+   {
+    "form": "damla",
+    "urun": "CELIANTE 10 MG/ML ORAL DAMLA",
+    "tarih": "31/05/2019",
+    "url": "https://titck.gov.tr/storage/Archive/2019/kubKtAttachments/UYGUN-kub.pdf_8352d457-efb4-4619-bf2a-9c8e6923bfb6.pdf"
+   }
+  ]
  },
  "sitalopram": {
   "urun": "CIPRAM 20 MG FILM KAPLI TABLET",
@@ -158,7 +223,21 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "CIPRAM 20 MG FILM KAPLI TABLET",
+    "tarih": "30/03/2023",
+    "url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/CIPRAM20mgfilmkapltabletKB_4a9a812b-4833-4d33-8942-f1573f50be6b.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "CİTOL 40 MG FİLM TABLET",
+    "tarih": "02/06/2023",
+    "url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/1311kubtemizCTOL40_39e9bda8-c9af-42db-a0e6-0c9890694531.pdf"
+   }
+  ]
  },
  "fluvoksamin": {
   "urun": "FAVERIN 100 MG FILM KAPLI TABLET",
@@ -195,7 +274,15 @@ window.TR_KUB = {
     "OKB'de 8 yaş üstü çocuk ve ergende veri 200 mg/gün'e kadar sınırlı; çocuklarda maksimum 200 mg/gün (FDA'da ergende 300 mg)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "FAVERIN 100 MG FILM KAPLI TABLET",
+    "tarih": "10/09/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ONAYLIKB_e6b8a83f-3574-4a71-8fcf-53043e209762.pdf"
+   }
+  ]
  },
  "paroksetin": {
   "urun": "SEROXAT 20 MG FILM TABLET",
@@ -230,7 +317,27 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "SEROXAT 20 MG FILM TABLET",
+    "tarih": "19/01/2015",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/0993127771286.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "PAXERA 10 MG FILM TABLET",
+    "tarih": "12/08/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ONAYLIKB_93151e5a-e361-4fa0-a3f3-11db0a0acb10.pdf"
+   },
+   {
+    "form": "damla",
+    "urun": "PAXOTİN 33,1 MG/ML DAMLA",
+    "tarih": "12/10/2017",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/CRrsHwvwjPGL3.pdf"
+   }
+  ]
  },
  "venlafaksin": {
   "urun": "EFEXOR XR 37,5 MG MIKROPELLET KAPSÜL",
@@ -265,7 +372,27 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "EFEXOR XR 37,5 MG MIKROPELLET KAPSÜL",
+    "tarih": "06/11/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/UYGUNKBEFEXOR375mg_a2c6032d-a123-4190-b4a7-b13a861b4982.pdf"
+   },
+   {
+    "form": "kapsül",
+    "urun": "BONİLUX 37.5MG KAPSÜL",
+    "tarih": "16/05/2014",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/c71b6c4a56244.pdf"
+   },
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "SULİNEX XR 225 MG TABLET",
+    "tarih": "29/12/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/sulinexxr225yaynlanacakkb_31_12_2025.pdf"
+   }
+  ]
  },
  "duloksetin": {
   "urun": "CYMBALTA 30 MG GASTRO-REZISTAN SERT KAPSÜL",
@@ -279,7 +406,8 @@ window.TR_KUB = {
    "Fibromiyalji",
    "Kronik kas-iskelet ağrısı",
    "Kronik bel ağrısı",
-   "Osteoartrite bağlı kronik ağrı"
+   "Osteoartrite bağlı kronik ağrı",
+   "Kadınlarda orta–şiddetli stres üriner inkontinans (SÜİ ağırlıklı mikst inkontinans dahil) · 20 ve 40 mg ürünlerin KÜB'ünde (CYMBALTA KÜB'ünde yok)"
   ],
   "pediatrik": [],
   "pedNot": "18 yaş altında kullanılmamalıdır (7–17 yaş yaygın anksiyetede güvenlilik/etkililik belirlenmemiş).",
@@ -295,12 +423,34 @@ window.TR_KUB = {
    "karaciger": "Karaciğer yetmezliğine yol açan her karaciğer hastalığında kullanılmamalı."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Türkiye'de 20 ve 40 mg duloksetin ürünleri kadınlarda stres üriner inkontinansta ruhsatlı (FDA'da yok)."
+   ],
    "ped": [
     "18 yaş altında kullanılmamalıdır (FDA: yaygın anksiyete ≥ 7 yaş, fibromiyalji ≥ 13 yaş)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "CYMBALTA 30 MG GASTRO-REZISTAN SERT KAPSÜL",
+    "tarih": "11/03/2021",
+    "url": "https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/TTCKONAYLIKBCYMBALTA30MG_3e75efea-934f-4e81-9869-f0e0dc40c91c.pdf"
+   },
+   {
+    "form": "kapsül",
+    "urun": "NEXETİN 20 MG KAPSÜL",
+    "tarih": "30/01/2020",
+    "url": "https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/yayın nexetin 20 kub.pdf_6988bc6a-a2cd-4abf-81af-64d1f74d8475.pdf"
+   },
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "KOMOX 40 MG GASTROREZİSTAN SERT KAPSÜL",
+    "tarih": "29/04/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/UYGUNkbkomox40mg_30_04_2026.pdf"
+   }
+  ]
  },
  "mirtazapin": {
   "urun": "REMERON 30 MG FILM KAPLI TABLET",
@@ -327,7 +477,33 @@ window.TR_KUB = {
    "eri": [],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "REMERON 30 MG FILM KAPLI TABLET",
+    "tarih": "30/03/2022",
+    "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/yaynlanacakremeron30mgtablet_cd9ab414-6ba4-4164-805a-2ad114870cd9.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "MİRES 15 MG FILM KAPLı TABLET",
+    "tarih": "18/07/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kbyaymlanacak_ab82c731-3839-423a-8eb8-f4024fde053b.pdf"
+   },
+   {
+    "form": "ağızda dağılan / dil altı",
+    "urun": "VELORIN OD 30 MG AĞIZDA DAĞILAN TABLET",
+    "tarih": "25/01/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/TTCKOnaylKBVELORN30_5f27ce18-46ea-49da-9c3c-26b51dc95644.pdf"
+   },
+   {
+    "form": "oral çözelti / şurup",
+    "urun": "ZESTAT 15 MG/ML ORAL ÇÖZELTI",
+    "tarih": "23/03/2022",
+    "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/ZESTATKUB_e1654ea3-e3e7-4768-8150-126047b6186c.pdf"
+   }
+  ]
  },
  "bupropion": {
   "urun": "BUPRAPAN 450 MG UZATıLMIŞ SALıMLı TABLET",
@@ -335,14 +511,15 @@ window.TR_KUB = {
   "tarih": "15/02/2024",
   "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/BUPRAPAN450mguzatlmsalmltabletkub_d10cee99-6cf5-4f9d-b334-14a7568bd7bc.pdf",
   "eriskin": [
-   "Majör depresif atak"
+   "Majör depresif atak (uzatılmış salımlı tablet)",
+   "Sigarayı bırakma · nikotin bağımlılığı tedavisine yardımcı (ZYBAN)"
   ],
   "pediatrik": [],
-  "pedNot": "18 yaş altında kullanılmamalı (güvenlilik/etkililik belirlenmemiş). Not: incelenen KÜB bir muadile (450 mg XL) aittir.",
+  "pedNot": "18 yaş altında kullanılmamalı (BUPRAPAN XL: güvenlilik/etkililik belirlenmemiş); ZYBAN KÜB'ü de 18 yaş altında güvenlilik/etkililik kanıtlanmadığından önermez.",
   "doz": {
    "eri": {
-    "bas": "150 mg/gün (tek doz)",
-    "maks": "450 mg/gün (4 hafta sonra yanıt yoksa 300 mg; ≥ 2 hafta 300 mg sonrası 450 mg)"
+    "bas": "Depresyon (XL): 150 mg/gün tek doz · sigara bırakma (ZYBAN): ilk 3 gün 150 mg × 1, sonra 150 mg × 2 (dozlar arası ≥ 8 saat); yaşlıda 150 mg/gün",
+    "maks": "Depresyon: 450 mg/gün (450 mg XL KÜB'ü; 150 mg XL KÜB'ü 300 mg'a dek) · sigara bırakma: 300 mg/gün, tek doz ≤ 150 mg"
    },
    "ped": null
   },
@@ -352,16 +529,36 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [
-    "Mevsimsel depresyonun önlenmesi endikasyonu yok; yalnız majör depresif ataklarda endike.",
+    "Mevsimsel depresyonun önlenmesi endikasyonu yok; majör depresif atakta (XL) ve sigara bırakmada (ZYBAN) endike.",
     "150 mg ile 4 hafta yanıt yoksa 300 mg'a, 2 hafta sonra gerekirse 450 mg'a çıkılır (FDA: 4. günde 300 mg).",
-    "Böbrek yetmezliğinde önerilen doz günde bir kez 150 mg.",
+    "Böbrek yetmezliğinde önerilen doz günde bir kez 150 mg; ZYBAN'da yaşlılarda da 150 mg/gün.",
     "Hafif–orta karaciğer yetmezliğinde 150 mg/gün; şiddetli karaciğer sirozunda kontrendike (FDA: gün aşırı düşük doz)."
    ],
    "ped": [
-    "18 yaş altında kullanılmamalıdır."
+    "18 yaş altında kullanılmamalıdır; ZYBAN KÜB'ü de 18 yaş altında önermez."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "BUPRAPAN 450 MG UZATıLMIŞ SALıMLı TABLET",
+    "tarih": "15/02/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/BUPRAPAN450mguzatlmsalmltabletkub_d10cee99-6cf5-4f9d-b334-14a7568bd7bc.pdf"
+   },
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "BUPRAPAN 150 MG UZATILMIŞ SALIMLI TABLET",
+    "tarih": "20/06/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/BUPRAPAN150mguzatlmsalmltabletkub_22_06_2026.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "ZYBAN 150 MG YAVAŞ SALIMLI FİLM KAPLI TABLET",
+    "tarih": "12/08/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ZYBANKB_2ce114cb-e3a6-402a-aa94-8373687af15c.pdf"
+   }
+  ]
  },
  "trazodon": {
   "urun": "DESYREL XL 150 MG UZATILMIŞ SALIMLI FILM KAPLI TABLET",
@@ -372,11 +569,11 @@ window.TR_KUB = {
    "Depresif bozukluklar (anksiyete eşlik etsin ya da etmesin)"
   ],
   "pediatrik": [],
-  "pedNot": "18 yaş ve altında kontrendike (güvenlilik verisi yok).",
+  "pedNot": "Tablet (DESYREL) ve uzatılmış salımlı (TRUMIO) KÜB'leri 18 yaş altında kontrendike sayar; kapsül KÜB'ü (AZONA, 2015) 4.3'te saymaz ama 18 yaş altında kullanılmamasını söyler (güvenlilik verisi yok).",
   "doz": {
    "eri": {
-    "bas": "XL: 75–150 mg/gün (akşam tek doz); yaşlı/zayıf: 75 mg",
-    "maks": "XL: 300 mg/gün (3 günde bir 75 mg artış)"
+    "bas": "IR tablet/kapsül: 75–150 mg/gün (bölünmüş, yemekten sonra ya da akşam tek doz) · XL: 75–150 mg/gün akşam tek doz, 3 günde bir 75 mg artış · çok yaşlı/zayıf: IR 100 mg, XL 75 mg",
+    "maks": "300 mg/gün (tüm formlar, ayaktan) · IR tablet/kapsülde hastanede yatanlarda bölünmüş dozla 600 mg/gün'e dek · yaşlıda IR tek seferde > 100 mg'dan kaçınılmalı"
    },
    "ped": null
   },
@@ -386,13 +583,40 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [
-    "XL formda başlangıç 75–150 mg akşam tek doz, 3 günde bir 75 mg artış, maksimum 300 mg/gün (FDA IR: maks 400 mg)."
+    "Ayaktan maksimum 300 mg/gün; IR tablet/kapsülde hastanede yatanlarda bölünmüş dozla 600 mg/gün'e dek (FDA: ayaktan 400 mg).",
+    "Başlangıç 75–150 mg/gün; XL formda akşam tek doz ve 3 günde bir 75 mg artış (FDA: bölünmüş 150 mg, 3–4 günde bir 50 mg)."
    ],
    "ped": [
-    "18 yaş ve altında kontrendikedir (FDA'da pediatrik kontrendikasyon yok)."
+    "Tablet ve XL KÜB'lerinde 18 yaş altında kontrendike, kapsül KÜB'ünde kullanılmamalı (FDA'da pediatrik kontrendikasyon yok)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "DESYREL XL 150 MG UZATILMIŞ SALIMLI FILM KAPLI TABLET",
+    "tarih": "30/04/2023",
+    "url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/DESYRELXL150mgUzatlmSalmlFilmKaplTabletKUB_063814ad-5ed1-43bc-a4fe-f6d30f9d38cd.pdf"
+   },
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "TRUMIO 150 MG UZATıLMış SALıMLı TABLET",
+    "tarih": "21/02/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/KBTRUMIO_07_04_2026.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "DESYREL 100 MG FİLM TABLET",
+    "tarih": "30/04/2023",
+    "url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/DESYREL100mgfilmtabletKUB_ee8e5f5c-e65c-4cdf-954c-87dfb56ba442.pdf"
+   },
+   {
+    "form": "kapsül",
+    "urun": "AZONA 50 MG KAPSÜL",
+    "tarih": "27/11/2015",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/NHnue1cwoDxS0.pdf"
+   }
+  ]
  },
  "vortioksetin": {
   "urun": "FONKSERA 15 MG FILM KAPLı TABLET",
@@ -421,7 +645,15 @@ window.TR_KUB = {
     "Majör depresif bozuklukta 18 yaş altında kullanılmamalıdır."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "FONKSERA 15 MG FILM KAPLı TABLET",
+    "tarih": "30/09/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/FONKSERA15MGKBONAY_0d54f904-39ff-4ac2-a534-fca3f0bbab5a.pdf"
+   }
+  ]
  },
  "klomipramin": {
   "urun": "ANAFRANİL-SR 75 MG BÖLÜNEBİLİR TABLET",
@@ -461,7 +693,21 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "ANAFRANİL-SR 75 MG BÖLÜNEBİLİR TABLET",
+    "tarih": "04/07/2020",
+    "url": "https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/KBANAFRANL75MG_e06b97d0-73ed-4a93-b461-0e9c9bec37e3.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "ANAFRANİL 25 MG DRAJE",
+    "tarih": "04/07/2020",
+    "url": "https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/KBANAFRANL25_67adbc65-e8df-4b55-853b-36c94f6afd0d.pdf"
+   }
+  ]
  },
  "imipramin": {
   "urun": "TOFRANIL 25MG DRAJE",
@@ -490,7 +736,15 @@ window.TR_KUB = {
     "Enürezis endikasyonu yok; 18 yaş altında kontrendikedir (FDA: enürezis ≥ 6 yaş)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "TOFRANIL 25MG DRAJE",
+    "tarih": "03/11/2017",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/8bYvlvSZm8xs1.pdf"
+   }
+  ]
  },
  "amitriptilin": {
   "urun": "LAROXYL 10 MG FILM KAPLı TABLET",
@@ -527,7 +781,15 @@ window.TR_KUB = {
     "12 yaş altında kullanımı önerilmez."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "LAROXYL 10 MG FILM KAPLı TABLET",
+    "tarih": "19/06/2020",
+    "url": "https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TTCKKBLAROXYL10MG_d02515ea-bda5-4a38-aa3f-873b7d33ee04.pdf"
+   }
+  ]
  },
  "desvenlafaksin": {
   "ruhsatsiz": true
@@ -561,7 +823,15 @@ window.TR_KUB = {
     "18 yaş altında kullanılmaz."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "VALDOXAN 25 MG FİLM KAPLI TABLET",
+    "tarih": "03/06/2021",
+    "url": "https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/TTCKONAYLIKBVALDOXAN25TB_d215d021-bc5a-40a3-9ad2-d7e184461d7a.pdf"
+   }
+  ]
  },
  "tianeptin": {
   "urun": "STABLON 12,5 MG KAPLI TABLET",
@@ -592,7 +862,15 @@ window.TR_KUB = {
     "15 yaş altında kontrendikedir; 18 yaş altında etkililik ve güvenlilik verisi yoktur."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "STABLON 12,5 MG KAPLI TABLET",
+    "tarih": "22/04/2020",
+    "url": "https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TTCKOnaylKBSTABLON_f45ac40e-2f41-4090-b06d-4a805d3d48ec.pdf"
+   }
+  ]
  },
  "metilfenidat": {
   "urun": "CONCERTA 54 MG KONTROLLÜ SALIM TABLETİ",
@@ -600,20 +878,21 @@ window.TR_KUB = {
   "tarih": "28/10/2026",
   "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kubtemiz2_e853ac1f-a573-4f30-9094-ba3937969703.pdf",
   "eriskin": [
-   "DEHB (18–65 yaş)"
+   "DEHB · 18–65 yaş (uzatılmış salımlı tablet; IR tablet KÜB'ünde yok)",
+   "Narkolepsiye eşlik eden aşırı uykululuk (IR tablet; uzatılmış salımlı KÜB'ünde yok)"
   ],
   "pediatrik": [
    "DEHB · 6–17 yaş"
   ],
-  "pedNot": "6 yaş altında kullanılmamalı. 65 yaş üstünde (yaşlılarda) kullanılmamalı. Diğer önlemler tek başına yetersiz kaldığında, kapsamlı tedavi programının parçası olarak ve DEHB'de uzman hekimce başlatılır.",
+  "pedNot": "6 yaş altında kullanılmamalı (IR ve uzatılmış salımlı KÜB'leri). 65 yaş üstünde (yaşlılarda) kullanılmamalı. Diğer önlemler tek başına yetersiz kaldığında, kapsamlı tedavi programının parçası olarak ve DEHB'de uzman hekimce başlatılır.",
   "doz": {
    "eri": {
     "bas": "18 mg/gün sabah (önceden metilfenidat alanlarda dönüşüm tablosu: 18/36/54/72 mg); haftalık 18 mg artış",
     "maks": "72 mg/gün"
    },
    "ped": {
-    "bas": "18 mg/gün sabah; haftalık 18 mg artış",
-    "maks": "54 mg/gün (6–12 ve 13–17 yaş)"
+    "bas": "Uzatılmış salımlı (OROS): 18 mg/gün sabah, haftalık 18 mg artış · IR tablet: 5 mg × 1–2/gün (ör. kahvaltı ve öğle), haftada 5–10 mg artış",
+    "maks": "OROS: 54 mg/gün (6–12 ve 13–17 yaş) · IR tablet: 60 mg/gün, bölünmüş dozlarla"
    }
   },
   "organ": {
@@ -629,7 +908,21 @@ window.TR_KUB = {
     "OROS formda 13–17 yaşta da maksimum doz 54 mg/gün (FDA'da 72 mg)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "CONCERTA 54 MG KONTROLLÜ SALIM TABLETİ",
+    "tarih": "28/10/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kubtemiz2_e853ac1f-a573-4f30-9094-ba3937969703.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "RİTALİN 10 MG TABLET",
+    "tarih": "04/07/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/TTCKOnaylKBRTALN_04_07_2025.pdf"
+   }
+  ]
  },
  "lisdeksamfetamin": {
   "ruhsatsiz": true
@@ -669,7 +962,27 @@ window.TR_KUB = {
     "70 kg altında idame yaklaşık 1,2 mg/kg/gün; daha yüksek doz ek yarar göstermemiştir (FDA'da maks 1,4 mg/kg/gün)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "oral çözelti / şurup",
+    "urun": "STRATTERA 4 MG/ML ORAL ÇÖZELTİ",
+    "tarih": "28/11/2016",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/w2tPoY3DlYQMR.pdf"
+   },
+   {
+    "form": "oral çözelti / şurup",
+    "urun": "SETİNOX 4 MG/ML ORAL ÇöZELTI",
+    "tarih": "19/01/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/SETNOX4mgmLoralzeltikub_20_01_2025.pdf"
+   },
+   {
+    "form": "kapsül",
+    "urun": "ATOMINEX 18 MG KAPSÜL",
+    "tarih": "25/11/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/atominex18ek3kub_12_12_2025.pdf"
+   }
+  ]
  },
  "guanfasin": {
   "urun": "ARİSLOW ER 1 MG UZATILMIŞ SALIMLI TABLET",
@@ -703,7 +1016,15 @@ window.TR_KUB = {
     "DEHB'de 6–17 yaşta yalnız uyarıcılar uygun değilse, tolere edilemiyorsa veya etkisizse endike (FDA'da birinci basamak)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "ARİSLOW ER 1 MG UZATILMIŞ SALIMLI TABLET",
+    "tarih": "11/10/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ARSLOWER1mguzatlmsalmltabletkub_e3066703-f8b7-4e74-b980-df74b97e4b22.pdf"
+   }
+  ]
  },
  "klonidin": {
   "ruhsatsiz": true
@@ -746,7 +1067,15 @@ window.TR_KUB = {
     "18 yaş altında kullanılmamalıdır."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "MODIODAL 100 MG TABLET",
+    "tarih": "30/05/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ek3modiodalkubtemiz_62a5846a-04af-42df-8e59-403262b0d556.pdf"
+   }
+  ]
  },
  "risperidon": {
   "urun": "RISPERDAL QUICKLET 1 MG AĞIZDA ÇÖZÜNÜR TABLET",
@@ -787,7 +1116,27 @@ window.TR_KUB = {
     "Otizmde çalışılan en yüksek doz < 20 kg 1,5 mg, ≥ 20 kg 2,5 mg, > 45 kg 3,5 mg/gün (FDA ergen şizofreni/mani: 6 mg)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "ağızda dağılan tablet",
+    "urun": "RISPERDAL QUICKLET 1 MG AĞIZDA ÇÖZÜNÜR TABLET",
+    "tarih": "23/09/2014",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/ddc0002a36308.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "RIXPER 1 MG FILM KAPLI TABLET",
+    "tarih": "06/05/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/EkEk3RXPER1mgKUBtemiz_06_05_2026.pdf"
+   },
+   {
+    "form": "oral çözelti",
+    "urun": "RİCUS 1 MG/ML ORAL ÇÖZELTİ",
+    "tarih": "07/08/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub_08_08_2025.pdf"
+   }
+  ]
  },
  "aripiprazol": {
   "urun": "MADEPZOL 20 MG TABLET",
@@ -802,9 +1151,9 @@ window.TR_KUB = {
   "pediatrik": [
    "Şizofreni · 13–17 yaş",
    "Otistik bozuklukla ilişkili irritabilite · 6–17 yaş",
-   "Tourette · 6–18 yaş"
+   "Tourette · 6–18 yaş (tablet ve ağızda dağılan tablet; oral çözelti KÜB'ünde yok)"
   ],
-  "pedNot": "6 yaş altında önerilmez. Bipolar mani yalnızca erişkinde endike.",
+  "pedNot": "6 yaş altında önerilmez. Bipolar mani yalnızca erişkinde endike. Tourette endikasyonu ve dozu tablet ve ağızda dağılan tablet KÜB'lerinde var; oral çözelti KÜB'ünde (ARİPA, 2025) yer almaz.",
   "doz": {
    "eri": {
     "bas": "Şizofreni 10–15 mg/gün · Bipolar mani 15–30 mg/gün · MDB eki 5 mg/gün",
@@ -827,7 +1176,27 @@ window.TR_KUB = {
     "Bipolar I mani yalnız erişkinde endike; pediatrik bipolar endikasyonu yok (FDA: ≥ 10 yaş)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "MADEPZOL 20 MG TABLET",
+    "tarih": "04/12/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/MADEPZOL20mgtabletkub_11_12_2025.pdf"
+   },
+   {
+    "form": "ağızda dağılan tablet",
+    "urun": "ABİZOL EASYTAB 5 MG AĞIZDA DAĞILAN TABLET",
+    "tarih": "04/06/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ABZOLEASYTAB5mgazdadalantabletkb_13_06_2025.pdf"
+   },
+   {
+    "form": "oral çözelti",
+    "urun": "ARİPA 1 MG/ML ORAL ÇÖZELTİ",
+    "tarih": "27/05/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ARPAKB_27_05_2025.pdf"
+   }
+  ]
  },
  "olanzapin": {
   "urun": "ZYPREXA 5 MG FILM KAPLI TABLET",
@@ -885,6 +1254,20 @@ window.TR_KUB = {
     "tarih": "24/03/2011",
     "url": "https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf"
    }
+  ],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "ZYPREXA 5 MG FILM KAPLI TABLET",
+    "tarih": "11/07/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/zprexa5ek1kubbmed5mg_31_07_2025.pdf"
+   },
+   {
+    "form": "ağızda dağılan tablet",
+    "urun": "OLAXINN 5MG AĞIZDA DAĞILAN TABLET",
+    "tarih": "19/02/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/OLAXNNKBONAY_02_04_2026.pdf"
+   }
   ]
  },
  "ketiapin": {
@@ -896,14 +1279,15 @@ window.TR_KUB = {
    "Şizofreni",
    "Bipolar orta-ileri mani",
    "Bipolar depresyon (majör depresif atak)",
-   "Bipolar nüks önleme (ketiapine yanıt vermiş hastalarda)"
+   "Bipolar nüks önleme (ketiapine yanıt vermiş hastalarda)",
+   "Majör depresif bozuklukta antidepresana yetersiz yanıtta ek (güçlendirme) tedavi (uzatılmış salımlı tablet; film tablet KÜB'lerinde yok)"
   ],
   "pediatrik": [],
   "pedNot": "18 yaş altında yeterli veri olmadığından kullanımı önerilmez.",
   "doz": {
    "eri": {
-    "bas": "Şizofreni ve bipolar depresyon: 1. gün 50 mg (100–200–300 mg) · Mani: 1. gün 100 mg (200–300–400 mg)",
-    "maks": "Şizofreni 750 mg/gün · Mani ve nüks önleme 800 mg/gün · Bipolar depresyon 300 mg (600 mg'a kadar)"
+    "bas": "Şizofreni ve bipolar depresyon: 1. gün 50 mg (100–200–300 mg) · Mani: 1. gün 100 mg (200–300–400 mg) · MDB'de ek tedavi (uzatılmış salımlı): 1–2. gün 50 mg, 3–4. gün 150 mg",
+    "maks": "Şizofreni 750 mg/gün · Mani ve nüks önleme 800 mg/gün · Bipolar depresyon 300 mg (600 mg'a kadar) · MDB ek tedavi 300 mg/gün"
    },
    "ped": null
   },
@@ -919,7 +1303,27 @@ window.TR_KUB = {
     "18 yaş altında kullanımı önerilmez (FDA: bipolar mani ≥ 10 yaş, şizofreni ≥ 13 yaş)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "SEROQUEL 300 MG FILM KAPLI TABLET",
+    "tarih": "04/12/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/seroquel300Ek2_05_01_2026.2_KUB"
+   },
+   {
+    "form": "tablet",
+    "urun": "GYREX 50 MG FILM KAPLI TABLET",
+    "tarih": "12/06/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/onaylkb50_17_06_2026.pdf"
+   },
+   {
+    "form": "uzatılmış salımlı tablet",
+    "urun": "KETYA XR 400 MG UZATILMIŞ SALIMLI TABLET",
+    "tarih": "04/12/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/UYGUNKBKETYAXR400mg_09_12_2025.pdf"
+   }
+  ]
  },
  "klozapin": {
   "urun": "LEPONEX 25 MG TABLET",
@@ -954,7 +1358,21 @@ window.TR_KUB = {
     "16 yaş altında kullanılmamalıdır."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "LEPONEX 25 MG TABLET",
+    "tarih": "24/04/2017",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/JoU99ykZVpBuN.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "CLONEX 25 MG TABLET",
+    "tarih": "31/12/2019",
+    "url": "https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TITCKCLONEX25UYGUNKUB_4fbbd181-5214-4074-9e8d-d59f0dc12c41.pdf"
+   }
+  ]
  },
  "haloperidol": {
   "urun": "NORODOL 2 MG / ML ORAL DAMLA",
@@ -962,28 +1380,33 @@ window.TR_KUB = {
   "tarih": "02/10/2026",
   "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/TTCKOnaylKBNORODOLDAMLA_ec2d5eb6-8f7c-49e3-939f-854016551982.pdf",
   "eriskin": [
-   "Şizofreni ve şizoaffektif bozukluk",
-   "Akut deliryum (non-farmakolojik tedavi başarısızsa)",
-   "Bipolar I orta-şiddetli manik atak",
-   "Psikotik bozukluk/bipolar maniye bağlı akut psikomotor ajitasyon",
-   "Orta-şiddetli Alzheimer ve vasküler demansta inatçı saldırganlık ve psikotik semptomlar",
-   "Tourette dahil tik bozuklukları (şiddetli, diğer tedaviler başarısızsa)",
-   "Huntington hastalığında kore (psikiyatri dışı)"
+   "Şizofreni ve şizoaffektif bozukluk (şizoaffektif bozukluk yalnız damla KÜB'ünde)",
+   "Diğer psikozlar, özellikle paranoid (tablet; damla KÜB'ünde yok)",
+   "Akut deliryum (non-farmakolojik tedavi başarısızsa; damla, tablet KÜB'ünde yok)",
+   "Bipolar I orta-şiddetli manik atak (damla; tablet KÜB'ü: mani ve hipomani)",
+   "Psikotik bozukluk/bipolar maniye bağlı akut psikomotor ajitasyon (damla; tablet KÜB'ü: orta-şiddetli ajitasyon, eksitasyon ve dürtüsel şiddette kısa süreli ek tedavi)",
+   "Orta-şiddetli Alzheimer ve vasküler demansta inatçı saldırganlık ve psikotik semptomlar (damla; tablet KÜB'ünde yok)",
+   "Yaşlılarda ajitasyon (tablet; damla KÜB'ünde yok)",
+   "Organik beyin hasarı ve mental retardasyonda saldırganlık, hiperaktivite gibi davranış bozuklukları (tablet; damla KÜB'ünde yok)",
+   "Tourette dahil tik bozuklukları (damla: şiddetli, diğer tedaviler başarısızsa; tablet: Tourette ve şiddetli tikler)",
+   "İnatçı hıçkırık (tablet; damla KÜB'ünde yok)",
+   "Huntington hastalığında kore (psikiyatri dışı; damla, tablet KÜB'ünde yok)"
   ],
   "pediatrik": [
-   "Şizofreni · 13–17 yaş (diğer tedaviler başarısız/tolere edilemiyorsa)",
-   "Otizm/yaygın gelişimsel bozuklukta inatçı şiddetli saldırganlık · 6–17 yaş",
-   "Tourette dahil tik bozuklukları · 10–17 yaş (4.2 doz önerisi 12–17 yaş)"
+   "Şizofreni · 13–17 yaş (damla: diğer tedaviler başarısız/tolere edilemiyorsa; tablet KÜB'ü yaş sınırı vermeden 'çocukluk şizofrenisi' der)",
+   "Otizm/yaygın gelişimsel bozuklukta inatçı şiddetli saldırganlık · 6–17 yaş (damla; tablet KÜB'ünde yok)",
+   "Tourette dahil tik bozuklukları · 10–17 yaş (damla; 4.2 doz önerisi 12–17 yaş; tablet KÜB'ü yaş sınırı vermez)",
+   "Hiperaktivite ve ajitasyonla ilişkili davranış bozuklukları · yaş sınırı belirtilmemiş (tablet; damla KÜB'ünde yok)"
   ],
-  "pedNot": "Endikasyondaki yaşların altında güvenlilik/etkililik belirlenmemiş; 3 yaş altı için veri yok.",
+  "pedNot": "Damla KÜB'ü (NORODOL damla, 2026) çocuk endikasyonlarını yaşla sınırlar; bu yaşların altında güvenlilik/etkililik belirlenmemiş, 3 yaş altı için veri yok. Tablet KÜB'ü (NORODOL 5 mg tablet, 2016) ise çocuklarda davranış bozuklukları, Tourette ve çocukluk şizofrenisini yaş sınırı vermeden sayar ve 0,025–0,05 mg/kg/gün (en fazla 10 mg) önerir. Tablet KÜB'ü 2016 tarihlidir; damla KÜB'ü (2026) güncel, daha kısıtlayıcı metindir; pediatrik kullanımda damla KÜB'ünü esas alın.",
   "doz": {
    "eri": {
     "bas": "Şizofreni 2–10 mg/gün (ilk atak 2–4 mg) · Mani 2–10 mg · Deliryum 1–10 mg · Demans ve tik 0,5–5 mg/gün",
     "maks": "Şizofreni 20 mg/gün · Mani 15 mg/gün · Deliryum 10 mg/gün · Ajitasyon 20 mg/gün · Yaşlı 5 mg/gün"
    },
    "ped": {
-    "bas": "0,5 mg/gün'den (2–3 doza bölünmüş)",
-    "maks": "Şizofreni 13–17: 5 mg/gün (öneri 0,5–3) · Otizm saldırganlık 6–11: 3 mg, 12–17: 5 mg · Tik 12–17: 3 mg/gün"
+    "bas": "Damla: 0,5 mg/gün'den (2–3 doza bölünmüş) · Tablet KÜB'ü (2016): çocukta davranış bozukluğu ve şizofrenide idame 0,025–0,05 mg/kg/gün, sabah-akşam ikiye bölünmüş",
+    "maks": "Damla: şizofreni 13–17 yaş 5 mg/gün (öneri 0,5–3) · otizmde saldırganlık 6–11 yaş 3 mg, 12–17 yaş 5 mg · tik 12–17 yaş 3 mg/gün · Tablet KÜB'ü: çocukta en fazla 10 mg/gün (Tourette'te çocukların çoğunda idame 10 mg; erişkin şemasında adolesanda 30 mg/gün'e kadar)"
    }
   },
   "organ": {
@@ -993,15 +1416,31 @@ window.TR_KUB = {
   "fark": {
    "eri": [
     "Türkiye'de ek endikasyon: şizoaffektif bozukluk, bipolar I mani, akut psikomotor ajitasyon, akut deliryum.",
-    "Maksimum doz manide 15 mg/gün, deliryumda 10 mg/gün, akut ajitasyonda 20 mg/gün.",
-    "Orta–şiddetli Alzheimer/vasküler demansta inatçı saldırganlık ve psikozda 0,5–5 mg/gün ile ruhsatlı; mortalite uyarısı geçerli."
+    "Damlada maksimum doz manide 15, deliryumda 10, ajitasyonda 20 mg/gün; tablet KÜB'ü dirençli şizofrenide 30 mg/gün'e izin verir.",
+    "Damla KÜB'ünde orta–şiddetli Alzheimer/vasküler demansta inatçı saldırganlık ve psikozda 0,5–5 mg/gün; mortalite uyarısı geçerli.",
+    "Tablet KÜB'ünde ayrıca inatçı hıçkırık, yaşlılarda ajitasyon ve organik beyin hasarı/mental retardasyonda saldırganlık yer alır."
    ],
    "ped": [
-    "Şizofreni 13–17, otizm/YGB'de saldırganlık 6–17, tik bozukluğu 10–17 yaşta, yalnız diğer tedaviler başarısızsa (FDA: ≥ 3 yaş).",
-    "Ergen şizofrenide 0,5–3 mg/gün (maks 5 mg); otizmde 6–11 yaş 0,5–3 mg, 12–17 yaş 0,5–5 mg/gün; tikte 0,5–3 mg/gün."
+    "Damla KÜB'ü çocukta şizofreniyi 13–17, otizmde saldırganlığı 6–17, tiki 10–17 yaşla sınırlar; tablet KÜB'ü yaş vermez (FDA: ≥ 3 yaş).",
+    "Damlada ergen şizofrenide 0,5–3 mg/gün (maks 5); otizmde 6–11 yaş 0,5–3 mg, 12–17 yaş 0,5–5 mg; tikte 0,5–3 mg/gün.",
+    "Tablet KÜB'ü çocukta davranış bozukluğu ve şizofrenide 0,025–0,05 mg/kg/gün, en fazla 10 mg önerir (FDA psikozda 0,05–0,15 mg/kg)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "damla",
+    "urun": "NORODOL 2 MG / ML ORAL DAMLA",
+    "tarih": "02/10/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/TTCKOnaylKBNORODOLDAMLA_ec2d5eb6-8f7c-49e3-939f-854016551982.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "NORODOL 5 MG TABLET",
+    "tarih": "14/12/2016",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/Bn2nN6gDFPhKb.pdf"
+   }
+  ]
  },
  "paliperidon": {
   "urun": "İNVEGA 9 MG UZATILMIŞ SALIMLI TABLET",
@@ -1038,7 +1477,15 @@ window.TR_KUB = {
     "Ergen şizofrenisinde doz yalnız 15 yaş ve üzeri için verilir; 12–14 yaşta güvenlilik ve etkililik belirlenmemiş (FDA: ≥ 12 yaş)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "uzatılmış salımlı tablet",
+    "urun": "İNVEGA 9 MG UZATILMIŞ SALIMLI TABLET",
+    "tarih": "21/09/2022",
+    "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/INVEGA9mgKUB_03569eb5-11ee-468c-a429-864f6c87b15a.pdf"
+   }
+  ]
  },
  "ziprasidon": {
   "urun": "ZELDOX 60 MG KAPSÜL",
@@ -1050,9 +1497,9 @@ window.TR_KUB = {
    "Bipolar mani / karma epizod (kısa süreli tedavi)"
   ],
   "pediatrik": [
-   "Bipolar mani / karma epizod (kısa süreli tedavi) · 10–17 yaş"
+   "Bipolar mani / karma epizod (kısa süreli tedavi) · 10–17 yaş (kapsül; tablet KÜB'ünde yok)"
   ],
-  "pedNot": "4.1'de 10–17 yaş mani endikasyonu var; ancak 4.2'de '18 yaşın altındaki çocuklarda etkililiği ve güvenliliği kanıtlanmamıştır' deniyor ve pediatrik doz verilmiyor (KÜB içi tutarsızlık). Şizofrenide çocuk/ergende etkililik belirlenmemiş; pediatrik şizofreni çalışması etkisizlik nedeniyle sonlandırılmış. Bipolar idamede yeterli kanıt yok.",
+  "pedNot": "Kapsül KÜB'ü (ZELDOX, 2022) 4.1'de 10–17 yaş mani endikasyonu verir; ancak 4.2'de '18 yaşın altındaki çocuklarda etkililiği ve güvenliliği kanıtlanmamıştır' der ve pediatrik doz vermez (KÜB içi tutarsızlık). Tablet KÜB'ü (SYDONE, 2011) pediatrik endikasyon vermez; etkinlik ve emniyetin çocuk ve adolesanlarda değerlendirilmediğini belirtir. Şizofrenide çocuk/ergende etkililik belirlenmemiş; pediatrik şizofreni çalışması etkisizlik nedeniyle sonlandırılmış. Bipolar idamede yeterli kanıt yok.",
   "doz": {
    "eri": {
     "bas": "40 mg ×2 (yemekle; şizofreni ve akut mani)",
@@ -1073,10 +1520,24 @@ window.TR_KUB = {
     "Şizofreni ve akut manide başlangıç dozu 40 mg × 2, yemekle (FDA'da şizofrenide 20 mg × 2)."
    ],
    "ped": [
-    "10–17 yaşta maninin kısa süreli tedavisinde endike, ancak 18 yaş altında etkililik ve güvenlilik kanıtlanmamış (FDA'da onay yok)."
+    "10–17 yaşta kısa süreli mani endikasyonu yalnız kapsül KÜB'ünde, etkililiği kanıtlanmamış notuyla; tablet KÜB'ünde yok (FDA'da onay yok)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "kapsül",
+    "urun": "ZELDOX 60 MG KAPSÜL",
+    "tarih": "29/06/2022",
+    "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/Zeldox60KB_21842cef-7015-4164-9b89-31a0663bc042.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "SYDONE 60 MG FILM TABLET",
+    "tarih": "05/08/2011",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/f1004dde22269.pdf"
+   }
+  ]
  },
  "lurasidon": {
   "urun": "FERADON 40 MG FİLM KAPLI TABLET (muadil)",
@@ -1113,7 +1574,15 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "FERADON 40 MG FİLM KAPLI TABLET",
+    "tarih": "26/03/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Feradon40mgOnaylKB_07_04_2026.pdf"
+   }
+  ]
  },
  "amisulpirid": {
   "urun": "SOLIAN 200 MG TABLET",
@@ -1121,7 +1590,7 @@ window.TR_KUB = {
   "tarih": "28/03/2026",
   "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Solian200mgTabletEk1311kubtemiz_07_05_2026.pdf",
   "eriskin": [
-   "Psikozlar, özellikle akut/kronik şizofrenik bozukluklar (pozitif ve/veya negatif belirtiler)"
+   "Psikozlar, özellikle akut/kronik şizofrenik bozukluklar (pozitif ve/veya negatif belirtiler) · tablet; oral çözelti KÜB'ünde yalnız şizofreni"
   ],
   "pediatrik": [],
   "pedNot": "15–18 yaşta önerilmez (etkililik/güvenlilik belirlenmemiş); 15 yaş altında kontrendike.",
@@ -1142,7 +1611,21 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "SOLIAN 200 MG TABLET",
+    "tarih": "28/03/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Solian200mgTabletEk1311kubtemiz_07_05_2026.pdf"
+   },
+   {
+    "form": "oral çözelti / şurup",
+    "urun": "SOLIAN 100 MG/ML ORAL ÇÖZELTİ",
+    "tarih": "28/03/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/SOLAN100mgmLoralzeltiEk1311kubtemiz_07_05_2026.pdf"
+   }
+  ]
  },
  "klorpromazin": {
   "urun": "LARGACTİL 100 MG KAPLI TABLET",
@@ -1183,7 +1666,15 @@ window.TR_KUB = {
     "6 yaş üstü çocukta 1–5 mg/kg/gün, 2–3 doza bölünmüş; sabit mg üst sınırı yok (FDA: 5–12 yaş maks 75 mg/gün)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "LARGACTİL 100 MG KAPLI TABLET",
+    "tarih": "30/06/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ek1311kubtemiz_11_08_2026.pdf"
+   }
+  ]
  },
  "asenapin": {
   "ruhsatsiz": true
@@ -1194,14 +1685,16 @@ window.TR_KUB = {
   "tarih": "13/12/2024",
   "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/REXULT4KB_09_01_2025.pdf",
   "eriskin": [
-   "Şizofreni"
+   "Şizofreni",
+   "Majör depresif bozuklukta antidepresanlara ek tedavi (REBEXİP KÜB'ü, 2026; REXULTI KÜB'ünde yok)",
+   "Alzheimer hastalığına bağlı demansla ilişkili ajitasyon (REBEXİP KÜB'ü, 2026; REXULTI KÜB'ünde yok)"
   ],
   "pediatrik": [],
-  "pedNot": "18 yaş altında güvenlilik ve etkililik kanıtlanmamış; veri yok.",
+  "pedNot": "18 yaş altında şizofrenide güvenlilik ve etkililik kanıtlanmamış, veri yok; REBEXİP KÜB'üne göre MDB'de de pediatrik güvenlilik ve etkililik kanıtlanmamış.",
   "doz": {
    "eri": {
-    "bas": "1 mg/gün (1–4. gün); 5–7. gün 2 mg, 8. gün 4 mg",
-    "maks": "4 mg/gün"
+    "bas": "Şizofreni (REXULTI): 1 mg/gün (1–4. gün), 5–7. gün 2 mg, 8. gün 4 mg · MDB'de ek tedavi ve Alzheimer ajitasyonu (REBEXİP): 0,5–1 mg/gün, hedef 2 mg",
+    "maks": "Şizofreni 4 mg/gün · MDB ek tedavi ve ajitasyon 3 mg/gün"
    },
    "ped": null
   },
@@ -1211,13 +1704,27 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [
-    "Yalnız erişkin şizofrenide endike; majör depresyonda ek tedavi ve Alzheimer ajitasyonu endikasyonları yok."
+    "MDB'de ek tedavi ve Alzheimer ajitasyonu endikasyonu yalnız bazı muadil KÜB'lerinde var (REBEXİP, 2026); REXULTI KÜB'ü yalnız şizofreni der."
    ],
    "ped": [
     "Pediatrik endikasyon yok; 18 yaş altında güvenlilik ve etkililik kanıtlanmamış (FDA: şizofreni ≥ 13 yaş)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "REXULTI 4 MG FILM KAPLI TABLET",
+    "tarih": "13/12/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/REXULT4KB_09_01_2025.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "REBEXİP 3 MG FİLM KAPLI TABLET",
+    "tarih": "30/03/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kub_08_04_2026.pdf"
+   }
+  ]
  },
  "kariprazin": {
   "urun": "KAPRAZDİ 1,5 MG SERT KAPSÜL (muadil)",
@@ -1247,7 +1754,15 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "kapsül",
+    "urun": "KAPRAZDİ 1,5 MG SERT KAPSÜL",
+    "tarih": "20/03/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/UYGUNKBKAPRAZD15_20_03_2025.pdf"
+   }
+  ]
  },
  "pimozid": {
   "urun": "NÖROFREN 2 MG TABLET (muadil)",
@@ -1284,7 +1799,15 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "NÖROFREN 2 MG TABLET",
+    "tarih": "23/02/2017",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/R08fKTLWSc7JW.pdf"
+   }
+  ]
  },
  "lityum": {
   "urun": "LITHURIL 300MG KAPSÜL",
@@ -1320,7 +1843,21 @@ window.TR_KUB = {
     "12 yaş altında kullanılmamalıdır (FDA: ≥ 7 yaş)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "kapsül",
+    "urun": "LITHURIL 300MG KAPSÜL",
+    "tarih": "01/11/2012",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/fe0aa77783730.pdf"
+   },
+   {
+    "form": "kapsül",
+    "urun": "LITOMAKS 300 MG SERT KAPSÜL",
+    "tarih": "10/09/2023",
+    "url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/imzalanacakkblitomaks_d2784105-1f4b-49e5-8bd1-4ba3a1959227.pdf"
+   }
+  ]
  },
  "valproat": {
   "urun": "DEPAKİN CHRONO BT 500 MG UZUN ETKILI FILM TABLET",
@@ -1352,12 +1889,26 @@ window.TR_KUB = {
   "fark": {
    "eri": [
     "Manide yalnız lityumun kontrendike olduğu veya tolere edilemediği durumlarda endike; migren profilaksisi endikasyonu yok.",
-    "Manide üst doz tanımlanmamış; ortalama 1000–2000 mg/gün, 45 mg/kg/gün üzerinde yakın izlem (FDA: maks 60 mg/kg/gün).",
+    "Manide ER tablet KÜB'ü üst doz vermez (> 45 mg/kg/gün'de yakın izlem); şurup KÜB'ü istisnaen en fazla 3000 mg/gün der (FDA: 60 mg/kg/gün).",
     "Böbrek yetmezliğinde doz azaltımı, hemodiyalizde doz artırımı gerekebilir."
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "DEPAKİN CHRONO BT 500 MG UZUN ETKILI FILM TABLET",
+    "tarih": "06/11/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ekek4kubtemiz_352ee8fd-ebbe-4227-bb6d-cf9e6ca76155.pdf"
+   },
+   {
+    "form": "oral çözelti / şurup",
+    "urun": "DEPAKİN 57,64 MG/ML ŞURUP",
+    "tarih": "06/11/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ekek4kubtemiz_fdef4f85-2faa-45cb-afda-b2b139a91f15.pdf"
+   }
+  ]
  },
  "lamotrijin": {
   "urun": "LAMICTAL DC 100 MG ÇÖZÜNÜR/ÇIĞNEME TABLETI",
@@ -1397,7 +1948,21 @@ window.TR_KUB = {
     "Bipolar bozuklukta 18 yaş altında endike değildir ve kullanımı önerilmez."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "LAMICTAL DC 100 MG ÇÖZÜNÜR/ÇIĞNEME TABLETI",
+    "tarih": "03/06/2022",
+    "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/Lamictal100KB_06b30164-c964-4d3e-a257-e4980f0965a9.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "PINRAL 50 MG ÇIĞNENEBILIR / ÇÖZÜNEBILIR TABLET",
+    "tarih": "09/05/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/PNRAL50MGKB_13_05_2025.pdf"
+   }
+  ]
  },
  "karbamazepin": {
   "urun": "TEGRETOL 200 MG TABLET",
@@ -1434,7 +1999,33 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "TEGRETOL 200 MG TABLET",
+    "tarih": "24/11/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/onaylkbtb_01_12_2025.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "KARAZEPIN 200 MG TABLET",
+    "tarih": "26/03/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/KARAZEPN200KB_30_03_2026.pdf"
+   },
+   {
+    "form": "oral çözelti / şurup",
+    "urun": "TEGRETOL 100 MG/5 ML ORAL SÜSPANSİYON",
+    "tarih": "24/11/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ONAYLIKBSSP_01_12_2025.pdf"
+   },
+   {
+    "form": "uzatılmış / değiştirilmiş salımlı",
+    "urun": "TEGRETOL 200 MG DEĞİŞTİRİLMİŞ SALIMLI TABLET",
+    "tarih": "24/11/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ONAYLIKBDE_01_12_2025.pdf"
+   }
+  ]
  },
  "okskarbazepin": {
   "urun": "TRILEPTAL 300 MG FILM KAPLI TABLET",
@@ -1468,7 +2059,21 @@ window.TR_KUB = {
     "Epilepside 6 yaş altında önerilmez (FDA: epilepsi ≥ 4 yaş)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "TRILEPTAL 300 MG FILM KAPLI TABLET",
+    "tarih": "27/05/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/TRLEPTAL300mgfilmkapltabletKUB_37994d2e-aba8-480c-bd98-1bd0c5c800bd.pdf"
+   },
+   {
+    "form": "oral çözelti / şurup",
+    "urun": "TRİLEPTAL 60 MG/ML ORAL SÜSPANSİYON",
+    "tarih": "27/05/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/TRLEPTAL60mgmloralsspansiyonKUB_71b36e14-fc91-4c46-8080-26a26a4adb20.pdf"
+   }
+  ]
  },
  "melatonin": {
   "urun": "MELOGEN 1 MG/ML ORAL ÇÖZELTİ",
@@ -1476,16 +2081,17 @@ window.TR_KUB = {
   "tarih": "10/09/2026",
   "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/uygunkb_116bcf3a-8dbb-4580-81b4-1e48ad222f47.pdf",
   "eriskin": [
-   "Jet lag'e bağlı sirkadiyen ritim uyku bozukluğu · kısa süreli"
+   "Jet lag'e bağlı sirkadiyen ritim uyku bozukluğu · kısa süreli (tablet ve oral çözelti; uzatılmış salımlı tablet KÜB'ünde yok)",
+   "Düşük kaliteli uykuyla karakterize birincil uykusuzluk · ≥ 55 yaş, kısa süreli monoterapi (uzatılmış salımlı tablet; tablet ve oral çözelti KÜB'lerinde yok)"
   ],
   "pediatrik": [
-   "Otizm spektrum bozukluğu ve/veya Smith-Magenis sendromunda, uyku hijyeni yetersizse gecikmiş uyku başlangıçlı uykusuzluk · 2–18 yaş"
+   "Otizm spektrum bozukluğu ve/veya Smith-Magenis sendromunda, uyku hijyeni yetersizse gecikmiş uyku başlangıçlı uykusuzluk · 2–18 yaş (oral çözelti; tablet ve uzatılmış salımlı tablet KÜB'lerinde yok)"
   ],
-  "pedNot": "0–2 yaşta kullanımı yok. En az 6 ayda bir yeniden değerlendirme.",
+  "pedNot": "Formlar çelişir: oral çözelti KÜB'ü (MELOGEN, 2026) 2–18 yaşta OSB ve/veya Smith-Magenis sendromunda endikasyon verir (0–2 yaşta kullanımı yok; en az 6 ayda bir yeniden değerlendirme). Tablet (MELLAREST, 2026) ve uzatılmış salımlı tablet (VEFARMA MELATONİN, 2026) KÜB'leri 0–18 yaşta güvenlilik ve etkililik belirlenmediği için çocuk ve ergende kullanılmamasını söyler.",
   "doz": {
    "eri": {
-    "bas": "Jet lag: 3 mg/gün, yatma saatinde, 5 gün",
-    "maks": "6 mg/gün (3 mg yetersizse); saat 20.00'den önce veya 04.00'ten sonra alınmaz"
+    "bas": "Jet lag (tablet, oral çözelti): 3 mg/gün yatma saatinde, 5 gün · Birincil uykusuzluk ≥ 55 yaş (uzatılmış salımlı): 2 mg, yemekten sonra, yatmadan 1–2 saat önce",
+    "maks": "Jet lag: 6 mg/gün (3 mg yetersizse) · Uzatılmış salımlı: 2 mg/gün, 13 haftaya kadar"
    },
    "ped": {
     "bas": "2 mg (2 mL), yatmadan 30–60 dk önce",
@@ -1498,15 +2104,37 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [
-    "Oral çözelti erişkinde yalnız jet lag'e bağlı sirkadiyen ritim uyku bozukluğunda ruhsatlı; 55 yaş üstü uykusuzluk endikasyonu yok.",
+    "≥ 55 yaş birincil uykusuzlukta yalnız uzatılmış salımlı tablet ruhsatlı: 2 mg, yemekten sonra, yatmadan 1–2 saat önce, 13 haftaya kadar.",
+    "Tablet ve oral çözelti erişkinde jet lag'e bağlı sirkadiyen ritim uyku bozukluğunun kısa süreli tedavisinde de ruhsatlı.",
     "Jet lag'de 5 gün boyunca 3 mg/gün, yetersizse 6 mg/gün; yatma saatinde alınır."
    ],
    "ped": [
-    "2–18 yaşta otizm spektrum bozukluğu ve/veya Smith-Magenis sendromunda gecikmiş uyku başlangıçlı uykusuzlukta ruhsatlı (oral çözelti).",
-    "Çocukta doz sabit 2 mg/gün, yatmadan 30–60 dk önce; en az 6 ayda bir yeniden değerlendirilir."
+    "2–18 yaşta OSB ve/veya Smith-Magenis sendromunda gecikmiş uyku başlangıçlı uykusuzlukta yalnız oral çözelti ruhsatlı (Avrupa: SR form).",
+    "Çocukta doz sabit 2 mg/gün, yatmadan 30–60 dk önce; en az 6 ayda bir yeniden değerlendirilir.",
+    "Tablet ve uzatılmış salımlı tablet KÜB'leri 0–18 yaşta güvenlilik ve etkililik belirlenmediği için çocukta kullanılmamasını söyler."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "oral çözelti",
+    "urun": "MELOGEN 1 MG/ML ORAL ÇÖZELTİ",
+    "tarih": "10/09/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/uygunkb_116bcf3a-8dbb-4580-81b4-1e48ad222f47.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "MELLAREST 3 MG FİLM KAPLI TABLET",
+    "tarih": "29/07/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/OnaylKB_04_08_2026.pdf"
+   },
+   {
+    "form": "uzatılmış salımlı tablet",
+    "urun": "VEFARMA MELATONİN 2 MG UZATILMIŞ SALIMLI TABLET",
+    "tarih": "25/07/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/VEFARMAMELATONNKB_03_08_2026.pdf"
+   }
+  ]
  },
  "hidroksizin": {
   "urun": "ATARAX 25 MG FİLM KAPLI TABLET",
@@ -1515,20 +2143,22 @@ window.TR_KUB = {
   "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/yaynlanacakatarax25Ek21312kub_25_12_2025.pdf",
   "eriskin": [
    "Anksiyetenin semptomatik tedavisi · ≥ 18 yaş",
-   "Kaşıntının semptomatik tedavisi"
+   "Kaşıntının semptomatik tedavisi",
+   "Cerrahi operasyon öncesi premedikasyon (damla; tablet ve şurup KÜB'lerinde yok)"
   ],
   "pediatrik": [
-   "Kaşıntı · ≥ 12 ay (film tablet ≥ 6 yaş)"
+   "Kaşıntı · ≥ 12 ay (film tablet ≥ 6 yaş)",
+   "Cerrahi operasyon öncesi premedikasyon · ≥ 12 ay (damla; tablet ve şurup KÜB'lerinde yok)"
   ],
-  "pedNot": "Anksiyete endikasyonu yalnız ≥ 18 yaş. 12 aydan küçüklerde veri yok.",
+  "pedNot": "Anksiyete endikasyonu tüm formlarda yalnız erişkinde (≥ 18 yaş). Damla KÜB'ü (HİDRAX, 2022) 12 aydan itibaren çocukta cerrahi öncesi premedikasyonda da endikasyon ve doz verir; film tablet (ATARAX, 2025) ve şurup (ATARAX, 2026) KÜB'lerinde bu endikasyon yok. 12 aydan küçüklerde veri yok.",
   "doz": {
    "eri": {
     "bas": "Anksiyete: 50 mg/gün, üçe bölünmüş (12,5 – 12,5 – 25 mg)",
     "maks": "100 mg/gün (yaşlıda 50 mg/gün)"
    },
    "ped": {
-    "bas": "Kaşıntı: 1–2 mg/kg/gün, bölünmüş",
-    "maks": "≤ 40 kg: 2 mg/kg/gün; > 40 kg: 100 mg/gün"
+    "bas": "Kaşıntı: 1–2 mg/kg/gün, bölünmüş; premedikasyon (damla): anesteziden önceki gece 1 mg/kg, operasyondan 1 saat önce 1 mg/kg",
+    "maks": "≤ 40 kg: 2 mg/kg/gün; > 40 kg: 100 mg/gün (premedikasyonda 24 saatte en fazla 2 mg/kg)"
    }
   },
   "organ": {
@@ -1537,14 +2167,34 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [
-    "Premedikasyonda sedasyon endikasyonu yok; yalnız anksiyete ve kaşıntıda endike.",
+    "Premedikasyon endikasyonu yalnız damla formunda var (erişkinde 50–100 mg/gün); tablet ve şurup yalnız anksiyete ve kaşıntıda endike.",
     "GFR 30–<60 mL/dk'da dozun %50'si, < 30 mL/dk'da ve diyalizde %25'i verilir (diyalizde haftada 3 kez)."
    ],
    "ped": [
-    "Anksiyete endikasyonu 18 yaş ve üzerinde; çocukta yalnız 12 ay üzeri kaşıntıda endike (FDA: çocukta anksiyete ve sedasyon da)."
+    "Çocukta anksiyete endikasyonu yok (≥ 18 yaş); ≥ 12 ay kaşıntıda, damla ile ameliyat öncesi premedikasyonda da endike (FDA: anksiyete de)."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "film tablet",
+    "urun": "ATARAX 25 MG FİLM KAPLI TABLET",
+    "tarih": "28/11/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/yaynlanacakatarax25Ek21312kub_25_12_2025.pdf"
+   },
+   {
+    "form": "şurup",
+    "urun": "ATARAX 2 MG/ML ŞURUP",
+    "tarih": "19/06/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ek21311kub_11_08_2026.pdf"
+   },
+   {
+    "form": "damla",
+    "urun": "HİDRAX 50 MG/ML ORAL DAMLA, ÇÖZELTİ",
+    "tarih": "03/08/2022",
+    "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/ek2kub_6c13c973-25e8-462e-b2e0-04f98cbae0ec.pdf"
+   }
+  ]
  },
  "klonazepam": {
   "urun": "RIVOTRIL 2 MG TABLET",
@@ -1578,7 +2228,27 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "RIVOTRIL 2 MG TABLET",
+    "tarih": "28/02/2013",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/d299c65055855.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "RIVOCLON 2 MG TABLET",
+    "tarih": "14/06/2019",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kbrivoclon2019_29_01_2025.pdf"
+   },
+   {
+    "form": "damla",
+    "urun": "RİVOCLON 2,5 MG/1 ML ORAL DAMLA, ÇÖZELTİ",
+    "tarih": "01/11/2018",
+    "url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/rivoclonkb_fcb28b3c-05ae-4ee8-933e-65498f913660.pdf"
+   }
+  ]
  },
  "lorazepam": {
   "urun": "ATIVAN EXPIDET 1 MG TABLET",
@@ -1610,7 +2280,15 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "ağızda dağılan tablet",
+    "urun": "ATIVAN EXPIDET 1 MG TABLET",
+    "tarih": "26/02/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ATIVAN1mgKB_26_02_2025.pdf"
+   }
+  ]
  },
  "buspiron": {
   "urun": "BUSPON 5 MG KAPSÜL",
@@ -1641,7 +2319,21 @@ window.TR_KUB = {
     "18 yaş altında kullanılmamalıdır."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "kapsül",
+    "urun": "BUSPON 5 MG KAPSÜL",
+    "tarih": "03/05/2012",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/f6cce59971969.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "BUSPIR 5 MG TABLET",
+    "tarih": "02/05/2015",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/20675df228352.pdf"
+   }
+  ]
  },
  "diazepam": {
   "urun": "NERVİUM 5 MG TABLET",
@@ -1677,7 +2369,21 @@ window.TR_KUB = {
    ],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "NERVİUM 5 MG TABLET",
+    "tarih": "08/09/2014",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/6fdbc7c785078.pdf"
+   },
+   {
+    "form": "kapsül",
+    "urun": "DIAZEM 10 MG KAPSÜL",
+    "tarih": "15/05/2012",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/79eBuy65Phnxl.pdf"
+   }
+  ]
  },
  "alprazolam": {
   "urun": "XANAX 0.5 MG TABLET",
@@ -1709,7 +2415,15 @@ window.TR_KUB = {
     "18 yaş altında kullanımı tavsiye edilmez."
    ]
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "XANAX 0.5 MG TABLET",
+    "tarih": "23/06/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kub_23_06_2026.pdf"
+   }
+  ]
  },
  "pregabalin": {
   "urun": "LYRICA 150 MG KAPSÜL",
@@ -1720,7 +2434,7 @@ window.TR_KUB = {
    "Yaygın anksiyete bozukluğu",
    "Periferik nöropatik ağrı",
    "Parsiyel nöbetlerde ek tedavi (epilepsi)",
-   "Fibromiyalji"
+   "Fibromiyalji (LYRICA kapsül, oral çözelti ve efervesan tablet; uzatılmış salımlı tablet ile ALYSE kapsül KÜB'lerinde yok)"
   ],
   "pediatrik": [],
   "pedNot": "12 yaş altında ve 12–17 yaşta güvenlilik ve etkinlik belirlenmemiş; pozoloji önerisi yok.",
@@ -1739,6 +2453,38 @@ window.TR_KUB = {
    "eri": [],
    "ped": []
   },
-  "ek": []
+  "ek": [],
+  "kaynaklar": [
+   {
+    "form": "kapsül",
+    "urun": "LYRICA 150 MG KAPSÜL",
+    "tarih": "24/11/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LYRCA150KBTEMZ_25_11_2025.pdf"
+   },
+   {
+    "form": "kapsül",
+    "urun": "ALYSE 300 MG KAPSÜL",
+    "tarih": "16/04/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/ALYSE300mgkapslkub_17_04_2026.pdf"
+   },
+   {
+    "form": "oral çözelti",
+    "urun": "LYRICA 20 MG/ML ORAL ÇÖZELTİ",
+    "tarih": "22/11/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LYRCA20ORALKBTEMZ_25_11_2025.pdf"
+   },
+   {
+    "form": "efervesan tablet",
+    "urun": "NÖRAFİT 150 MG EFERVESAN TABLET",
+    "tarih": "12/11/2019",
+    "url": "https://titck.gov.tr/storage/Archive/2019/kubKtAttachments/Nörafit 150 mg Efervesan Tablet-KÜB.pdf_f1404999-3f68-4504-8309-a95b6e5ef17f.pdf"
+   },
+   {
+    "form": "uzatılmış salımlı tablet",
+    "urun": "GABADAY SR 50 MG TABLET",
+    "tarih": "23/07/2013",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/237ebee824990.pdf"
+   }
+  ]
  }
 };
