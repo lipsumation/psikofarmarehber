@@ -2486,5 +2486,238 @@ window.TR_KUB = {
     "url": "https://titck.gov.tr/storage/kubKtAttachments/237ebee824990.pdf"
    }
   ]
+ },
+ "zuklopentiksol": {
+  "urun": "CLOPİXOL 2 MG FİLM KAPLI TABLET",
+  "firma": "LUNDBECK İLAÇ TİC. LTD. ŞTİ.",
+  "tarih": "05/04/2026",
+  "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Clopixol2kub_9674f8d6-020a-4660-819f-d90b8de41bd2.pdf",
+  "eriskin": [
+   "Akut ve kronik şizofreni ve diğer psikozlar (özellikle halüsinasyon, hezeyan, düşünce bozukluğuyla birlikte ajitasyon, huzursuzluk, düşmanlık, saldırganlık)",
+   "Manik depresif hastalığın manik fazı",
+   "Ajitasyon veya diğer davranış bozukluklarının eşlik ettiği mental retardasyon"
+  ],
+  "pediatrik": [],
+  "pedNot": "Klinik tecrübe olmadığından çocuklarda kullanımı önerilmez (tablet ve damla KÜB'leri).",
+  "doz": {
+   "eri": {
+    "bas": "Akut şizofreni/psikoz, şiddetli akut ajitasyon, mani: genellikle 10–50 mg/gün; orta-şiddetli vakada 20 mg/gün ile başla, gerekirse 2–3 günde bir 10–20 mg artır · Kronik şizofreni/psikoz idamesi: 20–40 mg/gün (genellikle yatmadan tek doz) · Mental retardasyonda ajitasyon: 6–20 mg/gün, gerekirse 25–40 mg · Yaşlıda aralığın alt sınırı",
+    "maks": "Tek seferde 40 mg, günde toplam 150 mg (damla 20 mg/mL: 1 damla = 1 mg)"
+   },
+   "ped": null
+  },
+  "organ": {
+   "bobrek": "Böbrek işlevi azalmış hastalara olağan dozlarda verilebilir.",
+   "karaciger": "Doza dikkat edilmeli; mümkünse serum düzeyi takibi önerilir."
+  },
+  "fark": {
+   "eri": [
+    "ABD'de onaysız; Türkiye ve Avrupa'da tablet, damla, asetat (Acuphase) ve dekanoat (depo) formları ruhsatlı."
+   ],
+   "ped": []
+  },
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "CLOPİXOL 2 MG FİLM KAPLI TABLET",
+    "tarih": "05/04/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Clopixol2kub_9674f8d6-020a-4660-819f-d90b8de41bd2.pdf"
+   },
+   {
+    "form": "damla",
+    "urun": "CLOPİXOL 20 MG/ML ORAL DAMLA, ÇÖZELTİ",
+    "tarih": "05/04/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Clopixol20mgmlOralkub_3ee3d73a-038e-4fbf-9fec-956bfb7a06c9.pdf"
+   }
+  ],
+  "ek": []
+ },
+ "naltrekson": {
+  "urun": "NOKREV 50 MG FİLM KAPLI TABLET",
+  "firma": "Liba Laboratuarları A.Ş.",
+  "tarih": "19/11/2022",
+  "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/NOKREVKUBUygun25112022_f9ab22ac-2522-49ba-a990-71813fac9961.pdf",
+  "eriskin": [
+   "Alkol bağımlılığı (çok yönlü tedavinin parçası olarak)",
+   "Opioid bağımlılığı (çok yönlü tedavinin parçası olarak)"
+  ],
+  "pediatrik": [],
+  "pedNot": "18 yaş altında güvenlilik ve etkililik verisi yetersiz olduğundan önerilmez.",
+  "doz": {
+   "eri": {
+    "bas": "50 mg/gün tek doz; opioid kullanımı şüphesinde nalokson provokasyon testi negatifse 25 mg ile başlanabilir",
+    "maks": "50 mg/gün; en az 3 aylık başlangıç dönemi, gerekirse uzun süreli"
+   },
+   "ped": null
+  },
+  "organ": {
+   "bobrek": "Ciddi böbrek yetmezliğinde kontrendike.",
+   "karaciger": "Ciddi karaciğer yetmezliği ve akut hepatitte kontrendike; tedavi öncesi ve süresince karaciğer işlev testleri."
+  },
+  "fark": {
+   "eri": [
+    "Opioid bağımlılığında haftada 3 kez yüksek doz şeması (FDA: 100–100–150 mg) Türkiye KÜB'ünde yer almaz; günde 50 mg.",
+    "Uzun etkili enjektabl naltrekson Türkiye'de ruhsatlı değil."
+   ],
+   "ped": []
+  },
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "NOKREV 50 MG FİLM KAPLI TABLET",
+    "tarih": "19/11/2022",
+    "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/NOKREVKUBUygun25112022_f9ab22ac-2522-49ba-a990-71813fac9961.pdf"
+   },
+   {
+    "form": "tablet",
+    "urun": "ETHYLEX 50 MG FİLM TABLET",
+    "tarih": "04/11/2011",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/75c15fa131351.pdf"
+   }
+  ],
+  "ek": []
+ },
+ "buprenorfin": {
+  "urun": "SUBOXONE 8 MG/2 MG DİLALTI TABLET",
+  "firma": "Liba Laboratuarları A.Ş.",
+  "tarih": "30/04/2025",
+  "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kubtemiz82_30_04_2025.pdf",
+  "eriskin": [
+   "Opiyat bağımlılığında ikame tedavisi (tıbbi, sosyal ve psikolojik tedavi çerçevesinde; bağımlılık tedavisini kabul etmiş hastada)"
+  ],
+  "pediatrik": [
+   "Opiyat bağımlılığında ikame tedavisi · 15 yaşından büyük ergenler"
+  ],
+  "pedNot": "15 yaş altında güvenlilik ve etkililik belirlenmemiştir; kullanılması önerilmez.",
+  "doz": {
+   "eri": {
+    "bas": "1. gün: 2 mg/0,5 mg ×2 (4 mg), gün içinde iki kez tekrarlanabilir; objektif yoksunluk bulguları başlayınca, kısa etkili opioidden ≥ 6 saat, metadondan ≥ 24 saat sonra (metadon önce ≤ 30 mg/gün'e indirilir)",
+    "maks": "Günlük tek doz en çok 24 mg buprenorfin; stabil hastada gün aşırı ya da haftada 3 kez dozlama"
+   },
+   "ped": {
+    "bas": "15–17 yaş: erişkinle aynı (1. gün 2 mg/0,5 mg ×2)",
+    "maks": "24 mg/gün"
+   }
+  },
+  "organ": {
+   "bobrek": "Doz değişikliği gerekmez; KrKl < 30 mL/dk'da dikkatli olun.",
+   "karaciger": "Hafif–orta yetmezlikte düşük başlangıç dozu ve dikkatli titrasyon; şiddetli yetmezlikte kontrendike."
+  },
+  "fark": {
+   "eri": [
+    "Türkiye'de yalnız naloksonlu kombinasyon (SUBOXONE dil altı tablet) ruhsatlı; tek bileşenli buprenorfin dil altı ürünü yok.",
+    "Akut alkolizm, deliryum tremens ve şiddetli solunum yetmezliğinde kontrendike."
+   ],
+   "ped": [
+    "15–17 yaşta endike (FDA: 16 yaş altında güvenlilik belirlenmemiş)."
+   ]
+  },
+  "kaynaklar": [
+   {
+    "form": "dil altı tablet",
+    "urun": "SUBOXONE 8 MG/2 MG DİLALTI TABLET",
+    "tarih": "30/04/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kubtemiz82_30_04_2025.pdf"
+   },
+   {
+    "form": "dil altı tablet",
+    "urun": "SUBOXONE 2 MG/0.5 MG DİLALTI TABLET",
+    "tarih": "30/04/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kubtemiz205_30_04_2025.pdf"
+   }
+  ],
+  "ek": []
+ },
+ "biperiden": {
+  "urun": "AKİNETON 2 MG TABLET",
+  "firma": "ASSOS İLAÇ",
+  "tarih": "28/02/2013",
+  "url": "https://titck.gov.tr/storage/kubKtAttachments/b7c66cc939366.pdf",
+  "eriskin": [
+   "Parkinson sendromu (özellikle rijidite ve tremor)",
+   "Nöroleptiklere ve benzer ilaçlara bağlı ekstrapiramidal belirtiler (akut distoni, akatizi, parkinsonizm)",
+   "Nikotin ve organofosfat zehirlenmesi (ampul; psikiyatri dışı)"
+  ],
+  "pediatrik": [
+   "İlaca bağlı ekstrapiramidal belirtiler · 3–15 yaş (tablet)",
+   "İlaca bağlı akut distoni · yaşa göre IV doz (ampul)"
+  ],
+  "pedNot": "Pediatrik deneyim esas olarak nöroleptik ya da metoklopramide bağlı distoninin kısa süreli tedavisiyle sınırlıdır.",
+  "doz": {
+   "eri": {
+    "bas": "Parkinson sendromu: ½ tablet ×2 (2 mg/gün), günde 1 tablet artış · ilaca bağlı EPS: ½–2 tablet ×1–4/gün · akut distoni (ampul): 2,5–5 mg IM ya da yavaş IV, gerekirse 30 dakika sonra tekrar",
+    "maks": "Oral 16 mg/gün · parenteral 10–20 mg/gün"
+   },
+   "ped": {
+    "bas": "3–15 yaş (tablet): ½–1 tablet ×1–3/gün · akut distoni (ampul, yavaş IV): 1 yaşa dek 1 mg, 6 yaşa dek 2 mg, 10 yaşa dek 3 mg; gerekirse 30 dakika sonra tekrar",
+    "maks": "Oral 6 mg/gün"
+   }
+  },
+  "organ": {
+   "bobrek": "Bilgi yok.",
+   "karaciger": "Bilgi yok."
+  },
+  "fark": {
+   "eri": [
+    "ABD'de piyasada yok; Türkiye'de tablet ve ampul ruhsatlı.",
+    "KÜB uzun süreli kullanımda düzenli kan tetkiki ve göz içi basıncı kontrolü önerir."
+   ],
+   "ped": []
+  },
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "AKİNETON 2 MG TABLET",
+    "tarih": "28/02/2013",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/b7c66cc939366.pdf"
+   },
+   {
+    "form": "ampul (IM/IV)",
+    "urun": "AKİNETON 5 MG/ML IM/IV ENJEKSİYONLUK ÇÖZELTİ",
+    "tarih": "28/08/2018",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/bz4WDOIRIUZUa.pdf"
+   }
+  ],
+  "ek": []
+ },
+ "bornaprin": {
+  "urun": "SORMODREN 4MG TABLET",
+  "firma": "ABBOTT LABORATUARLARI",
+  "tarih": "31/03/2014",
+  "url": "https://titck.gov.tr/storage/kubKtAttachments/933dc8e721366.pdf",
+  "eriskin": [
+   "Parkinson sendromu (özellikle rigor ve tremor)",
+   "Nöroleptiklere bağlı akut distoni, ataksi ve psödoparkinsonizm",
+   "Hiperhidroz (psikiyatri dışı)"
+  ],
+  "pediatrik": [],
+  "pedNot": "Çocuklarda kullanımı endike değildir; çocuk ve ergende deneyim yetersizdir.",
+  "doz": {
+   "eri": {
+    "bas": "½ tablet (2 mg/gün), kademeli artış; yemek sırasında veya sonrasında",
+    "maks": "İdame 6–12 mg/gün (1,5–3 tablet, 2–3 doza bölünmüş); hiperhidrozda 4–8 mg/gün"
+   },
+   "ped": null
+  },
+  "organ": {
+   "bobrek": "Veri yok.",
+   "karaciger": "Veri yok."
+  },
+  "fark": {
+   "eri": [
+    "ABD'de onaysız; Türkiye'de ruhsatlı.",
+    "Bellek bozukluğunda kontrendike."
+   ],
+   "ped": []
+  },
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "SORMODREN 4MG TABLET",
+    "tarih": "31/03/2014",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/933dc8e721366.pdf"
+   }
+  ],
+  "ek": []
  }
 };

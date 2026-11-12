@@ -6,7 +6,8 @@ window.SINIFLAR = {
   dehb: { ad: 'DEHB ilaçları',              renk: 'var(--s-dehb)' },
   ap:   { ad: 'Antipsikotikler',            renk: 'var(--s-ap)' },
   dd:   { ad: 'Duygudurum dengeleyiciler',  renk: 'var(--s-dd)' },
-  anks: { ad: 'Anksiyolitik / uyku',        renk: 'var(--s-anks)' }
+  anks: { ad: 'Anksiyolitik / uyku',        renk: 'var(--s-anks)' },
+  diger: { ad: 'Diğer ilaçlar',             renk: 'var(--s-diger)' }
 };
 
 window.PROFIL_ETIKET = {
@@ -260,6 +261,41 @@ window.IZLEM = {
       { ped: ['Paradoksal ajitasyon', [0, 1, 0, 0, 0], 'Küçük çocuklarda.'],
         eri: ['Antikolinerjik etki, konfüzyon (yaşlı)', [1, 1, 0, 0, 0], 'Beers ölçütleri: yaşlılarda birinci kuşak antihistaminiklerden kaçının.'] },
       ['Tedavi süresi', [1, 1, 1, 0, 0], 'Kısa süreli kullanım; tolerans gelişir.']
+    ]
+  },
+  naltrekson: {
+    ad: 'Naltrekson',
+    satir: [
+      ['Opioid kullanımı / idrar testi', [1, 2, 2, 2, 2], 'Başlamadan önce 7–10 gün opioidsiz dönem ve negatif idrar testi; şüphede nalokson provokasyon testi.'],
+      ['Karaciğer işlev testleri', [1, 1, 1, 1, 1], 'Başlangıçta ve tedavi süresince; ilk aylarda aylık, sonra 3–6 ayda bir. Üst sınırın 3 katını aşarsa tedaviyi gözden geçirin.'],
+      ['Alkol tüketimi ve içme isteği', [1, 1, 1, 1, 1], 'İçme günleri ve miktarı (zaman çizelgesi); GGT, MCV izlenebilir.'],
+      ['Duygudurum, intihar düşüncesi', [1, 1, 1, 1, 1], 'Bağımlılıkta intihar riski zaten yüksektir.'],
+      ['Böbrek işlevi', [1, 0, 0, 0, 1], 'Ciddi böbrek yetmezliğinde kullanılmaz.'],
+      ['Ağrı ve ameliyat planı', [1, 0, 0, 0, 1], 'Ağrıda opioid dışı analjezik; opioid gerektiren planlı ameliyattan 72 saat önce ilacı kesin. Hastaya acil durum kartı verin.']
+    ]
+  },
+  buprenorfin: {
+    ad: 'Buprenorfin / nalokson',
+    satir: [
+      ['Yoksunluk ölçeği (COWS)', [1, 'Her doz basamağında', 0, 0, 0], 'İndüksiyonu hafif–orta yoksunluk bulguları başlamadan yapmayın (tetiklenen yoksunluk).'],
+      ['İdrar ilaç taraması', [1, 'Haftalık–2 haftada bir', 1, 1, 1], 'Buprenorfin varlığı (uyum) ve diğer maddeler.'],
+      ['Karaciğer işlev testleri, hepatit B/C, HIV', [1, 0, 2, 2, 1], 'Başlangıçta; sonra belirti veya risk varsa.'],
+      ['Sedasyon, solunum, eş sedatif kullanımı', [1, 1, 1, 1, 1], 'Benzodiazepin, alkol ve gabapentinoid kullanımını her vizitte sorun.'],
+      ['Gebelik testi', [2, 0, 0, 0, 2], 'Çocuk doğurma potansiyeli olanlarda; gebelikte tedavi kesilmez, uzmanla planlanır.'],
+      ['Nalokson ve güvenli saklama eğitimi', [1, 0, 1, 0, 1], 'Çocukların erişemeyeceği yerde saklama; aşırı doz belirtileri.'],
+      ['EKG (QTc)', [2, 0, 0, 0, 0], 'QT uzatan eş ilaç veya kardiyak risk varsa.']
+    ]
+  },
+  antikolinerjik: {
+    ad: 'Antikolinerjikler (biperiden, bornaprin)',
+    satir: [
+      ['Ekstrapiramidal belirtiler (SAS, BARS, AIMS)', [1, 1, 1, 1, 1], 'Antikolinerjik gereksinimini her vizitte yeniden değerlendirin; geç diskinezide kesmeyi düşünün.'],
+      ['Bilişsel işlev, konfüzyon', [1, 1, 1, 1, 1], 'Yaşlıda ve organik beyin hastalığında daha sık; bellek bozukluğunda kaçının.'],
+      ['Göz içi basıncı', [2, 0, 2, 0, 2], 'Glokom öyküsü veya belirti varsa; dar açılı glokomda kontrendike.'],
+      ['Kabızlık ve idrar yapma', [1, 1, 1, 1, 1], 'Prostat büyümesinde idrar retansiyonu riski.'],
+      ['Nabız', [1, 1, 0, 0, 1], 'Taşikardi ve aritmide dikkatli kullanın.'],
+      ['Tam kan, biyokimya', [1, 0, 2, 2, 1], 'Biperiden KÜB\'ü uzun süreli kullanımda düzenli izlem önerir.'],
+      ['Kötüye kullanım', [1, 0, 2, 2, 1], 'Öforizan etki; reçete miktarını izleyin.']
     ]
   },
   buspiron: {

@@ -21,6 +21,7 @@
   --s-ap: #6250d6;
   --s-dd: #1baf7a;
   --s-anks: #e87ba4;
+  --s-diger: #0f9488;
 
   /* ardışık (tek ton) */
   --ton-1: #cde2fb;
@@ -45,7 +46,7 @@
     --cizgi: #2c2c2a; --eksen: #383835; --kenar: rgba(255,255,255,.10);
     --golge: 0 1px 2px rgba(0,0,0,.4);
     --vurgu: #6da7ec; --vurgu-zemin: #14283f;
-    --s-ad: #3987e5; --s-dehb: #d95926; --s-ap: #9085e9; --s-dd: #199e70; --s-anks: #d55181;
+    --s-ad: #3987e5; --s-dehb: #d95926; --s-ap: #9085e9; --s-dd: #199e70; --s-anks: #d55181; --s-diger: #14b8a6;
     --ton-1: #184f95; --ton-2: #256abf; --ton-3: #3987e5; --ton-4: #9ec5f4;
     --kritik-zemin: #3a1717; --uyari-zemin: #3a2d0c; --iyi-zemin: #12300f;
   }
@@ -57,7 +58,7 @@
   --cizgi: #2c2c2a; --eksen: #383835; --kenar: rgba(255,255,255,.10);
   --golge: 0 1px 2px rgba(0,0,0,.4);
   --vurgu: #6da7ec; --vurgu-zemin: #14283f;
-  --s-ad: #3987e5; --s-dehb: #d95926; --s-ap: #9085e9; --s-dd: #199e70; --s-anks: #d55181;
+  --s-ad: #3987e5; --s-dehb: #d95926; --s-ap: #9085e9; --s-dd: #199e70; --s-anks: #d55181; --s-diger: #14b8a6;
   --ton-1: #184f95; --ton-2: #256abf; --ton-3: #3987e5; --ton-4: #9ec5f4;
   --kritik-zemin: #3a1717; --uyari-zemin: #3a2d0c; --iyi-zemin: #12300f;
 }

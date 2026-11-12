@@ -10,9 +10,9 @@ Psikiyatrik ilaçların başlanması, titrasyonu, sürdürümü, kesilmesi ve ba
 
 | Sayfa | Ne gösterir |
 |---|---|
-| **İlaçlar** | 55 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları). Her ilaç için onay durumu (çocuk-ergende onay yaşları, erişkinde onaylı endikasyonlar), başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili, uyarılar, metabolizma ve eliminasyon (yıkım enzimleri, aktif metabolit, atılım yolu, organ yetmezliğinde doz). |
+| **İlaçlar** | 60 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları ve "Diğer ilaçlar": bağımlılık tedavisinde naltrekson ve buprenorfin/nalokson, antikolinerjik biperiden ve bornaprin). Her ilaç için onay durumu (çocuk-ergende onay yaşları, erişkinde onaylı endikasyonlar), başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili, uyarılar, metabolizma ve eliminasyon (yıkım enzimleri, aktif metabolit, atılım yolu, organ yetmezliğinde doz). |
 | **Metabolizma (CYP)** | Tüm ilaçların CYP ve UGT enzimleriyle ilişkisini gösteren harita (substrat, inhibitör, indükleyici). Enzim seçildiğinde o enzimin substratları, inhibitörleri, indükleyicileri ve rehber dışı etkenler (sigara, greyfurt suyu, antibiyotikler vb.) listelenir. Böbrekle değişmeden atılan ilaçlar ve organ yetmezliğinde doz çizelgesi. |
-| **İlaç Değişimi** | İki ilaç seçildiğinde geçiş stratejisini (doğrudan, çapraz, yıkama aralıklı, örtüşmeli), haftalık zaman çizelgesini ve etkileşim uyarılarını (CYP inhibisyonu dahil) gösterir. |
+| **İlaç Değişimi** | İki ilaç seçildiğinde geçiş stratejisini (doğrudan, çapraz, yıkama aralıklı, örtüşmeli), haftalık zaman çizelgesini ve etkileşim uyarılarını (CYP inhibisyonu dahil) gösterir. "Diğer ilaçlar" sınıfı bu araca dahil değildir; bu ilaçların sayfalarında geçişe ilişkin kısa not bulunur. |
 | **Uzun Etkili (Depo)** | 8 uzun etkili enjektabl antipsikotik: başlama şeması, oral örtüşme süresi, oral dozdan dönüşüm tabloları, kaçırılan doz kuralları. |
 | **Tetkik ve İzlem** | İlaç gruplarına göre başlangıç ve takip tetkikleri, ölçümler ve eşik değerler. |
 | **Genel İlkeler** | Başlama akış şeması, pediatrik ilkeler, antidepresan tedavi evreleri, kesilme belirtileri, yarı ömür karşılaştırması, acil durumlar. |
@@ -40,7 +40,7 @@ Veri dosyalarında bir metin `{ ped: '…', eri: '…' }` biçiminde iki sürüm
 | Tasarım | Özellik |
 |---|---|
 | **Klasik** | Varsayılan görünüm: sade, yumuşak kartlar. |
-| **Bauhaus** | Neobrütalist: kırmızı, sarı, mavi ana renkler, kalın siyah kontur, sert gölge, keskin köşe, geometrik yazı (Jost). İlaç sınıfları renk ve biçimle ayrılır: ● antidepresan · ▲ DEHB · ■ antipsikotik · ◗ duygudurum · ◆ anksiyolitik. |
+| **Bauhaus** | Neobrütalist: kırmızı, sarı, mavi ana renkler, kalın siyah kontur, sert gölge, keskin köşe, geometrik yazı (Jost). İlaç sınıfları renk ve biçimle ayrılır: ● antidepresan · ▲ DEHB · ■ antipsikotik · ◗ duygudurum · ◆ anksiyolitik · ◜ diğer ilaçlar (turuncu çeyrek daire). |
 | **İsviçre** | Uluslararası tipografik stil: beyaz zemin, ızgara, ince çizgiler, tek kırmızı vurgu, büyük rakamlar (Inter). |
 | **Farmakope** | Editoryal: basılı başvuru kitabı hissi, serif yazı (Source Serif 4), kâğıt zemin, bordo vurgu, kitap tipi tablolar. |
 
@@ -68,6 +68,7 @@ js/veri-antidepresan.js Antidepresanlar
 js/veri-dehb.js         DEHB ilaçları
 js/veri-antipsikotik.js Antipsikotikler
 js/veri-diger.js        Duygudurum düzenleyiciler, anksiyolitikler, uyku ilaçları
+js/veri-yardimci.js     Diğer ilaçlar (bağımlılık tedavisi, antikolinerjikler)
 js/veri-metabolizma.js  Metabolizma, CYP rolleri ve eliminasyon
 js/veri-depo.js         Uzun etkili enjektabl antipsikotikler
 js/veri-turkiye.js      Türkiye ruhsatı (KÜB özetleri)

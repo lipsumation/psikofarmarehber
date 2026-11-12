@@ -78,7 +78,7 @@ window.DEPOLAR = [
     kacirma: 'Geciken dozu en kısa sürede uygulayın; belirti alevlenirse geçici oral ek tedavi verin.'
   },
   {
-    id: 'zuklopentiksol-dekanoat', ad: 'Zuklopentiksol dekanoat', oral: null, kusak: 'Birinci kuşak',
+    id: 'zuklopentiksol-dekanoat', ad: 'Zuklopentiksol dekanoat', oral: 'zuklopentiksol', kusak: 'Birinci kuşak',
     aralik: '2–4 haftada bir', yer: 'Derin gluteal',
     test: 'Test dozu 100 mg; en az 1 hafta sonra tedavi dozuna geçilir.',
     baslama: 'Test dozu 100 mg → 1 hafta sonra 200–400 mg', surdurum: '200–400 mg / 2–4 hafta', maks: '600 mg / hafta',
