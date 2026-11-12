@@ -1,0 +1,2523 @@
+{
+ "fluoksetin": {
+  "urun": "PROZAC 20 MG KAPSÜL",
+  "firma": "LILLY İLAÇ TİCARET LİMİTED ŞİRKETİ",
+  "kub_tarih": "21/12/2021",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kb_4ab07df8-3a8a-41a2-85ea-48ef264f1b4d.pdf",
+  "tr_endikasyon_eriskin": [
+   "Depresyon",
+   "OKB",
+   "Bulimiya nervoza",
+   "PMDB"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında kullanımı önerilmez.",
+  "tr_doz_eriskin": {
+   "bas": "20 mg/gün (bulimiya: 60 mg/gün; PMDB: sürekli ya da luteal faz 20 mg)",
+   "maks": "60 mg/gün (depresyon, OKB); yaşlıda genelde ≤ 40 mg, en fazla 60 mg; 80 mg üzeri sistematik değerlendirilmemiş"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Özel doz ayarı gerekmez.",
+   "karaciger": "Doz ya da doz sıklığı azaltılmalı (ör. gün aşırı 20 mg)."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Panik bozukluk; Bipolar depresyon (olanzapin ile); Dirençli depresyon (olanzapin ile)",
+    "kub": "Yalnızca depresyon, OKB, bulimiya nervoza ve PMDB; panik bozukluk ve olanzapin kombinasyonları yok",
+    "tur": "fark",
+    "kanit": "PROZAC depresyon, obsesif-kompulsif bozukluk, bulimia nervoza ve pre-menstrüel disforik bozukluk tedavisinde endikedir.",
+    "aciklama": "Panik bozukluk ve olanzapin–fluoksetin kombinasyonu endikasyonları FDA onayıdır; incelenen TR KÜB'ünde yer almaz. doz_eriskin.not'taki 'Panik bozuklukta 10 mg ile başlayın' önerisi de TR açısından endikasyon dışıdır.",
+    "oneri": "Bu üç endikasyonu 'TR'de ruhsatlı değil (yalnız FDA)' olarak işaretle."
+   },
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "80 mg/gün",
+    "kub": "60 mg/gün (yaşlıda genelde ≤ 40 mg)",
+    "tur": "fark",
+    "kanit": "20 mg’lık dozun yeterli olmadığı bazı hastalarda doz kademeli olarak maksimum 60 mg’a kadar artırılabilir",
+    "aciklama": "FDA etiketi 80 mg/gün'e izin verir; TR KÜB'ü depresyon ve OKB'de üst sınırı 60 mg olarak verir ve 'Günde 80 mg’ın üzerindeki dozlar sistematik olarak değerlendirilmemiştir' der. Yaşlıda genelde 40 mg aşılmamalı.",
+    "oneri": "Maks alanına 'TR KÜB: 60 mg/gün (yaşlıda genelde ≤ 40 mg)' notu ekle."
+   },
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Depresyon ≥ 8 yaş; OKB ≥ 7 yaş",
+    "kub": "18 yaş altında kullanımı önerilmez; pediatrik endikasyon yok",
+    "tur": "fark",
+    "kanit": "Pediyatrik popülasyon: Çocuklarda ve ergenlerde (18 yaşın altındaki) PROZAC kullanımı önerilmez.",
+    "aciklama": "İncelenen TR KÜB'ünde 4.1'de pediatrik endikasyon yok (5.1'de 8 yaş ve üzeri depresyon çalışmalarından söz ediliyor ama onay olarak değil). Uygulamadaki FDA pediatrik onayları ve çocuk-ergen doz şeması TR ruhsatında karşılıksız.",
+    "oneri": "Pediatrik bölüme 'TR KÜB: 18 yaş altında önerilmez' notu ekle."
+   }
+  ]
+ },
+ "sertralin": {
+  "urun": "LUSTRAL 50 MG ÇENTIKLI FILM KAPLI TABLET",
+  "firma": "VİATRİS İLAÇLARI LTD. ŞTİ.",
+  "kub_tarih": "19/01/2025",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LUSTRAL50mgentiklifilmkapltabletkub_20_01_2025.pdf",
+  "tr_endikasyon_eriskin": [
+   "Depresyon (nüks önleme dahil)",
+   "OKB",
+   "Panik bozukluk (agorafobili/agorafobisiz)",
+   "TSSB",
+   "Sosyal anksiyete",
+   "PMDB"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "OKB · ≥ 6 yaş"
+  ],
+  "tr_pediatrik_not": "OKB (6–17 yaş) dışında 18 yaş altında kullanılmamalıdır.",
+  "tr_doz_eriskin": {
+   "bas": "50 mg/gün (depresyon, OKB, PMDB); panik, TSSB, sosyal fobi: 25 mg/gün, 1 hafta sonra 50 mg",
+   "maks": "200 mg/gün (PMDB: sürekli 150 mg, luteal faz 100 mg)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "6–12 yaş 25 mg/gün; 13–17 yaş 50 mg/gün",
+   "maks": "200 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Doz ayarı gerekmez.",
+   "karaciger": "Dikkatli; daha düşük doz veya seyrek doz aralığı; ciddi karaciğer hastalığında kullanılmamalı."
+  },
+  "bulgular": []
+ },
+ "essitalopram": {
+  "urun": "CIPRALEX 10 MG FILM KAPLI TABLET",
+  "firma": "LUNDBECK İLAÇ TİC. LTD. ŞTİ.",
+  "kub_tarih": "19/07/2024",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/10kub_8bdb22b3-3328-4af6-95a5-c79f26746f2c.pdf",
+  "tr_endikasyon_eriskin": [
+   "Majör depresyon",
+   "Panik bozukluk (agorafobili/agorafobisiz)",
+   "Sosyal anksiyete",
+   "Yaygın anksiyete",
+   "OKB"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında kullanılmamalıdır.",
+  "tr_doz_eriskin": {
+   "bas": "10 mg/gün (panik: ilk hafta 5 mg)",
+   "maks": "20 mg/gün; > 65 yaş ve CYP2C19 zayıf metabolizörde 10 mg/gün (başlangıç 5 mg)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Hafif–orta: ayar gerekmez; ciddi (CLCR ≤ 30 mL/dk): dikkatli.",
+   "karaciger": "Hafif–orta: ilk 2 hafta 5 mg, sonra en fazla 10 mg/gün; ciddi: özellikle dikkatli titrasyon."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Majör depresyon; Yaygın anksiyete",
+    "kub": "Ayrıca panik bozukluk, sosyal anksiyete bozukluğu ve OKB",
+    "tur": "eksik",
+    "kanit": "Agorafobili veya agorafobisiz panik bozukluğu, Sosyal anksiyete bozukluğu (sosyal fobi), Yaygın anksiyete bozukluğu, Obsesif-Kompülsif Bozukluk (OKB) tedavilerinde kullanılır.",
+    "aciklama": "TR'de (AB'de olduğu gibi) panik bozukluk, sosyal anksiyete ve OKB ruhsatlı endikasyondur; uygulama yalnız FDA endikasyonlarını listeliyor (doz_eriskin.bas'ta panik dozu zaten var).",
+    "oneri": "Erişkin endikasyonlara 'TR/Avrupa: panik bozukluk, sosyal anksiyete, OKB' notuyla ekle."
+   },
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Depresyon ≥ 12 yaş; Yaygın anksiyete ≥ 7 yaş",
+    "kub": "18 yaş altında kullanılmamalıdır",
+    "tur": "fark",
+    "kanit": "CIPRALEX çocuklarda ve 18 yaşın altındaki adolesanların tedavisinde kullanılmamalıdır",
+    "aciklama": "FDA pediatrik onayları TR ruhsatında yok; TR KÜB'ü 18 yaş altını açıkça dışlıyor. Çocuk-ergen doz şeması TR açısından endikasyon dışı.",
+    "oneri": "Pediatrik bölüme 'TR KÜB: 18 yaş altında kullanılmamalıdır' notu ekle."
+   },
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "20 mg/gün",
+    "kub": "> 65 yaş ve CYP2C19 zayıf metabolizörde en fazla 10 mg/gün (başlangıç 5 mg)",
+    "tur": "eksik",
+    "kanit": "65 yaş üzerindeki yaşlı hastalarda essitalopram maksimum dozu 10 mg/gün’dür.",
+    "aciklama": "Erişkin doz alanında yaşlı ve CYP2C19 zayıf metabolizör sınırı yok (CYP2C19 notu yalnız çocuk-ergen bölümünde). FDA etiketi de yaşlıda 10 mg önerir; QT riski açısından önemli.",
+    "oneri": "doz_eriskin.maks'a '> 65 yaş ve CYP2C19 zayıf metabolizör: 10 mg/gün' ekle."
+   }
+  ]
+ },
+ "sitalopram": {
+  "urun": "CIPRAM 20 MG FILM KAPLI TABLET",
+  "firma": "LUNDBECK İLAÇ TİC.LTD.ŞTİ.",
+  "kub_tarih": "30/03/2023",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/CIPRAM20mgfilmkapltabletKB_4a9a812b-4833-4d33-8942-f1573f50be6b.pdf",
+  "tr_endikasyon_eriskin": [
+   "Depresyon (relaps/rekürens önleme dahil)",
+   "Panik bozukluk (agorafobili/agorafobisiz)",
+   "OKB"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında kullanılmamalıdır.",
+  "tr_doz_eriskin": {
+   "bas": "20 mg/gün (panik: ilk hafta 10 mg)",
+   "maks": "40 mg/gün; yaşlı (> 65), CYP2C19 zayıf metabolizör, hafif–orta karaciğer yetmezliği: 20 mg/gün"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Hafif–orta: ayar gerekmez; şiddetli (CrCl < 20 mL/dk): dikkatli.",
+   "karaciger": "Hafif–orta: ilk 2 hafta 10 mg, en fazla 20 mg/gün; şiddetli: çok dikkatli titrasyon."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Majör depresyon",
+    "kub": "Ayrıca panik bozukluk ve OKB",
+    "tur": "eksik",
+    "kanit": "Agorafobili veya agorafobisiz panik bozukluğu, Obsesif Kompülsif Bozukluk (OKB) tedavilerinde kullanılır.",
+    "aciklama": "TR'de panik bozukluk ve OKB ruhsatlı endikasyon; FDA'da yalnız depresyon var.",
+    "oneri": "Erişkin endikasyonlara 'TR/Avrupa: panik bozukluk, OKB' notuyla ekle."
+   },
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "10 mg/gün başlangıç, maks 40 mg/gün (endikasyon dışı notuyla)",
+    "kub": "18 yaş altında kullanılmamalıdır",
+    "tur": "bilgi",
+    "kanit": "CIPRAM, çocuklar ve 18 yaşın altındaki adolesanların tedavisinde kullanılmamalıdır",
+    "aciklama": "Uygulama zaten endikasyon dışı olduğunu belirtiyor; TR KÜB'ünün ifadesi 'önerilmez'den daha kesin.",
+    "oneri": "Çocuk-ergen notuna 'TR KÜB: 18 yaş altında kullanılmamalıdır' ekle."
+   }
+  ]
+ },
+ "fluvoksamin": {
+  "urun": "FAVERIN 100 MG FILM KAPLI TABLET",
+  "firma": "Abbott Laboratuarları İth. İhr. ve Tic. Ltd. Şti",
+  "kub_tarih": "10/09/2024",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ONAYLIKB_e6b8a83f-3574-4a71-8fcf-53043e209762.pdf",
+  "tr_endikasyon_eriskin": [
+   "Majör depresyon",
+   "OKB"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "OKB · > 8 yaş"
+  ],
+  "tr_pediatrik_not": "Majör depresyonda 18 yaş altında kullanılmamalıdır.",
+  "tr_doz_eriskin": {
+   "bas": "Depresyon: 50–100 mg/gün akşam (önerilen 100 mg); OKB: 50 mg/gün",
+   "maks": "300 mg/gün (150 mg üzeri 2–3 doza bölünür)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "25 mg/gün; 4–7 günde bir 25 mg artış",
+   "maks": "200 mg/gün (çocuklarda); 50 mg üzeri ikiye bölünür"
+  },
+  "tr_organ": {
+   "bobrek": "Düşük dozla başla, yakından izle.",
+   "karaciger": "Düşük dozla başla, yakından izle."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "OKB; Sosyal anksiyete (uzatılmış salımlı form)",
+    "kub": "Ayrıca majör depresif bozukluk",
+    "tur": "eksik",
+    "kanit": "Major depresif bozukluğun tedavisinde",
+    "aciklama": "TR'de majör depresyon ruhsatlı endikasyon (önerilen doz 100 mg/gün, maks 300 mg); FDA'da yok.",
+    "oneri": "Erişkin endikasyonlara 'TR/Avrupa: majör depresyon' notuyla ekle."
+   },
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Sosyal anksiyete (uzatılmış salımlı form)",
+    "kub": "İncelenen KÜB'de (Faverin film tablet) sosyal anksiyete endikasyonu yok",
+    "tur": "bilgi",
+    "kanit": "Major depresif bozukluğun tedavisinde • Obsesif-kompulsif bozuklukların tedavisinde endikedir.",
+    "aciklama": "Uygulama bu endikasyonu FDA'daki uzatılmış salımlı forma bağlıyor; incelenen KÜB hemen salımlı tablete ait. TR'de uzatılmış salımlı fluvoksamin olup olmadığı bu klasördeki veriden doğrulanamadı.",
+    "oneri": "Gerekirse 'TR'de bu endikasyon/form yok olabilir' notu düşün; TR ürün listesinden teyit et."
+   },
+   {
+    "alan": "doz_cocuk_ergen.maks",
+    "uygulama": "8–11 yaş: 200 mg/gün · 12–17 yaş: 300 mg/gün",
+    "kub": "Çocuklarda en fazla 200 mg/gün; ergenler için daha yüksek sınır tanımlanmamış",
+    "tur": "fark",
+    "kanit": "8 yaşın üzerindeki çocuklarda ve adolesanlarda, 10 hafta boyunca günde iki kez 100 mg’a kadar olan dozda veriler sınırlıdır. … maksimum doz günde 200 mg’ı geçmemelidir",
+    "aciklama": "Ergende 300 mg FDA'ya dayanır. TR KÜB'ü pediatrik veriyi 200 mg/gün'e kadar verir ve 'çocuklardaki' maksimumu 200 mg koyar; ergenlere ayrı (daha yüksek) sınır vermez. 'Çocuklar' ifadesinin ergenleri kapsayıp kapsamadığı metinde net değil.",
+    "oneri": "Maks alanına 'TR KÜB: pediatrik 200 mg/gün (ergen için 300 mg yalnız FDA)' notu ekle."
+   }
+  ]
+ },
+ "paroksetin": {
+  "urun": "SEROXAT 20 MG FILM TABLET",
+  "firma": "NOVARTİS",
+  "kub_tarih": "19/01/2015",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/0993127771286.pdf",
+  "tr_endikasyon_eriskin": [
+   "Depresyon (nüks önleme dahil)",
+   "OKB",
+   "Panik bozukluk (agorafobili/agorafobisiz)",
+   "Sosyal anksiyete",
+   "Yaygın anksiyete",
+   "TSSB"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında endike değildir.",
+  "tr_doz_eriskin": {
+   "bas": "20 mg/gün (OKB 20 mg → hedef 40 mg; panik 10 mg → hedef 40 mg)",
+   "maks": "50 mg/gün (OKB ve panik: 60 mg/gün); yaşlıda 40 mg/gün"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Şiddetli (CrCl < 30 mL/dk): önerilen doz 20 mg/gün; artış gerekirse aralığın alt sınırına kadar.",
+   "karaciger": "Karaciğer bozukluğunda önerilen doz 20 mg/gün; artış gerekirse aralığın alt sınırına kadar."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "PMDB (kontrollü salımlı form)",
+    "kub": "İncelenen KÜB'de (Seroxat film tablet) PMDB endikasyonu yok",
+    "tur": "bilgi",
+    "kanit": "Yaygın Anksiyete Bozukluğu semptomlarının tedavisi ve tekrarlamasının önlenmesi. Post Travmatik Stres Bozukluğu tedavisi.",
+    "aciklama": "Uygulama PMDB'yi kontrollü salımlı forma bağlıyor; incelenen KÜB hemen salımlı tablete ait ve 2015 tarihli. Kontrollü salımlı formun TR KÜB'ü incelenmedi.",
+    "oneri": "Kontrollü salımlı formun TR'deki ruhsat durumunu ayrıca teyit et."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Kreatinin klirensi < 30 mL/dk: 10 mg ile başlayın, en fazla 40 mg/gün",
+    "kub": "CrCl < 30 mL/dk: önerilen doz 20 mg/gün; artış aralığın alt sınırına kadar",
+    "tur": "fark",
+    "kanit": "Şiddetli böbrek bozukluğu (kreatinin klerensi <30 ml/dak) veya karaciğer bozukluğu olan hastalarda … Tavsiye edilen günlük doz 20 mg’dır.",
+    "aciklama": "Uygulama FDA şemasını (10 mg başlangıç, maks 40 mg) veriyor; TR KÜB'ü 20 mg/gün önerir ve artışı doz aralığının alt ucuyla sınırlar.",
+    "oneri": "Böbrek notuna 'TR KÜB: 20 mg/gün, artış aralığın alt sınırına kadar' ekle."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Ağır bozuklukta 10 mg ile başlayın, en fazla 40 mg/gün",
+    "kub": "Karaciğer bozukluğunda (şiddet ayrımı yok) 20 mg/gün; artış aralığın alt sınırına kadar",
+    "tur": "fark",
+    "kanit": "Tavsiye edilen günlük doz 20 mg’dır. Doz artırımı gerekliyse aralığın alt sınırına kadar olmalıdır.",
+    "aciklama": "TR önerisi yalnız ağır değil tüm karaciğer bozukluğu için geçerli; sayısal üst sınır yerine 'aralığın alt sınırı' ifadesi kullanılıyor.",
+    "oneri": "Karaciğer notuna 'TR KÜB: her derecede bozuklukta 20 mg/gün, artış aralığın alt sınırına kadar' ekle."
+   }
+  ]
+ },
+ "venlafaksin": {
+  "urun": "EFEXOR XR 37,5 MG MIKROPELLET KAPSÜL",
+  "firma": "PFİZER İLAÇLARI LTD. ŞTİ.",
+  "kub_tarih": "06/11/2024",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/UYGUNKBEFEXOR375mg_a2c6032d-a123-4190-b4a7-b13a861b4982.pdf",
+  "tr_endikasyon_eriskin": [
+   "Majör depresyon (nüks/yeni epizod önleme dahil)",
+   "Yaygın anksiyete",
+   "Sosyal anksiyete",
+   "Panik bozukluk (agorafobili/agorafobisiz)"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "Çocuk ve ergenlerde önerilmez; majör depresyonda kullanılmamalıdır.",
+  "tr_doz_eriskin": {
+   "bas": "75 mg/gün (panik: 7 gün 37,5 mg, sonra 75 mg)",
+   "maks": "Majör depresyon 375 mg/gün; yaygın anksiyete, sosyal fobi, panik 225 mg/gün"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "GFR 30–70: ayar gerekmez, dikkatli; GFR < 30 veya hemodiyaliz: doz %50 azaltılır.",
+   "karaciger": "Hafif–orta: toplam doz %50 azaltılır (bazen daha fazla); şiddetli: %50'den fazla azaltılır, yarar-risk değerlendirilir."
+  },
+  "bulgular": [
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "225 mg/gün (XR); ağır depresyonda 375 mg",
+    "kub": "XR ile majör depresyonda 375 mg/gün (şiddet koşulu yok); diğer endikasyonlarda 225 mg/gün",
+    "tur": "fark",
+    "kanit": "75 mg’lık günlük başlangıç dozuna cevap vermeyen hastalar, günde en fazla 375 mg’lık dozdan yarar görebilirler.",
+    "aciklama": "FDA'da XR üst sınırı 225 mg; 375 mg yalnız IR ile ağır depresif (yatan) hastalarda. TR XR KÜB'ü majör depresyonda XR ile 375 mg'a izin verir. Ayrıca TR'de doz artışları yaklaşık 2 haftada bir (gerekirse ≥ 4 gün), uygulamada ≥ 4–7 gün.",
+    "oneri": "Maks alanına 'TR KÜB (XR): majör depresyon 375 mg/gün; YAB, sosyal fobi, panik 225 mg/gün' notu ekle."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "GFR 10–70 mL/dk: dozu %25–50 azaltın; hemodiyalizde %50 azaltın",
+    "kub": "GFR 30–70: doz ayarı gerekmez (dikkat); GFR < 30 veya hemodiyaliz: %50 azalt",
+    "tur": "fark",
+    "kanit": "Glomerüler filtrasyon hızı 30-70 ml/dakika olan hastalarda doz ayarlamasına gerek olmamakla birlikte dikkatli olunmalıdır.",
+    "aciklama": "Uygulama FDA'nın eski şemasını veriyor; TR KÜB'ünde hafif–orta böbrek yetmezliğinde azaltma önerilmez, yalnız GFR < 30 ve hemodiyalizde %50 azaltılır.",
+    "oneri": "Böbrek notuna TR şemasını ekle."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Hafif–orta bozuklukta dozu %50 azaltın.",
+    "kub": "Şiddetli yetmezlikte %50'den fazla azaltma, dikkat ve yarar-risk değerlendirmesi",
+    "tur": "eksik",
+    "kanit": "Şiddetli karaciğer yetmezliği olan hastalarda sınırlı veri mevcuttur. Dikkatli olunmalı ve doz %50’den fazla azaltılmalıdır.",
+    "aciklama": "Uygulamada şiddetli karaciğer yetmezliği için öneri yok.",
+    "oneri": "Karaciğer notuna 'Şiddetli: %50'den fazla azaltın, yarar-risk değerlendirin' ekle."
+   },
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "37,5 mg/gün başlangıç, maks 225 mg/gün (endikasyon dışı notuyla)",
+    "kub": "Çocuk ve ergenlerde önerilmez; majör depresyonda kullanılmamalı",
+    "tur": "bilgi",
+    "kanit": "Venlafaksinin çocuklarda ve ergenlerde kullanımı önerilmemektedir.",
+    "aciklama": "Uygulama zaten endikasyon dışı olduğunu belirtiyor; TR KÜB'ü ayrıca pediatrik majör depresyonda 'kullanılmamalıdır' der.",
+    "oneri": "Çocuk-ergen notuna TR KÜB ifadesini ekle."
+   }
+  ]
+ },
+ "duloksetin": {
+  "urun": "CYMBALTA 30 MG GASTRO-REZISTAN SERT KAPSÜL",
+  "firma": "LILLY İLAÇ TİCARET LİMİTED ŞİRKETİ",
+  "kub_tarih": "11/03/2021",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/TTCKONAYLIKBCYMBALTA30MG_3e75efea-934f-4e81-9869-f0e0dc40c91c.pdf",
+  "tr_endikasyon_eriskin": [
+   "Majör depresyon",
+   "Yaygın anksiyete",
+   "Diyabetik periferik nöropatik ağrı",
+   "Fibromiyalji",
+   "Kronik kas-iskelet ağrısı",
+   "Kronik bel ağrısı",
+   "Osteoartrite bağlı kronik ağrı"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında kullanılmamalıdır (7–17 yaş yaygın anksiyetede güvenlilik/etkililik belirlenmemiş).",
+  "tr_doz_eriskin": {
+   "bas": "Majör depresyon 60 mg/gün; yaygın anksiyete 30 mg/gün (eşlik eden depresyonda 60 mg); fibromiyalji/kronik ağrı 1 hafta 30 mg olabilir",
+   "maks": "120 mg/gün (depresyonda 60 mg üzerinin ek yararı gösterilmemiş; fibromiyalji ve kronik ağrıda 60 mg üzeri yararsız)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "CrCl 30–80: ayar gerekmez; CrCl < 30: kullanılmamalı (kontrendike).",
+   "karaciger": "Karaciğer yetmezliğine yol açan her karaciğer hastalığında kullanılmamalı."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Yaygın anksiyete ≥ 7 yaş; Fibromiyalji ≥ 13 yaş",
+    "kub": "18 yaş altında kullanılmamalıdır; endikasyon yalnız 18 yaş ve üzeri",
+    "tur": "fark",
+    "kanit": "Duloksetin güvenlilik ve etkililiğe ait yetersiz veri nedeniyle çocuklar ve 18 yaş altındaki ergenlerde kullanılmamalıdır",
+    "aciklama": "FDA pediatrik onayları TR'de yok; TR KÜB'ü 4.1'de endikasyonu '18 yaş ve üzeri yetişkinler' ile sınırlıyor ve 7–17 yaş yaygın anksiyetede güvenlilik/etkililiğin belirlenmediğini söylüyor.",
+    "oneri": "Pediatrik bölüme 'TR KÜB: 18 yaş altında kullanılmamalıdır' notu ekle."
+   }
+  ]
+ },
+ "mirtazapin": {
+  "urun": "REMERON 30 MG FILM KAPLI TABLET",
+  "firma": "ORGANON TURKEY İLAÇLARI LİMİTED ŞİRKETİ",
+  "kub_tarih": "30/03/2022",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/yaynlanacakremeron30mgtablet_cd9ab414-6ba4-4164-805a-2ad114870cd9.pdf",
+  "tr_endikasyon_eriskin": [
+   "Majör depresyon"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında kullanılmamalıdır.",
+  "tr_doz_eriskin": {
+   "bas": "15 veya 30 mg/gün (tercihen gece)",
+   "maks": "45 mg/gün (etkin aralık 15–45 mg)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "CrCl < 40 mL/dk'da klirens azalabilir; reçetede göz önüne alınmalı (sayısal doz önerisi yok).",
+   "karaciger": "Klirens azalabilir; özellikle şiddetli yetmezlikte dikkat (sayısal doz önerisi yok)."
+  },
+  "bulgular": [
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "7,5–15 mg/gün başlangıç, maks 45 mg/gün (endikasyon dışı notuyla)",
+    "kub": "18 yaş altında kullanılmamalıdır",
+    "tur": "bilgi",
+    "kanit": "çocuklar ve 18 yaşından küçük adölesanlarda kullanılmamalıdır",
+    "aciklama": "Uygulama zaten endikasyon dışı ve çalışmaların negatif olduğunu belirtiyor; TR KÜB'ü güvenlilik kaygısıyla kullanımı dışlıyor.",
+    "oneri": "Çocuk-ergen notuna 'TR KÜB: 18 yaş altında kullanılmamalıdır' ekle."
+   }
+  ]
+ },
+ "bupropion": {
+  "urun": "BUPRAPAN 450 MG UZATıLMIŞ SALıMLı TABLET",
+  "firma": "LİBA LABORATUARLARI A.Ş.",
+  "kub_tarih": "15/02/2024",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/BUPRAPAN450mguzatlmsalmltabletkub_d10cee99-6cf5-4f9d-b334-14a7568bd7bc.pdf",
+  "tr_endikasyon_eriskin": [
+   "Majör depresif atak"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında kullanılmamalı (güvenlilik/etkililik belirlenmemiş). Not: incelenen KÜB bir muadile (450 mg XL) aittir.",
+  "tr_doz_eriskin": {
+   "bas": "150 mg/gün (tek doz)",
+   "maks": "450 mg/gün (4 hafta sonra yanıt yoksa 300 mg; ≥ 2 hafta 300 mg sonrası 450 mg)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "150 mg/gün (tek doz)",
+   "karaciger": "Hafif–orta: 150 mg/gün; şiddetli siroz: kontrendike"
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Mevsimsel depresyonun önlenmesi",
+    "kub": "Yalnızca majör depresif ataklar",
+    "tur": "fark",
+    "kanit": "BUPRAPAN, majör depresif atakların tedavisinde kullanılır.",
+    "aciklama": "Mevsimsel depresyonun önlenmesi FDA (XL) endikasyonudur; incelenen TR KÜB'ünde yok. Sigara bırakma için KÜB 4.4 bu ürünün endike olmadığını, 'bupropiyon içeren diğer ilaçların' endike olduğunu söyler; uygulamadaki 'SR formu' notuyla uyumlu.",
+    "oneri": "Mevsimsel depresyon satırına 'FDA; TR KÜB'ünde yok' notu ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.artis",
+    "uygulama": "≥ 4 gün sonra 300 mg",
+    "kub": "150 mg ile 4 hafta sonra düzelme yoksa 300 mg; ≥ 2 hafta 300 mg sonrası gerekirse 450 mg",
+    "tur": "fark",
+    "kanit": "Bu dozun 4 hafta kullanılmasından sonra düzelme sağlanamazsa doz, günde bir defa 300 miligrama yükseltilebilir.",
+    "aciklama": "4. günde 300 mg'a çıkış FDA XL etiketinden; TR KÜB 300 mg'a geçişi 4 haftalık yetersiz yanıta bağlıyor.",
+    "oneri": "TR ruhsatında 300 mg'a artışın 4 hafta sonra önerildiğini not edin."
+   },
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "Ergen: 150 mg/gün başlangıç, maks 300 mg/gün (endikasyon dışı, ≥ 12 yaş)",
+    "kub": "18 yaş altında kullanılmamalı",
+    "tur": "fark",
+    "kanit": "BUPRAPAN, çocuklarda veya 18 yaşından küçük adolesanlarda kullanılmamalıdır",
+    "aciklama": "Uygulama dozu endikasyon dışı olarak veriyor; TR KÜB 18 yaş altında kullanımı açıkça önermiyor.",
+    "oneri": "Pediatrik notlara 'TR KÜB: 18 yaş altında kullanılmamalı' ekleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Metabolitler birikir: dozu ve/veya doz sıklığını azaltın.",
+    "kub": "Günde bir kez 150 mg",
+    "tur": "eksik",
+    "kanit": "Böbrek yetmezliği olan hastalarda, bupropiyon ve aktif metabolitleri normale kıyasla daha fazla birikebileceğinden, önerilen doz günde bir defa 150 mg’dır",
+    "aciklama": "TR KÜB böbrek yetmezliğinde somut doz (150 mg/gün) veriyor; uygulama yalnızca genel azaltma öneriyor.",
+    "oneri": "'Önerilen doz günde bir kez 150 mg' ifadesini ekleyin."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Hafif–orta bozuklukta dozu azaltın; ağır sirozda en düşük dozu gün aşırı verin.",
+    "kub": "Hafif–orta: 150 mg/gün; şiddetli siroz: kontrendike",
+    "tur": "fark",
+    "kanit": "bu hastalarda önerilen doz günde bir defa 150 mg’dır. BUPRAPAN şiddetli karaciğer sirozu olan hastalarda kontrendikedir",
+    "aciklama": "Ağır sirozda gün aşırı doz FDA XL etiketinden; TR KÜB şiddetli sirozu kontrendikasyon sayıyor (4.2 ve 4.3).",
+    "oneri": "Hafif–orta için 150 mg/gün yazın; ağır siroz için 'TR'de kontrendike' uyarısı ekleyin."
+   }
+  ]
+ },
+ "trazodon": {
+  "urun": "DESYREL XL 150 MG UZATILMIŞ SALIMLI FILM KAPLI TABLET",
+  "firma": "ANGELİNİ İLAÇ SAN. VE TİC. A.Ş.",
+  "kub_tarih": "30/04/2023",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/DESYRELXL150mgUzatlmSalmlFilmKaplTabletKUB_063814ad-5ed1-43bc-a4fe-f6d30f9d38cd.pdf",
+  "tr_endikasyon_eriskin": [
+   "Depresif bozukluklar (anksiyete eşlik etsin ya da etmesin)"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş ve altında kontrendike (güvenlilik verisi yok).",
+  "tr_doz_eriskin": {
+   "bas": "XL: 75–150 mg/gün (akşam tek doz); yaşlı/zayıf: 75 mg",
+   "maks": "XL: 300 mg/gün (3 günde bir 75 mg artış)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Genellikle ayar gerekmez; şiddetli yetmezlikte dikkat",
+   "karaciger": "Dikkat (özellikle şiddetli); periyodik karaciğer fonksiyon izlemi düşünülebilir"
+  },
+  "bulgular": [
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "Depresyon: 150 mg/gün (bölünmüş) başlangıç, 3–4 günde bir 50 mg; maks 400 mg/gün (ayaktan)",
+    "kub": "XL: 75–150 mg/gün başlangıç, 3 günde bir 75 mg; maks 300 mg/gün, akşam tek doz",
+    "tur": "fark",
+    "kanit": "75-150 mg/günlük başlangıç dozu, her üç günde 75 mg/günlük (150 mg tabletin yarısı) artışlar ile",
+    "aciklama": "Form farkı: uygulama anlık salımlı tabletin FDA dozlarını veriyor; incelenen TR KÜB'ü yalnızca XL 150 mg forma ait (KÜB: 'maksimum 300 mg/günlük doza artırılabilir'). Hata değil.",
+    "oneri": "XL form için TR dozlarını ayrı satırda gösterin: 75–150 mg akşam tek doz, maks 300 mg/gün."
+   },
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "Uyku: 12,5–25 mg başlangıç, maks 100–150 mg/gece; depresyon (ergen) 6 mg/kg/gün'e dek (endikasyon dışı)",
+    "kub": "18 yaş ve altında kullanılmamalı / kontrendike",
+    "tur": "fark",
+    "kanit": "Güvenliliğe ilişkin veri eksikliği nedeniyle, trazodon 18 yaş ve altındaki çocuklarda kullanılmamalıdır",
+    "aciklama": "TR KÜB 4.3 de 18 yaş ve altındaki çocuk ve ergenleri kontrendikasyonlar arasında sayıyor; FDA'da pediatrik kontrendikasyon yok.",
+    "oneri": "Pediatrik notlara 'TR KÜB (XL): 18 yaş ve altında kontrendike' ekleyin."
+   }
+  ]
+ },
+ "vortioksetin": {
+  "urun": "FONKSERA 15 MG FILM KAPLı TABLET",
+  "firma": "LUNDBECK İLAÇ TİC. LTD. ŞTİ.",
+  "kub_tarih": "30/09/2026",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/FONKSERA15MGKBONAY_0d54f904-39ff-4ac2-a534-fca3f0bbab5a.pdf",
+  "tr_endikasyon_eriskin": [
+   "Majör depresif epizot"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında MDB'de kullanılmamalı (etkililik belirlenmemiş).",
+  "tr_doz_eriskin": {
+   "bas": "10 mg/gün (≥ 65 yaş: 5 mg)",
+   "maks": "20 mg/gün (en az 5 mg/gün)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Doz ayarı gerekmez (veri sınırlı, dikkat)",
+   "karaciger": "Doz ayarı gerekmez (veri sınırlı, dikkat)"
+  },
+  "bulgular": [
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "5 mg/gün başlangıç, maks 20 mg/gün (endikasyon dışı)",
+    "kub": "18 yaş altında MDB'de kullanılmamalı",
+    "tur": "fark",
+    "kanit": "FONKSERA, etkililiğinin belirlenmemiş olması nedeniyle, majör depresif bozukluğu (MDB) olan pediyatrik (18 yaş altı) hastalarda kullanılmamalıdır",
+    "aciklama": "Uygulama dozu endikasyon dışı olarak ve negatif çalışmaları belirterek veriyor; TR KÜB kullanımı açıkça önermiyor.",
+    "oneri": "Pediatrik notlara 'TR KÜB: 18 yaş altında kullanılmamalı' ekleyin."
+   }
+  ]
+ },
+ "klomipramin": {
+  "urun": "ANAFRANİL-SR 75 MG BÖLÜNEBİLİR TABLET",
+  "firma": "TEOFARMA",
+  "kub_tarih": "04/07/2020",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/KBANAFRANL75MG_e06b97d0-73ed-4a93-b461-0e9c9bec37e3.pdf",
+  "tr_endikasyon_eriskin": [
+   "Depresyon",
+   "OKB",
+   "Fobiler",
+   "Panik atak / agorafobi",
+   "Narkolepsiye eşlik eden katapleksi (psikiyatri dışı)",
+   "Kronik ağrılı durumlar (psikiyatri dışı)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "OKB · 10–17 yaş"
+  ],
+  "tr_pediatrik_not": "OKB dışındaki endikasyonlarda 18 yaş altında önerilmez; 10 yaş altında deneyim yok.",
+  "tr_doz_eriskin": {
+   "bas": "Depresyon/OKB/fobi: 25 mg × 2–3/gün ya da SR 75 mg × 1; panik: 10 mg/gün; yaşlı: 10 mg",
+   "maks": "250 mg/gün (ağır vakalar); panik 150 mg/gün; katapleksi 75 mg/gün"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "OKB: 25 mg/gün",
+   "maks": "İlk 2 hafta 3 mg/kg veya 100 mg; sonra 3 mg/kg veya 200 mg/gün (hangisi düşükse)"
+  },
+  "tr_organ": {
+   "bobrek": "Dikkatli kullanın",
+   "karaciger": "Dikkat; periyodik karaciğer enzim izlemi; şiddetli karaciğer hastalığında kontrendike (4.3)"
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "OKB",
+    "kub": "Depresyon, OKB, fobiler, panik atak (ayrıca katapleksi, kronik ağrı)",
+    "tur": "eksik",
+    "kanit": "Etiyolojisi ve semptomları değişik depresif durumların tedavisi, obsesif-kompülsif sendromlar, fobiler ve panik ataklar",
+    "aciklama": "TR'de klomipramin depresyon, fobi ve panik atakta da ruhsatlı (panik: 10 mg ile başla, 25–100 mg, maks 150 mg). Katapleksi ve kronik ağrı psikiyatri dışı.",
+    "oneri": "Erişkin endikasyonlara 'Depresyon, fobiler, panik bozukluk (TR KÜB)' ekleyin."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Düşük dozla başlayın; düzey ve EKG izleyin.",
+    "kub": "Dikkat ve enzim izlemi; şiddetli karaciğer hastalığında kontrendike",
+    "tur": "fark",
+    "kanit": "-Mani, şiddetli karaciğer hastalığı, dar açılı glokom, idrar tutukluğu",
+    "aciklama": "TR KÜB 4.3 şiddetli karaciğer hastalığını kontrendikasyon sayıyor; FDA etiketinde böyle bir kontrendikasyon yok.",
+    "oneri": "'Şiddetli karaciğer hastalığında TR'de kontrendike; periyodik karaciğer enzim izlemi' ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.bas",
+    "uygulama": "25 mg/gün",
+    "kub": "25 mg × 2–3/gün ya da SR 75 mg × 1 (panikte 10 mg/gün)",
+    "tur": "bilgi",
+    "kanit": "Tedaviye günde iki ya da üç kez 25 mg’lık kaplı tablet ya da günde bir kez (tercihen akşamları) 75 mg’lık uzatılmış salımlı tablet ile başlanır.",
+    "aciklama": "Uygulamanın 25 mg başlangıcı FDA ile uyumlu ve daha temkinli; TR KÜB 50–75 mg/gün ile başlatıyor. Hata değil.",
+    "oneri": "İsteğe bağlı: TR başlangıç dozunu not olarak ekleyin."
+   }
+  ]
+ },
+ "imipramin": {
+  "urun": "TOFRANIL 25MG DRAJE",
+  "firma": "ASSOS İLAÇ,KİMYA,GIDA ÜRÜNLERİ ÜRETİM VE TİC.A.Ş.",
+  "kub_tarih": "03/11/2017",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/8bYvlvSZm8xs1.pdf",
+  "tr_endikasyon_eriskin": [
+   "Depresyon (bipolar depresif faz, reaktif, maskelenmiş, nörotik, involüsyonel, şizofrenide ve organik hastalıklarda depresyon)"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında kontrendike; enürezis endikasyonu yok.",
+  "tr_doz_eriskin": {
+   "bas": "Ayaktan: 25 mg × 1–3/gün; hastanede 25 mg × 3; yaşlı: 10 mg",
+   "maks": "Ayaktan 150–200 mg/gün; hastanede ağır vakalarda 300 mg/gün"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "İleri bozuklukta dikkat; doz düşürülmeli",
+   "karaciger": "İleri bozuklukta dikkat; doz düşürülmeli"
+  },
+  "bulgular": [
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Enürezis noktürna · ≥ 6 yaş",
+    "kub": "Pediatrik endikasyon yok; çocuk ve ergende kontrendike",
+    "tur": "fark",
+    "kanit": "TOFRANIL®’in çocuklarda ve ergenlerdeki güvenliliği ve etkililiği henüz kanıtlanmamıştır. TOFRANIL®’in çocuklarda ve ergenlerde kullanımı kontrendikedir",
+    "aciklama": "Enürezis FDA onayıdır; TR KÜB'ünde enürezis endikasyonu yok ve 4.3'te '18 yaş altında' kontrendikasyon olarak sayılıyor.",
+    "oneri": "Pediatrik onay satırına 'TR'de enürezis endikasyonu yok; 18 yaş altında kontrendike' uyarısı ekleyin."
+   },
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "25 mg yatmadan önce; maks 2,5 mg/kg/gün (6–11 yaş 50 mg · ≥ 12 yaş 75 mg)",
+    "kub": "Çocuk ve ergende kontrendike",
+    "tur": "fark",
+    "kanit": "18 yaş altında iseniz (Bkz. Bölüm 4.2. Pozoloji ve uygulama şekli),",
+    "aciklama": "Pediatrik doz FDA enürezis etiketine dayanıyor; TR KÜB 4.3'te 18 yaş altını kontrendikasyonlar arasında sayıyor.",
+    "oneri": "Pediatrik doz kartına TR kontrendikasyon notu ekleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Dikkatli kullanın.",
+    "kub": "İleri böbrek (ve karaciğer) hastalığında dikkat; doz düşürülmeli",
+    "tur": "bilgi",
+    "kanit": "ileri derecede karaciğer veya böbrek hastalığı olan hastalarda kullanımları sırasında dikkatli olmak gerekir (Bkz. Bölüm 4.4. Özel kullanım uyarıları ve önlemleri). Bu nedenle, dozaj düşürülmelidir",
+    "aciklama": "TR KÜB ileri böbrek hastalığında doz azaltılmasını açıkça öneriyor; uygulamada yalnızca 'dikkat' var. Somut doz verilmiyor.",
+    "oneri": "'İleri bozuklukta dozu azaltın' ekleyin."
+   }
+  ]
+ },
+ "amitriptilin": {
+  "urun": "LAROXYL 10 MG FILM KAPLı TABLET",
+  "firma": "DEVA HOLDING A.Ş.",
+  "kub_tarih": "19/06/2020",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TTCKKBLAROXYL10MG_d02515ea-bda5-4a38-aa3f-873b7d33ee04.pdf",
+  "tr_endikasyon_eriskin": [
+   "Depresyon (özellikle endojen)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Depresyon · adolesan (≥ 12 yaş) dozu tanımlı"
+  ],
+  "tr_pediatrik_not": "12 yaş altında önerilmez.",
+  "tr_doz_eriskin": {
+   "bas": "10 veya 25 mg × 3/gün (30–75 mg/gün); yaşlı/hafif: 10 mg × 3",
+   "maks": "Nadiren > 150 mg/gün; hastanede 300 mg/gün'e dek"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "Adolesan: 25–50 mg/gün (bölünmüş ya da akşam tek doz)",
+   "maks": "Ayrı maks verilmemiş; önerilen aralık 25–50 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Özel doz ayarı gerekmez",
+   "karaciger": "Dikkat; ciddi karaciğer hastalığında kontrendike (4.3)"
+  },
+  "bulgular": [
+   {
+    "alan": "doz_cocuk_ergen.maks",
+    "uygulama": "1,5 mg/kg/gün; ergende 100 mg/gün (düzey ve EKG ile 150 mg)",
+    "kub": "Adolesan: 25–50 mg/gün",
+    "tur": "fark",
+    "kanit": "Adolesan ve yaşlılar, 25-50 mg günlük bölünmüş doz veya akşamları tek doz almalıdır.",
+    "aciklama": "Uygulamanın ergen depresyonu için 50–100 (150) mg aralığı pediatrik başvuru kaynaklarıyla açıklanabilir; ancak TR KÜB adolesanlar için 25–50 mg/gün önerir (FDA etiketi de ergende düşük doz önerir).",
+    "oneri": "Ergen dozuna 'TR KÜB: 25–50 mg/gün' notu ekleyin; üst sınırın KÜB üzerinde olduğunu belirtin."
+   },
+   {
+    "alan": "endikasyona_gore_pediatrik_doz",
+    "uygulama": "Migren profilaksisi / kronik ağrı: 0,25 mg/kg gece (5–10 mg)'dan başlayarak",
+    "kub": "12 yaş altında önerilmez",
+    "tur": "fark",
+    "kanit": "LAROXYL’in, 12 yaşından küçük hastalarda kullanımı önerilmemektedir.",
+    "aciklama": "Migren/ağrı psikiyatri dışı ve endikasyon dışı; TR KÜB 12 yaş altı kullanımı önermiyor.",
+    "oneri": "Migren/ağrı satırına 'TR KÜB: 12 yaş altında önerilmez' notu ekleyin."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Düşük dozla başlayın; düzey ve EKG izleyin.",
+    "kub": "Dikkat; ciddi karaciğer hastalığında kontrendike",
+    "tur": "fark",
+    "kanit": "Ciddi karaciğer hastalığı olanlarda kontrendikedir.",
+    "aciklama": "TR KÜB 4.3 ciddi karaciğer hastalığını kontrendikasyon sayıyor; FDA etiketinde böyle bir kontrendikasyon yok.",
+    "oneri": "'Ciddi karaciğer hastalığında TR'de kontrendike' ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.bas",
+    "uygulama": "25 mg gece",
+    "kub": "10 veya 25 mg × 3/gün (30–75 mg/gün)",
+    "tur": "bilgi",
+    "kanit": "Önerilen başlangıç dozu günde üç kez bir film kaplı tablet LAROXYL (10 mg veya 25 mg)’dir.",
+    "aciklama": "Uygulamanın tek gece 25 mg başlangıcı yaygın kılavuz pratiği ve daha temkinli; TR KÜB bölünmüş 30–75 mg/gün ile başlatıyor. Hata değil.",
+    "oneri": "İsteğe bağlı: TR başlangıç şemasını not olarak ekleyin."
+   }
+  ]
+ },
+ "desvenlafaksin": {
+  "ruhsat_yok": true,
+  "aranan": [
+   "DESVENLAFAKSIN"
+  ]
+ },
+ "agomelatin": {
+  "urun": "VALDOXAN 25 MG FİLM KAPLI TABLET",
+  "firma": "SERVİER İLAÇ VE ARAŞTIRMA A.Ş.",
+  "kub_tarih": "03/06/2021",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/TTCKONAYLIKBVALDOXAN25TB_d215d021-bc5a-40a3-9ad2-d7e184461d7a.pdf",
+  "tr_endikasyon_eriskin": [
+   "Majör depresif hastalık"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında kullanılmaz.",
+  "tr_doz_eriskin": {
+   "bas": "25 mg/gün (yatmadan önce)",
+   "maks": "50 mg/gün (2 hafta sonra yanıt yoksa; karaciğer testi izlemiyle)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Orta–ciddi yetmezlikte tedbirli (klinik veri sınırlı)",
+   "karaciger": "Kontrendike"
+  },
+  "bulgular": [
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "Ergen: 25 mg gece, maks 50 mg/gün (endikasyon dışı)",
+    "kub": "18 yaş altında kullanılmaz",
+    "tur": "fark",
+    "kanit": "VALDOXAN 18 yaşın altındaki çocuklarda kullanılmaz.",
+    "aciklama": "Uygulama ergen dozunu endikasyon dışı olarak veriyor; TR KÜB 18 yaş altını kesin olarak dışlıyor.",
+    "oneri": "Pediatrik notlara 'TR KÜB: 18 yaş altında kullanılmaz' ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.not",
+    "uygulama": "(not yok)",
+    "kub": "≥ 75 yaşta kullanılmamalı",
+    "tur": "eksik",
+    "kanit": "Yaşı (≥75) olan hastalarda ise herhangi bir etki belgelenmemiştir. Bu nedenle agomelatin bu yaş gurubu hastalar tarafından kullanılmamalıdır",
+    "aciklama": "TR KÜB (4.2 ve 4.4) 75 yaş ve üzerinde etkililik gösterilmediği için kullanımı önermiyor; uygulamada bu kısıtlama yok.",
+    "oneri": "Erişkin doz notlarına '≥ 75 yaşta kullanılmamalı (TR KÜB)' ekleyin."
+   }
+  ]
+ },
+ "tianeptin": {
+  "urun": "STABLON 12,5 MG KAPLI TABLET",
+  "firma": "SERVIER İLAÇ VE ARAŞTIRMA A.Ş.",
+  "kub_tarih": "22/04/2020",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TTCKOnaylKBSTABLON_f45ac40e-2f41-4090-b06d-4a805d3d48ec.pdf",
+  "tr_endikasyon_eriskin": [
+   "Majör depresyon"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "15 yaş altında kontrendike; 15–17 yaşta etkililik ve güvenlilik verisi yok.",
+  "tr_doz_eriskin": {
+   "bas": "12,5 mg × 3/gün (yemeklerden önce)",
+   "maks": "37,5 mg/gün"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Şiddetli (KrKl < 19 ml/dk): 2 tablet/gün",
+   "karaciger": "Şiddetli siroz (Child-Pugh C): 2 tablet/gün; kronik alkoliklerde hafif–orta sirozda ayar gerekmez"
+  },
+  "bulgular": [
+   {
+    "alan": "onayNot_pediatrik",
+    "uygulama": "15 yaş altında önerilmez; ≥ 15 yaşta 12,5 mg × 2–3 dozu veriliyor ('15 yaş altında güvenlilik ve etkinlik verisi yoktur')",
+    "kub": "< 15 yaş kontrendike; < 18 yaşta veri yok",
+    "tur": "fark",
+    "kanit": "18 yaşın altındaki çocuk ve adölesanlarda tianeptinin etkililiği ve güvenliliği değerlendirilmemiştir. Veri bulunmamaktadır.",
+    "aciklama": "TR KÜB 15 yaş altını kontrendikasyon sayıyor (4.2 ve 4.3: '15 yaşın altındaki çocuklarda ve adölesanlarda kontrendikedir'); veri eksikliği 15 değil 18 yaş altı için geçerli.",
+    "oneri": "'15 yaş altında kontrendike; 15–17 yaşta veri yok' olarak düzeltin."
+   },
+   {
+    "alan": "doz_eriskin.not",
+    "uygulama": "Böbrek yetmezliği ve ileri yaşta 12,5 mg ×2.",
+    "kub": "≥ 65 yaşta yaşa bağlı ayar gerekmez; yalnızca < 55 kg yaşlıda 2 tablet/gün",
+    "tur": "fark",
+    "kanit": "Yaşlı depresyon hastalarında (≥ 65 yaş) (Bkz. Bölüm 5.1) yaş ile ilişkili doz ayarlaması gerekmez. Zayıf (<55 kg) yaşlı hastalarda, dozaj günde 2 tablet ile sınırlandırılmalıdır",
+    "aciklama": "Uygulamadaki genel 'ileri yaşta 2 tablet' kuralı eski ürün bilgisine dayanıyor olabilir; güncel TR KÜB doz kısıtlamasını zayıf (< 55 kg) yaşlılarla sınırlıyor.",
+    "oneri": "'İleri yaşta' yerine '< 55 kg yaşlıda' yazın."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Yarı ömür uzar: 12,5 mg ×2.",
+    "kub": "Şiddetli böbrek yetmezliğinde (KrKl < 19 ml/dk) 2 tablet/gün",
+    "tur": "bilgi",
+    "kanit": "Şiddetli böbrek yetmezliği olan (kreatinin klirensi < 19ml/dk) hastalarda, pozoloji günde 2 tablet ile sınırlandırılmalıdır",
+    "aciklama": "Doz uyumlu; TR KÜB kısıtlamayı yalnızca şiddetli yetmezliğe (KrKl < 19 ml/dk) uyguluyor.",
+    "oneri": "Eşik değeri (KrKl < 19 ml/dk) ekleyin."
+   }
+  ]
+ },
+ "metilfenidat": {
+  "urun": "CONCERTA 54 MG KONTROLLÜ SALIM TABLETİ",
+  "firma": "JOHNSON AND JOHNSON SIHHİ MAL. SAN. VE TİC. LTD. ŞTİ.",
+  "kub_tarih": "28/10/2026",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kubtemiz2_e853ac1f-a573-4f30-9094-ba3937969703.pdf",
+  "tr_endikasyon_eriskin": [
+   "DEHB (18–65 yaş)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "DEHB · 6–17 yaş"
+  ],
+  "tr_pediatrik_not": "6 yaş altında kullanılmamalı. 65 yaş üstünde (yaşlılarda) kullanılmamalı. Diğer önlemler tek başına yetersiz kaldığında, kapsamlı tedavi programının parçası olarak ve DEHB'de uzman hekimce başlatılır.",
+  "tr_doz_eriskin": {
+   "bas": "18 mg/gün sabah (önceden metilfenidat alanlarda dönüşüm tablosu: 18/36/54/72 mg); haftalık 18 mg artış",
+   "maks": "72 mg/gün"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "18 mg/gün sabah; haftalık 18 mg artış",
+   "maks": "54 mg/gün (6–12 ve 13–17 yaş)"
+  },
+  "tr_organ": {
+   "bobrek": "Çalışılmamış; renal klirens önemsiz olduğundan etkinin küçük olması beklenir, doz ayarlaması gerekebilir.",
+   "karaciger": "Çalışılmamış; deneyim yok."
+  },
+  "bulgular": [
+   {
+    "alan": "doz_cocuk_ergen.maks",
+    "uygulama": "OROS: 54 mg (6–12 yaş), 72 mg (≥ 13 yaş)",
+    "kub": "6–12 yaş ve 13–17 yaş için maksimum 54 mg/gün; 72 mg yalnızca 18–65 yaş",
+    "tur": "fark",
+    "kanit": "Çocuklarda (6-12 yaş) ve adolesanlarda (13-17 yaş) kullanılabilecek maksimum günlük doz 54 mg ve yetişkinlerde (18-65 yaş) 72 mg’dır. Bu dozların üstüne çıkılmamalıdır.",
+    "aciklama": "FDA Concerta etiketi 13–17 yaşta 72 mg/gün'e (≤ 2 mg/kg) izin verir; Türkiye KÜB'ünde ergenlerde de üst sınır 54 mg/gün.",
+    "oneri": "Ergen maks dozuna 'TR KÜB: 13–17 yaşta da maks. 54 mg/gün (OROS)' notu ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.bas",
+    "uygulama": "OROS: 18–36 mg sabah · MR: 10–20 mg",
+    "kub": "Metilfenidat almayan erişkinde de başlangıç 18 mg/gün",
+    "tur": "fark",
+    "kanit": "önerilen başlangıç dozu çocuklar, adolesanlar ve yetişkinlerde günde bir kez 18 mg’dır.",
+    "aciklama": "FDA erişkinde 18 veya 36 mg ile başlamaya izin verir; TR KÜB'ü yeni başlayan tüm yaş gruplarında 18 mg önerir (36 mg ancak önceden 10 mg ×2–3 IR alanlarda geçiş dozu).",
+    "oneri": "Erişkin başlangıcına 'TR KÜB: 18 mg/gün' notu ekleyin."
+   },
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "DEHB (erişkinde onaylı formlar, ör. OROS) — yaş üst sınırı belirtilmemiş",
+    "kub": "Erişkin onayı 18–65 yaş; yaşlılarda kullanılmamalı",
+    "tur": "fark",
+    "kanit": "Metilfenidat yaşlılarda kullanılmamalıdır. Bu yaş grubunda güvenlilik ve etkililik çalışılmamıştır. CONCERTA 65 yaşın üzerindeki hastalarda DEHB’de çalışılmamıştır.",
+    "aciklama": "FDA etiketinde 65 yaş üstü için açık bir kullanılmamalı ifadesi yok; TR KÜB'ü erişkin endikasyonunu 18–65 yaşla sınırlar.",
+    "oneri": "Erişkin DEHB satırına 'TR: 18–65 yaş; > 65 yaşta kullanılmamalı' notu ekleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Doz ayarı gerekmez (etkisiz metabolit idrarla atılır).",
+    "kub": "Çalışılmamış; PK etkisi küçük beklenir ama doz ayarlaması gerekebilir",
+    "tur": "bilgi",
+    "kanit": "böbrek yetmezliğinin CONCERTA’nın farmakokinetiği üzerinde çok küçük bir etki yaratması beklenir. Doz ayarlaması gerekebilir.",
+    "aciklama": "Gerekçe aynı, sonuç ifadesi daha temkinli: KÜB böbrek yetmezliğinde deneyim olmadığını ve doz ayarı gerekebileceğini söyler.",
+    "oneri": "'Doz ayarı genellikle gerekmez; çalışılmamıştır' biçiminde yumuşatın."
+   }
+  ]
+ },
+ "lisdeksamfetamin": {
+  "ruhsat_yok": true,
+  "aranan": [
+   "LISDEKSAMFETAMIN"
+  ]
+ },
+ "atomoksetin": {
+  "urun": "STRATTERA 4 MG/ML ORAL ÇÖZELTİ",
+  "firma": "LİLLY İLAÇ",
+  "kub_tarih": "28/11/2016",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/w2tPoY3DlYQMR.pdf",
+  "tr_endikasyon_eriskin": [
+   "DEHB (çocukluk çağı semptomları doğrulanmış erişkin)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "DEHB · ≥ 6 yaş"
+  ],
+  "tr_pediatrik_not": "6 yaş altında kullanılmamalı. Kapsamlı tedavi programının parçası olarak, uzman hekimce başlatılır.",
+  "tr_doz_eriskin": {
+   "bas": "40 mg/gün; en az 7 gün sonra artış",
+   "maks": "100 mg/gün (idame 80–100 mg)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "≤ 70 kg: ~0,5 mg/kg/gün; > 70 kg: 40 mg/gün; en az 7 gün sonra artış",
+   "maks": "≤ 70 kg: idame ~1,2 mg/kg/gün (üstü ek yarar yok; > 1,8 mg/kg güvenliliği değerlendirilmemiş); > 70 kg: 100 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Doz ayarı gerekmez (son dönem böbrek hastalığı dahil); SDBH'de hipertansiyonu artırabilir.",
+   "karaciger": "Child-Pugh B: başlangıç ve hedef doz %50; Child-Pugh C: %25."
+  },
+  "bulgular": [
+   {
+    "alan": "doz_cocuk_ergen.artis; doz_eriskin.artis",
+    "uygulama": "Çocuk: 'En az 3 gün (pratikte 1–2 hafta) sonra hedef doza' · Erişkin: '≥ 3 gün sonra 80 mg'",
+    "kub": "Başlangıç dozu artırmadan önce en az 7 gün sürdürülmeli (çocuk, ergen ve erişkin)",
+    "tur": "fark",
+    "kanit": "Başlangıç dozu klinik yanıt ve tolerabiliteye göre daha yüksek doza titre etmeden önce en az 7 gün süreyle idame ettirilmelidir.",
+    "aciklama": "FDA en az 3 gün sonra artışa izin verir; TR KÜB'ü (AB metni) tüm yaş gruplarında en az 7 gün ister.",
+    "oneri": "Artış satırlarına 'TR KÜB: en az 7 gün sonra' notu ekleyin."
+   },
+   {
+    "alan": "doz_cocuk_ergen.maks",
+    "uygulama": "1,4 mg/kg/gün veya 100 mg/gün (hangisi düşükse)",
+    "kub": "≤ 70 kg: idame ~1,2 mg/kg/gün, daha yükseği ek yarar göstermemiş, > 1,8 mg/kg/gün güvenliliği değerlendirilmemiş; > 70 kg: maks 100 mg/gün",
+    "tur": "fark",
+    "kanit": "Günde 1.2 mg/kg’dan daha yüksek dozlar fazladan bir yarar göstermemiştir.",
+    "aciklama": "1,4 mg/kg/gün sınırı FDA etiketinden; TR KÜB'ünde ≤ 70 kg çocuklar için mg/kg cinsinden ayrı bir maksimum yok (1,2 mg/kg hedef, 1,8 mg/kg üstü değerlendirilmemiş).",
+    "oneri": "Maks satırına 'TR KÜB: ≤ 70 kg'da 1,2 mg/kg/gün üzeri ek yarar göstermemiş; > 70 kg'da 100 mg/gün' notu ekleyin."
+   }
+  ]
+ },
+ "guanfasin": {
+  "urun": "ARİSLOW ER 1 MG UZATILMIŞ SALIMLI TABLET",
+  "firma": "ALİ RAİF İLAÇ SAN. AŞ.",
+  "kub_tarih": "11/10/2024",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ARSLOWER1mguzatlmsalmltabletkub_e3066703-f8b7-4e74-b980-df74b97e4b22.pdf",
+  "tr_endikasyon_eriskin": [],
+  "tr_endikasyon_pediatrik": [
+   "DEHB · 6–17 yaş (uyarıcılar uygun değil, tolere edilemiyor veya etkisizse)"
+  ],
+  "tr_pediatrik_not": "6 yaş altında güvenlilik/etkililik belirlenmemiş. Erişkin ve yaşlı DEHB hastalarında kullanılmamalı. Ergenlerde vücut ağırlığı en az 34 kg olmalı; yalnızca tableti yutabilen çocuklarda.",
+  "tr_doz_eriskin": {
+   "bas": "Endikasyon yok; erişkinde kullanılmamalı",
+   "maks": null
+  },
+  "tr_doz_pediatrik": {
+   "bas": "1 mg/gün; haftada ≤ 1 mg artış; idame 0,05–0,12 mg/kg/gün",
+   "maks": "6–12 yaş (≥ 25 kg): 4 mg/gün · 13–17 yaş: 34–41,4 kg 4 mg, 41,5–49,4 kg 5 mg, 49,5–58,4 kg 6 mg, ≥ 58,5 kg 7 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Şiddetli bozukluk (GFR 15–29), son evre (GFR < 15) veya diyalizde doz azaltılması gerekebilir.",
+   "karaciger": "Farklı derecelerde bozuklukta doz azaltılması gerekebilir."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "DEHB · 6–17 yaş",
+    "kub": "DEHB 6–17 yaş, yalnızca uyarıcılar uygun değil/tolere edilemiyor/etkisizse (ikinci basamak)",
+    "tur": "fark",
+    "kanit": "ARİSLOW ER, uyarıcı ilaçların uygun olmadığı, tolere edilemediği veya etkisiz kaldığı 6- 17 yaş arası çocuk ve adolesanlarda dikkat eksikliği hiperaktivite bozukluğunun (DEHB) tedavisinde endikedir.",
+    "aciklama": "FDA'da guanfasin XR birinci basamakta ve uyarıcılara ek olarak onaylı; TR'de yalnızca uyarıcıların uygun olmadığı durumlarda ve monoterapi olarak.",
+    "oneri": "Pediatrik onaya 'TR: uyarıcılar uygun değil/yetersizse (ikinci basamak)' notu ekleyin."
+   },
+   {
+    "alan": "onay_eriskin; doz_eriskin",
+    "uygulama": "Onay yok · endikasyon dışı; erişkin dozu 1 mg başlangıç, maks 7 mg/gün olarak verilmiş",
+    "kub": "Erişkin ve yaşlı DEHB hastalarında kullanılmamalı",
+    "tur": "fark",
+    "kanit": "Yetişkin ve yaşlı DEHB hastaları için guanfasinin güvenliliği ve etkililiği kanıtlanmamıştır. Bu nedenle bu grup tarafından kullanılmamalıdır.",
+    "aciklama": "Uygulama erişkin kullanımı 'endikasyon dışı' diye işaretliyor; TR KÜB'ü daha kesin olarak erişkinde kullanılmamasını söylüyor.",
+    "oneri": "Erişkin doz kartına 'TR KÜB: erişkin ve yaşlıda kullanılmamalı' uyarısı ekleyin."
+   },
+   {
+    "alan": "doz_cocuk_ergen.maks",
+    "uygulama": "6–12 yaş: 4 mg/gün · 13–17 yaş: 7 mg/gün (kiloya göre)",
+    "kub": "Aynı üst sınırlar; ancak 6–12 yaş şeması ≥ 25 kg için, ergenlerde en az 34 kg şartı ve kilo bandına göre 4/5/6/7 mg",
+    "tur": "bilgi",
+    "kanit": "Adolesan hastaların ağırlığı en az 34 kg olmalıdır.",
+    "aciklama": "Maks dozlar uyumlu; KÜB'de alt kilo sınırları ve kilo bantları var, uygulamada yalnızca 'kiloya göre' yazıyor.",
+    "oneri": "İsterseniz ergen kilo bantlarını (34–41,4 kg 4 mg; 41,5–49,4 kg 5 mg; 49,5–58,4 kg 6 mg; ≥ 58,5 kg 7 mg) not olarak ekleyin."
+   }
+  ]
+ },
+ "klonidin": {
+  "ruhsat_yok": true,
+  "aranan": [
+   "KLONIDIN"
+  ]
+ },
+ "deksmetilfenidat": {
+  "ruhsat_yok": true,
+  "aranan": [
+   "DEKSMETILFENIDAT"
+  ]
+ },
+ "amfetamin": {
+  "ruhsat_yok": true,
+  "aranan": [
+   "AMFETAMIN"
+  ]
+ },
+ "viloksazin": {
+  "ruhsat_yok": true,
+  "aranan": [
+   "VILOKSAZIN"
+  ]
+ },
+ "modafinil": {
+  "urun": "MODIODAL 100 MG TABLET",
+  "firma": "TEVA İLAÇLARI SAN. VE TİC. A.Ş.",
+  "kub_tarih": "30/05/2024",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ek3modiodalkubtemiz_62a5846a-04af-42df-8e59-403262b0d556.pdf",
+  "tr_endikasyon_eriskin": [
+   "Narkolepside aşırı uykululuk",
+   "Vardiyalı çalışma uyku bozukluğunda aşırı uykululuk",
+   "Obstrüktif uyku apnesinde birincil tedaviye rağmen süren aşırı uykululuk"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında kullanılmamalı.",
+  "tr_doz_eriskin": {
+   "bas": "200 mg/gün (≥ 65 yaş: 100 mg); vardiyalıda vardiyadan ~1 saat önce",
+   "maks": "400 mg/gün (tek ya da bölünmüş)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Veri yetersiz",
+   "karaciger": "Ağır yetmezlikte doz yarıya"
+  },
+  "bulgular": [
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "50–100 mg sabah başlangıç, maks 400 mg/gün (endikasyon dışı)",
+    "kub": "18 yaş altında kullanılmamalı",
+    "tur": "fark",
+    "kanit": "Modafinil, güvenlilik ve etkililik kaygıları nedeniyle 18 yaşından küçük çocuklarda kullanılmamalıdır",
+    "aciklama": "Uygulama pediatrik dozu endikasyon dışı olarak ve deri reaksiyonu uyarısıyla veriyor; TR KÜB kullanımı açıkça önermiyor.",
+    "oneri": "Pediatrik notlara 'TR KÜB: 18 yaş altında kullanılmamalı' ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.bas",
+    "uygulama": "100–200 mg sabah",
+    "kub": "200 mg/gün; vardiyalı çalışmada vardiyadan ~1 saat önce; ≥ 65 yaşta 100 mg",
+    "tur": "bilgi",
+    "kanit": "Vardiyalı çalışmaya bağlı bozukluğu olan kişilerde iş vardiyaları başlamadan yaklaşık 1 saat önce alınması tavsiye edilir.",
+    "aciklama": "'Sabah' alımı vardiyalı çalışma bozukluğu için geçerli değil (FDA etiketi de vardiyadan 1 saat önce der). TR başlangıç dozu 200 mg; 100 mg yalnızca 65 yaş üstü için öneriliyor.",
+    "oneri": "Vardiyalı çalışma için alım zamanını ve '≥ 65 yaş: 100 mg' notunu ekleyin."
+   }
+  ]
+ },
+ "risperidon": {
+  "urun": "RISPERDAL QUICKLET 1 MG AĞIZDA ÇÖZÜNÜR TABLET",
+  "firma": "JOHNSON AND JOHNSON SIHHİ MAL. SAN. VE TİC. LTD. ŞTİ.",
+  "kub_tarih": "23/09/2014",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/ddc0002a36308.pdf",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni ve diğer psikotik durumlar (akut ve idame)",
+   "Bipolar bozuklukta manik epizod"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Davranım ve diğer yıkıcı davranış bozuklukları (agresyon ön planda) · 5–18 yaş",
+   "Otistik bozukluğa bağlı huzursuzluk/irritabilite · çocuk ve ergen (5 yaş altında yeterli deneyim yok)"
+  ],
+  "tr_pediatrik_not": "18 yaş altında şizofrenide veri yetersizliği nedeniyle önerilmez (aynı ifade bipolar mani başlığı altında da yer alır); pediyatrik bipolar onayı yok. 5 yaş altında yeterli deneyim yok. KÜB taranmış (OCR) bir PDF'den; kritik değerler PDF görüntüsünden doğrulandı.",
+  "tr_doz_eriskin": {
+   "bas": "Şizofreni: 2 mg/gün (2. gün 4 mg; optimal 4–6 mg) · Bipolar mani: 2–3 mg/gün, günde 1 mg artış",
+   "maks": "16 mg/gün (10 mg üzeri ek yarar yok; mani 1–6 mg). Not: metin dosyasında OCR hatasıyla '36 mg' görünüyor, PDF'de 16 mg."
+  },
+  "tr_doz_pediatrik": {
+   "bas": "Davranım bozukluğu: < 50 kg 0,25 mg/gün, ≥ 50 kg 0,5 mg/gün (en erken gün aşırı artış) · Otizm: < 20 kg 0,25 mg/gün, ≥ 20 kg 0,5 mg/gün (4. gün artış)",
+   "maks": "Davranım: optimum < 50 kg 0,5 mg (0,25–0,75), ≥ 50 kg 1 mg (0,5–1,5) · Otizm (çalışılan en yüksek): < 20 kg 1,5 mg, ≥ 20 kg 2,5 mg, > 45 kg 3,5 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Başlangıç ve idame dozları yarıya düşürülmeli, titrasyon daha yavaş.",
+   "karaciger": "Başlangıç ve idame dozları yarıya düşürülmeli, titrasyon daha yavaş."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Bipolar mani ≥ 10 yaş; Şizofreni ≥ 13 yaş",
+    "kub": "18 yaş altında şizofrenide (ve bipolar mani bölümünde) kullanılması önerilmez",
+    "tur": "fark",
+    "kanit": "18 yaş altındaki çocuklarda şizofreni tedavisinde veri yetersizliğinden dolayı risperidon kullanılması önerilmez.",
+    "aciklama": "FDA ergen şizofreni ve 10–17 yaş bipolar maniyi onaylar; bu (2014 tarihli) TR KÜB'ünde her iki endikasyon da yalnızca erişkinde.",
+    "oneri": "Pediatrik şizofreni/bipolar satırlarına 'TR KÜB: 18 yaş altında önerilmez' notu ekleyin."
+   },
+   {
+    "alan": "onay_pediatrik_FDA; endikasyona_gore_pediatrik_doz",
+    "uygulama": "Onay listesinde yok; dozlar tablosunda 'Davranım bozukluğu / agresyon' 0,25–0,5 mg başlangıç, 0,5–1,5 mg hedef, haftada bir artış",
+    "kub": "TR'de 5–18 yaşta davranım ve diğer yıkıcı davranış bozukluklarında ruhsatlı; kiloya göre şema",
+    "tur": "eksik",
+    "kanit": "agresif veya diğer yıkıcı davranışların ön planda olduğu davranış ve diğer yıkıcı davranış bozukluklarının tedavisinde endikedir.",
+    "aciklama": "FDA'da olmayan, TR'de ruhsatlı psikiyatrik endikasyon. KÜB şeması: < 50 kg 0,25 mg başlangıç (optimum 0,5; 0,25–0,75), ≥ 50 kg 0,5 mg başlangıç (optimum 1; 0,5–1,5), en erken gün aşırı artış.",
+    "oneri": "Pediatrik onaylara 'Davranım bozukluğu (TR onayı) · 5–18 yaş' ekleyin; doz satırını 50 kg eşiğine göre ayırın."
+   },
+   {
+    "alan": "doz_cocuk_ergen.maks",
+    "uygulama": "6 mg/gün (3 mg üzerinde ek yarar sınırlı, EPS artar)",
+    "kub": "TR'de onaylı pediatrik endikasyonlarda üst dozlar çok daha düşük (otizm en fazla 1,5/2,5/3,5 mg; davranım ≤ 1,5 mg)",
+    "tur": "fark",
+    "kanit": "Klinik çalışmalarda, çalışılan en yüksek doz, 20 kg’ın altındaki hastalarda günlük 1.5 mg’ı, 20 kg ve üstündeki hastalarda günlük 2.5 mg’ı ve 45 kg üstündeki hastalarda günlük 3.5 mg’ı aşmamıştır.",
+    "aciklama": "6 mg/gün FDA ergen şizofreni/bipolar dozudur; bu endikasyonlar TR'de 18 yaş altı için önerilmediğinden TR'de geçerli pediatrik üst sınırlar otizm ve davranım bozukluğu şemalarından gelir.",
+    "oneri": "Maks satırına 'TR KÜB: otizmde çalışılan en yüksek 1,5 / 2,5 / 3,5 mg (kiloya göre); davranımda ≤ 1,5 mg' notu ekleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi; karaciger_yetmezligi",
+    "uygulama": "Yalnızca 'ağır bozuklukta' düşük dozla başlayın, yavaş artırın",
+    "kub": "Böbrek ve karaciğer bozukluğunda (derece belirtilmeden) başlangıç ve sonraki dozlar yarıya, titrasyon daha yavaş",
+    "tur": "fark",
+    "kanit": "Endikasyona bağlı olmaksızın başlangıç ve takip eden dozlar yarıya düşürülmeli ve böbrek ve karaciğer bozukluğu olan hastalarda doz titrasyonu daha yavaş olmalıdır.",
+    "aciklama": "FDA ağır böbrek/karaciğer bozukluğunda 0,5 mg ×2 başlangıç önerir; TR KÜB'ü derece ayırmadan dozların yarıya indirilmesini önerir.",
+    "oneri": "Organ yetmezliği alanlarına 'TR KÜB: her derecede başlangıç ve idame dozları yarıya, yavaş titrasyon' ekleyin."
+   }
+  ]
+ },
+ "aripiprazol": {
+  "urun": "MADEPZOL 20 MG TABLET",
+  "firma": "NOBEL SAĞLIK ÜRÜNLERİ LTD. ŞTİ.",
+  "kub_tarih": "04/12/2025",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/MADEPZOL20mgtabletkub_11_12_2025.pdf",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni (akut ve idame)",
+   "Bipolar I akut manik epizod ve nüks önleme",
+   "Antidepresana dirençli majör depresyonda ek tedavi"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Şizofreni · 13–17 yaş",
+   "Otistik bozuklukla ilişkili irritabilite · 6–17 yaş",
+   "Tourette · 6–18 yaş"
+  ],
+  "tr_pediatrik_not": "6 yaş altında önerilmez. Bipolar mani yalnızca erişkinde endike.",
+  "tr_doz_eriskin": {
+   "bas": "Şizofreni 10–15 mg/gün · Bipolar mani 15–30 mg/gün · MDB eki 5 mg/gün",
+   "maks": "30 mg/gün (MDB ekinde 15 mg/gün)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "2 mg/gün (şizofreni: 2 gün 2 mg → 2 gün 5 mg → 10 mg; otizm: ≥ 1 hafta arayla; Tourette: 2 gün sonra 5 mg)",
+   "maks": "Şizofreni 30 mg · Otizm irritabilite 15 mg · Tourette < 50 kg 10 mg, ≥ 50 kg 20 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Doz ayarı gerekmez.",
+   "karaciger": "Hafif-orta: ayar gerekmez; şiddetli: veri yetersiz, dikkatli dozlama, 30 mg dikkatle."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_pediatrik_FDA; endikasyona_gore_pediatrik_doz",
+    "uygulama": "Bipolar mani ≥ 10 yaş; doz satırı 'Bipolar mani / şizofreni (ergen)'",
+    "kub": "Bipolar I mani yalnızca erişkinde endike; pediatrik onay yalnızca şizofreni (13–17), otizm irritabilitesi (6–17) ve Tourette (6–18)",
+    "tur": "fark",
+    "kanit": "MADEPZOL yetişkinlerde Bipolar I Bozuklukla ilişkili akut manik epizodların tedavisinde",
+    "aciklama": "FDA 10–17 yaş bipolar maniyi onaylar; TR KÜB'ünde pediatrik bipolar endikasyonu yok.",
+    "oneri": "Pediatrik bipolar satırına 'TR KÜB: 18 yaş altında bipolar endikasyonu yok' notu ekleyin."
+   },
+   {
+    "alan": "doz_eriskin",
+    "uygulama": "bas: 10–15 mg/gün; maks: 30 mg/gün (endikasyon ayrımı yok)",
+    "kub": "MDB'de ek tedavi: başlangıç 5 mg/gün, 5–15 mg, maks 15 mg/gün; bipolar mani başlangıcı 15–30 mg",
+    "tur": "eksik",
+    "kanit": "antidepresanlara ilave tedavi olarak önerilen başlangıç dozu öğünlerin zamanı dikkate alınmaksızın günde tek doz olarak 5 mg/gün’dür. … Maksimum günlük doz 15 mg’ı aşmamalıdır.",
+    "aciklama": "Uygulama MDB ekini erişkin onayı olarak listeliyor ama tek erişkin doz şeması şizofreni dozunu gösteriyor; hem TR hem FDA'da MDB ekinde başlangıç düşük (TR 5 mg, FDA 2–5 mg), maks 15 mg.",
+    "oneri": "Erişkin doza endikasyona göre satır ekleyin: 'MDB eki: 5 mg başlangıç (2 mg'a inilebilir), maks 15 mg/gün'."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Doz ayarı gerekmez.",
+    "kub": "Hafif-orta: ayar gerekmez; şiddetli: veri yetersiz, dikkatli dozlama",
+    "tur": "bilgi",
+    "kanit": "Şiddetli karaciğer bozukluğu olan hastalarda mevcut veriler, tavsiyede bulunmak için yetersizdir. Bu hastalarda, dozlama dikkatli bir şekilde düzenlenmelidir.",
+    "aciklama": "FDA'da karaciğer yetmezliğinde ayar gerekmez; TR KÜB'ü şiddetli bozuklukta dikkat ister.",
+    "oneri": "'Şiddetli bozuklukta veri yetersiz; dikkatli kullanın' ekleyin."
+   }
+  ]
+ },
+ "olanzapin": {
+  "urun": "ZYPREXA 5 MG FILM KAPLI TABLET",
+  "firma": "BMED İLAÇ DANIŞMANLIK SAĞLIK ÜRÜN VE HİZMETLERİ TİC. LTD. ŞTİ.",
+  "kub_tarih": "11/07/2025",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/zprexa5ek1kubbmed5mg_31_07_2025.pdf",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni (akut ve idame)",
+   "Bipolar orta-ağır manik dönem",
+   "Bipolar bozuklukta nüks önleme"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Şizofreni · 13–17 yaş",
+   "Bipolar manik/mikst dönem · 13–17 yaş"
+  ],
+  "tr_pediatrik_not": "13 yaş altında kullanılmaz. 13–17 yaşta veri kısıtlı; kilo artışı, lipid ve prolaktin riskleri nedeniyle çoğu vakada önce diğer ilaçlar düşünülmeli.",
+  "tr_doz_eriskin": {
+   "bas": "Şizofreni 10 mg/gün · Mani 15 mg (monoterapi) / 10 mg (kombinasyon) · Nüks önleme 10 mg",
+   "maks": "20 mg/gün (aralık 5–20 mg)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "2,5–5 mg/gün (hedef 10 mg/gün)",
+   "maks": "20 mg/gün (üzeri değerlendirilmemiş)"
+  },
+  "tr_organ": {
+   "bobrek": "Daha düşük başlangıç dozu (5 mg) düşünülmeli.",
+   "karaciger": "Orta bozuklukta (Child-Pugh A/B) başlangıç 5 mg, dikkatli artış."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Bipolar depresyon (fluoksetin ile); Dirençli depresyon (fluoksetin ile)",
+    "kub": "TR KÜB'ünde depresyon endikasyonu yok; yalnızca şizofreni, bipolar mani ve nüks önleme",
+    "tur": "fark",
+    "kanit": "Bipolar bozuklukta olanzapin, orta derece ile ağır manik dönemlerin tedavisinde ve bipolar bozuklukta reküransların önlenmesinde endikedir.",
+    "aciklama": "Fluoksetinle kombinasyon endikasyonları FDA'ya özgü; TR'de olanzapin (Zyprexa) KÜB'ünde bulunmuyor.",
+    "oneri": "İki depresyon satırına 'TR'de ruhsatlı değil (FDA, fluoksetin kombinasyonu)' notu ekleyin."
+   },
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Bipolar depresyon (fluoksetin ile) · ≥ 10 yaş",
+    "kub": "13 yaş altında kullanılmaz; pediatrik onay yalnızca 13–17 yaş şizofreni ve bipolar mani/mikst",
+    "tur": "fark",
+    "kanit": "Güvenliliğe ve etkililiğe ilişkin veri olmadığı için 13 yaş altındaki çocuklarda kullanılmaz.",
+    "aciklama": "FDA'da 10–17 yaş bipolar depresyonda fluoksetinle onaylı; TR'de bu endikasyon yok ve 13 yaş altı kullanılmaz.",
+    "oneri": "Satıra 'TR'de onay yok; 13 yaş altında kullanılmaz' notu ekleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Doz ayarı gerekmez.",
+    "kub": "Böbrek yetmezliğinde daha düşük başlangıç dozu (5 mg) düşünülmeli",
+    "tur": "fark",
+    "kanit": "Böbrek/Karaciğer yetmezliği: Bu tip hastalarda daha düşük bir başlangıç dozu (5 mg) düşünülmelidir.",
+    "aciklama": "FDA etiketinde böbrek yetmezliğinde özel bir doz önerisi yok; TR KÜB'ü 5 mg başlangıcı önerir.",
+    "oneri": "'TR KÜB: 5 mg ile başlamayı düşünün' notu ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.bas",
+    "uygulama": "5–10 mg/gün",
+    "kub": "Şizofreni 10 mg; mani monoterapide 15 mg, kombinasyonda 10 mg",
+    "tur": "bilgi",
+    "kanit": "Manik dönem: Başlangıç dozu, monoterapide genellikle günde tek doz uygulanan 15 mg veya kombinasyon tedavisinde günde 10 mg",
+    "aciklama": "Uygulamadaki aralık FDA şizofreni başlangıcına uyar; mani başlangıcı (TR 15 mg, FDA 10–15 mg) ayrıca belirtilmemiş.",
+    "oneri": "Başlangıca 'mani: 10–15 mg' ekleyin."
+   }
+  ]
+ },
+ "ketiapin": {
+  "urun": "SEROQUEL 300 MG FILM KAPLI TABLET",
+  "firma": "LİVA İLAÇ PAZARLAMA SAN. VE TİC. A.Ş.",
+  "kub_tarih": "04/12/2025",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/seroquel300Ek2_05_01_2026.2_KUB",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni",
+   "Bipolar orta-ileri mani",
+   "Bipolar depresyon (majör depresif atak)",
+   "Bipolar nüks önleme (ketiapine yanıt vermiş hastalarda)"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında yeterli veri olmadığından kullanımı önerilmez.",
+  "tr_doz_eriskin": {
+   "bas": "Şizofreni ve bipolar depresyon: 1. gün 50 mg (100–200–300 mg) · Mani: 1. gün 100 mg (200–300–400 mg)",
+   "maks": "Şizofreni 750 mg/gün · Mani ve nüks önleme 800 mg/gün · Bipolar depresyon 300 mg (600 mg'a kadar)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": null,
+   "maks": null
+  },
+  "tr_organ": {
+   "bobrek": "Doz ayarı gerekmez.",
+   "karaciger": "25 mg/gün ile başla; günde 25–50 mg artır."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_pediatrik_FDA; doz_cocuk_ergen",
+    "uygulama": "Bipolar mani ≥ 10 yaş; Şizofreni ≥ 13 yaş; ayrıntılı pediatrik doz şeması",
+    "kub": "18 yaş altında önerilmez",
+    "tur": "fark",
+    "kanit": "SEROQUEL’in 18 yaşından küçük çocuk ve ergenlerde kullanımı, bu yaş grubunda kullanımını destekleyen yeterli veri olmadığı için önerilmez.",
+    "aciklama": "FDA pediatrik bipolar mani ve ergen şizofreniyi onaylar; TR KÜB'ünde pediatrik endikasyon yok.",
+    "oneri": "Pediatrik onay ve doz kartına 'TR KÜB: 18 yaş altında önerilmez' notu ekleyin."
+   },
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Bipolar sürdürüm (lityum/valproata ek)",
+    "kub": "Ketiapine yanıt vermiş hastalarda manik veya depresif atakların nüksünü önleme (ek tedavi şartı yok)",
+    "tur": "fark",
+    "kanit": "Daha önce ketiapin tedavisine yanıt vermiş olan bipolar bozukluğu olan hastalarda manik veya depresif atakların rekürrenslerinin önlenmesinde.",
+    "aciklama": "FDA'da IR ketiapinin sürdürüm onayı lityum/valproata ek olarak; TR'de monoterapi dahil nüks önleme endikasyonu var.",
+    "oneri": "Satıra 'TR: ketiapine yanıt vermiş hastada monoterapi olarak da' notu ekleyin."
+   },
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Majör depresyonda ek tedavi (uzatılmış salımlı form)",
+    "kub": "İncelenen KÜB IR forma ait; MDB endikasyonu içermiyor",
+    "tur": "bilgi",
+    "kanit": "SEROQUEL bipolar bozukluk tedavisinde endikedir:",
+    "aciklama": "XR formun TR KÜB'ü incelenmedi; MDB eki endikasyonunun TR'deki durumu bu KÜB'den değerlendirilemez.",
+    "oneri": "Gerekirse Seroquel XR TR KÜB'ü ile ayrıca doğrulayın."
+   },
+   {
+    "alan": "doz_eriskin",
+    "uygulama": "bas: 50 mg/gün (bölünmüş); maks: 800 mg/gün",
+    "kub": "Mani başlangıcı 1. gün 100 mg; şizofrenide üst doz 750 mg/gün, manide 800 mg/gün",
+    "tur": "bilgi",
+    "kanit": "Klinik cevaba ve hastanın toleransına bağlı olarak doz, günde 150- 750 mg arasında değişebilir.",
+    "aciklama": "FDA ile de uyumlu endikasyona özgü ayrıntılar; uygulamadaki tek başlangıç (50 mg) ve maks (800 mg) değerleri farklı endikasyonlardan alınmış.",
+    "oneri": "Başlangıç ve maks dozları endikasyona göre ayırın (şizofreni 50 mg → maks 750; mani 100 mg → maks 800)."
+   }
+  ]
+ },
+ "klozapin": {
+  "urun": "LEPONEX 25 MG TABLET",
+  "firma": "NOVARTİS ÜRÜNLERİ",
+  "kub_tarih": "24/04/2017",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/JoU99ykZVpBuN.pdf",
+  "tr_endikasyon_eriskin": [
+   "Tedaviye dirençli (veya klasik antipsikotiklere intoleran) şizofreni",
+   "Şizofreni/şizoaffektif bozuklukta nükseden intihar davranışı riskinin azaltılması",
+   "Parkinson hastalığında psikoz (standart tedavi başarısızsa)"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "Pediyatrik çalışma yok; 16 yaş altında güvenlilik/etkililik belirlenmediğinden kullanılmamalı.",
+  "tr_doz_eriskin": {
+   "bas": "1. gün 12,5 mg ×1–2; 2. gün 25 mg ×1–2; 2–3 haftada 300 mg (Parkinson psikozu: akşam 12,5 mg)",
+   "maks": "900 mg/gün (Parkinson psikozu: genelde ≤ 50 mg, asla > 100 mg/gün)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": null,
+   "maks": null
+  },
+  "tr_organ": {
+   "bobrek": "Hafif-orta: 1. gün tek doz 12,5 mg, yavaş artış; şiddetli böbrek yetmezliğinde kontrendike (4.3).",
+   "karaciger": "Dikkat ve düzenli karaciğer testleri; aktif/ilerleyici karaciğer hastalığı ve hepatik yetmezlikte kontrendike (4.3)."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Dirençli şizofreni; intihar davranışını azaltma",
+    "kub": "Ek olarak Parkinson hastalığına bağlı psikoz endikasyonu",
+    "tur": "eksik",
+    "kanit": "LEPONEX ayrıca, standart tedavinin başarısız olduğu vakalarda, Parkinson hastalığı süresince ortaya çıkan psikoza bağlı bozukluklarda da endikedir.",
+    "aciklama": "FDA'da yok, TR'de ruhsatlı. Doz: akşam 12,5 mg başlangıç, haftada en fazla 2 kez 12,5 mg artış, ortalama 25–37,5 mg/gün, maks 100 mg/gün.",
+    "oneri": "Erişkin onaylarına 'Parkinson psikozu (TR onayı)' ve ayrı düşük doz şemasını ekleyin."
+   },
+   {
+    "alan": "onayNot_pediatrik; doz_cocuk_ergen",
+    "uygulama": "Dirençli şizofrenide endikasyon dışı (genellikle ≥ 12 yaş); ayrıntılı pediatrik doz şeması",
+    "kub": "16 yaş altında kullanılmamalı",
+    "tur": "fark",
+    "kanit": "16 yaş altı çocuklarda ve ergenlerde LEPONEX güvenliliği ve etkililiği belirlenmediğinden kullanılmamalıdır.",
+    "aciklama": "FDA'da da pediatrik onay yok; ancak TR KÜB'ü 16 yaş altını açıkça dışlar, uygulamanın '≥ 12 yaş' endikasyon dışı notu bununla çelişir.",
+    "oneri": "Pediatrik nota 'TR KÜB: 16 yaş altında kullanılmamalı' uyarısını ekleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Ağır bozuklukta dikkatli kullanın.",
+    "kub": "Şiddetli böbrek yetmezliğinde kontrendike; hafif-orta bozuklukta 12,5 mg tek doz başlangıç ve yavaş artış",
+    "tur": "fark",
+    "kanit": "Şiddetli, renal ve kardiyak yetmezlik durumlarında (örn. miyokardit),",
+    "aciklama": "Alıntı 4.3 Kontrendikasyonlar listesinden. FDA ağır bozuklukta doz azaltımı önerir; TR'de şiddetli böbrek yetmezliği kontrendikasyon.",
+    "oneri": "'TR: şiddetli böbrek yetmezliğinde kontrendike; hafif-orta bozuklukta 12,5 mg ile başlayıp yavaş artırın' biçiminde güncelleyin."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Belirgin bozuklukta dozu azaltın; karaciğer işlev testlerini izleyin.",
+    "kub": "Aktif/ilerleyici karaciğer hastalığı ve hepatik yetmezlikte kontrendike; diğerlerinde dikkat ve düzenli karaciğer testleri",
+    "tur": "fark",
+    "kanit": "Mide bulantısı, anoreksi ve sarılık ile birlikte seyreden aktif karaciğer hastalığı ilerleyen karaciğer hastalığı ve hepatik yetmezlik,",
+    "aciklama": "Alıntı 4.3 Kontrendikasyonlar listesinden. Uygulama doz azaltımı öneriyor; TR'de ileri hastalıkta ilaç kontrendike.",
+    "oneri": "'TR: aktif/ilerleyici karaciğer hastalığı ve hepatik yetmezlikte kontrendike' notu ekleyin."
+   }
+  ]
+ },
+ "haloperidol": {
+  "urun": "NORODOL 2 MG / ML ORAL DAMLA",
+  "firma": "ALİ RAİF İLAÇ SANAYİ A.Ş.",
+  "kub_tarih": "02/10/2026",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/TTCKOnaylKBNORODOLDAMLA_ec2d5eb6-8f7c-49e3-939f-854016551982.pdf",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni ve şizoaffektif bozukluk",
+   "Akut deliryum (non-farmakolojik tedavi başarısızsa)",
+   "Bipolar I orta-şiddetli manik atak",
+   "Psikotik bozukluk/bipolar maniye bağlı akut psikomotor ajitasyon",
+   "Orta-şiddetli Alzheimer ve vasküler demansta inatçı saldırganlık ve psikotik semptomlar",
+   "Tourette dahil tik bozuklukları (şiddetli, diğer tedaviler başarısızsa)",
+   "Huntington hastalığında kore (psikiyatri dışı)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Şizofreni · 13–17 yaş (diğer tedaviler başarısız/tolere edilemiyorsa)",
+   "Otizm/yaygın gelişimsel bozuklukta inatçı şiddetli saldırganlık · 6–17 yaş",
+   "Tourette dahil tik bozuklukları · 10–17 yaş (4.2 doz önerisi 12–17 yaş)"
+  ],
+  "tr_pediatrik_not": "Endikasyondaki yaşların altında güvenlilik/etkililik belirlenmemiş; 3 yaş altı için veri yok.",
+  "tr_doz_eriskin": {
+   "bas": "Şizofreni 2–10 mg/gün (ilk atak 2–4 mg) · Mani 2–10 mg · Deliryum 1–10 mg · Demans ve tik 0,5–5 mg/gün",
+   "maks": "Şizofreni 20 mg/gün · Mani 15 mg/gün · Deliryum 10 mg/gün · Ajitasyon 20 mg/gün · Yaşlı 5 mg/gün"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "0,5 mg/gün'den (2–3 doza bölünmüş)",
+   "maks": "Şizofreni 13–17: 5 mg/gün (öneri 0,5–3) · Otizm saldırganlık 6–11: 3 mg, 12–17: 5 mg · Tik 12–17: 3 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Doz ayarı önerilmez, dikkat; şiddetli bozuklukta daha düşük başlangıç, küçük artış, uzun aralık gerekebilir.",
+   "karaciger": "Başlangıç dozu yarıya; daha küçük artışlar ve daha uzun aralıklar."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Şizofreni; Tourette bozukluğu",
+    "kub": "Ek psikiyatrik endikasyonlar: şizoaffektif bozukluk, bipolar I mani, akut psikomotor ajitasyon, akut deliryum",
+    "tur": "eksik",
+    "kanit": "Bipolar I bozuklukla ilişkili, orta - şiddetli manik atakların tedavisi.",
+    "aciklama": "Bu endikasyonlar FDA etiketinde yok, TR'de ruhsatlı. Endikasyona özgü üst dozlar: mani 15 mg/gün, deliryum 10 mg/gün, ajitasyon 20 mg/gün.",
+    "oneri": "Erişkin onaylarına TR endikasyonlarını 'TR onayı' etiketiyle ve endikasyona özgü maks dozlarla ekleyin."
+   },
+   {
+    "alan": "kara_kutu_eriskin; onay_eriskin",
+    "uygulama": "Demansa bağlı psikozda '… bu endikasyonda onaylı değildir'",
+    "kub": "TR'de orta-şiddetli Alzheimer/vasküler demansta inatçı saldırganlık ve psikotik semptomlar için ruhsatlı (0,5–5 mg/gün, 6 haftada yeniden değerlendirme)",
+    "tur": "fark",
+    "kanit": "orta - şiddetli Alzheimer demans ve vasküler demans bulunan hastalarda inatçı saldırganlık ve psikotik semptomların tedavisi.",
+    "aciklama": "Ortak antipsikotik kara kutu metnindeki 'onaylı değildir' ifadesi FDA için doğru; TR'de haloperidol bu endikasyonda (non-farmakolojik tedavi başarısız ve zarar riski varsa) onaylı. Mortalite uyarısı geçerliliğini korur.",
+    "oneri": "Haloperidol için kara kutuya 'TR'de kısıtlı demans endikasyonu var (0,5–5 mg/gün, 6 haftada yeniden değerlendirin)' notu ekleyin."
+   },
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Psikoz, Tourette, ağır davranış sorunları · ≥ 3 yaş",
+    "kub": "Şizofreni 13–17 yaş; otizm/YGB'de saldırganlık 6–17 yaş; tik bozuklukları 10–17 yaş (doz önerisi 12–17); tümü diğer tedaviler başarısızsa",
+    "tur": "fark",
+    "kanit": "Diğer farmakolojik tedavilerin başarısız olduğu ya da tolere edilemediği, 13-17 yaş arası ergenlerdeki şizofreni",
+    "aciklama": "FDA 3 yaştan itibaren onaylı; TR'de alt yaş sınırları daha yüksek ve kullanım ikinci basamak. KÜB'de tik için 4.1'de 10–17, 4.2'de 12–17 yaş yazıyor (iç tutarsızlık).",
+    "oneri": "Pediatrik onaya TR yaş sınırlarını (13 / 6 / 10–12 yaş) ve 'diğer tedaviler başarısızsa' notunu ekleyin."
+   },
+   {
+    "alan": "doz_cocuk_ergen.maks",
+    "uygulama": "Çocuk: 0,15 mg/kg/gün · ergen: genellikle ≤ 6–10 mg/gün",
+    "kub": "Ergen şizofrenide önerilen maks 5 mg/gün; otizm saldırganlığında 6–11 yaş 3 mg, 12–17 yaş 5 mg; tikte 12–17 yaş 3 mg",
+    "tur": "fark",
+    "kanit": "Önerilen maksimum doz 5 mg/gündür.",
+    "aciklama": "Uygulamadaki ergen üst sınırı FDA/eski kılavuz pratiğine dayanıyor; TR KÜB'ü pediatride en fazla 5 mg/gün önerir.",
+    "oneri": "Maks satırına 'TR KÜB: ergende maks 5 mg/gün; 6–11 yaş ve tikte 3 mg/gün' notu ekleyin."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Düşük dozla başlayın, dikkatli artırın.",
+    "kub": "Başlangıç dozu yarıya; daha küçük artışlar, daha uzun aralıklar",
+    "tur": "bilgi",
+    "kanit": "başlangıç dozunun yarıya düşürülmesi ve karaciğer bozukluğu bulunmayan hastalara kıyasla daha küçük artışlar ve daha uzun aralıklar ile dozun ayarlanması önerilir",
+    "aciklama": "Uyumlu; KÜB somut olarak başlangıcın yarıya indirilmesini önerir.",
+    "oneri": "'Başlangıç dozunu yarıya indirin' ifadesini ekleyin."
+   }
+  ]
+ },
+ "paliperidon": {
+  "urun": "İNVEGA 9 MG UZATILMIŞ SALIMLI TABLET",
+  "firma": "JOHNSON AND JOHNSON SIHHİ MAL. SAN. VE TİC. LTD. ŞTİ.",
+  "kub_tarih": "21/09/2022",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/INVEGA9mgKUB_03569eb5-11ee-468c-a429-864f6c87b15a.pdf",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni",
+   "Şizoaffektif bozukluk (monoterapi veya antidepresan/duygudurum düzenleyici ile kombine)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Şizofreni · ≥ 15 yaş"
+  ],
+  "tr_pediatrik_not": "Şizofrenide 12–14 yaşta güvenlilik/etkililik belirlenmemiş, pozoloji önerisi yok; şizoaffektif bozuklukta 12–17 yaşta incelenmemiş; 12 yaş altında kullanımı yok.",
+  "tr_doz_eriskin": {
+   "bas": "6 mg/gün (sabah), titrasyon gerekmez",
+   "maks": "12 mg/gün (şizofrenide 3–12, şizoaffektifte 6–12 mg/gün aralığı)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "3 mg/gün (sabah, ≥ 15 yaş)",
+   "maks": "< 51 kg: 6 mg/gün · ≥ 51 kg: 12 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "CrCl 50–80: başlangıç 3 mg/gün, en fazla 6 mg/gün; CrCl 10–50: başlangıç 3 mg gün aşırı, en fazla 3 mg/gün; < 10: önerilmez.",
+   "karaciger": "Hafif–orta: doz ayarı gerekmez; ağır: çalışılmamış, dikkat."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Şizofreni · ≥ 12 yaş",
+    "kub": "Şizofreni · ≥ 15 yaş; 12–14 yaşta güvenlilik/etkililik belirlenmemiş",
+    "tur": "fark",
+    "kanit": "12 - 14 yaş aralığındaki ergenlerde şizofreni tedavisi için INVEGA’nın güvenlik ve etkililiği belirtilmemiştir.",
+    "aciklama": "FDA 12 yaştan itibaren onaylı; TR KÜB'ü pediatrik başlangıç dozunu yalnızca 15 yaş ve üstü ergenler için veriyor.",
+    "oneri": "Pediatrik onay satırına 'TR KÜB: ≥ 15 yaş (12–14 yaş için öneri yok)' notu ekleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "50–80 mL/dk: en fazla 6 mg/gün; 10–50 mL/dk: en fazla 3 mg/gün; < 10 mL/dk: önerilmez",
+    "kub": "50–80 mL/dk: başlangıç 3 mg/gün; 10–50 mL/dk: başlangıç 3 mg gün aşırı, sonra 3 mg/gün",
+    "tur": "eksik",
+    "kanit": "INVEGA’nın tavsiye edilen başlangıç dozu gün aşırı olarak 3 mg’dır, klinik yeniden değerlendirme sonrasında günlük doz 3 mg’a yükseltilebilir.",
+    "aciklama": "Üst sınırlar uyumlu; ancak böbrek yetmezliğinde önerilen başlangıç dozları uygulamada yok (FDA orta–ağırda 1,5 mg/gün, TR 3 mg gün aşırı).",
+    "oneri": "Başlangıç dozlarını ekleyin: 50–80 mL/dk 3 mg/gün; 10–50 mL/dk 3 mg gün aşırı (TR) / 1,5 mg/gün (FDA)."
+   }
+  ]
+ },
+ "ziprasidon": {
+  "urun": "ZELDOX 60 MG KAPSÜL",
+  "firma": "PFIZER İLAÇLARI LTD. ŞTİ.",
+  "kub_tarih": "29/06/2022",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/Zeldox60KB_21842cef-7015-4164-9b89-31a0663bc042.pdf",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni ve ilişkili psikozlar",
+   "Bipolar mani / karma epizod (kısa süreli tedavi)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Bipolar mani / karma epizod (kısa süreli tedavi) · 10–17 yaş"
+  ],
+  "tr_pediatrik_not": "4.1'de 10–17 yaş mani endikasyonu var; ancak 4.2'de '18 yaşın altındaki çocuklarda etkililiği ve güvenliliği kanıtlanmamıştır' deniyor ve pediatrik doz verilmiyor (KÜB içi tutarsızlık). Şizofrenide çocuk/ergende etkililik belirlenmemiş; pediatrik şizofreni çalışması etkisizlik nedeniyle sonlandırılmış. Bipolar idamede yeterli kanıt yok.",
+  "tr_doz_eriskin": {
+   "bas": "40 mg ×2 (yemekle; şizofreni ve akut mani)",
+   "maks": "160 mg/gün (80 mg ×2)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "4.2'de yok (5.1'deki çalışmada 1. gün 20 mg)",
+   "maks": "4.2'de yok (çalışmada ≥ 45 kg: 80–160 mg/gün · < 45 kg: 40–80 mg/gün)"
+  },
+  "tr_organ": {
+   "bobrek": "Doz ayarı gerekmez.",
+   "karaciger": "Daha düşük dozlar düşünülmeli; ağır yetmezlikte deneyim yok."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Bipolar sürdürüm (lityum/valproata ek)",
+    "kub": "Bipolar idame tedavisinde yeterli kanıt yok; mani için yalnızca kısa süreli tedavi",
+    "tur": "fark",
+    "kanit": "Bipolar bozukluğun idame tedavisinde atakları önlemek amacıyla kullanımı konusunda ise yeterli kanıt yoktur",
+    "aciklama": "FDA'da lityum/valproata ek sürdürüm onayı var; TR KÜB'ü idame kullanımını desteklemiyor (3 haftadan uzun kullanım için sistematik veri yok).",
+    "oneri": "Sürdürüm satırına 'FDA; TR KÜB'ünde idame endikasyonu yok' notu ekleyin."
+   },
+   {
+    "alan": "onayNot_pediatrik / doz_cocuk_ergen.not",
+    "uygulama": "Pediatrik FDA onayı yok; 'Bazı Avrupa ülkelerinde bipolar mani 10–17 yaş onaylı'; doz notu 'Endikasyon dışı kullanım.'",
+    "kub": "TR KÜB 4.1: 10–17 yaşta manik/karma epizodların kısa süreli tedavisi endikasyonu var (4.2'de ise < 18 yaş etkililik/güvenlilik kanıtlanmamış deniyor)",
+    "tur": "fark",
+    "kanit": "Ziprasidon erişkinlerde ve 10-17 yaş arası çocuk ve ergenlerde, karma ya da psikotik özellikleri olsun olmasın manik epizodların kısa süreli tedavisinde endikedir",
+    "aciklama": "Türkiye'de ZELDOX için 10–17 yaş mani endikasyonu bulunuyor; uygulama bunu yalnızca 'bazı Avrupa ülkeleri' olarak anıyor ve pediatrik kullanımı tümüyle endikasyon dışı gösteriyor. KÜB 4.2'deki ifade 4.1 ile çelişiyor.",
+    "oneri": "onayNot_pediatrik'e 'Türkiye'de de (ZELDOX KÜB 4.1) 10–17 yaş mani kısa süreli tedavi endikasyonu var' ekleyin; 'Endikasyon dışı' notunu şizofreni ile sınırlayın; KÜB 4.2'deki çelişkili ifadeyi belirtin."
+   },
+   {
+    "alan": "doz_eriskin.bas",
+    "uygulama": "20–40 mg ×2 (yemekle)",
+    "kub": "40 mg ×2 (şizofreni ve akut mani)",
+    "tur": "fark",
+    "kanit": "Şizofreni ve bipolar maninin akut tedavisinde yetişkinler için tavsiye edilen doz yemeklerle birlikte günde iki defa 40 mg’dır",
+    "aciklama": "FDA şizofrenide 20 mg ×2 ile başlatır; TR KÜB her iki endikasyonda 40 mg ×2 önerir. Maksimum (160 mg/gün) uyumlu.",
+    "oneri": "Başlangıcı ayırın: 'Şizofreni 20 mg ×2 (FDA) / 40 mg ×2 (TR) · mani 40 mg ×2'."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Hafif–orta bozuklukta maruziyet %20–30 artar: dikkatli kullanın.",
+    "kub": "Daha düşük dozlar düşünülmeli; ağır yetmezlikte deneyim yok",
+    "tur": "bilgi",
+    "kanit": "Karaciğer yetmezliği olan hastalarda daha düşük dozlar düşünülmelidir",
+    "aciklama": "TR KÜB doz azaltımını öneriyor, uygulama yalnızca dikkat diyor.",
+    "oneri": "'Daha düşük doz düşünün; ağır yetmezlikte deneyim yok' ifadesini ekleyin."
+   }
+  ]
+ },
+ "lurasidon": {
+  "urun": "FERADON 40 MG FİLM KAPLI TABLET (muadil)",
+  "firma": "NOBEL İLAÇ SAN. VE TİC. A.Ş.",
+  "kub_tarih": "26/03/2026",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Feradon40mgOnaylKB_07_04_2026.pdf",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni",
+   "Bipolar I depresyon (monoterapi)",
+   "Bipolar I depresyon (lityum/valproata ek)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Şizofreni · 13–17 yaş",
+   "Bipolar I depresyon (monoterapi) · 10–17 yaş"
+  ],
+  "tr_pediatrik_not": "Bipolar manide etkililiğe dair yeterli veri yok (KÜB 4.1).",
+  "tr_doz_eriskin": {
+   "bas": "Şizofreni 40 mg/gün · bipolar depresyon 20 mg/gün (titrasyon gerekmez)",
+   "maks": "Şizofreni 160 mg/gün · bipolar depresyon 120 mg/gün"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "Şizofreni (13–17) 40 mg/gün · bipolar depresyon (10–17) 20 mg/gün",
+   "maks": "80 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Hafif: ayar yok; CrCl < 50 (orta, ağır, son evre): başlangıç 20 mg, en fazla 80 mg/gün; son evrede fayda riskten ağır basmadıkça kullanılmamalı.",
+   "karaciger": "Hafif: ayar yok; orta (Child-Pugh B): başlangıç 20 mg, en fazla 80 mg/gün; ağır (C): başlangıç 20 mg, en fazla 40 mg/gün."
+  },
+  "bulgular": [
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Orta–ağır bozuklukta 20 mg ile başlayın, en fazla 80 mg/gün.",
+    "kub": "Aynı doz önerisi + son evre böbrek yetmezliğinde (CrCl < 15) fayda riskten ağır basmadıkça kullanılmamalı",
+    "tur": "eksik",
+    "kanit": "Son evre böbrek yetmezliği olgularında ilacın potansiyel faydası riskine göre ağır basmadıkça lurasidon kullanılmamalıdır.",
+    "aciklama": "Doz sınırları uyumlu; son evre böbrek yetmezliği kısıtlaması uygulamada yok.",
+    "oneri": "'CrCl < 15 (son evre): fayda riskten ağır basmadıkça kullanmayın; klinik izlem' ekleyin."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Orta bozuklukta en fazla 80 mg/gün; ağır bozuklukta en fazla 40 mg/gün.",
+    "kub": "Orta–ağır yetmezlikte başlangıç 20 mg; maks 80 / 40 mg/gün",
+    "tur": "bilgi",
+    "kanit": "Orta (Child Pugh Sınıf B) ve şiddetli karaciğer yetmezliği (Child Pugh Sınıf C) olan hastalarda, doz ayarlaması önerilmektedir. Önerilen başlangıç dozu 20 mg’dır.",
+    "aciklama": "Üst sınırlar uyumlu; 20 mg başlangıç dozu belirtilmemiş.",
+    "oneri": "'Orta–ağır bozuklukta 20 mg ile başlayın' ifadesini ekleyin."
+   }
+  ]
+ },
+ "amisulpirid": {
+  "urun": "SOLIAN 200 MG TABLET",
+  "firma": "LİLYUM İLAÇ VE KİMYA SAN. TİC. A.Ş.",
+  "kub_tarih": "28/03/2026",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Solian200mgTabletEk1311kubtemiz_07_05_2026.pdf",
+  "tr_endikasyon_eriskin": [
+   "Psikozlar, özellikle akut/kronik şizofrenik bozukluklar (pozitif ve/veya negatif belirtiler)"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "15–18 yaşta önerilmez (etkililik/güvenlilik belirlenmemiş); 15 yaş altında kontrendike.",
+  "tr_doz_eriskin": {
+   "bas": "Baskın negatif belirti: 50–300 mg/gün (optimum ~100) · akut psikotik/karma epizod: 400–800 mg/gün",
+   "maks": "1200 mg/gün"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "CrCl 30–60: doz yarıya; 10–30: üçte bire; < 10: klinik deneyim yok, özel dikkat.",
+   "karaciger": "Doz azaltımı gerekmez."
+  },
+  "bulgular": [
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "< 10 mL/dk: kullanmayın.",
+    "kub": "< 10 mL/dk: klinik deneyim yok, özel dikkat (kontrendikasyon değil)",
+    "tur": "fark",
+    "kanit": "Şiddetli böbrek yetmezliği olan hastalarda (CRCL<10 mL/dk) klinik deneyim bulunmadığından bu hastalara özel dikkat gösterilmesi gerekir.",
+    "aciklama": "Uygulama TR KÜB'den daha kısıtlayıcı; TR KÜB'de 4.3'te böbrek yetmezliği kontrendikasyon değil. Klinik açıdan tutucu tutum makul olabilir, kaynak farkı belirtilmeli.",
+    "oneri": "'< 10 mL/dk: TR KÜB'de veri yok, özel dikkat (kaçınılması önerilir)' şeklinde ifade edin."
+   }
+  ]
+ },
+ "klorpromazin": {
+  "urun": "LARGACTİL 100 MG KAPLI TABLET",
+  "firma": "LİLYUM İLAÇ VE KİMYA SANAYİ TİCARET ANONİM ŞİRKETİ",
+  "kub_tarih": "30/06/2026",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ek1311kubtemiz_11_08_2026.pdf",
+  "tr_endikasyon_eriskin": [
+   "Akut psikotik bozukluklar",
+   "Kronik psikotik bozukluklar (şizofreni, kronik sanrılı/paranoid durumlar)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Ajitasyon ve agresiflikle seyreden şiddetli davranış bozuklukları · > 6 yaş"
+  ],
+  "tr_pediatrik_not": "Tablet formu 6 yaş altında önerilmez; 1 yaş altında kontrendike (ani bebek ölümü sendromu). Ergende psikoz için ayrı pediatrik endikasyon yok.",
+  "tr_doz_eriskin": {
+   "bas": "Düşük dozla başlanıp kademeli artırılır (aralık 25–300 mg/gün, 2–3'e bölünmüş)",
+   "maks": "300 mg/gün; istisnai durumlarda 600 mg/gün"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "1–5 mg/kg/gün, 2–3'e bölünmüş (> 6 yaş)",
+   "maks": "5 mg/kg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Şiddetli yetmezlikte birikim riski: yakın takip.",
+   "karaciger": "Şiddetli yetmezlikte birikim riski: yakın takip (4.4'te ciddi hepatotoksisite uyarısı)."
+  },
+  "bulgular": [
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "800–1000 mg/gün",
+    "kub": "Olağan en fazla 300 mg/gün; istisnai durumlarda 600 mg/gün",
+    "tur": "fark",
+    "kanit": "İstisnai durumlarda, doz maksimum 600 mg/gün’e yükseltilebilir.",
+    "aciklama": "FDA etiketi yatan hastada 1000 mg/gün'e kadar izin verir; TR tablet KÜB'ü 600 mg/gün ile sınırlar. Uygulamanın hedefi (200–600) TR üst sınırına ulaşıyor.",
+    "oneri": "Maks satırına 'TR KÜB: olağan ≤ 300, istisnai 600 mg/gün' notu ekleyin."
+   },
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Şizofreni; Bipolar mani; Bulantı ve kusma; İnatçı hıçkırık",
+    "kub": "Yalnızca akut ve kronik psikotik bozukluklar (tablet KÜB'ü)",
+    "tur": "fark",
+    "kanit": "Yetişkinler - Akut psikotik bozukluklar - Kronik psikotik bozukluklar",
+    "aciklama": "TR tablet KÜB'ünde bipolar mani endikasyonu yok; bulantı-kusma ve hıçkırık (psikiyatri dışı) da bu üründe yer almıyor (yalnızca tablet KÜB'ü incelendi, ampul KÜB'ü farklı olabilir).",
+    "oneri": "Bipolar mani satırına 'FDA; TR tablet KÜB'ünde yok' notu ekleyin."
+   },
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Şizofreni",
+    "kub": "Akut psikotik bozukluklar ve kronik psikotik bozukluklar (şizofreni dışı kronik sanrılı durumlar dahil)",
+    "tur": "eksik",
+    "kanit": "Kronik psikotik bozukluklar (şizofreni, şizofrenik olmayan kronik deliryum, paranoid deliryum, kronik delüzyonel durum)",
+    "aciklama": "TR endikasyonu şizofreniden geniştir: akut psikotik bozukluklar ve sanrılı bozukluk benzeri kronik durumlar.",
+    "oneri": "Erişkin endikasyonu 'Akut ve kronik psikotik bozukluklar (şizofreni, sanrılı bozukluk)' olarak genişletin veya TR notu ekleyin."
+   },
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Ağır davranış sorunları · 1–12 yaş; Psikoz · Ergen (erişkin dozu)",
+    "kub": "Ajitasyon/agresiflikle şiddetli davranış bozuklukları · > 6 yaş; ergen psikozu için ayrı endikasyon yok",
+    "tur": "fark",
+    "kanit": "6 yaş üstü çocuklar - Ajitasyon ve agresiflik ile birlikte şiddetli davranış bozuklukları",
+    "aciklama": "FDA alt yaş sınırı 1 yaş (6 aydan itibaren kullanım), TR tablet KÜB'ünde 6 yaş üstü.",
+    "oneri": "Pediatrik onay satırına 'TR: > 6 yaş' notu ekleyin."
+   },
+   {
+    "alan": "doz_cocuk_ergen.not",
+    "uygulama": "Altı aydan küçük bebeklerde kullanılmaz.",
+    "kub": "1 yaş altında kontrendike",
+    "tur": "fark",
+    "kanit": "bu tıbbi ürün, fenotiyazin kullanımı ile ani bebek ölümü sendromu arasındaki olası bağlantı nedeniyle 1 yaşın altındaki çocuklarda kontrendikedir.",
+    "aciklama": "FDA sınırı 6 ay; TR KÜB 1 yaş altını kontrendike sayıyor (4.3).",
+    "oneri": "'TR: 1 yaş altında kontrendike; tablet 6 yaş altında önerilmez' ekleyin."
+   },
+   {
+    "alan": "doz_cocuk_ergen.bas / maks",
+    "uygulama": "0,5 mg/kg/doz 4–6 saatte bir; maks 5 yaş altı 40, 5–12 yaş 75 mg/gün (ağır olguda 200)",
+    "kub": "1–5 mg/kg/gün, 2–3'e bölünmüş",
+    "tur": "fark",
+    "kanit": "Doz 1 ila 5 mg/kg/gün’dür.",
+    "aciklama": "TR KÜB mg/kg aralığı veriyor ve sabit mg tavanı yok; ör. 25 kg çocukta TR üst sınırı 125 mg/gün, uygulamada 75 mg/gün.",
+    "oneri": "Çocuk dozuna 'TR KÜB: 1–5 mg/kg/gün (2–3 doz)' notu ekleyin."
+   }
+  ]
+ },
+ "asenapin": {
+  "ruhsat_yok": true,
+  "aranan": [
+   "ASENAPIN"
+  ]
+ },
+ "brekspiprazol": {
+  "urun": "REXULTI 4 MG FILM KAPLI TABLET",
+  "firma": "ABDİ İBRAHİM OTSUKA İLAÇ SAN. VE TİC. A.Ş.",
+  "kub_tarih": "13/12/2024",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/REXULT4KB_09_01_2025.pdf",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında güvenlilik ve etkililik kanıtlanmamış; veri yok.",
+  "tr_doz_eriskin": {
+   "bas": "1 mg/gün (1–4. gün); 5–7. gün 2 mg, 8. gün 4 mg",
+   "maks": "4 mg/gün"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Orta–şiddetli: en fazla 3 mg/gün.",
+   "karaciger": "Orta–şiddetli (Child-Pugh ≥ 7): en fazla 3 mg/gün."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Şizofreni; Majör depresyonda ek tedavi; Alzheimer demansına bağlı ajitasyon",
+    "kub": "Yalnızca erişkin şizofreni",
+    "tur": "fark",
+    "kanit": "REXULTI, yetişkin hastalarda şizofreni tedavisinde endikedir.",
+    "aciklama": "Majör depresyonda ek tedavi ve Alzheimer ajitasyonu FDA endikasyonları; Türkiye'de ruhsatlı değil.",
+    "oneri": "Bu iki satıra 'FDA; TR'de endikasyon yok' notu ekleyin."
+   },
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Şizofreni · ≥ 13 yaş",
+    "kub": "18 yaş altında güvenlilik/etkililik kanıtlanmamış",
+    "tur": "fark",
+    "kanit": "Brekspiprazolün 18 yaşından küçük çocuk ve ergenlerde güvenlilik ve etkililiği kanıtlanmamıştır. Veri mevcut değildir.",
+    "aciklama": "FDA 13–17 yaş şizofreni onayı var; TR'de pediatrik endikasyon yok.",
+    "oneri": "Pediatrik satıra 'TR: 18 yaş altında endikasyon yok' notu ekleyin."
+   }
+  ]
+ },
+ "kariprazin": {
+  "urun": "KAPRAZDİ 1,5 MG SERT KAPSÜL (muadil)",
+  "firma": "DEVA HOLDİNG ANONİM ŞİRKETİ",
+  "kub_tarih": "20/03/2025",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/UYGUNKBKAPRAZD15_20_03_2025.pdf",
+  "tr_endikasyon_eriskin": [
+   "Şizofreni",
+   "Bipolar I depresyon"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında güvenlilik/etkililik belirlenmemiş; veri yok.",
+  "tr_doz_eriskin": {
+   "bas": "1,5 mg/gün",
+   "maks": "Şizofreni 6 mg/gün (1,5 mg artışlarla) · bipolar depresyon 3 mg/gün (15. günde 3 mg'a çıkılabilir)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "CrCl 30–89: ayar yok; < 30: önerilmez.",
+   "karaciger": "Child-Pugh 5–9: ayar yok; ağır (10–15): önerilmez."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Şizofreni; Bipolar I mani / karma dönem; Bipolar I depresyon; Majör depresyonda ek tedavi",
+    "kub": "Yalnızca şizofreni ve bipolar I depresyon",
+    "tur": "fark",
+    "kanit": "Yetişkinlerde bipolar I bozukluğu (bipolar depresyon) ile ilişkili depresif epizotların tedavisinde",
+    "aciklama": "Bipolar mani/karma dönem ve majör depresyonda ek tedavi FDA endikasyonları; incelenen TR KÜB'ünde (muadil ürün) yok.",
+    "oneri": "Mani ve MDD ek tedavi satırlarına 'FDA; TR'de endikasyon yok' notu ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "6 mg/gün",
+    "kub": "Şizofreni 6 mg/gün; bipolar depresyon 3 mg/gün",
+    "tur": "bilgi",
+    "kanit": "Tavsiye edilen maksimum doz günde bir kez 3 mg’dır.",
+    "aciklama": "Uygulamanın hedef satırı bipolar depresyonda 1,5–3 mg diyor ama maks tek değer (6 mg); bipolar depresyon için maks hem FDA hem TR'de 3 mg/gün.",
+    "oneri": "Maks'ı 'Şizofreni/mani: 6 mg/gün · bipolar depresyon: 3 mg/gün' olarak ayırın."
+   }
+  ]
+ },
+ "pimozid": {
+  "urun": "NÖROFREN 2 MG TABLET (muadil)",
+  "firma": "SANOFİ",
+  "kub_tarih": "23/02/2017",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/R08fKTLWSc7JW.pdf",
+  "tr_endikasyon_eriskin": [
+   "Kronik şizofreni (uzun süreli idame; ajitasyonun baskın olmadığı hastalarda başlangıç tedavisi)",
+   "Diğer psikozlar: paranoid durumlar, monosemptomatik hipokondriyak psikoz (4.2 doz bölümünde)",
+   "Tourette bozukluğu (standart tedaviye yanıtsız motor/vokal tikler)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Endikasyon ayrımı yapılmadan · > 12 yaş"
+  ],
+  "tr_pediatrik_not": "12 yaş altında yeterli çalışma yok, önerilmez.",
+  "tr_doz_eriskin": {
+   "bas": "Kronik şizofreni 2–4 mg/gün · diğer psikozlar 4 mg/gün",
+   "maks": "Şizofreni 20 mg/gün · diğer psikozlar 16 mg/gün (Tourette için ayrı erişkin doz yok)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "0,05 mg/kg/gün tek doz (> 12 yaş)",
+   "maks": "0,2 mg/kg/gün, en fazla 10 mg/gün (3 günlük aralarla artış)"
+  },
+  "tr_organ": {
+   "bobrek": "Dikkatli kullanılmalı.",
+   "karaciger": "Dikkatli kullanılmalı."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Tourette bozukluğu (diğer tedavilere yanıtsız)",
+    "kub": "Kronik şizofreni (idame/başlangıç), diğer psikozlar ve Tourette bozukluğu",
+    "tur": "eksik",
+    "kanit": "NÖROFREN esas olarak, nöroleptiklerin spesifik antipsikotik etkilerine cevap veren kronik şizofreni hastalarında",
+    "aciklama": "Türkiye'de pimozidin ana endikasyonu kronik şizofreni; paranoid durumlar ve monosemptomatik hipokondriyak psikoz için de doz veriliyor. Uygulama yalnızca FDA'nın Tourette endikasyonunu gösteriyor.",
+    "oneri": "Erişkin endikasyonlarına 'Kronik şizofreni (TR)' ve 'Diğer psikozlar: paranoid durumlar, monosemptomatik hipokondriyak psikoz (TR)' ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "10 mg/gün (yavaş metabolizörde 4 mg/gün)",
+    "kub": "Şizofreni 20 mg/gün; diğer psikozlar 16 mg/gün; Tourette için ayrı erişkin doz yok",
+    "tur": "fark",
+    "kanit": "Ortalama idame dozu 6 mg/gün olmak üzere, olağan doz aralığı 2-12 mg/gün’dür. Maksimum günlük doz 20 mg’dır.",
+    "aciklama": "Uygulamadaki erişkin doz FDA Tourette dozu (maks 10 mg/gün) olarak doğru; TR KÜB şizofreni için daha yüksek bir tavan veriyor.",
+    "oneri": "Endikasyona göre ayırın: 'Tourette 10 mg/gün (FDA) · şizofreni 2–4 mg başlangıç, maks 20 mg/gün (TR)'."
+   }
+  ]
+ },
+ "lityum": {
+  "urun": "LITHURIL 300MG KAPSÜL",
+  "firma": "KOÇAK FARMA İLAÇ VE KİMYA SANAYİ A.Ş.",
+  "kub_tarih": "01/11/2012",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/fe0aa77783730.pdf",
+  "tr_endikasyon_eriskin": [
+   "Bipolar bozukluk / mani (tedavi ve profilaksi)",
+   "Rekürent / unipolar depresyon (idame)",
+   "Şizoaffektif bozukluk (akut ve idame)",
+   "Küme (demet) baş ağrısı, kısa süreli (psikiyatri dışı)",
+   "Nötropenide enfeksiyon insidansını azaltma (psikiyatri dışı)"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "12 yaş altında etkililik/güvenlilik bilinmediğinden kullanılmamalı; 12–17 yaş için ayrı doz verilmemiş.",
+  "tr_doz_eriskin": {
+   "bas": "Ayrı başlangıç dozu yok; akut mani 1200–1800 mg/gün (3–4'e bölünmüş), idame 900–1200 mg/gün, unipolar/şizoaffektif 600–1800 mg/gün; yaşlıda başlangıç 300 mg ×1–2",
+   "maks": "Serum düzeyi akut 0,8–1,2 · idame 0,6–1,0 mEq/L; maks idame 2,4 g/gün"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "CrCl 10–50: normal dozun %50–75'i; < 10: %25–50'si; diyaliz edilebilir. 4.3: ciddi böbrek hastalığında kontrendike.",
+   "karaciger": "Bilgi yok."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Bipolar I (akut mani ve sürdürüm)",
+    "kub": "Ek olarak rekürent/unipolar depresyon idamesi ve şizoaffektif bozukluk (akut ve idame)",
+    "tur": "eksik",
+    "kanit": "Unipolar depresyon’un idame tedavisinde ve şizoeffektif hastalıkların akut ve idame tedavisinde",
+    "aciklama": "Türkiye'de lityumun unipolar depresyon idamesi ve şizoaffektif bozukluk endikasyonları var; uygulamada yalnızca bipolar I gösteriliyor.",
+    "oneri": "Erişkin endikasyonlarına 'Rekürent/unipolar depresyon idamesi (TR)' ve 'Şizoaffektif bozukluk (TR)' ekleyin."
+   },
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Bipolar I (akut mani ve sürdürüm) · ≥ 7 yaş",
+    "kub": "12 yaş altında kullanılmamalı",
+    "tur": "fark",
+    "kanit": "12 yaşın altındaki çocuklarda etkisi ve güvenliği bilinmediğinden kullanılmamalıdır.",
+    "aciklama": "FDA 7 yaştan itibaren onaylı; TR KÜB'ü (2012 tarihli) 12 yaş altını dışlıyor.",
+    "oneri": "Pediatrik satıra 'TR KÜB: 12 yaş altında kullanılmamalı' notu ekleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Hafif–orta bozuklukta dozu azaltıp sık düzey bakın; ağır bozuklukta kaçının.",
+    "kub": "CrCl 10–50: dozun %50–75'i; < 10: %25–50'si; 4.3'te ciddi böbrek hastalığı kontrendike",
+    "tur": "eksik",
+    "kanit": "Clcr 10-50 ml /dakika: normal dozun % 50 – % 75’i uygulanır.",
+    "aciklama": "Uygulama yönü doğru ancak sayısal azaltım oranı yok. KÜB 4.2 CrCl < 10 için doz verirken 4.3 ciddi böbrek hastalığını kontrendike sayıyor (KÜB içi tutarsızlık).",
+    "oneri": "'CrCl 10–50: dozun %50–75'i (sık düzey); ciddi bozuklukta kontrendike (TR)' şeklinde güncelleyin."
+   },
+   {
+    "alan": "form / doz_eriskin.not",
+    "uygulama": "Lityum karbonat tablet / kapsül 300 mg (uzatılmış salımlı formlar); 'Sürdürümde tek gece dozu böbrek açısından avantajlı olabilir.'",
+    "kub": "Standart 300 mg kapsül; günlük doz 3–4'e bölünür",
+    "tur": "bilgi",
+    "kanit": "Tavsiye edilen günlük doz 1200-1800 mg/gün (4-6 kapsül) olup, günlük toplam doz 3-4 kerede verilmelidir.",
+    "aciklama": "İncelenen TR ürünü uzatılmış salımlı değil ve KÜB bölünmüş doz öneriyor; tek doz önerisi bu ürünün KÜB'ü ile uyumlu değil.",
+    "oneri": "Formda TR'deki ürünün standart kapsül olduğunu belirtin; tek gece dozu notuna 'kılavuz önerisi' ibaresi ekleyin."
+   }
+  ]
+ },
+ "valproat": {
+  "urun": "DEPAKİN CHRONO BT 500 MG UZUN ETKILI FILM TABLET",
+  "firma": "Sanofi Sağlık Ürünleri Ltd. Şti.",
+  "kub_tarih": "06/11/2026",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ekek4kubtemiz_352ee8fd-ebbe-4227-bb6d-cf9e6ca76155.pdf",
+  "tr_endikasyon_eriskin": [
+   "Bipolar bozuklukta manik epizod (lityum kontrendike/tolere edilemiyorsa); yanıt verenlerde devam tedavisi düşünülebilir",
+   "Epilepsi: jeneralize (absans, miyoklonik, tonik-klonik) ve parsiyel/sekonder jeneralize nöbetler (psikiyatri dışı)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Epilepsi (psikiyatri dışı) · yaş sınırı yok; 500 mg ER tablet 6 yaş altına uygun değil"
+  ],
+  "tr_pediatrik_not": "Manide 18 yaş altında güvenlilik/etkililik değerlendirilmemiş. Kız çocukları ve doğurganlık çağındaki kadınlarda diğer tedaviler etkisiz/tolere edilemez değilse kullanılmamalı (Gebelik Önleme Programı); bipolar bozuklukta gebelikte kontrendike.",
+  "tr_doz_eriskin": {
+   "bas": "Mani: 750 mg/gün veya 20 mg/kg/gün; hızla en düşük etkili doza çıkılır",
+   "maks": "Belirtilmemiş; ortalama 1000–2000 mg/gün, > 45 mg/kg/gün dozlarda yakın izlem"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "Mani: 18 yaş altında değerlendirilmemiş (epilepsi: 5–10 mg/kg/gün)",
+   "maks": "Mani için yok (epilepsi ortalaması: çocuk 30, ergen 25 mg/kg/gün)"
+  },
+  "tr_organ": {
+   "bobrek": "Doz azaltımı gerekebilir; hemodiyalizde doz artırımı gerekebilir (diyaliz edilebilir); hipoproteinemide serbest düzey artışı dikkate alınmalı.",
+   "karaciger": "4.3: akut/kronik hepatit, kişisel/ailesel karaciğer hastalığı öyküsü, ağır karaciğer bozukluğunda kontrendike; salisilatlarla birlikte kullanılmamalı."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Bipolar mani; Epilepsi; Migren profilaksisi",
+    "kub": "Mani yalnızca lityum kontrendike/tolere edilemiyorsa; migren profilaksisi endikasyonu yok",
+    "tur": "fark",
+    "kanit": "Lityumun kontrendike olduğu veya tolere edilmediği durumlarda bipolar bozuklukta manik epizodların tedavisi.",
+    "aciklama": "TR'de valproat manide ikinci basamak (lityuma alternatif) olarak ruhsatlı. Ayrıca bu KÜB'de migren profilaksisi (psikiyatri dışı) yer almıyor.",
+    "oneri": "Bipolar mani satırına 'TR: lityum kontrendike/tolere edilemiyorsa' notu ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "60 mg/kg/gün",
+    "kub": "Maks belirtilmemiş; ortalama 1000–2000 mg/gün, > 45 mg/kg/gün dozlarda yakın izlem",
+    "tur": "fark",
+    "kanit": "Ortalama günlük doz genellikle 1000 ile 2000 mg sodyum valproat arasında değişir. Günlük olarak 45 mg/kg vücut ağırlığından daha yüksek dozlar alan hastalar dikkatle izlenmelidir.",
+    "aciklama": "60 mg/kg/gün FDA (Depakote ER) tavanıdır; TR KÜB tavan vermiyor, 45 mg/kg/gün üzerini yakın izlem eşiği olarak koyuyor.",
+    "oneri": "Maks satırına 'TR: > 45 mg/kg/gün yakın izlem' notu ekleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Doz ayarı genellikle gerekmez; proteine bağlanma azaldığı için serbest düzey toplam düzeyden yüksek olabilir.",
+    "kub": "Doz azaltımı gerekebilir; hemodiyalizde doz artırımı gerekebilir",
+    "tur": "fark",
+    "kanit": "Böbrek yetmezliği olan hastalarda dozun azaltılması, hemodiyaliz hastalarında dozun artırılması gerekebilir.",
+    "aciklama": "FDA böbrek yetmezliğinde doz ayarı önermez; TR KÜB klinik takibe göre azaltım (ve diyalizde artırım) gerekebileceğini belirtiyor.",
+    "oneri": "'TR: doz azaltımı gerekebilir; hemodiyalizde artırım gerekebilir, klinik yanıta göre ayarlayın' ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.hedef",
+    "uygulama": "Serum düzeyi 50–125 µg/mL (akut manide 85–125)",
+    "kub": "Terapötik aralık 40–100 mg/L; çukur düzey 100 mg/L'yi aşmamalı (epilepsi bölümünde)",
+    "tur": "bilgi",
+    "kanit": "Serum konsantrasyonu (ilk günlük dozdan önce belirlenen) 100 mg valproik asit/L'yi aşmamalıdır.",
+    "aciklama": "İfade KÜB'ün epilepsi/kombine tedavi kısmında yer alıyor; manide de geçerli olup olmadığı belirsiz. FDA manide 125 µg/mL'ye kadar izin verir.",
+    "oneri": "Hedef satırına 'TR KÜB: çukur düzey ≤ 100 mg/L (epilepsi)' notu eklenebilir."
+   },
+   {
+    "alan": "doz_cocuk_ergen.not",
+    "uygulama": "GİS yan etkisi için yemekle ve enterik/uzatılmış salımlı form ile verin.",
+    "kub": "DEPAKİN Chrono BT tercihen yemeklerden 1 saat önce alınır",
+    "tur": "bilgi",
+    "kanit": "Tercihen, yemeklerden 1 saat önce (sabahları aç karnına) alınmalıdır.",
+    "aciklama": "Uzatılmış salımlı TR ürünü için KÜB aç karnına alımı öneriyor; uygulamanın 'yemekle' önerisi enterik formlar için geçerli olabilir.",
+    "oneri": "'Uzatılmış salımlı formun (Depakin Chrono) alım şekli için ürün bilgisine bakın' ayrımı yapın."
+   },
+   {
+    "alan": "doz_cocuk_ergen.not",
+    "uygulama": "2 yaş altı ve mitokondriyal hastalık (POLG) şüphesinde kontrendikedir.",
+    "kub": "POLG mitokondriyal hastalığında ve POLG ilişkili bozukluk şüphesi olan 2 yaş altı çocuklarda kontrendike",
+    "tur": "bilgi",
+    "kanit": "POLG ile ilişkili bozukluk şüphesi olan 2 yaşından küçük çocuklarda",
+    "aciklama": "Uygulama ifadesi '2 yaş altında genel kontrendikasyon' gibi okunabiliyor; KÜB'de kontrendikasyon POLG şüphesi olan 2 yaş altı çocuklara özgü.",
+    "oneri": "'Bilinen POLG mitokondriyal hastalığında ve POLG şüphesi olan 2 yaş altı çocuklarda kontrendike' şeklinde düzeltin."
+   }
+  ]
+ },
+ "lamotrijin": {
+  "urun": "LAMICTAL DC 100 MG ÇÖZÜNÜR/ÇIĞNEME TABLETI",
+  "firma": "GLAXOSMİTHKLİNE İLAÇLARI SAN. VE TİC. A.Ş.",
+  "kub_tarih": "03/06/2022",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/Lamictal100KB_06b30164-c964-4d3e-a257-e4980f0965a9.pdf",
+  "tr_endikasyon_eriskin": [
+   "Bipolar bozuklukta duygudurum ataklarının (özellikle depresif) önlenmesi · ≥ 18 yaş",
+   "Epilepsi: parsiyel ve jeneralize (tonik-klonik, Lennox-Gastaut) nöbetler · ek tedavi veya monoterapi"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Epilepsi ek tedavi · 2–12 yaş",
+   "Tipik absans nöbetinde monoterapi · 2–12 yaş",
+   "Epilepsi ek tedavi veya monoterapi · ≥ 12 yaş"
+  ],
+  "tr_pediatrik_not": "Bipolar bozuklukta 18 yaş altında endike değil ve önerilmez (etkinlik gösterilemedi, intihar eğilimi bildirimleri arttı). 2 yaş altında önerilmez.",
+  "tr_doz_eriskin": {
+   "bas": "Bipolar: 25 mg/gün (valproat ile 25 mg gün aşırı; indükleyici ile 50 mg/gün)",
+   "maks": "Hedef 200 mg/gün (çalışmalarda 100–400 mg); valproat ile hedef 100 mg, klinik yanıta göre en fazla 200 mg/gün; indükleyici ile 6. hf 300 mg, gerekirse 7. hf 400 mg/gün"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "Bipolar: < 18 yaş önerilmez. Epilepsi: ≥ 12 yaş erişkin şeması; 2–12 yaş kiloya göre (ör. 0,3 mg/kg/gün; valproat ile 0,15 mg/kg/gün)",
+   "maks": "Epilepsi 2–12 yaş: idame en fazla 200 mg/gün (indükleyici ile 400 mg/gün)"
+  },
+  "tr_organ": {
+   "bobrek": "Dikkatli kullanın; belirgin bozuklukta azaltılmış idame dozu yeterli olabilir; son dönemde başlangıç dozu eşzamanlı ilaçlara göre belirlenir.",
+   "karaciger": "Başlangıç, artış ve idame dozları Child-Pugh B'de ~%50, Child-Pugh C'de ~%75 azaltılır."
+  },
+  "bulgular": [
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Orta bozuklukta dozu yaklaşık %25, asitli ağır bozuklukta %50 azaltın.",
+    "kub": "Child-Pugh B: ~%50, Child-Pugh C: ~%75 azaltma (başlangıç, artış ve idame)",
+    "tur": "fark",
+    "kanit": "genel olarak karaciğer bozukluğu orta derecede (Child-Pugh derecesi B) olan hastalarda yaklaşık % 50 ve şiddetli (Child-Pugh derecesi C) olanlarda yaklaşık % 75 azaltılmalıdır.",
+    "aciklama": "Uygulama FDA önerisini (orta/ağır asitsiz %25, asitli %50) veriyor; TR KÜB belirgin olarak daha büyük azaltma öneriyor.",
+    "oneri": "TR KÜB önerisini ekleyin: 'TR: Child-Pugh B ~%50, Child-Pugh C ~%75 azaltın'."
+   },
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "200 mg/gün (indükleyici ile 400 mg; valproat ile 100 mg)",
+    "kub": "Valproat ile hedef 100 mg, klinik yanıta göre en fazla 200 mg/gün; monoterapide hedef 200 mg (klinik çalışmalarda 100–400 mg)",
+    "tur": "fark",
+    "kanit": "Optimal cevabı almak için hedef doz, günde bir kez veya iki doza bölünmüş olarak 100 mg/gün’dür. Ancak, klinik cevaba bağlı olarak, maksimum günlük doz 200 mg’a kadar artırılabilir.",
+    "aciklama": "Uygulama valproat ile 100 mg'ı tavan olarak gösteriyor; TR KÜB'de 100 mg hedef doz, tavan 200 mg. Monoterapide de 200 mg bir hedef olup KÜB 100–400 mg aralığını anıyor; 200 mg mutlak tavan değil.",
+    "oneri": "Maks alanını 'hedef 200 mg (TR: 100–400 mg aralığı); valproat ile hedef 100, en fazla 200 mg/gün; indükleyici ile 400 mg' şeklinde düzeltin."
+   },
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "≥ 12 yaş: 25 mg/gün (valproat ile 25 mg gün aşırı) … maks 200 mg/gün (indükleyici ile 400 mg)",
+    "kub": "Bipolar bozuklukta 18 yaş altında endike değil ve kullanımı önerilmez",
+    "tur": "fark",
+    "kanit": "LAMICTAL 18 yaş altı çocuk ve adolesanlarda bipolar bozuklukta kullanım için endike değildir",
+    "aciklama": "Uygulama ergenler için titrasyon şeması veriyor; TR KÜB bipolar bozuklukta 18 yaş altını açıkça önermiyor (randomize geri çekme çalışmasında etkinlik yok, intihar eğilimi bildirimlerinde artış).",
+    "oneri": "Çocuk-ergen doz kartına 'TR KÜB: bipolar bozuklukta < 18 yaş önerilmez (etkinlik gösterilemedi, intihar eğilimi bildirimleri arttı)' uyarısı ekleyin."
+   }
+  ]
+ },
+ "karbamazepin": {
+  "urun": "TEGRETOL 200 MG TABLET",
+  "firma": "NOVARTİS SAĞLIK GIDA VE TARIM ÜRÜNLERİ SAN. VE TİC. A.Ş.",
+  "kub_tarih": "24/11/2025",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/onaylkbtb_01_12_2025.pdf",
+  "tr_endikasyon_eriskin": [
+   "Lityuma yanıt vermeyen hastalarda manik depresif psikozun (bipolar bozukluk) profilaksisi",
+   "Epilepsi: jeneralize tonik-klonik ve parsiyel nöbetler",
+   "Trigeminal nevralji"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Epilepsi · çocuk ve ergen (yaş sınırı yok; tablet < 5 yaşta önerilmez)"
+  ],
+  "tr_pediatrik_not": "Psikiyatrik endikasyonda pediatrik doz verilmemiş; çocuk dozu yalnızca epilepsi için.",
+  "tr_doz_eriskin": {
+   "bas": "Bipolar profilaksi: 400 mg/gün (bölünmüş); epilepsi: 100–200 mg günde 1–2 kez",
+   "maks": "Bipolar: 1600 mg/gün (olağan 400–600 mg/gün); epilepsi: genellikle 800–1200, bazen 1600–2000 mg/gün; trigeminal nevralji: 1200 mg/gün"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "Epilepsi: kademeli artış; idame 10–20 mg/kg/gün (5–10 yaş 400–600, 10–15 yaş 600–1000, > 15 yaş 800–1200 mg/gün)",
+   "maks": "≤ 6 yaş 35 mg/kg/gün; 6–15 yaş 1000 mg/gün; > 15 yaş 1200 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Farmakokinetik veri yok; doz önerisi verilmemiş.",
+   "karaciger": "Farmakokinetik veri yok; doz önerisi verilmemiş (hepatik porfiri öyküsünde kontrendike)."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Bipolar I mani / karma dönem (uzatılmış salımlı kapsül)",
+    "kub": "Lityuma yanıt vermeyen hastalarda manik depresif psikozun profilaksisi",
+    "tur": "fark",
+    "kanit": "Lityum tedavisine yanıt vermeyen hastalarda manik depresif psikozun profilaksisi için.",
+    "aciklama": "Uygulamadaki endikasyon FDA'nın uzatılmış salımlı kapsül onayıdır (akut mani/karma dönem). TR KÜB'de akut mani endikasyonu yok; bipolar endikasyonu lityuma yanıtsız hastalarda profilaksi.",
+    "oneri": "Erişkin onay listesine 'TR: lityuma yanıt vermeyen hastalarda bipolar profilaksi (akut mani endikasyonu yok)' notu ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.hedef",
+    "uygulama": "800–1200 mg/gün (düzey 4–12 µg/mL)",
+    "kub": "Bipolar profilakside olağan doz 400–600 mg/gün (en fazla 1600 mg/gün)",
+    "tur": "fark",
+    "kanit": "Olağan doz aralığı, bölünmüş dozlar halinde günlük 400-600 mg’dır.",
+    "aciklama": "Uygulamanın hedefi epilepsi doz aralığına ve düzeyine dayanıyor; TR KÜB 4–12 µg/mL düzeyini yalnız epilepsi için veriyor ve bipolar profilakside daha düşük olağan doz öneriyor. Başlangıç (400 mg/gün) ve maksimum (1600 mg/gün) uyumlu.",
+    "oneri": "Hedef alanına 'TR bipolar profilaksi: olağan 400–600 mg/gün' notu ekleyin."
+   }
+  ]
+ },
+ "okskarbazepin": {
+  "urun": "TRILEPTAL 300 MG FILM KAPLI TABLET",
+  "firma": "NOVARTIS SAĞLIK GIDA VE TARIM ÜRÜNLERI SAN.VE TIC.A.Ş.",
+  "kub_tarih": "27/05/2024",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/TRLEPTAL300mgfilmkapltabletKUB_37994d2e-aba8-480c-bd98-1bd0c5c800bd.pdf",
+  "tr_endikasyon_eriskin": [
+   "Epilepsi: kısmi nöbetler (ikincil yaygınlaşan dahil) ve yaygın tonik-klonik nöbetler · monoterapi veya ek tedavi"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Epilepsi (aynı nöbet tipleri) · ≥ 6 yaş"
+  ],
+  "tr_pediatrik_not": "6 yaş altında önerilmez. Psikiyatrik endikasyon yok.",
+  "tr_doz_eriskin": {
+   "bas": "600 mg/gün (2 doza bölünmüş)",
+   "maks": "2400 mg/gün (haftada en fazla 600 mg/gün artış)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "8–10 mg/kg/gün (2 doza bölünmüş)",
+   "maks": "46 mg/kg/gün (haftada en fazla 10 mg/kg/gün artış; ortalama idame 30 mg/kg/gün)"
+  },
+  "tr_organ": {
+   "bobrek": "CrCl < 30 mL/dk: normal başlangıç dozunun yarısı (300 mg/gün), yavaş artırın.",
+   "karaciger": "Hafif–orta: doz ayarı gerekmez; şiddetli: deneyim yok, dikkatli."
+  },
+  "bulgular": [
+   {
+    "alan": "onayNot_pediatrik",
+    "uygulama": "Psikiyatrik endikasyonda pediatrik onay yok (epilepside ≥ 4 yaş onaylı)",
+    "kub": "Epilepside ≥ 6 yaş; 6 yaş altında önerilmez",
+    "tur": "fark",
+    "kanit": "6 yaşın altındaki çocuklarda güvenlilik ve etkililik yeterince gösterilmediğinden TRİLEPTAL önerilmemektedir.",
+    "aciklama": "≥ 4 yaş FDA onayıdır; TR KÜB'de epilepsi için alt yaş sınırı 6. Psikiyatri dışı endikasyon; yalnız yaş sınırı farkı.",
+    "oneri": "Notu 'epilepside ≥ 4 yaş (FDA), TR'de ≥ 6 yaş' şeklinde güncelleyin."
+   }
+  ]
+ },
+ "melatonin": {
+  "urun": "MELOGEN 1 MG/ML ORAL ÇÖZELTİ",
+  "firma": "GENSU PHARMA İLAÇ SAN. VE TİC. A.Ş.",
+  "kub_tarih": "10/09/2026",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/uygunkb_116bcf3a-8dbb-4580-81b4-1e48ad222f47.pdf",
+  "tr_endikasyon_eriskin": [
+   "Jet lag'e bağlı sirkadiyen ritim uyku bozukluğu · kısa süreli"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Otizm spektrum bozukluğu ve/veya Smith-Magenis sendromunda, uyku hijyeni yetersizse gecikmiş uyku başlangıçlı uykusuzluk · 2–18 yaş"
+  ],
+  "tr_pediatrik_not": "0–2 yaşta kullanımı yok. En az 6 ayda bir yeniden değerlendirme.",
+  "tr_doz_eriskin": {
+   "bas": "Jet lag: 3 mg/gün, yatma saatinde, 5 gün",
+   "maks": "6 mg/gün (3 mg yetersizse); saat 20.00'den önce veya 04.00'ten sonra alınmaz"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "2 mg (2 mL), yatmadan 30–60 dk önce",
+   "maks": "Sabit 2 mg/gün; doz artırımı tanımlanmamış"
+  },
+  "tr_organ": {
+   "bobrek": "Araştırılmamış; dikkatli kullanın.",
+   "karaciger": "Klirens azalır; kullanımı önerilmez."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Primer uykusuzluk (≥ 55 yaş, uzatılmış salımlı, kısa süreli · Avrupa)",
+    "kub": "Erişkinde jet lag'e bağlı sirkadiyen ritim uyku bozukluğu (kısa süreli)",
+    "tur": "fark",
+    "kanit": "Yetişkinlerde kısa süreli saat farkı değişikliklerine bağlı gelişen sirkadiyen ritim uyku bozukluğunun (jet lag) kısa süreli tedavisinde endikedir.",
+    "aciklama": "İncelenen TR ürünü (hızlı salımlı oral çözelti) erişkinde yalnız jet lag için ruhsatlı. Uygulamadaki ≥ 55 yaş primer uykusuzluk endikasyonu AB'deki uzatılmış salımlı tablete ait ve bu KÜB'de yok; TR'de o formun ruhsat durumu bu KÜB'den anlaşılamıyor.",
+    "oneri": "Erişkin onay listesine 'Jet lag (TR, oral çözelti)' ekleyin; primer uykusuzluğun AB uzatılmış salımlı forma ait olduğunu koruyun."
+   },
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Otizmde uykusuzluk (uzatılmış salımlı form, Avrupa) · 2–18 yaş",
+    "kub": "ASD ve/veya Smith-Magenis sendromunda gecikmiş uyku başlangıçlı uykusuzluk · 2–18 yaş · hızlı salımlı oral çözelti",
+    "tur": "fark",
+    "kanit": "Otizm Spektrum Bozukluğu (ASD) ve/veya Smith-Magenis sendromu olan 2-18 yaş arası çocuk ve ergenlerde gecikmiş uyku başlangıçlı uykusuzluğun tedavisinde endikedir.",
+    "aciklama": "TR'de endikasyon Smith-Magenis sendromunu da kapsıyor ve oral çözelti formunda ruhsatlı (yalnız uzatılmış salımlı form değil). Yaş sınırı uyumlu.",
+    "oneri": "Pediatrik onay satırına Smith-Magenis sendromunu ve 'TR: oral çözelti de ruhsatlı' notunu ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "10 mg/gece (başlangıç 1–2 mg, yatmadan 1–2 saat önce)",
+    "kub": "Jet lag: 3 mg/gün, yetersizse 6 mg/gün; yatma saatinde",
+    "tur": "fark",
+    "kanit": "Standart doz 5 gün boyunca günde 3 mg’dır. Standart dozda semptomlarda azalma olmaması durumunda, günlük doz 2 katına (6 mg) yükseltilebilir.",
+    "aciklama": "Melatoninin FDA etiketi yok; uygulamanın erişkin şeması (maks 10 mg) ruhsatlı bir şemaya dayanmıyor. TR KÜB'de erişkin dozu yalnız jet lag için ve en fazla 6 mg.",
+    "oneri": "TR erişkin dozunu (jet lag: 3 mg, gerekirse 6 mg, yatma saatinde, 5 gün) gösterin; 6 mg üzerinin ruhsat dışı olduğunu belirtin."
+   },
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "Başlangıç 0,5–1 mg; maks 10 mg/gece (uzatılmış salımlı form: 2 → 5 → en fazla 10 mg)",
+    "kub": "Sabit 2 mg/gün, yatmadan 30–60 dk önce; en az 6 ayda bir gözden geçirme",
+    "tur": "fark",
+    "kanit": "Günlük doz yatmadan 30-60 dakika önce alınan 2 mg'dır (2 ml).",
+    "aciklama": "TR oral çözeltide doz sabit 2 mg; 5–10 mg'a titrasyon AB uzatılmış salımlı formuna ait ve bu KÜB'de yok. KÜB ayrıca alımdan 2 saat önce ve sonra yemek yenmemesini önerir.",
+    "oneri": "TR çözelti için '2 mg sabit doz, en az 6 ayda bir gözden geçirin, alımdan 2 saat önce/sonra yemek yok' notu ekleyin."
+   }
+  ]
+ },
+ "hidroksizin": {
+  "urun": "ATARAX 25 MG FİLM KAPLI TABLET",
+  "firma": "AVİXA İLAÇ SAN. VE TİC. A.Ş.",
+  "kub_tarih": "28/11/2025",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/yaynlanacakatarax25Ek21312kub_25_12_2025.pdf",
+  "tr_endikasyon_eriskin": [
+   "Anksiyetenin semptomatik tedavisi · ≥ 18 yaş",
+   "Kaşıntının semptomatik tedavisi"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Kaşıntı · ≥ 12 ay (film tablet ≥ 6 yaş)"
+  ],
+  "tr_pediatrik_not": "Anksiyete endikasyonu yalnız ≥ 18 yaş. 12 aydan küçüklerde veri yok.",
+  "tr_doz_eriskin": {
+   "bas": "Anksiyete: 50 mg/gün, üçe bölünmüş (12,5 – 12,5 – 25 mg)",
+   "maks": "100 mg/gün (yaşlıda 50 mg/gün)"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "Kaşıntı: 1–2 mg/kg/gün, bölünmüş",
+   "maks": "≤ 40 kg: 2 mg/kg/gün; > 40 kg: 100 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "GFR 30–<60: dozun %50'si; < 30: %25; diyalizdeki son dönem: %25, haftada 3 kez",
+   "karaciger": "Günlük dozu %33 azaltın."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Anksiyete, sedasyon, kaşıntı · çocuklarda onaylı",
+    "kub": "Çocukta yalnız kaşıntı (≥ 12 ay); anksiyete yalnız ≥ 18 yaş",
+    "tur": "fark",
+    "kanit": "18 yaş ve üzerindeki erişkinlerde anksiyetenin semptomatik tedavisinde, - 12 ay ve üzerindeki çocuklar, adolesanlar ve erişkinlerde kaşıntının semptomatik tedavisinde endikedir.",
+    "aciklama": "FDA çocuklarda anksiyete ve sedasyon için de onaylı; TR KÜB'de anksiyete endikasyonu 18 yaşla sınırlı, çocukta yalnız kaşıntı var. Uygulamanın çocuk dozu TR'de kaşıntı dozuyla aynı.",
+    "oneri": "Pediatrik onay satırına 'TR: anksiyetede yalnız ≥ 18 yaş; çocukta yalnız kaşıntı (≥ 12 ay)' notu ekleyin."
+   },
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Premedikasyonda sedasyon",
+    "kub": "TR KÜB'de yalnız anksiyete ve kaşıntı",
+    "tur": "fark",
+    "kanit": "18 yaş ve üzerindeki erişkinlerde anksiyetenin semptomatik tedavisinde, - 12 ay ve üzerindeki çocuklar, adolesanlar ve erişkinlerde kaşıntının semptomatik tedavisinde endikedir.",
+    "aciklama": "Premedikasyonda sedasyon FDA onayıdır; incelenen TR KÜB'de bu endikasyon yok.",
+    "oneri": "'Premedikasyonda sedasyon' satırını 'FDA; TR KÜB'de yok' olarak işaretleyin."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Orta–ağır bozuklukta dozu yarıya indirin (setirizin birikir).",
+    "kub": "GFR 30–<60: %50; < 30: %25; diyalizdeki son dönem: %25, haftada 3 kez",
+    "tur": "fark",
+    "kanit": "Orta derecede azalmış renal 30 – <60 % 50 … Ağır derecede azalmış renal < 30 diyaliz % 25",
+    "aciklama": "Orta bozuklukta uyumlu; ağır bozuklukta (GFR < 30) ve diyalizde TR KÜB dozun yalnızca %25'ini öneriyor, uygulamanın 'yarıya indirin' önerisi yetersiz kalıyor.",
+    "oneri": "TR tablosunu ekleyin: GFR 30–<60 %50; < 30 %25; diyalizde %25, haftada 3 kez."
+   }
+  ]
+ },
+ "klonazepam": {
+  "urun": "RIVOTRIL 2 MG TABLET",
+  "firma": "DEVA HOLDING A.Ş.",
+  "kub_tarih": "28/02/2013",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/d299c65055855.pdf",
+  "tr_endikasyon_eriskin": [
+   "Epilepsi: absans, Lennox-Gastaut, miyoklonik ve atonik nöbetler (1. basamak); infantil spazm (2. basamak); tonik-klonik ve parsiyel nöbetler (3. basamak)"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Epilepsi · yenidoğandan itibaren (yaşa göre doz)"
+  ],
+  "tr_pediatrik_not": "Psikiyatrik endikasyon yok.",
+  "tr_doz_eriskin": {
+   "bas": "Epilepsi: ≤ 1 mg/gün (3'e bölünmüş); 3 günde bir 0,5 mg artış; idame genellikle 3–6 mg/gün",
+   "maks": "20 mg/gün"
+  },
+  "tr_doz_pediatrik": {
+   "bas": "0–5 yaş 0,25 mg/gün; 5–12 yaş ≤ 0,5 mg/gün",
+   "maks": "İdame: 0–1 yaş 0,5–1; 1–5 yaş 1–3; 5–12 yaş 3–6 mg/gün"
+  },
+  "tr_organ": {
+   "bobrek": "Farmakokinetiğe göre doz ayarı gerekmez.",
+   "karaciger": "Ağır yetmezlikte kontrendike; diğerlerinde veri yok."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Panik bozukluk; Epilepsi",
+    "kub": "Yalnız epilepsi; panik bozukluk endikasyonu yok",
+    "tur": "fark",
+    "kanit": "RİVOTRİL tipik absanslar (Petit mal), atipik absanslar (Lennox-Gastaut sendromu), miyoklonik nöbetler ve atonik nöbetlerde (Düşme sendromu) ilk basamak tedavide endikedir.",
+    "aciklama": "Panik bozukluk FDA onayıdır; incelenen TR KÜB (2013) yalnız epilepsi endikasyonu içeriyor. Uygulamanın erişkin dozu (0,25 mg ×2, maks 4 mg/gün) panik şemasıdır; TR KÜB yalnız epilepsi dozu veriyor (başlangıç ≤ 1 mg/gün, maks 20 mg/gün).",
+    "oneri": "Panik bozukluğu 'FDA; TR'de ruhsat dışı' olarak işaretleyin."
+   }
+  ]
+ },
+ "lorazepam": {
+  "urun": "ATIVAN EXPIDET 1 MG TABLET",
+  "firma": "PFİZER PFE İLAÇLARI A.Ş.",
+  "kub_tarih": "26/02/2025",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ATIVAN1mgKB_26_02_2025.pdf",
+  "tr_endikasyon_eriskin": [
+   "Somatik ve psikiyatrik belirtilerle ilişkili anksiyete, gerginlik ve kaygı · kısa süreli",
+   "Uykusuzluk · kısa süreli",
+   "Ameliyat öncesi anksiyete (4.2'de doz verilmiş)"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "12 yaş altında güvenlilik ve etkinlik saptanmamış; kullanımı tavsiye edilmez.",
+  "tr_doz_eriskin": {
+   "bas": "Anksiyete: 1 mg ×2–3 (2–3 mg/gün); uykusuzluk: 1–2 mg yatarken",
+   "maks": "Ağır vakada ve psikiyatride 2,5 mg ×3–4 (10 mg/gün); anksiyetede azaltma dahil genellikle ≤ 8–12 hafta, uykusuzlukta ≤ 4 hafta"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Yanıta göre dikkatli ayar; daha düşük doz yeterli olabilir.",
+   "karaciger": "Şiddetli yetmezlik ve/veya ensefalopatide kullanılmaz; diğerlerinde düşük doz, sık kontrol."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Anksiyete bozuklukları; Status epileptikus (parenteral)",
+    "kub": "Anksiyete ve uykusuzluk (kısa süreli)",
+    "tur": "eksik",
+    "kanit": "1. Somatik ve psikiyatrik semptomlarla ilişkili anksiyete, gerginlik ve kaygı. 2. Uykusuzluk.",
+    "aciklama": "TR'de uykusuzluk ek bir psikiyatrik endikasyon. Doz: 1–2 mg yatarken, gerekirse 2,5 mg; azaltma dahil en fazla 4 hafta.",
+    "oneri": "Erişkin onay listesine 'Uykusuzluk (kısa süreli; TR)' ekleyin."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Hafif–orta bozuklukta ayar genellikle gerekmez; ağır yetmezlikte dikkatli kullanın (ensefalopati riski).",
+    "kub": "Şiddetli karaciğer yetmezliği ve/veya ensefalopatide kullanılmamalı; diğerlerinde sık kontrol, düşük doz",
+    "tur": "fark",
+    "kanit": "ATIVAN EXPIDET, tüm benzodiyazepinler gibi hepatik ensefalopati gelişimini kolaylaştırabileceğinden, şiddetli karaciğer yetmezliği ve/veya ensefalopatisi olan hastalarda kullanılmamalıdır.",
+    "aciklama": "FDA ağır yetmezlikte dikkatli doz ayarı önerir; TR KÜB şiddetli yetmezlikte ve ensefalopatide kullanımı yasaklıyor.",
+    "oneri": "'Şiddetli karaciğer yetmezliği veya hepatik ensefalopatide kullanılmaz (TR KÜB)' olarak güncelleyin."
+   }
+  ]
+ },
+ "buspiron": {
+  "urun": "BUSPON 5 MG KAPSÜL",
+  "firma": "DEVA HOLDING A.Ş.",
+  "kub_tarih": "03/05/2012",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/f6cce59971969.pdf",
+  "tr_endikasyon_eriskin": [
+   "Jeneralize anksiyetenin semptomatik tedavisi"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaşından küçüklerde kullanılmamalıdır.",
+  "tr_doz_eriskin": {
+   "bas": "5 mg günde 2–3 kez (10–15 mg/gün)",
+   "maks": "45 mg/gün (optimum 15–30 mg/gün)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Doz azaltılmalı; CrCl ≤ 20 mL/dk veya kreatinin > 200 µmol/L'de kontrendike (4.3).",
+   "karaciger": "Doz azaltılmalı (4.2); 4.3'te karaciğer fonksiyon bozukluğu kontrendikasyonlar arasında."
+  },
+  "bulgular": [
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "60 mg/gün",
+    "kub": "45 mg/gün",
+    "tur": "fark",
+    "kanit": "Maksimum günlük doz 45 mg’ı geçmemelidir.",
+    "aciklama": "Uygulamanın 60 mg/gün tavanı FDA etiketine dayanıyor; TR KÜB'de maksimum 45 mg/gün.",
+    "oneri": "Maks alanına 'TR KÜB: 45 mg/gün' notu ekleyin."
+   },
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "Çocuk 2,5–5 mg ×2, ergen 5 mg ×2 … maks 60 mg/gün (endikasyon dışı)",
+    "kub": "18 yaş altında kullanılmamalı",
+    "tur": "fark",
+    "kanit": "Pediyatrik popülasyon: 18 yaşından küçüklerde kullanılmamalıdır.",
+    "aciklama": "Uygulama endikasyon dışı çocuk-ergen dozu veriyor; TR KÜB 18 yaş altında kullanımı açıkça dışlıyor. Ayrıca pediatrik maks (60 mg) TR erişkin maksimumunu (45 mg) aşıyor.",
+    "oneri": "Çocuk-ergen kartına 'TR KÜB: 18 yaş altında kullanılmamalı' uyarısı ekleyin; pediatrik maksı en fazla 45 mg/gün ile sınırlamayı düşünün."
+   },
+   {
+    "alan": "bobrek_yetmezligi",
+    "uygulama": "Ağır bozuklukta önerilmez.",
+    "kub": "Böbrek bozukluğunda doz azaltılmalı; CrCl ≤ 20 mL/dk'da kontrendike",
+    "tur": "bilgi",
+    "kanit": "Karaciğer ve böbrek fonksiyon bozuklukları (kreatinin klirensinin 20 ml/dk veya altında olması veya plazma kreatinin düzeyinin 200 µmol/l’ün üzerinde olması)",
+    "aciklama": "Ağır bozukluk açısından uyumlu, ancak uygulama hafif–orta bozuklukta doz azaltmayı belirtmiyor (KÜB 4.2: 'Renal veya hepatik bozuklukda doz azaltılmalıdır'). 4.3 karaciğer fonksiyon bozukluğunu da kontrendikasyon sayıyor; 4.2 ile çelişkili göründüğünden karaciğer için kesin bulgu yazılmadı.",
+    "oneri": "Böbrek: 'Hafif–orta bozuklukta dozu azaltın; CrCl ≤ 20 mL/dk'da kontrendike (TR)' şeklinde yazın."
+   }
+  ]
+ },
+ "diazepam": {
+  "urun": "NERVİUM 5 MG TABLET",
+  "firma": "SABA İLAÇ SANAYİ VE TİCARET A.Ş.",
+  "kub_tarih": "08/09/2014",
+  "kub_url": "https://titck.gov.tr/storage/kubKtAttachments/6fdbc7c785078.pdf",
+  "tr_endikasyon_eriskin": [
+   "Nörotik anksiyetenin kısa süreli semptomatik tedavisi",
+   "Akut alkol yoksunluğunda ajitasyon, tremor, deliryum tremens ve halüsinasyonlar",
+   "Lokal patolojiye bağlı refleks kas spazmı; üst motor nöron spastisitesi",
+   "Bazı epilepsi türleri",
+   "Tetanozda kas spazmı",
+   "Oral ve ameliyat öncesi premedikasyon"
+  ],
+  "tr_endikasyon_pediatrik": [
+   "Serebral spastisiteye bağlı gerginlik ve sinirlilik · çocuk (yaş sınırı belirtilmemiş; < 6 ay kontrendike)"
+  ],
+  "tr_pediatrik_not": "6 aydan küçüklerde kontrendike; 4.2'de çocuk dozu verilmemiş.",
+  "tr_doz_eriskin": {
+   "bas": "En düşük etkili doz; anksiyete 5–30 mg/gün, 2–3 doza bölünmüş",
+   "maks": "Anksiyete 30 mg/gün (aralığın üst sınırı); alkol yoksunluğu 5–20 mg/gün; sedatif-hipnotik 5–15 mg yatarken; yaşlıda erişkin dozunun yarısı"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Metabolitler böbrekten atılır; toksisite riski nedeniyle dikkatli kullanın.",
+   "karaciger": "Ciddi karaciğer yetmezliğinde kontrendike."
+  },
+  "bulgular": [
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "40 mg/gün",
+    "kub": "Anksiyolitik doz 5–30 mg/gün (2–3 doza bölünmüş)",
+    "tur": "fark",
+    "kanit": "NERVİUM, anksiyolitik olarak günde 2 veya 3 defa 5-30 mg dozlarında kullanılmalıdır.",
+    "aciklama": "Uygulamanın 40 mg/gün tavanı FDA şemasına (2–10 mg ×2–4) dayanıyor. KÜB ifadesi toplam günlük doz (5–30 mg/gün, 2–3'e bölünmüş) olarak okunmuştur; buna göre TR üst sınırı 30 mg/gün.",
+    "oneri": "Maks alanına 'TR KÜB: anksiyetede 30 mg/gün' notu ekleyin."
+   },
+   {
+    "alan": "onay_pediatrik_FDA",
+    "uygulama": "Anksiyete, kas spazmı, nöbette ek tedavi · ≥ 6 ay",
+    "kub": "Çocuklara özgü endikasyon: serebral spastisiteye bağlı gerginlik/sinirlilik; çocuk dozu verilmemiş; < 6 ay kontrendike",
+    "tur": "bilgi",
+    "kanit": "çocuklarda serebral spastisiteye bağlı gerginlik ve sinirlilik halinin kontrolünde",
+    "aciklama": "Bu muadil KÜB'de pediatrik doz yok. Erişkin endikasyonları yaşla sınırlanmadığından çocukta anksiyete kullanımının TR ruhsat durumu belirsiz; ≥ 6 ay sınırı uyumlu.",
+    "oneri": "İsteğe bağlı: 'TR KÜB'de (NERVİUM) çocuk dozu verilmemiştir' notu ekleyin."
+   }
+  ]
+ },
+ "alprazolam": {
+  "urun": "XANAX 0.5 MG TABLET",
+  "firma": "PFİZER İLAÇLARI LTD. ŞTİ.",
+  "kub_tarih": "23/06/2026",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kub_23_06_2026.pdf",
+  "tr_endikasyon_eriskin": [
+   "Anksiyetenin kısa süreli semptomatik tedavisi (yalnız şiddetli, engelleyici durumlarda)"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "18 yaş altında etkinlik ve güvenlilik kanıtlanmamış; çocuklarda kullanımı tavsiye edilmez.",
+  "tr_doz_eriskin": {
+   "bas": "0,25–0,5 mg günde 3 kez",
+   "maks": "Olağan 0,5–3 mg/gün (bölünmüş); açık tavan yok; en fazla 2–4 hafta"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "Dikkatli kullanın.",
+   "karaciger": "Şiddetli yetmezlikte kontrendike; diğerlerinde dikkatli."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Yaygın anksiyete; Panik bozukluk",
+    "kub": "Yalnız anksiyetenin kısa süreli semptomatik tedavisi; panik bozukluk yok",
+    "tur": "fark",
+    "kanit": "Yetişkinlerde anksiyetenin kısa süreli semptomatik tedavisi için endikedir.",
+    "aciklama": "Panik bozukluk FDA onayıdır; incelenen TR KÜB'de (XANAX 0,5 mg, 2026) yok. Uygulamadaki panik hedef dozu (4–6 mg/gün) da TR ruhsatı dışında kalıyor.",
+    "oneri": "Panik bozukluğu 'FDA; bu TR KÜB'de yok' olarak işaretleyin."
+   },
+   {
+    "alan": "doz_cocuk_ergen",
+    "uygulama": "Ergen 0,125–0,25 mg ×2–3 … maks 2 mg/gün (endikasyon dışı)",
+    "kub": "18 yaş altında kullanımı tavsiye edilmez",
+    "tur": "fark",
+    "kanit": "18 yaşından küçük çocuklarda XANAX’ın etkililiği ve güvenliliği kanıtlanmamıştır. Çocuklarda kullanımı tavsiye edilmez.",
+    "aciklama": "Uygulama 'endikasyon dışı' notuyla ergen dozu veriyor; TR KÜB 18 yaş altında kullanımı açıkça önermiyor (4.4: 'bu grup hastalarda alprazolam kullanımı önerilmez').",
+    "oneri": "Çocuk-ergen kartına 'TR KÜB: 18 yaş altında önerilmez' uyarısı ekleyin."
+   },
+   {
+    "alan": "karaciger_yetmezligi",
+    "uygulama": "Yarı ömür yaklaşık 2 kat uzar: 0,25 mg ×2–3 ile başlayın.",
+    "kub": "Şiddetli karaciğer yetmezliğinde kontrendike",
+    "tur": "fark",
+    "kanit": "Benzodiazepinler şiddetli karaciğer yetmezliği olan hastaların tedavisinde kullanılmaz.",
+    "aciklama": "Uygulama FDA'ya uygun düşük başlangıç dozu öneriyor; TR KÜB şiddetli karaciğer yetmezliğini kontrendikasyon olarak sayıyor (4.3).",
+    "oneri": "'Şiddetli karaciğer yetmezliğinde kontrendike (TR KÜB)' ekleyin."
+   },
+   {
+    "alan": "doz_eriskin.maks",
+    "uygulama": "Anksiyete: 4 mg/gün",
+    "kub": "Olağan doz sınırı 0,5–3 mg/gün; açık maksimum yok",
+    "tur": "bilgi",
+    "kanit": "Bölünmüş dozlar halinde günde … 0,5-3 mg",
+    "aciklama": "KÜB açık bir maksimum vermiyor, daha yüksek dozlarda dikkatli artış öneriyor; olağan üst sınır 3 mg/gün. Uygulamanın 4 mg'ı FDA ile uyumlu.",
+    "oneri": "İsteğe bağlı: 'TR olağan aralık 0,5–3 mg/gün' notu ekleyin."
+   }
+  ]
+ },
+ "pregabalin": {
+  "urun": "LYRICA 150 MG KAPSÜL",
+  "firma": "VİATRİS İLAÇLARI LİMİTED ŞİRKETİ",
+  "kub_tarih": "24/11/2025",
+  "kub_url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LYRCA150KBTEMZ_25_11_2025.pdf",
+  "tr_endikasyon_eriskin": [
+   "Yaygın anksiyete bozukluğu",
+   "Periferik nöropatik ağrı",
+   "Parsiyel nöbetlerde ek tedavi (epilepsi)",
+   "Fibromiyalji"
+  ],
+  "tr_endikasyon_pediatrik": [],
+  "tr_pediatrik_not": "12 yaş altında ve 12–17 yaşta güvenlilik ve etkinlik belirlenmemiş; pozoloji önerisi yok.",
+  "tr_doz_eriskin": {
+   "bas": "YAB: 150 mg/gün (2–3 doza bölünmüş)",
+   "maks": "600 mg/gün (haftalık 300 → 450 → 600 mg)"
+  },
+  "tr_doz_pediatrik": null,
+  "tr_organ": {
+   "bobrek": "CrCl ≥ 60: 150–600; 30–<60: 75–300; 15–<30: 25–50 (maks 150); < 15: 25–75 mg/gün; hemodiyaliz sonrası 25–100 mg ek doz",
+   "karaciger": "Doz ayarı gerekmez."
+  },
+  "bulgular": [
+   {
+    "alan": "onay_eriskin",
+    "uygulama": "Fibromiyalji (ABD)",
+    "kub": "Fibromiyalji TR'de de endikasyon",
+    "tur": "bilgi",
+    "kanit": "LYRICA fibromiyalji tedavisinde endikedir.",
+    "aciklama": "Uygulama fibromiyaljiyi yalnız ABD onayı olarak gösteriyor; TR KÜB'de de endikasyon olarak yer alıyor (psikiyatri dışı).",
+    "oneri": "Notu 'ABD, TR' olarak güncelleyin."
+   }
+  ]
+ }
+}

@@ -497,6 +497,15 @@
 [data-tasarim="bauhaus"] .karsilama-tamam.cip.aktif:disabled { background: var(--yuzey-2); color: var(--soluk); box-shadow: none; opacity: 1; }
 [data-tasarim="bauhaus"] .ped-ozet { margin-top: -6px; }
 
+/* ── Türkiye ruhsatı kutusu ── */
+[data-tasarim="bauhaus"] .tr-kub { border-top: 2.5px solid var(--kontur); padding-top: 14px; }
+[data-tasarim="bauhaus"] .tr-kaynak { border-radius: 0; border: 2px solid var(--kontur); background: var(--bh-kirmizi); font-family: var(--bh-font); }
+[data-tasarim="bauhaus"] .etiket.tr { background: color-mix(in srgb, var(--bh-kirmizi) 14%, var(--yuzey)); border-color: var(--kontur); }
+[data-tasarim="bauhaus"] .tr-detay > summary { font-family: var(--bh-font); font-weight: 800; text-transform: uppercase; letter-spacing: .04em; font-size: 12.5px; color: var(--murekkep);
+  border: 2px solid var(--kontur); padding: 4px 10px; background: var(--yuzey); box-shadow: 3px 3px 0 var(--golge-renk); list-style-position: inside; }
+[data-tasarim="bauhaus"] .tr-detay > summary:hover { background: var(--bh-sari); color: #111; text-decoration: none; }
+[data-tasarim="bauhaus"] .tr-detay[open] > summary { background: var(--murekkep); color: var(--yuzey); box-shadow: none; transform: translate(3px, 3px); }
+
 @media print {
   [data-tasarim="bauhaus"] .kart { box-shadow: none; }
   [data-tasarim="bauhaus"] .ust::after { display: none; }

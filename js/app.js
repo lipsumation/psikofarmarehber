@@ -35,6 +35,11 @@
   function eri() { return kitle === 'eri'; }
   function kt(x) { return window.kitleSec(x, kitle); }
 
+  /* arama için sadeleştirme: Türkçe karakterler olmadan yazılan sorgular da eşleşsin (amisulpirid → Amisülpirid) */
+  var SADE = { 'ç': 'c', 'ğ': 'g', 'ı': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u', 'â': 'a', 'î': 'i', 'û': 'u' };
+  function sade(s) { return String(s || '').toLocaleLowerCase('tr').replace(/[çğıöşüâîû]/g, function (c) { return SADE[c]; }).replace(/\u0307/g, ''); }
+  function trKub(i) { return (window.TR_KUB || {})[i.id] || null; }
+
   function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
   function renk(i) { return window.SINIFLAR[i.sinif].renk; }
   function liste(d) { return '<ul class="notlar">' + window.kitleDizi(d, kitle).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'; }
@@ -98,6 +103,34 @@
     }
     return '<span class="etiket onaysiz">' + esc(eri() ? (i.onayEriNot || 'Psikiyatrik endikasyonda onay yok') : (i.onayNot || 'Pediatrik onay yok · endikasyon dışı')) + '</span>';
   }
+  /* Türkiye ruhsatı (KÜB): FDA bilgisine ek. Seçili hasta grubu öne alınır; doz, organ yetmezliği ve FDA farkları açılır bölümdedir. */
+  function trKutusu(i) {
+    var t = trKub(i);
+    if (!t) return '';
+    var bas = '<div class="tr-kub"><div class="alt-b">Türkiye ruhsatı <span class="tr-kaynak">KÜB</span></div>';
+    if (t.ruhsatsiz) return bas + '<div class="onaylar"><span class="etiket onaysiz">Türkiye\'de ruhsatlı ürün yok · TİTCK KÜB kaydı bulunmuyor</span></div></div>';
+    var rozet = function (d) { return d.map(function (x) { return '<span class="etiket tr">' + esc(x) + '</span>'; }).join(''); };
+    var h = bas + '<div class="onaylar">';
+    if (eri()) h += t.eriskin.length ? rozet(t.eriskin) : '<span class="etiket onaysiz">Erişkinde ruhsatlı endikasyon yok</span>';
+    else h += t.pediatrik.length ? rozet(t.pediatrik) : '<span class="etiket onaysiz">' + esc(t.pedNot || 'Çocuk-ergende ruhsatlı endikasyon yok') + '</span>';
+    h += '</div>';
+    if (eri()) h += '<p class="kucuk tr-satir"><b>Çocuk-ergen:</b> ' + esc(t.pediatrik.length ? t.pediatrik.join(' · ') + (t.pedNot ? ' — ' + t.pedNot : '') : (t.pedNot || 'ruhsatlı endikasyon yok')) + '</p>';
+    else h += (t.pediatrik.length && t.pedNot ? '<p class="kucuk tr-satir">' + esc(t.pedNot) + '</p>' : '') +
+      '<p class="kucuk tr-satir"><b>Erişkin:</b> ' + esc(t.eriskin.join(' · ') || 'ruhsatlı endikasyon yok') + '</p>';
+
+    var fark = (t.fark[kitle] || []).concat(t.fark[kitle === 'eri' ? 'ped' : 'eri'] || []);
+    var kutu = function (ad, deger) { return deger ? '<div class="kutu"><div class="ad">' + ad + '</div><div class="deger">' + esc(deger) + '</div></div>' : ''; };
+    var doz = function (d) { return d ? [d.bas && 'Başlangıç: ' + d.bas, d.maks && 'Maksimum: ' + d.maks].filter(Boolean).join(' · ') : ''; };
+    var dozlar = eri() ? [['KÜB dozu · erişkin', doz(t.doz.eri)], ['KÜB dozu · çocuk-ergen', doz(t.doz.ped)]] : [['KÜB dozu · çocuk-ergen', doz(t.doz.ped)], ['KÜB dozu · erişkin', doz(t.doz.eri)]];
+    h += '<details class="tr-detay"><summary>KÜB dozu, organ yetmezliği' + (fark.length ? ' ve ' + fark.length + ' önemli fark' : '') + '</summary>' +
+      (fark.length ? '<div class="alt-b">Türkiye KÜB\'ünde farklı olanlar</div><ul class="notlar tr-fark">' + fark.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '') +
+      '<div class="kutular metin-kutular">' + dozlar.map(function (d) { return kutu(d[0], d[1]); }).join('') +
+      kutu('Böbrek yetmezliği (KÜB)', t.organ.bobrek) + kutu('Karaciğer yetmezliği (KÜB)', t.organ.karaciger) + '</div>' +
+      '<p class="kucuk tr-satir">Kaynak: <a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.urun) + ' KÜB\'ü</a> · ' + esc(t.firma) + ' · KÜB onay tarihi ' + esc(t.tarih) +
+      '. Aynı etkin maddenin diğer ürünlerinde endikasyon ve formlar farklı olabilir; reçeteden önce güncel KÜB\'e bakın.</p></details>';
+    return h + '</div>';
+  }
+
   function pedOzet(i) {
     return i.onay && i.onay.length ? i.onay.map(function (o) { return esc(o[0]) + ' ' + esc(o[1]); }).join(' · ') : esc(i.onayNot || 'Pediatrik onay yok');
   }
@@ -326,10 +359,12 @@
   function eslesir(i) {
     if (durum.sinif !== 'hepsi' && i.sinif !== durum.sinif) return false;
     if (durum.onayli && !eri() && !(i.onay && i.onay.length)) return false;
-    var q = durum.arama.trim().toLocaleLowerCase('tr');
+    var q = sade(durum.arama.trim());
     if (!q) return true;
     var enzimler = i.metab ? ['sub', 'inh', 'ind'].map(function (r) { return Object.keys(i.metab[r]).map(function (e) { return window.CYP_AD(e) + ' ' + e; }).join(' '); }).join(' ') : '';
-    var metin = [i.ad, i.altSinif, window.SINIFLAR[i.sinif].ad, (i.onay || []).concat(i.onayEri || []).map(function (o) { return o[0]; }).join(' '), kt(i.mek), enzimler].join(' ').toLocaleLowerCase('tr');
+    var tr = trKub(i);
+    var metin = sade([i.ad, i.altSinif, window.SINIFLAR[i.sinif].ad, (i.onay || []).concat(i.onayEri || []).map(function (o) { return o[0]; }).join(' '),
+      tr && tr.eriskin ? tr.eriskin.concat(tr.pediatrik || []).join(' ') : '', tr && tr.urun ? tr.urun : '', kt(i.mek), enzimler].join(' '));
     return q.split(/\s+/).every(function (p) { return metin.indexOf(p) >= 0; });
   }
   function listeyiCiz() {
@@ -344,7 +379,7 @@
           '<h3>' + esc(i.ad) + '</h3><div class="alt-sinif">' + esc(i.altSinif) + '</div>' +
           '<div class="satir"><span>' + (eri() ? 'Erişkin başlangıç' : 'Çocuk/ergen başlangıç') + '</span><span>' + esc(i[kitle].bas) + '</span></div>' +
           '<div class="satir"><span>Yarı ömür</span><span>' + esc(i.t12.split(' (')[0]) + '</span></div>' +
-          onayRozet(i, true) + '</a>';
+          onayRozet(i, true) + (trKub(i) && trKub(i).ruhsatsiz ? '<span class="etiket onaysiz tr-yok">TR\'de ruhsatsız</span>' : '') + '</a>';
       });
       h += '</div>';
     });
@@ -396,6 +431,7 @@
       (eri() ? '<div class="alt-b" style="margin-top:0">Erişkinde onaylı endikasyonlar (FDA; aksi belirtilmedikçe)</div><div class="onaylar">' + onayRozet(i, false) + '</div>' +
           '<p class="kucuk ped-ozet"><b>Çocuk-ergen:</b> ' + pedOzet(i) + '</p>'
         : '<div class="alt-b" style="margin-top:0">Çocuk ve ergende onay durumu (FDA)</div><div class="onaylar">' + onayRozet(i, false) + '</div>') +
+      trKutusu(i) +
       '<div class="kutular">' +
       '<div class="kutu"><div class="ad">Yarı ömür</div><div class="deger">' + esc(i.t12) + '</div>' + G.cetvel(i.t12s) + '</div>' +
       '<div class="kutu"><div class="ad">Etki başlangıcı</div><div class="deger">' + esc(i.etki) + '</div></div>' +

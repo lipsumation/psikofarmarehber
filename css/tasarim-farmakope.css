@@ -256,3 +256,9 @@
 [data-tasarim="farmakope"] .karsilama-not { font-style: italic; }
 [data-tasarim="farmakope"] .karsilama-alt { border-top: 4px double var(--murekkep); }
 [data-tasarim="farmakope"] .karsilama-alt .kucuk { font-style: italic; }
+
+/* ── Türkiye ruhsatı kutusu ── */
+[data-tasarim="farmakope"] .tr-kub { border-top: 1px dotted var(--eksen); }
+[data-tasarim="farmakope"] .tr-kaynak { border-radius: 2px; background: var(--vurgu); color: var(--zemin); font-variant-caps: all-small-caps; letter-spacing: .08em; font-size: 12px; }
+[data-tasarim="farmakope"] .etiket.tr { font-style: normal; background: var(--vurgu-zemin); border-color: color-mix(in srgb, var(--vurgu) 35%, var(--yuzey)); }
+[data-tasarim="farmakope"] .tr-detay > summary { font-style: italic; font-weight: 500; font-size: 14.5px; }
