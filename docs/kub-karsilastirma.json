@@ -8,10 +8,14 @@
    "Depresyon",
    "OKB",
    "Bulimiya nervoza",
-   "PMDB"
+   "PMDB",
+   "Bipolar I depresyon · olanzapinle sabit doz kombinasyonu",
+   "Tedaviye dirençli depresyon · olanzapinle sabit doz kombinasyonu"
   ],
-  "tr_endikasyon_pediatrik": [],
-  "tr_pediatrik_not": "18 yaş altında kullanımı önerilmez.",
+  "tr_endikasyon_pediatrik": [
+   "Bipolar I depresyon · 10–17 yaş (olanzapinle kombinasyon, yalnız REXAPİN PRO)"
+  ],
+  "tr_pediatrik_not": "Tek başına fluoksetin 18 yaş altında önerilmez (PROZAC KÜB).",
   "tr_doz_eriskin": {
    "bas": "20 mg/gün (bulimiya: 60 mg/gün; PMDB: sürekli ya da luteal faz 20 mg)",
    "maks": "60 mg/gün (depresyon, OKB); yaşlıda genelde ≤ 40 mg, en fazla 60 mg; 80 mg üzeri sistematik değerlendirilmemiş"
@@ -25,11 +29,11 @@
    {
     "alan": "onay_eriskin",
     "uygulama": "Panik bozukluk; Bipolar depresyon (olanzapin ile); Dirençli depresyon (olanzapin ile)",
-    "kub": "Yalnızca depresyon, OKB, bulimiya nervoza ve PMDB; panik bozukluk ve olanzapin kombinasyonları yok",
+    "kub": "Tek başına: depresyon, OKB, bulimiya nervoza, PMDB (panik yok). Olanzapin + fluoksetin kombinasyonu: bipolar I depresyon, tedaviye dirençli depresyon.",
     "tur": "fark",
     "kanit": "PROZAC depresyon, obsesif-kompulsif bozukluk, bulimia nervoza ve pre-menstrüel disforik bozukluk tedavisinde endikedir.",
-    "aciklama": "Panik bozukluk ve olanzapin–fluoksetin kombinasyonu endikasyonları FDA onayıdır; incelenen TR KÜB'ünde yer almaz. doz_eriskin.not'taki 'Panik bozuklukta 10 mg ile başlayın' önerisi de TR açısından endikasyon dışıdır.",
-    "oneri": "Bu üç endikasyonu 'TR'de ruhsatlı değil (yalnız FDA)' olarak işaretle."
+    "aciklama": "Panik bozukluk FDA onayıdır; Türkiye'de fluoksetinin panik bozukluk endikasyonu yok. Olanzapinle kombinasyon endikasyonları (bipolar I depresyon, dirençli depresyon) Türkiye'de ayrı sabit doz kombinasyon ürünleriyle ruhsatlı (TARGET, REXAPİN PRO, RELİXAN, OSHINE). Düzeltme: ilk karşılaştırmada yalnız tek bileşenli ürünün KÜB'üne bakıldığı için kombinasyon ürünleri atlanmıştı.",
+    "oneri": "Panik bozukluğu \"Türkiye'de ruhsatlı değil (yalnız FDA)\" olarak işaretle; olanzapinle kombinasyon endikasyonlarını Türkiye'de de ruhsatlı göster."
    },
    {
     "alan": "doz_eriskin.maks",
@@ -46,8 +50,28 @@
     "kub": "18 yaş altında kullanımı önerilmez; pediatrik endikasyon yok",
     "tur": "fark",
     "kanit": "Pediyatrik popülasyon: Çocuklarda ve ergenlerde (18 yaşın altındaki) PROZAC kullanımı önerilmez.",
-    "aciklama": "İncelenen TR KÜB'ünde 4.1'de pediatrik endikasyon yok (5.1'de 8 yaş ve üzeri depresyon çalışmalarından söz ediliyor ama onay olarak değil). Uygulamadaki FDA pediatrik onayları ve çocuk-ergen doz şeması TR ruhsatında karşılıksız.",
+    "aciklama": "İncelenen TR KÜB'ünde 4.1'de pediatrik endikasyon yok (5.1'de 8 yaş ve üzeri depresyon çalışmalarından söz ediliyor ama onay olarak değil). Uygulamadaki FDA pediatrik onayları ve çocuk-ergen doz şeması TR ruhsatında karşılıksız. Olanzapinle sabit doz kombinasyonu REXAPİN PRO'nun KÜB'ü ise 10–17 yaşta bipolar I depresyon için doz veriyor (başlangıç 3/25 mg).",
     "oneri": "Pediatrik bölüme 'TR KÜB: 18 yaş altında önerilmez' notu ekle."
+   }
+  ],
+  "ek_kaynak": [
+   {
+    "urun": "REXAPİN PRO 6 MG/ 25 MG KAPSÜL",
+    "firma": "ABDİ İBRAHİM İLAÇ SAN. VE TİC. A.Ş",
+    "tarih": "28/10/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub625_19_11_2025.pdf"
+   },
+   {
+    "urun": "RELİXAN 12 MG/50 MG SERT KAPSÜL",
+    "firma": "ALİ RAİF İLAÇ SANAYİ A.Ş.",
+    "tarih": "23/08/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kub_1f332029-08a4-44bc-a207-48a8dddcd177.pdf"
+   },
+   {
+    "urun": "TARGET 3 MG / 25MG KAPSÜL",
+    "firma": "ABDİ İBRAHİM İLAÇ SANAYİ VE TİCARET A.Ş",
+    "tarih": "24/03/2011",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf"
    }
   ]
  },
@@ -1182,13 +1206,16 @@
   "tr_endikasyon_eriskin": [
    "Şizofreni (akut ve idame)",
    "Bipolar orta-ağır manik dönem",
-   "Bipolar bozuklukta nüks önleme"
+   "Bipolar bozuklukta nüks önleme",
+   "Bipolar I depresyon · fluoksetinle sabit doz kombinasyonu",
+   "Tedaviye dirençli depresyon · fluoksetinle sabit doz kombinasyonu"
   ],
   "tr_endikasyon_pediatrik": [
    "Şizofreni · 13–17 yaş",
-   "Bipolar manik/mikst dönem · 13–17 yaş"
+   "Bipolar manik/mikst dönem · 13–17 yaş",
+   "Bipolar I depresyon · 10–17 yaş (fluoksetinle kombinasyon, yalnız REXAPİN PRO)"
   ],
-  "tr_pediatrik_not": "13 yaş altında kullanılmaz. 13–17 yaşta veri kısıtlı; kilo artışı, lipid ve prolaktin riskleri nedeniyle çoğu vakada önce diğer ilaçlar düşünülmeli.",
+  "tr_pediatrik_not": "Tek başına olanzapin 13 yaş altında kullanılmaz. 13–17 yaşta veri kısıtlı; kilo artışı, lipid ve prolaktin riskleri nedeniyle çoğu vakada önce diğer ilaçlar düşünülmeli.",
   "tr_doz_eriskin": {
    "bas": "Şizofreni 10 mg/gün · Mani 15 mg (monoterapi) / 10 mg (kombinasyon) · Nüks önleme 10 mg",
    "maks": "20 mg/gün (aralık 5–20 mg)"
@@ -1205,20 +1232,20 @@
    {
     "alan": "onay_eriskin",
     "uygulama": "Bipolar depresyon (fluoksetin ile); Dirençli depresyon (fluoksetin ile)",
-    "kub": "TR KÜB'ünde depresyon endikasyonu yok; yalnızca şizofreni, bipolar mani ve nüks önleme",
-    "tur": "fark",
-    "kanit": "Bipolar bozuklukta olanzapin, orta derece ile ağır manik dönemlerin tedavisinde ve bipolar bozuklukta reküransların önlenmesinde endikedir.",
-    "aciklama": "Fluoksetinle kombinasyon endikasyonları FDA'ya özgü; TR'de olanzapin (Zyprexa) KÜB'ünde bulunmuyor.",
-    "oneri": "İki depresyon satırına 'TR'de ruhsatlı değil (FDA, fluoksetin kombinasyonu)' notu ekleyin."
+    "kub": "Olanzapin + fluoksetin kombinasyonu: bipolar I depresyon, tedaviye dirençli depresyon",
+    "tur": "bilgi",
+    "kanit": "REXAPİN PRO Bipolar I Bozukluk ile ilişkili depresif epizotların akut tedavisi için endikedir.",
+    "aciklama": "Fluoksetinle kombinasyon endikasyonları ZYPREXA KÜB'ünde yok, ancak Türkiye'de ayrı sabit doz kombinasyon ürünleriyle ruhsatlı (TARGET, REXAPİN PRO, RELİXAN, OSHINE); FDA ile uyumlu. Düzeltme: ilk karşılaştırmada yalnız tek bileşenli ürünün KÜB'üne bakıldığı için kombinasyon ürünleri atlanmıştı.",
+    "oneri": "Değişiklik gerekmez; Türkiye kutusunda kombinasyon endikasyonları gösterilir."
    },
    {
     "alan": "onay_pediatrik_FDA",
     "uygulama": "Bipolar depresyon (fluoksetin ile) · ≥ 10 yaş",
-    "kub": "13 yaş altında kullanılmaz; pediatrik onay yalnızca 13–17 yaş şizofreni ve bipolar mani/mikst",
-    "tur": "fark",
-    "kanit": "Güvenliliğe ve etkililiğe ilişkin veri olmadığı için 13 yaş altındaki çocuklarda kullanılmaz.",
-    "aciklama": "FDA'da 10–17 yaş bipolar depresyonda fluoksetinle onaylı; TR'de bu endikasyon yok ve 13 yaş altı kullanılmaz.",
-    "oneri": "Satıra 'TR'de onay yok; 13 yaş altında kullanılmaz' notu ekleyin."
+    "kub": "REXAPİN PRO: 10–17 yaş bipolar I depresyon (3/25 mg ile başlanır)",
+    "tur": "bilgi",
+    "kanit": "Çocuklar ve Ergenler (10 ila 17 yaş arası) — REXAPİN PRO, öğünlerden bağımsız olarak günde bir kez akşamları genellikle 3 mg/25 mg dozdan başlayarak",
+    "aciklama": "FDA'da fluoksetinle 10–17 yaş bipolar depresyon onayı var; Türkiye'de de REXAPİN PRO KÜB'ü (2025) 10–17 yaş bipolar I depresyon için doz veriyor (başlangıç 3/25 mg). TARGET ve RELİXAN KÜB'lerinde 18 yaş altı güvenlilik belirlenmemiş. Tek başına olanzapin 13 yaş altında kullanılmaz. Düzeltme: ilk karşılaştırmada yalnız tek bileşenli ürünün KÜB'üne bakıldığı için kombinasyon ürünleri atlanmıştı.",
+    "oneri": "Değişiklik gerekmez."
    },
    {
     "alan": "bobrek_yetmezligi",
@@ -1237,6 +1264,26 @@
     "kanit": "Manik dönem: Başlangıç dozu, monoterapide genellikle günde tek doz uygulanan 15 mg veya kombinasyon tedavisinde günde 10 mg",
     "aciklama": "Uygulamadaki aralık FDA şizofreni başlangıcına uyar; mani başlangıcı (TR 15 mg, FDA 10–15 mg) ayrıca belirtilmemiş.",
     "oneri": "Başlangıca 'mani: 10–15 mg' ekleyin."
+   }
+  ],
+  "ek_kaynak": [
+   {
+    "urun": "REXAPİN PRO 6 MG/ 25 MG KAPSÜL",
+    "firma": "ABDİ İBRAHİM İLAÇ SAN. VE TİC. A.Ş",
+    "tarih": "28/10/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub625_19_11_2025.pdf"
+   },
+   {
+    "urun": "RELİXAN 12 MG/50 MG SERT KAPSÜL",
+    "firma": "ALİ RAİF İLAÇ SANAYİ A.Ş.",
+    "tarih": "23/08/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kub_1f332029-08a4-44bc-a207-48a8dddcd177.pdf"
+   },
+   {
+    "urun": "TARGET 3 MG / 25MG KAPSÜL",
+    "firma": "ABDİ İBRAHİM İLAÇ SANAYİ VE TİCARET A.Ş",
+    "tarih": "24/03/2011",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf"
    }
   ]
  },

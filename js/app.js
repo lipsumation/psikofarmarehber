@@ -127,7 +127,10 @@
       '<div class="kutular metin-kutular">' + dozlar.map(function (d) { return kutu(d[0], d[1]); }).join('') +
       kutu('Böbrek yetmezliği (KÜB)', t.organ.bobrek) + kutu('Karaciğer yetmezliği (KÜB)', t.organ.karaciger) + '</div>' +
       '<p class="kucuk tr-satir">Kaynak: <a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.urun) + ' KÜB\'ü</a> · ' + esc(t.firma) + ' · KÜB onay tarihi ' + esc(t.tarih) +
-      '. Aynı etkin maddenin diğer ürünlerinde endikasyon ve formlar farklı olabilir; reçeteden önce güncel KÜB\'e bakın.</p></details>';
+      '. Aynı etkin maddenin diğer ürünlerinde endikasyon ve formlar farklı olabilir; reçeteden önce güncel KÜB\'e bakın.</p>' +
+      (t.ek && t.ek.length ? '<p class="kucuk tr-satir">Kombinasyon ürünlerinin KÜB\'leri: ' + t.ek.map(function (e) {
+        return '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.urun) + '</a> (' + esc(e.tarih) + ')';
+      }).join(' · ') + '</p>' : '') + '</details>';
     return h + '</div>';
   }
 

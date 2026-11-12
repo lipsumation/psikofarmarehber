@@ -11,10 +11,14 @@ window.TR_KUB = {
    "Depresyon",
    "OKB",
    "Bulimiya nervoza",
-   "PMDB"
+   "PMDB",
+   "Bipolar I depresyon · olanzapinle sabit doz kombinasyonu",
+   "Tedaviye dirençli depresyon · olanzapinle sabit doz kombinasyonu"
   ],
-  "pediatrik": [],
-  "pedNot": "18 yaş altında kullanımı önerilmez.",
+  "pediatrik": [
+   "Bipolar I depresyon · 10–17 yaş (olanzapinle kombinasyon, yalnız REXAPİN PRO)"
+  ],
+  "pedNot": "Tek başına fluoksetin 18 yaş altında önerilmez (PROZAC KÜB).",
   "doz": {
    "eri": {
     "bas": "20 mg/gün (bulimiya: 60 mg/gün; PMDB: sürekli ya da luteal faz 20 mg)",
@@ -28,13 +32,30 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [
-    "Panik bozukluk ve olanzapinle kombinasyon endikasyonları Türkiye'de yok.",
+    "Panik bozukluk endikasyonu Türkiye'de yok; olanzapinle kombinasyon endikasyonları ayrı sabit doz ürünlerle ruhsatlı.",
     "Maksimum doz 60 mg/gün, yaşlıda genelde 40 mg/gün aşılmamalı (FDA'da 80 mg)."
    ],
    "ped": [
-    "18 yaş altında kullanımı önerilmez (FDA: depresyon ≥ 8 yaş, OKB ≥ 7 yaş)."
+    "Tek başına 18 yaş altında önerilmez (FDA: depresyon ≥ 8, OKB ≥ 7 yaş); olanzapinle kombinasyon 10–17 yaşta ruhsatlı."
    ]
-  }
+  },
+  "ek": [
+   {
+    "urun": "REXAPİN PRO 6 MG/ 25 MG KAPSÜL",
+    "tarih": "28/10/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub625_19_11_2025.pdf"
+   },
+   {
+    "urun": "RELİXAN 12 MG/50 MG SERT KAPSÜL",
+    "tarih": "23/08/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kub_1f332029-08a4-44bc-a207-48a8dddcd177.pdf"
+   },
+   {
+    "urun": "TARGET 3 MG / 25MG KAPSÜL",
+    "tarih": "24/03/2011",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf"
+   }
+  ]
  },
  "sertralin": {
   "urun": "LUSTRAL 50 MG ÇENTIKLI FILM KAPLI TABLET",
@@ -70,7 +91,8 @@ window.TR_KUB = {
   "fark": {
    "eri": [],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "essitalopram": {
   "urun": "CIPRALEX 10 MG FILM KAPLI TABLET",
@@ -104,7 +126,8 @@ window.TR_KUB = {
    "ped": [
     "18 yaş altında kullanılmamalıdır (FDA: depresyon ≥ 12 yaş, yaygın anksiyete ≥ 7 yaş)."
    ]
-  }
+  },
+  "ek": []
  },
  "sitalopram": {
   "urun": "CIPRAM 20 MG FILM KAPLI TABLET",
@@ -134,7 +157,8 @@ window.TR_KUB = {
     "Türkiye'de ek endikasyon: panik bozukluk, OKB."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "fluvoksamin": {
   "urun": "FAVERIN 100 MG FILM KAPLI TABLET",
@@ -170,7 +194,8 @@ window.TR_KUB = {
    "ped": [
     "OKB'de 8 yaş üstü çocuk ve ergende veri 200 mg/gün'e kadar sınırlı; çocuklarda maksimum 200 mg/gün (FDA'da ergende 300 mg)."
    ]
-  }
+  },
+  "ek": []
  },
  "paroksetin": {
   "urun": "SEROXAT 20 MG FILM TABLET",
@@ -204,7 +229,8 @@ window.TR_KUB = {
     "Karaciğer bozukluğunda derece ayrımı olmadan 20 mg/gün, artış doz aralığının alt sınırına kadar (FDA: ağırda 10 mg ile başla)."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "venlafaksin": {
   "urun": "EFEXOR XR 37,5 MG MIKROPELLET KAPSÜL",
@@ -238,7 +264,8 @@ window.TR_KUB = {
     "Şiddetli karaciğer yetmezliğinde doz %50'den fazla azaltılır ve dikkatli kullanılır."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "duloksetin": {
   "urun": "CYMBALTA 30 MG GASTRO-REZISTAN SERT KAPSÜL",
@@ -272,7 +299,8 @@ window.TR_KUB = {
    "ped": [
     "18 yaş altında kullanılmamalıdır (FDA: yaygın anksiyete ≥ 7 yaş, fibromiyalji ≥ 13 yaş)."
    ]
-  }
+  },
+  "ek": []
  },
  "mirtazapin": {
   "urun": "REMERON 30 MG FILM KAPLI TABLET",
@@ -298,7 +326,8 @@ window.TR_KUB = {
   "fark": {
    "eri": [],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "bupropion": {
   "urun": "BUPRAPAN 450 MG UZATıLMIŞ SALıMLı TABLET",
@@ -331,7 +360,8 @@ window.TR_KUB = {
    "ped": [
     "18 yaş altında kullanılmamalıdır."
    ]
-  }
+  },
+  "ek": []
  },
  "trazodon": {
   "urun": "DESYREL XL 150 MG UZATILMIŞ SALIMLI FILM KAPLI TABLET",
@@ -361,7 +391,8 @@ window.TR_KUB = {
    "ped": [
     "18 yaş ve altında kontrendikedir (FDA'da pediatrik kontrendikasyon yok)."
    ]
-  }
+  },
+  "ek": []
  },
  "vortioksetin": {
   "urun": "FONKSERA 15 MG FILM KAPLı TABLET",
@@ -389,7 +420,8 @@ window.TR_KUB = {
    "ped": [
     "Majör depresif bozuklukta 18 yaş altında kullanılmamalıdır."
    ]
-  }
+  },
+  "ek": []
  },
  "klomipramin": {
   "urun": "ANAFRANİL-SR 75 MG BÖLÜNEBİLİR TABLET",
@@ -428,7 +460,8 @@ window.TR_KUB = {
     "Şiddetli karaciğer hastalığında kontrendikedir."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "imipramin": {
   "urun": "TOFRANIL 25MG DRAJE",
@@ -456,7 +489,8 @@ window.TR_KUB = {
    "ped": [
     "Enürezis endikasyonu yok; 18 yaş altında kontrendikedir (FDA: enürezis ≥ 6 yaş)."
    ]
-  }
+  },
+  "ek": []
  },
  "amitriptilin": {
   "urun": "LAROXYL 10 MG FILM KAPLı TABLET",
@@ -492,7 +526,8 @@ window.TR_KUB = {
     "Ergenlerde önerilen doz 25–50 mg/gün, bölünmüş veya akşam tek doz.",
     "12 yaş altında kullanımı önerilmez."
    ]
-  }
+  },
+  "ek": []
  },
  "desvenlafaksin": {
   "ruhsatsiz": true
@@ -525,7 +560,8 @@ window.TR_KUB = {
    "ped": [
     "18 yaş altında kullanılmaz."
    ]
-  }
+  },
+  "ek": []
  },
  "tianeptin": {
   "urun": "STABLON 12,5 MG KAPLI TABLET",
@@ -555,7 +591,8 @@ window.TR_KUB = {
    "ped": [
     "15 yaş altında kontrendikedir; 18 yaş altında etkililik ve güvenlilik verisi yoktur."
    ]
-  }
+  },
+  "ek": []
  },
  "metilfenidat": {
   "urun": "CONCERTA 54 MG KONTROLLÜ SALIM TABLETİ",
@@ -591,7 +628,8 @@ window.TR_KUB = {
    "ped": [
     "OROS formda 13–17 yaşta da maksimum doz 54 mg/gün (FDA'da 72 mg)."
    ]
-  }
+  },
+  "ek": []
  },
  "lisdeksamfetamin": {
   "ruhsatsiz": true
@@ -630,7 +668,8 @@ window.TR_KUB = {
     "Başlangıç dozu artırmadan önce en az 7 gün sürdürülmelidir (FDA'da en az 3 gün).",
     "70 kg altında idame yaklaşık 1,2 mg/kg/gün; daha yüksek doz ek yarar göstermemiştir (FDA'da maks 1,4 mg/kg/gün)."
    ]
-  }
+  },
+  "ek": []
  },
  "guanfasin": {
   "urun": "ARİSLOW ER 1 MG UZATILMIŞ SALIMLI TABLET",
@@ -663,7 +702,8 @@ window.TR_KUB = {
    "ped": [
     "DEHB'de 6–17 yaşta yalnız uyarıcılar uygun değilse, tolere edilemiyorsa veya etkisizse endike (FDA'da birinci basamak)."
    ]
-  }
+  },
+  "ek": []
  },
  "klonidin": {
   "ruhsatsiz": true
@@ -705,7 +745,8 @@ window.TR_KUB = {
    "ped": [
     "18 yaş altında kullanılmamalıdır."
    ]
-  }
+  },
+  "ek": []
  },
  "risperidon": {
   "urun": "RISPERDAL QUICKLET 1 MG AĞIZDA ÇÖZÜNÜR TABLET",
@@ -745,7 +786,8 @@ window.TR_KUB = {
     "Davranım bozukluğunda < 50 kg 0,25 mg, ≥ 50 kg 0,5 mg ile başlanır; optimum 0,5 / 1 mg/gün, artış en erken gün aşırı.",
     "Otizmde çalışılan en yüksek doz < 20 kg 1,5 mg, ≥ 20 kg 2,5 mg, > 45 kg 3,5 mg/gün (FDA ergen şizofreni/mani: 6 mg)."
    ]
-  }
+  },
+  "ek": []
  },
  "aripiprazol": {
   "urun": "MADEPZOL 20 MG TABLET",
@@ -784,7 +826,8 @@ window.TR_KUB = {
    "ped": [
     "Bipolar I mani yalnız erişkinde endike; pediatrik bipolar endikasyonu yok (FDA: ≥ 10 yaş)."
    ]
-  }
+  },
+  "ek": []
  },
  "olanzapin": {
   "urun": "ZYPREXA 5 MG FILM KAPLI TABLET",
@@ -794,13 +837,16 @@ window.TR_KUB = {
   "eriskin": [
    "Şizofreni (akut ve idame)",
    "Bipolar orta-ağır manik dönem",
-   "Bipolar bozuklukta nüks önleme"
+   "Bipolar bozuklukta nüks önleme",
+   "Bipolar I depresyon · fluoksetinle sabit doz kombinasyonu",
+   "Tedaviye dirençli depresyon · fluoksetinle sabit doz kombinasyonu"
   ],
   "pediatrik": [
    "Şizofreni · 13–17 yaş",
-   "Bipolar manik/mikst dönem · 13–17 yaş"
+   "Bipolar manik/mikst dönem · 13–17 yaş",
+   "Bipolar I depresyon · 10–17 yaş (fluoksetinle kombinasyon, yalnız REXAPİN PRO)"
   ],
-  "pedNot": "13 yaş altında kullanılmaz. 13–17 yaşta veri kısıtlı; kilo artışı, lipid ve prolaktin riskleri nedeniyle çoğu vakada önce diğer ilaçlar düşünülmeli.",
+  "pedNot": "Tek başına olanzapin 13 yaş altında kullanılmaz. 13–17 yaşta veri kısıtlı; kilo artışı, lipid ve prolaktin riskleri nedeniyle çoğu vakada önce diğer ilaçlar düşünülmeli.",
   "doz": {
    "eri": {
     "bas": "Şizofreni 10 mg/gün · Mani 15 mg (monoterapi) / 10 mg (kombinasyon) · Nüks önleme 10 mg",
@@ -817,13 +863,29 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [
-    "Fluoksetinle kombinasyon endikasyonları (bipolar depresyon, dirençli depresyon) Türkiye'de yok.",
     "Böbrek yetmezliğinde daha düşük başlangıç dozu (5 mg) düşünülmelidir."
    ],
    "ped": [
-    "13 yaş altında kullanılmaz; fluoksetinle bipolar depresyon endikasyonu yok (FDA: ≥ 10 yaş)."
+    "Tek başına 13 yaş altında kullanılmaz; fluoksetinle kombinasyon (REXAPİN PRO) 10–17 yaşta bipolar I depresyonda ruhsatlı."
    ]
-  }
+  },
+  "ek": [
+   {
+    "urun": "REXAPİN PRO 6 MG/ 25 MG KAPSÜL",
+    "tarih": "28/10/2025",
+    "url": "https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub625_19_11_2025.pdf"
+   },
+   {
+    "urun": "RELİXAN 12 MG/50 MG SERT KAPSÜL",
+    "tarih": "23/08/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kub_1f332029-08a4-44bc-a207-48a8dddcd177.pdf"
+   },
+   {
+    "urun": "TARGET 3 MG / 25MG KAPSÜL",
+    "tarih": "24/03/2011",
+    "url": "https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf"
+   }
+  ]
  },
  "ketiapin": {
   "urun": "SEROQUEL 300 MG FILM KAPLI TABLET",
@@ -856,7 +918,8 @@ window.TR_KUB = {
    "ped": [
     "18 yaş altında kullanımı önerilmez (FDA: bipolar mani ≥ 10 yaş, şizofreni ≥ 13 yaş)."
    ]
-  }
+  },
+  "ek": []
  },
  "klozapin": {
   "urun": "LEPONEX 25 MG TABLET",
@@ -890,7 +953,8 @@ window.TR_KUB = {
    "ped": [
     "16 yaş altında kullanılmamalıdır."
    ]
-  }
+  },
+  "ek": []
  },
  "haloperidol": {
   "urun": "NORODOL 2 MG / ML ORAL DAMLA",
@@ -936,7 +1000,8 @@ window.TR_KUB = {
     "Şizofreni 13–17, otizm/YGB'de saldırganlık 6–17, tik bozukluğu 10–17 yaşta, yalnız diğer tedaviler başarısızsa (FDA: ≥ 3 yaş).",
     "Ergen şizofrenide 0,5–3 mg/gün (maks 5 mg); otizmde 6–11 yaş 0,5–3 mg, 12–17 yaş 0,5–5 mg/gün; tikte 0,5–3 mg/gün."
    ]
-  }
+  },
+  "ek": []
  },
  "paliperidon": {
   "urun": "İNVEGA 9 MG UZATILMIŞ SALIMLI TABLET",
@@ -972,7 +1037,8 @@ window.TR_KUB = {
    "ped": [
     "Ergen şizofrenisinde doz yalnız 15 yaş ve üzeri için verilir; 12–14 yaşta güvenlilik ve etkililik belirlenmemiş (FDA: ≥ 12 yaş)."
    ]
-  }
+  },
+  "ek": []
  },
  "ziprasidon": {
   "urun": "ZELDOX 60 MG KAPSÜL",
@@ -1009,7 +1075,8 @@ window.TR_KUB = {
    "ped": [
     "10–17 yaşta maninin kısa süreli tedavisinde endike, ancak 18 yaş altında etkililik ve güvenlilik kanıtlanmamış (FDA'da onay yok)."
    ]
-  }
+  },
+  "ek": []
  },
  "lurasidon": {
   "urun": "FERADON 40 MG FİLM KAPLI TABLET (muadil)",
@@ -1045,7 +1112,8 @@ window.TR_KUB = {
     "Son evre böbrek yetmezliğinde (KrKl < 15 mL/dk) yarar riskten ağır basmadıkça kullanılmamalıdır."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "amisulpirid": {
   "urun": "SOLIAN 200 MG TABLET",
@@ -1073,7 +1141,8 @@ window.TR_KUB = {
     "KrKl < 10 mL/dk'da klinik deneyim yok, özel dikkat gerekir; kontrendikasyon değildir."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "klorpromazin": {
   "urun": "LARGACTİL 100 MG KAPLI TABLET",
@@ -1113,7 +1182,8 @@ window.TR_KUB = {
     "1 yaş altında kontrendikedir (FDA'da 6 ay altında kullanılmaz).",
     "6 yaş üstü çocukta 1–5 mg/kg/gün, 2–3 doza bölünmüş; sabit mg üst sınırı yok (FDA: 5–12 yaş maks 75 mg/gün)."
    ]
-  }
+  },
+  "ek": []
  },
  "asenapin": {
   "ruhsatsiz": true
@@ -1146,7 +1216,8 @@ window.TR_KUB = {
    "ped": [
     "Pediatrik endikasyon yok; 18 yaş altında güvenlilik ve etkililik kanıtlanmamış (FDA: şizofreni ≥ 13 yaş)."
    ]
-  }
+  },
+  "ek": []
  },
  "kariprazin": {
   "urun": "KAPRAZDİ 1,5 MG SERT KAPSÜL (muadil)",
@@ -1175,7 +1246,8 @@ window.TR_KUB = {
     "Yalnız şizofreni ve bipolar I depresyonda endike; bipolar mani/karma dönem ve majör depresyonda ek tedavi endikasyonu yok."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "pimozid": {
   "urun": "NÖROFREN 2 MG TABLET (muadil)",
@@ -1211,7 +1283,8 @@ window.TR_KUB = {
     "Maksimum doz şizofrenide 20 mg/gün, diğer psikozlarda 16 mg/gün (FDA'da Tourette için 10 mg/gün)."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "lityum": {
   "urun": "LITHURIL 300MG KAPSÜL",
@@ -1246,7 +1319,8 @@ window.TR_KUB = {
    "ped": [
     "12 yaş altında kullanılmamalıdır (FDA: ≥ 7 yaş)."
    ]
-  }
+  },
+  "ek": []
  },
  "valproat": {
   "urun": "DEPAKİN CHRONO BT 500 MG UZUN ETKILI FILM TABLET",
@@ -1282,7 +1356,8 @@ window.TR_KUB = {
     "Böbrek yetmezliğinde doz azaltımı, hemodiyalizde doz artırımı gerekebilir."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "lamotrijin": {
   "urun": "LAMICTAL DC 100 MG ÇÖZÜNÜR/ÇIĞNEME TABLETI",
@@ -1321,7 +1396,8 @@ window.TR_KUB = {
    "ped": [
     "Bipolar bozuklukta 18 yaş altında endike değildir ve kullanımı önerilmez."
    ]
-  }
+  },
+  "ek": []
  },
  "karbamazepin": {
   "urun": "TEGRETOL 200 MG TABLET",
@@ -1357,7 +1433,8 @@ window.TR_KUB = {
     "Bipolar profilakside olağan doz 400–600 mg/gün, en fazla 1600 mg/gün; 4–12 µg/mL düzeyi yalnız epilepsi için verilir."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "okskarbazepin": {
   "urun": "TRILEPTAL 300 MG FILM KAPLI TABLET",
@@ -1390,7 +1467,8 @@ window.TR_KUB = {
    "ped": [
     "Epilepside 6 yaş altında önerilmez (FDA: epilepsi ≥ 4 yaş)."
    ]
-  }
+  },
+  "ek": []
  },
  "melatonin": {
   "urun": "MELOGEN 1 MG/ML ORAL ÇÖZELTİ",
@@ -1427,7 +1505,8 @@ window.TR_KUB = {
     "2–18 yaşta otizm spektrum bozukluğu ve/veya Smith-Magenis sendromunda gecikmiş uyku başlangıçlı uykusuzlukta ruhsatlı (oral çözelti).",
     "Çocukta doz sabit 2 mg/gün, yatmadan 30–60 dk önce; en az 6 ayda bir yeniden değerlendirilir."
    ]
-  }
+  },
+  "ek": []
  },
  "hidroksizin": {
   "urun": "ATARAX 25 MG FİLM KAPLI TABLET",
@@ -1464,7 +1543,8 @@ window.TR_KUB = {
    "ped": [
     "Anksiyete endikasyonu 18 yaş ve üzerinde; çocukta yalnız 12 ay üzeri kaşıntıda endike (FDA: çocukta anksiyete ve sedasyon da)."
    ]
-  }
+  },
+  "ek": []
  },
  "klonazepam": {
   "urun": "RIVOTRIL 2 MG TABLET",
@@ -1497,7 +1577,8 @@ window.TR_KUB = {
     "Panik bozukluk endikasyonu yok; yalnız epilepside endike (erişkinde başlangıç ≤ 1 mg/gün, maksimum 20 mg/gün)."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "lorazepam": {
   "urun": "ATIVAN EXPIDET 1 MG TABLET",
@@ -1528,7 +1609,8 @@ window.TR_KUB = {
     "Şiddetli karaciğer yetmezliği ve/veya ensefalopatide kullanılmamalıdır."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "buspiron": {
   "urun": "BUSPON 5 MG KAPSÜL",
@@ -1558,7 +1640,8 @@ window.TR_KUB = {
    "ped": [
     "18 yaş altında kullanılmamalıdır."
    ]
-  }
+  },
+  "ek": []
  },
  "diazepam": {
   "urun": "NERVİUM 5 MG TABLET",
@@ -1593,7 +1676,8 @@ window.TR_KUB = {
     "Anksiyolitik doz 5–30 mg/gün, 2–3 doza bölünmüş (FDA'da en fazla 40 mg/gün)."
    ],
    "ped": []
-  }
+  },
+  "ek": []
  },
  "alprazolam": {
   "urun": "XANAX 0.5 MG TABLET",
@@ -1624,7 +1708,8 @@ window.TR_KUB = {
    "ped": [
     "18 yaş altında kullanımı tavsiye edilmez."
    ]
-  }
+  },
+  "ek": []
  },
  "pregabalin": {
   "urun": "LYRICA 150 MG KAPSÜL",
@@ -1653,6 +1738,7 @@ window.TR_KUB = {
   "fark": {
    "eri": [],
    "ped": []
-  }
+  },
+  "ek": []
  }
 };

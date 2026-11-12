@@ -4,6 +4,7 @@ Rehberdeki her ilacın endikasyon ve doz bilgisi, Türkiye'de ruhsatlı **bir** 
 
 - **Kaynak:** TİTCK KÜB/KT veritabanı (https://www.titck.gov.tr/kubkt). Her etkin madde için tercihen orijinal ürünün, yoksa bir muadilin en güncel KÜB'ü kullanıldı (ağızdan alınan form).
 - **Karşılaştırılan bölümler:** 4.1 Terapötik endikasyonlar ve 4.2 Pozoloji (gerektiğinde 4.3–4.4).
+- **Kombinasyon ürünleri:** Her etkin maddenin Türkiye'deki kombinasyon ürünleri de tarandı. Psikiyatrik açıdan önemli tek kombinasyon olanzapin + fluoksetin: TARGET, REXAPİN PRO, RELİXAN ve OSHINE erişkinde bipolar I depresyon ve tedaviye dirençli depresyonda, REXAPİN PRO ayrıca 10–17 yaşta bipolar I depresyonda ruhsatlı. (İlk sürümde bu ürünler atlanmış ve fluoksetin/olanzapinde kombinasyon endikasyonları yanlışlıkla "Türkiye'de yok" diye yazılmıştı; düzeltildi.)
 - **Karşılaştırılan alanlar:** erişkin ve pediatrik endikasyonlar, erişkin ve çocuk-ergen başlangıç/maksimum doz, böbrek ve karaciğer yetmezliğinde doz.
 - **Yöntem:** KÜB metinleri PDF'ten çıkarıldı; karşılaştırma yapay zekâ destekli yapıldı. Her bulgudaki alıntının KÜB metninde birebir geçtiği betikle doğrulandı; bir kısmı ayrıca elle kontrol edildi. Klinik karar için ilgili KÜB'ün kendisine bakın.
 
@@ -12,9 +13,9 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 | Tür | Anlamı | Sayı |
 |---|---|---|
 | Hata | Rehberdeki bilgi KÜB ile çelişiyor ve FDA/kılavuz farkıyla açıklanamıyor | 0 |
-| Fark | Türkiye KÜB'ü rehberin dayandığı FDA bilgisinden farklı (endikasyon, yaş sınırı, maksimum doz) | 88 |
+| Fark | Türkiye KÜB'ü rehberin dayandığı FDA bilgisinden farklı (endikasyon, yaş sınırı, maksimum doz) | 86 |
 | Eksik | KÜB'de olup rehberde olmayan klinik açıdan önemli bilgi | 19 |
-| Bilgi | Küçük ya da belirsiz farklar | 28 |
+| Bilgi | Küçük ya da belirsiz farklar | 30 |
 
 ## Özet
 
@@ -22,7 +23,7 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 - Doğrudan hata sayılacak sayısal bir uyuşmazlık bulunmadı. Rehberdeki bir ifade KÜB'le çeliştiği için düzeltildi (aşağıda).
 - **18 yaş altı:** FDA'nın pediatrik onay verdiği pek çok ilacın Türkiye KÜB'ü 18 yaş altında kullanımı önermiyor ya da kontrendike sayıyor (ör. fluoksetin, essitalopram, duloksetin, ketiapin, risperidon şizofreni/mani için, trazodon, imipramin).
 - **Türkiye'de olup FDA'da olmayan endikasyonlar:** essitalopram (panik, sosyal anksiyete, OKB), sitalopram (panik, OKB), fluvoksamin (depresyon), klomipramin (depresyon, fobi, panik), haloperidol (mani, deliryum, ajitasyon, demansta inatçı saldırganlık), risperidon (davranım ve yıkıcı davranış bozukluklarında saldırganlık), klozapin (Parkinson psikozu), pimozid (kronik şizofreni), lityum (unipolar depresyon idamesi, şizoaffektif bozukluk), lorazepam (uykusuzluk).
-- **FDA'da olup Türkiye'de olmayan endikasyonlar:** fluoksetin (panik, olanzapinle kombinasyonlar), olanzapin (fluoksetinle kombinasyonlar), kariprazin (mani, MDB'de ek tedavi), brekspiprazol (MDB'de ek tedavi, Alzheimer ajitasyonu), karbamazepin (akut mani; TR'de lityuma yanıtsız bipolar profilaksi), klonazepam ve alprazolam (panik bozukluk), hidroksizin (premedikasyon; çocukta anksiyete).
+- **FDA'da olup Türkiye'de olmayan endikasyonlar:** fluoksetin (panik bozukluk), kariprazin (mani, MDB'de ek tedavi), brekspiprazol (MDB'de ek tedavi, Alzheimer ajitasyonu), karbamazepin (akut mani; TR'de lityuma yanıtsız bipolar profilaksi), klonazepam ve alprazolam (panik bozukluk), hidroksizin (premedikasyon; çocukta anksiyete).
 - **Maksimum doz farkları (TR daha düşük):** fluoksetin 60 mg, metilfenidat OROS 13–17 yaşta 54 mg, klorpromazin 300 mg (istisnai 600 mg), buspiron 45 mg, diazepam anksiyetede 30 mg, haloperidol ergende 5 mg, fluvoksamin çocukta 200 mg.
 
 ### Bu karşılaştırma sonrası rehberde yapılan düzeltmeler
@@ -37,7 +38,7 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 
 | İlaç | İncelenen ürün (KÜB tarihi) | Türkiye erişkin endikasyonları | Türkiye çocuk-ergen | F / E / B |
 |---|---|---|---|---|
-| [Fluoksetin](#fluoksetin) | [PROZAC 20 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kb_4ab07df8-3a8a-41a2-85ea-48ef264f1b4d.pdf) (21/12/2021) | Depresyon; OKB; Bulimiya nervoza; PMDB | 18 yaş altında kullanımı önerilmez. | 3 / 0 / 0 |
+| [Fluoksetin](#fluoksetin) | [PROZAC 20 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kb_4ab07df8-3a8a-41a2-85ea-48ef264f1b4d.pdf) (21/12/2021) | Depresyon; OKB; Bulimiya nervoza; PMDB; Bipolar I depresyon · olanzapinle sabit doz kombinasyonu; Tedaviye dirençli depresyon · olanzapinle sabit doz kombinasyonu | Bipolar I depresyon · 10–17 yaş (olanzapinle kombinasyon, yalnız REXAPİN PRO) | 3 / 0 / 0 |
 | [Sertralin](#sertralin) | [LUSTRAL 50 MG ÇENTIKLI FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LUSTRAL50mgentiklifilmkapltabletkub_20_01_2025.pdf) (19/01/2025) | Depresyon (nüks önleme dahil); OKB; Panik bozukluk (agorafobili/agorafobisiz); TSSB; Sosyal anksiyete; PMDB | OKB · ≥ 6 yaş | 0 / 0 / 0 |
 | [Essitalopram](#essitalopram) | [CIPRALEX 10 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/10kub_8bdb22b3-3328-4af6-95a5-c79f26746f2c.pdf) (19/07/2024) | Majör depresyon; Panik bozukluk (agorafobili/agorafobisiz); Sosyal anksiyete; Yaygın anksiyete; OKB | 18 yaş altında kullanılmamalıdır. | 1 / 2 / 0 |
 | [Sitalopram](#sitalopram) | [CIPRAM 20 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/CIPRAM20mgfilmkapltabletKB_4a9a812b-4833-4d33-8942-f1573f50be6b.pdf) (30/03/2023) | Depresyon (relaps/rekürens önleme dahil); Panik bozukluk (agorafobili/agorafobisiz); OKB | 18 yaş altında kullanılmamalıdır. | 0 / 1 / 1 |
@@ -66,7 +67,7 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 | [Modafinil](#modafinil) | [MODIODAL 100 MG TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ek3modiodalkubtemiz_62a5846a-04af-42df-8e59-403262b0d556.pdf) (30/05/2024) | Narkolepside aşırı uykululuk; Vardiyalı çalışma uyku bozukluğunda aşırı uykululuk; Obstrüktif uyku apnesinde birincil tedaviye rağmen süren aşırı uykululuk | 18 yaş altında kullanılmamalı. | 1 / 0 / 1 |
 | [Risperidon](#risperidon) | [RISPERDAL QUICKLET 1 MG AĞIZDA ÇÖZÜNÜR TABLET](https://titck.gov.tr/storage/kubKtAttachments/ddc0002a36308.pdf) (23/09/2014) | Şizofreni ve diğer psikotik durumlar (akut ve idame); Bipolar bozuklukta manik epizod | Davranım ve diğer yıkıcı davranış bozuklukları (agresyon ön planda) · 5–18 yaş; Otistik bozukluğa bağlı huzursuzluk/irritabilite · çocuk ve ergen (5 yaş altında yeterli deneyim yok) | 3 / 1 / 0 |
 | [Aripiprazol](#aripiprazol) | [MADEPZOL 20 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/MADEPZOL20mgtabletkub_11_12_2025.pdf) (04/12/2025) | Şizofreni (akut ve idame); Bipolar I akut manik epizod ve nüks önleme; Antidepresana dirençli majör depresyonda ek tedavi | Şizofreni · 13–17 yaş; Otistik bozuklukla ilişkili irritabilite · 6–17 yaş; Tourette · 6–18 yaş | 1 / 1 / 1 |
-| [Olanzapin](#olanzapin) | [ZYPREXA 5 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/zprexa5ek1kubbmed5mg_31_07_2025.pdf) (11/07/2025) | Şizofreni (akut ve idame); Bipolar orta-ağır manik dönem; Bipolar bozuklukta nüks önleme | Şizofreni · 13–17 yaş; Bipolar manik/mikst dönem · 13–17 yaş | 3 / 0 / 1 |
+| [Olanzapin](#olanzapin) | [ZYPREXA 5 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/zprexa5ek1kubbmed5mg_31_07_2025.pdf) (11/07/2025) | Şizofreni (akut ve idame); Bipolar orta-ağır manik dönem; Bipolar bozuklukta nüks önleme; Bipolar I depresyon · fluoksetinle sabit doz kombinasyonu; Tedaviye dirençli depresyon · fluoksetinle sabit doz kombinasyonu | Şizofreni · 13–17 yaş; Bipolar manik/mikst dönem · 13–17 yaş; Bipolar I depresyon · 10–17 yaş (fluoksetinle kombinasyon, yalnız REXAPİN PRO) | 1 / 0 / 3 |
 | [Ketiapin](#ketiapin) | [SEROQUEL 300 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/seroquel300Ek2_05_01_2026.2_KUB) (04/12/2025) | Şizofreni; Bipolar orta-ileri mani; Bipolar depresyon (majör depresif atak); Bipolar nüks önleme (ketiapine yanıt vermiş hastalarda) | 18 yaş altında yeterli veri olmadığından kullanımı önerilmez. | 2 / 0 / 2 |
 | [Klozapin](#klozapin) | [LEPONEX 25 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/JoU99ykZVpBuN.pdf) (24/04/2017) | Tedaviye dirençli (veya klasik antipsikotiklere intoleran) şizofreni; Şizofreni/şizoaffektif bozuklukta nükseden intihar davranışı riskinin azaltılması; Parkinson hastalığında psikoz (standart tedavi başarısızsa) | Pediyatrik çalışma yok; 16 yaş altında güvenlilik/etkililik belirlenmediğinden kullanılmamalı. | 3 / 1 / 0 |
 | [Haloperidol](#haloperidol) | [NORODOL 2 MG / ML ORAL DAMLA](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/TTCKOnaylKBNORODOLDAMLA_ec2d5eb6-8f7c-49e3-939f-854016551982.pdf) (02/10/2026) | Şizofreni ve şizoaffektif bozukluk; Akut deliryum (non-farmakolojik tedavi başarısızsa); Bipolar I orta-şiddetli manik atak; Psikotik bozukluk/bipolar maniye bağlı akut psikomotor ajitasyon; Orta-şiddetli Alzheimer ve vasküler demansta inatçı saldırganlık ve psikotik semptomlar; Tourette dahil tik bozuklukları (şiddetli, diğer tedaviler başarısızsa); Huntington hastalığında kore (psikiyatri dışı) | Şizofreni · 13–17 yaş (diğer tedaviler başarısız/tolere edilemiyorsa); Otizm/yaygın gelişimsel bozuklukta inatçı şiddetli saldırganlık · 6–17 yaş; Tourette dahil tik bozuklukları · 10–17 yaş (4.2 doz önerisi 12–17 yaş) | 3 / 1 / 1 |
@@ -102,20 +103,22 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 
 **İncelenen KÜB:** [PROZAC 20 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kb_4ab07df8-3a8a-41a2-85ea-48ef264f1b4d.pdf), LILLY İLAÇ TİCARET LİMİTED ŞİRKETİ · KÜB onay tarihi 21/12/2021
 
-- **TR erişkin endikasyonları:** Depresyon; OKB; Bulimiya nervoza; PMDB
-- **TR çocuk-ergen:** 18 yaş altında kullanımı önerilmez.
+**Kombinasyon ürünlerinin KÜB'leri:** [REXAPİN PRO 6 MG/ 25 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub625_19_11_2025.pdf) (28/10/2025) · [RELİXAN 12 MG/50 MG SERT KAPSÜL](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kub_1f332029-08a4-44bc-a207-48a8dddcd177.pdf) (23/08/2024) · [TARGET 3 MG / 25MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf) (24/03/2011)
+
+- **TR erişkin endikasyonları:** Depresyon; OKB; Bulimiya nervoza; PMDB; Bipolar I depresyon · olanzapinle sabit doz kombinasyonu; Tedaviye dirençli depresyon · olanzapinle sabit doz kombinasyonu
+- **TR çocuk-ergen:** Bipolar I depresyon · 10–17 yaş (olanzapinle kombinasyon, yalnız REXAPİN PRO) — Tek başına fluoksetin 18 yaş altında önerilmez (PROZAC KÜB).
 - **TR erişkin doz:** başlangıç 20 mg/gün (bulimiya: 60 mg/gün; PMDB: sürekli ya da luteal faz 20 mg) · maksimum 60 mg/gün (depresyon, OKB); yaşlıda genelde ≤ 40 mg, en fazla 60 mg; 80 mg üzeri sistematik değerlendirilmemiş
 - **TR organ yetmezliği:** böbrek: Özel doz ayarı gerekmez. · karaciğer: Doz ya da doz sıklığı azaltılmalı (ör. gün aşırı 20 mg).
 
-- **Fark · Erişkin endikasyon.** Panik bozukluk ve olanzapin–fluoksetin kombinasyonu endikasyonları FDA onayıdır; incelenen TR KÜB'ünde yer almaz. doz_eriskin.not'taki 'Panik bozuklukta 10 mg ile başlayın' önerisi de TR açısından endikasyon dışıdır.
-  - Rehber: Panik bozukluk; Bipolar depresyon (olanzapin ile); Dirençli depresyon (olanzapin ile) · KÜB: Yalnızca depresyon, OKB, bulimiya nervoza ve PMDB; panik bozukluk ve olanzapin kombinasyonları yok
+- **Fark · Erişkin endikasyon.** Panik bozukluk FDA onayıdır; Türkiye'de fluoksetinin panik bozukluk endikasyonu yok. Olanzapinle kombinasyon endikasyonları (bipolar I depresyon, dirençli depresyon) Türkiye'de ayrı sabit doz kombinasyon ürünleriyle ruhsatlı (TARGET, REXAPİN PRO, RELİXAN, OSHINE). Düzeltme: ilk karşılaştırmada yalnız tek bileşenli ürünün KÜB'üne bakıldığı için kombinasyon ürünleri atlanmıştı.
+  - Rehber: Panik bozukluk; Bipolar depresyon (olanzapin ile); Dirençli depresyon (olanzapin ile) · KÜB: Tek başına: depresyon, OKB, bulimiya nervoza, PMDB (panik yok). Olanzapin + fluoksetin kombinasyonu: bipolar I depresyon, tedaviye dirençli depresyon.
   - KÜB'den: “PROZAC depresyon, obsesif-kompulsif bozukluk, bulimia nervoza ve pre-menstrüel disforik bozukluk tedavisinde endikedir.”
-  - Öneri: Bu üç endikasyonu 'TR'de ruhsatlı değil (yalnız FDA)' olarak işaretle.
+  - Öneri: Panik bozukluğu "Türkiye'de ruhsatlı değil (yalnız FDA)" olarak işaretle; olanzapinle kombinasyon endikasyonlarını Türkiye'de de ruhsatlı göster.
 - **Fark · Erişkin doz (maks).** FDA etiketi 80 mg/gün'e izin verir; TR KÜB'ü depresyon ve OKB'de üst sınırı 60 mg olarak verir ve 'Günde 80 mg’ın üzerindeki dozlar sistematik olarak değerlendirilmemiştir' der. Yaşlıda genelde 40 mg aşılmamalı.
   - Rehber: 80 mg/gün · KÜB: 60 mg/gün (yaşlıda genelde ≤ 40 mg)
   - KÜB'den: “20 mg’lık dozun yeterli olmadığı bazı hastalarda doz kademeli olarak maksimum 60 mg’a kadar artırılabilir”
   - Öneri: Maks alanına 'TR KÜB: 60 mg/gün (yaşlıda genelde ≤ 40 mg)' notu ekle.
-- **Fark · Pediatrik endikasyon.** İncelenen TR KÜB'ünde 4.1'de pediatrik endikasyon yok (5.1'de 8 yaş ve üzeri depresyon çalışmalarından söz ediliyor ama onay olarak değil). Uygulamadaki FDA pediatrik onayları ve çocuk-ergen doz şeması TR ruhsatında karşılıksız.
+- **Fark · Pediatrik endikasyon.** İncelenen TR KÜB'ünde 4.1'de pediatrik endikasyon yok (5.1'de 8 yaş ve üzeri depresyon çalışmalarından söz ediliyor ama onay olarak değil). Uygulamadaki FDA pediatrik onayları ve çocuk-ergen doz şeması TR ruhsatında karşılıksız. Olanzapinle sabit doz kombinasyonu REXAPİN PRO'nun KÜB'ü ise 10–17 yaşta bipolar I depresyon için doz veriyor (başlangıç 3/25 mg).
   - Rehber: Depresyon ≥ 8 yaş; OKB ≥ 7 yaş · KÜB: 18 yaş altında kullanımı önerilmez; pediatrik endikasyon yok
   - KÜB'den: “Pediyatrik popülasyon: Çocuklarda ve ergenlerde (18 yaşın altındaki) PROZAC kullanımı önerilmez.”
   - Öneri: Pediatrik bölüme 'TR KÜB: 18 yaş altında önerilmez' notu ekle.
@@ -642,24 +645,26 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 
 **İncelenen KÜB:** [ZYPREXA 5 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/zprexa5ek1kubbmed5mg_31_07_2025.pdf), BMED İLAÇ DANIŞMANLIK SAĞLIK ÜRÜN VE HİZMETLERİ TİC. LTD. ŞTİ. · KÜB onay tarihi 11/07/2025
 
-- **TR erişkin endikasyonları:** Şizofreni (akut ve idame); Bipolar orta-ağır manik dönem; Bipolar bozuklukta nüks önleme
-- **TR çocuk-ergen:** Şizofreni · 13–17 yaş; Bipolar manik/mikst dönem · 13–17 yaş — 13 yaş altında kullanılmaz. 13–17 yaşta veri kısıtlı; kilo artışı, lipid ve prolaktin riskleri nedeniyle çoğu vakada önce diğer ilaçlar düşünülmeli.
+**Kombinasyon ürünlerinin KÜB'leri:** [REXAPİN PRO 6 MG/ 25 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub625_19_11_2025.pdf) (28/10/2025) · [RELİXAN 12 MG/50 MG SERT KAPSÜL](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kub_1f332029-08a4-44bc-a207-48a8dddcd177.pdf) (23/08/2024) · [TARGET 3 MG / 25MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf) (24/03/2011)
+
+- **TR erişkin endikasyonları:** Şizofreni (akut ve idame); Bipolar orta-ağır manik dönem; Bipolar bozuklukta nüks önleme; Bipolar I depresyon · fluoksetinle sabit doz kombinasyonu; Tedaviye dirençli depresyon · fluoksetinle sabit doz kombinasyonu
+- **TR çocuk-ergen:** Şizofreni · 13–17 yaş; Bipolar manik/mikst dönem · 13–17 yaş; Bipolar I depresyon · 10–17 yaş (fluoksetinle kombinasyon, yalnız REXAPİN PRO) — Tek başına olanzapin 13 yaş altında kullanılmaz. 13–17 yaşta veri kısıtlı; kilo artışı, lipid ve prolaktin riskleri nedeniyle çoğu vakada önce diğer ilaçlar düşünülmeli.
 - **TR erişkin doz:** başlangıç Şizofreni 10 mg/gün · Mani 15 mg (monoterapi) / 10 mg (kombinasyon) · Nüks önleme 10 mg · maksimum 20 mg/gün (aralık 5–20 mg)
 - **TR çocuk-ergen doz:** başlangıç 2,5–5 mg/gün (hedef 10 mg/gün) · maksimum 20 mg/gün (üzeri değerlendirilmemiş)
 - **TR organ yetmezliği:** böbrek: Daha düşük başlangıç dozu (5 mg) düşünülmeli. · karaciğer: Orta bozuklukta (Child-Pugh A/B) başlangıç 5 mg, dikkatli artış.
 
-- **Fark · Erişkin endikasyon.** Fluoksetinle kombinasyon endikasyonları FDA'ya özgü; TR'de olanzapin (Zyprexa) KÜB'ünde bulunmuyor.
-  - Rehber: Bipolar depresyon (fluoksetin ile); Dirençli depresyon (fluoksetin ile) · KÜB: TR KÜB'ünde depresyon endikasyonu yok; yalnızca şizofreni, bipolar mani ve nüks önleme
-  - KÜB'den: “Bipolar bozuklukta olanzapin, orta derece ile ağır manik dönemlerin tedavisinde ve bipolar bozuklukta reküransların önlenmesinde endikedir.”
-  - Öneri: İki depresyon satırına 'TR'de ruhsatlı değil (FDA, fluoksetin kombinasyonu)' notu ekleyin.
-- **Fark · Pediatrik endikasyon.** FDA'da 10–17 yaş bipolar depresyonda fluoksetinle onaylı; TR'de bu endikasyon yok ve 13 yaş altı kullanılmaz.
-  - Rehber: Bipolar depresyon (fluoksetin ile) · ≥ 10 yaş · KÜB: 13 yaş altında kullanılmaz; pediatrik onay yalnızca 13–17 yaş şizofreni ve bipolar mani/mikst
-  - KÜB'den: “Güvenliliğe ve etkililiğe ilişkin veri olmadığı için 13 yaş altındaki çocuklarda kullanılmaz.”
-  - Öneri: Satıra 'TR'de onay yok; 13 yaş altında kullanılmaz' notu ekleyin.
 - **Fark · Böbrek yetmezliği.** FDA etiketinde böbrek yetmezliğinde özel bir doz önerisi yok; TR KÜB'ü 5 mg başlangıcı önerir.
   - Rehber: Doz ayarı gerekmez. · KÜB: Böbrek yetmezliğinde daha düşük başlangıç dozu (5 mg) düşünülmeli
   - KÜB'den: “Böbrek/Karaciğer yetmezliği: Bu tip hastalarda daha düşük bir başlangıç dozu (5 mg) düşünülmelidir.”
   - Öneri: 'TR KÜB: 5 mg ile başlamayı düşünün' notu ekleyin.
+- **Bilgi · Erişkin endikasyon.** Fluoksetinle kombinasyon endikasyonları ZYPREXA KÜB'ünde yok, ancak Türkiye'de ayrı sabit doz kombinasyon ürünleriyle ruhsatlı (TARGET, REXAPİN PRO, RELİXAN, OSHINE); FDA ile uyumlu. Düzeltme: ilk karşılaştırmada yalnız tek bileşenli ürünün KÜB'üne bakıldığı için kombinasyon ürünleri atlanmıştı.
+  - Rehber: Bipolar depresyon (fluoksetin ile); Dirençli depresyon (fluoksetin ile) · KÜB: Olanzapin + fluoksetin kombinasyonu: bipolar I depresyon, tedaviye dirençli depresyon
+  - KÜB'den: “REXAPİN PRO Bipolar I Bozukluk ile ilişkili depresif epizotların akut tedavisi için endikedir.”
+  - Öneri: Değişiklik gerekmez; Türkiye kutusunda kombinasyon endikasyonları gösterilir.
+- **Bilgi · Pediatrik endikasyon.** FDA'da fluoksetinle 10–17 yaş bipolar depresyon onayı var; Türkiye'de de REXAPİN PRO KÜB'ü (2025) 10–17 yaş bipolar I depresyon için doz veriyor (başlangıç 3/25 mg). TARGET ve RELİXAN KÜB'lerinde 18 yaş altı güvenlilik belirlenmemiş. Tek başına olanzapin 13 yaş altında kullanılmaz. Düzeltme: ilk karşılaştırmada yalnız tek bileşenli ürünün KÜB'üne bakıldığı için kombinasyon ürünleri atlanmıştı.
+  - Rehber: Bipolar depresyon (fluoksetin ile) · ≥ 10 yaş · KÜB: REXAPİN PRO: 10–17 yaş bipolar I depresyon (3/25 mg ile başlanır)
+  - KÜB'den: “Çocuklar ve Ergenler (10 ila 17 yaş arası) — REXAPİN PRO, öğünlerden bağımsız olarak günde bir kez akşamları genellikle 3 mg/25 mg dozdan başlayarak”
+  - Öneri: Değişiklik gerekmez.
 - **Bilgi · Erişkin doz (bas).** Uygulamadaki aralık FDA şizofreni başlangıcına uyar; mani başlangıcı (TR 15 mg, FDA 10–15 mg) ayrıca belirtilmemiş.
   - Rehber: 5–10 mg/gün · KÜB: Şizofreni 10 mg; mani monoterapide 15 mg, kombinasyonda 10 mg
   - KÜB'den: “Manik dönem: Başlangıç dozu, monoterapide genellikle günde tek doz uygulanan 15 mg veya kombinasyon tedavisinde günde 10 mg”
