@@ -6,7 +6,7 @@
     'İlk psikotik epizoddan sonra en az 12–24 ay; yineleyen epizodlarda daha uzun sürdürüm.',
     'Metabolik yan etkide önce yaşam tarzı müdahalesi; yetersizse metabolik riski düşük ilaca geçiş veya metformin eklenmesi düşünün.'
   ];
-  var KUTU_AP = { ped: 'Çocuk ve ergenler antipsikotiklerin metabolik yan etkilerine (kilo artışı, dislipidemi, insülin direnci), sedasyona ve prolaktin artışına erişkinlerden daha duyarlıdır. Endikasyonu, hedef belirtiyi ve kesme planını baştan belirleyin.', eri: 'Kara kutu uyarısı: demansa bağlı psikozu olan yaşlı hastalarda antipsikotikler ölüm riskini artırır; bu endikasyonda onaylı değildir. Tüm hastalarda metabolik izlem (kilo, glukoz, lipid) ve hareket bozukluğu değerlendirmesi gerekir.' };
+  var KUTU_AP = { ped: 'Çocuk ve ergenler antipsikotiklerin metabolik yan etkilerine (kilo artışı, dislipidemi, insülin direnci), sedasyona ve prolaktin artışına erişkinlerden daha duyarlıdır. Endikasyonu, hedef belirtiyi ve kesme planını baştan belirleyin.', eri: 'Kara kutu uyarısı: demansı olan yaşlı hastalarda antipsikotikler ölüm ve inme riskini artırır. Bu hastalarda yalnızca ağır ve inatçı saldırganlıkta, kısa süreli ve risk–yarar değerlendirmesiyle kullanın (Türkiye\'de bu amaçla yalnızca bazı preparatlar ruhsatlıdır; ilgili KÜB\'e bakın). Tüm hastalarda metabolik izlem (kilo, glukoz, lipid) ve hareket bozukluğu değerlendirmesi gerekir.' };
 
   window.ILACLAR.push(
   {
@@ -61,7 +61,8 @@
     },
     eri: {
       bas: '10–15 mg/gün', artis: '≥ 2 hafta arayla', hedef: '10–15 mg/gün', maks: '30 mg/gün',
-      birim: 'mg/gün', adim: [[0, 10], [14, 15], [28, 20]], bant: [10, 15], tavan: 30, not: []
+      birim: 'mg/gün', adim: [[0, 10], [14, 15], [28, 20]], bant: [10, 15], tavan: 30,
+      not: ['Majör depresyonda ek tedavi: 2–5 mg/gün ile başlayın, haftalık aralarla artırın; en çok 15 mg/gün.']
     },
     surdurum: SURDURUM_AP,
     kesme: { risk: 1, sure: '2–4 hafta', adim: [[0, 100], [14, 50], [28, 0]],

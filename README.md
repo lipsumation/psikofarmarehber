@@ -85,6 +85,10 @@ Site `gh-pages` dalından GitHub Pages ile yayınlanır. `main` dalındaki bir d
 git push origin main main:gh-pages
 ```
 
+## Türkiye KÜB karşılaştırması
+
+Rehberdeki endikasyon ve doz bilgileri, her ilaç için Türkiye'de ruhsatlı bir ürünün güncel KÜB'ü (TİTCK KÜB/KT veritabanı) ile karşılaştırılmıştır. İlaç bazında farklar, KÜB bağlantıları ve alıntılar [docs/kub-karsilastirma.md](docs/kub-karsilastirma.md) dosyasında; ham veri [docs/kub-karsilastirma.json](docs/kub-karsilastirma.json) dosyasındadır.
+
 ## Katkı ve düzeltme
 
 Doz, izlem ya da geçiş bilgilerinde hata görürseniz kaynak belirterek bir [issue](https://github.com/lipsumation/psikofarmarehber/issues) açabilirsiniz.

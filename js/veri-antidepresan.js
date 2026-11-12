@@ -71,7 +71,7 @@
     },
     eri: {
       bas: '10 mg/gün (panik: 5 mg)', artis: '≥ 1 hafta sonra 20 mg', hedef: '10–20 mg/gün', maks: '20 mg/gün',
-      birim: 'mg/gün', adim: [[0, 10], [21, 20]], bant: [10, 20], tavan: 20, not: []
+      birim: 'mg/gün', adim: [[0, 10], [21, 20]], bant: [10, 20], tavan: 20, not: ['≥ 65 yaşta ve CYP2C19 zayıf metabolizörlerinde 5 mg ile başlayın; en çok 10 mg/gün.']
     },
     surdurum: SURDURUM_AD,
     kesme: { risk: 2, sure: '2–4 hafta', adim: [[0, 100], [14, 50], [28, 25], [35, 0]],
@@ -402,7 +402,7 @@
     },
     eri: {
       bas: '25 mg gece', artis: '2 hafta sonra yanıt yoksa 50 mg', hedef: '25–50 mg gece', maks: '50 mg/gün',
-      birim: 'mg/gün', adim: [[0, 25], [14, 50]], bant: [25, 50], tavan: 50, not: []
+      birim: 'mg/gün', adim: [[0, 25], [14, 50]], bant: [25, 50], tavan: 50, not: ['75 yaş ve üzerinde etkinliği gösterilmemiştir; kullanılmamalıdır.']
     },
     surdurum: SURDURUM_AD,
     kesme: { risk: 0, sure: 'Kademeli azaltım gerekmez', adim: [[0, 100], [7, 0]], not: ['Kesilme belirtisi tanımlanmamıştır; doğrudan kesilebilir.'] },

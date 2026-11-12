@@ -121,7 +121,7 @@
       aktif: 'O-desmetilvenlafaksin (desvenlafaksin): ana ilaçla eşdeğer etkinlikte, yarı ömrü yaklaşık 11 saat.',
       atilim: [87, 2], fe: 5,
       bobrek: 'Glomerüler filtrasyon hızı 10–70 mL/dk: dozu %25–50 azaltın; hemodiyalizde %50 azaltın.',
-      karaciger: 'Hafif–orta bozuklukta dozu %50 azaltın.',
+      karaciger: 'Hafif–orta bozuklukta dozu %50 azaltın; şiddetli bozuklukta %50\'den fazla azaltın ya da kaçının.',
       artiran: ['Güçlü CYP3A4 inhibitörleri (klaritromisin, ketokonazol): özellikle CYP2D6 yavaş metabolizörlerde düzey artar'],
       gen: 'CYP2D6 yavaş metabolizörlerde venlafaksin/metabolit oranı değişir; toplam aktif madde benzer kalır, ancak yan etki (bulantı, kardiyovasküler) artabilir.'
     },
