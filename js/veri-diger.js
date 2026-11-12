@@ -6,6 +6,20 @@
     { ped: 'Çocuk doğurma potansiyeli olan ergenlerde gebelik planı ve kontrasepsiyonu her yıl gözden geçirin.', eri: 'Çocuk doğurma potansiyeli olan kadınlarda gebelik planını ve kontrasepsiyonu her yıl gözden geçirin.' }
   ];
 
+  /* Alkol yoksunluğu: benzodiazepin sayfalarında ortak bölüm */
+  var ALKOL_UYARI = { ped: 'Ergende ağır alkol yoksunluğu nadirdir; gelişirse hastanede, çocuk-ergen ve erişkin ekipleri birlikte yönetir. Aşağıdaki dozlar erişkin içindir; ergende kilo ve yaşa göre uyarlanır.', eri: null };
+  var ALKOL_GIRIS = 'Alkol yoksunluğunda birinci basamak tedavi benzodiazepinlerdir; nöbet ve deliryum tremensi önler. Belirtiler son içkiden 6–24 saat sonra başlar, 24–72 saatte en ağır düzeye ulaşır; deliryum tremens 48–96 saatte görülebilir. Şiddet CIWA-Ar ölçeğiyle izlenir: < 10 hafif (çoğunlukla ilaçsız destek ve izlem yeterli), 10–18 orta, > 18 ağır.';
+  var ALKOL_NOT = [
+    'Tüm hastalara glukozdan önce tiamin verin; yüksek riskte (malnütrisyon, ağır yoksunluk) parenteral 250 mg/gün 3–5 gün, Wernicke ensefalopatisi şüphesinde 500 mg IV günde 3 kez 3–5 gün.',
+    'Yatırarak tedavi edin: önceki nöbet ya da deliryum tremens, ağır yoksunluk, ciddi tıbbi ya da psikiyatrik eş hastalık, intihar riski, gebelik, başka madde yoksunluğu, destek yokluğu.',
+    'Benzodiazepin süresi genellikle 5–7 gündür, 10 günü aşmamalıdır. Ayaktan şemada ilaç günlük ya da bir yakına teslim edilerek verilir.',
+    'İzlem: CIWA-Ar ve vital bulgular 1–4 saatte bir; aşırı sedasyonda (uyandırılamama, solunum < 10/dk) dozu atlayın. Sıvı-elektrolit (Na, K, Mg, fosfat), glukoz, karaciğer işlev testleri ve tam kan.',
+    'Puanı yükselten başka nedenleri dışlayın: enfeksiyon, kafa travması, hepatik ensefalopati, hipoglisemi, elektrolit bozukluğu.',
+    'Antipsikotik (haloperidol) yalnız yeterli benzodiazepine karşın süren halüsinasyon ve ajitasyonda ek olarak verilir; tek başına kullanılmaz (nöbet eşiğini düşürür).',
+    'Arınma bağımlılık tedavisinin başlangıcıdır: nüks önleme ilacı ve psikososyal tedavi planlayın.'
+  ];
+  var ALKOL_ILGILI = ['diazepam', 'lorazepam', 'naltrekson', 'nalmefen'];
+
   window.ILACLAR.push(
   {
     id: 'lityum', ad: 'Lityum', sinif: 'dd', altSinif: 'Duygudurum dengeleyici', grup: 'dd',
@@ -198,6 +212,11 @@
     kutu: 'Kötüye kullanım, bağımlılık ve kesilme reaksiyonları; opioidlerle birlikte kullanımda solunum depresyonu ve ölüm riski.',
     uyari: ['Sedasyon, ataksi, bilişsel yavaşlama', 'Paradoksal disinhibisyon', 'Tolerans ve bağımlılık', { ped: 'Siyalore (küçük çocuklar)', eri: null }],
     etkilesim: ['Opioid, alkol ve diğer sedatiflerle solunum depresyonu', 'CYP3A4 inhibitörleri düzeyi artırır; karbamazepin düşürür', 'Klozapin başlangıcında birlikte kullanımda dikkat'],
+    ozel: [{
+      baslik: 'Alkol yoksunluğunda kullanım', etiket: 'ilk seçenek değil', onaysiz: true,
+      giris: 'Klonazepam alkol yoksunluğunda kılavuzların ilk seçenekleri arasında değildir; Türkiye KÜB\'ünde (yalnız epilepsi) ve FDA\'da bu endikasyon yoktur. Uzun yarı ömrüne karşın kanıt sınırlıdır: diazepam, ileri yaşta ve karaciğer hastalığında lorazepam tercih edilir.',
+      ilgili: ALKOL_ILGILI
+    }],
     oz: ['benzo']
   },
   {
@@ -222,6 +241,17 @@
     kutu: 'Kötüye kullanım, bağımlılık ve kesilme reaksiyonları; opioidlerle birlikte kullanımda solunum depresyonu ve ölüm riski.',
     uyari: ['Sedasyon, ataksi, anterograd amnezi', 'Paradoksal disinhibisyon', 'Solunum depresyonu (parenteral/yüksek doz)', 'Tolerans ve bağımlılık'],
     etkilesim: ['Opioid, alkol ve diğer sedatiflerle solunum depresyonu', 'Valproat lorazepam düzeyini artırır (dozu yarıya indirin)', 'Parenteral olanzapin ile birlikte kullanmayın'],
+    ozel: [{
+      baslik: 'Alkol yoksunluğunda kullanım', etiket: 'endikasyon dışı (Türkiye ve FDA)', onaysiz: true,
+      uyari: ALKOL_UYARI, giris: ALKOL_GIRIS + ' Lorazepam oksidatif metabolizmaya uğramaz (glukuronidasyon), aktif metaboliti yoktur: ileri yaşta ve karaciğer hastalığında diazepama tercih edilir.',
+      tablo: { bas: ['Yaklaşım', 'Doz ve uygulama', 'Ne zaman · not'], satir: [
+        ['Semptom tetiklemeli', 'CIWA-Ar ≥ 10 ise 1–2 mg (dilde eriyen tablet); ölçek 1 saat sonra yinelenir, gerekirse doz tekrarlanır', 'Saatlik ölçek izlemi yapılabilen yatan hastada tercih edilir.'],
+        ['Sabit doz azaltma', '1. gün 2 mg ×4 · 2.–3. gün 1 mg ×4 · ardından 2–3 günde azaltılıp kesilir', 'Kısa yarı ömür nedeniyle doz aralarında belirtiler geri dönebilir; ek doz gerekebilir.'],
+        ['Deliryum tremens', 'Türkiye\'de parenteral lorazepam yoktur', 'Damar yolu tedavisi gerekiyorsa diazepam ampul kullanılır.']
+      ] },
+      not: ['Şiddetli karaciğer yetmezliği ve ensefalopatide tüm benzodiazepinler gibi kullanılmaz (Türkiye KÜB\'ü); karaciğer hastalığında düşük dozla başlayıp sık izleyin.', 'Nöbet koruması diazepama göre kısa sürer: dozları atlamayın, azaltımı yavaş yapın.'].concat(ALKOL_NOT),
+      ilgili: ['diazepam', 'naltrekson', 'nalmefen']
+    }],
     oz: ['benzo']
   },
   {
@@ -268,6 +298,18 @@
     kutu: 'Kötüye kullanım, bağımlılık ve kesilme reaksiyonları; opioidlerle birlikte kullanımda solunum depresyonu ve ölüm riski.',
     uyari: ['Sedasyon, ataksi, anterograd amnezi', 'Paradoksal disinhibisyon', { ped: 'Birikime bağlı gündüz uyuklaması, okul performansında düşme', eri: 'Birikime bağlı gündüz uyuklaması (özellikle yaşlıda), düşme riski' }, 'Tolerans ve bağımlılık', 'Solunum depresyonu (parenteral/yüksek doz)'],
     etkilesim: ['Opioid, alkol ve diğer sedatiflerle solunum depresyonu', 'Fluvoksamin, fluoksetin, omeprazol (CYP2C19) düzeyi artırır', 'Güçlü CYP3A4 inhibitörleri düzeyi artırır', 'Karbamazepin, fenitoin, rifampisin düzeyi düşürür'],
+    ozel: [{
+      baslik: 'Alkol yoksunluğunda kullanım', etiket: 'Türkiye KÜB\'ünde endike (tablet, ampul) · FDA onaylı',
+      uyari: ALKOL_UYARI, giris: ALKOL_GIRIS + ' Diazepam uzun yarı ömrü sayesinde kendiliğinden azalır, nöbet koruması uzun sürer; ilk seçeneklerdendir.',
+      tablo: { bas: ['Yaklaşım', 'Doz ve uygulama', 'Ne zaman · not'], satir: [
+        ['Semptom tetiklemeli', 'CIWA-Ar ≥ 10 ise 10–20 mg ağızdan; ölçek 1 saat sonra yinelenir, gerekirse doz tekrarlanır', 'Saatlik ölçek izlemi yapılabilen yatan hastada tercih edilir; toplam doz ve süre daha kısadır. Türkiye KÜB\'ü: gerekirse 2–4 saat arayla 5–20 mg.'],
+        ['Sabit doz azaltma', '1. gün 10 mg ×4 · 2. gün 10 mg ×3 · 3. gün 5 mg ×4 · 4. gün 5 mg ×3 · 5. gün 5 mg ×2 · 6. gün 5 mg gece, sonra kesilir', 'Sık ölçek izlemi yapılamıyorsa ya da ayaktan arınmada; belirtiye göre 5–10 mg ek doz. Ağır bağımlılıkta başlangıç dozu daha yüksek olabilir.'],
+        ['Yükleme dozu', '20 mg ağızdan, 1–2 saatte bir, CIWA-Ar < 10 ve hafif sedasyon sağlanana dek', 'Nöbet ya da deliryum tremens öyküsü veya ağır yoksunlukta (yatan hasta); nöbet öyküsünde en az 3 doz. Sonra çoğunlukla ek doz gerekmez.'],
+        ['Deliryum tremens', '10–20 mg IV, yavaş (dakikada en çok 5 mg), 5–10 dakikada bir hafif sedasyon sağlanana dek', 'Yoğun bakım ya da yakın izlem, solunum desteği hazır. IM emilimi düzensizdir. Türkiye KÜB\'ü (ampul): 10–20 mg IM/IV, şiddete göre daha yüksek dozlar.']
+      ] },
+      not: ['Ciddi karaciğer yetmezliğinde kontrendikedir (Türkiye KÜB\'ü); ileri yaşta, karaciğer hastalığında ve solunum yetmezliğinde birikim riski: lorazepam tercih edilir.', 'DİAZEM ampul etanol ve propilen glikol içerir; disülfiram kullanan hastaya verilmez (Türkiye KÜB\'ü).'].concat(ALKOL_NOT),
+      ilgili: ['lorazepam', 'naltrekson', 'nalmefen']
+    }],
     oz: ['benzo', 'uzun']
   },
   {
@@ -292,6 +334,11 @@
     kutu: 'Kötüye kullanım, bağımlılık ve kesilme reaksiyonları; opioidlerle birlikte kullanımda solunum depresyonu ve ölüm riski.',
     uyari: ['Sedasyon, dikkat ve bellek bozukluğu', 'Doz arası rebound anksiyete', 'Paradoksal disinhibisyon', 'Tolerans ve bağımlılık (diğer benzodiazepinlerden yüksek)'],
     etkilesim: ['Ketokonazol, itrakonazol ile kontrendike (düzey 3–4 kat)', 'Fluvoksamin düzeyi 2 kat artırır: dozu yarıya indirin', 'Klaritromisin, eritromisin, greyfurt suyu düzeyi artırır', 'Karbamazepin düzeyi düşürür', 'Opioid, alkol ve sedatiflerle solunum depresyonu'],
+    ozel: [{
+      baslik: 'Alkol yoksunluğunda kullanım', etiket: 'önerilmez', onaysiz: true,
+      giris: 'Alprazolam alkol yoksunluğunda önerilmez: kısa etki süresi doz aralarında yoksunluk belirtilerine ve nöbet riskine yol açar, kötüye kullanım potansiyeli yüksektir. Diazepam ya da (ileri yaş, karaciğer hastalığı) lorazepam kullanın.',
+      ilgili: ALKOL_ILGILI
+    }],
     oz: ['benzo']
   },
   {

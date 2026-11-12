@@ -22,7 +22,8 @@
 
   var ILAC = {};
   window.ILACLAR.forEach(function (i) { ILAC[i.id] = i; });
-  var SINIF_SIRA = ['ad', 'dehb', 'ap', 'dd', 'anks'];
+  var SINIF_SIRA = ['ad', 'dehb', 'ap', 'dd', 'anks', 'diger'];
+  var DEGISIM_DISI = { diger: true }; // bağımlılık ve antikolinerjik ilaçlar için sınıflar arası geçiş planı anlamlı değil
   var G = window.Grafik;
 
   var durum = { arama: '', sinif: 'hepsi', onayli: false, yas: 'ped', izlem: 'antipsikotik' };
@@ -126,8 +127,15 @@
       (fark.length ? '<div class="alt-b">Türkiye KÜB\'ünde farklı olanlar</div><ul class="notlar tr-fark">' + fark.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '') +
       '<div class="kutular metin-kutular">' + dozlar.map(function (d) { return kutu(d[0], d[1]); }).join('') +
       kutu('Böbrek yetmezliği (KÜB)', t.organ.bobrek) + kutu('Karaciğer yetmezliği (KÜB)', t.organ.karaciger) + '</div>' +
-      '<p class="kucuk tr-satir">Kaynak: <a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.urun) + ' KÜB\'ü</a> · ' + esc(t.firma) + ' · KÜB onay tarihi ' + esc(t.tarih) +
-      '. Aynı etkin maddenin diğer ürünlerinde endikasyon ve formlar farklı olabilir; reçeteden önce güncel KÜB\'e bakın.</p></details>';
+      (t.kaynaklar && t.kaynaklar.length
+        ? '<p class="kucuk tr-satir">Kaynak KÜB\'ler (her form için en güncel): ' + t.kaynaklar.map(function (k) {
+            return esc(k.form) + ': <a href="' + esc(k.url) + '" target="_blank" rel="noopener">' + esc(k.urun) + '</a> (' + esc(k.tarih) + ')';
+          }).join(' · ') + '. Aynı formun diğer ürünlerinde de ifadeler farklı olabilir; reçeteden önce ürünün güncel KÜB\'üne bakın.</p>'
+        : '<p class="kucuk tr-satir">Kaynak: <a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.urun) + ' KÜB\'ü</a> · ' + esc(t.firma) + ' · KÜB onay tarihi ' + esc(t.tarih) +
+          '. Aynı etkin maddenin diğer ürünlerinde endikasyon ve formlar farklı olabilir; reçeteden önce güncel KÜB\'e bakın.</p>') +
+      (t.ek && t.ek.length ? '<p class="kucuk tr-satir">Kombinasyon ürünlerinin KÜB\'leri: ' + t.ek.map(function (e) {
+        return '<a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.urun) + '</a> (' + esc(e.tarih) + ')';
+      }).join(' · ') + '</p>' : '') + '</details>';
     return h + '</div>';
   }
 
@@ -330,7 +338,7 @@
       '<p>Psikiyatrik ilaçlarda başlama, titrasyon, sürdürüm, kesme ve ilaç değişimi için görsel karar desteği. ' +
       (eri() ? 'Erişkin dozları, onaylı endikasyonlar ve izlem tetkikleri öne çıkarılır; çocuk-ergen şemaları da her ilaçta yer alır.</p>'
         : 'Çocuk ve ergen dozları, onay yaşları ve izlem tetkikleri her ilaçta ayrıca gösterilir.</p>') +
-      '<p class="kucuk">' + window.ILACLAR.length + ' ilaç · 5 sınıf · ' + window.DEPOLAR.length + ' uzun etkili enjektabl · titrasyon ve kesme grafikleri · izlem matrisleri · CYP haritası · değişim planlayıcı</p></div>' +
+      '<p class="kucuk">' + window.ILACLAR.length + ' ilaç · ' + Object.keys(window.SINIFLAR).length + ' sınıf · ' + window.DEPOLAR.length + ' uzun etkili enjektabl · titrasyon ve kesme grafikleri · izlem matrisleri · CYP haritası · değişim planlayıcı</p></div>' +
       '<div class="dongu">' +
       [['basla', 'Başlama', 'Başlangıç tetkiki, onam, düşük doz'], ['artir', 'Titrasyon', 'Basamaklı artış, hedef doz'], ['surdur', 'Sürdürüm', 'İzlem, etkin en düşük doz'], ['azalt', 'Kesme / değişim', 'Kademeli azaltım, geçiş']]
         .map(function (a) { return '<div class="dongu-adim"><div class="dongu-simge">' + SIMGE[a[0]] + '</div><b>' + a[1] + '</b><span>' + a[2] + '</span></div>'; }).join('') +
@@ -397,11 +405,17 @@
       '<div class="kutu"><div class="ad">Hedef doz</div><div class="deger">' + esc(d.hedef) + '</div></div>' +
       '<div class="kutu"><div class="ad">Maksimum</div><div class="deger">' + esc(d.maks) + '</div></div>' +
       '</div>' + (d.not && d.not.length ? liste(d.not) : '') + '</div>';
+    if (!d.adim || !d.adim.length) { // bu yaş grubunda önerilmeyen ya da titre edilmeyen (acil, gerektiğinde) ilaçlar: şema yerine açıklama
+      h += '<div>' + (d.semaNot
+        ? '<div class="cagri bilgi">' + SIMGE.bilgi + '<div>' + esc(d.semaNot) + '</div></div>'
+        : '<div class="cagri uyari">' + SIMGE.uyari + '<div><b>' + (durum.yas === 'ped' ? 'Çocuk ve ergende' : 'Erişkinde') + ' titrasyon şeması verilmemiştir.</b> ' + esc(d.bas) + '</div></div>') + '</div></div>';
+    } else {
     h += '<div><div class="grafik-kutu"><div class="grafik-baslik">Titrasyon şeması · ' + (durum.yas === 'ped' ? 'çocuk / ergen' : 'erişkin') + '</div>' +
       '<div class="grafik-alt">Doz (' + esc(d.birim) + ') · örnek basamaklar; yanıt ve tolerabiliteye göre bireyselleştirilir</div>' +
       G.titrasyon(d, r) +
       '<div class="lejant"><span><i style="--renk:' + r + '"></i>Doz basamakları</span><span><i class="bant" style="--renk:' + r + '"></i>Hedef aralık</span>' +
       '<span><i class="kesik" style="--renk:var(--kritik)"></i>Maksimum doz</span></div></div></div></div>';
+    }
 
     if (durum.yas === 'ped' && i.endikasyon) {
       h += '<div class="alt-b">Endikasyona / duruma göre doz</div><div class="matris-sar"><table class="matris"><thead><tr><th>Durum</th><th>Başlangıç</th><th>Hedef</th><th style="text-align:left">Titrasyon</th></tr></thead><tbody>' +
@@ -417,6 +431,24 @@
       h += '</div>';
     }
     return h;
+  }
+
+  /* Özel kullanım paneli: ana endikasyon dışında psikiyatride sık başvurulan kullanım şekli (ör. alkol yoksunluğunda benzodiazepin) */
+  function ozelKullanim(i) {
+    return (i.ozel || []).map(function (o) {
+      var h = '<div class="ozel-kullanim"><div class="alt-b">' + esc(o.baslik) + (o.etiket ? ' <span class="etiket' + (o.onaysiz ? ' onaysiz' : '') + '">' + esc(o.etiket) + '</span>' : '') + '</div>';
+      if (kt(o.uyari)) h += '<div class="cagri uyari">' + SIMGE.uyari + '<div>' + esc(kt(o.uyari)) + '</div></div>';
+      if (kt(o.giris)) h += '<p class="metin">' + esc(kt(o.giris)) + '</p>';
+      if (o.tablo) {
+        h += '<div class="matris-sar"><table class="matris"><thead><tr>' + o.tablo.bas.map(function (b, n) { return '<th' + (n === 2 ? ' style="text-align:left"' : '') + '>' + esc(b) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+          window.kitleDizi(o.tablo.satir, kitle).map(function (r) {
+            return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td class="aciklama" style="width:40%">' + esc(r[2]) + '</td></tr>';
+          }).join('') + '</tbody></table></div>';
+      }
+      if (o.not) h += liste(o.not);
+      if (o.ilgili) h += '<p class="kucuk">İlgili sayfalar: ' + o.ilgili.filter(function (k) { return ILAC[k]; }).map(function (k) { return '<a href="#/ilac/' + k + '">' + esc(ILAC[k].ad) + '</a>'; }).join(' · ') + '</p>';
+      return h + '</div>';
+    }).join('');
   }
 
   function sayfaIlac(id) {
@@ -449,7 +481,7 @@
       '<div class="sekmeler" id="yasSekme">' + (eri() ? ['eri', 'ped'] : ['ped', 'eri']).map(function (y) {
         return '<button data-yas="' + y + '" class="' + (durum.yas === y ? 'aktif' : '') + '">' + (y === 'ped' ? 'Çocuk / ergen' : 'Erişkin') + '</button>';
       }).join('') + '</div>' +
-      '<div id="dozAlan">' + dozBolumu(i) + '</div></section>';
+      '<div id="dozAlan">' + dozBolumu(i) + '</div>' + ozelKullanim(i) + '</section>';
 
     // 2 Sürdürüm
     h += '<section class="kart bolum" id="surdurum" style="--sinif:' + r + '"><h2><span class="no">2</span>Sürdürüm</h2>' +
@@ -490,8 +522,10 @@
       window.DEPOLAR.filter(function (d) { return d.oral === i.id; }).map(function (d) {
         return '<div class="cagri bilgi">' + SIMGE.bilgi + '<div><b>Uzun etkili enjektabl formu var:</b> <a href="#/depo/' + d.id + '">' + esc(d.ad) + '</a> · ' + esc(d.aralik.toLocaleLowerCase('tr')) + ' · oral formdan geçiş şeması ve doz dönüşümü için tıklayın.</div></div>';
       }).join('') +
-      '<div class="secici" style="grid-template-columns:1fr auto"><div><label for="hedefIlac">Geçilecek ilaç</label>' + ilacSecimi('hedefIlac', '', i.id, i.sinif) + '</div>' +
-      '<button class="cip aktif" id="gecisDugme" style="height:44px">Geçiş planını göster →</button></div></section>';
+      (DEGISIM_DISI[i.sinif]
+        ? '<div class="cagri bilgi">' + SIMGE.bilgi + '<div>' + esc(i.gecisNotu || 'Bu ilaç için değişim planlayıcıda geçiş şeması tanımlı değildir; geçişi ilgili kılavuza göre planlayın.') + '</div></div></section>'
+        : '<div class="secici" style="grid-template-columns:1fr auto"><div><label for="hedefIlac">Geçilecek ilaç</label>' + ilacSecimi('hedefIlac', '', i.id, i.sinif) + '</div>' +
+          '<button class="cip aktif" id="gecisDugme" style="height:44px">Geçiş planını göster →</button></div></section>');
 
     icerik.innerHTML = h;
 
@@ -501,7 +535,7 @@
       Array.prototype.forEach.call(this.children, function (c) { c.classList.toggle('aktif', c === b); });
       $('#dozAlan').innerHTML = dozBolumu(i);
     };
-    $('#gecisDugme').onclick = function () { var v = $('#hedefIlac').value; if (v) location.hash = '#/degisim/' + i.id + '/' + v; };
+    if ($('#gecisDugme')) $('#gecisDugme').onclick = function () { var v = $('#hedefIlac').value; if (v) location.hash = '#/degisim/' + i.id + '/' + v; };
     Array.prototype.forEach.call(icerik.querySelectorAll('[data-kaydir]'), function (a) {
       a.onclick = function (e) { e.preventDefault(); $('#' + a.dataset.kaydir).scrollIntoView({ behavior: 'smooth', block: 'start' }); };
     });
@@ -510,9 +544,10 @@
   /* ───────────── SAYFA: ilaç değişimi ───────────── */
   function ilacSecimi(id, secili, haric, onceSinif) {
     var sira = SINIF_SIRA.slice();
-    if (onceSinif) { sira.splice(sira.indexOf(onceSinif), 1); sira.unshift(onceSinif); }
+    if (onceSinif && !DEGISIM_DISI[onceSinif]) { sira.splice(sira.indexOf(onceSinif), 1); sira.unshift(onceSinif); }
     var h = '<select id="' + id + '"><option value="">Seçiniz…</option>';
     sira.forEach(function (k) {
+      if (DEGISIM_DISI[k]) return;
       h += '<optgroup label="' + window.SINIFLAR[k].ad + '">';
       window.ILACLAR.filter(function (i) { return i.sinif === k && i.id !== haric; }).forEach(function (i) {
         h += '<option value="' + i.id + '"' + (i.id === secili ? ' selected' : '') + '>' + esc(i.ad) + '</option>';
@@ -547,6 +582,8 @@
 
   function degisimSonuc(a, b) {
     var el = $('#degisimSonuc');
+    if (a && DEGISIM_DISI[a.sinif]) a = null; // seçim kutusunda yer almayan sınıflar adresten de planlanmaz
+    if (b && DEGISIM_DISI[b.sinif]) b = null;
     if (!a || !b) {
       el.innerHTML = '<section class="kart bolum"><h2>Dört temel geçiş stratejisi</h2><div class="alt-baslik">Gri çizgi eski ilacı, mavi çizgi yeni ilacı gösterir.</div>' + stratejiKartlari(null) +
         '<div class="cagri bilgi">' + SIMGE.bilgi + '<div>Strateji seçimini belirleyenler: eski ilacın yarı ömrü ve kesilme riski, iki ilacın farmakodinamik/farmakokinetik etkileşimi, hastalığın ağırlığı ve nüks riski. ' + (eri() ? 'İleri yaşta ve eş hastalıkta geçişler daha yavaş yapılır.' : 'Çocuk ve ergende geçişler genellikle daha yavaş yapılır.') + '</div></div></section>';
@@ -656,7 +693,8 @@
 
   /* ───────────── SAYFA: tetkik ve izlem ───────────── */
   var IZLEM_SINIF = { ssri: 'ad', snri: 'ad', tca: 'ad', mirtazapin: 'ad', bupropion: 'ad', trazodon: 'ad', stimulan: 'dehb', atomoksetin: 'dehb', alfa2: 'dehb',
-    antipsikotik: 'ap', klozapin: 'ap', lityum: 'dd', valproat: 'dd', lamotrijin: 'dd', karbamazepin: 'dd', benzo: 'anks', melatonin: 'anks', hidroksizin: 'anks', buspiron: 'anks' };
+    antipsikotik: 'ap', klozapin: 'ap', lityum: 'dd', valproat: 'dd', lamotrijin: 'dd', karbamazepin: 'dd', benzo: 'anks', melatonin: 'anks', hidroksizin: 'anks', buspiron: 'anks',
+    naltrekson: 'diger', nalmefen: 'diger', buprenorfin: 'diger', nalokson: 'diger', antikolinerjik: 'diger', propranolol: 'diger', metformin: 'diger', prazosin: 'diger' };
 
   function sayfaIzlem() {
     var h = '<section class="kart bolum"><h2>Tetkik ve izlem çizelgeleri</h2>' +

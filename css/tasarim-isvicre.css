@@ -20,7 +20,7 @@
   --murekkep: #000000; --murekkep-2: #3b3b3b; --soluk: #6b6b6b;
   --cizgi: #dcdcdc; --eksen: #9c9c9c; --kenar: transparent; --golge: none;
   --vurgu: #d4000f; --vurgu-zemin: #fde9ea;
-  --s-ad: #0a5be0; --s-dehb: #f08a00; --s-ap: #5b2bb5; --s-dd: #00976a; --s-anks: #e8478a;
+  --s-ad: #0a5be0; --s-dehb: #f08a00; --s-ap: #5b2bb5; --s-dd: #00976a; --s-anks: #e8478a; --s-diger: #0e8075;
   --ton-1: #e8e8e8; --ton-2: #a8a8a8; --ton-3: #5a5a5a; --ton-4: #000000;
   --iyi: #00976a; --uyari: #f5a800; --ciddi: #f07a2a; --kritik: #d4000f;
   --kritik-zemin: #fde9ea; --uyari-zemin: #fff4d6; --iyi-zemin: #e3f4ed;
@@ -33,7 +33,7 @@
     --murekkep: #ffffff; --murekkep-2: #c8c8c8; --soluk: #8f8f8f;
     --cizgi: #2e2e2e; --eksen: #5c5c5c;
     --vurgu: #ff4438; --vurgu-zemin: #3a1312;
-    --s-ad: #4d8dff; --s-dehb: #ff9f1c; --s-ap: #9a7bff; --s-dd: #1fc48b; --s-anks: #ff6fa8;
+    --s-ad: #4d8dff; --s-dehb: #ff9f1c; --s-ap: #9a7bff; --s-dd: #1fc48b; --s-anks: #ff6fa8; --s-diger: #2cc5b3;
     --ton-1: #262626; --ton-2: #555555; --ton-3: #a0a0a0; --ton-4: #ffffff;
     --kritik: #ff4438; --kritik-zemin: #3a1312; --uyari-zemin: #3a2c08; --iyi-zemin: #0f2e22;
     --rol-sub: #4d8dff; --rol-inh: #ff4438; --rol-ind: #1fc48b;
@@ -45,7 +45,7 @@
   --murekkep: #ffffff; --murekkep-2: #c8c8c8; --soluk: #8f8f8f;
   --cizgi: #2e2e2e; --eksen: #5c5c5c;
   --vurgu: #ff4438; --vurgu-zemin: #3a1312;
-  --s-ad: #4d8dff; --s-dehb: #ff9f1c; --s-ap: #9a7bff; --s-dd: #1fc48b; --s-anks: #ff6fa8;
+  --s-ad: #4d8dff; --s-dehb: #ff9f1c; --s-ap: #9a7bff; --s-dd: #1fc48b; --s-anks: #ff6fa8; --s-diger: #2cc5b3;
   --ton-1: #262626; --ton-2: #555555; --ton-3: #a0a0a0; --ton-4: #ffffff;
   --kritik: #ff4438; --kritik-zemin: #3a1312; --uyari-zemin: #3a2c08; --iyi-zemin: #0f2e22;
   --rol-sub: #4d8dff; --rol-inh: #ff4438; --rol-ind: #1fc48b;

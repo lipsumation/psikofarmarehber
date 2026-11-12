@@ -4,6 +4,8 @@ Rehberdeki her ilacın endikasyon ve doz bilgisi, Türkiye'de ruhsatlı **bir** 
 
 - **Kaynak:** TİTCK KÜB/KT veritabanı (https://www.titck.gov.tr/kubkt). Her etkin madde için tercihen orijinal ürünün, yoksa bir muadilin en güncel KÜB'ü kullanıldı (ağızdan alınan form).
 - **Karşılaştırılan bölümler:** 4.1 Terapötik endikasyonlar ve 4.2 Pozoloji (gerektiğinde 4.3–4.4).
+- **Kombinasyon ürünleri:** Her etkin maddenin Türkiye'deki kombinasyon ürünleri de tarandı. Psikiyatrik açıdan önemli tek kombinasyon olanzapin + fluoksetin: TARGET, REXAPİN PRO, RELİXAN ve OSHINE erişkinde bipolar I depresyon ve tedaviye dirençli depresyonda, REXAPİN PRO ayrıca 10–17 yaşta bipolar I depresyonda ruhsatlı. (İlk sürümde bu ürünler atlanmış ve fluoksetin/olanzapinde kombinasyon endikasyonları yanlışlıkla "Türkiye'de yok" diye yazılmıştı; düzeltildi.)
+- **Formlar:** İlk karşılaştırma her etkin madde için tek bir ürüne dayanıyordu. Ardından Türkiye'de ruhsatlı her ağızdan alınan formun (tablet, kapsül, oral çözelti/şurup, damla, ağızda dağılan, uzatılmış salımlı) en güncel KÜB'ü de incelendi; formlar arasında endikasyon veya pediatrik kullanım farklıysa ilaç bölümünde "Form bazında inceleme" notu verildi. Bu not, aynı bölümdeki ilk (tek ürüne dayanan) bulgularla çelişirse geçerli olandır.
 - **Karşılaştırılan alanlar:** erişkin ve pediatrik endikasyonlar, erişkin ve çocuk-ergen başlangıç/maksimum doz, böbrek ve karaciğer yetmezliğinde doz.
 - **Yöntem:** KÜB metinleri PDF'ten çıkarıldı; karşılaştırma yapay zekâ destekli yapıldı. Her bulgudaki alıntının KÜB metninde birebir geçtiği betikle doğrulandı; bir kısmı ayrıca elle kontrol edildi. Klinik karar için ilgili KÜB'ün kendisine bakın.
 
@@ -12,17 +14,17 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 | Tür | Anlamı | Sayı |
 |---|---|---|
 | Hata | Rehberdeki bilgi KÜB ile çelişiyor ve FDA/kılavuz farkıyla açıklanamıyor | 0 |
-| Fark | Türkiye KÜB'ü rehberin dayandığı FDA bilgisinden farklı (endikasyon, yaş sınırı, maksimum doz) | 88 |
+| Fark | Türkiye KÜB'ü rehberin dayandığı FDA bilgisinden farklı (endikasyon, yaş sınırı, maksimum doz) | 86 |
 | Eksik | KÜB'de olup rehberde olmayan klinik açıdan önemli bilgi | 19 |
-| Bilgi | Küçük ya da belirsiz farklar | 28 |
+| Bilgi | Küçük ya da belirsiz farklar | 30 |
 
 ## Özet
 
 - **48 ilaç** incelendi; **7 ilacın** Türkiye'de ruhsatlı ürünü (KÜB kaydı) yok: Desvenlafaksin, Lisdeksamfetamin, Klonidin, Deksmetilfenidat, Amfetamin (karışık tuzlar), Viloksazin, Asenapin.
 - Doğrudan hata sayılacak sayısal bir uyuşmazlık bulunmadı. Rehberdeki bir ifade KÜB'le çeliştiği için düzeltildi (aşağıda).
-- **18 yaş altı:** FDA'nın pediatrik onay verdiği pek çok ilacın Türkiye KÜB'ü 18 yaş altında kullanımı önermiyor ya da kontrendike sayıyor (ör. fluoksetin, essitalopram, duloksetin, ketiapin, risperidon şizofreni/mani için, trazodon, imipramin).
+- **18 yaş altı:** FDA'nın pediatrik onay verdiği pek çok ilacın Türkiye KÜB'ü 18 yaş altında kullanımı önermiyor ya da kontrendike sayıyor (ör. essitalopram — tablet, damla ve oral çözelti dahil —, duloksetin, ketiapin, risperidon şizofreni/mani için, trazodon, imipramin). Fluoksetinde kapsül KÜB'leri 18 yaş altında önermezken oral çözelti 8 yaş ve üzerinde orta–şiddetli majör depresyonda ruhsatlıdır.
 - **Türkiye'de olup FDA'da olmayan endikasyonlar:** essitalopram (panik, sosyal anksiyete, OKB), sitalopram (panik, OKB), fluvoksamin (depresyon), klomipramin (depresyon, fobi, panik), haloperidol (mani, deliryum, ajitasyon, demansta inatçı saldırganlık), risperidon (davranım ve yıkıcı davranış bozukluklarında saldırganlık), klozapin (Parkinson psikozu), pimozid (kronik şizofreni), lityum (unipolar depresyon idamesi, şizoaffektif bozukluk), lorazepam (uykusuzluk).
-- **FDA'da olup Türkiye'de olmayan endikasyonlar:** fluoksetin (panik, olanzapinle kombinasyonlar), olanzapin (fluoksetinle kombinasyonlar), kariprazin (mani, MDB'de ek tedavi), brekspiprazol (MDB'de ek tedavi, Alzheimer ajitasyonu), karbamazepin (akut mani; TR'de lityuma yanıtsız bipolar profilaksi), klonazepam ve alprazolam (panik bozukluk), hidroksizin (premedikasyon; çocukta anksiyete).
+- **FDA'da olup Türkiye'de olmayan endikasyonlar:** fluoksetin (panik bozukluk), kariprazin (mani, MDB'de ek tedavi), brekspiprazol (REXULTI KÜB'ünde MDB ek tedavi ve Alzheimer ajitasyonu yok; daha yeni REBEXİP KÜB'ünde var), karbamazepin (akut mani; TR'de lityuma yanıtsız bipolar profilaksi), klonazepam ve alprazolam (panik bozukluk), hidroksizin (çocukta anksiyete; premedikasyon yalnız damla formunda).
 - **Maksimum doz farkları (TR daha düşük):** fluoksetin 60 mg, metilfenidat OROS 13–17 yaşta 54 mg, klorpromazin 300 mg (istisnai 600 mg), buspiron 45 mg, diazepam anksiyetede 30 mg, haloperidol ergende 5 mg, fluvoksamin çocukta 200 mg.
 
 ### Bu karşılaştırma sonrası rehberde yapılan düzeltmeler
@@ -37,7 +39,7 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 
 | İlaç | İncelenen ürün (KÜB tarihi) | Türkiye erişkin endikasyonları | Türkiye çocuk-ergen | F / E / B |
 |---|---|---|---|---|
-| [Fluoksetin](#fluoksetin) | [PROZAC 20 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kb_4ab07df8-3a8a-41a2-85ea-48ef264f1b4d.pdf) (21/12/2021) | Depresyon; OKB; Bulimiya nervoza; PMDB | 18 yaş altında kullanımı önerilmez. | 3 / 0 / 0 |
+| [Fluoksetin](#fluoksetin) | [PROZAC 20 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kb_4ab07df8-3a8a-41a2-85ea-48ef264f1b4d.pdf) (21/12/2021) | Depresyon; OKB; Bulimiya nervoza; PMDB; Bipolar I depresyon · olanzapinle sabit doz kombinasyonu; Tedaviye dirençli depresyon · olanzapinle sabit doz kombinasyonu | Bipolar I depresyon · 10–17 yaş (olanzapinle kombinasyon, yalnız REXAPİN PRO) | 3 / 0 / 0 |
 | [Sertralin](#sertralin) | [LUSTRAL 50 MG ÇENTIKLI FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LUSTRAL50mgentiklifilmkapltabletkub_20_01_2025.pdf) (19/01/2025) | Depresyon (nüks önleme dahil); OKB; Panik bozukluk (agorafobili/agorafobisiz); TSSB; Sosyal anksiyete; PMDB | OKB · ≥ 6 yaş | 0 / 0 / 0 |
 | [Essitalopram](#essitalopram) | [CIPRALEX 10 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/10kub_8bdb22b3-3328-4af6-95a5-c79f26746f2c.pdf) (19/07/2024) | Majör depresyon; Panik bozukluk (agorafobili/agorafobisiz); Sosyal anksiyete; Yaygın anksiyete; OKB | 18 yaş altında kullanılmamalıdır. | 1 / 2 / 0 |
 | [Sitalopram](#sitalopram) | [CIPRAM 20 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/CIPRAM20mgfilmkapltabletKB_4a9a812b-4833-4d33-8942-f1573f50be6b.pdf) (30/03/2023) | Depresyon (relaps/rekürens önleme dahil); Panik bozukluk (agorafobili/agorafobisiz); OKB | 18 yaş altında kullanılmamalıdır. | 0 / 1 / 1 |
@@ -66,7 +68,7 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 | [Modafinil](#modafinil) | [MODIODAL 100 MG TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ek3modiodalkubtemiz_62a5846a-04af-42df-8e59-403262b0d556.pdf) (30/05/2024) | Narkolepside aşırı uykululuk; Vardiyalı çalışma uyku bozukluğunda aşırı uykululuk; Obstrüktif uyku apnesinde birincil tedaviye rağmen süren aşırı uykululuk | 18 yaş altında kullanılmamalı. | 1 / 0 / 1 |
 | [Risperidon](#risperidon) | [RISPERDAL QUICKLET 1 MG AĞIZDA ÇÖZÜNÜR TABLET](https://titck.gov.tr/storage/kubKtAttachments/ddc0002a36308.pdf) (23/09/2014) | Şizofreni ve diğer psikotik durumlar (akut ve idame); Bipolar bozuklukta manik epizod | Davranım ve diğer yıkıcı davranış bozuklukları (agresyon ön planda) · 5–18 yaş; Otistik bozukluğa bağlı huzursuzluk/irritabilite · çocuk ve ergen (5 yaş altında yeterli deneyim yok) | 3 / 1 / 0 |
 | [Aripiprazol](#aripiprazol) | [MADEPZOL 20 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/MADEPZOL20mgtabletkub_11_12_2025.pdf) (04/12/2025) | Şizofreni (akut ve idame); Bipolar I akut manik epizod ve nüks önleme; Antidepresana dirençli majör depresyonda ek tedavi | Şizofreni · 13–17 yaş; Otistik bozuklukla ilişkili irritabilite · 6–17 yaş; Tourette · 6–18 yaş | 1 / 1 / 1 |
-| [Olanzapin](#olanzapin) | [ZYPREXA 5 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/zprexa5ek1kubbmed5mg_31_07_2025.pdf) (11/07/2025) | Şizofreni (akut ve idame); Bipolar orta-ağır manik dönem; Bipolar bozuklukta nüks önleme | Şizofreni · 13–17 yaş; Bipolar manik/mikst dönem · 13–17 yaş | 3 / 0 / 1 |
+| [Olanzapin](#olanzapin) | [ZYPREXA 5 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/zprexa5ek1kubbmed5mg_31_07_2025.pdf) (11/07/2025) | Şizofreni (akut ve idame); Bipolar orta-ağır manik dönem; Bipolar bozuklukta nüks önleme; Bipolar I depresyon · fluoksetinle sabit doz kombinasyonu; Tedaviye dirençli depresyon · fluoksetinle sabit doz kombinasyonu | Şizofreni · 13–17 yaş; Bipolar manik/mikst dönem · 13–17 yaş; Bipolar I depresyon · 10–17 yaş (fluoksetinle kombinasyon, yalnız REXAPİN PRO) | 1 / 0 / 3 |
 | [Ketiapin](#ketiapin) | [SEROQUEL 300 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/seroquel300Ek2_05_01_2026.2_KUB) (04/12/2025) | Şizofreni; Bipolar orta-ileri mani; Bipolar depresyon (majör depresif atak); Bipolar nüks önleme (ketiapine yanıt vermiş hastalarda) | 18 yaş altında yeterli veri olmadığından kullanımı önerilmez. | 2 / 0 / 2 |
 | [Klozapin](#klozapin) | [LEPONEX 25 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/JoU99ykZVpBuN.pdf) (24/04/2017) | Tedaviye dirençli (veya klasik antipsikotiklere intoleran) şizofreni; Şizofreni/şizoaffektif bozuklukta nükseden intihar davranışı riskinin azaltılması; Parkinson hastalığında psikoz (standart tedavi başarısızsa) | Pediyatrik çalışma yok; 16 yaş altında güvenlilik/etkililik belirlenmediğinden kullanılmamalı. | 3 / 1 / 0 |
 | [Haloperidol](#haloperidol) | [NORODOL 2 MG / ML ORAL DAMLA](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/TTCKOnaylKBNORODOLDAMLA_ec2d5eb6-8f7c-49e3-939f-854016551982.pdf) (02/10/2026) | Şizofreni ve şizoaffektif bozukluk; Akut deliryum (non-farmakolojik tedavi başarısızsa); Bipolar I orta-şiddetli manik atak; Psikotik bozukluk/bipolar maniye bağlı akut psikomotor ajitasyon; Orta-şiddetli Alzheimer ve vasküler demansta inatçı saldırganlık ve psikotik semptomlar; Tourette dahil tik bozuklukları (şiddetli, diğer tedaviler başarısızsa); Huntington hastalığında kore (psikiyatri dışı) | Şizofreni · 13–17 yaş (diğer tedaviler başarısız/tolere edilemiyorsa); Otizm/yaygın gelişimsel bozuklukta inatçı şiddetli saldırganlık · 6–17 yaş; Tourette dahil tik bozuklukları · 10–17 yaş (4.2 doz önerisi 12–17 yaş) | 3 / 1 / 1 |
@@ -102,20 +104,27 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 
 **İncelenen KÜB:** [PROZAC 20 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kb_4ab07df8-3a8a-41a2-85ea-48ef264f1b4d.pdf), LILLY İLAÇ TİCARET LİMİTED ŞİRKETİ · KÜB onay tarihi 21/12/2021
 
-- **TR erişkin endikasyonları:** Depresyon; OKB; Bulimiya nervoza; PMDB
-- **TR çocuk-ergen:** 18 yaş altında kullanımı önerilmez.
+**Formlara göre incelenen KÜB'ler:** kapsül: [PROZAC 20 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/kb_4ab07df8-3a8a-41a2-85ea-48ef264f1b4d.pdf) (21/12/2021) · kapsül: [ZEDPREX 20 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/ZEDPREX20mgkapslKB_fd90234d-dfcc-403a-9eda-011093e1229c.pdf) (29/04/2022) · oral çözelti / şurup: [PSENAC 20 MG/5 ML ORAL ÇÖZELTİ](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/PsenacKB_09_07_2026.pdf) (04/07/2026)
+
+> **Form bazında inceleme (güncel):** Oral çözelti (PSENAC 2026) eklendi: 8–18 yaş orta–şiddetli MDB endikasyonu ve pediatrik doz; PMDB yalnız kapsülde; pedNot ve pediatrik fark yeniden yazıldı.
+> “oral çözelti (PSENAC): 8 yaş ve üzeri çocuklar ve adolesanlar; 4-6 seans psikoterapiye yanıt vermeyen orta ila şiddetli majör depresif bozukluk tedavisinde endikedir.” · “oral çözelti (PSENAC): Orta ila şiddetli majör depresif bozukluğu olan bir çocuğa veya adolesana yalnızca psikoterapi ile birlikte kullanımı önerilmelidir.” · “oral çözelti (PSENAC): Başlangıç dozu, 2,5 mL PSENAC oral çözeltiyi olarak verilen 10 mg/gün’dür.”
+
+**Kombinasyon ürünlerinin KÜB'leri:** [REXAPİN PRO 6 MG/ 25 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub625_19_11_2025.pdf) (28/10/2025) · [RELİXAN 12 MG/50 MG SERT KAPSÜL](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kub_1f332029-08a4-44bc-a207-48a8dddcd177.pdf) (23/08/2024) · [TARGET 3 MG / 25MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf) (24/03/2011)
+
+- **TR erişkin endikasyonları:** Depresyon; OKB; Bulimiya nervoza; PMDB; Bipolar I depresyon · olanzapinle sabit doz kombinasyonu; Tedaviye dirençli depresyon · olanzapinle sabit doz kombinasyonu
+- **TR çocuk-ergen:** Bipolar I depresyon · 10–17 yaş (olanzapinle kombinasyon, yalnız REXAPİN PRO) — Tek başına fluoksetin 18 yaş altında önerilmez (PROZAC KÜB).
 - **TR erişkin doz:** başlangıç 20 mg/gün (bulimiya: 60 mg/gün; PMDB: sürekli ya da luteal faz 20 mg) · maksimum 60 mg/gün (depresyon, OKB); yaşlıda genelde ≤ 40 mg, en fazla 60 mg; 80 mg üzeri sistematik değerlendirilmemiş
 - **TR organ yetmezliği:** böbrek: Özel doz ayarı gerekmez. · karaciğer: Doz ya da doz sıklığı azaltılmalı (ör. gün aşırı 20 mg).
 
-- **Fark · Erişkin endikasyon.** Panik bozukluk ve olanzapin–fluoksetin kombinasyonu endikasyonları FDA onayıdır; incelenen TR KÜB'ünde yer almaz. doz_eriskin.not'taki 'Panik bozuklukta 10 mg ile başlayın' önerisi de TR açısından endikasyon dışıdır.
-  - Rehber: Panik bozukluk; Bipolar depresyon (olanzapin ile); Dirençli depresyon (olanzapin ile) · KÜB: Yalnızca depresyon, OKB, bulimiya nervoza ve PMDB; panik bozukluk ve olanzapin kombinasyonları yok
+- **Fark · Erişkin endikasyon.** Panik bozukluk FDA onayıdır; Türkiye'de fluoksetinin panik bozukluk endikasyonu yok. Olanzapinle kombinasyon endikasyonları (bipolar I depresyon, dirençli depresyon) Türkiye'de ayrı sabit doz kombinasyon ürünleriyle ruhsatlı (TARGET, REXAPİN PRO, RELİXAN, OSHINE). Düzeltme: ilk karşılaştırmada yalnız tek bileşenli ürünün KÜB'üne bakıldığı için kombinasyon ürünleri atlanmıştı.
+  - Rehber: Panik bozukluk; Bipolar depresyon (olanzapin ile); Dirençli depresyon (olanzapin ile) · KÜB: Tek başına: depresyon, OKB, bulimiya nervoza, PMDB (panik yok). Olanzapin + fluoksetin kombinasyonu: bipolar I depresyon, tedaviye dirençli depresyon.
   - KÜB'den: “PROZAC depresyon, obsesif-kompulsif bozukluk, bulimia nervoza ve pre-menstrüel disforik bozukluk tedavisinde endikedir.”
-  - Öneri: Bu üç endikasyonu 'TR'de ruhsatlı değil (yalnız FDA)' olarak işaretle.
+  - Öneri: Panik bozukluğu "Türkiye'de ruhsatlı değil (yalnız FDA)" olarak işaretle; olanzapinle kombinasyon endikasyonlarını Türkiye'de de ruhsatlı göster.
 - **Fark · Erişkin doz (maks).** FDA etiketi 80 mg/gün'e izin verir; TR KÜB'ü depresyon ve OKB'de üst sınırı 60 mg olarak verir ve 'Günde 80 mg’ın üzerindeki dozlar sistematik olarak değerlendirilmemiştir' der. Yaşlıda genelde 40 mg aşılmamalı.
   - Rehber: 80 mg/gün · KÜB: 60 mg/gün (yaşlıda genelde ≤ 40 mg)
   - KÜB'den: “20 mg’lık dozun yeterli olmadığı bazı hastalarda doz kademeli olarak maksimum 60 mg’a kadar artırılabilir”
   - Öneri: Maks alanına 'TR KÜB: 60 mg/gün (yaşlıda genelde ≤ 40 mg)' notu ekle.
-- **Fark · Pediatrik endikasyon.** İncelenen TR KÜB'ünde 4.1'de pediatrik endikasyon yok (5.1'de 8 yaş ve üzeri depresyon çalışmalarından söz ediliyor ama onay olarak değil). Uygulamadaki FDA pediatrik onayları ve çocuk-ergen doz şeması TR ruhsatında karşılıksız.
+- **Fark · Pediatrik endikasyon.** İncelenen TR KÜB'ünde 4.1'de pediatrik endikasyon yok (5.1'de 8 yaş ve üzeri depresyon çalışmalarından söz ediliyor ama onay olarak değil). Uygulamadaki FDA pediatrik onayları ve çocuk-ergen doz şeması TR ruhsatında karşılıksız. Olanzapinle sabit doz kombinasyonu REXAPİN PRO'nun KÜB'ü ise 10–17 yaşta bipolar I depresyon için doz veriyor (başlangıç 3/25 mg).
   - Rehber: Depresyon ≥ 8 yaş; OKB ≥ 7 yaş · KÜB: 18 yaş altında kullanımı önerilmez; pediatrik endikasyon yok
   - KÜB'den: “Pediyatrik popülasyon: Çocuklarda ve ergenlerde (18 yaşın altındaki) PROZAC kullanımı önerilmez.”
   - Öneri: Pediatrik bölüme 'TR KÜB: 18 yaş altında önerilmez' notu ekle.
@@ -124,6 +133,8 @@ Rehberdeki onay bilgileri bilerek **FDA** etiketine dayanır. Bu yüzden Türkiy
 #### Sertralin
 
 **İncelenen KÜB:** [LUSTRAL 50 MG ÇENTIKLI FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LUSTRAL50mgentiklifilmkapltabletkub_20_01_2025.pdf), VİATRİS İLAÇLARI LTD. ŞTİ. · KÜB onay tarihi 19/01/2025
+
+**Formlara göre incelenen KÜB'ler:** tablet: [LUSTRAL 50 MG ÇENTIKLI FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LUSTRAL50mgentiklifilmkapltabletkub_20_01_2025.pdf) (19/01/2025) · tablet: [MİSOL 100 MG FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/MSOLKBTEMZ_24_02_2026.pdf) (10/02/2026)
 
 - **TR erişkin endikasyonları:** Depresyon (nüks önleme dahil); OKB; Panik bozukluk (agorafobili/agorafobisiz); TSSB; Sosyal anksiyete; PMDB
 - **TR çocuk-ergen:** OKB · ≥ 6 yaş — OKB (6–17 yaş) dışında 18 yaş altında kullanılmamalıdır.
@@ -137,6 +148,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 #### Essitalopram
 
 **İncelenen KÜB:** [CIPRALEX 10 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/10kub_8bdb22b3-3328-4af6-95a5-c79f26746f2c.pdf), LUNDBECK İLAÇ TİC. LTD. ŞTİ. · KÜB onay tarihi 19/07/2024
+
+**Formlara göre incelenen KÜB'ler:** tablet: [CIPRALEX 10 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/10kub_8bdb22b3-3328-4af6-95a5-c79f26746f2c.pdf) (19/07/2024) · tablet: [MEDOLAPRAM 10 MG FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/MEDOLAPRAMKB_06_04_2026.pdf) (05/04/2026) · oral çözelti / şurup: [EGISIT 5MG/5ML ORAL ÇÖZELTI](https://titck.gov.tr/storage/kubKtAttachments/a3a6b67393476.pdf) (10/04/2015) · damla: [CELIANTE 10 MG/ML ORAL DAMLA](https://titck.gov.tr/storage/Archive/2019/kubKtAttachments/UYGUN-kub.pdf_8352d457-efb4-4619-bf2a-9c8e6923bfb6.pdf) (31/05/2019)
 
 - **TR erişkin endikasyonları:** Majör depresyon; Panik bozukluk (agorafobili/agorafobisiz); Sosyal anksiyete; Yaygın anksiyete; OKB
 - **TR çocuk-ergen:** 18 yaş altında kullanılmamalıdır.
@@ -161,6 +174,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 
 **İncelenen KÜB:** [CIPRAM 20 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/CIPRAM20mgfilmkapltabletKB_4a9a812b-4833-4d33-8942-f1573f50be6b.pdf), LUNDBECK İLAÇ TİC.LTD.ŞTİ. · KÜB onay tarihi 30/03/2023
 
+**Formlara göre incelenen KÜB'ler:** tablet: [CIPRAM 20 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/CIPRAM20mgfilmkapltabletKB_4a9a812b-4833-4d33-8942-f1573f50be6b.pdf) (30/03/2023) · tablet: [CİTOL 40 MG FİLM TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/1311kubtemizCTOL40_39e9bda8-c9af-42db-a0e6-0c9890694531.pdf) (02/06/2023)
+
 - **TR erişkin endikasyonları:** Depresyon (relaps/rekürens önleme dahil); Panik bozukluk (agorafobili/agorafobisiz); OKB
 - **TR çocuk-ergen:** 18 yaş altında kullanılmamalıdır.
 - **TR erişkin doz:** başlangıç 20 mg/gün (panik: ilk hafta 10 mg) · maksimum 40 mg/gün; yaşlı (> 65), CYP2C19 zayıf metabolizör, hafif–orta karaciğer yetmezliği: 20 mg/gün
@@ -179,6 +194,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 #### Fluvoksamin
 
 **İncelenen KÜB:** [FAVERIN 100 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ONAYLIKB_e6b8a83f-3574-4a71-8fcf-53043e209762.pdf), Abbott Laboratuarları İth. İhr. ve Tic. Ltd. Şti · KÜB onay tarihi 10/09/2024
+
+**Formlara göre incelenen KÜB'ler:** tablet: [FAVERIN 100 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ONAYLIKB_e6b8a83f-3574-4a71-8fcf-53043e209762.pdf) (10/09/2024)
 
 - **TR erişkin endikasyonları:** Majör depresyon; OKB
 - **TR çocuk-ergen:** OKB · > 8 yaş — Majör depresyonda 18 yaş altında kullanılmamalıdır.
@@ -204,6 +221,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 
 **İncelenen KÜB:** [SEROXAT 20 MG FILM TABLET](https://titck.gov.tr/storage/kubKtAttachments/0993127771286.pdf), NOVARTİS · KÜB onay tarihi 19/01/2015
 
+**Formlara göre incelenen KÜB'ler:** tablet: [SEROXAT 20 MG FILM TABLET](https://titck.gov.tr/storage/kubKtAttachments/0993127771286.pdf) (19/01/2015) · tablet: [PAXERA 10 MG FILM TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ONAYLIKB_93151e5a-e361-4fa0-a3f3-11db0a0acb10.pdf) (12/08/2024) · damla: [PAXOTİN 33,1 MG/ML DAMLA](https://titck.gov.tr/storage/kubKtAttachments/CRrsHwvwjPGL3.pdf) (12/10/2017)
+
 - **TR erişkin endikasyonları:** Depresyon (nüks önleme dahil); OKB; Panik bozukluk (agorafobili/agorafobisiz); Sosyal anksiyete; Yaygın anksiyete; TSSB
 - **TR çocuk-ergen:** 18 yaş altında endike değildir.
 - **TR erişkin doz:** başlangıç 20 mg/gün (OKB 20 mg → hedef 40 mg; panik 10 mg → hedef 40 mg) · maksimum 50 mg/gün (OKB ve panik: 60 mg/gün); yaşlıda 40 mg/gün
@@ -226,6 +245,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 #### Venlafaksin XR
 
 **İncelenen KÜB:** [EFEXOR XR 37,5 MG MIKROPELLET KAPSÜL](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/UYGUNKBEFEXOR375mg_a2c6032d-a123-4190-b4a7-b13a861b4982.pdf), PFİZER İLAÇLARI LTD. ŞTİ. · KÜB onay tarihi 06/11/2024
+
+**Formlara göre incelenen KÜB'ler:** uzatılmış / değiştirilmiş salımlı: [EFEXOR XR 37,5 MG MIKROPELLET KAPSÜL](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/UYGUNKBEFEXOR375mg_a2c6032d-a123-4190-b4a7-b13a861b4982.pdf) (06/11/2024) · kapsül: [BONİLUX 37.5MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/c71b6c4a56244.pdf) (16/05/2014) · uzatılmış / değiştirilmiş salımlı: [SULİNEX XR 225 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/sulinexxr225yaynlanacakkb_31_12_2025.pdf) (29/12/2025)
 
 - **TR erişkin endikasyonları:** Majör depresyon (nüks/yeni epizod önleme dahil); Yaygın anksiyete; Sosyal anksiyete; Panik bozukluk (agorafobili/agorafobisiz)
 - **TR çocuk-ergen:** Çocuk ve ergenlerde önerilmez; majör depresyonda kullanılmamalıdır.
@@ -254,6 +275,11 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 
 **İncelenen KÜB:** [CYMBALTA 30 MG GASTRO-REZISTAN SERT KAPSÜL](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/TTCKONAYLIKBCYMBALTA30MG_3e75efea-934f-4e81-9869-f0e0dc40c91c.pdf), LILLY İLAÇ TİCARET LİMİTED ŞİRKETİ · KÜB onay tarihi 11/03/2021
 
+**Formlara göre incelenen KÜB'ler:** uzatılmış / değiştirilmiş salımlı: [CYMBALTA 30 MG GASTRO-REZISTAN SERT KAPSÜL](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/TTCKONAYLIKBCYMBALTA30MG_3e75efea-934f-4e81-9869-f0e0dc40c91c.pdf) (11/03/2021) · kapsül: [NEXETİN 20 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/yayın nexetin 20 kub.pdf_6988bc6a-a2cd-4abf-81af-64d1f74d8475.pdf) (30/01/2020) · uzatılmış / değiştirilmiş salımlı: [KOMOX 40 MG GASTROREZİSTAN SERT KAPSÜL](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/UYGUNkbkomox40mg_30_04_2026.pdf) (29/04/2026)
+
+> **Form bazında inceleme (güncel):** 20 mg kapsül (NEXETİN) ve 40 mg gastro-rezistan kapsül (KOMOX) KÜB'lerindeki kadınlarda SÜİ endikasyonu erişkin listesine ve erişkin farka eklendi; pediatrik bilgi aynı.
+> “kapsül (NEXETİN 20 mg): NEXETİN, kadınlarda orta ve şiddetli Stres Üriner İnkontinans (SÜİ)’ın tedavisi ve SÜİ’ın baskın olduğu mikst üriner inkontinans” · “uzatılmış / değiştirilmiş salımlı (KOMOX 40 mg): KOMOX®, kadınlarda orta dereceli ve şiddetli Stres Üriner İnkontinans (SÜİ)’ın tedavisi” · “uzatılmış / değiştirilmiş salımlı (KOMOX 40 mg): KOMOX®’un güvenlik ve etkililik verilerinin yetersizliği nedeniyle 18 yaş altı çocuklarda ve adolesanlarda kullanımı önerilmemektedir”
+
 - **TR erişkin endikasyonları:** Majör depresyon; Yaygın anksiyete; Diyabetik periferik nöropatik ağrı; Fibromiyalji; Kronik kas-iskelet ağrısı; Kronik bel ağrısı; Osteoartrite bağlı kronik ağrı
 - **TR çocuk-ergen:** 18 yaş altında kullanılmamalıdır (7–17 yaş yaygın anksiyetede güvenlilik/etkililik belirlenmemiş).
 - **TR erişkin doz:** başlangıç Majör depresyon 60 mg/gün; yaygın anksiyete 30 mg/gün (eşlik eden depresyonda 60 mg); fibromiyalji/kronik ağrı 1 hafta 30 mg olabilir · maksimum 120 mg/gün (depresyonda 60 mg üzerinin ek yararı gösterilmemiş; fibromiyalji ve kronik ağrıda 60 mg üzeri yararsız)
@@ -269,6 +295,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 
 **İncelenen KÜB:** [REMERON 30 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/yaynlanacakremeron30mgtablet_cd9ab414-6ba4-4164-805a-2ad114870cd9.pdf), ORGANON TURKEY İLAÇLARI LİMİTED ŞİRKETİ · KÜB onay tarihi 30/03/2022
 
+**Formlara göre incelenen KÜB'ler:** tablet: [REMERON 30 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/yaynlanacakremeron30mgtablet_cd9ab414-6ba4-4164-805a-2ad114870cd9.pdf) (30/03/2022) · tablet: [MİRES 15 MG FILM KAPLı TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kbyaymlanacak_ab82c731-3839-423a-8eb8-f4024fde053b.pdf) (18/07/2024) · ağızda dağılan / dil altı: [VELORIN OD 30 MG AĞIZDA DAĞILAN TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/TTCKOnaylKBVELORN30_5f27ce18-46ea-49da-9c3c-26b51dc95644.pdf) (25/01/2024) · oral çözelti / şurup: [ZESTAT 15 MG/ML ORAL ÇÖZELTI](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/ZESTATKUB_e1654ea3-e3e7-4768-8150-126047b6186c.pdf) (23/03/2022)
+
 - **TR erişkin endikasyonları:** Majör depresyon
 - **TR çocuk-ergen:** 18 yaş altında kullanılmamalıdır.
 - **TR erişkin doz:** başlangıç 15 veya 30 mg/gün (tercihen gece) · maksimum 45 mg/gün (etkin aralık 15–45 mg)
@@ -283,6 +311,11 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 #### Bupropion XL
 
 **İncelenen KÜB:** [BUPRAPAN 450 MG UZATıLMIŞ SALıMLı TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/BUPRAPAN450mguzatlmsalmltabletkub_d10cee99-6cf5-4f9d-b334-14a7568bd7bc.pdf), LİBA LABORATUARLARI A.Ş. · KÜB onay tarihi 15/02/2024
+
+**Formlara göre incelenen KÜB'ler:** uzatılmış / değiştirilmiş salımlı: [BUPRAPAN 450 MG UZATıLMIŞ SALıMLı TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/BUPRAPAN450mguzatlmsalmltabletkub_d10cee99-6cf5-4f9d-b334-14a7568bd7bc.pdf) (15/02/2024) · uzatılmış / değiştirilmiş salımlı: [BUPRAPAN 150 MG UZATILMIŞ SALIMLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/BUPRAPAN150mguzatlmsalmltabletkub_22_06_2026.pdf) (20/06/2026) · tablet: [ZYBAN 150 MG YAVAŞ SALIMLI FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ZYBANKB_2ce114cb-e3a6-402a-aa94-8373687af15c.pdf) (12/08/2024)
+
+> **Form bazında inceleme (güncel):** Tablet formu (ZYBAN, 2024) eklendi: erişkinde sigara bırakma endikasyonu ve dozu; pediatrik durum değişmedi (iki form da 18 yaş altını dışlar).
+> “tablet (ZYBAN): ZYBAN, nikotin bağımlılığı tedavisinde sigarayı bırakmaya yardımcı olarak kullanılır.” · “tablet (ZYBAN): Başlangıç dozu ilk üç gün için günde bir kez alınan 150 mg’dır; daha sonra doz günde iki kez 150 mg’a artırılır.” · “tablet (ZYBAN): Maksimum tek doz 150 mg’ı aşmamalıdır ve toplam günlük doz 300 mg’ı aşmamalıdır.”
 
 - **TR erişkin endikasyonları:** Majör depresif atak
 - **TR çocuk-ergen:** 18 yaş altında kullanılmamalı (güvenlilik/etkililik belirlenmemiş). Not: incelenen KÜB bir muadile (450 mg XL) aittir.
@@ -315,6 +348,11 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 
 **İncelenen KÜB:** [DESYREL XL 150 MG UZATILMIŞ SALIMLI FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/DESYRELXL150mgUzatlmSalmlFilmKaplTabletKUB_063814ad-5ed1-43bc-a4fe-f6d30f9d38cd.pdf), ANGELİNİ İLAÇ SAN. VE TİC. A.Ş. · KÜB onay tarihi 30/04/2023
 
+**Formlara göre incelenen KÜB'ler:** uzatılmış / değiştirilmiş salımlı: [DESYREL XL 150 MG UZATILMIŞ SALIMLI FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/DESYRELXL150mgUzatlmSalmlFilmKaplTabletKUB_063814ad-5ed1-43bc-a4fe-f6d30f9d38cd.pdf) (30/04/2023) · uzatılmış / değiştirilmiş salımlı: [TRUMIO 150 MG UZATıLMış SALıMLı TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/KBTRUMIO_07_04_2026.pdf) (21/02/2026) · tablet: [DESYREL 100 MG FİLM TABLET](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/DESYREL100mgfilmtabletKUB_ee8e5f5c-e65c-4cdf-954c-87dfb56ba442.pdf) (30/04/2023) · kapsül: [AZONA 50 MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/NHnue1cwoDxS0.pdf) (27/11/2015)
+
+> **Form bazında inceleme (güncel):** Endikasyon aynı; IR tablet (DESYREL) ve kapsül (AZONA) KÜB'leri eklendi: IR'de hastanede 600 mg/gün'e dek doz, yaşlıda 100 mg başlangıç; kapsül KÜB'ü 18 yaş altını kontrendikasyon saymaz.
+> “tablet (DESYREL 100 mg): Hastaneye yatırılan hastalarda doz, bölünmüş dozlar halinde günde 600 mg’a kadar artırılabilir.” · “tablet (DESYREL 100 mg): Doz, tek doz veya bölünmüş dozlar halinde uygulanmak üzere günde 300 mg’a kadar artırılabilir.” · “tablet (DESYREL 100 mg): Çok yaşlı veya zayıf hastalarda önerilen başlangıç dozu, bölünmüş dozlar halinde veya tek doz halinde yatma vaktinde uygulanan 100 mg/gün’dür.”
+
 - **TR erişkin endikasyonları:** Depresif bozukluklar (anksiyete eşlik etsin ya da etmesin)
 - **TR çocuk-ergen:** 18 yaş ve altında kontrendike (güvenlilik verisi yok).
 - **TR erişkin doz:** başlangıç XL: 75–150 mg/gün (akşam tek doz); yaşlı/zayıf: 75 mg · maksimum XL: 300 mg/gün (3 günde bir 75 mg artış)
@@ -334,6 +372,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 
 **İncelenen KÜB:** [FONKSERA 15 MG FILM KAPLı TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/FONKSERA15MGKBONAY_0d54f904-39ff-4ac2-a534-fca3f0bbab5a.pdf), LUNDBECK İLAÇ TİC. LTD. ŞTİ. · KÜB onay tarihi 30/09/2026
 
+**Formlara göre incelenen KÜB'ler:** tablet: [FONKSERA 15 MG FILM KAPLı TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/FONKSERA15MGKBONAY_0d54f904-39ff-4ac2-a534-fca3f0bbab5a.pdf) (30/09/2026)
+
 - **TR erişkin endikasyonları:** Majör depresif epizot
 - **TR çocuk-ergen:** 18 yaş altında MDB'de kullanılmamalı (etkililik belirlenmemiş).
 - **TR erişkin doz:** başlangıç 10 mg/gün (≥ 65 yaş: 5 mg) · maksimum 20 mg/gün (en az 5 mg/gün)
@@ -348,6 +388,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 #### Klomipramin
 
 **İncelenen KÜB:** [ANAFRANİL-SR 75 MG BÖLÜNEBİLİR TABLET](https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/KBANAFRANL75MG_e06b97d0-73ed-4a93-b461-0e9c9bec37e3.pdf), TEOFARMA · KÜB onay tarihi 04/07/2020
+
+**Formlara göre incelenen KÜB'ler:** uzatılmış / değiştirilmiş salımlı: [ANAFRANİL-SR 75 MG BÖLÜNEBİLİR TABLET](https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/KBANAFRANL75MG_e06b97d0-73ed-4a93-b461-0e9c9bec37e3.pdf) (04/07/2020) · tablet: [ANAFRANİL 25 MG DRAJE](https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/KBANAFRANL25_67adbc65-e8df-4b55-853b-36c94f6afd0d.pdf) (04/07/2020)
 
 - **TR erişkin endikasyonları:** Depresyon; OKB; Fobiler; Panik atak / agorafobi; Narkolepsiye eşlik eden katapleksi (psikiyatri dışı); Kronik ağrılı durumlar (psikiyatri dışı)
 - **TR çocuk-ergen:** OKB · 10–17 yaş — OKB dışındaki endikasyonlarda 18 yaş altında önerilmez; 10 yaş altında deneyim yok.
@@ -373,6 +415,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 
 **İncelenen KÜB:** [TOFRANIL 25MG DRAJE](https://titck.gov.tr/storage/kubKtAttachments/8bYvlvSZm8xs1.pdf), ASSOS İLAÇ,KİMYA,GIDA ÜRÜNLERİ ÜRETİM VE TİC.A.Ş. · KÜB onay tarihi 03/11/2017
 
+**Formlara göre incelenen KÜB'ler:** tablet: [TOFRANIL 25MG DRAJE](https://titck.gov.tr/storage/kubKtAttachments/8bYvlvSZm8xs1.pdf) (03/11/2017)
+
 - **TR erişkin endikasyonları:** Depresyon (bipolar depresif faz, reaktif, maskelenmiş, nörotik, involüsyonel, şizofrenide ve organik hastalıklarda depresyon)
 - **TR çocuk-ergen:** 18 yaş altında kontrendike; enürezis endikasyonu yok.
 - **TR erişkin doz:** başlangıç Ayaktan: 25 mg × 1–3/gün; hastanede 25 mg × 3; yaşlı: 10 mg · maksimum Ayaktan 150–200 mg/gün; hastanede ağır vakalarda 300 mg/gün
@@ -395,6 +439,8 @@ Bulgu yok: rehber bilgisi KÜB ile uyumlu.
 #### Amitriptilin
 
 **İncelenen KÜB:** [LAROXYL 10 MG FILM KAPLı TABLET](https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TTCKKBLAROXYL10MG_d02515ea-bda5-4a38-aa3f-873b7d33ee04.pdf), DEVA HOLDING A.Ş. · KÜB onay tarihi 19/06/2020
+
+**Formlara göre incelenen KÜB'ler:** tablet: [LAROXYL 10 MG FILM KAPLı TABLET](https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TTCKKBLAROXYL10MG_d02515ea-bda5-4a38-aa3f-873b7d33ee04.pdf) (19/06/2020)
 
 - **TR erişkin endikasyonları:** Depresyon (özellikle endojen)
 - **TR çocuk-ergen:** Depresyon · adolesan (≥ 12 yaş) dozu tanımlı — 12 yaş altında önerilmez.
@@ -429,6 +475,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: DESVENLAFAKSIN); Türkiye'de r
 
 **İncelenen KÜB:** [VALDOXAN 25 MG FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/TTCKONAYLIKBVALDOXAN25TB_d215d021-bc5a-40a3-9ad2-d7e184461d7a.pdf), SERVİER İLAÇ VE ARAŞTIRMA A.Ş. · KÜB onay tarihi 03/06/2021
 
+**Formlara göre incelenen KÜB'ler:** tablet: [VALDOXAN 25 MG FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/TTCKONAYLIKBVALDOXAN25TB_d215d021-bc5a-40a3-9ad2-d7e184461d7a.pdf) (03/06/2021)
+
 - **TR erişkin endikasyonları:** Majör depresif hastalık
 - **TR çocuk-ergen:** 18 yaş altında kullanılmaz.
 - **TR erişkin doz:** başlangıç 25 mg/gün (yatmadan önce) · maksimum 50 mg/gün (2 hafta sonra yanıt yoksa; karaciğer testi izlemiyle)
@@ -447,6 +495,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: DESVENLAFAKSIN); Türkiye'de r
 #### Tianeptin
 
 **İncelenen KÜB:** [STABLON 12,5 MG KAPLI TABLET](https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TTCKOnaylKBSTABLON_f45ac40e-2f41-4090-b06d-4a805d3d48ec.pdf), SERVIER İLAÇ VE ARAŞTIRMA A.Ş. · KÜB onay tarihi 22/04/2020
+
+**Formlara göre incelenen KÜB'ler:** tablet: [STABLON 12,5 MG KAPLI TABLET](https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TTCKOnaylKBSTABLON_f45ac40e-2f41-4090-b06d-4a805d3d48ec.pdf) (22/04/2020)
 
 - **TR erişkin endikasyonları:** Majör depresyon
 - **TR çocuk-ergen:** 15 yaş altında kontrendike; 15–17 yaşta etkililik ve güvenlilik verisi yok.
@@ -472,6 +522,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: DESVENLAFAKSIN); Türkiye'de r
 #### Metilfenidat
 
 **İncelenen KÜB:** [CONCERTA 54 MG KONTROLLÜ SALIM TABLETİ](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kubtemiz2_e853ac1f-a573-4f30-9094-ba3937969703.pdf), JOHNSON AND JOHNSON SIHHİ MAL. SAN. VE TİC. LTD. ŞTİ. · KÜB onay tarihi 28/10/2026
+
+**Formlara göre incelenen KÜB'ler:** uzatılmış / değiştirilmiş salımlı: [CONCERTA 54 MG KONTROLLÜ SALIM TABLETİ](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kubtemiz2_e853ac1f-a573-4f30-9094-ba3937969703.pdf) (28/10/2026) · tablet: [RİTALİN 10 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/TTCKOnaylKBRTALN_04_07_2025.pdf) (04/07/2025)
+
+> **Form bazında inceleme (güncel):** IR tablet (RİTALİN, 2025) KÜB'ü eklendi: erişkinde narkolepsi endikasyonu ve IR pediatrik doz (5 mg × 1–2/gün, maks 60 mg/gün); erişkin DEHB yalnız uzatılmış salımlı KÜB'ünde.
+> “tablet (RİTALİN): RİTALİN, narkolepsiye eşlik eden aşırı uykululuk belirtilerinin tedavisinde endikedir.” · “tablet (RİTALİN): RİTALİN 6 yaş ve üzerindeki çocuklarda iyileştirici tedaviler tek başına yeterli olmadığında dikkat eksikliği hiperaktivite bozukluğu (DEHB) için kapsamlı tedavinin bir parçası olarak endikedir.” · “tablet (RİTALİN): 6 yaş ve üzeri çocuklarda günde bir veya iki defa (örneğin kahvaltıda ve öğlende) 5 mg (1/2 tablet) ile başlanır ve haftada 5 -10 mg’lık artışlarla kademeli olarak artırılır.”
 
 - **TR erişkin endikasyonları:** DEHB (18–65 yaş)
 - **TR çocuk-ergen:** DEHB · 6–17 yaş — 6 yaş altında kullanılmamalı. 65 yaş üstünde (yaşlılarda) kullanılmamalı. Diğer önlemler tek başına yetersiz kaldığında, kapsamlı tedavi programının parçası olarak ve DEHB'de uzman hekimce başlatılır.
@@ -506,6 +561,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: LISDEKSAMFETAMIN); Türkiye'de
 
 **İncelenen KÜB:** [STRATTERA 4 MG/ML ORAL ÇÖZELTİ](https://titck.gov.tr/storage/kubKtAttachments/w2tPoY3DlYQMR.pdf), LİLLY İLAÇ · KÜB onay tarihi 28/11/2016
 
+**Formlara göre incelenen KÜB'ler:** oral çözelti / şurup: [STRATTERA 4 MG/ML ORAL ÇÖZELTİ](https://titck.gov.tr/storage/kubKtAttachments/w2tPoY3DlYQMR.pdf) (28/11/2016) · oral çözelti / şurup: [SETİNOX 4 MG/ML ORAL ÇöZELTI](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/SETNOX4mgmLoralzeltikub_20_01_2025.pdf) (19/01/2025) · kapsül: [ATOMINEX 18 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/atominex18ek3kub_12_12_2025.pdf) (25/11/2025)
+
 - **TR erişkin endikasyonları:** DEHB (çocukluk çağı semptomları doğrulanmış erişkin)
 - **TR çocuk-ergen:** DEHB · ≥ 6 yaş — 6 yaş altında kullanılmamalı. Kapsamlı tedavi programının parçası olarak, uzman hekimce başlatılır.
 - **TR erişkin doz:** başlangıç 40 mg/gün; en az 7 gün sonra artış · maksimum 100 mg/gün (idame 80–100 mg)
@@ -525,6 +582,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: LISDEKSAMFETAMIN); Türkiye'de
 #### Guanfasin XR
 
 **İncelenen KÜB:** [ARİSLOW ER 1 MG UZATILMIŞ SALIMLI TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ARSLOWER1mguzatlmsalmltabletkub_e3066703-f8b7-4e74-b980-df74b97e4b22.pdf), ALİ RAİF İLAÇ SAN. AŞ. · KÜB onay tarihi 11/10/2024
+
+**Formlara göre incelenen KÜB'ler:** uzatılmış / değiştirilmiş salımlı: [ARİSLOW ER 1 MG UZATILMIŞ SALIMLI TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ARSLOWER1mguzatlmsalmltabletkub_e3066703-f8b7-4e74-b980-df74b97e4b22.pdf) (11/10/2024)
 
 - **TR çocuk-ergen:** DEHB · 6–17 yaş (uyarıcılar uygun değil, tolere edilemiyor veya etkisizse) — 6 yaş altında güvenlilik/etkililik belirlenmemiş. Erişkin ve yaşlı DEHB hastalarında kullanılmamalı. Ergenlerde vücut ağırlığı en az 34 kg olmalı; yalnızca tableti yutabilen çocuklarda.
 - **TR erişkin doz:** başlangıç Endikasyon yok; erişkinde kullanılmamalı · maksimum —
@@ -569,6 +628,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 
 **İncelenen KÜB:** [MODIODAL 100 MG TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ek3modiodalkubtemiz_62a5846a-04af-42df-8e59-403262b0d556.pdf), TEVA İLAÇLARI SAN. VE TİC. A.Ş. · KÜB onay tarihi 30/05/2024
 
+**Formlara göre incelenen KÜB'ler:** tablet: [MODIODAL 100 MG TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/ek3modiodalkubtemiz_62a5846a-04af-42df-8e59-403262b0d556.pdf) (30/05/2024)
+
 - **TR erişkin endikasyonları:** Narkolepside aşırı uykululuk; Vardiyalı çalışma uyku bozukluğunda aşırı uykululuk; Obstrüktif uyku apnesinde birincil tedaviye rağmen süren aşırı uykululuk
 - **TR çocuk-ergen:** 18 yaş altında kullanılmamalı.
 - **TR erişkin doz:** başlangıç 200 mg/gün (≥ 65 yaş: 100 mg); vardiyalıda vardiyadan ~1 saat önce · maksimum 400 mg/gün (tek ya da bölünmüş)
@@ -589,6 +650,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 #### Risperidon
 
 **İncelenen KÜB:** [RISPERDAL QUICKLET 1 MG AĞIZDA ÇÖZÜNÜR TABLET](https://titck.gov.tr/storage/kubKtAttachments/ddc0002a36308.pdf), JOHNSON AND JOHNSON SIHHİ MAL. SAN. VE TİC. LTD. ŞTİ. · KÜB onay tarihi 23/09/2014
+
+**Formlara göre incelenen KÜB'ler:** ağızda dağılan tablet: [RISPERDAL QUICKLET 1 MG AĞIZDA ÇÖZÜNÜR TABLET](https://titck.gov.tr/storage/kubKtAttachments/ddc0002a36308.pdf) (23/09/2014) · tablet: [RIXPER 1 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/EkEk3RXPER1mgKUBtemiz_06_05_2026.pdf) (06/05/2026) · oral çözelti: [RİCUS 1 MG/ML ORAL ÇÖZELTİ](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub_08_08_2025.pdf) (07/08/2025)
 
 - **TR erişkin endikasyonları:** Şizofreni ve diğer psikotik durumlar (akut ve idame); Bipolar bozuklukta manik epizod
 - **TR çocuk-ergen:** Davranım ve diğer yıkıcı davranış bozuklukları (agresyon ön planda) · 5–18 yaş; Otistik bozukluğa bağlı huzursuzluk/irritabilite · çocuk ve ergen (5 yaş altında yeterli deneyim yok) — 18 yaş altında şizofrenide veri yetersizliği nedeniyle önerilmez (aynı ifade bipolar mani başlığı altında da yer alır); pediyatrik bipolar onayı yok. 5 yaş altında yeterli deneyim yok. KÜB taranmış (OCR) bir PDF'den; kritik değerler PDF görüntüsünden doğrulandı.
@@ -618,6 +681,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 
 **İncelenen KÜB:** [MADEPZOL 20 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/MADEPZOL20mgtabletkub_11_12_2025.pdf), NOBEL SAĞLIK ÜRÜNLERİ LTD. ŞTİ. · KÜB onay tarihi 04/12/2025
 
+**Formlara göre incelenen KÜB'ler:** tablet: [MADEPZOL 20 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/MADEPZOL20mgtabletkub_11_12_2025.pdf) (04/12/2025) · ağızda dağılan tablet: [ABİZOL EASYTAB 5 MG AĞIZDA DAĞILAN TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ABZOLEASYTAB5mgazdadalantabletkb_13_06_2025.pdf) (04/06/2025) · oral çözelti: [ARİPA 1 MG/ML ORAL ÇÖZELTİ](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ARPAKB_27_05_2025.pdf) (27/05/2025)
+
+> **Form bazında inceleme (güncel):** Tourette maddesine form notu eklendi: endikasyon ve doz tablet ve ağızda dağılan tablet KÜB'lerinde var, oral çözelti (ARİPA, 2025) KÜB'ünde yok.
+> “tablet (MADEPZOL 20 mg): "MADEPZOL, Tourette hastalığının tedavisinde endikedir."” · “ağızda dağılan tablet (ABİZOL EASYTAB 5 mg): "ABİZOL EASYTAB, Tourette hastalığının tedavisinde endikedir."”
+
 - **TR erişkin endikasyonları:** Şizofreni (akut ve idame); Bipolar I akut manik epizod ve nüks önleme; Antidepresana dirençli majör depresyonda ek tedavi
 - **TR çocuk-ergen:** Şizofreni · 13–17 yaş; Otistik bozuklukla ilişkili irritabilite · 6–17 yaş; Tourette · 6–18 yaş — 6 yaş altında önerilmez. Bipolar mani yalnızca erişkinde endike.
 - **TR erişkin doz:** başlangıç Şizofreni 10–15 mg/gün · Bipolar mani 15–30 mg/gün · MDB eki 5 mg/gün · maksimum 30 mg/gün (MDB ekinde 15 mg/gün)
@@ -642,24 +710,28 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 
 **İncelenen KÜB:** [ZYPREXA 5 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/zprexa5ek1kubbmed5mg_31_07_2025.pdf), BMED İLAÇ DANIŞMANLIK SAĞLIK ÜRÜN VE HİZMETLERİ TİC. LTD. ŞTİ. · KÜB onay tarihi 11/07/2025
 
-- **TR erişkin endikasyonları:** Şizofreni (akut ve idame); Bipolar orta-ağır manik dönem; Bipolar bozuklukta nüks önleme
-- **TR çocuk-ergen:** Şizofreni · 13–17 yaş; Bipolar manik/mikst dönem · 13–17 yaş — 13 yaş altında kullanılmaz. 13–17 yaşta veri kısıtlı; kilo artışı, lipid ve prolaktin riskleri nedeniyle çoğu vakada önce diğer ilaçlar düşünülmeli.
+**Formlara göre incelenen KÜB'ler:** tablet: [ZYPREXA 5 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/zprexa5ek1kubbmed5mg_31_07_2025.pdf) (11/07/2025) · ağızda dağılan tablet: [OLAXINN 5MG AĞIZDA DAĞILAN TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/OLAXNNKBONAY_02_04_2026.pdf) (19/02/2026)
+
+**Kombinasyon ürünlerinin KÜB'leri:** [REXAPİN PRO 6 MG/ 25 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kub625_19_11_2025.pdf) (28/10/2025) · [RELİXAN 12 MG/50 MG SERT KAPSÜL](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/kub_1f332029-08a4-44bc-a207-48a8dddcd177.pdf) (23/08/2024) · [TARGET 3 MG / 25MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/1b8d1b6d81714.pdf) (24/03/2011)
+
+- **TR erişkin endikasyonları:** Şizofreni (akut ve idame); Bipolar orta-ağır manik dönem; Bipolar bozuklukta nüks önleme; Bipolar I depresyon · fluoksetinle sabit doz kombinasyonu; Tedaviye dirençli depresyon · fluoksetinle sabit doz kombinasyonu
+- **TR çocuk-ergen:** Şizofreni · 13–17 yaş; Bipolar manik/mikst dönem · 13–17 yaş; Bipolar I depresyon · 10–17 yaş (fluoksetinle kombinasyon, yalnız REXAPİN PRO) — Tek başına olanzapin 13 yaş altında kullanılmaz. 13–17 yaşta veri kısıtlı; kilo artışı, lipid ve prolaktin riskleri nedeniyle çoğu vakada önce diğer ilaçlar düşünülmeli.
 - **TR erişkin doz:** başlangıç Şizofreni 10 mg/gün · Mani 15 mg (monoterapi) / 10 mg (kombinasyon) · Nüks önleme 10 mg · maksimum 20 mg/gün (aralık 5–20 mg)
 - **TR çocuk-ergen doz:** başlangıç 2,5–5 mg/gün (hedef 10 mg/gün) · maksimum 20 mg/gün (üzeri değerlendirilmemiş)
 - **TR organ yetmezliği:** böbrek: Daha düşük başlangıç dozu (5 mg) düşünülmeli. · karaciğer: Orta bozuklukta (Child-Pugh A/B) başlangıç 5 mg, dikkatli artış.
 
-- **Fark · Erişkin endikasyon.** Fluoksetinle kombinasyon endikasyonları FDA'ya özgü; TR'de olanzapin (Zyprexa) KÜB'ünde bulunmuyor.
-  - Rehber: Bipolar depresyon (fluoksetin ile); Dirençli depresyon (fluoksetin ile) · KÜB: TR KÜB'ünde depresyon endikasyonu yok; yalnızca şizofreni, bipolar mani ve nüks önleme
-  - KÜB'den: “Bipolar bozuklukta olanzapin, orta derece ile ağır manik dönemlerin tedavisinde ve bipolar bozuklukta reküransların önlenmesinde endikedir.”
-  - Öneri: İki depresyon satırına 'TR'de ruhsatlı değil (FDA, fluoksetin kombinasyonu)' notu ekleyin.
-- **Fark · Pediatrik endikasyon.** FDA'da 10–17 yaş bipolar depresyonda fluoksetinle onaylı; TR'de bu endikasyon yok ve 13 yaş altı kullanılmaz.
-  - Rehber: Bipolar depresyon (fluoksetin ile) · ≥ 10 yaş · KÜB: 13 yaş altında kullanılmaz; pediatrik onay yalnızca 13–17 yaş şizofreni ve bipolar mani/mikst
-  - KÜB'den: “Güvenliliğe ve etkililiğe ilişkin veri olmadığı için 13 yaş altındaki çocuklarda kullanılmaz.”
-  - Öneri: Satıra 'TR'de onay yok; 13 yaş altında kullanılmaz' notu ekleyin.
 - **Fark · Böbrek yetmezliği.** FDA etiketinde böbrek yetmezliğinde özel bir doz önerisi yok; TR KÜB'ü 5 mg başlangıcı önerir.
   - Rehber: Doz ayarı gerekmez. · KÜB: Böbrek yetmezliğinde daha düşük başlangıç dozu (5 mg) düşünülmeli
   - KÜB'den: “Böbrek/Karaciğer yetmezliği: Bu tip hastalarda daha düşük bir başlangıç dozu (5 mg) düşünülmelidir.”
   - Öneri: 'TR KÜB: 5 mg ile başlamayı düşünün' notu ekleyin.
+- **Bilgi · Erişkin endikasyon.** Fluoksetinle kombinasyon endikasyonları ZYPREXA KÜB'ünde yok, ancak Türkiye'de ayrı sabit doz kombinasyon ürünleriyle ruhsatlı (TARGET, REXAPİN PRO, RELİXAN, OSHINE); FDA ile uyumlu. Düzeltme: ilk karşılaştırmada yalnız tek bileşenli ürünün KÜB'üne bakıldığı için kombinasyon ürünleri atlanmıştı.
+  - Rehber: Bipolar depresyon (fluoksetin ile); Dirençli depresyon (fluoksetin ile) · KÜB: Olanzapin + fluoksetin kombinasyonu: bipolar I depresyon, tedaviye dirençli depresyon
+  - KÜB'den: “REXAPİN PRO Bipolar I Bozukluk ile ilişkili depresif epizotların akut tedavisi için endikedir.”
+  - Öneri: Değişiklik gerekmez; Türkiye kutusunda kombinasyon endikasyonları gösterilir.
+- **Bilgi · Pediatrik endikasyon.** FDA'da fluoksetinle 10–17 yaş bipolar depresyon onayı var; Türkiye'de de REXAPİN PRO KÜB'ü (2025) 10–17 yaş bipolar I depresyon için doz veriyor (başlangıç 3/25 mg). TARGET ve RELİXAN KÜB'lerinde 18 yaş altı güvenlilik belirlenmemiş. Tek başına olanzapin 13 yaş altında kullanılmaz. Düzeltme: ilk karşılaştırmada yalnız tek bileşenli ürünün KÜB'üne bakıldığı için kombinasyon ürünleri atlanmıştı.
+  - Rehber: Bipolar depresyon (fluoksetin ile) · ≥ 10 yaş · KÜB: REXAPİN PRO: 10–17 yaş bipolar I depresyon (3/25 mg ile başlanır)
+  - KÜB'den: “Çocuklar ve Ergenler (10 ila 17 yaş arası) — REXAPİN PRO, öğünlerden bağımsız olarak günde bir kez akşamları genellikle 3 mg/25 mg dozdan başlayarak”
+  - Öneri: Değişiklik gerekmez.
 - **Bilgi · Erişkin doz (bas).** Uygulamadaki aralık FDA şizofreni başlangıcına uyar; mani başlangıcı (TR 15 mg, FDA 10–15 mg) ayrıca belirtilmemiş.
   - Rehber: 5–10 mg/gün · KÜB: Şizofreni 10 mg; mani monoterapide 15 mg, kombinasyonda 10 mg
   - KÜB'den: “Manik dönem: Başlangıç dozu, monoterapide genellikle günde tek doz uygulanan 15 mg veya kombinasyon tedavisinde günde 10 mg”
@@ -669,6 +741,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 #### Ketiapin
 
 **İncelenen KÜB:** [SEROQUEL 300 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/seroquel300Ek2_05_01_2026.2_KUB), LİVA İLAÇ PAZARLAMA SAN. VE TİC. A.Ş. · KÜB onay tarihi 04/12/2025
+
+**Formlara göre incelenen KÜB'ler:** tablet: [SEROQUEL 300 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/seroquel300Ek2_05_01_2026.2_KUB) (04/12/2025) · tablet: [GYREX 50 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/onaylkb50_17_06_2026.pdf) (12/06/2026) · uzatılmış salımlı tablet: [KETYA XR 400 MG UZATILMIŞ SALIMLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/UYGUNKBKETYAXR400mg_09_12_2025.pdf) (04/12/2025)
+
+> **Form bazında inceleme (güncel):** Erişkin listesine MDB'de antidepresana ek (güçlendirme) tedavi eklendi; yalnız uzatılmış salımlı tablet KÜB'ünde var (gece 50 mg, 3. gün 150 mg, 150–300 mg/gün).
+> “uzatılmış salımlı tablet (KETYA XR): "Antidepresan monoterapisine yetersiz yanıt veren Majör Depresif Bozukluğu (MDB) olan hastalarda majör depresif atakların güçlendirme tedavisinde endikedir"” · “uzatılmış salımlı tablet (KETYA XR): "Başlangıç dozu olarak 1. ve 2. gün 50 mg ile başlanmalı ve 3. ile 4. gün 150 mg'a çıkılmalıdır."”
 
 - **TR erişkin endikasyonları:** Şizofreni; Bipolar orta-ileri mani; Bipolar depresyon (majör depresif atak); Bipolar nüks önleme (ketiapine yanıt vermiş hastalarda)
 - **TR çocuk-ergen:** 18 yaş altında yeterli veri olmadığından kullanımı önerilmez.
@@ -697,6 +774,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 
 **İncelenen KÜB:** [LEPONEX 25 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/JoU99ykZVpBuN.pdf), NOVARTİS ÜRÜNLERİ · KÜB onay tarihi 24/04/2017
 
+**Formlara göre incelenen KÜB'ler:** tablet: [LEPONEX 25 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/JoU99ykZVpBuN.pdf) (24/04/2017) · tablet: [CLONEX 25 MG TABLET](https://titck.gov.tr/storage/Archive/2020/kubKtAttachments/TITCKCLONEX25UYGUNKUB_4fbbd181-5214-4074-9e8d-d59f0dc12c41.pdf) (31/12/2019)
+
 - **TR erişkin endikasyonları:** Tedaviye dirençli (veya klasik antipsikotiklere intoleran) şizofreni; Şizofreni/şizoaffektif bozuklukta nükseden intihar davranışı riskinin azaltılması; Parkinson hastalığında psikoz (standart tedavi başarısızsa)
 - **TR çocuk-ergen:** Pediyatrik çalışma yok; 16 yaş altında güvenlilik/etkililik belirlenmediğinden kullanılmamalı.
 - **TR erişkin doz:** başlangıç 1. gün 12,5 mg ×1–2; 2. gün 25 mg ×1–2; 2–3 haftada 300 mg (Parkinson psikozu: akşam 12,5 mg) · maksimum 900 mg/gün (Parkinson psikozu: genelde ≤ 50 mg, asla > 100 mg/gün)
@@ -723,6 +802,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 #### Haloperidol
 
 **İncelenen KÜB:** [NORODOL 2 MG / ML ORAL DAMLA](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/TTCKOnaylKBNORODOLDAMLA_ec2d5eb6-8f7c-49e3-939f-854016551982.pdf), ALİ RAİF İLAÇ SANAYİ A.Ş. · KÜB onay tarihi 02/10/2026
+
+**Formlara göre incelenen KÜB'ler:** damla: [NORODOL 2 MG / ML ORAL DAMLA](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/TTCKOnaylKBNORODOLDAMLA_ec2d5eb6-8f7c-49e3-939f-854016551982.pdf) (02/10/2026) · tablet: [NORODOL 5 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/Bn2nN6gDFPhKb.pdf) (14/12/2016)
+
+> **Form bazında inceleme (güncel):** Tablet KÜB'ü (NORODOL 5 mg, 2016) eklendi: ek erişkin endikasyonları (diğer psikozlar, hipomani, yaşlılarda ajitasyon, organik beyin hasarı/MR'de saldırganlık, inatçı hıçkırık), yaş sınırsız çocuk endikasyonları ve mg/kg pediatrik doz.
+> “tablet (NORODOL 5 mg; taranmış PDF, metin katmanı OCR hatalı, alıntı PDF görüntüsünden): "Hiperaktivite ve ajitasyonla ilişkili davranış bozuklukları"” · “tablet (NORODOL 5 mg, PDF görüntüsünden): "Gilles de la Tourette sendromu" · "Çocukluk şizofrenisi"” · “tablet (NORODOL 5 mg, PDF görüntüsünden): "Günlük idame dozu 0.025- 0.05 mg/kg'dır. Doz sabah ve akşam verilmek üzere ikiye bölünmeli ve günde en fazla 10 mg olmalıdır."”
 
 - **TR erişkin endikasyonları:** Şizofreni ve şizoaffektif bozukluk; Akut deliryum (non-farmakolojik tedavi başarısızsa); Bipolar I orta-şiddetli manik atak; Psikotik bozukluk/bipolar maniye bağlı akut psikomotor ajitasyon; Orta-şiddetli Alzheimer ve vasküler demansta inatçı saldırganlık ve psikotik semptomlar; Tourette dahil tik bozuklukları (şiddetli, diğer tedaviler başarısızsa); Huntington hastalığında kore (psikiyatri dışı)
 - **TR çocuk-ergen:** Şizofreni · 13–17 yaş (diğer tedaviler başarısız/tolere edilemiyorsa); Otizm/yaygın gelişimsel bozuklukta inatçı şiddetli saldırganlık · 6–17 yaş; Tourette dahil tik bozuklukları · 10–17 yaş (4.2 doz önerisi 12–17 yaş) — Endikasyondaki yaşların altında güvenlilik/etkililik belirlenmemiş; 3 yaş altı için veri yok.
@@ -756,6 +840,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 
 **İncelenen KÜB:** [İNVEGA 9 MG UZATILMIŞ SALIMLI TABLET](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/INVEGA9mgKUB_03569eb5-11ee-468c-a429-864f6c87b15a.pdf), JOHNSON AND JOHNSON SIHHİ MAL. SAN. VE TİC. LTD. ŞTİ. · KÜB onay tarihi 21/09/2022
 
+**Formlara göre incelenen KÜB'ler:** uzatılmış salımlı tablet: [İNVEGA 9 MG UZATILMIŞ SALIMLI TABLET](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/INVEGA9mgKUB_03569eb5-11ee-468c-a429-864f6c87b15a.pdf) (21/09/2022)
+
 - **TR erişkin endikasyonları:** Şizofreni; Şizoaffektif bozukluk (monoterapi veya antidepresan/duygudurum düzenleyici ile kombine)
 - **TR çocuk-ergen:** Şizofreni · ≥ 15 yaş — Şizofrenide 12–14 yaşta güvenlilik/etkililik belirlenmemiş, pozoloji önerisi yok; şizoaffektif bozuklukta 12–17 yaşta incelenmemiş; 12 yaş altında kullanımı yok.
 - **TR erişkin doz:** başlangıç 6 mg/gün (sabah), titrasyon gerekmez · maksimum 12 mg/gün (şizofrenide 3–12, şizoaffektifte 6–12 mg/gün aralığı)
@@ -775,6 +861,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 #### Ziprasidon
 
 **İncelenen KÜB:** [ZELDOX 60 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/Zeldox60KB_21842cef-7015-4164-9b89-31a0663bc042.pdf), PFIZER İLAÇLARI LTD. ŞTİ. · KÜB onay tarihi 29/06/2022
+
+**Formlara göre incelenen KÜB'ler:** kapsül: [ZELDOX 60 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/Zeldox60KB_21842cef-7015-4164-9b89-31a0663bc042.pdf) (29/06/2022) · tablet: [SYDONE 60 MG FILM TABLET](https://titck.gov.tr/storage/kubKtAttachments/f1004dde22269.pdf) (05/08/2011)
+
+> **Form bazında inceleme (güncel):** Pediatrik mani maddesine form notu ve pedNot'a tablet KÜB'ü (SYDONE, 2011) eklendi: tablette pediatrik endikasyon yok, çocuk ve adolesanlarda değerlendirilmemiş.
+> “kapsül (ZELDOX 60 mg): "Ziprasidon erişkinlerde ve 10-17 yaş arası çocuk ve ergenlerde, karma ya da psikotik özellikleri olsun olmasın manik epizodların kısa süreli tedavisinde endikedir"” · “tablet (SYDONE 60 mg): "Pediyatrik popülasyon : Ziprasidonun etkinlik ve emniyeti çocuklarda ve adolesanlarda değerlendirilmemiştir."”
 
 - **TR erişkin endikasyonları:** Şizofreni ve ilişkili psikozlar; Bipolar mani / karma epizod (kısa süreli tedavi)
 - **TR çocuk-ergen:** Bipolar mani / karma epizod (kısa süreli tedavi) · 10–17 yaş — 4.1'de 10–17 yaş mani endikasyonu var; ancak 4.2'de '18 yaşın altındaki çocuklarda etkililiği ve güvenliliği kanıtlanmamıştır' deniyor ve pediatrik doz verilmiyor (KÜB içi tutarsızlık). Şizofrenide çocuk/ergende etkililik belirlenmemiş; pediatrik şizofreni çalışması etkisizlik nedeniyle sonlandırılmış. Bipolar idamede yeterli kanıt yok.
@@ -804,6 +895,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 
 **İncelenen KÜB:** [FERADON 40 MG FİLM KAPLI TABLET (muadil)](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Feradon40mgOnaylKB_07_04_2026.pdf), NOBEL İLAÇ SAN. VE TİC. A.Ş. · KÜB onay tarihi 26/03/2026
 
+**Formlara göre incelenen KÜB'ler:** tablet: [FERADON 40 MG FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Feradon40mgOnaylKB_07_04_2026.pdf) (26/03/2026)
+
 - **TR erişkin endikasyonları:** Şizofreni; Bipolar I depresyon (monoterapi); Bipolar I depresyon (lityum/valproata ek)
 - **TR çocuk-ergen:** Şizofreni · 13–17 yaş; Bipolar I depresyon (monoterapi) · 10–17 yaş — Bipolar manide etkililiğe dair yeterli veri yok (KÜB 4.1).
 - **TR erişkin doz:** başlangıç Şizofreni 40 mg/gün · bipolar depresyon 20 mg/gün (titrasyon gerekmez) · maksimum Şizofreni 160 mg/gün · bipolar depresyon 120 mg/gün
@@ -824,6 +917,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 
 **İncelenen KÜB:** [SOLIAN 200 MG TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Solian200mgTabletEk1311kubtemiz_07_05_2026.pdf), LİLYUM İLAÇ VE KİMYA SAN. TİC. A.Ş. · KÜB onay tarihi 28/03/2026
 
+**Formlara göre incelenen KÜB'ler:** tablet: [SOLIAN 200 MG TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Solian200mgTabletEk1311kubtemiz_07_05_2026.pdf) (28/03/2026) · oral çözelti / şurup: [SOLIAN 100 MG/ML ORAL ÇÖZELTİ](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/SOLAN100mgmLoralzeltiEk1311kubtemiz_07_05_2026.pdf) (28/03/2026)
+
+> **Form bazında inceleme (güncel):** Küçük: erişkin endikasyonuna form notu eklendi (oral çözelti KÜB'ü yalnız şizofreni der); pediatrik bilgi iki formda aynı.
+> “Tablet (SOLIAN 200 MG): özellikle akut ya da kronik şizofrenik rahatsızlıklar dahil olmak üzere, psikozların tedavisinde endikedir.” · “Oral çözelti (SOLIAN 100 MG/ML): SOLİAN, şizofreni tedavisinde endikedir.”
+
 - **TR erişkin endikasyonları:** Psikozlar, özellikle akut/kronik şizofrenik bozukluklar (pozitif ve/veya negatif belirtiler)
 - **TR çocuk-ergen:** 15–18 yaşta önerilmez (etkililik/güvenlilik belirlenmemiş); 15 yaş altında kontrendike.
 - **TR erişkin doz:** başlangıç Baskın negatif belirti: 50–300 mg/gün (optimum ~100) · akut psikotik/karma epizod: 400–800 mg/gün · maksimum 1200 mg/gün
@@ -838,6 +936,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: VILOKSAZIN); Türkiye'de ruhsa
 #### Klorpromazin
 
 **İncelenen KÜB:** [LARGACTİL 100 MG KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ek1311kubtemiz_11_08_2026.pdf), LİLYUM İLAÇ VE KİMYA SANAYİ TİCARET ANONİM ŞİRKETİ · KÜB onay tarihi 30/06/2026
+
+**Formlara göre incelenen KÜB'ler:** tablet: [LARGACTİL 100 MG KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ek1311kubtemiz_11_08_2026.pdf) (30/06/2026)
 
 - **TR erişkin endikasyonları:** Akut psikotik bozukluklar; Kronik psikotik bozukluklar (şizofreni, kronik sanrılı/paranoid durumlar)
 - **TR çocuk-ergen:** Ajitasyon ve agresiflikle seyreden şiddetli davranış bozuklukları · > 6 yaş — Tablet formu 6 yaş altında önerilmez; 1 yaş altında kontrendike (ani bebek ölümü sendromu). Ergende psikoz için ayrı pediatrik endikasyon yok.
@@ -880,6 +980,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 
 **İncelenen KÜB:** [REXULTI 4 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/REXULT4KB_09_01_2025.pdf), ABDİ İBRAHİM OTSUKA İLAÇ SAN. VE TİC. A.Ş. · KÜB onay tarihi 13/12/2024
 
+**Formlara göre incelenen KÜB'ler:** tablet: [REXULTI 4 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/REXULT4KB_09_01_2025.pdf) (13/12/2024) · tablet: [REBEXİP 3 MG FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kub_08_04_2026.pdf) (30/03/2026)
+
+> **Form bazında inceleme (güncel):** Erişkin listesine MDB'de ek tedavi ve Alzheimer ajitasyonu eklendi (daha yeni REBEXİP tablet KÜB'ü); doz: MDB 0,5–1 mg başla, hedef 2, maks 3 mg; ajitasyon 0,5 mg başla, hedef 2, maks 3 mg.
+> “Tablet (REBEXİP, 2026): REBEXİP, majör depresif bozukluk (MDD) tedavisinde antidepresanlara ek tedavi olarak kullanımda endikedir.” · “Tablet (REBEXİP, 2026): REBEXİP, Alzheimer hastalığına bağlı demans ilişkili ajitasyonun tedavisinde endikedir.” · “Tablet (REBEXİP, 2026): Majör depresif bozukluğu olan pediyatrik hastalarda güvenlilik ve etkililik kanıtlanmamıştır.”
+
 - **TR erişkin endikasyonları:** Şizofreni
 - **TR çocuk-ergen:** 18 yaş altında güvenlilik ve etkililik kanıtlanmamış; veri yok.
 - **TR erişkin doz:** başlangıç 1 mg/gün (1–4. gün); 5–7. gün 2 mg, 8. gün 4 mg · maksimum 4 mg/gün
@@ -899,6 +1004,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 
 **İncelenen KÜB:** [KAPRAZDİ 1,5 MG SERT KAPSÜL (muadil)](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/UYGUNKBKAPRAZD15_20_03_2025.pdf), DEVA HOLDİNG ANONİM ŞİRKETİ · KÜB onay tarihi 20/03/2025
 
+**Formlara göre incelenen KÜB'ler:** kapsül: [KAPRAZDİ 1,5 MG SERT KAPSÜL](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/UYGUNKBKAPRAZD15_20_03_2025.pdf) (20/03/2025)
+
 - **TR erişkin endikasyonları:** Şizofreni; Bipolar I depresyon
 - **TR çocuk-ergen:** 18 yaş altında güvenlilik/etkililik belirlenmemiş; veri yok.
 - **TR erişkin doz:** başlangıç 1,5 mg/gün · maksimum Şizofreni 6 mg/gün (1,5 mg artışlarla) · bipolar depresyon 3 mg/gün (15. günde 3 mg'a çıkılabilir)
@@ -917,6 +1024,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 #### Pimozid
 
 **İncelenen KÜB:** [NÖROFREN 2 MG TABLET (muadil)](https://titck.gov.tr/storage/kubKtAttachments/R08fKTLWSc7JW.pdf), SANOFİ · KÜB onay tarihi 23/02/2017
+
+**Formlara göre incelenen KÜB'ler:** tablet: [NÖROFREN 2 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/R08fKTLWSc7JW.pdf) (23/02/2017)
 
 - **TR erişkin endikasyonları:** Kronik şizofreni (uzun süreli idame; ajitasyonun baskın olmadığı hastalarda başlangıç tedavisi); Diğer psikozlar: paranoid durumlar, monosemptomatik hipokondriyak psikoz (4.2 doz bölümünde); Tourette bozukluğu (standart tedaviye yanıtsız motor/vokal tikler)
 - **TR çocuk-ergen:** Endikasyon ayrımı yapılmadan · > 12 yaş — 12 yaş altında yeterli çalışma yok, önerilmez.
@@ -939,6 +1048,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 #### Lityum
 
 **İncelenen KÜB:** [LITHURIL 300MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/fe0aa77783730.pdf), KOÇAK FARMA İLAÇ VE KİMYA SANAYİ A.Ş. · KÜB onay tarihi 01/11/2012
+
+**Formlara göre incelenen KÜB'ler:** kapsül: [LITHURIL 300MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/fe0aa77783730.pdf) (01/11/2012) · kapsül: [LITOMAKS 300 MG SERT KAPSÜL](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/imzalanacakkblitomaks_d2784105-1f4b-49e5-8bd1-4ba3a1959227.pdf) (10/09/2023)
 
 - **TR erişkin endikasyonları:** Bipolar bozukluk / mani (tedavi ve profilaksi); Rekürent / unipolar depresyon (idame); Şizoaffektif bozukluk (akut ve idame); Küme (demet) baş ağrısı, kısa süreli (psikiyatri dışı); Nötropenide enfeksiyon insidansını azaltma (psikiyatri dışı)
 - **TR çocuk-ergen:** 12 yaş altında etkililik/güvenlilik bilinmediğinden kullanılmamalı; 12–17 yaş için ayrı doz verilmemiş.
@@ -966,6 +1077,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 #### Valproat
 
 **İncelenen KÜB:** [DEPAKİN CHRONO BT 500 MG UZUN ETKILI FILM TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ekek4kubtemiz_352ee8fd-ebbe-4227-bb6d-cf9e6ca76155.pdf), Sanofi Sağlık Ürünleri Ltd. Şti. · KÜB onay tarihi 06/11/2026
+
+**Formlara göre incelenen KÜB'ler:** uzatılmış / değiştirilmiş salımlı: [DEPAKİN CHRONO BT 500 MG UZUN ETKILI FILM TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ekek4kubtemiz_352ee8fd-ebbe-4227-bb6d-cf9e6ca76155.pdf) (06/11/2026) · oral çözelti / şurup: [DEPAKİN 57,64 MG/ML ŞURUP](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ekek4kubtemiz_fdef4f85-2faa-45cb-afda-b2b139a91f15.pdf) (06/11/2026)
+
+> **Form bazında inceleme (güncel):** Endikasyon ve pediatrik bilgi iki formda aynı; yalnız şurup KÜB'ü manide istisnai üst doz (3000 mg/gün) verdiği için doz farkı maddesi düzeltildi.
+> “Şurup (DEPAKİN 57,64 MG/ML): Bipolar bozuklukların idame tedavisi için tavsiye edilen doz günde 1.000 mg ila 2.000 mg arasındadır. İstisnai durumlarda, doz günde 3.000 mg’dan fazla olmayacak şekilde artırılabilir.”
 
 - **TR erişkin endikasyonları:** Bipolar bozuklukta manik epizod (lityum kontrendike/tolere edilemiyorsa); yanıt verenlerde devam tedavisi düşünülebilir; Epilepsi: jeneralize (absans, miyoklonik, tonik-klonik) ve parsiyel/sekonder jeneralize nöbetler (psikiyatri dışı)
 - **TR çocuk-ergen:** Epilepsi (psikiyatri dışı) · yaş sınırı yok; 500 mg ER tablet 6 yaş altına uygun değil — Manide 18 yaş altında güvenlilik/etkililik değerlendirilmemiş. Kız çocukları ve doğurganlık çağındaki kadınlarda diğer tedaviler etkisiz/tolere edilemez değilse kullanılmamalı (Gebelik Önleme Programı); bipolar bozuklukta gebelikte kontrendike.
@@ -1003,6 +1119,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 
 **İncelenen KÜB:** [LAMICTAL DC 100 MG ÇÖZÜNÜR/ÇIĞNEME TABLETI](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/Lamictal100KB_06b30164-c964-4d3e-a257-e4980f0965a9.pdf), GLAXOSMİTHKLİNE İLAÇLARI SAN. VE TİC. A.Ş. · KÜB onay tarihi 03/06/2022
 
+**Formlara göre incelenen KÜB'ler:** tablet: [LAMICTAL DC 100 MG ÇÖZÜNÜR/ÇIĞNEME TABLETI](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/Lamictal100KB_06b30164-c964-4d3e-a257-e4980f0965a9.pdf) (03/06/2022) · tablet: [PINRAL 50 MG ÇIĞNENEBILIR / ÇÖZÜNEBILIR TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/PNRAL50MGKB_13_05_2025.pdf) (09/05/2025)
+
 - **TR erişkin endikasyonları:** Bipolar bozuklukta duygudurum ataklarının (özellikle depresif) önlenmesi · ≥ 18 yaş; Epilepsi: parsiyel ve jeneralize (tonik-klonik, Lennox-Gastaut) nöbetler · ek tedavi veya monoterapi
 - **TR çocuk-ergen:** Epilepsi ek tedavi · 2–12 yaş; Tipik absans nöbetinde monoterapi · 2–12 yaş; Epilepsi ek tedavi veya monoterapi · ≥ 12 yaş — Bipolar bozuklukta 18 yaş altında endike değil ve önerilmez (etkinlik gösterilemedi, intihar eğilimi bildirimleri arttı). 2 yaş altında önerilmez.
 - **TR erişkin doz:** başlangıç Bipolar: 25 mg/gün (valproat ile 25 mg gün aşırı; indükleyici ile 50 mg/gün) · maksimum Hedef 200 mg/gün (çalışmalarda 100–400 mg); valproat ile hedef 100 mg, klinik yanıta göre en fazla 200 mg/gün; indükleyici ile 6. hf 300 mg, gerekirse 7. hf 400 mg/gün
@@ -1027,6 +1145,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 
 **İncelenen KÜB:** [TEGRETOL 200 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/onaylkbtb_01_12_2025.pdf), NOVARTİS SAĞLIK GIDA VE TARIM ÜRÜNLERİ SAN. VE TİC. A.Ş. · KÜB onay tarihi 24/11/2025
 
+**Formlara göre incelenen KÜB'ler:** tablet: [TEGRETOL 200 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/onaylkbtb_01_12_2025.pdf) (24/11/2025) · tablet: [KARAZEPIN 200 MG TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/KARAZEPN200KB_30_03_2026.pdf) (26/03/2026) · oral çözelti / şurup: [TEGRETOL 100 MG/5 ML ORAL SÜSPANSİYON](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ONAYLIKBSSP_01_12_2025.pdf) (24/11/2025) · uzatılmış / değiştirilmiş salımlı: [TEGRETOL 200 MG DEĞİŞTİRİLMİŞ SALIMLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ONAYLIKBDE_01_12_2025.pdf) (24/11/2025)
+
 - **TR erişkin endikasyonları:** Lityuma yanıt vermeyen hastalarda manik depresif psikozun (bipolar bozukluk) profilaksisi; Epilepsi: jeneralize tonik-klonik ve parsiyel nöbetler; Trigeminal nevralji
 - **TR çocuk-ergen:** Epilepsi · çocuk ve ergen (yaş sınırı yok; tablet < 5 yaşta önerilmez) — Psikiyatrik endikasyonda pediatrik doz verilmemiş; çocuk dozu yalnızca epilepsi için.
 - **TR erişkin doz:** başlangıç Bipolar profilaksi: 400 mg/gün (bölünmüş); epilepsi: 100–200 mg günde 1–2 kez · maksimum Bipolar: 1600 mg/gün (olağan 400–600 mg/gün); epilepsi: genellikle 800–1200, bazen 1600–2000 mg/gün; trigeminal nevralji: 1200 mg/gün
@@ -1047,6 +1167,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 
 **İncelenen KÜB:** [TRILEPTAL 300 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/TRLEPTAL300mgfilmkapltabletKUB_37994d2e-aba8-480c-bd98-1bd0c5c800bd.pdf), NOVARTIS SAĞLIK GIDA VE TARIM ÜRÜNLERI SAN.VE TIC.A.Ş. · KÜB onay tarihi 27/05/2024
 
+**Formlara göre incelenen KÜB'ler:** tablet: [TRILEPTAL 300 MG FILM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/TRLEPTAL300mgfilmkapltabletKUB_37994d2e-aba8-480c-bd98-1bd0c5c800bd.pdf) (27/05/2024) · oral çözelti / şurup: [TRİLEPTAL 60 MG/ML ORAL SÜSPANSİYON](https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/TRLEPTAL60mgmloralsspansiyonKUB_71b36e14-fc91-4c46-8080-26a26a4adb20.pdf) (27/05/2024)
+
 - **TR erişkin endikasyonları:** Epilepsi: kısmi nöbetler (ikincil yaygınlaşan dahil) ve yaygın tonik-klonik nöbetler · monoterapi veya ek tedavi
 - **TR çocuk-ergen:** Epilepsi (aynı nöbet tipleri) · ≥ 6 yaş — 6 yaş altında önerilmez. Psikiyatrik endikasyon yok.
 - **TR erişkin doz:** başlangıç 600 mg/gün (2 doza bölünmüş) · maksimum 2400 mg/gün (haftada en fazla 600 mg/gün artış)
@@ -1064,6 +1186,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 #### Melatonin
 
 **İncelenen KÜB:** [MELOGEN 1 MG/ML ORAL ÇÖZELTİ](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/uygunkb_116bcf3a-8dbb-4580-81b4-1e48ad222f47.pdf), GENSU PHARMA İLAÇ SAN. VE TİC. A.Ş. · KÜB onay tarihi 10/09/2026
+
+**Formlara göre incelenen KÜB'ler:** oral çözelti: [MELOGEN 1 MG/ML ORAL ÇÖZELTİ](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/uygunkb_116bcf3a-8dbb-4580-81b4-1e48ad222f47.pdf) (10/09/2026) · tablet: [MELLAREST 3 MG FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/OnaylKB_04_08_2026.pdf) (29/07/2026) · uzatılmış salımlı tablet: [VEFARMA MELATONİN 2 MG UZATILMIŞ SALIMLI TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/VEFARMAMELATONNKB_03_08_2026.pdf) (25/07/2026)
+
+> **Form bazında inceleme (güncel):** Uzatılmış salımlı tablet KÜB'ünden ≥ 55 yaş birincil uykusuzluk endikasyonu eklendi (erişkin doz kutusunda yalnız jet lag dozu var; SR: 2 mg, yatmadan 1–2 saat önce, ≤ 13 hafta); jet lag tablet ve oral çözeltiye, OSB/Smith-Magenis endikasyonu yalnız oral çözeltiye bağlandı; tablet ve SR KÜB'lerinin çocukta kullanmama uyarısı pedNot'a eklendi; 'erişkinde 55 yaş üstü uykusuzluk endikasyonu yok' fark maddesi düzeltildi.
+> “Uzatılmış salımlı tablet (VEFARMA): "55 yaş ve üzeri hastalarda düşük kaliteli uyku ile karakterize birincil uykusuzluğun kısa süreli tedavisi için monoterapi olarak endikedir."” · “Uzatılmış salımlı tablet (VEFARMA): "Önerilen doz, yemeklerden sonra, yatmadan 1-2 saat önce günde bir kez 2 mg tablettir. Bu doza on üç haftaya kadar devam edilebilir."” · “Tablet (MELLAREST): "Yetişkinlerde saat farkı değişikliklerine bağlı gelişen sirkadyen ritim uyku bozukluğunun (jet lag) kısa süreli tedavisinde endikedir."”
 
 - **TR erişkin endikasyonları:** Jet lag'e bağlı sirkadiyen ritim uyku bozukluğu · kısa süreli
 - **TR çocuk-ergen:** Otizm spektrum bozukluğu ve/veya Smith-Magenis sendromunda, uyku hijyeni yetersizse gecikmiş uyku başlangıçlı uykusuzluk · 2–18 yaş — 0–2 yaşta kullanımı yok. En az 6 ayda bir yeniden değerlendirme.
@@ -1093,6 +1220,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 
 **İncelenen KÜB:** [ATARAX 25 MG FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/yaynlanacakatarax25Ek21312kub_25_12_2025.pdf), AVİXA İLAÇ SAN. VE TİC. A.Ş. · KÜB onay tarihi 28/11/2025
 
+**Formlara göre incelenen KÜB'ler:** film tablet: [ATARAX 25 MG FİLM KAPLI TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/yaynlanacakatarax25Ek21312kub_25_12_2025.pdf) (28/11/2025) · şurup: [ATARAX 2 MG/ML ŞURUP](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/Ek21311kub_11_08_2026.pdf) (19/06/2026) · damla: [HİDRAX 50 MG/ML ORAL DAMLA, ÇÖZELTİ](https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/ek2kub_6c13c973-25e8-462e-b2e0-04f98cbae0ec.pdf) (03/08/2022)
+
+> **Form bazında inceleme (güncel):** Damla KÜB'ünden (HİDRAX, 2022) erişkin ve ≥ 12 ay çocukta cerrahi öncesi premedikasyon endikasyonu ve pediatrik premedikasyon dozu eklendi; 'premedikasyon endikasyonu yok' fark maddesi düzeltildi.
+> “Damla (HİDRAX): "Cerrahi operasyon öncesi premedikasyonda endikedir."” · “Damla (HİDRAX): "1 veya 2 kez uygulanan, günde 50-100 mg"” · “Damla (HİDRAX): "Anesteziden önceki gece uygulanabilen 1 mg/kg'lık dozun ardından, operasyondan 1 saat önce 1 mg/kg tek dozluk uygulama."”
+
 - **TR erişkin endikasyonları:** Anksiyetenin semptomatik tedavisi · ≥ 18 yaş; Kaşıntının semptomatik tedavisi
 - **TR çocuk-ergen:** Kaşıntı · ≥ 12 ay (film tablet ≥ 6 yaş) — Anksiyete endikasyonu yalnız ≥ 18 yaş. 12 aydan küçüklerde veri yok.
 - **TR erişkin doz:** başlangıç Anksiyete: 50 mg/gün, üçe bölünmüş (12,5 – 12,5 – 25 mg) · maksimum 100 mg/gün (yaşlıda 50 mg/gün)
@@ -1117,6 +1249,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 
 **İncelenen KÜB:** [RIVOTRIL 2 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/d299c65055855.pdf), DEVA HOLDING A.Ş. · KÜB onay tarihi 28/02/2013
 
+**Formlara göre incelenen KÜB'ler:** tablet: [RIVOTRIL 2 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/d299c65055855.pdf) (28/02/2013) · tablet: [RIVOCLON 2 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/kbrivoclon2019_29_01_2025.pdf) (14/06/2019) · damla: [RİVOCLON 2,5 MG/1 ML ORAL DAMLA, ÇÖZELTİ](https://titck.gov.tr/storage/Archive/2023/kubKtAttachments/rivoclonkb_fcb28b3c-05ae-4ee8-933e-65498f913660.pdf) (01/11/2018)
+
 - **TR erişkin endikasyonları:** Epilepsi: absans, Lennox-Gastaut, miyoklonik ve atonik nöbetler (1. basamak); infantil spazm (2. basamak); tonik-klonik ve parsiyel nöbetler (3. basamak)
 - **TR çocuk-ergen:** Epilepsi · yenidoğandan itibaren (yaşa göre doz) — Psikiyatrik endikasyon yok.
 - **TR erişkin doz:** başlangıç Epilepsi: ≤ 1 mg/gün (3'e bölünmüş); 3 günde bir 0,5 mg artış; idame genellikle 3–6 mg/gün · maksimum 20 mg/gün
@@ -1132,6 +1266,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 #### Lorazepam
 
 **İncelenen KÜB:** [ATIVAN EXPIDET 1 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ATIVAN1mgKB_26_02_2025.pdf), PFİZER PFE İLAÇLARI A.Ş. · KÜB onay tarihi 26/02/2025
+
+**Formlara göre incelenen KÜB'ler:** ağızda dağılan tablet: [ATIVAN EXPIDET 1 MG TABLET](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/ATIVAN1mgKB_26_02_2025.pdf) (26/02/2025)
 
 - **TR erişkin endikasyonları:** Somatik ve psikiyatrik belirtilerle ilişkili anksiyete, gerginlik ve kaygı · kısa süreli; Uykusuzluk · kısa süreli; Ameliyat öncesi anksiyete (4.2'de doz verilmiş)
 - **TR çocuk-ergen:** 12 yaş altında güvenlilik ve etkinlik saptanmamış; kullanımı tavsiye edilmez.
@@ -1151,6 +1287,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 #### Buspiron
 
 **İncelenen KÜB:** [BUSPON 5 MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/f6cce59971969.pdf), DEVA HOLDING A.Ş. · KÜB onay tarihi 03/05/2012
+
+**Formlara göre incelenen KÜB'ler:** kapsül: [BUSPON 5 MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/f6cce59971969.pdf) (03/05/2012) · tablet: [BUSPIR 5 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/20675df228352.pdf) (02/05/2015)
 
 - **TR erişkin endikasyonları:** Jeneralize anksiyetenin semptomatik tedavisi
 - **TR çocuk-ergen:** 18 yaşından küçüklerde kullanılmamalıdır.
@@ -1175,6 +1313,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 
 **İncelenen KÜB:** [NERVİUM 5 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/6fdbc7c785078.pdf), SABA İLAÇ SANAYİ VE TİCARET A.Ş. · KÜB onay tarihi 08/09/2014
 
+**Formlara göre incelenen KÜB'ler:** tablet: [NERVİUM 5 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/6fdbc7c785078.pdf) (08/09/2014) · kapsül: [DIAZEM 10 MG KAPSÜL](https://titck.gov.tr/storage/kubKtAttachments/79eBuy65Phnxl.pdf) (15/05/2012)
+
 - **TR erişkin endikasyonları:** Nörotik anksiyetenin kısa süreli semptomatik tedavisi; Akut alkol yoksunluğunda ajitasyon, tremor, deliryum tremens ve halüsinasyonlar; Lokal patolojiye bağlı refleks kas spazmı; üst motor nöron spastisitesi; Bazı epilepsi türleri; Tetanozda kas spazmı; Oral ve ameliyat öncesi premedikasyon
 - **TR çocuk-ergen:** Serebral spastisiteye bağlı gerginlik ve sinirlilik · çocuk (yaş sınırı belirtilmemiş; < 6 ay kontrendike) — 6 aydan küçüklerde kontrendike; 4.2'de çocuk dozu verilmemiş.
 - **TR erişkin doz:** başlangıç En düşük etkili doz; anksiyete 5–30 mg/gün, 2–3 doza bölünmüş · maksimum Anksiyete 30 mg/gün (aralığın üst sınırı); alkol yoksunluğu 5–20 mg/gün; sedatif-hipnotik 5–15 mg yatarken; yaşlıda erişkin dozunun yarısı
@@ -1193,6 +1333,8 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 #### Alprazolam
 
 **İncelenen KÜB:** [XANAX 0.5 MG TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kub_23_06_2026.pdf), PFİZER İLAÇLARI LTD. ŞTİ. · KÜB onay tarihi 23/06/2026
+
+**Formlara göre incelenen KÜB'ler:** tablet: [XANAX 0.5 MG TABLET](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/1311kub_23_06_2026.pdf) (23/06/2026)
 
 - **TR erişkin endikasyonları:** Anksiyetenin kısa süreli semptomatik tedavisi (yalnız şiddetli, engelleyici durumlarda)
 - **TR çocuk-ergen:** 18 yaş altında etkinlik ve güvenlilik kanıtlanmamış; çocuklarda kullanımı tavsiye edilmez.
@@ -1220,6 +1362,11 @@ TİTCK KÜB/KT veritabanında kaydı yok (aranan: ASENAPIN); Türkiye'de ruhsatl
 #### Pregabalin
 
 **İncelenen KÜB:** [LYRICA 150 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LYRCA150KBTEMZ_25_11_2025.pdf), VİATRİS İLAÇLARI LİMİTED ŞİRKETİ · KÜB onay tarihi 24/11/2025
+
+**Formlara göre incelenen KÜB'ler:** kapsül: [LYRICA 150 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LYRCA150KBTEMZ_25_11_2025.pdf) (24/11/2025) · kapsül: [ALYSE 300 MG KAPSÜL](https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/ALYSE300mgkapslkub_17_04_2026.pdf) (16/04/2026) · oral çözelti: [LYRICA 20 MG/ML ORAL ÇÖZELTİ](https://titck.gov.tr/storage/Archive/2025/kubKtAttachments/LYRCA20ORALKBTEMZ_25_11_2025.pdf) (22/11/2025) · efervesan tablet: [NÖRAFİT 150 MG EFERVESAN TABLET](https://titck.gov.tr/storage/Archive/2019/kubKtAttachments/Nörafit 150 mg Efervesan Tablet-KÜB.pdf_f1404999-3f68-4504-8309-a95b6e5ef17f.pdf) (12/11/2019) · uzatılmış salımlı tablet: [GABADAY SR 50 MG TABLET](https://titck.gov.tr/storage/kubKtAttachments/237ebee824990.pdf) (23/07/2013)
+
+> **Form bazında inceleme (güncel):** Küçük: fibromiyalji endikasyonu her KÜB'de yok; uzatılmış salımlı tablet (GABADAY SR, 2013) ve en güncel kapsül KÜB'ü (ALYSE, 2026) yalnız nöropatik ağrı, epilepsi ve YAB içeriyor; fibromiyaljiye form notu eklendi. Psikiyatrik endikasyon ve pediatrik bilgi tüm formlarda aynı.
+> “Kapsül (ALYSE, 2026): "Nöropatik ağrı, epilepsi ve yaygın anksiyete bozukluğu için uygulanan pregabalin tedavisinin sona erdirilmesi gerekirse"” · “Oral çözelti (LYRICA): "LYRICA fibromiyalji tedavisinde endikedir."” · “Uzatılmış salımlı tablet (GABADAY SR, taranmış PDF s. 2): "Nöropatik ağrı, epilepsi veya yaygın anksiyete bozukluğu için uygulanan pregabalin tedavisinin sona erdirilmesi gerekirse"”
 
 - **TR erişkin endikasyonları:** Yaygın anksiyete bozukluğu; Periferik nöropatik ağrı; Parsiyel nöbetlerde ek tedavi (epilepsi); Fibromiyalji
 - **TR çocuk-ergen:** 12 yaş altında ve 12–17 yaşta güvenlilik ve etkinlik belirlenmemiş; pozoloji önerisi yok.
