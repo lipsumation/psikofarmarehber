@@ -124,6 +124,24 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .ped-ozet { margin: -8px 0 16px; }
 
+/* ── Türkiye ruhsatı (KÜB) kutusu ── */
+.tr-kub { margin: 0 0 16px; padding-top: 12px; border-top: 1px dashed var(--cizgi); }
+.tr-kub > .alt-b { margin-top: 0; }
+.tr-kaynak { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .06em; padding: 1px 6px; margin-left: 6px; border-radius: 4px;
+  background: var(--kritik); color: #fff; vertical-align: 1px; }
+.etiket.tr { background: color-mix(in srgb, var(--kritik) 8%, var(--yuzey)); border-color: color-mix(in srgb, var(--kritik) 28%, var(--yuzey)); color: var(--murekkep); }
+.etiket.tr::before { content: "✓"; }
+.tr-kub .onaylar { margin-bottom: 6px; }
+.tr-satir { margin: 2px 0 6px; max-width: 90ch; }
+.tr-detay { margin-top: 4px; }
+.tr-detay > summary { cursor: pointer; width: fit-content; padding: 3px 0; font-size: 13px; font-weight: 600; color: var(--vurgu); }
+.tr-detay > summary:hover { text-decoration: underline; }
+.tr-detay[open] > summary { margin-bottom: 4px; }
+.tr-detay .alt-b { margin-top: 8px; }
+.tr-detay .metin-kutular { margin-top: 10px; }
+.tr-fark li { font-size: 14px; }
+.ilac-kart .etiket.tr-yok { margin-left: 4px; }
+
 /* ── ilk açılış penceresi ── */
 body.pencere-acik { overflow: hidden; }
 .karsilama { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 16px; overflow-y: auto;
