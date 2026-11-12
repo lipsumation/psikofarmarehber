@@ -10,7 +10,7 @@ Psikiyatrik ilaçların başlanması, titrasyonu, sürdürümü, kesilmesi ve ba
 
 | Sayfa | Ne gösterir |
 |---|---|
-| **İlaçlar** | 60 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları ve "Diğer ilaçlar": bağımlılık tedavisinde naltrekson ve buprenorfin/nalokson, antikolinerjik biperiden ve bornaprin). Her ilaç için onay durumu (çocuk-ergende onay yaşları, erişkinde onaylı endikasyonlar), başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili, uyarılar, metabolizma ve eliminasyon (yıkım enzimleri, aktif metabolit, atılım yolu, organ yetmezliğinde doz). |
+| **İlaçlar** | 66 ilaç (antidepresanlar, DEHB ilaçları, antipsikotikler, duygudurum düzenleyiciler, anksiyolitik/uyku ilaçları ve "Diğer ilaçlar": bağımlılık tedavisinde naltrekson, nalmefen, buprenorfin/nalokson ve nalokson; antipsikotik yan etkilerinde biperiden, triheksifenidil, bornaprin, propranolol ve metformin; travma sonrası kâbuslarda prazosin). Benzodiazepin sayfalarında alkol yoksunluğunda, klonidin sayfasında opioid yoksunluğunda kullanım şekli ayrıca verilir. Her ilaç için onay durumu (çocuk-ergende onay yaşları, erişkinde onaylı endikasyonlar), başlama ve titrasyon grafiği (çocuk-ergen ve erişkin ayrı), sürdürüm, kesme şeması, tetkik/izlem çizelgesi, yan etki profili, uyarılar, metabolizma ve eliminasyon (yıkım enzimleri, aktif metabolit, atılım yolu, organ yetmezliğinde doz). |
 | **Metabolizma (CYP)** | Tüm ilaçların CYP ve UGT enzimleriyle ilişkisini gösteren harita (substrat, inhibitör, indükleyici). Enzim seçildiğinde o enzimin substratları, inhibitörleri, indükleyicileri ve rehber dışı etkenler (sigara, greyfurt suyu, antibiyotikler vb.) listelenir. Böbrekle değişmeden atılan ilaçlar ve organ yetmezliğinde doz çizelgesi. |
 | **İlaç Değişimi** | İki ilaç seçildiğinde geçiş stratejisini (doğrudan, çapraz, yıkama aralıklı, örtüşmeli), haftalık zaman çizelgesini ve etkileşim uyarılarını (CYP inhibisyonu dahil) gösterir. "Diğer ilaçlar" sınıfı bu araca dahil değildir; bu ilaçların sayfalarında geçişe ilişkin kısa not bulunur. |
 | **Uzun Etkili (Depo)** | 8 uzun etkili enjektabl antipsikotik: başlama şeması, oral örtüşme süresi, oral dozdan dönüşüm tabloları, kaçırılan doz kuralları. |
@@ -68,7 +68,7 @@ js/veri-antidepresan.js Antidepresanlar
 js/veri-dehb.js         DEHB ilaçları
 js/veri-antipsikotik.js Antipsikotikler
 js/veri-diger.js        Duygudurum düzenleyiciler, anksiyolitikler, uyku ilaçları
-js/veri-yardimci.js     Diğer ilaçlar (bağımlılık tedavisi, antikolinerjikler)
+js/veri-yardimci.js     Diğer ilaçlar (bağımlılık tedavisi, antipsikotik yan etkileri, prazosin)
 js/veri-metabolizma.js  Metabolizma, CYP rolleri ve eliminasyon
 js/veri-depo.js         Uzun etkili enjektabl antipsikotikler
 js/veri-turkiye.js      Türkiye ruhsatı (KÜB özetleri)
@@ -89,7 +89,7 @@ git push origin main main:gh-pages
 
 ## Türkiye KÜB karşılaştırması
 
-Rehberin onay bilgileri FDA etiketine dayanır; Türkiye ruhsatı ise her ilaç sayfasında ayrıca gösterilir ("Türkiye ruhsatı · KÜB" kutusu): Türkiye'deki endikasyonlar ve yaş sınırları, KÜB'deki doz ve organ yetmezliği bilgisi, FDA'dan önemli farklar ve KÜB bağlantısı. Türkiye'de ruhsatlı ürünü olmayan 7 ilaç listede "TR'de ruhsatsız" olarak işaretlidir. Bu bilgiler `js/veri-turkiye.js` dosyasındadır.
+Rehberin onay bilgileri FDA etiketine dayanır; Türkiye ruhsatı ise her ilaç sayfasında ayrıca gösterilir ("Türkiye ruhsatı · KÜB" kutusu): Türkiye'deki endikasyonlar ve yaş sınırları, KÜB'deki doz ve organ yetmezliği bilgisi, FDA'dan önemli farklar ve KÜB bağlantısı. Türkiye'de ruhsatlı ürünü olmayan 10 ilaç listede "TR'de ruhsatsız" olarak işaretlidir. Bu bilgiler `js/veri-turkiye.js` dosyasındadır.
 
 Rehberdeki endikasyon ve doz bilgileri, her ilaç için Türkiye'de ruhsatlı bir ürünün güncel KÜB'ü (TİTCK KÜB/KT veritabanı) ile karşılaştırılmıştır. İlaç bazında farklar, KÜB bağlantıları ve alıntılar [docs/kub-karsilastirma.md](docs/kub-karsilastirma.md) dosyasında; ham veri [docs/kub-karsilastirma.json](docs/kub-karsilastirma.json) dosyasındadır.
 

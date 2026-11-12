@@ -1,5 +1,6 @@
-/* Diğer ilaçlar: madde kullanım bozukluklarında kullanılan ilaçlar ve antipsikotiğe bağlı ekstrapiramidal belirtilerde kullanılan antikolinerjikler.
-   Dozlar ve Türkiye ruhsatı ilgili KÜB'lere (NOKREV, SUBOXONE, AKİNETON, SORMODREN) dayanır; FDA bilgisi ayrıca belirtilir. */
+/* Diğer ilaçlar: madde kullanım bozukluklarında kullanılan ilaçlar (naltrekson, nalmefen, buprenorfin/nalokson, nalokson),
+   antipsikotik yan etkilerinin yönetiminde kullanılan ilaçlar (biperiden, triheksifenidil, bornaprin, propranolol, metformin) ve prazosin.
+   Türkiye ruhsatı ilgili KÜB'lere (NOKREV, SELİNCRO, SUBOXONE, AKİNETON, SORMODREN, DİDERAL, DIAFORMIN) dayanır; FDA bilgisi ayrıca belirtilir. */
 (function () {
   var SURDURUM_ANTIKOL = [
     'Antipsikotiğe bağlı ekstrapiramidal belirtide antikolinerjiği süresiz sürdürmeyin: 2–3 ay sonra azaltıp kesmeyi deneyin.',
@@ -38,6 +39,31 @@
     oz: []
   },
   {
+    id: 'nalmefen', ad: 'Nalmefen', sinif: 'diger', altSinif: 'Opioid modülatörü', grup: 'bagimlilik',
+    mek: 'Mü ve delta opioid reseptör antagonisti, kappa reseptöründe parsiyel agonist. Alkolün ödüllendirici etkisini azaltarak içilen miktarı düşürür; tam yoksunluk yerine içmeyi azaltma hedefiyle, gerektiğinde alınır.',
+    t12: '~12,5 saat', t12s: 12.5, etki: 'Doruk düzey 1,5 saatte (içmeden önce alınır) · tüketimde azalma ilk 4 haftada belirginleşir', form: 'Film tablet 18 mg (bölünmez)',
+    onay: [['Opioid aşırı dozu · burun spreyi/enjeksiyon (ABD)', '≥ 12 yaş']], onayNot: 'Oral nalmefen ABD\'de onaysız · Türkiye\'de 18 yaş altında değerlendirilmemiş',
+    onayEri: [['Alkol tüketimini azaltma', 'oral · Türkiye/Avrupa'], ['Opioid aşırı dozu', 'burun spreyi, enjeksiyon · ABD']],
+    ped: {
+      bas: 'Önerilmez: 18 yaş altında etkililik ve güvenlilik değerlendirilmemiştir.', artis: '—', hedef: '—', maks: '—',
+      birim: 'mg', adim: [],
+      not: ['Ergen alkol kullanım bozukluğunda veri yoktur; psikososyal tedavi esastır.']
+    },
+    eri: {
+      bas: '18 mg gerektiğinde: içme riski olan günlerde, beklenen içmeden 1–2 saat önce tek tablet', artis: 'Titrasyon yapılmaz', hedef: 'İçme riski olan günlerde 18 mg', maks: '18 mg/gün (günde bir tablet)',
+      birim: 'mg', adim: [], semaNot: 'Gerektiğinde kullanılır: içme riski olan günlerde tek tablet alınır, doz titrasyonu yapılmaz.',
+      not: ['İlk görüşmeden sonra hasta 2 hafta içme günlüğü tutar; yüksek içme risk düzeyi sürerse başlanır (Türkiye KÜB\'ü).', 'Yalnız fiziksel yoksunluğu olmayan ve acil arınma gerektirmeyen hastada; tedaviye uyum ve tüketimi azaltmaya odaklı psikososyal destekle birlikte.', 'Hasta tableti almadan içmeye başladıysa en kısa sürede alır.', 'Tablet bütün yutulur; bölünmez (ciltle temasta hassasiyet yapabilir).']
+    },
+    surdurum: ['Yanıtı ve gereksinimi ayda bir değerlendirin: içme günleri, içilen miktar, işlevsellik, uyum.', 'Randomize çalışmalarda veri 6–12 aylıktır; 1 yıldan uzun kullanımda dikkatli olun (Türkiye KÜB\'ü).', 'İçmeyi tamamen bırakmayı hedefleyen hastada naltrekson değerlendirilir.'],
+    kesme: { risk: 0, sure: 'Doğrudan kesilebilir', adim: [[0, 100], [1, 0]],
+      not: ['Kesilme sendromu yapmaz.', 'Opioid analjezik gerekecekse (ör. planlı ameliyat) 1 hafta önce kesin.'] },
+    izlem: 'nalmefen', profil: { sed: 1, gis: 3, akt: 2, kes: 0 },
+    uyari: ['Bulantı, baş dönmesi, uykusuzluk, baş ağrısı (çoğunlukla ilk haftalarda)', 'Konfüzyon; seyrek olarak halüsinasyon ve dissosiyasyon', 'Opioid kullananlarda yoksunluk tetikler; opioid analjeziklerin etkisini azaltır', 'Yakın zamanda akut alkol yoksunluk sendromu öyküsünde, ağır karaciğer ve böbrek yetmezliğinde kontrendike'],
+    etkilesim: ['Opioid agonistleri (analjezikler, metadon, buprenorfin) ile kontrendike', 'Güçlü UGT2B7 inhibitörleri (diklofenak, flukonazol, medroksiprogesteron asetat) düzeyi artırabilir', 'UGT indükleyicileri (deksametazon, fenobarbital, rifampisin) düzeyi azaltabilir', 'Opioid içeren öksürük ve ishal ilaçlarının etkisi azalır'],
+    gecisNotu: 'Nalmefen ile naltrekson birlikte kullanılmaz; ikisi de opioid antagonistidir. Opioid agonist tedavisi (buprenorfin, metadon) alan hastada kontrendikedir. Değişim planlayıcıda bu sınıf için şema tanımlı değildir.',
+    oz: []
+  },
+  {
     id: 'buprenorfin', ad: 'Buprenorfin / nalokson', sinif: 'diger', altSinif: 'Opioid parsiyel agonisti (ikame tedavisi)', grup: 'bagimlilik',
     mek: 'Mü-opioid reseptöründe yüksek afiniteli parsiyel agonist, kappa antagonisti. Yoksunluğu ve isteği baskılar; tavan etkisi nedeniyle tek başına solunum depresyonu riski tam agonistlerden düşüktür (sedatiflerle birlikte değil). Dil altında çok az emilen nalokson, damar içi kötüye kullanımı caydırır.',
     t12: '24–42 saat (buprenorfin)', t12s: 36, etki: 'Dil altı: 30–60 dakika · tek dozun etkisi 24 saati aşar', form: 'Dil altı tablet 2 mg/0,5 mg ve 8 mg/2 mg (buprenorfin/nalokson)',
@@ -61,6 +87,31 @@
     uyari: ['Kabızlık, bulantı, baş ağrısı, terleme, uykusuzluk', 'Yoksunluk başlamadan alınan ilk dozla tetiklenen yoksunluk', 'Karaciğer enzim yükselmesi, hepatit', 'Sedasyon, ortostatik hipotansiyon', 'Gebelikte yenidoğanda opioid yoksunluğu gelişebilir; tedavi kesilmez, uzmanla planlanır'],
     etkilesim: ['Benzodiazepin, alkol, gabapentinoid ve diğer opioidlerle solunum depresyonu', 'Naltrekson ve nalmefenle birlikte kullanılmaz (Türkiye KÜB\'ü: kontrendike)', 'CYP3A4 inhibitörleri (ketokonazol, ritonavir, klaritromisin) düzeyi artırır; indükleyiciler (rifampisin, karbamazepin) yoksunluk yaptırabilir', 'Serotonerjik ilaçlarla serotonin sendromu bildirilmiştir'],
     gecisNotu: 'Opioid agonist tedavisinde geçişler (metadon ↔ buprenorfin, buprenorfin → naltrekson) özel indüksiyon kuralları gerektirir; değişim planlayıcıda bu sınıf için şema tanımlı değildir. Metadondan geçişte metadon ≤ 30 mg/gün\'e indirilir ve son dozdan ≥ 24 saat sonra, yoksunluk başlayınca buprenorfine geçilir.',
+    oz: []
+  },
+  {
+    id: 'nalokson', ad: 'Nalokson', sinif: 'diger', altSinif: 'Opioid antagonisti (acil)', grup: 'bagimlilik',
+    mek: 'Kısa etkili, yarışmalı mü-opioid reseptör antagonisti. Opioide bağlı solunum depresyonunu ve sedasyonu dakikalar içinde geri döndürür; opioid yokluğunda belirgin etkisi yoktur. Ağızdan alındığında etkisizdir.',
+    t12: '30–90 dakika (yenidoğanda ~3 saat)', t12s: 1, etki: 'IV 1–2 dakika · IM, SC ve burun birkaç dakika · etki süresi 30–90 dakika', form: 'Enjeksiyon 0,4 mg/mL; burun spreyi 4 mg (ABD)',
+    onay: [['Opioid aşırı dozu, opioide bağlı solunum depresyonu', 'tüm yaşlar']], onayNot: 'Türkiye\'de ruhsatlı ürünü yok',
+    onayEri: [['Opioid aşırı dozu'], ['Ameliyat sonrası opioid etkisinin geri döndürülmesi', 'enjeksiyon']],
+    ped: {
+      bas: 'Opioid aşırı dozu: 0,01 mg/kg IV, IM ya da SC; yanıt yetersizse 0,1 mg/kg · burun spreyi 4 mg (ABD, tüm yaşlar)', artis: '2–3 dakikada bir yinelenir', hedef: 'Yeterli solunum', maks: 'Doz başına en çok 2 mg; toplam 10 mg\'a yanıt yoksa tanıyı gözden geçirin',
+      birim: 'mg', adim: [], semaNot: 'Acil kullanılan bir ilaçtır: titrasyon şeması yerine yanıta göre 2–3 dakikada bir yinelenen dozlarla uygulanır.',
+      not: ['Opioid kullanım bozukluğu olan ergende ağır yoksunluktan kaçınmak için küçük dozlarla titre edin.', 'Opioid bağımlısı annenin yenidoğanında ani yoksunluk ve nöbet riski vardır.', 'Çocukta kazara opioid (ör. buprenorfin, metadon) alımında yeniden sedasyon sıktır: uzun süre gözlem gerekir.']
+    },
+    eri: {
+      bas: '0,4–2 mg IV, IM ya da SC; opioid bağımlısında 0,04–0,1 mg IV ile başlayıp titre edin · burun spreyi 4 mg (ABD)', artis: '2–3 dakikada bir yinelenir', hedef: 'Yeterli solunum (≥ 10/dk), tam uyanıklık değil', maks: 'Toplam 10 mg\'a yanıt yoksa tanıyı gözden geçirin',
+      birim: 'mg', adim: [], semaNot: 'Acil kullanılan bir ilaçtır: titrasyon şeması yerine yanıta göre 2–3 dakikada bir yinelenen dozlarla uygulanır.',
+      not: ['Metadon ve uzun etkili opioidlerde yeniden sedasyon riski: yinelenen dozlar ya da infüzyon (saatte, başlangıçta etkili dozun yaklaşık üçte ikisi) gerekebilir.', 'Burun spreyinde her doz yeni cihazla, sırayla öteki burun deliğine verilir.', 'Opioid kullanım bozukluğu olan hasta ve yakınlarına aşırı doz belirtileri ve nalokson kullanımı öğretilir.']
+    },
+    surdurum: ['Acil kullanım içindir; sürdürüm tedavisi yoktur.', 'Aşırı doz sonrası hastayı bağımlılık tedavisine (buprenorfin/nalokson idamesi) yönlendirin.', 'Eve nalokson erişimi aşırı doz ölümlerini azaltır; Türkiye\'de ruhsatlı ürünü yoktur.'],
+    kesme: { risk: 0, sure: 'Kesme gerekmez (acil kullanım)', adim: [[0, 100], [1, 0]],
+      not: ['Son dozdan sonra en az 2 saat, metadon ve uzun etkili opioidlerde daha uzun gözlem.'] },
+    izlem: 'nalokson', profil: { gis: 1, kv: 2, kes: 0 },
+    uyari: ['Opioid bağımlısında ani ve ağır yoksunluk: ajitasyon, kusma, ishal, taşikardi, terleme', 'Taşikardi, hipertansiyon, aritmi; nadiren akciğer ödemi', 'Etki süresi kısadır: opioid etkisi geri dönebilir', 'Buprenorfin zehirlenmesinde daha yüksek dozlar ve infüzyon gerekebilir'],
+    etkilesim: ['Tüm opioid agonistlerinin etkisini (analjezi dahil) geri döndürür', 'Buprenorfinin reseptöre bağlanmasını güç bozar', 'Benzodiazepin, alkol, gabapentinoid ve diğer sedatiflerin etkisini geri döndürmez'],
+    gecisNotu: 'Acil kullanılan bir ilaçtır; değişim planlayıcıda şema tanımlı değildir. Aşırı doz sonrası hasta uyanıp yoksunluk belirtileri geliştiğinde buprenorfin/nalokson başlatılabilir.',
     oz: []
   },
   {
@@ -88,6 +139,30 @@
     oz: ['antikol']
   },
   {
+    id: 'triheksifenidil', ad: 'Triheksifenidil', sinif: 'diger', altSinif: 'Antikolinerjik (antiparkinson)', grup: 'antikolinerjik',
+    mek: 'Merkezi etkili muskarinik (M1 ağırlıklı) antagonist. Antipsikotiklere bağlı parkinsonizm ve akut distoniyi düzeltir; akatizide etkisi sınırlıdır ve geç diskineziyi kötüleştirebilir. Öforizan etkisi nedeniyle kötüye kullanılabilir.',
+    t12: '3–4 saat (terminal eliminasyon ~33 saate dek)', t12s: 4, etki: '1 saat içinde · etki süresi 6–12 saat', form: 'Tablet 2 / 5 mg; oral çözelti (ABD)',
+    onay: [], onayNot: 'Pediatrik güvenlilik ve etkililik belirlenmemiş (FDA) · Türkiye\'de ruhsatlı ürünü yok',
+    onayEri: [['Parkinsonizm', 'ek tedavi'], ['İlaca bağlı ekstrapiramidal belirtiler']],
+    ped: {
+      bas: 'Psikiyatride önerilen pediatrik doz yok; ilaca bağlı akut distonide çocukta biperiden tercih edilir.', artis: '—', hedef: '—', maks: '—',
+      birim: 'mg/gün', adim: [],
+      not: ['Çocuk nörolojisinde distoni tedavisinde uzman gözetiminde kullanılır.', 'Çocuklar santral antikolinerjik yan etkilere (konfüzyon, ajitasyon, halüsinasyon) daha duyarlıdır.']
+    },
+    eri: {
+      bas: '1 mg/gün', artis: '3–5 günde bir 1–2 mg', hedef: 'İlaca bağlı EPS: 5–15 mg/gün (FDA); çoğu hastada 2 mg ×2–3 yeterli', maks: '15 mg/gün (EPS)',
+      birim: 'mg/gün', adim: [[0, 1], [3, 2], [6, 4], [10, 6]], bant: [4, 10], tavan: 15,
+      not: ['Günde 2–3 doza bölünerek, yemekle alınır.', 'Ekstrapiramidal belirtiler birkaç günde kontrol altına alınırsa doz azaltılabilir.', 'Yaşlıda konfüzyon ve deliryum riski: mümkünse kaçının.', 'Türkiye\'de ruhsatlı ürünü olmadığından biperiden kullanılır.']
+    },
+    surdurum: SURDURUM_ANTIKOL,
+    kesme: KESME_ANTIKOL,
+    izlem: 'antikolinerjik', profil: { sed: 1, akt: 1, ach: 3, kes: 2 },
+    uyari: ['Ağız kuruluğu, bulanık görme, kabızlık, idrar retansiyonu', 'Konfüzyon, bellek bozukluğu, halüsinasyon (özellikle yaşlıda ve yüksek dozda)', 'Taşikardi', 'Öforizan etki: kötüye kullanım potansiyeli', 'Dar açılı glokomda kontrendike; terleme azalmasına bağlı sıcak çarpması riski', 'Geç diskineziyi kötüleştirebilir'],
+    etkilesim: ['Diğer antikolinerjiklerle (trisiklikler, klozapin, düşük potensli antipsikotikler, antihistaminikler) additif antikolinerjik yük', 'Alkol ve sedatiflerle santral yan etkiler artar', 'Mide boşalmasını yavaşlatarak bazı ilaçların emilimini değiştirebilir'],
+    gecisNotu: 'Antikolinerjiklerde "geçiş" yerine gereksinim yeniden değerlendirilir: ekstrapiramidal belirtide önce antipsikotik dozu ya da seçimi gözden geçirilir. Türkiye\'de triheksifenidil ruhsatlı olmadığından biperiden kullanılır.',
+    oz: ['antikol']
+  },
+  {
     id: 'bornaprin', ad: 'Bornaprin', sinif: 'diger', altSinif: 'Antikolinerjik (antiparkinson)', grup: 'antikolinerjik',
     mek: 'Merkezi ve periferik etkili muskarinik antagonist. Antipsikotiklere bağlı parkinsonizm ve distonide, ayrıca aşırı terlemede (hiperhidroz) kullanılır.',
     t12: '~5 saat (metabolitleriyle terminal ~30 saat)', t12s: 5, etki: '1–2 saat', form: 'Tablet 4 mg (dörde bölünebilir)',
@@ -110,6 +185,82 @@
     etkilesim: ['Diğer antikolinerjiklerle additif santral ve periferik yan etkiler', 'Alkolün etkisini artırır', 'Kinidinle AV iletiye etki artabilir', 'Levodopa ile diskinezi artabilir; nöroleptiğe bağlı geç diskinezi şiddetlenebilir'],
     gecisNotu: 'Antikolinerjiklerde "geçiş" yerine gereksinim yeniden değerlendirilir: ekstrapiramidal belirtide önce antipsikotik dozu ya da seçimi gözden geçirilir.',
     oz: ['antikol']
+  },
+  {
+    id: 'propranolol', ad: 'Propranolol', sinif: 'diger', altSinif: 'Seçici olmayan beta-bloker', grup: 'yanetki',
+    mek: 'Beta-1 ve beta-2 adrenerjik reseptör antagonisti; lipofilik olduğundan beyne geçer. Psikiyatride antipsikotiğe bağlı akatizide ilk seçeneklerdendir; performans anksiyetesinin bedensel belirtilerini (taşikardi, titreme) ve lityuma bağlı tremoru da azaltır.',
+    t12: '3–6 saat', t12s: 4, etki: 'Akatizide 1–3 gün · performans anksiyetesinde 30–60 dakika', form: 'Tablet 40 mg (Türkiye); tablet 10–80 mg ve uzatılmış salımlı kapsül (ABD)',
+    onay: [], onayNot: 'Psikiyatrik endikasyonda pediatrik onay yok (oral çözelti infantil hemanjiyomda onaylı)',
+    onayEri: [['Hipertansiyon'], ['Angina, aritmi, miyokard infarktüsü sonrası'], ['Migren profilaksisi'], ['Esansiyel tremor']],
+    ped: {
+      bas: 'Ergen akatizi: 10 mg ×1–2', artis: '3–7 günde bir 10 mg/gün', hedef: '20–40 mg/gün (2–3 doza bölünmüş)', maks: 'Kiloya göre en çok 2 mg/kg/gün; ergende genellikle ≤ 80 mg/gün',
+      birim: 'mg/gün', adim: [[0, 10], [4, 20], [10, 30]], bant: [20, 40], tavan: 80,
+      not: ['Endikasyon dışı kullanım; ergende akatizi verisi küçük çalışmalara ve erişkin deneyimine dayanır.', 'Astım öyküsünü mutlaka sorun: bronşiyal astımda kontrendike.', 'Lityuma bağlı tremorda 10–20 mg ×2 yeterli olabilir.']
+    },
+    eri: {
+      bas: 'Akatizi: 10 mg ×2–3', artis: '2–3 günde bir 10–20 mg/gün', hedef: '30–80 mg/gün (bölünmüş)', maks: 'Akatizide genellikle ≤ 120 mg/gün · Türkiye KÜB\'ü anksiyetede 80–160 mg/gün',
+      birim: 'mg/gün', adim: [[0, 20], [3, 30], [7, 60], [14, 80]], bant: [30, 80], tavan: 160,
+      not: ['Performans anksiyetesi: 10–40 mg tek doz, olaydan 30–60 dakika önce (önceden denenmiş olmalı; endikasyon dışı).', 'Lityuma bağlı tremor: 20–80 mg/gün.', 'Türkiye KÜB\'ü anksiyete ve anksiyeteye bağlı taşikardide 40 mg ×2–3 ile başlar, haftalık artışla 80–160 mg/gün.', 'Nabız < 55/dk ya da sistolik KB < 90 mmHg ise dozu atlayın.']
+    },
+    surdurum: ['Akatizi düzeldikten sonra antipsikotik dozu sabitse birkaç hafta–ay sürdürüp azaltmayı deneyin.', 'Yanıt 1–2 haftada değerlendirilir; yanıt yoksa antipsikotik dozunu azaltma, ilaç değişikliği ya da diğer seçenekler (ör. düşük doz mirtazapin) düşünülür.', 'Nabız ve kan basıncını her vizitte ölçün.'],
+    kesme: { risk: 2, sure: '1–2 hafta (kademeli)', adim: [[0, 100], [4, 50], [8, 25], [12, 0]],
+      not: ['Ani kesme rebound taşikardi ve hipertansiyona, kalp hastalığında angina ya da infarktüse yol açabilir.', 'Klonidinle birlikte kullanılıyorsa önce propranolol, birkaç gün sonra klonidin azaltılır.'] },
+    izlem: 'propranolol', profil: { sed: 1, akt: 1, kv: 3, kes: 2 },
+    uyari: ['Bradikardi, hipotansiyon, baş dönmesi', 'Yorgunluk, soğuk el-ayak, canlı rüya ya da kâbus, uykusuzluk', 'Bronkospazm: bronşiyal astım öyküsü ve KOAH\'ta kontrendike (Türkiye KÜB\'ü)', 'Hipoglisemi belirtilerini maskeler; uzun açlıkta ve diyabette dikkat', 'Aşırı dozda ölümcül olabilir (bradikardi, nöbet, aritmi): intihar riski olan hastada reçete miktarını sınırlayın'],
+    etkilesim: ['Fluvoksamin (CYP1A2) ve fluoksetin, paroksetin (CYP2D6) düzeyi artırır', 'Klorpromazinle karşılıklı düzey artışı; tiyoridazinle kontrendike', 'Verapamil ve diltiazemle bradikardi, AV blok', 'Klonidin kesilirken rebound hipertansiyonu artırır', 'Rizatriptan düzeyini artırır; sigara propranolol düzeyini düşürür'],
+    gecisNotu: 'Akatizide başka seçeneğe geçişte (ör. düşük doz mirtazapin) propranolol 1–2 haftada azaltılır. Değişim planlayıcıda bu sınıf için şema tanımlı değildir.',
+    oz: []
+  },
+  {
+    id: 'metformin', ad: 'Metformin', sinif: 'diger', altSinif: 'Biguanid (antipsikotiğe bağlı kilo artışı)', grup: 'yanetki',
+    mek: 'Karaciğerde glukoz üretimini azaltır, insülin duyarlılığını artırır; iştahı ve kilo artışını azaltır. Psikiyatride antipsikotiğe bağlı kilo artışını ve insülin direncini önlemede ya da azaltmada, yaşam tarzı müdahalesine ek olarak kullanılır.',
+    t12: '~6 saat (plazma)', t12s: 6, etki: 'Kilo üzerinde 8–16 hafta', form: 'Film tablet 500 / 850 / 1000 mg; uzatılmış salımlı tablet',
+    onay: [['Tip 2 diabetes mellitus', '≥ 10 yaş']], onayNot: 'Antipsikotiğe bağlı kilo artışında endikasyon dışı',
+    onayEri: [['Tip 2 diabetes mellitus']],
+    ped: {
+      bas: '10 yaş ve üstü: 500 mg ×1, akşam yemeğiyle', artis: 'Haftada bir 500 mg', hedef: '1000–2000 mg/gün (850 mg ×2 ya da 1000 mg ×2)', maks: '2000 mg/gün (Türkiye KÜB\'ü ve FDA)',
+      birim: 'mg/gün', adim: [[0, 500], [7, 1000], [14, 1500], [21, 2000]], bant: [1000, 2000], tavan: 2000,
+      not: ['Endikasyon dışı kullanım: antipsikotik başlarken risk yüksekse (hızlı kilo artışı, aile öyküsü, prediyabet) ya da kilo artışı gelişince, yaşam tarzı müdahalesiyle birlikte.', 'Çocuk ve ergen çalışmalarında plaseboya göre BKİ artışı sınırlanmıştır; etki orta düzeydedir.', 'Bulantı ve ishal yavaş titrasyonla azalır; tabletler yemekle alınır.']
+    },
+    eri: {
+      bas: '500 mg ×1, akşam yemeğiyle', artis: 'Haftada bir 500 mg', hedef: '1500–2000 mg/gün (bölünmüş)', maks: 'Kilo artışında 2000 mg/gün · Türkiye KÜB\'ü diyabette 3 g/gün',
+      birim: 'mg/gün', adim: [[0, 500], [7, 1000], [14, 1500], [21, 2000]], bant: [1500, 2000], tavan: 3000,
+      not: ['Endikasyon dışı kullanım; antipsikotiğe bağlı kilo artışında erişkin meta-analizlerinde ortalama yaklaşık 3 kg azalma.', 'Klozapin ve olanzapin kullananlarda kanıt daha güçlüdür.', 'eGFR 30–44\'te en çok 1000 mg/gün; < 30\'da kontrendike (Türkiye KÜB\'ü).']
+    },
+    surdurum: ['3–4 ay sonunda kilo ve metabolik değerlerde anlamlı yanıt yoksa kesmeyi düşünün.', 'Antipsikotik sürdükçe ve yanıt varsa sürdürülebilir; böbrek işlevi yılda bir, B12 uzun süreli kullanımda izlenir.', 'Kusma, ishal ya da dehidrasyonla seyreden akut hastalıkta ilaca ara verilir; hastayı bilgilendirin.'],
+    kesme: { risk: 0, sure: 'Doğrudan kesilebilir', adim: [[0, 100], [1, 0]],
+      not: ['Kesilme sendromu yapmaz.', 'Diyabet tanısı varsa kesmeden önce kan şekeri kontrolü planlanır.'] },
+    izlem: 'metformin', profil: { kilo: 0, gis: 3, istah: 1, kes: 0 },
+    kutu: 'Laktik asidoz: nadir ama ölümcül olabilir. Risk etkenleri böbrek yetmezliği, iyotlu kontrast, ameliyat, hipoksi, aşırı alkol, karaciğer yetmezliği ve ileri yaştır.',
+    uyari: ['Bulantı, ishal, karın ağrısı, metalik tat (başlangıçta sık)', 'B12 vitamini eksikliği (uzun süreli)', 'Tek başına hipoglisemi yapmaz; insülin ya da sülfonilüreyle birlikte risk artar', 'Alkolizm, akut alkol intoksikasyonu ve karaciğer yetmezliğinde kontrendike (Türkiye KÜB\'ü)'],
+    etkilesim: ['İyotlu kontrast: işlemden önce ara verin, 48 saat sonra böbrek işlevi kontrol edilerek yeniden başlayın', 'Alkol laktik asidoz riskini artırır', 'Topiramat ve diğer karbonik anhidraz inhibitörleri metabolik asidoz riskini artırır', 'OCT2/MATE inhibitörleri (simetidin, dolutegravir) metformin düzeyini artırır', 'Antipsikotikler ve kortikosteroidler kan şekerini yükseltir'],
+    gecisNotu: 'Antipsikotiğe bağlı kilo artışında metformin, antipsikotik değişimi (metabolik riski düşük ilaca geçiş) ile birlikte ya da onun yerine değerlendirilir. Değişim planlayıcıda bu sınıf için şema tanımlı değildir.',
+    oz: []
+  },
+  {
+    id: 'prazosin', ad: 'Prazosin', sinif: 'diger', altSinif: 'Alfa-1 adrenerjik antagonist', grup: 'travma',
+    mek: 'Beyne geçen alfa-1 adrenerjik reseptör antagonisti. Uyku sırasında artmış noradrenerjik etkinliği azaltarak travma sonrası stres bozukluğuna eşlik eden kâbusları ve uyku bölünmesini azaltabilir.',
+    t12: '2–3 saat', t12s: 2.5, etki: 'Kâbuslarda yeterli dozda 1–2 hafta', form: 'Kapsül 1 / 2 / 5 mg (ABD)',
+    onay: [], onayNot: 'Pediatrik onay yok · Türkiye\'de ruhsatlı ürünü yok',
+    onayEri: [['Hipertansiyon']],
+    ped: {
+      bas: 'Ergen: 0,5–1 mg yatarken', artis: '3–7 günde bir 0,5–1 mg, ortostatik KB izlemiyle', hedef: 'Yanıta göre bireysel', maks: 'Standart üst sınır belirlenmemiştir',
+      birim: 'mg/gün', adim: [],
+      not: ['Endikasyon dışı kullanım; çocuk ve ergende kanıt olgu serileriyle sınırlıdır.', 'Travmaya odaklı psikoterapi ilk basamak tedavidir.', 'İlk doz senkopu riski: ilk dozu yatarken verin; gece kalkarken dikkat.']
+    },
+    eri: {
+      bas: '1 mg yatarken', artis: '3–7 günde bir 1–2 mg', hedef: '3–15 mg/gün (yatarken; gerekirse gündüz ek doz)', maks: '20 mg/gün (araştırmalarda erkekte 20, kadında 12 mg)',
+      birim: 'mg/gün', adim: [[0, 1], [3, 2], [7, 4], [14, 6], [21, 10]], bant: [3, 15], tavan: 20,
+      not: ['Endikasyon dışı kullanım. Kanıt çelişkilidir: erken randomize çalışmalar olumluyken büyük çok merkezli çalışma (2018) plaseboya üstünlük gösterememiştir.', 'Yeterli dozda 4–8 haftada yanıt yoksa kesin.', 'Birkaç gün ara verildiyse 1 mg\'dan yeniden titre edin.']
+    },
+    surdurum: ['Yanıt veren hastada kâbuslar ilaç kesilince sıklıkla geri döner; gereksinimi 6–12 ayda bir yeniden değerlendirin.', 'Travmaya odaklı psikoterapiyle birlikte kullanın.', 'Kan basıncını her vizitte ölçün.'],
+    kesme: { risk: 1, sure: '1–2 hafta (kademeli)', adim: [[0, 100], [7, 50], [14, 0]],
+      not: ['Belirgin kesilme sendromu yoktur; kâbuslar geri dönebilir.', 'Ara verildikten sonra yeniden başlarken ilk doz senkopu riski nedeniyle 1 mg\'dan başlayın.'] },
+    izlem: 'prazosin', profil: { sed: 1, gis: 1, kv: 3, kes: 1 },
+    uyari: ['İlk doz senkopu ve ortostatik hipotansiyon', 'Baş dönmesi, baş ağrısı, halsizlik, çarpıntı', 'Burun tıkanıklığı', 'Priapizm (nadir)', 'Katarakt ameliyatında gevşek iris sendromu: cerrahı bilgilendirin'],
+    etkilesim: ['Antihipertansifler ve PDE-5 inhibitörleriyle (sildenafil vb.) ek hipotansiyon', 'Trazodon, ketiapin, klozapin, risperidon gibi alfa-1 bloke eden psikotroplarla ortostatik hipotansiyon artar', 'Beta-blokerlerle ilk doz hipotansiyonu artabilir', 'Alkol hipotansiyonu artırır'],
+    gecisNotu: 'Kâbuslarda başka seçeneğe (ör. imgeleme provası tedavisi) geçerken prazosin 1–2 haftada azaltılır. Değişim planlayıcıda bu sınıf için şema tanımlı değildir.',
+    oz: []
   }
   );
 })();

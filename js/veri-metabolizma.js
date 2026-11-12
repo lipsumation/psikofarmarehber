@@ -721,6 +721,63 @@
       bobrek: 'Veri yok (Türkiye KÜB\'ü); dikkatli kullanın.',
       karaciger: 'Veri yok (Türkiye KÜB\'ü); dikkatli kullanın.',
       etkiler: ['Antikolinerjik yük: diğer antikolinerjiklerle additif (farmakodinamik).']
+    },
+    nalmefen: {
+      ozet: 'Ağızdan alındıktan sonra hızla ve yoğun olarak metabolize olur: başlıca UGT2B7 (küçük katkıyla UGT1A3 ve UGT1A8) ile nalmefen 3-O-glukuronide dönüşür; küçük bir kısmı sülfatlanır ve CYP3A4/5 ile nornalmefene dönüşür. Mutlak biyoyararlanım %41; metabolitler başlıca böbrekle atılır.',
+      sub: { 'UGT': 2, '3A4': 1 }, inh: {}, ind: {},
+      aktif: 'Nalmefen 3-O-sülfat: nalmefen benzeri güçte, ancak düzeyi ana ilacın %10\'undan az; klinik katkısı önemsiz.',
+      atilim: null, atilimYazi: 'Başlıca böbrekle: dozun %54\'ü nalmefen 3-O-glukuronid olarak idrarla atılır.', fe: 2, feYazi: '%3\'ün altında',
+      bobrek: 'Hafif–orta yetmezlikte doz ayarı gerekmez; ağır yetmezlikte (eGFR < 30) kontrendike (Türkiye KÜB\'ü).',
+      karaciger: 'Hafif–orta yetmezlikte doz ayarı gerekmez; ağır yetmezlikte kontrendike (Türkiye KÜB\'ü).',
+      etkiler: ['Opioidlerin etkisini bloke eder (farmakodinamik).', 'Güçlü UGT2B7 inhibitörleri (diklofenak, flukonazol) düzeyini artırabilir.']
+    },
+    nalokson: {
+      ozet: 'Karaciğerde başlıca glukuronidasyonla (nalokson-3-glukuronid) yıkılır; yoğun ilk geçiş etkisi nedeniyle ağızdan alındığında etkisizdir. Metabolitler idrarla atılır.',
+      sub: { 'UGT': 2 }, inh: {}, ind: {},
+      aktif: null,
+      atilim: null, atilimYazi: 'Metabolitler idrarla atılır.', fe: 1, feYazi: 'çok az',
+      bobrek: 'Doz ayarı gerekmez; yanıta göre titre edilir.',
+      karaciger: 'Doz ayarı gerekmez; yarı ömür uzayabilir, yanıta göre titre edilir.',
+      etkiler: ['Opioid agonistlerinin etkisini geri döndürür (farmakodinamik).']
+    },
+    triheksifenidil: {
+      ozet: 'Ağızdan iyi emilir; karaciğerde hidroksilasyonla yıkılır, sorumlu enzimler ayrıntılı tanımlanmamıştır. Başlıca idrarla atılır.',
+      sub: {}, inh: {}, ind: {},
+      diger: 'Karaciğerde hidroksilasyon (enzimi tanımlanmamış)',
+      aktif: null,
+      atilim: null, atilimYazi: 'Başlıca idrarla atılır.', fe: 0, feYazi: 'veri yok',
+      bobrek: 'Veri yok; dikkatli kullanın.',
+      karaciger: 'Veri yok; dikkatli kullanın.',
+      etkiler: ['Antikolinerjik yük: trisiklikler, klozapin, düşük potensli antipsikotikler ve antihistaminiklerle additif (farmakodinamik).']
+    },
+    propranolol: {
+      ozet: 'Karaciğerde yoğun ilk geçiş etkisine uğrar (biyoyararlanım yaklaşık %25). CYP2D6 (4-hidroksilasyon; aktif metabolit), CYP1A2 (N-dealkilasyon) ve CYP2C19 ile yıkılır, ayrıca glukuronidlenir. Metabolitler idrarla atılır; sigara (CYP1A2 indüksiyonu) düzeyi düşürür.',
+      sub: { '1A2': 2, '2D6': 2, '2C19': 1, 'UGT': 1 }, inh: {}, ind: {},
+      aktif: '4-hidroksipropranolol: beta-bloker etkinliği ana ilaca benzer, yarı ömrü kısadır.',
+      atilim: null, atilimYazi: 'Metabolitler başlıca idrarla atılır.', fe: 1, feYazi: '%1\'in altında',
+      bobrek: 'Böbrek işlevi azalmışsa düşük dozla başlayın (Türkiye KÜB\'ü).',
+      karaciger: 'Ciddi karaciğer hastalığında (siroz) düşük başlangıç dozu: günde 3 kez 20 mg\'ı aşmayın, yanıtı izleyin (Türkiye KÜB\'ü).',
+      etkiler: ['Beta-blokaj: klonidin kesilmesinde rebound hipertansiyonu artırır, hipoglisemi belirtilerini maskeler (farmakodinamik).']
+    },
+    metformin: {
+      ozet: 'Metabolize olmaz. Emilen kısım (biyoyararlanım %50–60) böbrekte glomerüler filtrasyon ve OCT2/MATE taşıyıcılarıyla tübüler sekresyon yoluyla değişmeden atılır; emilmeyen kısım dışkıyla çıkar. CYP etkileşimi yoktur.',
+      sub: {}, inh: {}, ind: {},
+      diger: 'Metabolize olmaz (OCT1, OCT2 ve MATE taşıyıcıları)',
+      aktif: null,
+      atilim: null, atilimYazi: 'Emilen kısım böbrekle değişmeden atılır; emilmeyen kısım dışkıyla çıkar.', fe: 50, feYazi: 'emilen dozun ~%90\'ı (ağızdan alınan dozun yaklaşık yarısı)',
+      bobrek: 'eGFR 45–59: en çok 2000 mg/gün · 30–44: en çok 1000 mg/gün, başlangıç maksimumun yarısı · < 30: kontrendike (Türkiye KÜB\'ü).',
+      karaciger: 'Karaciğer yetmezliğinde kontrendike (laktik asidoz riski).',
+      etkiler: ['OCT2/MATE inhibitörleri (simetidin, dolutegravir) düzeyini artırır.']
+    },
+    prazosin: {
+      ozet: 'Karaciğerde demetilasyon ve konjugasyonla yoğun olarak metabolize olur (biyoyararlanım yaklaşık %60); sorumlu enzimler ayrıntılı tanımlanmamıştır. Metabolitler başlıca safra ve dışkıyla atılır.',
+      sub: {}, inh: {}, ind: {},
+      diger: 'Demetilasyon ve konjugasyon (enzimleri tanımlanmamış)',
+      aktif: null,
+      atilim: null, atilimYazi: 'Başlıca safra ve dışkıyla atılır; idrarla atılım azdır.', fe: 1, feYazi: 'çok az',
+      bobrek: 'Düşük dozla başlayın; dozu yanıta göre dikkatle artırın.',
+      karaciger: 'Düşük dozla başlayın; dikkatli titre edin.',
+      etkiler: ['Alfa-1 blokajı: antihipertansifler ve alfa-1 bloke eden psikotroplarla ek hipotansiyon (farmakodinamik).']
     }
   };
 

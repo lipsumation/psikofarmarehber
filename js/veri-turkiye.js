@@ -2719,5 +2719,154 @@ window.TR_KUB = {
    }
   ],
   "ek": []
+ },
+ "nalmefen": {
+  "urun": "SELİNCRO 18 MG FİLM KAPLI TABLET",
+  "firma": "LUNDBECK İLAÇ TİC. LTD. ŞTİ.",
+  "tarih": "22/12/2022",
+  "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/1311kub_e61389f8-c2f1-4e4b-9f84-3e2b42f415e0.pdf",
+  "eriskin": [
+   "Alkol bağımlılığında alkol tüketimini azaltma (yüksek içme risk düzeyi, fiziksel yoksunluk yok; sürekli psikososyal destekle)"
+  ],
+  "pediatrik": [],
+  "pedNot": "18 yaş altında etkililik ve güvenlilik değerlendirilmemiştir.",
+  "doz": {
+   "eri": {
+    "bas": "İlk değerlendirmeden 2 hafta sonra yüksek içme risk düzeyi sürüyorsa: içme riski olan günlerde, tercihen içmeden 1–2 saat önce 18 mg",
+    "maks": "Günde 1 tablet (18 mg); yanıt ayda bir değerlendirilir, 1 yıldan uzun kullanımda dikkat"
+   },
+   "ped": null
+  },
+  "organ": {
+   "bobrek": "Hafif–orta yetmezlikte doz ayarı gerekmez; ağır yetmezlikte (eGFR < 30) kontrendike.",
+   "karaciger": "Hafif–orta yetmezlikte doz ayarı gerekmez; ağır yetmezlikte kontrendike."
+  },
+  "fark": {
+   "eri": [
+    "ABD'de oral nalmefen onaylı değil; ABD'deki onay burun spreyi ve enjeksiyonun opioid aşırı dozunda kullanımıdır.",
+    "Opioid kullananlarda ve yakın zamanda akut alkol yoksunluk sendromu öyküsünde kontrendike."
+   ],
+   "ped": [
+    "Türkiye'de pediatrik endikasyon yok (ABD: burun spreyi ve enjeksiyon 12 yaş üstünde opioid aşırı dozunda)."
+   ]
+  },
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "SELİNCRO 18 MG FİLM KAPLI TABLET",
+    "tarih": "22/12/2022",
+    "url": "https://titck.gov.tr/storage/Archive/2022/kubKtAttachments/1311kub_e61389f8-c2f1-4e4b-9f84-3e2b42f415e0.pdf"
+   }
+  ],
+  "ek": []
+ },
+ "propranolol": {
+  "urun": "DİDERAL 40 MG TABLET",
+  "firma": "BMED İLAÇ DANIŞMANLIK SAĞLIK ÜRÜN VE HİZMETLERİ TİCARET LİMİTED ŞİRKETİ",
+  "tarih": "02/07/2024",
+  "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/uygunkbdideral_ab2d37dc-ca5c-49cd-8969-28b9caf08366.pdf",
+  "eriskin": [
+   "Anksiyete ve anksiyeteye bağlı taşikardi",
+   "Esansiyel ve renal hipertansiyon",
+   "Angina pektoris; miyokard infarktüsü sonrası profilaksi; kardiyak disritmiler",
+   "Migren profilaksisi",
+   "Esansiyel tremor",
+   "Tirotoksikoz, hipertrofik obstrüktif kardiyomiyopati, feokromositoma (alfa-blokerle)"
+  ],
+  "pediatrik": [
+   "Disritmi, feokromositoma, tirotoksikoz · yaş sınırı belirtilmemiş (tablet)",
+   "Migren profilaksisi · 12 yaş altı ayrı doz, üstü erişkin dozu (tablet)",
+   "Proliferatif infantil hemanjiyom · 5 hafta–5 ay (oral çözelti)"
+  ],
+  "pedNot": "Psikiyatrik endikasyonda (anksiyete, akatizi) pediatrik doz verilmemiştir.",
+  "doz": {
+   "eri": {
+    "bas": "Anksiyete: 40 mg ×2–3; yanıta göre haftalık aralarla aynı miktarda artış",
+    "maks": "Anksiyete, migren ve tremorda 80–160 mg/gün; hipertansiyonda 160–320 mg/gün"
+   },
+   "ped": {
+    "bas": "Disritmi, feokromositoma, tirotoksikoz: 0,25–0,5 mg/kg ×3–4 · migren: 12 yaş altında 20 mg ×2–3",
+    "maks": "12 yaş üstünde migrende erişkin dozu"
+   }
+  },
+  "organ": {
+   "bobrek": "Böbrek işlevi azalmışsa düşük dozla başlayın.",
+   "karaciger": "Ciddi karaciğer hastalığında (siroz) düşük başlangıç dozu: günde 3 kez 20 mg'ı aşmayın, yanıtı izleyin."
+  },
+  "fark": {
+   "eri": [
+    "Türkiye'de anksiyete ve anksiyeteye bağlı taşikardi endikasyonu var (FDA'da yok); akatizi her ikisinde de endikasyon dışı.",
+    "Bronşiyal astım öyküsü, KOAH, hipotansiyon, metabolik asidoz ve uzun açlıkta kontrendike."
+   ],
+   "ped": []
+  },
+  "kaynaklar": [
+   {
+    "form": "tablet",
+    "urun": "DİDERAL 40 MG TABLET",
+    "tarih": "02/07/2024",
+    "url": "https://titck.gov.tr/storage/Archive/2024/kubKtAttachments/uygunkbdideral_ab2d37dc-ca5c-49cd-8969-28b9caf08366.pdf"
+   },
+   {
+    "form": "oral çözelti",
+    "urun": "HEMANGİOL 3,75 MG/ML ORAL ÇÖZELTİ",
+    "tarih": "17/03/2021",
+    "url": "https://titck.gov.tr/storage/Archive/2021/kubKtAttachments/TTCKONAYLIKBHEMANGOL_7a161167-ef8b-43b8-8da7-895be5b284a4.pdf"
+   }
+  ],
+  "ek": []
+ },
+ "metformin": {
+  "urun": "DİAFORMİN 850 MG FİLM KAPLI TABLET",
+  "firma": "ALİ RAİF İLAÇ SANAYİ A.Ş.",
+  "tarih": "25/08/2026",
+  "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/uygunkbdiaformin_25_08_2026.pdf",
+  "eriskin": [
+   "Tip 2 diabetes mellitus (tek başına ya da diğer oral antidiyabetikler veya insülinle)",
+   "Prediyabette tip 2 diyabetin önlenmesi (en az bir risk etkeni, yaşam tarzı değişikliği yetersizse)"
+  ],
+  "pediatrik": [
+   "Tip 2 diabetes mellitus · 10 yaş ve üstü (tek başına ya da insülinle)"
+  ],
+  "pedNot": "Antipsikotiğe bağlı kilo artışında kullanım Türkiye'de de endikasyon dışıdır.",
+  "doz": {
+   "eri": {
+    "bas": "500 ya da 850 mg ×2–3, yemekle; 10–15 gün sonra kan şekerine göre ayarlanır · prediyabet: 1000–1700 mg/gün, 2 doza bölünmüş",
+    "maks": "3 g/gün, 3 doza bölünmüş"
+   },
+   "ped": {
+    "bas": "10 yaş ve üstü: 500 ya da 850 mg ×1, yemekle; 10–15 gün sonra ayarlanır",
+    "maks": "2 g/gün, 2–3 doza bölünmüş"
+   }
+  },
+  "organ": {
+   "bobrek": "GFR başlangıçta ve yılda bir; 45–59: en çok 2000 mg/gün · 30–44: en çok 1000 mg/gün · < 30: kontrendike.",
+   "karaciger": "Karaciğer yetmezliğinde kontrendike (laktik asidoz riski)."
+  },
+  "fark": {
+   "eri": [
+    "Türkiye'de prediyabette tip 2 diyabeti önleme endikasyonu var (FDA'da yok).",
+    "Alkolizm ve akut alkol intoksikasyonunda kontrendike."
+   ],
+   "ped": []
+  },
+  "kaynaklar": [
+   {
+    "form": "film tablet",
+    "urun": "DİAFORMİN 850 MG FİLM KAPLI TABLET",
+    "tarih": "25/08/2026",
+    "url": "https://titck.gov.tr/storage/Archive/2026/kubKtAttachments/uygunkbdiaformin_25_08_2026.pdf"
+   }
+  ],
+  "ek": []
+ },
+ "triheksifenidil": {
+  "ruhsatsiz": true
+ },
+ "prazosin": {
+  "ruhsatsiz": true
+ },
+ "nalokson": {
+  "ruhsatsiz": true
  }
 };

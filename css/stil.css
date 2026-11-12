@@ -537,3 +537,11 @@ table.matris.metin-tablo td:first-child { width: 18%; }
   .ust, .yol, .tema-dugme, .geri { display: none !important; }
   .kart { box-shadow: none; break-inside: avoid; }
 }
+
+/* Özel kullanım paneli (ör. alkol yoksunluğunda benzodiazepin) */
+.ozel-kullanim { margin-top: 22px; padding-top: 4px; border-top: 1px dashed var(--cizgi); }
+.ozel-kullanim .alt-b { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ozel-kullanim .alt-b .etiket { text-transform: none; letter-spacing: 0; }
+.ozel-kullanim table.matris th, .ozel-kullanim table.matris td { text-align: left; }
+.ozel-kullanim table.matris td:first-child { width: 20%; }
+.ozel-kullanim .kucuk a { font-weight: 600; }

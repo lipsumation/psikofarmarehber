@@ -287,7 +287,7 @@ window.IZLEM = {
     ]
   },
   antikolinerjik: {
-    ad: 'Antikolinerjikler (biperiden, bornaprin)',
+    ad: 'Antikolinerjikler (biperiden, triheksifenidil, bornaprin)',
     satir: [
       ['Ekstrapiramidal belirtiler (SAS, BARS, AIMS)', [1, 1, 1, 1, 1], 'Antikolinerjik gereksinimini her vizitte yeniden değerlendirin; geç diskinezide kesmeyi düşünün.'],
       ['Bilişsel işlev, konfüzyon', [1, 1, 1, 1, 1], 'Yaşlıda ve organik beyin hastalığında daha sık; bellek bozukluğunda kaçının.'],
@@ -296,6 +296,60 @@ window.IZLEM = {
       ['Nabız', [1, 1, 0, 0, 1], 'Taşikardi ve aritmide dikkatli kullanın.'],
       ['Tam kan, biyokimya', [1, 0, 2, 2, 1], 'Biperiden KÜB\'ü uzun süreli kullanımda düzenli izlem önerir.'],
       ['Kötüye kullanım', [1, 0, 2, 2, 1], 'Öforizan etki; reçete miktarını izleyin.']
+    ]
+  },
+  nalmefen: {
+    ad: 'Nalmefen',
+    satir: [
+      ['Alkol tüketimi (içme günleri ve miktarı)', [1, 1, 1, 1, 1], 'Başlamadan önce 2 hafta içme günlüğü; ilk 4 hafta en çok iyileşme, sonra ayda bir yanıt değerlendirmesi (Türkiye KÜB\'ü).'],
+      ['Opioid kullanımı', [1, 1, 1, 1, 1], 'Opioid kullananlarda kontrendike; opioid analjezik gerekirse nalmefen 1 hafta önce kesilir.'],
+      ['Yoksunluk öyküsü', [1, 0, 0, 0, 0], 'Yakın zamanda akut alkol yoksunluk sendromu (nöbet, halüsinasyon, deliryum tremens) varsa kullanılmaz.'],
+      ['Karaciğer ve böbrek işlevi', [1, 0, 2, 2, 1], 'Ağır karaciğer yetmezliğinde ve eGFR < 30\'da kontrendike; GGT ve MCV alkol tüketimini izlemede yardımcıdır.'],
+      ['Duygudurum, intihar düşüncesi, konfüzyon', [1, 1, 1, 1, 1], 'Konfüzyon ve halüsinasyon bildirilmiştir; bağımlılıkta intihar riski zaten yüksektir.'],
+      ['Bulantı, baş dönmesi, uykusuzluk', [0, 1, 0, 0, 0], 'Çoğunlukla ilk haftalarda ve geçicidir.']
+    ]
+  },
+  nalokson: {
+    ad: 'Nalokson (acil kullanım)',
+    satir: [
+      ['Solunum sayısı, SpO2, bilinç düzeyi', [1, 'Her dozdan 2–3 dakika sonra', 0, 0, 0], 'Hedef yeterli solunumdur (≥ 10/dk), tam uyanıklık değil; yanıt yoksa doz 2–3 dakikada bir yinelenir.'],
+      ['Yeniden sedasyon gözlemi', [0, 'Son dozdan sonra en az 2 saat', 0, 0, 0], 'Nalokson etkisi (30–90 dakika) çoğu opioidden kısadır; metadon ve uzun etkili opioidlerde daha uzun gözlem ya da infüzyon gerekir.'],
+      ['Nabız, kan basıncı, ritim', [1, 'Gerekirse sürekli monitör', 0, 0, 0], 'Ani yoksunlukta taşikardi, hipertansiyon, aritmi; nadiren akciğer ödemi.'],
+      ['Tetiklenen yoksunluk ve ajitasyon', [0, 'Uyandıktan sonra', 0, 0, 0], 'Opioid bağımlısında düşük dozla titre ederek ağır yoksunluktan kaçının.'],
+      ['Eş maddeler, kan şekeri', [1, 0, 0, 0, 0], 'Benzodiazepin, alkol ve diğer sedatifler naloksona yanıt vermez; hipoglisemiyi dışlayın.'],
+      ['Bağımlılık tedavisine yönlendirme', [0, 'Taburculuk öncesi', 0, 0, 0], 'Aşırı doz sonrası buprenorfin başlatma, aşırı doz eğitimi ve nalokson erişimi.']
+    ]
+  },
+  propranolol: {
+    ad: 'Propranolol',
+    satir: [
+      ['Nabız ve kan basıncı (ayakta dahil)', [1, 'Her doz artışında', 1, 1, 1], 'Nabız < 55/dk ya da sistolik KB < 90 mmHg ise dozu atlayın veya azaltın.'],
+      ['Astım, KOAH, bronkospazm öyküsü', [1, 0, 0, 0, 0], 'Bronşiyal astım öyküsü ve KOAH\'ta kontrendike (Türkiye KÜB\'ü).'],
+      ['Diyabet, hipoglisemi riski', [1, 0, 2, 2, 2], 'Hipoglisemi belirtilerini (taşikardi, titreme) maskeler; uzun açlıkta kullanılmaz.'],
+      ['Akatizi şiddeti (BARS)', [1, 1, 1, 1, 1], 'Yanıt 1–2 haftada belirginleşir; yanıt yoksa antipsikotik dozu ya da seçimi yeniden değerlendirilir.'],
+      ['EKG', [2, 0, 0, 0, 0], 'Bradikardi, ileti bozukluğu ya da kalp hastalığı öyküsünde.'],
+      ['Yorgunluk, depresif belirti, kâbus', [1, 1, 1, 1, 1], 'Canlı rüya ve uykusuzluk bildirilir; akşam dozunu azaltmak yardımcı olabilir.']
+    ]
+  },
+  metformin: {
+    ad: 'Metformin (antipsikotiğe bağlı kilo artışı)',
+    satir: [
+      [{ ped: 'Kilo, BKİ persentili / z skoru, bel çevresi', eri: 'Kilo, BKİ, bel çevresi' }, [1, 1, 1, 1, 1], 'Yaşam tarzı müdahalesiyle birlikte; 3–4 ayda anlamlı etki yoksa gereksinimi yeniden değerlendirin.'],
+      ['Açlık glukozu, HbA1c', [1, 0, 1, 1, 1], 'Antipsikotik metabolik izlemiyle birlikte.'],
+      ['Lipid profili', [1, 0, 2, 0, 1], 'Antipsikotik metabolik izlemiyle birlikte.'],
+      ['Böbrek işlevi (eGFR)', [1, 0, 0, 0, 1], 'Başlangıçta ve yılda bir; risk varsa 3–6 ayda bir. eGFR 30–44\'te en çok 1000 mg/gün, < 30\'da kontrendike (Türkiye KÜB\'ü).'],
+      ['B12 vitamini', [0, 0, 0, 0, 1], 'Uzun süreli kullanımda; nöropati ya da anemi varsa daha erken.'],
+      ['Bulantı, ishal', [1, 1, 0, 0, 0], 'Yemekle alın ve yavaş titre edin; uzatılmış salımlı form tolerabiliteyi artırabilir.'],
+      ['Laktik asidoz risk durumları', [1, 0, 1, 1, 1], 'Dehidrasyon, ağır enfeksiyon, iyotlu kontrast ve ameliyatta ara verin; alkolizm ve karaciğer yetmezliğinde kullanılmaz.']
+    ]
+  },
+  prazosin: {
+    ad: 'Prazosin',
+    satir: [
+      ['Kan basıncı (oturma ve ayakta), nabız', [1, 'Her doz artışında', 1, 1, 1], 'İlk doz senkopu riski: ilk dozu yatarken verin; birkaç gün ara verildiyse 1 mg\'dan yeniden başlayın.'],
+      ['Kâbus sıklığı ve şiddeti, uyku', [1, 1, 1, 1, 1], 'Kâbus günlüğü ya da CAPS kâbus maddesi; yeterli dozda 4–8 haftada yanıt yoksa kesin.'],
+      ['Baş dönmesi, düşme riski', [1, 1, 1, 1, 1], 'Yaşlıda ve başka antihipertansif ya da alfa-1 bloke eden psikotrop kullanımında.'],
+      ['Eş ilaçlar', [1, 1, 0, 0, 1], 'Antihipertansifler, PDE-5 inhibitörleri, trazodon, ketiapin, klozapin: ek hipotansiyon.']
     ]
   },
   buspiron: {

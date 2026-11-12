@@ -405,8 +405,10 @@
       '<div class="kutu"><div class="ad">Hedef doz</div><div class="deger">' + esc(d.hedef) + '</div></div>' +
       '<div class="kutu"><div class="ad">Maksimum</div><div class="deger">' + esc(d.maks) + '</div></div>' +
       '</div>' + (d.not && d.not.length ? liste(d.not) : '') + '</div>';
-    if (!d.adim || !d.adim.length) { // bu yaş grubunda önerilmeyen ilaçlar: şema yerine açıklama
-      h += '<div><div class="cagri uyari">' + SIMGE.uyari + '<div><b>' + (durum.yas === 'ped' ? 'Çocuk ve ergende' : 'Erişkinde') + ' titrasyon şeması verilmemiştir.</b> ' + esc(d.bas) + '</div></div></div></div>';
+    if (!d.adim || !d.adim.length) { // bu yaş grubunda önerilmeyen ya da titre edilmeyen (acil, gerektiğinde) ilaçlar: şema yerine açıklama
+      h += '<div>' + (d.semaNot
+        ? '<div class="cagri bilgi">' + SIMGE.bilgi + '<div>' + esc(d.semaNot) + '</div></div>'
+        : '<div class="cagri uyari">' + SIMGE.uyari + '<div><b>' + (durum.yas === 'ped' ? 'Çocuk ve ergende' : 'Erişkinde') + ' titrasyon şeması verilmemiştir.</b> ' + esc(d.bas) + '</div></div>') + '</div></div>';
     } else {
     h += '<div><div class="grafik-kutu"><div class="grafik-baslik">Titrasyon şeması · ' + (durum.yas === 'ped' ? 'çocuk / ergen' : 'erişkin') + '</div>' +
       '<div class="grafik-alt">Doz (' + esc(d.birim) + ') · örnek basamaklar; yanıt ve tolerabiliteye göre bireyselleştirilir</div>' +
@@ -429,6 +431,24 @@
       h += '</div>';
     }
     return h;
+  }
+
+  /* Özel kullanım paneli: ana endikasyon dışında psikiyatride sık başvurulan kullanım şekli (ör. alkol yoksunluğunda benzodiazepin) */
+  function ozelKullanim(i) {
+    return (i.ozel || []).map(function (o) {
+      var h = '<div class="ozel-kullanim"><div class="alt-b">' + esc(o.baslik) + (o.etiket ? ' <span class="etiket' + (o.onaysiz ? ' onaysiz' : '') + '">' + esc(o.etiket) + '</span>' : '') + '</div>';
+      if (kt(o.uyari)) h += '<div class="cagri uyari">' + SIMGE.uyari + '<div>' + esc(kt(o.uyari)) + '</div></div>';
+      if (kt(o.giris)) h += '<p class="metin">' + esc(kt(o.giris)) + '</p>';
+      if (o.tablo) {
+        h += '<div class="matris-sar"><table class="matris"><thead><tr>' + o.tablo.bas.map(function (b, n) { return '<th' + (n === 2 ? ' style="text-align:left"' : '') + '>' + esc(b) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+          window.kitleDizi(o.tablo.satir, kitle).map(function (r) {
+            return '<tr><td>' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td class="aciklama" style="width:40%">' + esc(r[2]) + '</td></tr>';
+          }).join('') + '</tbody></table></div>';
+      }
+      if (o.not) h += liste(o.not);
+      if (o.ilgili) h += '<p class="kucuk">İlgili sayfalar: ' + o.ilgili.filter(function (k) { return ILAC[k]; }).map(function (k) { return '<a href="#/ilac/' + k + '">' + esc(ILAC[k].ad) + '</a>'; }).join(' · ') + '</p>';
+      return h + '</div>';
+    }).join('');
   }
 
   function sayfaIlac(id) {
@@ -461,7 +481,7 @@
       '<div class="sekmeler" id="yasSekme">' + (eri() ? ['eri', 'ped'] : ['ped', 'eri']).map(function (y) {
         return '<button data-yas="' + y + '" class="' + (durum.yas === y ? 'aktif' : '') + '">' + (y === 'ped' ? 'Çocuk / ergen' : 'Erişkin') + '</button>';
       }).join('') + '</div>' +
-      '<div id="dozAlan">' + dozBolumu(i) + '</div></section>';
+      '<div id="dozAlan">' + dozBolumu(i) + '</div>' + ozelKullanim(i) + '</section>';
 
     // 2 Sürdürüm
     h += '<section class="kart bolum" id="surdurum" style="--sinif:' + r + '"><h2><span class="no">2</span>Sürdürüm</h2>' +
@@ -674,7 +694,7 @@
   /* ───────────── SAYFA: tetkik ve izlem ───────────── */
   var IZLEM_SINIF = { ssri: 'ad', snri: 'ad', tca: 'ad', mirtazapin: 'ad', bupropion: 'ad', trazodon: 'ad', stimulan: 'dehb', atomoksetin: 'dehb', alfa2: 'dehb',
     antipsikotik: 'ap', klozapin: 'ap', lityum: 'dd', valproat: 'dd', lamotrijin: 'dd', karbamazepin: 'dd', benzo: 'anks', melatonin: 'anks', hidroksizin: 'anks', buspiron: 'anks',
-    naltrekson: 'diger', buprenorfin: 'diger', antikolinerjik: 'diger' };
+    naltrekson: 'diger', nalmefen: 'diger', buprenorfin: 'diger', nalokson: 'diger', antikolinerjik: 'diger', propranolol: 'diger', metformin: 'diger', prazosin: 'diger' };
 
   function sayfaIzlem() {
     var h = '<section class="kart bolum"><h2>Tetkik ve izlem çizelgeleri</h2>' +
