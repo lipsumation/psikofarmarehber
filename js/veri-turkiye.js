@@ -27,8 +27,13 @@ window.TR_KUB = {
    "karaciger": "Doz ya da doz sıklığı azaltılmalı (ör. gün aşırı 20 mg)."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Panik bozukluk ve olanzapinle kombinasyon endikasyonları Türkiye'de yok.",
+    "Maksimum doz 60 mg/gün, yaşlıda genelde 40 mg/gün aşılmamalı (FDA'da 80 mg)."
+   ],
+   "ped": [
+    "18 yaş altında kullanımı önerilmez (FDA: depresyon ≥ 8 yaş, OKB ≥ 7 yaş)."
+   ]
   }
  },
  "sertralin": {
@@ -93,8 +98,12 @@ window.TR_KUB = {
    "karaciger": "Hafif–orta: ilk 2 hafta 5 mg, sonra en fazla 10 mg/gün; ciddi: özellikle dikkatli titrasyon."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Türkiye'de ek endikasyon: panik bozukluk, sosyal anksiyete, OKB."
+   ],
+   "ped": [
+    "18 yaş altında kullanılmamalıdır (FDA: depresyon ≥ 12 yaş, yaygın anksiyete ≥ 7 yaş)."
+   ]
   }
  },
  "sitalopram": {
@@ -121,7 +130,9 @@ window.TR_KUB = {
    "karaciger": "Hafif–orta: ilk 2 hafta 10 mg, en fazla 20 mg/gün; şiddetli: çok dikkatli titrasyon."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Türkiye'de ek endikasyon: panik bozukluk, OKB."
+   ],
    "ped": []
   }
  },
@@ -153,8 +164,12 @@ window.TR_KUB = {
    "karaciger": "Düşük dozla başla, yakından izle."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Türkiye'de ek endikasyon: majör depresif bozukluk (önerilen doz 100 mg/gün, maksimum 300 mg)."
+   ],
+   "ped": [
+    "OKB'de 8 yaş üstü çocuk ve ergende veri 200 mg/gün'e kadar sınırlı; çocuklarda maksimum 200 mg/gün (FDA'da ergende 300 mg)."
+   ]
   }
  },
  "paroksetin": {
@@ -184,7 +199,10 @@ window.TR_KUB = {
    "karaciger": "Karaciğer bozukluğunda önerilen doz 20 mg/gün; artış gerekirse aralığın alt sınırına kadar."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Şiddetli böbrek yetmezliğinde (KrKl < 30 mL/dk) 20 mg/gün, artış doz aralığının alt sınırına kadar (FDA: 10 mg ile başla, maks 40 mg).",
+    "Karaciğer bozukluğunda derece ayrımı olmadan 20 mg/gün, artış doz aralığının alt sınırına kadar (FDA: ağırda 10 mg ile başla)."
+   ],
    "ped": []
   }
  },
@@ -213,7 +231,12 @@ window.TR_KUB = {
    "karaciger": "Hafif–orta: toplam doz %50 azaltılır (bazen daha fazla); şiddetli: %50'den fazla azaltılır, yarar-risk değerlendirilir."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "XR ile majör depresyonda maksimum 375 mg/gün, diğer endikasyonlarda 225 mg/gün (FDA'da XR için 225 mg).",
+    "Doz artışları yaklaşık 2 haftada bir; şiddet gerektirirse en az 4 gün arayla (FDA'da en az 4 gün arayla).",
+    "GFR 30–70 mL/dk'da doz ayarı gerekmez; GFR < 30 mL/dk veya hemodiyalizde doz %50 azaltılır.",
+    "Şiddetli karaciğer yetmezliğinde doz %50'den fazla azaltılır ve dikkatli kullanılır."
+   ],
    "ped": []
   }
  },
@@ -246,7 +269,9 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [],
-   "ped": []
+   "ped": [
+    "18 yaş altında kullanılmamalıdır (FDA: yaygın anksiyete ≥ 7 yaş, fibromiyalji ≥ 13 yaş)."
+   ]
   }
  },
  "mirtazapin": {
@@ -297,8 +322,15 @@ window.TR_KUB = {
    "karaciger": "Hafif–orta: 150 mg/gün; şiddetli siroz: kontrendike"
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Mevsimsel depresyonun önlenmesi endikasyonu yok; yalnız majör depresif ataklarda endike.",
+    "150 mg ile 4 hafta yanıt yoksa 300 mg'a, 2 hafta sonra gerekirse 450 mg'a çıkılır (FDA: 4. günde 300 mg).",
+    "Böbrek yetmezliğinde önerilen doz günde bir kez 150 mg.",
+    "Hafif–orta karaciğer yetmezliğinde 150 mg/gün; şiddetli karaciğer sirozunda kontrendike (FDA: gün aşırı düşük doz)."
+   ],
+   "ped": [
+    "18 yaş altında kullanılmamalıdır."
+   ]
   }
  },
  "trazodon": {
@@ -323,8 +355,12 @@ window.TR_KUB = {
    "karaciger": "Dikkat (özellikle şiddetli); periyodik karaciğer fonksiyon izlemi düşünülebilir"
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "XL formda başlangıç 75–150 mg akşam tek doz, 3 günde bir 75 mg artış, maksimum 300 mg/gün (FDA IR: maks 400 mg)."
+   ],
+   "ped": [
+    "18 yaş ve altında kontrendikedir (FDA'da pediatrik kontrendikasyon yok)."
+   ]
   }
  },
  "vortioksetin": {
@@ -350,7 +386,9 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [],
-   "ped": []
+   "ped": [
+    "Majör depresif bozuklukta 18 yaş altında kullanılmamalıdır."
+   ]
   }
  },
  "klomipramin": {
@@ -385,7 +423,10 @@ window.TR_KUB = {
    "karaciger": "Dikkat; periyodik karaciğer enzim izlemi; şiddetli karaciğer hastalığında kontrendike (4.3)"
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Türkiye'de ek endikasyon: depresyon, fobiler, panik atak (panikte 10 mg/gün ile başlanır, gerekirse 150 mg'a kadar).",
+    "Şiddetli karaciğer hastalığında kontrendikedir."
+   ],
    "ped": []
   }
  },
@@ -412,7 +453,9 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [],
-   "ped": []
+   "ped": [
+    "Enürezis endikasyonu yok; 18 yaş altında kontrendikedir (FDA: enürezis ≥ 6 yaş)."
+   ]
   }
  },
  "amitriptilin": {
@@ -442,8 +485,13 @@ window.TR_KUB = {
    "karaciger": "Dikkat; ciddi karaciğer hastalığında kontrendike (4.3)"
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Ciddi karaciğer hastalığında kontrendikedir."
+   ],
+   "ped": [
+    "Ergenlerde önerilen doz 25–50 mg/gün, bölünmüş veya akşam tek doz.",
+    "12 yaş altında kullanımı önerilmez."
+   ]
   }
  },
  "desvenlafaksin": {
@@ -471,8 +519,12 @@ window.TR_KUB = {
    "karaciger": "Kontrendike"
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "75 yaş ve üzerinde etkililik gösterilmediğinden kullanılmamalıdır."
+   ],
+   "ped": [
+    "18 yaş altında kullanılmaz."
+   ]
   }
  },
  "tianeptin": {
@@ -497,8 +549,12 @@ window.TR_KUB = {
    "karaciger": "Şiddetli siroz (Child-Pugh C): 2 tablet/gün; kronik alkoliklerde hafif–orta sirozda ayar gerekmez"
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "65 yaş üstünde yaşa bağlı doz ayarı gerekmez; yalnız 55 kg altı yaşlılarda günde 2 tablet ile sınırlanır."
+   ],
+   "ped": [
+    "15 yaş altında kontrendikedir; 18 yaş altında etkililik ve güvenlilik verisi yoktur."
+   ]
   }
  },
  "metilfenidat": {
@@ -528,8 +584,13 @@ window.TR_KUB = {
    "karaciger": "Çalışılmamış; deneyim yok."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Erişkin kullanımı 18–65 yaşla sınırlı; yaşlılarda kullanılmamalıdır.",
+    "OROS formda metilfenidat almamış erişkinde de başlangıç 18 mg/gün (FDA'da 18 veya 36 mg)."
+   ],
+   "ped": [
+    "OROS formda 13–17 yaşta da maksimum doz 54 mg/gün (FDA'da 72 mg)."
+   ]
   }
  },
  "lisdeksamfetamin": {
@@ -562,8 +623,13 @@ window.TR_KUB = {
    "karaciger": "Child-Pugh B: başlangıç ve hedef doz %50; Child-Pugh C: %25."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Başlangıç dozu artırmadan önce en az 7 gün sürdürülmelidir (FDA'da en az 3 gün)."
+   ],
+   "ped": [
+    "Başlangıç dozu artırmadan önce en az 7 gün sürdürülmelidir (FDA'da en az 3 gün).",
+    "70 kg altında idame yaklaşık 1,2 mg/kg/gün; daha yüksek doz ek yarar göstermemiştir (FDA'da maks 1,4 mg/kg/gün)."
+   ]
   }
  },
  "guanfasin": {
@@ -591,8 +657,12 @@ window.TR_KUB = {
    "karaciger": "Farklı derecelerde bozuklukta doz azaltılması gerekebilir."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Erişkin ve yaşlı DEHB hastalarında kullanılmamalıdır."
+   ],
+   "ped": [
+    "DEHB'de 6–17 yaşta yalnız uyarıcılar uygun değilse, tolere edilemiyorsa veya etkisizse endike (FDA'da birinci basamak)."
+   ]
   }
  },
  "klonidin": {
@@ -632,7 +702,9 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [],
-   "ped": []
+   "ped": [
+    "18 yaş altında kullanılmamalıdır."
+   ]
   }
  },
  "risperidon": {
@@ -664,8 +736,15 @@ window.TR_KUB = {
    "karaciger": "Başlangıç ve idame dozları yarıya düşürülmeli, titrasyon daha yavaş."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Böbrek ve karaciğer bozukluğunda dereceden bağımsız olarak dozlar yarıya indirilir, titrasyon yavaşlatılır (FDA: ağırda 0,5 mg × 2)."
+   ],
+   "ped": [
+    "Şizofreni ve bipolar manide pediatrik endikasyon yok; 18 yaş altı şizofrenide önerilmez (FDA: mani ≥ 10, şizofreni ≥ 13 yaş).",
+    "Türkiye'de ek endikasyon: 5–18 yaşta agresif veya yıkıcı davranışların öne çıktığı davranım bozuklukları.",
+    "Davranım bozukluğunda < 50 kg 0,25 mg, ≥ 50 kg 0,5 mg ile başlanır; optimum 0,5 / 1 mg/gün, artış en erken gün aşırı.",
+    "Otizmde çalışılan en yüksek doz < 20 kg 1,5 mg, ≥ 20 kg 2,5 mg, > 45 kg 3,5 mg/gün (FDA ergen şizofreni/mani: 6 mg)."
+   ]
   }
  },
  "aripiprazol": {
@@ -699,8 +778,12 @@ window.TR_KUB = {
    "karaciger": "Hafif-orta: ayar gerekmez; şiddetli: veri yetersiz, dikkatli dozlama, 30 mg dikkatle."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Majör depresyonda ek tedavide başlangıç 5 mg/gün, doz aralığı 5–15 mg, maksimum 15 mg/gün (FDA: başlangıç 2–5 mg)."
+   ],
+   "ped": [
+    "Bipolar I mani yalnız erişkinde endike; pediatrik bipolar endikasyonu yok (FDA: ≥ 10 yaş)."
+   ]
   }
  },
  "olanzapin": {
@@ -733,8 +816,13 @@ window.TR_KUB = {
    "karaciger": "Orta bozuklukta (Child-Pugh A/B) başlangıç 5 mg, dikkatli artış."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Fluoksetinle kombinasyon endikasyonları (bipolar depresyon, dirençli depresyon) Türkiye'de yok.",
+    "Böbrek yetmezliğinde daha düşük başlangıç dozu (5 mg) düşünülmelidir."
+   ],
+   "ped": [
+    "13 yaş altında kullanılmaz; fluoksetinle bipolar depresyon endikasyonu yok (FDA: ≥ 10 yaş)."
+   ]
   }
  },
  "ketiapin": {
@@ -762,8 +850,12 @@ window.TR_KUB = {
    "karaciger": "25 mg/gün ile başla; günde 25–50 mg artır."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Ketiapine yanıt vermiş bipolar hastalarda nüks önleme, ek tedavi şartı olmadan endike (FDA: lityum/valproata ek)."
+   ],
+   "ped": [
+    "18 yaş altında kullanımı önerilmez (FDA: bipolar mani ≥ 10 yaş, şizofreni ≥ 13 yaş)."
+   ]
   }
  },
  "klozapin": {
@@ -790,8 +882,14 @@ window.TR_KUB = {
    "karaciger": "Dikkat ve düzenli karaciğer testleri; aktif/ilerleyici karaciğer hastalığı ve hepatik yetmezlikte kontrendike (4.3)."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Türkiye'de ek endikasyon: Parkinson hastalığına bağlı psikoz (akşam 12,5 mg ile başlanır, maksimum 100 mg/gün).",
+    "Şiddetli böbrek yetmezliğinde kontrendike; hafif–orta yetmezlikte ilk gün 12,5 mg tek doz ile başlanıp yavaş artırılır.",
+    "Aktif veya ilerleyici karaciğer hastalığı ve karaciğer yetmezliğinde kontrendikedir."
+   ],
+   "ped": [
+    "16 yaş altında kullanılmamalıdır."
+   ]
   }
  },
  "haloperidol": {
@@ -829,8 +927,15 @@ window.TR_KUB = {
    "karaciger": "Başlangıç dozu yarıya; daha küçük artışlar ve daha uzun aralıklar."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Türkiye'de ek endikasyon: şizoaffektif bozukluk, bipolar I mani, akut psikomotor ajitasyon, akut deliryum.",
+    "Maksimum doz manide 15 mg/gün, deliryumda 10 mg/gün, akut ajitasyonda 20 mg/gün.",
+    "Orta–şiddetli Alzheimer/vasküler demansta inatçı saldırganlık ve psikozda 0,5–5 mg/gün ile ruhsatlı; mortalite uyarısı geçerli."
+   ],
+   "ped": [
+    "Şizofreni 13–17, otizm/YGB'de saldırganlık 6–17, tik bozukluğu 10–17 yaşta, yalnız diğer tedaviler başarısızsa (FDA: ≥ 3 yaş).",
+    "Ergen şizofrenide 0,5–3 mg/gün (maks 5 mg); otizmde 6–11 yaş 0,5–3 mg, 12–17 yaş 0,5–5 mg/gün; tikte 0,5–3 mg/gün."
+   ]
   }
  },
  "paliperidon": {
@@ -861,8 +966,12 @@ window.TR_KUB = {
    "karaciger": "Hafif–orta: doz ayarı gerekmez; ağır: çalışılmamış, dikkat."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "KrKl 50–80 mL/dk'da başlangıç 3 mg/gün; 10–50 mL/dk'da 3 mg gün aşırı, sonra 3 mg/gün (FDA'da 10–50 için 1,5 mg/gün)."
+   ],
+   "ped": [
+    "Ergen şizofrenisinde doz yalnız 15 yaş ve üzeri için verilir; 12–14 yaşta güvenlilik ve etkililik belirlenmemiş (FDA: ≥ 12 yaş)."
+   ]
   }
  },
  "ziprasidon": {
@@ -893,8 +1002,13 @@ window.TR_KUB = {
    "karaciger": "Daha düşük dozlar düşünülmeli; ağır yetmezlikte deneyim yok."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Bipolar idame tedavisinde yeterli kanıt yok; manide yalnız kısa süreli tedavi (FDA: lityum/valproata ek idame onaylı).",
+    "Şizofreni ve akut manide başlangıç dozu 40 mg × 2, yemekle (FDA'da şizofrenide 20 mg × 2)."
+   ],
+   "ped": [
+    "10–17 yaşta maninin kısa süreli tedavisinde endike, ancak 18 yaş altında etkililik ve güvenlilik kanıtlanmamış (FDA'da onay yok)."
+   ]
   }
  },
  "lurasidon": {
@@ -927,7 +1041,9 @@ window.TR_KUB = {
    "karaciger": "Hafif: ayar yok; orta (Child-Pugh B): başlangıç 20 mg, en fazla 80 mg/gün; ağır (C): başlangıç 20 mg, en fazla 40 mg/gün."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Son evre böbrek yetmezliğinde (KrKl < 15 mL/dk) yarar riskten ağır basmadıkça kullanılmamalıdır."
+   ],
    "ped": []
   }
  },
@@ -953,7 +1069,9 @@ window.TR_KUB = {
    "karaciger": "Doz azaltımı gerekmez."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "KrKl < 10 mL/dk'da klinik deneyim yok, özel dikkat gerekir; kontrendikasyon değildir."
+   ],
    "ped": []
   }
  },
@@ -985,8 +1103,16 @@ window.TR_KUB = {
    "karaciger": "Şiddetli yetmezlikte birikim riski: yakın takip (4.4'te ciddi hepatotoksisite uyarısı)."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Erişkin dozu 25–300 mg/gün, istisnai durumlarda en fazla 600 mg/gün (FDA'da 1000 mg/gün'e kadar).",
+    "Tablette yalnız akut ve kronik psikotik bozukluklarda endike; bipolar mani, bulantı-kusma ve hıçkırık endikasyonu yok.",
+    "Kronik psikotik bozukluk endikasyonu şizofreni dışı kronik sanrılı durumları da kapsar."
+   ],
+   "ped": [
+    "Çocukta yalnız 6 yaş üstünde ajitasyon ve agresiflikli şiddetli davranış bozukluklarında endike (FDA: 1–12 yaş).",
+    "1 yaş altında kontrendikedir (FDA'da 6 ay altında kullanılmaz).",
+    "6 yaş üstü çocukta 1–5 mg/kg/gün, 2–3 doza bölünmüş; sabit mg üst sınırı yok (FDA: 5–12 yaş maks 75 mg/gün)."
+   ]
   }
  },
  "asenapin": {
@@ -1014,8 +1140,12 @@ window.TR_KUB = {
    "karaciger": "Orta–şiddetli (Child-Pugh ≥ 7): en fazla 3 mg/gün."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Yalnız erişkin şizofrenide endike; majör depresyonda ek tedavi ve Alzheimer ajitasyonu endikasyonları yok."
+   ],
+   "ped": [
+    "Pediatrik endikasyon yok; 18 yaş altında güvenlilik ve etkililik kanıtlanmamış (FDA: şizofreni ≥ 13 yaş)."
+   ]
   }
  },
  "kariprazin": {
@@ -1041,7 +1171,9 @@ window.TR_KUB = {
    "karaciger": "Child-Pugh 5–9: ayar yok; ağır (10–15): önerilmez."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Yalnız şizofreni ve bipolar I depresyonda endike; bipolar mani/karma dönem ve majör depresyonda ek tedavi endikasyonu yok."
+   ],
    "ped": []
   }
  },
@@ -1074,7 +1206,10 @@ window.TR_KUB = {
    "karaciger": "Dikkatli kullanılmalı."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Ana endikasyon kronik şizofreni; diğer psikozlar (paranoid durumlar, monosemptomatik hipokondriyak psikoz) ve Tourette'te de endike.",
+    "Maksimum doz şizofrenide 20 mg/gün, diğer psikozlarda 16 mg/gün (FDA'da Tourette için 10 mg/gün)."
+   ],
    "ped": []
   }
  },
@@ -1104,8 +1239,13 @@ window.TR_KUB = {
    "karaciger": "Bilgi yok."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Türkiye'de ek endikasyon: unipolar depresyonun idame tedavisi, şizoaffektif bozukluğun akut ve idame tedavisi.",
+    "KrKl 10–50 mL/dk'da normal dozun %50–75'i, < 10 mL/dk'da %25–50'si önerilir; ciddi böbrek hastalığı kontrendikasyondur."
+   ],
+   "ped": [
+    "12 yaş altında kullanılmamalıdır (FDA: ≥ 7 yaş)."
+   ]
   }
  },
  "valproat": {
@@ -1136,7 +1276,11 @@ window.TR_KUB = {
    "karaciger": "4.3: akut/kronik hepatit, kişisel/ailesel karaciğer hastalığı öyküsü, ağır karaciğer bozukluğunda kontrendike; salisilatlarla birlikte kullanılmamalı."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Manide yalnız lityumun kontrendike olduğu veya tolere edilemediği durumlarda endike; migren profilaksisi endikasyonu yok.",
+    "Manide üst doz tanımlanmamış; ortalama 1000–2000 mg/gün, 45 mg/kg/gün üzerinde yakın izlem (FDA: maks 60 mg/kg/gün).",
+    "Böbrek yetmezliğinde doz azaltımı, hemodiyalizde doz artırımı gerekebilir."
+   ],
    "ped": []
   }
  },
@@ -1170,8 +1314,13 @@ window.TR_KUB = {
    "karaciger": "Başlangıç, artış ve idame dozları Child-Pugh B'de ~%50, Child-Pugh C'de ~%75 azaltılır."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Karaciğer bozukluğunda doz Child-Pugh B'de yaklaşık %50, C'de %75 azaltılır (FDA: orta %25, asitli ağır %50).",
+    "Valproatla hedef 100 mg/gün, gerekirse en fazla 200 mg/gün; monoterapide hedef 200 mg/gün (çalışmalarda 100–400 mg)."
+   ],
+   "ped": [
+    "Bipolar bozuklukta 18 yaş altında endike değildir ve kullanımı önerilmez."
+   ]
   }
  },
  "karbamazepin": {
@@ -1203,7 +1352,10 @@ window.TR_KUB = {
    "karaciger": "Farmakokinetik veri yok; doz önerisi verilmemiş (hepatik porfiri öyküsünde kontrendike)."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Akut mani endikasyonu yok; yalnız lityuma yanıtsız hastalarda manik depresif psikoz profilaksisi (FDA: akut mani/karma).",
+    "Bipolar profilakside olağan doz 400–600 mg/gün, en fazla 1600 mg/gün; 4–12 µg/mL düzeyi yalnız epilepsi için verilir."
+   ],
    "ped": []
   }
  },
@@ -1235,7 +1387,9 @@ window.TR_KUB = {
   },
   "fark": {
    "eri": [],
-   "ped": []
+   "ped": [
+    "Epilepside 6 yaş altında önerilmez (FDA: epilepsi ≥ 4 yaş)."
+   ]
   }
  },
  "melatonin": {
@@ -1265,8 +1419,14 @@ window.TR_KUB = {
    "karaciger": "Klirens azalır; kullanımı önerilmez."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Oral çözelti erişkinde yalnız jet lag'e bağlı sirkadiyen ritim uyku bozukluğunda ruhsatlı; 55 yaş üstü uykusuzluk endikasyonu yok.",
+    "Jet lag'de 5 gün boyunca 3 mg/gün, yetersizse 6 mg/gün; yatma saatinde alınır."
+   ],
+   "ped": [
+    "2–18 yaşta otizm spektrum bozukluğu ve/veya Smith-Magenis sendromunda gecikmiş uyku başlangıçlı uykusuzlukta ruhsatlı (oral çözelti).",
+    "Çocukta doz sabit 2 mg/gün, yatmadan 30–60 dk önce; en az 6 ayda bir yeniden değerlendirilir."
+   ]
   }
  },
  "hidroksizin": {
@@ -1297,8 +1457,13 @@ window.TR_KUB = {
    "karaciger": "Günlük dozu %33 azaltın."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Premedikasyonda sedasyon endikasyonu yok; yalnız anksiyete ve kaşıntıda endike.",
+    "GFR 30–<60 mL/dk'da dozun %50'si, < 30 mL/dk'da ve diyalizde %25'i verilir (diyalizde haftada 3 kez)."
+   ],
+   "ped": [
+    "Anksiyete endikasyonu 18 yaş ve üzerinde; çocukta yalnız 12 ay üzeri kaşıntıda endike (FDA: çocukta anksiyete ve sedasyon da)."
+   ]
   }
  },
  "klonazepam": {
@@ -1328,7 +1493,9 @@ window.TR_KUB = {
    "karaciger": "Ağır yetmezlikte kontrendike; diğerlerinde veri yok."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Panik bozukluk endikasyonu yok; yalnız epilepside endike (erişkinde başlangıç ≤ 1 mg/gün, maksimum 20 mg/gün)."
+   ],
    "ped": []
   }
  },
@@ -1356,7 +1523,10 @@ window.TR_KUB = {
    "karaciger": "Şiddetli yetmezlik ve/veya ensefalopatide kullanılmaz; diğerlerinde düşük doz, sık kontrol."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Türkiye'de ek endikasyon: uykusuzluk (yatarken 1–2 mg, gerekirse 2,5 mg; azaltma dahil en fazla 4 hafta).",
+    "Şiddetli karaciğer yetmezliği ve/veya ensefalopatide kullanılmamalıdır."
+   ],
    "ped": []
   }
  },
@@ -1382,8 +1552,12 @@ window.TR_KUB = {
    "karaciger": "Doz azaltılmalı (4.2); 4.3'te karaciğer fonksiyon bozukluğu kontrendikasyonlar arasında."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Maksimum doz 45 mg/gün (FDA'da 60 mg)."
+   ],
+   "ped": [
+    "18 yaş altında kullanılmamalıdır."
+   ]
   }
  },
  "diazepam": {
@@ -1415,7 +1589,9 @@ window.TR_KUB = {
    "karaciger": "Ciddi karaciğer yetmezliğinde kontrendike."
   },
   "fark": {
-   "eri": [],
+   "eri": [
+    "Anksiyolitik doz 5–30 mg/gün, 2–3 doza bölünmüş (FDA'da en fazla 40 mg/gün)."
+   ],
    "ped": []
   }
  },
@@ -1441,8 +1617,13 @@ window.TR_KUB = {
    "karaciger": "Şiddetli yetmezlikte kontrendike; diğerlerinde dikkatli."
   },
   "fark": {
-   "eri": [],
-   "ped": []
+   "eri": [
+    "Panik bozukluk endikasyonu yok; yalnız erişkinde anksiyetenin kısa süreli semptomatik tedavisinde endike.",
+    "Şiddetli karaciğer yetmezliğinde kontrendikedir (FDA'da düşük dozla başlanır)."
+   ],
+   "ped": [
+    "18 yaş altında kullanımı tavsiye edilmez."
+   ]
   }
  },
  "pregabalin": {

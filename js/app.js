@@ -122,8 +122,8 @@
     var kutu = function (ad, deger) { return deger ? '<div class="kutu"><div class="ad">' + ad + '</div><div class="deger">' + esc(deger) + '</div></div>' : ''; };
     var doz = function (d) { return d ? [d.bas && 'Başlangıç: ' + d.bas, d.maks && 'Maksimum: ' + d.maks].filter(Boolean).join(' · ') : ''; };
     var dozlar = eri() ? [['KÜB dozu · erişkin', doz(t.doz.eri)], ['KÜB dozu · çocuk-ergen', doz(t.doz.ped)]] : [['KÜB dozu · çocuk-ergen', doz(t.doz.ped)], ['KÜB dozu · erişkin', doz(t.doz.eri)]];
-    h += '<details class="tr-detay"><summary>KÜB dozu, organ yetmezliği' + (fark.length ? ' ve FDA\'dan ' + fark.length + ' fark' : '') + '</summary>' +
-      (fark.length ? '<div class="alt-b">FDA bilgisinden farklar</div><ul class="notlar tr-fark">' + fark.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '') +
+    h += '<details class="tr-detay"><summary>KÜB dozu, organ yetmezliği' + (fark.length ? ' ve ' + fark.length + ' önemli fark' : '') + '</summary>' +
+      (fark.length ? '<div class="alt-b">Türkiye KÜB\'ünde farklı olanlar</div><ul class="notlar tr-fark">' + fark.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '') +
       '<div class="kutular metin-kutular">' + dozlar.map(function (d) { return kutu(d[0], d[1]); }).join('') +
       kutu('Böbrek yetmezliği (KÜB)', t.organ.bobrek) + kutu('Karaciğer yetmezliği (KÜB)', t.organ.karaciger) + '</div>' +
       '<p class="kucuk tr-satir">Kaynak: <a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.urun) + ' KÜB\'ü</a> · ' + esc(t.firma) + ' · KÜB onay tarihi ' + esc(t.tarih) +
